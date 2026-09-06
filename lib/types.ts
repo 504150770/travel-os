@@ -1,15 +1,9 @@
 export type ViewId =
   | 'home'
   | 'trip'
-  | 'visual'
-  | 'picks'
-  | 'gym'
-  | 'stay'
-  | 'bookings'
-  | 'budget'
-  | 'checklist'
-  | 'essentials'
-  | 'map';
+  | 'discover'
+  | 'plan'
+  | 'more';
 
 export type Place = {
   id: string;
@@ -31,6 +25,25 @@ export type TimelineStop = {
   note: string;
   guard: string;
   ticket?: string;
+};
+
+export type GuideImage = {
+  id: string;
+  day: number;
+  dayId: number;
+  placeId: string | null;
+  file: string;
+  caption: string;
+  use: string;
+  role: string;
+  type: string;
+  timeOfDay: string;
+  bestTime: string;
+  focalLength: string;
+  composition: string;
+  credit: string;
+  sourcePage: string;
+  lastVerified: string;
 };
 
 export type Day = {
@@ -82,6 +95,18 @@ export type Booking = {
   budget: number;
   status: string;
   detail: string;
+  paymentStatus: string;
+  supplier: string;
+  orderNumber: string;
+  cancellationDeadline: string;
+  address: string;
+  serviceNumber: string;
+  stationAirport: string;
+  baggage: string;
+  contact: string;
+  notes: string;
+  attachmentName: string;
+  lastVerified: string;
 };
 
 export type Hotel = {
@@ -93,7 +118,7 @@ export type Hotel = {
   rating: string;
   openingRenovation: string;
   roomCondition: string;
-  noise: { street: string; wall: string; corridor: string; mechanical: string };
+  noise: { street: string; wall: string; corridor: string; mechanical: string; elevator: string; barRestaurant: string; trainTram: string };
   bed: string;
   heating: string;
   privateBathroom: string;
@@ -104,6 +129,63 @@ export type Hotel = {
   risk: string;
   selected: boolean;
   bookingRequest: string;
+  roomName: string;
+  roomArea: string;
+  bedType: string;
+  ratingCount: string;
+  refundableRoomMatch: string;
+  airConditioning: string;
+  frontDesk: string;
+  lateArrival: string;
+  luggageStorage: string;
+  roomImages: { id: string; file: string | null; caption: string; status: string; source: string | null }[];
+  priceSource: string;
+  lastVerified: string;
+};
+
+export type Restaurant = {
+  id: string;
+  city: string;
+  name: string;
+  meal: string;
+  dishes: string;
+  price: string;
+  hours: string;
+  reservation: string;
+  distance: string;
+  source: string;
+  recommendedDays: number[];
+  mustEat: string;
+  mapQuery: string;
+  xhsKeyword: string;
+  restaurantImage: string | null;
+  dishImage: string | null;
+  photoStatus: string;
+  soloFriendly: string;
+  lastVerified: string;
+  sourceType: string;
+};
+
+export type Task = {
+  id: string;
+  title: string;
+  note: string;
+  due: string;
+  group: string;
+  status: string;
+  linkedBookingId: string | null;
+  autoCompleteWhen: string[];
+  lastVerified: string;
+};
+
+export type XhsTopic = {
+  id: string;
+  city: string;
+  category: string;
+  keyword: string;
+  url: string;
+  linkType: string;
+  lastVerified: string;
 };
 
 export type PlaceOption = {

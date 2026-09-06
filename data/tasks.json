@@ -1,0 +1,234 @@
+{
+  "statuses": [
+    "To Do",
+    "Doing",
+    "Done",
+    "Skipped"
+  ],
+  "items": [
+    {
+      "id": "hold-hotels",
+      "title": "持有6城15晚可退酒店",
+      "due": "09/08",
+      "note": "保存取消线与静音备注",
+      "group": "现在",
+      "status": "To Do",
+      "linkedBookingId": "hotel-hold",
+      "autoCompleteWhen": [
+        "Booked",
+        "Paid",
+        "Confirmed",
+        "Completed"
+      ],
+      "lastVerified": "2026-09-06"
+    },
+    {
+      "id": "monitor-flights",
+      "title": "监控国际机票",
+      "due": "09/12",
+      "note": "CAN→FCO单票1转；CDG→CAN直飞；核23kg",
+      "group": "现在",
+      "status": "To Do",
+      "linkedBookingId": "flight-can-fco",
+      "autoCompleteWhen": [
+        "Booked",
+        "Paid",
+        "Confirmed",
+        "Completed"
+      ],
+      "lastVerified": "2026-09-06"
+    },
+    {
+      "id": "visa-appointment",
+      "title": "预约意大利广州领区",
+      "due": "09/10",
+      "note": "下载递签当日官方清单",
+      "group": "现在",
+      "status": "To Do",
+      "linkedBookingId": "visa",
+      "autoCompleteWhen": [
+        "Booked",
+        "Paid",
+        "Confirmed",
+        "Completed"
+      ],
+      "lastVerified": "2026-09-06"
+    },
+    {
+      "id": "visa-evidence",
+      "title": "签证材料齐套",
+      "due": "09/20",
+      "note": "劳动合同/流水/个税/社保/资产/解释信",
+      "group": "现在",
+      "status": "To Do",
+      "linkedBookingId": "visa",
+      "autoCompleteWhen": [
+        "Booked",
+        "Paid",
+        "Confirmed",
+        "Completed"
+      ],
+      "lastVerified": "2026-09-06"
+    },
+    {
+      "id": "submit-visa",
+      "title": "递交申根申请",
+      "due": "09/25–10/10",
+      "note": "职业状态按递签当天真实情况",
+      "group": "递签与出签",
+      "status": "To Do",
+      "linkedBookingId": "visa",
+      "autoCompleteWhen": [
+        "Booked",
+        "Paid",
+        "Confirmed",
+        "Completed"
+      ],
+      "lastVerified": "2026-09-06"
+    },
+    {
+      "id": "check-visa",
+      "title": "核对签证页",
+      "due": "护照返回当日",
+      "note": "姓名、有效期、停留天数、入境次数",
+      "group": "递签与出签",
+      "status": "To Do",
+      "linkedBookingId": "visa",
+      "autoCompleteWhen": [
+        "Booked",
+        "Paid",
+        "Confirmed",
+        "Completed"
+      ],
+      "lastVerified": "2026-09-06"
+    },
+    {
+      "id": "buy-europe-transport",
+      "title": "买欧洲铁路与航班",
+      "due": "护照到手+48h",
+      "note": "直达、少换乘、欧洲航班含23kg",
+      "group": "出签后48小时",
+      "status": "To Do",
+      "linkedBookingId": null,
+      "autoCompleteWhen": [
+        "Booked",
+        "Paid",
+        "Confirmed",
+        "Completed"
+      ],
+      "lastVerified": "2026-09-06"
+    },
+    {
+      "id": "buy-first-tickets",
+      "title": "买第一批核心景点票",
+      "due": "护照到手+48h",
+      "note": "梵蒂冈/圣马可/美泉宫/卢浮宫",
+      "group": "出签后48小时",
+      "status": "To Do",
+      "linkedBookingId": "colosseum",
+      "autoCompleteWhen": [
+        "Booked",
+        "Paid",
+        "Confirmed",
+        "Completed"
+      ],
+      "lastVerified": "2026-09-06"
+    },
+    {
+      "id": "colosseum-release",
+      "title": "盯斗兽场放票",
+      "due": "约11/03",
+      "note": "官方滚动放票",
+      "group": "临近出发",
+      "status": "To Do",
+      "linkedBookingId": "colosseum",
+      "autoCompleteWhen": [
+        "Booked",
+        "Paid",
+        "Confirmed",
+        "Completed"
+      ],
+      "lastVerified": "2026-09-06"
+    },
+    {
+      "id": "quiet-confirm",
+      "title": "逐店静音确认",
+      "due": "11/10–11/25",
+      "note": "后侧/高层/非连通/远离设备；暖气与锁闭寄存",
+      "group": "临近出发",
+      "status": "To Do",
+      "linkedBookingId": null,
+      "autoCompleteWhen": [
+        "Booked",
+        "Paid",
+        "Confirmed",
+        "Completed"
+      ],
+      "lastVerified": "2026-09-06"
+    },
+    {
+      "id": "ops-audit",
+      "title": "全程运行核对",
+      "due": "11/17",
+      "note": "航班、铁路施工/罢工、宗教节日时段",
+      "group": "临近出发",
+      "status": "To Do",
+      "linkedBookingId": null,
+      "autoCompleteWhen": [
+        "Booked",
+        "Paid",
+        "Confirmed",
+        "Completed"
+      ],
+      "lastVerified": "2026-09-06"
+    },
+    {
+      "id": "offline-docs",
+      "title": "离线票据与行李",
+      "due": "11/24",
+      "note": "行李秤/折叠袋；托运18–19kg",
+      "group": "临近出发",
+      "status": "To Do",
+      "linkedBookingId": null,
+      "autoCompleteWhen": [
+        "Booked",
+        "Paid",
+        "Confirmed",
+        "Completed"
+      ],
+      "lastVerified": "2026-09-06"
+    },
+    {
+      "id": "final-72",
+      "title": "72小时最终复核",
+      "due": "11/28",
+      "note": "天气、罢工、航站楼、值机、23kg、闭馆公告",
+      "group": "临近出发",
+      "status": "To Do",
+      "linkedBookingId": null,
+      "autoCompleteWhen": [
+        "Booked",
+        "Paid",
+        "Confirmed",
+        "Completed"
+      ],
+      "lastVerified": "2026-09-06"
+    },
+    {
+      "id": "depart",
+      "title": "CAN出发",
+      "due": "12/01",
+      "note": "同票联程办理行李直挂",
+      "group": "临近出发",
+      "status": "To Do",
+      "linkedBookingId": "flight-can-fco",
+      "autoCompleteWhen": [
+        "Booked",
+        "Paid",
+        "Confirmed",
+        "Completed"
+      ],
+      "lastVerified": "2026-09-06"
+    }
+  ]
+}

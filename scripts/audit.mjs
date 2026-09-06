@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
+import sharp from 'sharp';
 import { fileURLToPath } from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -8,7 +9,7 @@ const readJson = (file) => JSON.parse(fs.readFileSync(path.join(root, file), 'ut
 const data = {
   trip: readJson('data/trip.json'), days: readJson('data/days.json'), places: readJson('data/places.json'),
   options: readJson('data/options.json'), images: readJson('data/images.json'), gyms: readJson('data/gyms.json'), hotels: readJson('data/hotels.json'),
-  bookings: readJson('data/bookings.json'), budget: readJson('data/budget.json'), checklist: readJson('data/checklist.json'),
+  bookings: readJson('data/bookings.json'), tasks: readJson('data/tasks.json'), restaurants: readJson('data/restaurants.json'), xhs: readJson('data/xhs.json'), budget: readJson('data/budget.json'), checklist: readJson('data/checklist.json'),
   essentials: readJson('data/essentials.json'), conflicts: readJson('data/conflicts.json'),
 };
 const schema = readJson('schemas/guide.schema.json');
@@ -45,6 +46,9 @@ unique(ids(data.images), 'image ids');
 unique(ids(data.gyms), 'gym ids');
 unique(ids(data.hotels.hotels), 'hotel ids');
 unique(ids(data.bookings.items), 'booking ids');
+unique(ids(data.tasks.items), 'task ids');
+unique(ids(data.restaurants), 'restaurant ids');
+unique(ids(data.xhs), 'xhs ids');
 
 const dates = data.days.map((day) => new Date(`${day.date}T00:00:00Z`).getTime());
 if (!data.days.every((day, index) => day.day === index + 1)) fail('structure', 'Day numbers are not exactly 1–18');
@@ -63,6 +67,13 @@ for (const day of data.days) {
 }
 checks.referenceIntegrity = failures.filter((item) => item.dimension === 'references').length === 0;
 
+const imagesByPlace = new Map();
+for (const image of data.images) if (image.placeId) imagesByPlace.set(image.placeId, [...(imagesByPlace.get(image.placeId) ?? []), image]);
+for (const day of data.days) for (const stop of day.timeline) {
+  if (stop.placeId && !imagesByPlace.get(stop.placeId)?.length) fail('trip_media', `Day ${day.day} stop ${stop.placeId} has no image`);
+}
+checks.tripStopImageCoverage = failures.filter((item) => item.dimension === 'trip_media').length === 0;
+
 for (const city of data.trip.cities.map((item) => item.name)) {
   const choices = data.options.filter((item) => item.city === city);
   if (choices.length !== 4) fail('options', `${city} has ${choices.length} optional place choices`);
@@ -73,9 +84,10 @@ for (const option of data.options) {
 }
 checks.optionAudit = failures.filter((item) => item.dimension === 'options').length === 0;
 
-const requestedAssets = [data.trip.coverImage, ...data.images.map((item) => item.file), ...data.gyms.map((item) => item.image)];
+const requestedAssets = [data.trip.coverImage, ...data.images.map((item) => item.file), ...data.gyms.map((item) => item.image), ...data.hotels.hotels.flatMap((hotel) => hotel.roomImages.map((photo) => photo.file).filter(Boolean))];
 unique(requestedAssets, 'asset paths');
 const hashes = new Map();
+const perceptual = [];
 for (const asset of requestedAssets) {
   const local = path.join(root, 'public', asset.replace(/^\//, ''));
   if (!fs.existsSync(local)) { fail('media', `missing ${asset}`); continue; }
@@ -85,10 +97,20 @@ for (const asset of requestedAssets) {
   const hash = crypto.createHash('sha256').update(bytes).digest('hex');
   if (hashes.has(hash)) fail('media', `duplicate image bytes: ${asset} and ${hashes.get(hash)}`);
   hashes.set(hash, asset);
+  const pixels = await sharp(local).resize(9, 8, { fit: 'fill' }).greyscale().raw().toBuffer();
+  let bits = '';
+  for (let row = 0; row < 8; row += 1) for (let col = 0; col < 8; col += 1) bits += pixels[row * 9 + col] > pixels[row * 9 + col + 1] ? '1' : '0';
+  perceptual.push({ asset, bits });
+}
+const hamming = (a, b) => [...a].reduce((sum, bit, index) => sum + Number(bit !== b[index]), 0);
+for (let i = 0; i < perceptual.length; i += 1) for (let j = i + 1; j < perceptual.length; j += 1) {
+  const distance = hamming(perceptual[i].bits, perceptual[j].bits);
+  if (distance <= 2) fail('near_duplicate', `${perceptual[i].asset} and ${perceptual[j].asset} are visually near-identical (dHash ${distance})`);
 }
 if (!data.images.every((image) => image.visuallyReviewed === true)) fail('media', 'Visual image lacks review flag');
 checks.imageDeduplication = failures.filter((item) => item.dimension === 'media' && item.message.includes('duplicate')).length === 0;
 checks.brokenImageDetection = failures.filter((item) => item.dimension === 'media' && !item.message.includes('duplicate')).length === 0;
+checks.visualNearDuplicateDetection = failures.filter((item) => item.dimension === 'near_duplicate').length === 0;
 
 const cityNames = data.trip.cities.map((city) => city.name);
 const hotelCity = (value) => value.startsWith('威尼斯') ? '威尼斯' : value;
@@ -97,18 +119,35 @@ for (const city of cityNames) {
   if (list.length !== 4) fail('hotels', `${city} has ${list.length} hotel candidates`);
   if (list.filter((hotel) => hotel.selected).length !== 1) fail('hotels', `${city} must have one selected hotel`);
   for (const hotel of list) {
-    for (const key of ['street','wall','corridor','mechanical']) if (!hotel.noise?.[key]) fail('hotels', `${hotel.name} missing noise.${key}`);
+    for (const key of ['street','wall','corridor','mechanical','elevator','barRestaurant','trainTram']) if (!hotel.noise?.[key]) fail('hotels', `${hotel.name} missing noise.${key}`);
+    if (hotel.roomImages?.length !== 3) fail('hotel_room', `${hotel.name} must have exactly 3 Single Room image slots`);
+    for (const photo of hotel.roomImages ?? []) {
+      if (!photo.file && photo.status !== '房型图片待确认') fail('hotel_room', `${hotel.name} missing explicit pending room-photo status`);
+      if (photo.file && !photo.source) fail('hotel_room', `${hotel.name} room image has no source`);
+    }
+    if (!hotel.priceSource || !hotel.refundableRoomMatch) fail('hotel_room', `${hotel.name} missing Single Room price provenance`);
   }
 }
 const selectedTotal = data.hotels.hotels.filter((hotel) => hotel.selected).reduce((sum, hotel) => sum + (hotel.priceRefundable ?? 0), 0);
 if (selectedTotal !== data.hotels.selectedTotal) fail('hotels', `selected hotel total ${selectedTotal} differs from declared ${data.hotels.selectedTotal}`);
 if (selectedTotal > data.hotels.hardMax) fail('hotels', 'selected hotels exceed hard max');
 checks.hotelAudit = failures.filter((item) => item.dimension === 'hotels').length === 0;
+checks.hotelSingleRoomAudit = failures.filter((item) => item.dimension === 'hotel_room').length === 0;
 
 if (data.gyms.length < 8 || data.gyms.length > 10) fail('gyms', 'gym count must be 8–10');
 if (data.gyms.filter((gym) => gym.photogenicRank).length !== 5) fail('gyms', 'Most Photogenic list must contain exactly 5 gyms');
-for (const gym of data.gyms) if (!gym.dayPass) fail('gyms', `${gym.name} missing day pass state`);
+for (const gym of data.gyms) {
+  if (!gym.dayPass) fail('gyms', `${gym.name} missing day pass state`);
+  if (!gym.source || !/^https?:\/\//.test(gym.source)) fail('gyms', `${gym.name} missing Day Pass source`);
+}
 checks.gymAudit = failures.filter((item) => item.dimension === 'gyms').length === 0;
+
+for (const restaurant of data.restaurants) {
+  if (!restaurant.source || !/^https?:\/\//.test(restaurant.source)) fail('food', `${restaurant.name} missing source`);
+  if (!restaurant.hours) fail('food', `${restaurant.name} missing operating-status field`);
+  if (!restaurant.recommendedDays?.length) fail('food', `${restaurant.name} missing route-day match`);
+}
+checks.foodSourceAudit = failures.filter((item) => item.dimension === 'food').length === 0;
 
 const budgetTotal = data.budget.categories.reduce((sum, item) => sum + item.budget, 0);
 if (budgetTotal !== data.budget.planTotal) fail('budget', `category plan ${budgetTotal} differs from planTotal ${data.budget.planTotal}`);
@@ -118,17 +157,47 @@ if (!shopping || shopping.budget < data.budget.shoppingFloor) fail('budget', 'sh
 checks.budgetAudit = failures.filter((item) => item.dimension === 'budget').length === 0;
 
 for (const booking of data.bookings.items) if (!data.bookings.statuses.includes(booking.status)) fail('bookings', `${booking.id} has invalid status`);
+const bookingIds = new Set(ids(data.bookings.items));
+for (const task of data.tasks.items) {
+  if (!data.tasks.statuses.includes(task.status)) fail('control_sync', `${task.id} has invalid task status`);
+  if (task.linkedBookingId && !bookingIds.has(task.linkedBookingId)) fail('control_sync', `${task.id} links missing booking ${task.linkedBookingId}`);
+}
 checks.bookingAudit = failures.filter((item) => item.dimension === 'bookings').length === 0;
+checks.bookingTaskSyncAudit = failures.filter((item) => item.dimension === 'control_sync').length === 0;
+
+const urls = [
+  ...data.options.map((item) => item.source), ...data.gyms.map((item) => item.source),
+  ...data.restaurants.map((item) => item.source), ...data.xhs.map((item) => item.url),
+];
+for (const value of urls) { try { new URL(value); } catch { fail('links', `invalid external URL ${value}`); } }
+for (const topic of data.xhs) if (!topic.url.startsWith('https://www.xiaohongshu.com/search_result?keyword=')) fail('xhs', `${topic.id} is not a transparent search link`);
+checks.externalLinkSyntax = failures.filter((item) => item.dimension === 'links').length === 0;
+checks.xhsNoFabrication = failures.filter((item) => item.dimension === 'xhs').length === 0;
+
+const coordinateKeys = new Map();
+for (const place of data.places) {
+  if (place.lat === null || place.lng === null || Math.abs(place.lat) > 90 || Math.abs(place.lng) > 180) fail('coordinates', `${place.id} has invalid coordinates`);
+  const key = `${place.lat?.toFixed(5)},${place.lng?.toFixed(5)}`;
+  if (coordinateKeys.has(key) && coordinateKeys.get(key) !== place.name) fail('locations', `${place.name} duplicates coordinates of ${coordinateKeys.get(key)}`);
+  coordinateKeys.set(key, place.name);
+}
+checks.coordinateValidity = failures.filter((item) => item.dimension === 'coordinates').length === 0;
+checks.duplicateLocationAudit = failures.filter((item) => item.dimension === 'locations').length === 0;
+
+const freshnessCutoff = Date.now() - 120 * 86400000;
+const dated = [...data.hotels.hotels, ...data.restaurants, ...data.xhs].filter((item) => item.lastVerified);
+for (const item of dated) if (new Date(`${item.lastVerified}T00:00:00Z`).getTime() < freshnessCutoff) warn('freshness', `${item.name ?? item.id} needs reality-data reverification`);
+checks.freshnessLabelsPresent = dated.length === data.hotels.hotels.length + data.restaurants.length + data.xhs.length;
 
 if (data.conflicts.items.some((item) => !item.status)) fail('provenance', 'conflict without status');
 if (!fs.existsSync(path.join(root, 'research', 'source-manifest.json'))) warn('provenance', 'source manifest missing');
 checks.provenance = failures.filter((item) => item.dimension === 'provenance').length === 0;
 
 const report = {
-  schemaVersion: 1,
+  schemaVersion: 2,
   generatedAt: new Date().toISOString(),
   status: failures.length ? 'failed' : 'passed',
-  summary: { failures: failures.length, warnings: warnings.length, days: data.days.length, places: data.places.length, options: data.options.length, images: requestedAssets.length, gyms: data.gyms.length, hotels: data.hotels.hotels.length, bookings: data.bookings.items.length },
+  summary: { failures: failures.length, warnings: warnings.length, days: data.days.length, places: data.places.length, options: data.options.length, images: requestedAssets.length, gyms: data.gyms.length, hotels: data.hotels.hotels.length, restaurants: data.restaurants.length, xhsTopics: data.xhs.length, bookings: data.bookings.items.length, tasks: data.tasks.items.length, hotelRoomPhotosPending: data.hotels.hotels.filter((hotel) => hotel.roomImages.some((photo) => !photo.file)).length },
   checks, failures, warnings,
 };
 fs.mkdirSync(path.join(root, 'audit'), { recursive: true });

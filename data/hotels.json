@@ -26,7 +26,10 @@
         "street": "Aventino住宅区；多条近期评价称安静",
         "wall": "仅3间房；邻房隔音待确认",
         "corridor": "小体量但走廊声待确认",
-        "mechanical": "电梯/暖气低频待确认"
+        "mechanical": "电梯/暖气低频待确认",
+        "elevator": "远离电梯房型需书面确认",
+        "barRestaurant": "周边酒吧/餐厅夜噪待确认",
+        "trainTram": "轨道/电车低频待确认"
       },
       "bed": "单人房；床舒适口碑强",
       "heating": "暖气需书面确认",
@@ -38,7 +41,41 @@
       "risk": "低—中",
       "selected": true,
       "bookingRequest": "只接受后侧/内院/高层/非临街，远离电梯、楼梯、设备间和清洁间；书面确认暖气与锁闭寄存。",
-      "verifiedAt": "2026-09-06"
+      "verifiedAt": "2026-09-06",
+      "roomName": "Domus Emilia · Single Room",
+      "roomArea": "待官网确认",
+      "bedType": "1张单人床",
+      "ratingCount": "489",
+      "refundableRoomMatch": "目标日期可退价对应房型仍需付款页确认",
+      "airConditioning": "有无独立控制及冬季运行状态待确认",
+      "frontDesk": "见原候选信息；晚到需书面确认",
+      "lateArrival": "待确认",
+      "luggageStorage": "锁闭、员工管理方式待确认",
+      "roomImages": [
+        {
+          "id": "rome-vecchia-room-1",
+          "file": "/images/rome-vecchia-room-1.webp",
+          "caption": "Single Room整体与床",
+          "status": "官网房型页已关联",
+          "source": "https://www.vecchiaromaresort.it/it/camere"
+        },
+        {
+          "id": "rome-vecchia-room-2",
+          "file": "/images/rome-vecchia-room-2.webp",
+          "caption": "Single Room空间与窗户/收纳",
+          "status": "官网房型页已关联",
+          "source": "https://www.vecchiaromaresort.it/it/camere"
+        },
+        {
+          "id": "rome-vecchia-room-3",
+          "file": "/images/rome-vecchia-room-3.webp",
+          "caption": "Single Room私人卫浴或另一视角",
+          "status": "官网房型页已关联",
+          "source": "https://www.vecchiaromaresort.it/it/camere"
+        }
+      ],
+      "priceSource": "执行计划PDF中的目标日期可退价；付款页需确认Single Room与取消线",
+      "lastVerified": "2026-09-06"
     },
     {
       "id": "rome-palatino",
@@ -54,7 +91,10 @@
         "street": "Monti核心区；临街房街噪待确认",
         "wall": "邻房隔音待确认",
         "corridor": "走廊声待确认",
-        "mechanical": "电梯/设备低频待确认"
+        "mechanical": "电梯/设备低频待确认",
+        "elevator": "远离电梯房型需书面确认",
+        "barRestaurant": "周边酒吧/餐厅夜噪待确认",
+        "trainTram": "轨道/电车低频待确认"
       },
       "bed": "床舒适口碑较稳",
       "heating": "暖气/空调；冬季模式待确认",
@@ -66,7 +106,41 @@
       "risk": "中风险",
       "selected": false,
       "bookingRequest": "只接受后侧/内院/高层/非临街，远离电梯、楼梯、设备间和清洁间；书面确认暖气与锁闭寄存。",
-      "verifiedAt": "2026-09-06"
+      "verifiedAt": "2026-09-06",
+      "roomName": "Single Room / Single Bed（优先请求；实际报价房型待确认）",
+      "roomArea": "待确认",
+      "bedType": "Single bed优先；不以Double/Queen作为默认预算",
+      "ratingCount": "3,195",
+      "refundableRoomMatch": "待确认",
+      "airConditioning": "有无独立控制及冬季运行状态待确认",
+      "frontDesk": "见原候选信息；晚到需书面确认",
+      "lateArrival": "待确认",
+      "luggageStorage": "锁闭、员工管理方式待确认",
+      "roomImages": [
+        {
+          "id": "rome-palatino-room-1",
+          "file": null,
+          "caption": "Single Room整体与单人床",
+          "status": "房型图片待确认",
+          "source": null
+        },
+        {
+          "id": "rome-palatino-room-2",
+          "file": null,
+          "caption": "窗户、书桌与收纳",
+          "status": "房型图片待确认",
+          "source": null
+        },
+        {
+          "id": "rome-palatino-room-3",
+          "file": null,
+          "caption": "私人卫浴或另一核心视角",
+          "status": "房型图片待确认",
+          "source": null
+        }
+      ],
+      "priceSource": "执行计划PDF中的目标日期可退价；付款页需确认Single Room与取消线",
+      "lastVerified": "2026-09-06"
     },
     {
       "id": "rome-deseo",
@@ -82,7 +156,10 @@
         "street": "Termini北侧；只接受后侧房",
         "wall": "邻房隔音待确认",
         "corridor": "走廊声待确认",
-        "mechanical": "设备低频待确认"
+        "mechanical": "设备低频待确认",
+        "elevator": "远离电梯房型需书面确认",
+        "barRestaurant": "周边酒吧/餐厅夜噪待确认",
+        "trainTram": "轨道/电车低频待确认"
       },
       "bed": "单人床；舒适度较好",
       "heating": "暖气/空调待房型确认",
@@ -94,7 +171,41 @@
       "risk": "中风险",
       "selected": false,
       "bookingRequest": "只接受后侧/内院/高层/非临街，远离电梯、楼梯、设备间和清洁间；书面确认暖气与锁闭寄存。",
-      "verifiedAt": "2026-09-06"
+      "verifiedAt": "2026-09-06",
+      "roomName": "Single Room / Single Bed（优先请求；实际报价房型待确认）",
+      "roomArea": "待确认",
+      "bedType": "Single bed优先；不以Double/Queen作为默认预算",
+      "ratingCount": "2,607",
+      "refundableRoomMatch": "待确认",
+      "airConditioning": "有无独立控制及冬季运行状态待确认",
+      "frontDesk": "见原候选信息；晚到需书面确认",
+      "lateArrival": "待确认",
+      "luggageStorage": "锁闭、员工管理方式待确认",
+      "roomImages": [
+        {
+          "id": "rome-deseo-room-1",
+          "file": null,
+          "caption": "Single Room整体与单人床",
+          "status": "房型图片待确认",
+          "source": null
+        },
+        {
+          "id": "rome-deseo-room-2",
+          "file": null,
+          "caption": "窗户、书桌与收纳",
+          "status": "房型图片待确认",
+          "source": null
+        },
+        {
+          "id": "rome-deseo-room-3",
+          "file": null,
+          "caption": "私人卫浴或另一核心视角",
+          "status": "房型图片待确认",
+          "source": null
+        }
+      ],
+      "priceSource": "执行计划PDF中的目标日期可退价；付款页需确认Single Room与取消线",
+      "lastVerified": "2026-09-06"
     },
     {
       "id": "rome-adesso",
@@ -110,7 +221,10 @@
         "street": "Tiburtina站对面；窗隔音口碑尚可",
         "wall": "近期评价反复提墙薄/邻房声",
         "corridor": "走廊与首层大堂声有个案",
-        "mechanical": "电梯/暖气低频待确认"
+        "mechanical": "电梯/暖气低频待确认",
+        "elevator": "远离电梯房型需书面确认",
+        "barRestaurant": "周边酒吧/餐厅夜噪待确认",
+        "trainTram": "轨道/电车低频待确认"
       },
       "bed": "Queen床；基础舒适",
       "heating": "暖气/空调；冬季模式待确认",
@@ -122,7 +236,41 @@
       "risk": "高风险",
       "selected": false,
       "bookingRequest": "只接受后侧/内院/高层/非临街，远离电梯、楼梯、设备间和清洁间；书面确认暖气与锁闭寄存。",
-      "verifiedAt": "2026-09-06"
+      "verifiedAt": "2026-09-06",
+      "roomName": "Single Room / Single Bed（优先请求；实际报价房型待确认）",
+      "roomArea": "待确认",
+      "bedType": "Single bed优先；不以Double/Queen作为默认预算",
+      "ratingCount": "779",
+      "refundableRoomMatch": "待确认",
+      "airConditioning": "有无独立控制及冬季运行状态待确认",
+      "frontDesk": "见原候选信息；晚到需书面确认",
+      "lateArrival": "待确认",
+      "luggageStorage": "锁闭、员工管理方式待确认",
+      "roomImages": [
+        {
+          "id": "rome-adesso-room-1",
+          "file": null,
+          "caption": "Single Room整体与单人床",
+          "status": "房型图片待确认",
+          "source": null
+        },
+        {
+          "id": "rome-adesso-room-2",
+          "file": null,
+          "caption": "窗户、书桌与收纳",
+          "status": "房型图片待确认",
+          "source": null
+        },
+        {
+          "id": "rome-adesso-room-3",
+          "file": null,
+          "caption": "私人卫浴或另一核心视角",
+          "status": "房型图片待确认",
+          "source": null
+        }
+      ],
+      "priceSource": "执行计划PDF中的目标日期可退价；付款页需确认Single Room与取消线",
+      "lastVerified": "2026-09-06"
     },
     {
       "id": "florence-morandi",
@@ -138,7 +286,10 @@
         "street": "San Marco相对安静；近期住客称夜间安静",
         "wall": "邻房隔音待确认",
         "corridor": "走廊声待确认",
-        "mechanical": "暖气/设备低频待确认"
+        "mechanical": "暖气/设备低频待确认",
+        "elevator": "远离电梯房型需书面确认",
+        "barRestaurant": "周边酒吧/餐厅夜噪待确认",
+        "trainTram": "轨道/电车低频待确认"
       },
       "bed": "单人房；睡眠评价较好",
       "heating": "暖气/空调待书面确认",
@@ -150,7 +301,41 @@
       "risk": "低—中",
       "selected": true,
       "bookingRequest": "只接受后侧/内院/高层/非临街，远离电梯、楼梯、设备间和清洁间；书面确认暖气与锁闭寄存。",
-      "verifiedAt": "2026-09-06"
+      "verifiedAt": "2026-09-06",
+      "roomName": "Single Room",
+      "roomArea": "8㎡",
+      "bedType": "1人单人房；床宽待确认",
+      "ratingCount": "485",
+      "refundableRoomMatch": "目标日期可退价对应Single Room仍需付款页确认",
+      "airConditioning": "有无独立控制及冬季运行状态待确认",
+      "frontDesk": "见原候选信息；晚到需书面确认",
+      "lateArrival": "待确认",
+      "luggageStorage": "锁闭、员工管理方式待确认",
+      "roomImages": [
+        {
+          "id": "florence-morandi-room-1",
+          "file": null,
+          "caption": "Single Room整体与单人床",
+          "status": "房型图片待确认",
+          "source": null
+        },
+        {
+          "id": "florence-morandi-room-2",
+          "file": null,
+          "caption": "窗户、书桌与收纳",
+          "status": "房型图片待确认",
+          "source": null
+        },
+        {
+          "id": "florence-morandi-room-3",
+          "file": null,
+          "caption": "私人卫浴或另一核心视角",
+          "status": "房型图片待确认",
+          "source": null
+        }
+      ],
+      "priceSource": "执行计划PDF中的目标日期可退价；付款页需确认Single Room与取消线",
+      "lastVerified": "2026-09-06"
     },
     {
       "id": "florence-rapallo",
@@ -166,7 +351,10 @@
         "street": "非夜生活核心；只订后侧房",
         "wall": "邻房隔音待确认",
         "corridor": "走廊声待确认",
-        "mechanical": "设备低频待确认"
+        "mechanical": "设备低频待确认",
+        "elevator": "远离电梯房型需书面确认",
+        "barRestaurant": "周边酒吧/餐厅夜噪待确认",
+        "trainTram": "轨道/电车低频待确认"
       },
       "bed": "床舒适口碑强",
       "heating": "暖气/空调；季节模式待确认",
@@ -178,7 +366,41 @@
       "risk": "低—中",
       "selected": false,
       "bookingRequest": "只接受后侧/内院/高层/非临街，远离电梯、楼梯、设备间和清洁间；书面确认暖气与锁闭寄存。",
-      "verifiedAt": "2026-09-06"
+      "verifiedAt": "2026-09-06",
+      "roomName": "Single Room / Single Bed（优先请求；实际报价房型待确认）",
+      "roomArea": "待确认",
+      "bedType": "Single bed优先；不以Double/Queen作为默认预算",
+      "ratingCount": "957",
+      "refundableRoomMatch": "待确认",
+      "airConditioning": "有无独立控制及冬季运行状态待确认",
+      "frontDesk": "见原候选信息；晚到需书面确认",
+      "lateArrival": "待确认",
+      "luggageStorage": "锁闭、员工管理方式待确认",
+      "roomImages": [
+        {
+          "id": "florence-rapallo-room-1",
+          "file": null,
+          "caption": "Single Room整体与单人床",
+          "status": "房型图片待确认",
+          "source": null
+        },
+        {
+          "id": "florence-rapallo-room-2",
+          "file": null,
+          "caption": "窗户、书桌与收纳",
+          "status": "房型图片待确认",
+          "source": null
+        },
+        {
+          "id": "florence-rapallo-room-3",
+          "file": null,
+          "caption": "私人卫浴或另一核心视角",
+          "status": "房型图片待确认",
+          "source": null
+        }
+      ],
+      "priceSource": "执行计划PDF中的目标日期可退价；付款页需确认Single Room与取消线",
+      "lastVerified": "2026-09-06"
     },
     {
       "id": "florence-bnb",
@@ -194,7 +416,10 @@
         "street": "Novoli非核心；临Viale房街噪待确认",
         "wall": "邻房隔音待确认",
         "corridor": "走廊声待确认",
-        "mechanical": "电梯/空调低频待确认"
+        "mechanical": "电梯/空调低频待确认",
+        "elevator": "远离电梯房型需书面确认",
+        "barRestaurant": "周边酒吧/餐厅夜噪待确认",
+        "trainTram": "轨道/电车低频待确认"
       },
       "bed": "双人床；近期评价称舒适",
       "heating": "暖气/空调；冬季模式待确认",
@@ -206,7 +431,41 @@
       "risk": "中风险",
       "selected": false,
       "bookingRequest": "只接受后侧/内院/高层/非临街，远离电梯、楼梯、设备间和清洁间；书面确认暖气与锁闭寄存。",
-      "verifiedAt": "2026-09-06"
+      "verifiedAt": "2026-09-06",
+      "roomName": "Single Room / Single Bed（优先请求；实际报价房型待确认）",
+      "roomArea": "待确认",
+      "bedType": "Single bed优先；不以Double/Queen作为默认预算",
+      "ratingCount": "4.5K",
+      "refundableRoomMatch": "待确认",
+      "airConditioning": "有无独立控制及冬季运行状态待确认",
+      "frontDesk": "见原候选信息；晚到需书面确认",
+      "lateArrival": "待确认",
+      "luggageStorage": "锁闭、员工管理方式待确认",
+      "roomImages": [
+        {
+          "id": "florence-bnb-room-1",
+          "file": null,
+          "caption": "Single Room整体与单人床",
+          "status": "房型图片待确认",
+          "source": null
+        },
+        {
+          "id": "florence-bnb-room-2",
+          "file": null,
+          "caption": "窗户、书桌与收纳",
+          "status": "房型图片待确认",
+          "source": null
+        },
+        {
+          "id": "florence-bnb-room-3",
+          "file": null,
+          "caption": "私人卫浴或另一核心视角",
+          "status": "房型图片待确认",
+          "source": null
+        }
+      ],
+      "priceSource": "执行计划PDF中的目标日期可退价；付款页需确认Single Room与取消线",
+      "lastVerified": "2026-09-06"
     },
     {
       "id": "florence-perseo",
@@ -222,7 +481,10 @@
         "street": "核心区；关窗街噪较稳但待确认",
         "wall": "有墙薄/邻房声个案",
         "corridor": "楼梯/走廊声待确认",
-        "mechanical": "设备低频待确认"
+        "mechanical": "设备低频待确认",
+        "elevator": "远离电梯房型需书面确认",
+        "barRestaurant": "周边酒吧/餐厅夜噪待确认",
+        "trainTram": "轨道/电车低频待确认"
       },
       "bed": "单人床；床评价好",
       "heating": "暖气/空调待确认",
@@ -234,7 +496,41 @@
       "risk": "中风险",
       "selected": false,
       "bookingRequest": "只接受后侧/内院/高层/非临街，远离电梯、楼梯、设备间和清洁间；书面确认暖气与锁闭寄存。",
-      "verifiedAt": "2026-09-06"
+      "verifiedAt": "2026-09-06",
+      "roomName": "Single Room / Single Bed（优先请求；实际报价房型待确认）",
+      "roomArea": "待确认",
+      "bedType": "Single bed优先；不以Double/Queen作为默认预算",
+      "ratingCount": "823",
+      "refundableRoomMatch": "待确认",
+      "airConditioning": "有无独立控制及冬季运行状态待确认",
+      "frontDesk": "见原候选信息；晚到需书面确认",
+      "lateArrival": "待确认",
+      "luggageStorage": "锁闭、员工管理方式待确认",
+      "roomImages": [
+        {
+          "id": "florence-perseo-room-1",
+          "file": null,
+          "caption": "Single Room整体与单人床",
+          "status": "房型图片待确认",
+          "source": null
+        },
+        {
+          "id": "florence-perseo-room-2",
+          "file": null,
+          "caption": "窗户、书桌与收纳",
+          "status": "房型图片待确认",
+          "source": null
+        },
+        {
+          "id": "florence-perseo-room-3",
+          "file": null,
+          "caption": "私人卫浴或另一核心视角",
+          "status": "房型图片待确认",
+          "source": null
+        }
+      ],
+      "priceSource": "执行计划PDF中的目标日期可退价；付款页需确认Single Room与取消线",
+      "lastVerified": "2026-09-06"
     },
     {
       "id": "venice-mercure",
@@ -250,7 +546,10 @@
         "street": "Marghera非夜生活区；双层玻璃/隔音房",
         "wall": "官网称隔音房；邻房仍待确认",
         "corridor": "隔音门；走廊声待确认",
-        "mechanical": "空调/设备低频待确认"
+        "mechanical": "空调/设备低频待确认",
+        "elevator": "远离电梯房型需书面确认",
+        "barRestaurant": "周边酒吧/餐厅夜噪待确认",
+        "trainTram": "不选车站正门及轨道侧房型"
       },
       "bed": "双/双床；舒适评价稳定",
       "heating": "冬季暖气模式待确认",
@@ -262,7 +561,41 @@
       "risk": "低—中",
       "selected": true,
       "bookingRequest": "只接受后侧/内院/高层/非临街，远离电梯、楼梯、设备间和清洁间；书面确认暖气与锁闭寄存。",
-      "verifiedAt": "2026-09-06"
+      "verifiedAt": "2026-09-06",
+      "roomName": "Single Room / Single Bed（优先请求；实际报价房型待确认）",
+      "roomArea": "待确认",
+      "bedType": "Single bed优先；不以Double/Queen作为默认预算",
+      "ratingCount": "1.8K",
+      "refundableRoomMatch": "待确认",
+      "airConditioning": "有无独立控制及冬季运行状态待确认",
+      "frontDesk": "见原候选信息；晚到需书面确认",
+      "lateArrival": "待确认",
+      "luggageStorage": "锁闭、员工管理方式待确认",
+      "roomImages": [
+        {
+          "id": "venice-mercure-room-1",
+          "file": null,
+          "caption": "Single Room整体与单人床",
+          "status": "房型图片待确认",
+          "source": null
+        },
+        {
+          "id": "venice-mercure-room-2",
+          "file": null,
+          "caption": "窗户、书桌与收纳",
+          "status": "房型图片待确认",
+          "source": null
+        },
+        {
+          "id": "venice-mercure-room-3",
+          "file": null,
+          "caption": "私人卫浴或另一核心视角",
+          "status": "房型图片待确认",
+          "source": null
+        }
+      ],
+      "priceSource": "执行计划PDF中的目标日期可退价；付款页需确认Single Room与取消线",
+      "lastVerified": "2026-09-06"
     },
     {
       "id": "venice-stern",
@@ -278,7 +611,10 @@
         "street": "Dorsoduro较静；运河侧声音待确认",
         "wall": "邻房隔音待确认",
         "corridor": "走廊声待确认",
-        "mechanical": "设备/水泵低频待确认"
+        "mechanical": "设备/水泵低频待确认",
+        "elevator": "远离电梯房型需书面确认",
+        "barRestaurant": "周边酒吧/餐厅夜噪待确认",
+        "trainTram": "轨道/电车低频待确认"
       },
       "bed": "Superior Single；舒适度待确认",
       "heating": "暖气/空调待房型确认",
@@ -290,7 +626,41 @@
       "risk": "低—中",
       "selected": false,
       "bookingRequest": "只接受后侧/内院/高层/非临街，远离电梯、楼梯、设备间和清洁间；书面确认暖气与锁闭寄存。",
-      "verifiedAt": "2026-09-06"
+      "verifiedAt": "2026-09-06",
+      "roomName": "Single Room / Single Bed（优先请求；实际报价房型待确认）",
+      "roomArea": "待确认",
+      "bedType": "Single bed优先；不以Double/Queen作为默认预算",
+      "ratingCount": "365",
+      "refundableRoomMatch": "待确认",
+      "airConditioning": "有无独立控制及冬季运行状态待确认",
+      "frontDesk": "见原候选信息；晚到需书面确认",
+      "lateArrival": "待确认",
+      "luggageStorage": "锁闭、员工管理方式待确认",
+      "roomImages": [
+        {
+          "id": "venice-stern-room-1",
+          "file": null,
+          "caption": "Single Room整体与单人床",
+          "status": "房型图片待确认",
+          "source": null
+        },
+        {
+          "id": "venice-stern-room-2",
+          "file": null,
+          "caption": "窗户、书桌与收纳",
+          "status": "房型图片待确认",
+          "source": null
+        },
+        {
+          "id": "venice-stern-room-3",
+          "file": null,
+          "caption": "私人卫浴或另一核心视角",
+          "status": "房型图片待确认",
+          "source": null
+        }
+      ],
+      "priceSource": "执行计划PDF中的目标日期可退价；付款页需确认Single Room与取消线",
+      "lastVerified": "2026-09-06"
     },
     {
       "id": "venice-alboretti",
@@ -306,7 +676,10 @@
         "street": "Dorsoduro相对安静",
         "wall": "邻房隔音待确认",
         "corridor": "走廊声待确认",
-        "mechanical": "设备低频待确认"
+        "mechanical": "设备低频待确认",
+        "elevator": "远离电梯房型需书面确认",
+        "barRestaurant": "周边酒吧/餐厅夜噪待确认",
+        "trainTram": "轨道/电车低频待确认"
       },
       "bed": "单人床；含早餐",
       "heating": "暖气/空调待确认",
@@ -318,7 +691,41 @@
       "risk": "低—中",
       "selected": false,
       "bookingRequest": "只接受后侧/内院/高层/非临街，远离电梯、楼梯、设备间和清洁间；书面确认暖气与锁闭寄存。",
-      "verifiedAt": "2026-09-06"
+      "verifiedAt": "2026-09-06",
+      "roomName": "Single Room / Single Bed（优先请求；实际报价房型待确认）",
+      "roomArea": "待确认",
+      "bedType": "Single bed优先；不以Double/Queen作为默认预算",
+      "ratingCount": "790",
+      "refundableRoomMatch": "待确认",
+      "airConditioning": "有无独立控制及冬季运行状态待确认",
+      "frontDesk": "见原候选信息；晚到需书面确认",
+      "lateArrival": "待确认",
+      "luggageStorage": "锁闭、员工管理方式待确认",
+      "roomImages": [
+        {
+          "id": "venice-alboretti-room-1",
+          "file": null,
+          "caption": "Single Room整体与单人床",
+          "status": "房型图片待确认",
+          "source": null
+        },
+        {
+          "id": "venice-alboretti-room-2",
+          "file": null,
+          "caption": "窗户、书桌与收纳",
+          "status": "房型图片待确认",
+          "source": null
+        },
+        {
+          "id": "venice-alboretti-room-3",
+          "file": null,
+          "caption": "私人卫浴或另一核心视角",
+          "status": "房型图片待确认",
+          "source": null
+        }
+      ],
+      "priceSource": "执行计划PDF中的目标日期可退价；付款页需确认Single Room与取消线",
+      "lastVerified": "2026-09-06"
     },
     {
       "id": "venice-abbazia",
@@ -334,7 +741,10 @@
         "street": "车站附近但在安静巷道/花园",
         "wall": "旧楼邻房声待确认",
         "corridor": "走廊声待确认",
-        "mechanical": "设备低频待确认"
+        "mechanical": "设备低频待确认",
+        "elevator": "远离电梯房型需书面确认",
+        "barRestaurant": "周边酒吧/餐厅夜噪待确认",
+        "trainTram": "轨道/电车低频待确认"
       },
       "bed": "Superior Double；床口碑尚可",
       "heating": "暖气/空调",
@@ -346,7 +756,41 @@
       "risk": "中风险",
       "selected": false,
       "bookingRequest": "只接受后侧/内院/高层/非临街，远离电梯、楼梯、设备间和清洁间；书面确认暖气与锁闭寄存。",
-      "verifiedAt": "2026-09-06"
+      "verifiedAt": "2026-09-06",
+      "roomName": "Single Room / Single Bed（优先请求；实际报价房型待确认）",
+      "roomArea": "待确认",
+      "bedType": "Single bed优先；不以Double/Queen作为默认预算",
+      "ratingCount": "3,053",
+      "refundableRoomMatch": "待确认",
+      "airConditioning": "有无独立控制及冬季运行状态待确认",
+      "frontDesk": "见原候选信息；晚到需书面确认",
+      "lateArrival": "待确认",
+      "luggageStorage": "锁闭、员工管理方式待确认",
+      "roomImages": [
+        {
+          "id": "venice-abbazia-room-1",
+          "file": null,
+          "caption": "Single Room整体与单人床",
+          "status": "房型图片待确认",
+          "source": null
+        },
+        {
+          "id": "venice-abbazia-room-2",
+          "file": null,
+          "caption": "窗户、书桌与收纳",
+          "status": "房型图片待确认",
+          "source": null
+        },
+        {
+          "id": "venice-abbazia-room-3",
+          "file": null,
+          "caption": "私人卫浴或另一核心视角",
+          "status": "房型图片待确认",
+          "source": null
+        }
+      ],
+      "priceSource": "执行计划PDF中的目标日期可退价；付款页需确认Single Room与取消线",
+      "lastVerified": "2026-09-06"
     },
     {
       "id": "vienna-bnb",
@@ -355,18 +799,21 @@
       "name": "B&B HOTEL Wien-Meidling",
       "priceRefundable": 1339,
       "priceNote": "1人1房；目标日期可退总价，城市税和取消线付款页复核",
-      "rating": "4.5 / 917",
+      "rating": "4.4 / 5",
       "openingRenovation": "开业/翻新待确认",
       "roomCondition": "现代连锁基础型",
       "noise": {
         "street": "Meidling住宅/交通区；临大路房待确认",
         "wall": "官网称隔音房；邻房声仍待确认",
         "corridor": "走廊声待确认",
-        "mechanical": "电梯/空调低频待确认"
+        "mechanical": "电梯/空调低频待确认",
+        "elevator": "远离电梯房型需书面确认",
+        "barRestaurant": "周边酒吧/餐厅夜噪待确认",
+        "trainTram": "轨道/电车低频待确认"
       },
       "bed": "160×200箱式床；官网称舒适床垫",
       "heating": "暖气/空调；冬季模式待确认",
-      "privateBathroom": "有；房型页再确认",
+      "privateBathroom": "官网确认：淋浴、WC、洗手台",
       "frontDeskStorage": "前台时段待确认；锁闭寄存待确认",
       "transport": "到核心区25–35分钟；美泉宫近",
       "pros": "标准、价格与睡眠最匹配",
@@ -374,7 +821,41 @@
       "risk": "低—中",
       "selected": true,
       "bookingRequest": "只接受后侧/内院/高层/非临街，远离电梯、楼梯、设备间和清洁间；书面确认暖气与锁闭寄存。",
-      "verifiedAt": "2026-09-06"
+      "verifiedAt": "2026-09-06",
+      "roomName": "Single Room",
+      "roomArea": "待官网确认",
+      "bedType": "1张法式床 140×200cm",
+      "ratingCount": "719",
+      "refundableRoomMatch": "目标日期可退价对应Single Room仍需付款页确认",
+      "airConditioning": "官网确认：房内空调；冬季运行与暖气控制待确认",
+      "frontDesk": "官网：平日06:00–22:00；周末/节假日缩短",
+      "lateArrival": "22:00后自助入住流程需书面确认",
+      "luggageStorage": "锁闭、员工管理方式待确认",
+      "roomImages": [
+        {
+          "id": "vienna-bnb-room-1",
+          "file": null,
+          "caption": "Single Room整体与单人床",
+          "status": "房型图片待确认",
+          "source": null
+        },
+        {
+          "id": "vienna-bnb-room-2",
+          "file": null,
+          "caption": "窗户、书桌与收纳",
+          "status": "房型图片待确认",
+          "source": null
+        },
+        {
+          "id": "vienna-bnb-room-3",
+          "file": null,
+          "caption": "私人卫浴或另一核心视角",
+          "status": "房型图片待确认",
+          "source": null
+        }
+      ],
+      "priceSource": "执行计划PDF中的目标日期可退价；付款页需确认Single Room与取消线",
+      "lastVerified": "2026-09-06"
     },
     {
       "id": "vienna-schani",
@@ -390,7 +871,10 @@
         "street": "UNO City商务区；优先Garden",
         "wall": "安静与隔音不足评价并存",
         "corridor": "走廊声待确认",
-        "mechanical": "新设备；低频仍待确认"
+        "mechanical": "新设备；低频仍待确认",
+        "elevator": "远离电梯房型需书面确认",
+        "barRestaurant": "周边酒吧/餐厅夜噪待确认",
+        "trainTram": "轨道/电车低频待确认"
       },
       "bed": "舒适床；遮光较好",
       "heating": "感应式暖气/空调",
@@ -402,7 +886,41 @@
       "risk": "中风险",
       "selected": false,
       "bookingRequest": "只接受后侧/内院/高层/非临街，远离电梯、楼梯、设备间和清洁间；书面确认暖气与锁闭寄存。",
-      "verifiedAt": "2026-09-06"
+      "verifiedAt": "2026-09-06",
+      "roomName": "Single Room / Single Bed（优先请求；实际报价房型待确认）",
+      "roomArea": "待确认",
+      "bedType": "Single bed优先；不以Double/Queen作为默认预算",
+      "ratingCount": "842",
+      "refundableRoomMatch": "待确认",
+      "airConditioning": "有无独立控制及冬季运行状态待确认",
+      "frontDesk": "见原候选信息；晚到需书面确认",
+      "lateArrival": "待确认",
+      "luggageStorage": "锁闭、员工管理方式待确认",
+      "roomImages": [
+        {
+          "id": "vienna-schani-room-1",
+          "file": null,
+          "caption": "Single Room整体与单人床",
+          "status": "房型图片待确认",
+          "source": null
+        },
+        {
+          "id": "vienna-schani-room-2",
+          "file": null,
+          "caption": "窗户、书桌与收纳",
+          "status": "房型图片待确认",
+          "source": null
+        },
+        {
+          "id": "vienna-schani-room-3",
+          "file": null,
+          "caption": "私人卫浴或另一核心视角",
+          "status": "房型图片待确认",
+          "source": null
+        }
+      ],
+      "priceSource": "执行计划PDF中的目标日期可退价；付款页需确认Single Room与取消线",
+      "lastVerified": "2026-09-06"
     },
     {
       "id": "vienna-companion",
@@ -418,7 +936,10 @@
         "street": "街侧有个案；只订内院房",
         "wall": "邻房隔音待确认",
         "corridor": "走廊声待确认",
-        "mechanical": "新设备仍需避机房"
+        "mechanical": "新设备仍需避机房",
+        "elevator": "远离电梯房型需书面确认",
+        "barRestaurant": "周边酒吧/餐厅夜噪待确认",
+        "trainTram": "轨道/电车低频待确认"
       },
       "bed": "Solo单人床；偏硬且舒适",
       "heating": "可调空调；冬季暖气待确认",
@@ -430,7 +951,41 @@
       "risk": "低—中",
       "selected": false,
       "bookingRequest": "只接受后侧/内院/高层/非临街，远离电梯、楼梯、设备间和清洁间；书面确认暖气与锁闭寄存。",
-      "verifiedAt": "2026-09-06"
+      "verifiedAt": "2026-09-06",
+      "roomName": "Single Room / Single Bed（优先请求；实际报价房型待确认）",
+      "roomArea": "待确认",
+      "bedType": "Single bed优先；不以Double/Queen作为默认预算",
+      "ratingCount": "1,220",
+      "refundableRoomMatch": "待确认",
+      "airConditioning": "有无独立控制及冬季运行状态待确认",
+      "frontDesk": "见原候选信息；晚到需书面确认",
+      "lateArrival": "待确认",
+      "luggageStorage": "锁闭、员工管理方式待确认",
+      "roomImages": [
+        {
+          "id": "vienna-companion-room-1",
+          "file": null,
+          "caption": "Single Room整体与单人床",
+          "status": "房型图片待确认",
+          "source": null
+        },
+        {
+          "id": "vienna-companion-room-2",
+          "file": null,
+          "caption": "窗户、书桌与收纳",
+          "status": "房型图片待确认",
+          "source": null
+        },
+        {
+          "id": "vienna-companion-room-3",
+          "file": null,
+          "caption": "私人卫浴或另一核心视角",
+          "status": "房型图片待确认",
+          "source": null
+        }
+      ],
+      "priceSource": "执行计划PDF中的目标日期可退价；付款页需确认Single Room与取消线",
+      "lastVerified": "2026-09-06"
     },
     {
       "id": "vienna-brauhof",
@@ -446,7 +1001,10 @@
         "street": "内院房可降街噪",
         "wall": "邻房隔音待确认",
         "corridor": "餐饮/团客走廊声待确认",
-        "mechanical": "设备低频待确认"
+        "mechanical": "设备低频待确认",
+        "elevator": "远离电梯房型需书面确认",
+        "barRestaurant": "周边酒吧/餐厅夜噪待确认",
+        "trainTram": "轨道/电车低频待确认"
       },
       "bed": "单人床；舒适度尚可",
       "heating": "暖气/空调",
@@ -458,7 +1016,41 @@
       "risk": "中风险",
       "selected": false,
       "bookingRequest": "只接受后侧/内院/高层/非临街，远离电梯、楼梯、设备间和清洁间；书面确认暖气与锁闭寄存。",
-      "verifiedAt": "2026-09-06"
+      "verifiedAt": "2026-09-06",
+      "roomName": "Single Room / Single Bed（优先请求；实际报价房型待确认）",
+      "roomArea": "待确认",
+      "bedType": "Single bed优先；不以Double/Queen作为默认预算",
+      "ratingCount": "5,695",
+      "refundableRoomMatch": "待确认",
+      "airConditioning": "有无独立控制及冬季运行状态待确认",
+      "frontDesk": "见原候选信息；晚到需书面确认",
+      "lateArrival": "待确认",
+      "luggageStorage": "锁闭、员工管理方式待确认",
+      "roomImages": [
+        {
+          "id": "vienna-brauhof-room-1",
+          "file": null,
+          "caption": "Single Room整体与单人床",
+          "status": "房型图片待确认",
+          "source": null
+        },
+        {
+          "id": "vienna-brauhof-room-2",
+          "file": null,
+          "caption": "窗户、书桌与收纳",
+          "status": "房型图片待确认",
+          "source": null
+        },
+        {
+          "id": "vienna-brauhof-room-3",
+          "file": null,
+          "caption": "私人卫浴或另一核心视角",
+          "status": "房型图片待确认",
+          "source": null
+        }
+      ],
+      "priceSource": "执行计划PDF中的目标日期可退价；付款页需确认Single Room与取消线",
+      "lastVerified": "2026-09-06"
     },
     {
       "id": "prague-adalbert",
@@ -474,7 +1066,10 @@
         "street": "Břevnov修道院园区；街噪低风险",
         "wall": "邻房隔音待确认",
         "corridor": "走廊声待确认",
-        "mechanical": "暖气/设备低频待确认"
+        "mechanical": "暖气/设备低频待确认",
+        "elevator": "远离电梯房型需书面确认",
+        "barRestaurant": "周边酒吧/餐厅夜噪待确认",
+        "trainTram": "轨道/电车低频待确认"
       },
       "bed": "单人床；舒适度待确认",
       "heating": "暖气；空调待确认",
@@ -486,7 +1081,41 @@
       "risk": "低—中",
       "selected": true,
       "bookingRequest": "只接受后侧/内院/高层/非临街，远离电梯、楼梯、设备间和清洁间；书面确认暖气与锁闭寄存。",
-      "verifiedAt": "2026-09-06"
+      "verifiedAt": "2026-09-06",
+      "roomName": "Single Room / Single Bed（优先请求；实际报价房型待确认）",
+      "roomArea": "待确认",
+      "bedType": "Single bed优先；不以Double/Queen作为默认预算",
+      "ratingCount": "2,225",
+      "refundableRoomMatch": "待确认",
+      "airConditioning": "有无独立控制及冬季运行状态待确认",
+      "frontDesk": "见原候选信息；晚到需书面确认",
+      "lateArrival": "待确认",
+      "luggageStorage": "锁闭、员工管理方式待确认",
+      "roomImages": [
+        {
+          "id": "prague-adalbert-room-1",
+          "file": null,
+          "caption": "Single Room整体与单人床",
+          "status": "房型图片待确认",
+          "source": null
+        },
+        {
+          "id": "prague-adalbert-room-2",
+          "file": null,
+          "caption": "窗户、书桌与收纳",
+          "status": "房型图片待确认",
+          "source": null
+        },
+        {
+          "id": "prague-adalbert-room-3",
+          "file": null,
+          "caption": "私人卫浴或另一核心视角",
+          "status": "房型图片待确认",
+          "source": null
+        }
+      ],
+      "priceSource": "执行计划PDF中的目标日期可退价；付款页需确认Single Room与取消线",
+      "lastVerified": "2026-09-06"
     },
     {
       "id": "prague-julian",
@@ -502,7 +1131,10 @@
         "street": "Prague 5较静；后侧更稳",
         "wall": "邻房隔音待确认",
         "corridor": "走廊声待确认",
-        "mechanical": "设备低频待确认"
+        "mechanical": "设备低频待确认",
+        "elevator": "远离电梯房型需书面确认",
+        "barRestaurant": "周边酒吧/餐厅夜噪待确认",
+        "trainTram": "轨道/电车低频待确认"
       },
       "bed": "单人床；舒适评价强",
       "heating": "暖气/空调待确认",
@@ -514,7 +1146,41 @@
       "risk": "低—中",
       "selected": false,
       "bookingRequest": "只接受后侧/内院/高层/非临街，远离电梯、楼梯、设备间和清洁间；书面确认暖气与锁闭寄存。",
-      "verifiedAt": "2026-09-06"
+      "verifiedAt": "2026-09-06",
+      "roomName": "Single Room / Single Bed（优先请求；实际报价房型待确认）",
+      "roomArea": "待确认",
+      "bedType": "Single bed优先；不以Double/Queen作为默认预算",
+      "ratingCount": "1,762",
+      "refundableRoomMatch": "待确认",
+      "airConditioning": "有无独立控制及冬季运行状态待确认",
+      "frontDesk": "见原候选信息；晚到需书面确认",
+      "lateArrival": "待确认",
+      "luggageStorage": "锁闭、员工管理方式待确认",
+      "roomImages": [
+        {
+          "id": "prague-julian-room-1",
+          "file": null,
+          "caption": "Single Room整体与单人床",
+          "status": "房型图片待确认",
+          "source": null
+        },
+        {
+          "id": "prague-julian-room-2",
+          "file": null,
+          "caption": "窗户、书桌与收纳",
+          "status": "房型图片待确认",
+          "source": null
+        },
+        {
+          "id": "prague-julian-room-3",
+          "file": null,
+          "caption": "私人卫浴或另一核心视角",
+          "status": "房型图片待确认",
+          "source": null
+        }
+      ],
+      "priceSource": "执行计划PDF中的目标日期可退价；付款页需确认Single Room与取消线",
+      "lastVerified": "2026-09-06"
     },
     {
       "id": "prague-upava",
@@ -530,7 +1196,10 @@
         "street": "小城区侧街相对安静",
         "wall": "邻房隔音待确认",
         "corridor": "走廊/楼梯声待确认",
-        "mechanical": "暖气/设备低频待确认"
+        "mechanical": "暖气/设备低频待确认",
+        "elevator": "远离电梯房型需书面确认",
+        "barRestaurant": "周边酒吧/餐厅夜噪待确认",
+        "trainTram": "轨道/电车低频待确认"
       },
       "bed": "单人床；舒适度待确认",
       "heating": "暖气；空调待确认",
@@ -542,7 +1211,41 @@
       "risk": "低—中",
       "selected": false,
       "bookingRequest": "只接受后侧/内院/高层/非临街，远离电梯、楼梯、设备间和清洁间；书面确认暖气与锁闭寄存。",
-      "verifiedAt": "2026-09-06"
+      "verifiedAt": "2026-09-06",
+      "roomName": "Single Room / Single Bed（优先请求；实际报价房型待确认）",
+      "roomArea": "待确认",
+      "bedType": "Single bed优先；不以Double/Queen作为默认预算",
+      "ratingCount": "2,272",
+      "refundableRoomMatch": "待确认",
+      "airConditioning": "有无独立控制及冬季运行状态待确认",
+      "frontDesk": "见原候选信息；晚到需书面确认",
+      "lateArrival": "待确认",
+      "luggageStorage": "锁闭、员工管理方式待确认",
+      "roomImages": [
+        {
+          "id": "prague-upava-room-1",
+          "file": null,
+          "caption": "Single Room整体与单人床",
+          "status": "房型图片待确认",
+          "source": null
+        },
+        {
+          "id": "prague-upava-room-2",
+          "file": null,
+          "caption": "窗户、书桌与收纳",
+          "status": "房型图片待确认",
+          "source": null
+        },
+        {
+          "id": "prague-upava-room-3",
+          "file": null,
+          "caption": "私人卫浴或另一核心视角",
+          "status": "房型图片待确认",
+          "source": null
+        }
+      ],
+      "priceSource": "执行计划PDF中的目标日期可退价；付款页需确认Single Room与取消线",
+      "lastVerified": "2026-09-06"
     },
     {
       "id": "prague-metropolitan",
@@ -558,7 +1261,10 @@
         "street": "老城边缘；街噪待确认",
         "wall": "邻房隔音待确认",
         "corridor": "团客/走廊声待确认",
-        "mechanical": "设备低频待确认"
+        "mechanical": "设备低频待确认",
+        "elevator": "远离电梯房型需书面确认",
+        "barRestaurant": "周边酒吧/餐厅夜噪待确认",
+        "trainTram": "轨道/电车低频待确认"
       },
       "bed": "单人床；舒适度尚可",
       "heating": "暖气/空调待确认",
@@ -570,7 +1276,41 @@
       "risk": "中风险",
       "selected": false,
       "bookingRequest": "只接受后侧/内院/高层/非临街，远离电梯、楼梯、设备间和清洁间；书面确认暖气与锁闭寄存。",
-      "verifiedAt": "2026-09-06"
+      "verifiedAt": "2026-09-06",
+      "roomName": "Single Room / Single Bed（优先请求；实际报价房型待确认）",
+      "roomArea": "待确认",
+      "bedType": "Single bed优先；不以Double/Queen作为默认预算",
+      "ratingCount": "7,423",
+      "refundableRoomMatch": "待确认",
+      "airConditioning": "有无独立控制及冬季运行状态待确认",
+      "frontDesk": "见原候选信息；晚到需书面确认",
+      "lateArrival": "待确认",
+      "luggageStorage": "锁闭、员工管理方式待确认",
+      "roomImages": [
+        {
+          "id": "prague-metropolitan-room-1",
+          "file": null,
+          "caption": "Single Room整体与单人床",
+          "status": "房型图片待确认",
+          "source": null
+        },
+        {
+          "id": "prague-metropolitan-room-2",
+          "file": null,
+          "caption": "窗户、书桌与收纳",
+          "status": "房型图片待确认",
+          "source": null
+        },
+        {
+          "id": "prague-metropolitan-room-3",
+          "file": null,
+          "caption": "私人卫浴或另一核心视角",
+          "status": "房型图片待确认",
+          "source": null
+        }
+      ],
+      "priceSource": "执行计划PDF中的目标日期可退价；付款页需确认Single Room与取消线",
+      "lastVerified": "2026-09-06"
     },
     {
       "id": "paris-choisy",
@@ -586,7 +1326,10 @@
         "street": "外圈临环路；只订背街",
         "wall": "标注隔音；邻房声仍待确认",
         "corridor": "走廊声待确认",
-        "mechanical": "电梯/空调低频待确认"
+        "mechanical": "电梯/空调低频待确认",
+        "elevator": "远离电梯房型需书面确认",
+        "barRestaurant": "周边酒吧/餐厅夜噪待确认",
+        "trainTram": "轨道/电车低频待确认"
       },
       "bed": "连锁床品；舒适度较稳",
       "heating": "暖气/空调；冬季模式待确认",
@@ -598,7 +1341,41 @@
       "risk": "低—中",
       "selected": true,
       "bookingRequest": "只接受后侧/内院/高层/非临街，远离电梯、楼梯、设备间和清洁间；书面确认暖气与锁闭寄存。",
-      "verifiedAt": "2026-09-06"
+      "verifiedAt": "2026-09-06",
+      "roomName": "Single Room / Single Bed（优先请求；实际报价房型待确认）",
+      "roomArea": "待确认",
+      "bedType": "Single bed优先；不以Double/Queen作为默认预算",
+      "ratingCount": "5.3K",
+      "refundableRoomMatch": "待确认",
+      "airConditioning": "有无独立控制及冬季运行状态待确认",
+      "frontDesk": "见原候选信息；晚到需书面确认",
+      "lateArrival": "待确认",
+      "luggageStorage": "锁闭、员工管理方式待确认",
+      "roomImages": [
+        {
+          "id": "paris-choisy-room-1",
+          "file": null,
+          "caption": "Single Room整体与单人床",
+          "status": "房型图片待确认",
+          "source": null
+        },
+        {
+          "id": "paris-choisy-room-2",
+          "file": null,
+          "caption": "窗户、书桌与收纳",
+          "status": "房型图片待确认",
+          "source": null
+        },
+        {
+          "id": "paris-choisy-room-3",
+          "file": null,
+          "caption": "私人卫浴或另一核心视角",
+          "status": "房型图片待确认",
+          "source": null
+        }
+      ],
+      "priceSource": "执行计划PDF中的目标日期可退价；付款页需确认Single Room与取消线",
+      "lastVerified": "2026-09-06"
     },
     {
       "id": "paris-motelone",
@@ -614,7 +1391,10 @@
         "street": "靠环路；多条2026评价称后侧安静",
         "wall": "近期评价称邻房隔音好；仍按房号确认",
         "corridor": "总体少；清洁敲门有个案",
-        "mechanical": "靠电梯房有电机噪音个案"
+        "mechanical": "靠电梯房有电机噪音个案",
+        "elevator": "远离电梯房型需书面确认",
+        "barRestaurant": "周边酒吧/餐厅夜噪待确认",
+        "trainTram": "轨道/电车低频待确认"
       },
       "bed": "大床舒适；房间小",
       "heating": "暖气/空调；温控个案需确认",
@@ -626,7 +1406,41 @@
       "risk": "低—中",
       "selected": false,
       "bookingRequest": "只接受后侧/内院/高层/非临街，远离电梯、楼梯、设备间和清洁间；书面确认暖气与锁闭寄存。",
-      "verifiedAt": "2026-09-06"
+      "verifiedAt": "2026-09-06",
+      "roomName": "Single Room / Single Bed（优先请求；实际报价房型待确认）",
+      "roomArea": "待确认",
+      "bedType": "Single bed优先；不以Double/Queen作为默认预算",
+      "ratingCount": "3.3K",
+      "refundableRoomMatch": "待确认",
+      "airConditioning": "有无独立控制及冬季运行状态待确认",
+      "frontDesk": "见原候选信息；晚到需书面确认",
+      "lateArrival": "待确认",
+      "luggageStorage": "锁闭、员工管理方式待确认",
+      "roomImages": [
+        {
+          "id": "paris-motelone-room-1",
+          "file": null,
+          "caption": "Single Room整体与单人床",
+          "status": "房型图片待确认",
+          "source": null
+        },
+        {
+          "id": "paris-motelone-room-2",
+          "file": null,
+          "caption": "窗户、书桌与收纳",
+          "status": "房型图片待确认",
+          "source": null
+        },
+        {
+          "id": "paris-motelone-room-3",
+          "file": null,
+          "caption": "私人卫浴或另一核心视角",
+          "status": "房型图片待确认",
+          "source": null
+        }
+      ],
+      "priceSource": "执行计划PDF中的目标日期可退价；付款页需确认Single Room与取消线",
+      "lastVerified": "2026-09-06"
     },
     {
       "id": "paris-lilas",
@@ -642,7 +1456,10 @@
         "street": "环路旁；官网称房间隔音，窗隔音评价好",
         "wall": "邻房隔音待确认",
         "corridor": "走廊声待确认",
-        "mechanical": "电梯/空调低频待确认"
+        "mechanical": "电梯/空调低频待确认",
+        "elevator": "远离电梯房型需书面确认",
+        "barRestaurant": "周边酒吧/餐厅夜噪待确认",
+        "trainTram": "轨道/电车低频待确认"
       },
       "bed": "B&B床品；舒适度评价较好",
       "heating": "暖气/空调；冬季模式待确认",
@@ -654,7 +1471,41 @@
       "risk": "中风险",
       "selected": false,
       "bookingRequest": "只接受后侧/内院/高层/非临街，远离电梯、楼梯、设备间和清洁间；书面确认暖气与锁闭寄存。",
-      "verifiedAt": "2026-09-06"
+      "verifiedAt": "2026-09-06",
+      "roomName": "Single Room / Single Bed（优先请求；实际报价房型待确认）",
+      "roomArea": "待确认",
+      "bedType": "Single bed优先；不以Double/Queen作为默认预算",
+      "ratingCount": "1.1K",
+      "refundableRoomMatch": "待确认",
+      "airConditioning": "有无独立控制及冬季运行状态待确认",
+      "frontDesk": "见原候选信息；晚到需书面确认",
+      "lateArrival": "待确认",
+      "luggageStorage": "锁闭、员工管理方式待确认",
+      "roomImages": [
+        {
+          "id": "paris-lilas-room-1",
+          "file": null,
+          "caption": "Single Room整体与单人床",
+          "status": "房型图片待确认",
+          "source": null
+        },
+        {
+          "id": "paris-lilas-room-2",
+          "file": null,
+          "caption": "窗户、书桌与收纳",
+          "status": "房型图片待确认",
+          "source": null
+        },
+        {
+          "id": "paris-lilas-room-3",
+          "file": null,
+          "caption": "私人卫浴或另一核心视角",
+          "status": "房型图片待确认",
+          "source": null
+        }
+      ],
+      "priceSource": "执行计划PDF中的目标日期可退价；付款页需确认Single Room与取消线",
+      "lastVerified": "2026-09-06"
     },
     {
       "id": "paris-pyrenees",
@@ -670,7 +1521,10 @@
         "street": "住宅商业混合；后侧房待确认",
         "wall": "墙体隔音待确认",
         "corridor": "走廊声待确认",
-        "mechanical": "设备低频待确认"
+        "mechanical": "设备低频待确认",
+        "elevator": "远离电梯房型需书面确认",
+        "barRestaurant": "周边酒吧/餐厅夜噪待确认",
+        "trainTram": "轨道/电车低频待确认"
       },
       "bed": "单人床；舒适度待确认",
       "heating": "暖气/空调待确认",
@@ -682,7 +1536,41 @@
       "risk": "中风险",
       "selected": false,
       "bookingRequest": "只接受后侧/内院/高层/非临街，远离电梯、楼梯、设备间和清洁间；书面确认暖气与锁闭寄存。",
-      "verifiedAt": "2026-09-06"
+      "verifiedAt": "2026-09-06",
+      "roomName": "Single Room / Single Bed（优先请求；实际报价房型待确认）",
+      "roomArea": "待确认",
+      "bedType": "Single bed优先；不以Double/Queen作为默认预算",
+      "ratingCount": "2,984",
+      "refundableRoomMatch": "待确认",
+      "airConditioning": "有无独立控制及冬季运行状态待确认",
+      "frontDesk": "见原候选信息；晚到需书面确认",
+      "lateArrival": "待确认",
+      "luggageStorage": "锁闭、员工管理方式待确认",
+      "roomImages": [
+        {
+          "id": "paris-pyrenees-room-1",
+          "file": null,
+          "caption": "Single Room整体与单人床",
+          "status": "房型图片待确认",
+          "source": null
+        },
+        {
+          "id": "paris-pyrenees-room-2",
+          "file": null,
+          "caption": "窗户、书桌与收纳",
+          "status": "房型图片待确认",
+          "source": null
+        },
+        {
+          "id": "paris-pyrenees-room-3",
+          "file": null,
+          "caption": "私人卫浴或另一核心视角",
+          "status": "房型图片待确认",
+          "source": null
+        }
+      ],
+      "priceSource": "执行计划PDF中的目标日期可退价；付款页需确认Single Room与取消线",
+      "lastVerified": "2026-09-06"
     }
   ]
 }

@@ -23,8 +23,11 @@ pnpm check
 - `data/options.json`：每城 4 个可替换景点/街区选择，不改变主行程
 - `data/images.json`：全局唯一视觉资产、用途、时间与来源
 - `data/gyms.json`：10 家训练候选与 Most Photogenic Top 5
-- `data/hotels.json`：每城 4 家、四类噪音与睡眠风险
-- `data/bookings.json`：机酒、铁路、票券、签证、保险、eSIM
+- `data/restaurants.json`：26 家沿当天路线可用的餐厅与咖啡馆
+- `data/xhs.json`：城市、拍摄、餐饮、GYM、购物与避坑搜索入口
+- `data/hotels.json`：每城 4 家、Single Room、7 类噪音与房型图核验状态
+- `data/bookings.json`：机酒、铁路、票券、签证、保险、eSIM 的唯一订单状态
+- `data/tasks.json`：总控任务；已关联订单会随 Booking 状态自动完成
 - `data/budget.json`：¥26,000 硬预算与实际支出分类
 - `data/checklist.json`：执行总控与真实职业状态签证材料
 - `data/essentials.json`：途中速查
@@ -38,4 +41,6 @@ pnpm check
 
 `research → structured data → render → audit → handoff`
 
-`schemas/guide.schema.json` 定义结构；`scripts/audit.mjs` 检查缺失字段、交叉引用、图片文件、图片内容哈希去重、18天连续日期、15晚/5次换酒店、每城 4 家酒店、10 家健身房、Top 5、预算与状态枚举。结果写入 `audit/final-audit.json`，并更新 `.travel-build-state.json`。只有审计通过时 `handoff_allowed` 才为 `true`。
+`schemas/guide.schema.json` 定义结构；`scripts/audit.mjs` 检查缺失字段、交叉引用、全部行程点配图、图片内容与感知哈希去重、18天连续日期、15晚/5次换酒店、酒店噪音维度与房型图证据、餐饮来源、Booking/Task联动、预算和外链。结果写入 `audit/final-audit.json`，并更新 `.travel-build-state.json`。只有审计通过时 `handoff_allowed` 才为 `true`。
+
+浏览器中的订单、任务、实际支出、收藏、备注和订单补充信息可在 `MORE → BACKUP` 导出为 JSON，并在另一台设备中恢复。

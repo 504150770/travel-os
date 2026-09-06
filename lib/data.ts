@@ -10,6 +10,9 @@ import checklist from '@/data/checklist.json';
 import essentials from '@/data/essentials.json';
 import conflicts from '@/data/conflicts.json';
 import options from '@/data/options.json';
+import restaurants from '@/data/restaurants.json';
+import tasks from '@/data/tasks.json';
+import xhs from '@/data/xhs.json';
 
 export const guideData = {
   trip,
@@ -24,7 +27,17 @@ export const guideData = {
   essentials,
   conflicts,
   options,
+  restaurants,
+  tasks,
+  xhs,
 };
 
 export const placeMap = new Map(places.map((place) => [place.id, place]));
 export const gymMap = new Map(gyms.map((gym) => [gym.id, gym]));
+export const imageByPlace = new Map<string, typeof images>();
+for (const image of images) {
+  if (!image.placeId) continue;
+  const list = imageByPlace.get(image.placeId) ?? [];
+  list.push(image);
+  imageByPlace.set(image.placeId, list);
+}
