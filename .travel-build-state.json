@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "stage": "complete",
+  "workflow": [
+    "research",
+    "structured_data",
+    "render",
+    "audit",
+    "handoff"
+  ],
+  "source_commit": "7372e4762eea2767bd0a49c949f33c70bed92a67",
+  "checks": {
+    "schemaValidation": true,
+    "tripStructure": true,
+    "referenceIntegrity": true,
+    "optionAudit": true,
+    "imageDeduplication": true,
+    "brokenImageDetection": true,
+    "hotelAudit": true,
+    "gymAudit": true,
+    "budgetAudit": true,
+    "bookingAudit": true,
+    "provenance": true
+  },
+  "audit_report": "audit/final-audit.json",
+  "handoff_allowed": true,
+  "final_response_allowed": true,
+  "continuation_required": false,
+  "next_required_action": "Handoff the runnable guide.",
+  "updated_at": "2026-09-06T11:51:33.490Z"
+}

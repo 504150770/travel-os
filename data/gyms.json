@@ -1,0 +1,32 @@
+[
+  {
+    "id": "gym-rome-dabliu", "name": "Dabliu Club Parioli", "city": "罗马", "tag": "拍摄优先", "dayPass": "€35", "passMethod": "官网购物车购票", "hours": "周一至五 07:00–22:00｜周六 10:00–18:00｜周日 10:00–15:00", "distance": "Aventino住宿区约35–45分钟", "equipment": "高｜2,000㎡，自由重量、力量器械、功能区、泳池", "crowd": "中｜18:00后可能增加，实时拥挤度未公开", "lighting": "均匀顶光＋大镜面；线条清楚", "style": "现代会所 / 深色器械区", "photo": "高｜手机短拍先问前台", "time": "14:30–16:30", "recommendedDays": [3,4], "rating": 4.5, "photogenicRank": null, "image": "/images/gym_rome_dabliu.webp", "source": "https://www.dabliu.com/club/roma-parioli/", "verifiedAt": "2026-09-06"
+  },
+  {
+    "id": "gym-rome-golden", "name": "Golden Power Marconi", "city": "罗马", "tag": "拍摄优先", "dayPass": "€15全天", "passMethod": "官网购买", "hours": "周一至五 08:30–22:00｜周六 08:30–18:00｜周日关闭", "distance": "Aventino住宿区约25–35分钟", "equipment": "中高｜自由重量、深蹲架、绳索与常规力量器械", "crowd": "中｜场地不大，避开18:00–20:00", "lighting": "冷白顶侧光＋镜面；力量区反差好", "style": "暗黑工业 / 老派力量感", "photo": "高｜背景有力量感，规则需现场确认", "time": "15:30–17:00", "recommendedDays": [2,3], "rating": 4.3, "photogenicRank": 3, "image": "/images/gym_rome_golden.webp", "source": "https://palestre.fitness/it/i/19689-golden-power/", "verifiedAt": "2026-09-06"
+  },
+  {
+    "id": "gym-florence-klab", "name": "Klab Marignolle", "city": "佛罗伦萨", "tag": "拍摄优先", "dayPass": "€30", "passMethod": "日票；是否另收Klab Pass费需确认", "hours": "周一至五 07:00–22:30｜周六 08:00–20:00｜周日 09:00–19:00", "distance": "San Marco住宿区约25–35分钟", "equipment": "高｜Technogym、深蹲架、功能区、泳池与SPA", "crowd": "中｜周末上午较从容，17:30后避开", "lighting": "大窗侧光＋明亮顶光；画面干净", "style": "现代会所 / 自然光", "photo": "高｜适合全身与器械动作", "time": "周六15:30–17:30 / 周日09:00–10:30", "recommendedDays": [5,6], "rating": 4.8, "photogenicRank": null, "image": "/images/gym_florence_klab.webp", "source": "https://www.klab.it/marignolle-firenze/", "verifiedAt": "2026-09-06"
+  },
+  {
+    "id": "gym-mestre-mcfit", "name": "McFIT Mestre · Via Don Peron", "city": "威尼斯 / Mestre", "tag": "训练优先", "dayPass": "€20", "passMethod": "门店购买", "hours": "周一至五 07:00–23:00｜周末 09:00–21:00｜365天开放", "distance": "Marghera住宿区约20–30分钟", "equipment": "高｜2025新馆，两层Power / Cardio / Functional", "crowd": "中高｜17:30–20:00通常高峰", "lighting": "玻璃＋冷白顶光；黑色器械区反差强", "style": "黑色工业 / 现代新馆", "photo": "高｜短视频画面强，规则需确认", "time": "15:30–17:00", "recommendedDays": [7,8], "rating": 4.6, "photogenicRank": 2, "image": "/images/gym_mestre_mcfit.webp", "source": "https://wellhub.com/it-it/search/partners/mcfit-mestre/", "verifiedAt": "2026-09-06"
+  },
+  {
+    "id": "gym-vienna-jh", "name": "John Harris Schillerplatz", "city": "维也纳", "tag": "拍摄优先", "dayPass": "€48起", "passMethod": "Eversports在线订", "hours": "周一至五 06:30–23:00｜周末及节日 09:00–21:00", "distance": "Meidling住宿区约25–35分钟；老城5–15分钟", "equipment": "高｜7,000㎡，Eleiko、力量与功能区、泳池桑拿", "crowd": "中｜空间大，17:00–20:00仍避开", "lighting": "拱形暖白顶侧光＋连续镜面", "style": "高级古典 / 暗暖调会所", "photo": "很高｜人物拍摄先征得前台同意", "time": "13:30–15:30", "recommendedDays": [9,10], "rating": 4.9, "photogenicRank": 4, "image": "/images/gym_vienna_jh.webp", "source": "https://www.johnharris.at/en/studios/detail/1/schillerplatz.html", "verifiedAt": "2026-09-06"
+  },
+  {
+    "id": "gym-vienna-das", "name": "DAS GYM · Handelskai", "city": "维也纳", "tag": "训练优先", "dayPass": "€23促销 / 常规€30", "passMethod": "现场或官网；网购寄实体卡", "hours": "周一至五 06:00–23:00｜周末 08:00–22:00", "distance": "Meidling住宿区约35–45分钟", "equipment": "顶级｜3,000㎡、250+器械、举重、健美、Strongman", "crowd": "中高｜力量爱好者多，17:00–20:00避开", "lighting": "工业顶光＋局部窗光；强反差", "style": "重工业 / 健美圣地 / Posing Room", "photo": "很高｜有标准化灯光照相区", "time": "10:00–12:00 / 15:30–17:00", "recommendedDays": [9,10], "rating": 5, "photogenicRank": 1, "image": "/images/gym_vienna_das.webp", "source": "https://shop.dasgym.com/products/das-gym-tageskarte", "verifiedAt": "2026-09-06"
+  },
+  {
+    "id": "gym-prague-form", "name": "Form Factory I. P. Pavlova", "city": "布拉格", "tag": "拍摄优先", "dayPass": "349 CZK", "passMethod": "官网购买", "hours": "周一至五 06:30–22:00｜周末 08:00–21:00", "distance": "Břevnov住宿区约30–40分钟", "equipment": "高｜2025新馆，1,250㎡两层，力量与自由重量", "crowd": "中高｜17:00后与周末午后较忙", "lighting": "大窗侧光＋中性顶光；浅墙与镜面", "style": "现代精品 / 都市感", "photo": "高｜新馆画面干净", "time": "09:00–11:00 / 15:30–17:00", "recommendedDays": [11,12], "rating": 4.8, "photogenicRank": null, "image": "/images/gym_prague_form.webp", "source": "https://www.formfactory.cz/nove-otevrene-fitko-i-p-pavlova/", "verifiedAt": "2026-09-06"
+  },
+  {
+    "id": "gym-prague-euforie", "name": "Euforie Fitness Smíchov", "city": "布拉格", "tag": "方便优先", "dayPass": "220 CZK / 15:00前200 CZK", "passMethod": "力量区可直接到店", "hours": "周一至四 07:00–21:30｜周五至21:00｜周六09:00–17:00｜周日至21:00", "distance": "Břevnov住宿区约25–35分钟", "equipment": "中高｜力量器械、自由重量与功能区", "crowd": "低至中｜官网有拥挤度页面，15:00前更适合", "lighting": "天窗 / 大窗漫射光＋白色顶面", "style": "明亮实用 / 紧凑", "photo": "高｜肤色自然，避开他人", "time": "09:00–15:00", "recommendedDays": [11,12], "rating": 4.5, "photogenicRank": null, "image": "/images/gym_prague_euforie.webp", "source": "https://www.euforie.cz/cs/kontakt/praha-5-smichov", "verifiedAt": "2026-09-06"
+  },
+  {
+    "id": "gym-paris-fpark", "name": "Fitness Park Porte de Choisy", "city": "巴黎", "tag": "训练优先", "dayPass": "需确认", "passMethod": "仅在前台开放时购买", "hours": "训练区每日06:00–23:00｜前台工作日08:30–21:30；周末缩短", "distance": "Porte de Choisy住宿区约3–10分钟", "equipment": "高｜1,300㎡、哑铃至50kg、深蹲架与绳索", "crowd": "高｜18:00后明显拥挤", "lighting": "工业冷白顶光；器械背景反差好", "style": "暗色商业 / 工业器械墙", "photo": "中高｜拥挤时不适合拍", "time": "09:00–11:00 / 15:30–17:00", "recommendedDays": [13,14,15,16], "rating": 4.6, "photogenicRank": 5, "image": "/images/gym_paris_fpark.webp", "source": "https://sallesdesport.fitness/fr/i/746-fitness-park-paris-porte-de-choisy/", "verifiedAt": "2026-09-06"
+  },
+  {
+    "id": "gym-paris-basic", "name": "Basic-Fit Rue Tolbiac", "city": "巴黎", "tag": "方便优先", "dayPass": "€11.99起", "passMethod": "入口自助机购票，邮件收QR码", "hours": "周一至五 06:00–22:30｜周末 09:00–19:00", "distance": "Porte de Choisy住宿区约15–25分钟", "equipment": "中高｜7个训练区，力量、自由重量、功能", "crowd": "中高｜18:00后较忙，可看App实时拥挤度", "lighting": "大窗侧光＋明亮顶光", "style": "现代连锁 / 清爽镜面", "photo": "高｜自然光好，遵守门店规则", "time": "09:00–11:00 / 15:30–17:00", "recommendedDays": [13,14,15,16], "rating": 4.5, "photogenicRank": null, "image": "/images/gym_paris_basic.webp", "source": "https://www.masalledesport.com/salle/13210%2Cbasic-fit-rue-tolbiac%2Cclub-de-fitness%2Cparis%2C75013%2Cfr", "verifiedAt": "2026-09-06"
+  }
+]

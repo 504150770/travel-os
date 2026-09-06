@@ -1,0 +1,428 @@
+[
+  {
+    "id": "opt-rome-castel",
+    "city": "罗马",
+    "name": "圣天使桥 + 圣天使堡外观",
+    "kind": "河岸 / 蓝调",
+    "recommendedDays": [
+      2,
+      3
+    ],
+    "duration": "45–75分钟",
+    "bestFor": "城堡剪影、桥面人像",
+    "swapRule": "只替换纳沃纳或古罗马广场外观段",
+    "booking": "外观无票；入内票待确认",
+    "mapQuery": "Castel Sant Angelo Rome",
+    "source": "https://www.turismoroma.it/en/places/castel-santangelo",
+    "status": "可选，不强制",
+    "verifiedAt": "2026-09-06"
+  },
+  {
+    "id": "opt-rome-spanish",
+    "city": "罗马",
+    "name": "西班牙台阶 + Via Condotti",
+    "kind": "街景 / 购物",
+    "recommendedDays": [
+      2,
+      3
+    ],
+    "duration": "60–90分钟",
+    "bestFor": "人物街拍、轻购物",
+    "swapRule": "替换纳沃纳；不与许愿池额外叠加",
+    "booking": "现场即可",
+    "mapQuery": "Spanish Steps Rome",
+    "source": "https://www.turismoroma.it/en/places/spanish-steps",
+    "status": "可选，不强制",
+    "verifiedAt": "2026-09-06"
+  },
+  {
+    "id": "opt-rome-pincio",
+    "city": "罗马",
+    "name": "Pincio露台 + 人民广场",
+    "kind": "城市全景",
+    "recommendedDays": [
+      2,
+      3
+    ],
+    "duration": "60–90分钟",
+    "bestFor": "日落、屋顶线条",
+    "swapRule": "替换当日一个广场段；不在梵蒂冈日追加",
+    "booking": "现场即可",
+    "mapQuery": "Terrazza del Pincio Rome",
+    "source": "https://www.turismoroma.it/en/places/pincio-terrace",
+    "status": "可选，不强制",
+    "verifiedAt": "2026-09-06"
+  },
+  {
+    "id": "opt-rome-trastevere",
+    "city": "罗马",
+    "name": "Trastevere街巷",
+    "kind": "街区 / 晚餐",
+    "recommendedDays": [
+      2,
+      3
+    ],
+    "duration": "90–120分钟",
+    "bestFor": "暖色街巷、城市质感",
+    "swapRule": "只替换当晚自由段，22:00前结束",
+    "booking": "现场即可",
+    "mapQuery": "Trastevere Rome",
+    "source": "https://www.turismoroma.it/en/places/trastevere",
+    "status": "可选，不强制",
+    "verifiedAt": "2026-09-06"
+  },
+  {
+    "id": "opt-florence-croce",
+    "city": "佛罗伦萨",
+    "name": "圣十字广场 + 教堂外观",
+    "kind": "建筑 / 广场",
+    "recommendedDays": [
+      5,
+      6
+    ],
+    "duration": "45–75分钟",
+    "bestFor": "立面与开阔人物构图",
+    "swapRule": "替换领主广场或Oltrarno小店段",
+    "booking": "外观无票；入内待确认",
+    "mapQuery": "Basilica of Santa Croce Florence",
+    "source": "https://www.santacroceopera.it/en/",
+    "status": "可选，不强制",
+    "verifiedAt": "2026-09-06"
+  },
+  {
+    "id": "opt-florence-strozzi",
+    "city": "佛罗伦萨",
+    "name": "Palazzo Strozzi庭院",
+    "kind": "建筑 / 设计",
+    "recommendedDays": [
+      5,
+      6
+    ],
+    "duration": "30–60分钟",
+    "bestFor": "几何、展览装置",
+    "swapRule": "替换一段商业街慢逛",
+    "booking": "庭院现场；展览票待确认",
+    "mapQuery": "Palazzo Strozzi Florence",
+    "source": "https://www.palazzostrozzi.org/en/",
+    "status": "可选，不强制",
+    "verifiedAt": "2026-09-06"
+  },
+  {
+    "id": "opt-florence-market",
+    "city": "佛罗伦萨",
+    "name": "Mercato Centrale",
+    "kind": "餐饮 / 休息",
+    "recommendedDays": [
+      5,
+      6
+    ],
+    "duration": "60–90分钟",
+    "bestFor": "雨天、快速用餐",
+    "swapRule": "替换当天午餐地点，不增加总时长",
+    "booking": "现场即可",
+    "mapQuery": "Mercato Centrale Firenze",
+    "source": "https://www.mercatocentrale.com/florence/",
+    "status": "可选，不强制",
+    "verifiedAt": "2026-09-06"
+  },
+  {
+    "id": "opt-florence-smn",
+    "city": "佛罗伦萨",
+    "name": "Santa Maria Novella香氛药房",
+    "kind": "购物 / 室内",
+    "recommendedDays": [
+      5,
+      6
+    ],
+    "duration": "30–45分钟",
+    "bestFor": "香氛、精致室内",
+    "swapRule": "替换小店段；控制购物重量",
+    "booking": "营业待确认",
+    "mapQuery": "Officina Profumo-Farmaceutica di Santa Maria Novella Firenze",
+    "source": "https://eu.smnovella.com/",
+    "status": "可选，不强制",
+    "verifiedAt": "2026-09-06"
+  },
+  {
+    "id": "opt-venice-rialto",
+    "city": "威尼斯",
+    "name": "里亚托桥清晨",
+    "kind": "经典机位",
+    "recommendedDays": [
+      8
+    ],
+    "duration": "45–60分钟",
+    "bestFor": "早晨较少人、运河纵深",
+    "swapRule": "替换上午水巷，不和学院桥同日追两次日落",
+    "booking": "现场即可",
+    "mapQuery": "Rialto Bridge Venice",
+    "source": "https://www.veneziaunica.it/en/content/what-see",
+    "status": "可选，不强制",
+    "verifiedAt": "2026-09-06"
+  },
+  {
+    "id": "opt-venice-zattere",
+    "city": "威尼斯",
+    "name": "Zattere海滨长堤",
+    "kind": "河岸 / 慢走",
+    "recommendedDays": [
+      7,
+      8
+    ],
+    "duration": "60–90分钟",
+    "bestFor": "开阔水面、冬日侧光",
+    "swapRule": "替换学院桥周边延伸段",
+    "booking": "现场即可",
+    "mapQuery": "Zattere Venice",
+    "source": "https://www.veneziaunica.it/en",
+    "status": "可选，不强制",
+    "verifiedAt": "2026-09-06"
+  },
+  {
+    "id": "opt-venice-giorgio",
+    "city": "威尼斯",
+    "name": "圣乔治马焦雷岛",
+    "kind": "教堂 / 高处",
+    "recommendedDays": [
+      8
+    ],
+    "duration": "90–120分钟",
+    "bestFor": "隔水看圣马可天际线",
+    "swapRule": "替换水巷段；天气差不去",
+    "booking": "船票与钟楼票待确认",
+    "mapQuery": "San Giorgio Maggiore Venice",
+    "source": "https://www.chorusvenezia.org/en/church-of-san-giorgio-maggiore",
+    "status": "可选，不强制",
+    "verifiedAt": "2026-09-06"
+  },
+  {
+    "id": "opt-venice-cannaregio",
+    "city": "威尼斯",
+    "name": "Cannaregio住宅水巷",
+    "kind": "街区 / 晚餐",
+    "recommendedDays": [
+      7,
+      8
+    ],
+    "duration": "75–120分钟",
+    "bestFor": "低密度街景、生活感",
+    "swapRule": "替换学院桥或圣马可周边水巷",
+    "booking": "现场即可",
+    "mapQuery": "Cannaregio Venice",
+    "source": "https://www.veneziaunica.it/en",
+    "status": "可选，不强制",
+    "verifiedAt": "2026-09-06"
+  },
+  {
+    "id": "opt-vienna-belvedere",
+    "city": "维也纳",
+    "name": "上美景宫",
+    "kind": "顶级艺术 / 宫殿",
+    "recommendedDays": [
+      9,
+      10
+    ],
+    "duration": "120–150分钟",
+    "bestFor": "克里姆特《吻》、宫殿轴线",
+    "swapRule": "只能替换美泉宫，不能两宫同日",
+    "booking": "需预约；出签后再决定",
+    "mapQuery": "Upper Belvedere Vienna",
+    "source": "https://www.belvedere.at/en",
+    "status": "可选，不强制",
+    "verifiedAt": "2026-09-06"
+  },
+  {
+    "id": "opt-vienna-stephansdom",
+    "city": "维也纳",
+    "name": "圣斯蒂芬大教堂 + Graben",
+    "kind": "老城 / 建筑",
+    "recommendedDays": [
+      9,
+      10
+    ],
+    "duration": "60–90分钟",
+    "bestFor": "哥特细节、灯饰街景",
+    "swapRule": "替换格拉本单一短走或咖啡段",
+    "booking": "主堂现场；塔楼票待确认",
+    "mapQuery": "St Stephens Cathedral Vienna",
+    "source": "https://www.stephanskirche.at/",
+    "status": "可选，不强制",
+    "verifiedAt": "2026-09-06"
+  },
+  {
+    "id": "opt-vienna-prater",
+    "city": "维也纳",
+    "name": "Prater摩天轮",
+    "kind": "夜景 / 游乐",
+    "recommendedDays": [
+      9,
+      10
+    ],
+    "duration": "75–120分钟",
+    "bestFor": "冬季夜色、复古摩天轮",
+    "swapRule": "替换圣诞市场；不晚于20:30",
+    "booking": "票价与运营待确认",
+    "mapQuery": "Vienna Giant Ferris Wheel",
+    "source": "https://www.wienerriesenrad.com/en",
+    "status": "可选，不强制",
+    "verifiedAt": "2026-09-06"
+  },
+  {
+    "id": "opt-vienna-albertina",
+    "city": "维也纳",
+    "name": "Albertina",
+    "kind": "顶级馆藏 / 雨天",
+    "recommendedDays": [
+      10
+    ],
+    "duration": "120–150分钟",
+    "bestFor": "大师作品、宫殿室内",
+    "swapRule": "只能替换市集或美泉宫之一",
+    "booking": "需票；出签后再决定",
+    "mapQuery": "Albertina Vienna",
+    "source": "https://www.albertina.at/en/",
+    "status": "可选，不强制",
+    "verifiedAt": "2026-09-06"
+  },
+  {
+    "id": "opt-prague-kampa",
+    "city": "布拉格",
+    "name": "Kampa岛 + Lennon Wall",
+    "kind": "河岸 / 街头",
+    "recommendedDays": [
+      11,
+      12
+    ],
+    "duration": "60–90分钟",
+    "bestFor": "涂鸦、桥下河岸",
+    "swapRule": "替换小城区咖啡后的慢走",
+    "booking": "现场即可",
+    "mapQuery": "Lennon Wall Prague",
+    "source": "https://prague.eu/en/objevujte/lennon-wall-lennonova-zed/",
+    "status": "可选，不强制",
+    "verifiedAt": "2026-09-06"
+  },
+  {
+    "id": "opt-prague-strahov",
+    "city": "布拉格",
+    "name": "Strahov修道院图书馆",
+    "kind": "室内 / 建筑",
+    "recommendedDays": [
+      12
+    ],
+    "duration": "60–90分钟",
+    "bestFor": "巴洛克书库、雨雪备选",
+    "swapRule": "替换城堡庭院延伸段",
+    "booking": "门票与开放待确认",
+    "mapQuery": "Strahov Library Prague",
+    "source": "https://www.strahovskyklaster.cz/en/",
+    "status": "可选，不强制",
+    "verifiedAt": "2026-09-06"
+  },
+  {
+    "id": "opt-prague-municipal",
+    "city": "布拉格",
+    "name": "市民会馆 + 火药塔外观",
+    "kind": "建筑 / 咖啡",
+    "recommendedDays": [
+      11,
+      12
+    ],
+    "duration": "60–90分钟",
+    "bestFor": "新艺术、室内咖啡",
+    "swapRule": "替换老城广场周边延伸",
+    "booking": "外观现场；内部导览待确认",
+    "mapQuery": "Municipal House Prague",
+    "source": "https://www.obecnidum.cz/en/",
+    "status": "可选，不强制",
+    "verifiedAt": "2026-09-06"
+  },
+  {
+    "id": "opt-prague-clementinum",
+    "city": "布拉格",
+    "name": "Clementinum",
+    "kind": "图书馆 / 塔楼",
+    "recommendedDays": [
+      12
+    ],
+    "duration": "75–90分钟",
+    "bestFor": "巴洛克空间、老城屋顶",
+    "swapRule": "替换查理桥前的一段小城区慢走",
+    "booking": "导览票待确认",
+    "mapQuery": "Klementinum Prague",
+    "source": "https://www.klementinum.com/",
+    "status": "可选，不强制",
+    "verifiedAt": "2026-09-06"
+  },
+  {
+    "id": "opt-paris-sainte",
+    "city": "巴黎",
+    "name": "圣礼拜堂",
+    "kind": "世界级室内",
+    "recommendedDays": [
+      13,
+      14
+    ],
+    "duration": "60–90分钟",
+    "bestFor": "彩窗、阴雨天稳定",
+    "swapRule": "替换抵达日圣母院短走或卢浮宫后轻逛",
+    "booking": "需预约；出签后再决定",
+    "mapQuery": "Sainte Chapelle Paris",
+    "source": "https://www.sainte-chapelle.fr/en",
+    "status": "可选，不强制",
+    "verifiedAt": "2026-09-06"
+  },
+  {
+    "id": "opt-paris-orangerie",
+    "city": "巴黎",
+    "name": "橘园美术馆",
+    "kind": "顶级小馆",
+    "recommendedDays": [
+      14
+    ],
+    "duration": "90–120分钟",
+    "bestFor": "莫奈睡莲、体量适中",
+    "swapRule": "只替换卢浮宫后半程，不能同日硬叠两馆",
+    "booking": "需票；出签后再决定",
+    "mapQuery": "Musée de l Orangerie Paris",
+    "source": "https://www.musee-orangerie.fr/en",
+    "status": "可选，不强制",
+    "verifiedAt": "2026-09-06"
+  },
+  {
+    "id": "opt-paris-palaisroyal",
+    "city": "巴黎",
+    "name": "Palais Royal柱廊 + 花园",
+    "kind": "街拍 / 建筑",
+    "recommendedDays": [
+      14,
+      15
+    ],
+    "duration": "45–75分钟",
+    "bestFor": "几何柱廊、法式立面",
+    "swapRule": "替换卢浮宫后街区轻逛",
+    "booking": "现场即可",
+    "mapQuery": "Palais Royal Paris",
+    "source": "https://parisjetaime.com/eng/culture/domaine-national-du-palais-royal-p1171",
+    "status": "可选，不强制",
+    "verifiedAt": "2026-09-06"
+  },
+  {
+    "id": "opt-paris-marais",
+    "city": "巴黎",
+    "name": "Le Marais + 孚日广场",
+    "kind": "街区 / 购物",
+    "recommendedDays": [
+      13,
+      16
+    ],
+    "duration": "120–180分钟",
+    "bestFor": "城市质感、店铺、咖啡",
+    "swapRule": "替换蒙马特或老佛爷其中一段，不另加",
+    "booking": "现场即可",
+    "mapQuery": "Place des Vosges Paris",
+    "source": "https://parisjetaime.com/eng/article/the-marais-a796",
+    "status": "可选，不强制",
+    "verifiedAt": "2026-09-06"
+  }
+]

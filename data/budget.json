@@ -1,0 +1,22 @@
+{
+  "currency": "CNY",
+  "hardCap": 26000,
+  "targetMin": 23000,
+  "targetMax": 25500,
+  "shoppingFloor": 1500,
+  "planTotal": 25500,
+  "categories": [
+    {"id": "international", "name": "国际机票", "budget": 5000, "protected": true, "note": "CAN→FCO单票1转；CDG→CAN直飞优先；含23kg"},
+    {"id": "hotels", "name": "15晚酒店", "budget": 9157, "protected": true, "note": "当前可退候选合计；目标8500–9500，硬上限10000"},
+    {"id": "intercity", "name": "欧洲跨城", "budget": 2100, "protected": true, "note": "2高铁＋2直飞＋1段Railjet；航班含23kg"},
+    {"id": "local", "name": "机场/市内交通", "budget": 1000, "protected": true, "note": "少换乘；拖箱和夜间可短程出租"},
+    {"id": "tickets", "name": "核心景点", "budget": 1500, "protected": true, "note": "只含最终行程内需票项目"},
+    {"id": "visa", "name": "签证/保险/eSIM", "budget": 1300, "protected": true, "note": "签证基础费以递签页为准，保险不删"},
+    {"id": "food", "name": "餐饮与咖啡", "budget": 3000, "protected": false, "note": "每天至少一顿坐下用餐，并保留咖啡休息"},
+    {"id": "shopping", "name": "购物", "budget": 1500, "protected": true, "note": "最低预留；单件高价奢侈品另计"},
+    {"id": "china_buffer", "name": "中国段/应急", "budget": 943, "protected": false, "note": "往返机场、市内接驳与小额应急"}
+  ],
+  "adjustWhen": "预计总额超过¥26,000时立即调整",
+  "adjustOrder": ["同城静音候选内替换", "压缩高价正餐与可选出租", "购物只保留最低¥1,500"],
+  "neverCut": ["睡眠与安全", "私人卫浴与暖气", "23kg托运行李", "保险", "核心景点", "直达少换乘原则"]
+}

@@ -1,0 +1,1102 @@
+[
+  {
+    "day": 1,
+    "date": "2026-12-01",
+    "city": "广州 → 罗马",
+    "theme": "把第一天留给出发",
+    "summary": "跨夜国际飞行，不排景点。",
+    "pace": "飞行",
+    "walking": "不排步行",
+    "fatigue": 1,
+    "goldenHour": "—",
+    "blueHour": "—",
+    "dayBudget": 180,
+    "budgetLabel": "当日可变支出上限",
+    "gymIds": [],
+    "lossCut": "今天没有可删项目；延误时只保留同票联程保障。",
+    "timeline": [
+      {
+        "time": "按票面",
+        "title": "CAN出发",
+        "placeId": null,
+        "mode": "飞机",
+        "duration": "约18–22h门到门",
+        "note": "提前到机场，托运行李必须直挂FCO。",
+        "guard": "中转不足2.5小时不选。",
+        "ticket": "已预订后更新"
+      }
+    ],
+    "shooting": [
+      {
+        "time": "登机前",
+        "title": "出发氛围",
+        "note": "只拍行李、航站楼与窗边，不追复杂机位。"
+      }
+    ]
+  },
+  {
+    "day": 2,
+    "date": "2026-12-02",
+    "city": "罗马",
+    "theme": "先看见罗马，再慢下来",
+    "summary": "落地、补觉，只留两处室外短停。",
+    "pace": "恢复",
+    "walking": "约2–3 km",
+    "fatigue": 2,
+    "goldenHour": "15:05–16:35",
+    "blueHour": "16:35–17:05",
+    "dayBudget": 450,
+    "budgetLabel": "当日可变支出上限",
+    "gymIds": [
+      "gym-rome-dabliu",
+      "gym-rome-golden"
+    ],
+    "lossCut": "晚于15:30出门：删纳沃纳，只看许愿池后回酒店。",
+    "timeline": [
+      {
+        "time": "上午",
+        "title": "抵达与休息",
+        "placeId": null,
+        "mode": "机场接驳",
+        "duration": "60–90min",
+        "note": "FCO→Termini→酒店；深夜改官方出租。",
+        "guard": "睡意重就继续休息。",
+        "ticket": "现场即可"
+      },
+      {
+        "time": "午后",
+        "title": "特雷维喷泉",
+        "placeId": "trevi",
+        "mode": "步行/公交",
+        "duration": "30–45min",
+        "note": "从广场边缘进入，先找完整轮廓。",
+        "guard": "排队拥挤超过20分钟只拍广角外圈。",
+        "ticket": "现场即可"
+      },
+      {
+        "time": "傍晚",
+        "title": "纳沃纳广场",
+        "placeId": "navona",
+        "mode": "步行",
+        "duration": "45–60min",
+        "note": "坐一杯咖啡，看广场灯光。",
+        "guard": "体力不足直接取消。",
+        "ticket": "无票"
+      }
+    ],
+    "shooting": [
+      {
+        "time": "15:30",
+        "title": "许愿池侧边人像",
+        "note": "人物站画面下三分之一，避开正中人墙。"
+      },
+      {
+        "time": "蓝调",
+        "title": "纳沃纳暖光",
+        "note": "用喷泉作前景，保留广场纵深。"
+      }
+    ]
+  },
+  {
+    "day": 3,
+    "date": "2026-12-03",
+    "city": "罗马",
+    "theme": "走进真正的古罗马",
+    "summary": "两项入内参观，遗址只做外部观景。",
+    "pace": "适中",
+    "walking": "约4–5 km",
+    "fatigue": 3,
+    "goldenHour": "15:05–16:35",
+    "blueHour": "16:35–17:05",
+    "dayBudget": 650,
+    "budgetLabel": "当日可变支出上限",
+    "gymIds": [
+      "gym-rome-dabliu",
+      "gym-rome-golden"
+    ],
+    "lossCut": "晚30分钟以上：删古罗马广场延伸段，保留斗兽场与万神殿。",
+    "timeline": [
+      {
+        "time": "09:30",
+        "title": "斗兽场",
+        "placeId": "colosseum",
+        "mode": "步行",
+        "duration": "120min",
+        "note": "按预约入口入场，不加地下层长团。",
+        "guard": "11:30离开；排队异常时缩短二层。",
+        "ticket": "临近放票再买"
+      },
+      {
+        "time": "11:35",
+        "title": "古罗马广场外观",
+        "placeId": "forum",
+        "mode": "步行",
+        "duration": "25min",
+        "note": "从帝国广场大道短看层次，不走山丘环线。",
+        "guard": "12:00前结束。",
+        "ticket": "无票"
+      },
+      {
+        "time": "12:00",
+        "title": "长午餐与咖啡",
+        "placeId": null,
+        "mode": "步行",
+        "duration": "120min",
+        "note": "完整坐下，恢复体力。",
+        "guard": "不压缩到45分钟以内。",
+        "ticket": "现场即可"
+      },
+      {
+        "time": "14:30",
+        "title": "万神殿",
+        "placeId": "pantheon",
+        "mode": "步行/公交",
+        "duration": "45min",
+        "note": "内部慢看穹顶，光束取决于天气。",
+        "guard": "15:30后不延伸周边。",
+        "ticket": "提前数日或现场"
+      }
+    ],
+    "shooting": [
+      {
+        "time": "09:10",
+        "title": "斗兽场建筑尺度",
+        "note": "用低机位和前景石墙保留人物比例。"
+      },
+      {
+        "time": "15:00",
+        "title": "万神殿穹顶",
+        "note": "人物靠边，画面中心留给穹顶与天眼。"
+      }
+    ]
+  },
+  {
+    "day": 4,
+    "date": "2026-12-04",
+    "city": "梵蒂冈 · 罗马",
+    "theme": "把震撼留给一整天",
+    "summary": "全程最集中，晚间完全留空。",
+    "pace": "集中",
+    "walking": "约5–7 km",
+    "fatigue": 4,
+    "goldenHour": "15:05–16:35",
+    "blueHour": "16:35–17:05",
+    "dayBudget": 750,
+    "budgetLabel": "当日可变支出上限",
+    "gymIds": [
+      "gym-rome-dabliu"
+    ],
+    "lossCut": "晚于计划：删Prati慢逛；16:00后圣彼得只看广场，不加长队。",
+    "timeline": [
+      {
+        "time": "09:00",
+        "title": "梵蒂冈博物馆",
+        "placeId": "vatican_museums",
+        "mode": "地铁/步行",
+        "duration": "210min",
+        "note": "按馆内动线看地图画廊与西斯廷，中途坐下。",
+        "guard": "12:30必须结束；西斯廷禁止摄影。",
+        "ticket": "出签后立即买"
+      },
+      {
+        "time": "12:30",
+        "title": "Prati午餐",
+        "placeId": null,
+        "mode": "步行",
+        "duration": "90min",
+        "note": "坐下吃饭，预留绕行到圣彼得的时间。",
+        "guard": "至少保留60分钟。",
+        "ticket": "现场即可"
+      },
+      {
+        "time": "14:00",
+        "title": "圣彼得大教堂与广场",
+        "placeId": "st_peter",
+        "mode": "步行",
+        "duration": "150min",
+        "note": "安检缓冲已计入，不安排登穹顶。",
+        "guard": "16:30收尾。",
+        "ticket": "常规免费/现场安检"
+      }
+    ],
+    "shooting": [
+      {
+        "time": "10:00",
+        "title": "地图画廊纵深",
+        "note": "在不阻挡动线的位置拍对称线条。"
+      },
+      {
+        "time": "15:45",
+        "title": "圣彼得柱廊人像",
+        "note": "人物站柱廊阴影边缘，广场留出尺度。"
+      }
+    ]
+  },
+  {
+    "day": 5,
+    "date": "2026-12-05",
+    "city": "罗马 → 佛罗伦萨",
+    "theme": "红顶之城，慢慢走进去",
+    "summary": "高铁转场后只逛紧凑老城。",
+    "pace": "转场",
+    "walking": "约3–4 km",
+    "fatigue": 2,
+    "goldenHour": "15:00–16:30",
+    "blueHour": "16:30–17:00",
+    "dayBudget": 450,
+    "budgetLabel": "当日可变支出上限",
+    "gymIds": [
+      "gym-florence-klab"
+    ],
+    "lossCut": "列车晚点或入住延误：删领主广场，百花大教堂外观后直接晚餐。",
+    "timeline": [
+      {
+        "time": "10:00前后",
+        "title": "直达高铁",
+        "placeId": null,
+        "mode": "Frecciarossa / Italo",
+        "duration": "约1.5h车程",
+        "note": "提前20–30分钟到Termini，自己上下行李。",
+        "guard": "只选直达。",
+        "ticket": "出签后买"
+      },
+      {
+        "time": "午后",
+        "title": "圣母百花大教堂外观",
+        "placeId": "duomo_firenze",
+        "mode": "步行",
+        "duration": "45–60min",
+        "note": "从街口带人物入画，不登穹顶。",
+        "guard": "15:45前结束。",
+        "ticket": "无票"
+      },
+      {
+        "time": "15:45",
+        "title": "领主广场",
+        "placeId": "signoria",
+        "mode": "步行",
+        "duration": "60min",
+        "note": "商业街慢走，广场短停后喝咖啡。",
+        "guard": "17:00收尾。",
+        "ticket": "无票"
+      }
+    ],
+    "shooting": [
+      {
+        "time": "15:10",
+        "title": "百花立面街口机位",
+        "note": "用窄街做框，人物贴近镜头。"
+      },
+      {
+        "time": "蓝调",
+        "title": "领主广场雕塑层次",
+        "note": "避开雕塑正下方，以旧宫作背景。"
+      }
+    ]
+  },
+  {
+    "day": 6,
+    "date": "2026-12-06",
+    "city": "佛罗伦萨",
+    "theme": "一条河，一城红顶",
+    "summary": "上午河岸，下午完整休息，日落前上山。",
+    "pace": "慢逛",
+    "walking": "约3–5 km",
+    "fatigue": 2,
+    "goldenHour": "15:00–16:30",
+    "blueHour": "16:30–17:00",
+    "dayBudget": 500,
+    "budgetLabel": "当日可变支出上限",
+    "gymIds": [
+      "gym-florence-klab"
+    ],
+    "lossCut": "晚于14:45：删Oltrarno小店，只保留老桥远眺与米开朗基罗广场。",
+    "timeline": [
+      {
+        "time": "10:00",
+        "title": "老桥与阿诺河",
+        "placeId": "ponte_vecchio",
+        "mode": "步行",
+        "duration": "120min",
+        "note": "先从圣三一桥看老桥，再过河。",
+        "guard": "12:00转入午餐。",
+        "ticket": "无票"
+      },
+      {
+        "time": "12:00",
+        "title": "Oltrarno午餐与小店",
+        "placeId": "oltrarno",
+        "mode": "步行",
+        "duration": "165min",
+        "note": "咖啡、手作小店与连续休息。",
+        "guard": "14:45开始上山。",
+        "ticket": "无票"
+      },
+      {
+        "time": "15:15",
+        "title": "米开朗基罗广场",
+        "placeId": "piazzale_michelangelo",
+        "mode": "公交/出租",
+        "duration": "90min",
+        "note": "乘车上下山，不为夕阳久站受冷。",
+        "guard": "16:45离开。",
+        "ticket": "无票"
+      }
+    ],
+    "shooting": [
+      {
+        "time": "10:15",
+        "title": "圣三一桥看老桥",
+        "note": "用河岸栏杆作前景，人物侧身看桥。"
+      },
+      {
+        "time": "15:40",
+        "title": "红顶全景",
+        "note": "阴天拍层次，晴天让人物受侧光。"
+      }
+    ]
+  },
+  {
+    "day": 7,
+    "date": "2026-12-07",
+    "city": "佛罗伦萨 → 威尼斯",
+    "theme": "沿着大运河，进入水城",
+    "summary": "在Mestre下车、入住，水上巴士本身就是观景。",
+    "pace": "转场",
+    "walking": "约2–3 km",
+    "fatigue": 2,
+    "goldenHour": "14:55–16:25",
+    "blueHour": "16:25–16:55",
+    "dayBudget": 450,
+    "budgetLabel": "当日可变支出上限",
+    "gymIds": [
+      "gym-mestre-mcfit"
+    ],
+    "lossCut": "到岛晚于15:30：删学院桥，坐一段水上巴士看大运河后返回。",
+    "timeline": [
+      {
+        "time": "10:00前后",
+        "title": "直达高铁至Mestre",
+        "placeId": null,
+        "mode": "Frecciarossa / Italo",
+        "duration": "约2h15m车程",
+        "note": "最终住Marghera，在Mestre下车。",
+        "guard": "不拖箱入岛。",
+        "ticket": "出签后买"
+      },
+      {
+        "time": "午后",
+        "title": "大运河水上巴士",
+        "placeId": "grand_canal",
+        "mode": "公交/船",
+        "duration": "60–90min",
+        "note": "沿线看宫殿，不横穿全岛赶景点。",
+        "guard": "15:45前决定是否去学院桥。",
+        "ticket": "现场交通票"
+      },
+      {
+        "time": "15:00",
+        "title": "学院桥",
+        "placeId": "accademia_bridge",
+        "mode": "步行",
+        "duration": "45–60min",
+        "note": "只在桥两侧短走，拍运河转弯。",
+        "guard": "16:30收尾。",
+        "ticket": "无票"
+      }
+    ],
+    "shooting": [
+      {
+        "time": "水上巴士",
+        "title": "宫殿掠影",
+        "note": "靠窗短拍，保持快门，避免玻璃反光。"
+      },
+      {
+        "time": "15:40",
+        "title": "学院桥运河弯",
+        "note": "人物靠栏杆侧站，留出水面纵深。"
+      }
+    ]
+  },
+  {
+    "day": 8,
+    "date": "2026-12-08",
+    "city": "威尼斯",
+    "theme": "金色教堂，安静的水巷",
+    "summary": "宗教节日按午后教堂时段执行。",
+    "pace": "适中",
+    "walking": "约3–5 km",
+    "fatigue": 3,
+    "goldenHour": "14:55–16:25",
+    "blueHour": "16:25–16:55",
+    "dayBudget": 550,
+    "budgetLabel": "当日可变支出上限",
+    "gymIds": [
+      "gym-mestre-mcfit"
+    ],
+    "lossCut": "若潮水或人流异常：删水巷延伸，只保留圣马可广场、叹息桥与14:00教堂。",
+    "timeline": [
+      {
+        "time": "10:00",
+        "title": "圣马可广场",
+        "placeId": "st_mark_square",
+        "mode": "公交/船",
+        "duration": "60min",
+        "note": "连看总督府外观与城市舞台。",
+        "guard": "11:00转叹息桥。",
+        "ticket": "无票"
+      },
+      {
+        "time": "11:00",
+        "title": "叹息桥",
+        "placeId": "bridge_sighs",
+        "mode": "步行",
+        "duration": "30min",
+        "note": "从稻草桥方向看，不做总督府入内。",
+        "guard": "11:30去午餐。",
+        "ticket": "无票"
+      },
+      {
+        "time": "11:30",
+        "title": "长午餐与咖啡",
+        "placeId": null,
+        "mode": "步行",
+        "duration": "150min",
+        "note": "坐下休息，等待节日午后参观。",
+        "guard": "13:45回到入口。",
+        "ticket": "现场即可"
+      },
+      {
+        "time": "14:00",
+        "title": "圣马可大教堂",
+        "placeId": "st_mark_basilica",
+        "mode": "步行",
+        "duration": "90min",
+        "note": "慢看金色马赛克；宗教安排前一日复核。",
+        "guard": "遇临时礼仪调整按现场通知。",
+        "ticket": "出签后立即买"
+      }
+    ],
+    "shooting": [
+      {
+        "time": "10:00",
+        "title": "圣马可拱廊",
+        "note": "人物沿拱廊边缘走动，画面留出广场。"
+      },
+      {
+        "time": "14:15",
+        "title": "金色马赛克细节",
+        "note": "遵守馆内摄影规则，不能拍时只看不拍。"
+      }
+    ]
+  },
+  {
+    "day": 9,
+    "date": "2026-12-09",
+    "city": "威尼斯 → 维也纳",
+    "theme": "换一座城，换一种节奏",
+    "summary": "短航班仍按5–6小时门到门处理。",
+    "pace": "转场",
+    "walking": "约1–3 km",
+    "fatigue": 3,
+    "goldenHour": "14:25–15:55",
+    "blueHour": "15:55–16:25",
+    "dayBudget": 500,
+    "budgetLabel": "当日可变支出上限",
+    "gymIds": [
+      "gym-vienna-jh",
+      "gym-vienna-das"
+    ],
+    "lossCut": "航班延误：删格拉本散步，入住后只吃晚餐。",
+    "timeline": [
+      {
+        "time": "起飞前约3h",
+        "title": "Marghera→VCE",
+        "placeId": null,
+        "mode": "预约车/出租",
+        "duration": "20–30min车程",
+        "note": "起飞前2.5小时到航站楼，票面含1×23kg。",
+        "guard": "不改TSF。",
+        "ticket": "出签后买"
+      },
+      {
+        "time": "白天",
+        "title": "VCE→VIE",
+        "placeId": null,
+        "mode": "Austrian直飞",
+        "duration": "约1h05m",
+        "note": "冬季雾、除冰和空管可能延误。",
+        "guard": "门到门预留5–6小时。",
+        "ticket": "出签后买"
+      },
+      {
+        "time": "傍晚",
+        "title": "格拉本大街",
+        "placeId": "graben",
+        "mode": "地铁/步行",
+        "duration": "30–60min",
+        "note": "看灯饰、吃晚餐，早休息。",
+        "guard": "体力不足直接取消。",
+        "ticket": "无票"
+      }
+    ],
+    "shooting": [
+      {
+        "time": "蓝调",
+        "title": "格拉本灯饰纵深",
+        "note": "用悬挂灯带做引导线，人物站街道边缘。"
+      }
+    ]
+  },
+  {
+    "day": 10,
+    "date": "2026-12-10",
+    "city": "维也纳",
+    "theme": "宫殿、咖啡与圣诞灯光",
+    "summary": "一座宫殿、一个主市集，足够。",
+    "pace": "适中",
+    "walking": "约3–4 km",
+    "fatigue": 3,
+    "goldenHour": "14:25–15:55",
+    "blueHour": "15:55–16:25",
+    "dayBudget": 650,
+    "budgetLabel": "当日可变支出上限",
+    "gymIds": [
+      "gym-vienna-jh",
+      "gym-vienna-das"
+    ],
+    "lossCut": "晚于美泉宫时段：不补后山；市场缩短为60分钟，绝不加第二个市集。",
+    "timeline": [
+      {
+        "time": "10:00",
+        "title": "美泉宫",
+        "placeId": "schonbrunn",
+        "mode": "公交/地铁",
+        "duration": "120min",
+        "note": "只看宫殿精华与宫前广场，不爬后山。",
+        "guard": "12:00离开。",
+        "ticket": "出签后立即买"
+      },
+      {
+        "time": "12:00",
+        "title": "午餐与咖啡",
+        "placeId": null,
+        "mode": "地铁",
+        "duration": "210min",
+        "note": "回城后留完整咖啡时间。",
+        "guard": "15:30前向市政厅移动。",
+        "ticket": "现场即可"
+      },
+      {
+        "time": "16:00",
+        "title": "市政厅圣诞市场",
+        "placeId": "rathausplatz",
+        "mode": "地铁/步行",
+        "duration": "120min",
+        "note": "热饮、小吃、灯光与小购物。",
+        "guard": "18:00结束。",
+        "ticket": "现场即可"
+      }
+    ],
+    "shooting": [
+      {
+        "time": "10:00",
+        "title": "美泉宫正立面",
+        "note": "冬季不预期花园景观，用几何轴线拍尺度。"
+      },
+      {
+        "time": "16:10",
+        "title": "市集蓝调暖光",
+        "note": "天色刚暗时拍木屋与人物，避免纯黑夜空。"
+      }
+    ]
+  },
+  {
+    "day": 11,
+    "date": "2026-12-11",
+    "city": "维也纳 → 布拉格",
+    "theme": "晚餐后，走进童话广场",
+    "summary": "直达列车后只做短散步。",
+    "pace": "转场",
+    "walking": "约1–3 km",
+    "fatigue": 3,
+    "goldenHour": "14:15–15:45",
+    "blueHour": "15:45–16:15",
+    "dayBudget": 500,
+    "budgetLabel": "当日可变支出上限",
+    "gymIds": [
+      "gym-prague-form",
+      "gym-prague-euforie"
+    ],
+    "lossCut": "列车晚点或体力不足：删老城夜走，直接入住休息。",
+    "timeline": [
+      {
+        "time": "上午",
+        "title": "Wien Hbf→Praha hl.n.",
+        "placeId": null,
+        "mode": "Railjet直达",
+        "duration": "约4h车程",
+        "note": "发车前30分钟到站，自己上下行李。",
+        "guard": "施工、站台与换表前72小时复核。",
+        "ticket": "出签后买"
+      },
+      {
+        "time": "午后",
+        "title": "入住与下午茶",
+        "placeId": null,
+        "mode": "短程出租",
+        "duration": "90min",
+        "note": "带箱优先短程车，不追加景点。",
+        "guard": "至少休息60分钟。",
+        "ticket": "现场即可"
+      },
+      {
+        "time": "傍晚",
+        "title": "老城广场",
+        "placeId": "prague_old_town",
+        "mode": "公交/步行",
+        "duration": "45–60min",
+        "note": "看圣诞灯光后晚餐。",
+        "guard": "60分钟封顶。",
+        "ticket": "无票"
+      }
+    ],
+    "shooting": [
+      {
+        "time": "蓝调后",
+        "title": "老城广场暖光",
+        "note": "往年市集只作氛围参考，以2026现场布置为准。"
+      }
+    ]
+  },
+  {
+    "day": 12,
+    "date": "2026-12-12",
+    "city": "布拉格",
+    "theme": "从红顶之上，走到桥边",
+    "summary": "用车上山，一路向下，减少回头路。",
+    "pace": "适中",
+    "walking": "约4–6 km",
+    "fatigue": 3,
+    "goldenHour": "14:15–15:45",
+    "blueHour": "15:45–16:15",
+    "dayBudget": 550,
+    "budgetLabel": "当日可变支出上限",
+    "gymIds": [
+      "gym-prague-form",
+      "gym-prague-euforie"
+    ],
+    "lossCut": "晚于11:00：删城堡庭院延伸；午后删小城区闲逛，保留圣维特与查理桥。",
+    "timeline": [
+      {
+        "time": "09:30",
+        "title": "布拉格城堡",
+        "placeId": "prague_castle",
+        "mode": "公交/电车",
+        "duration": "60min",
+        "note": "冬季内部开放较短，上午先到。",
+        "guard": "10:30转圣维特。",
+        "ticket": "现场即可"
+      },
+      {
+        "time": "10:30",
+        "title": "圣维特大教堂",
+        "placeId": "st_vitus",
+        "mode": "步行",
+        "duration": "90min",
+        "note": "看内部与庭院，不做全馆通刷。",
+        "guard": "12:00下山。",
+        "ticket": "城堡主线路现场票"
+      },
+      {
+        "time": "12:00",
+        "title": "小城区午餐",
+        "placeId": "mala_strana",
+        "mode": "步行",
+        "duration": "135min",
+        "note": "坐下吃饭、咖啡后沿缓坡到河边。",
+        "guard": "14:15到桥边。",
+        "ticket": "现场即可"
+      },
+      {
+        "time": "14:15",
+        "title": "查理大桥",
+        "placeId": "charles_bridge",
+        "mode": "步行",
+        "duration": "105min",
+        "note": "慢走、拍人像，天黑后结束主要游览。",
+        "guard": "16:00结束。",
+        "ticket": "无票"
+      }
+    ],
+    "shooting": [
+      {
+        "time": "10:45",
+        "title": "圣维特哥特纵深",
+        "note": "用门廊或柱列框住人物，尊重礼仪动线。"
+      },
+      {
+        "time": "14:40",
+        "title": "查理桥人物尺度",
+        "note": "靠桥侧停，使用长焦压缩雕像与塔楼。"
+      }
+    ]
+  },
+  {
+    "day": 13,
+    "date": "2026-12-13",
+    "city": "布拉格 → 巴黎",
+    "theme": "最后四晚，全部给巴黎",
+    "summary": "飞行日只认识塞纳河与附近街道。",
+    "pace": "转场",
+    "walking": "约1–3 km",
+    "fatigue": 3,
+    "goldenHour": "15:10–16:50",
+    "blueHour": "16:50–17:20",
+    "dayBudget": 500,
+    "budgetLabel": "当日可变支出上限",
+    "gymIds": [
+      "gym-paris-fpark",
+      "gym-paris-basic"
+    ],
+    "lossCut": "下午抵达晚于16:00：删塞纳河短走，酒店附近吃饭休息。",
+    "timeline": [
+      {
+        "time": "上午至午后",
+        "title": "PRG→CDG/ORY",
+        "placeId": null,
+        "mode": "直飞",
+        "duration": "约1h45m",
+        "note": "欧洲航班含托运行李后比较CDG/ORY；不选BVA。",
+        "guard": "门到门预留5–6小时。",
+        "ticket": "出签后买"
+      },
+      {
+        "time": "抵达后",
+        "title": "入住与咖啡",
+        "placeId": null,
+        "mode": "公共交通≤1次/出租",
+        "duration": "90min",
+        "note": "先休息，再决定是否出门。",
+        "guard": "至少休息45分钟。",
+        "ticket": "现场即可"
+      },
+      {
+        "time": "傍晚",
+        "title": "圣米歇尔桥与圣母院外观",
+        "placeId": "pont_saint_michel",
+        "mode": "地铁/步行",
+        "duration": "30–60min",
+        "note": "只看塞纳河与圣母院外观。",
+        "guard": "60分钟封顶。",
+        "ticket": "无票"
+      }
+    ],
+    "shooting": [
+      {
+        "time": "蓝调",
+        "title": "塞纳河城市序章",
+        "note": "从桥上留出水面，圣母院只做远景锚点。"
+      }
+    ]
+  },
+  {
+    "day": 14,
+    "date": "2026-12-14",
+    "city": "巴黎",
+    "theme": "只为值得亲眼看的杰作",
+    "summary": "卢浮宫占完整上午，不接第二间博物馆。",
+    "pace": "适中",
+    "walking": "约3–5 km",
+    "fatigue": 3,
+    "goldenHour": "15:10–16:50",
+    "blueHour": "16:50–17:20",
+    "dayBudget": 650,
+    "budgetLabel": "当日可变支出上限",
+    "gymIds": [
+      "gym-paris-fpark",
+      "gym-paris-basic"
+    ],
+    "lossCut": "馆内晚于13:30：删金字塔周边轻逛，只拍10分钟后回去休息。",
+    "timeline": [
+      {
+        "time": "09:30",
+        "title": "卢浮宫",
+        "placeId": "louvre",
+        "mode": "地铁/步行",
+        "duration": "210min",
+        "note": "胜利女神、意大利绘画、蒙娜丽莎、维纳斯，按当日动线。",
+        "guard": "13:00止步；周二闭馆。",
+        "ticket": "出签后立即买"
+      },
+      {
+        "time": "13:00",
+        "title": "长午餐与咖啡",
+        "placeId": null,
+        "mode": "步行",
+        "duration": "120min",
+        "note": "不接第二间博物馆。",
+        "guard": "至少保留90分钟。",
+        "ticket": "现场即可"
+      },
+      {
+        "time": "15:00",
+        "title": "卢浮宫金字塔",
+        "placeId": "louvre_pyramid",
+        "mode": "步行",
+        "duration": "90min",
+        "note": "拍建筑层次，附近街区轻逛。",
+        "guard": "16:30结束。",
+        "ticket": "无票"
+      }
+    ],
+    "shooting": [
+      {
+        "time": "馆内",
+        "title": "作品与空间",
+        "note": "先看作品，再拍人和展厅比例；避开拥挤正面停留。"
+      },
+      {
+        "time": "16:35",
+        "title": "金字塔蓝调",
+        "note": "人物靠水池边缘，使用玻璃结构作几何背景。"
+      }
+    ]
+  },
+  {
+    "day": 15,
+    "date": "2026-12-15",
+    "city": "巴黎",
+    "theme": "把自己放进巴黎的画面",
+    "summary": "上午铁塔人像，午间完整休息，下午凯旋门。",
+    "pace": "适中",
+    "walking": "约3–5 km",
+    "fatigue": 3,
+    "goldenHour": "15:10–16:50",
+    "blueHour": "16:50–17:20",
+    "dayBudget": 550,
+    "budgetLabel": "当日可变支出上限",
+    "gymIds": [
+      "gym-paris-fpark",
+      "gym-paris-basic"
+    ],
+    "lossCut": "上午晚了：删河岸延伸，只在特罗卡德罗拍；下午天气差则凯旋门现场不买票。",
+    "timeline": [
+      {
+        "time": "09:30",
+        "title": "特罗卡德罗",
+        "placeId": "trocadero",
+        "mode": "地铁/步行",
+        "duration": "120min",
+        "note": "与铁塔外观组合，步行范围保持紧凑。",
+        "guard": "11:30结束。",
+        "ticket": "无票"
+      },
+      {
+        "time": "12:00",
+        "title": "午餐、咖啡、休息",
+        "placeId": null,
+        "mode": "地铁",
+        "duration": "180min",
+        "note": "把中午完整空出来。",
+        "guard": "15:00开始向凯旋门移动。",
+        "ticket": "现场即可"
+      },
+      {
+        "time": "15:30",
+        "title": "凯旋门",
+        "placeId": "arc_triomphe",
+        "mode": "地铁/步行",
+        "duration": "105min",
+        "note": "天气好再买登顶票；含台阶与排队。",
+        "guard": "17:15离开。",
+        "ticket": "现场/当天买"
+      }
+    ],
+    "shooting": [
+      {
+        "time": "09:40",
+        "title": "特罗卡德罗长焦人像",
+        "note": "人物离镜头更近，让铁塔保持完整并压缩背景。"
+      },
+      {
+        "time": "16:20",
+        "title": "凯旋门城市光轨",
+        "note": "蓝调阶段先拍静态人像，再拍车流。"
+      }
+    ]
+  },
+  {
+    "day": 16,
+    "date": "2026-12-16",
+    "city": "巴黎",
+    "theme": "山坡街巷，购物与告别晚餐",
+    "summary": "城市慢逛日，不补景点。",
+    "pace": "慢逛",
+    "walking": "约3–4 km",
+    "fatigue": 2,
+    "goldenHour": "15:10–16:50",
+    "blueHour": "16:50–17:20",
+    "dayBudget": 700,
+    "budgetLabel": "当日可变支出上限",
+    "gymIds": [
+      "gym-paris-fpark",
+      "gym-paris-basic"
+    ],
+    "lossCut": "上午晚了：删蒙马特支线街巷，只保留圣心堂外观；购物按清单限时。",
+    "timeline": [
+      {
+        "time": "10:00",
+        "title": "圣心堂",
+        "placeId": "sacre_coeur",
+        "mode": "地铁/缆车",
+        "duration": "45min",
+        "note": "乘车或缆车省主要爬坡。",
+        "guard": "10:45转街巷。",
+        "ticket": "无票"
+      },
+      {
+        "time": "10:45",
+        "title": "蒙马特街巷",
+        "placeId": "montmartre",
+        "mode": "步行",
+        "duration": "75min",
+        "note": "慢走，不追逐每个网红机位。",
+        "guard": "12:00午餐。",
+        "ticket": "无票"
+      },
+      {
+        "time": "12:00",
+        "title": "午餐与咖啡",
+        "placeId": null,
+        "mode": "地铁",
+        "duration": "150min",
+        "note": "转往奥斯曼大道前坐下休息。",
+        "guard": "14:30进百货。",
+        "ticket": "现场即可"
+      },
+      {
+        "time": "14:30",
+        "title": "老佛爷百货",
+        "placeId": "galeries_lafayette",
+        "mode": "地铁/步行",
+        "duration": "180min",
+        "note": "看穹顶与圣诞装置，按清单购物。",
+        "guard": "17:30结束。",
+        "ticket": "无票"
+      }
+    ],
+    "shooting": [
+      {
+        "time": "10:20",
+        "title": "圣心堂阶梯人物",
+        "note": "用侧面台阶和冬季树枝做前景，避开正中人潮。"
+      },
+      {
+        "time": "15:30",
+        "title": "百货圣诞装置",
+        "note": "先拍穹顶环境，再用中焦拍人物与灯饰。"
+      }
+    ]
+  },
+  {
+    "day": 17,
+    "date": "2026-12-17",
+    "city": "巴黎 → 广州",
+    "theme": "巴黎清晨，再出发",
+    "summary": "返程日不再预约景点。",
+    "pace": "飞行",
+    "walking": "约0–2 km",
+    "fatigue": 2,
+    "goldenHour": "—",
+    "blueHour": "—",
+    "dayBudget": 250,
+    "budgetLabel": "当日可变支出上限",
+    "gymIds": [],
+    "lossCut": "没有可删景点；若时间紧，早餐改酒店附近，优先机场到场。",
+    "timeline": [
+      {
+        "time": "上午",
+        "title": "酒店附近早餐",
+        "placeId": null,
+        "mode": "步行",
+        "duration": "30–60min",
+        "note": "附近短走，不补购物。",
+        "guard": "按航班倒推离店时间。",
+        "ticket": "现场即可"
+      },
+      {
+        "time": "起飞前",
+        "title": "巴黎→CDG",
+        "placeId": "cdg",
+        "mode": "RER/出租",
+        "duration": "75–120min",
+        "note": "国际航班前3.5小时到场，先确认航站楼。",
+        "guard": "只从CDG；23kg写入票面。",
+        "ticket": "已预订后更新"
+      },
+      {
+        "time": "夜间",
+        "title": "CDG→CAN",
+        "placeId": null,
+        "mode": "飞机",
+        "duration": "跨夜",
+        "note": "优先南航直飞；撤班才选单张1转联程。",
+        "guard": "不自拼。",
+        "ticket": "待确认"
+      }
+    ],
+    "shooting": [
+      {
+        "time": "清晨",
+        "title": "出发前最后一眼",
+        "note": "酒店附近街角或车窗一张即可，不为拍摄误机。"
+      }
+    ]
+  },
+  {
+    "day": 18,
+    "date": "2026-12-18",
+    "city": "广州 → 佛山",
+    "theme": "带着喜欢的画面回家",
+    "summary": "只处理入境、取行李与回家。",
+    "pace": "抵达",
+    "walking": "不排步行",
+    "fatigue": 1,
+    "goldenHour": "—",
+    "blueHour": "—",
+    "dayBudget": 100,
+    "budgetLabel": "当日可变支出上限",
+    "gymIds": [],
+    "lossCut": "没有可删项目；先休息，照片慢慢整理。",
+    "timeline": [
+      {
+        "time": "抵达",
+        "title": "广州入境与取行李",
+        "placeId": null,
+        "mode": "步行",
+        "duration": "按现场",
+        "note": "贵重物品随身，海关规则按入境当日复核。",
+        "guard": "不在机场拆包整理。",
+        "ticket": "现场即可"
+      },
+      {
+        "time": "到家后",
+        "title": "广州→佛山",
+        "placeId": null,
+        "mode": "地面交通",
+        "duration": "待确认",
+        "note": "吃饭、休息。",
+        "guard": "只选少换乘方式。",
+        "ticket": "现场即可"
+      }
+    ],
+    "shooting": [
+      {
+        "time": "抵达前",
+        "title": "机翼晨光",
+        "note": "若座位与天气允许，拍一张旅程收束。"
+      }
+    ]
+  }
+]

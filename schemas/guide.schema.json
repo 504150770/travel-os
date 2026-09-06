@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.travel/europe-guide.schema.json",
+  "title": "Personal Europe Travel Guide",
+  "type": "object",
+  "required": ["trip", "days", "places", "options", "images", "gyms", "hotels", "bookings", "budget", "checklist", "essentials", "conflicts"],
+  "properties": {
+    "trip": {
+      "type": "object",
+      "required": ["id", "title", "startDate", "endDate", "europeNights", "hotelChanges", "cities", "coverImage", "sourcePriority"],
+      "properties": { "cities": { "type": "array", "minItems": 6, "maxItems": 6 } }
+    },
+    "days": {
+      "type": "array", "minItems": 18, "maxItems": 18,
+      "items": { "type": "object", "required": ["day", "date", "city", "theme", "summary", "walking", "fatigue", "goldenHour", "blueHour", "dayBudget", "gymIds", "lossCut", "timeline", "shooting"] }
+    },
+    "places": {
+      "type": "array", "minItems": 1,
+      "items": { "type": "object", "required": ["id", "name", "city", "type", "mapQuery", "coordinateStatus"] }
+    },
+    "options": {
+      "type": "array", "minItems": 24, "maxItems": 24,
+      "items": { "type": "object", "required": ["id", "city", "name", "kind", "recommendedDays", "duration", "bestFor", "swapRule", "booking", "mapQuery", "source", "status"] }
+    },
+    "images": {
+      "type": "array", "minItems": 1,
+      "items": { "type": "object", "required": ["id", "day", "file", "key", "caption", "use", "bestTime", "credit", "sourcePage", "sourceType", "visuallyReviewed"] }
+    },
+    "gyms": {
+      "type": "array", "minItems": 8, "maxItems": 10,
+      "items": { "type": "object", "required": ["id", "name", "city", "dayPass", "passMethod", "hours", "distance", "equipment", "crowd", "lighting", "style", "photo", "time", "recommendedDays", "image", "source"] }
+    },
+    "hotels": {
+      "type": "object", "required": ["goalRange", "hardMax", "selectedTotal", "quietRequest", "veniceComparison", "hotels"],
+      "properties": { "hotels": { "type": "array", "minItems": 24, "maxItems": 24, "items": { "type": "object", "required": ["id", "city", "role", "name", "rating", "openingRenovation", "roomCondition", "noise", "bed", "heating", "privateBathroom", "frontDeskStorage", "transport", "pros", "cons", "risk", "selected"] } } }
+    },
+    "bookings": { "type": "object", "required": ["statuses", "items"] },
+    "budget": { "type": "object", "required": ["hardCap", "targetMin", "targetMax", "shoppingFloor", "planTotal", "categories", "adjustOrder", "neverCut"] },
+    "checklist": { "type": "object", "required": ["groups", "visaReality"] },
+    "essentials": { "type": "object", "required": ["groups", "quietMessage"] },
+    "conflicts": { "type": "object", "required": ["items"] }
+  }
+}

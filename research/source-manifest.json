@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "projectReference": {
+    "url": "https://github.com/TokenHungryMash/personalized-travel-guide-skill",
+    "commit": "7372e4762eea2767bd0a49c949f33c70bed92a67",
+    "studiedAreas": [
+      "SKILL.md",
+      "data contracts",
+      "Trip Mode",
+      "Mini Route",
+      "image policy",
+      "build state",
+      "research → structured data → render → audit → handoff"
+    ]
+  },
+  "sources": [
+    {
+      "id": "visual",
+      "title": "欧洲18天_冬日精品纯行程视觉册_优化终版",
+      "scope": "路线、Day 1–18、景点、节奏、拍摄、GYM",
+      "pdfPath": "C:\\Users\\50415\\OneDrive\\文档\\ChatGPT\\Travel\\output\\pdf\\欧洲18天_冬日精品纯行程视觉册_优化终版.pdf",
+      "pdfSha256": "644ae820f8731b39feac3a574c52c8ceab8c1353563c42e51939c8c7cae02a03",
+      "extractedText": "visual-extracted.txt",
+      "status": "ingested"
+    },
+    {
+      "id": "execution",
+      "title": "欧洲18天_待执行计划_最终执行版",
+      "scope": "酒店、交通、预算、签证、票券、行李、状态",
+      "pdfPath": "C:\\Users\\50415\\OneDrive\\文档\\ChatGPT\\Travel\\output\\pdf\\欧洲18天_待执行计划_最终执行版.pdf",
+      "pdfSha256": "1c97cd075350d147caec76a255d37d1186f036acb9c5bcad283a5fe92e9dba89",
+      "extractedText": "execution-extracted.txt",
+      "status": "ingested"
+    }
+  ],
+  "conflictPolicy": "行程与拍摄以visual为主；执行事项以execution为主；冲突写入data/conflicts.json，不猜。",
+  "createdAt": "2026-09-06T16:10:00+08:00"
+}

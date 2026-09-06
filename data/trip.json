@@ -1,0 +1,27 @@
+{
+  "id": "winter-europe-2026",
+  "title": "欧洲18天 · 冬日精品行程",
+  "subtitle": "罗马出发，巴黎收尾。把时间留在喜欢的地方。",
+  "startDate": "2026-12-01",
+  "endDate": "2026-12-18",
+  "travelers": 1,
+  "rooms": 1,
+  "europeNights": 15,
+  "hotelChanges": 5,
+  "cities": [
+    {"id": "rome", "name": "罗马", "country": "意大利", "nights": 3, "accent": "#c46643"},
+    {"id": "florence", "name": "佛罗伦萨", "country": "意大利", "nights": 2, "accent": "#b88b4a"},
+    {"id": "venice", "name": "威尼斯", "country": "意大利", "nights": 2, "accent": "#3f7881"},
+    {"id": "vienna", "name": "维也纳", "country": "奥地利", "nights": 2, "accent": "#7d5a78"},
+    {"id": "prague", "name": "布拉格", "country": "捷克", "nights": 2, "accent": "#7b5541"},
+    {"id": "paris", "name": "巴黎", "country": "法国", "nights": 4, "accent": "#344e6c"}
+  ],
+  "routeLabel": "ROME → FLORENCE → VENICE → VIENNA → PRAGUE → PARIS",
+  "coverImage": "/images/cover_graben.webp",
+  "sourcePriority": {
+    "visual": "欧洲18天_冬日精品纯行程视觉册_优化终版.pdf",
+    "execution": "欧洲18天_待执行计划_最终执行版.pdf",
+    "rule": "视觉册管行程与拍摄；执行表管酒店、交通、预算、签证、票券、行李与状态；冲突进入 conflicts.json。"
+  },
+  "lastFactReview": "2026-09-06"
+}

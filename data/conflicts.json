@@ -1,0 +1,21 @@
+{
+  "items": [
+    {
+      "id": "budget-standard",
+      "field": "推荐准备预算",
+      "visualPdf": "未单列",
+      "executionPdf": "¥29,000；超过¥30,500调整",
+      "latestUserInstruction": "硬预算¥26,000；目标¥23,000–25,500；购物至少¥1,500",
+      "resolution": "以最新用户指令为当前执行口径",
+      "status": "已覆盖"
+    },
+    {
+      "id": "flight-numbers",
+      "field": "国际与欧洲具体班次",
+      "visualPdf": "仅给规划窗口",
+      "executionPdf": "具体航班号与付款页价格未锁定",
+      "resolution": "保留待确认，预订后再写入 bookings.json",
+      "status": "待确认"
+    }
+  ]
+}

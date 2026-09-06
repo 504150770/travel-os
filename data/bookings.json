@@ -1,0 +1,182 @@
+{
+  "statuses": [
+    "待确认",
+    "待预订",
+    "已预订",
+    "已付款",
+    "已完成"
+  ],
+  "items": [
+    {
+      "id": "hotel-hold",
+      "category": "酒店",
+      "title": "6城15晚可退酒店",
+      "date": "2026-09-08",
+      "budget": 9157,
+      "status": "待预订",
+      "detail": "按selected组合持有；取消线覆盖签证审理；静音要求写进订单"
+    },
+    {
+      "id": "flight-can-fco",
+      "category": "机票",
+      "title": "CAN → FCO 单张联程",
+      "date": "2026-12-01",
+      "budget": 2500,
+      "status": "待确认",
+      "detail": "1次中转2.5–4h；23kg直挂写入票面；不自拼"
+    },
+    {
+      "id": "flight-cdg-can",
+      "category": "机票",
+      "title": "CDG → CAN",
+      "date": "2026-12-17",
+      "budget": 2500,
+      "status": "待确认",
+      "detail": "优先南航直飞；撤班才选单张1转联程；含23kg"
+    },
+    {
+      "id": "train-rome-florence",
+      "category": "铁路",
+      "title": "Roma Termini → Firenze S.M.N.",
+      "date": "2026-12-05",
+      "budget": 300,
+      "status": "待预订",
+      "detail": "Frecciarossa/Italo直达；提前20–30分钟到站"
+    },
+    {
+      "id": "train-florence-venice",
+      "category": "铁路",
+      "title": "Firenze S.M.N. → Venezia Mestre",
+      "date": "2026-12-07",
+      "budget": 350,
+      "status": "待预订",
+      "detail": "直达；最终在Mestre下车，不拖箱入岛"
+    },
+    {
+      "id": "flight-vce-vie",
+      "category": "欧洲航班",
+      "title": "VCE → VIE",
+      "date": "2026-12-09",
+      "budget": 550,
+      "status": "待预订",
+      "detail": "Austrian直飞优先；Light不含23kg，按含行李总价比较"
+    },
+    {
+      "id": "railjet-vie-prg",
+      "category": "铁路",
+      "title": "Wien Hbf → Praha hl.n.",
+      "date": "2026-12-11",
+      "budget": 350,
+      "status": "待预订",
+      "detail": "ÖBB/ČD Railjet直达；施工与站台前72小时复核"
+    },
+    {
+      "id": "flight-prg-par",
+      "category": "欧洲航班",
+      "title": "PRG → CDG/ORY",
+      "date": "2026-12-13",
+      "budget": 550,
+      "status": "待预订",
+      "detail": "直飞；含23kg总价；不选BVA"
+    },
+    {
+      "id": "visa",
+      "category": "签证",
+      "title": "意大利申根签证",
+      "date": "2026-09-25 — 2026-10-10",
+      "budget": 810,
+      "status": "待确认",
+      "detail": "按递签当天真实职业状态；公司证明、准假、盖章文件不可取得，不列入材料"
+    },
+    {
+      "id": "insurance",
+      "category": "保险",
+      "title": "申根旅行保险",
+      "date": "覆盖2026-12-01 — 12-18",
+      "budget": 300,
+      "status": "待预订",
+      "detail": "保障日期与英文行程、酒店、机票一致"
+    },
+    {
+      "id": "esim",
+      "category": "eSIM",
+      "title": "欧洲多国eSIM",
+      "date": "出发前7天",
+      "budget": 190,
+      "status": "待预订",
+      "detail": "覆盖意/奥/捷/法；保存离线安装说明"
+    },
+    {
+      "id": "colosseum",
+      "category": "景点票",
+      "title": "斗兽场",
+      "date": "2026-12-03",
+      "budget": 160,
+      "status": "待确认",
+      "detail": "约11/03起盯官方30天滚动放票；不加地下层长团"
+    },
+    {
+      "id": "vatican",
+      "category": "景点票",
+      "title": "梵蒂冈博物馆",
+      "date": "2026-12-04",
+      "budget": 220,
+      "status": "待预订",
+      "detail": "出签后立即买；预计约60天开放；只用官方票网"
+    },
+    {
+      "id": "pantheon",
+      "category": "景点票",
+      "title": "万神殿",
+      "date": "2026-12-03",
+      "budget": 45,
+      "status": "待确认",
+      "detail": "提前数日或现场；宗教活动可能调整"
+    },
+    {
+      "id": "stmark",
+      "category": "景点票",
+      "title": "圣马可大教堂",
+      "date": "2026-12-08",
+      "budget": 180,
+      "status": "待预订",
+      "detail": "宗教节日只买14:00后；礼仪安排前一日复核"
+    },
+    {
+      "id": "schonbrunn",
+      "category": "景点票",
+      "title": "美泉宫",
+      "date": "2026-12-10",
+      "budget": 330,
+      "status": "待预订",
+      "detail": "出签后锁上午；只买宫殿所需线路"
+    },
+    {
+      "id": "praguecastle",
+      "category": "景点票",
+      "title": "布拉格城堡/圣维特",
+      "date": "2026-12-12",
+      "budget": 150,
+      "status": "待确认",
+      "detail": "现场买；冬季开放与礼仪活动前一日复核"
+    },
+    {
+      "id": "louvre",
+      "category": "景点票",
+      "title": "卢浮宫",
+      "date": "2026-12-14",
+      "budget": 270,
+      "status": "待预订",
+      "detail": "周一开放；出签后锁09:30左右"
+    },
+    {
+      "id": "arc",
+      "category": "景点票",
+      "title": "凯旋门",
+      "date": "2026-12-15",
+      "budget": 145,
+      "status": "待确认",
+      "detail": "天气好再买；现场仪式或极端天气可能调整"
+    }
+  ]
+}

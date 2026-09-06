@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-06T11:51:33.482Z",
+  "status": "passed",
+  "summary": {
+    "failures": 0,
+    "warnings": 0,
+    "days": 18,
+    "places": 39,
+    "options": 24,
+    "images": 44,
+    "gyms": 10,
+    "hotels": 24,
+    "bookings": 19
+  },
+  "checks": {
+    "schemaValidation": true,
+    "tripStructure": true,
+    "referenceIntegrity": true,
+    "optionAudit": true,
+    "imageDeduplication": true,
+    "brokenImageDetection": true,
+    "hotelAudit": true,
+    "gymAudit": true,
+    "budgetAudit": true,
+    "bookingAudit": true,
+    "provenance": true
+  },
+  "failures": [],
+  "warnings": []
+}

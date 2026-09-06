@@ -1,0 +1,124 @@
+{
+  "groups": [
+    {
+      "id": "now",
+      "title": "现在",
+      "items": [
+        {
+          "id": "hold-hotels",
+          "title": "持有6城15晚可退酒店",
+          "due": "09/08",
+          "note": "保存取消线与静音备注"
+        },
+        {
+          "id": "monitor-flights",
+          "title": "监控国际机票",
+          "due": "09/12",
+          "note": "CAN→FCO单票1转；CDG→CAN直飞；核23kg"
+        },
+        {
+          "id": "visa-appointment",
+          "title": "预约意大利广州领区",
+          "due": "09/10",
+          "note": "下载递签当日官方清单"
+        },
+        {
+          "id": "visa-evidence",
+          "title": "签证材料齐套",
+          "due": "09/20",
+          "note": "劳动合同/流水/个税/社保/资产/解释信"
+        }
+      ]
+    },
+    {
+      "id": "visa",
+      "title": "递签与出签",
+      "items": [
+        {
+          "id": "submit-visa",
+          "title": "递交申根申请",
+          "due": "09/25–10/10",
+          "note": "职业状态按递签当天真实情况"
+        },
+        {
+          "id": "check-visa",
+          "title": "核对签证页",
+          "due": "护照返回当日",
+          "note": "姓名、有效期、停留天数、入境次数"
+        }
+      ]
+    },
+    {
+      "id": "after",
+      "title": "出签后48小时",
+      "items": [
+        {
+          "id": "buy-europe-transport",
+          "title": "买欧洲铁路与航班",
+          "due": "护照到手+48h",
+          "note": "直达、少换乘、欧洲航班含23kg"
+        },
+        {
+          "id": "buy-first-tickets",
+          "title": "买第一批核心景点票",
+          "due": "护照到手+48h",
+          "note": "梵蒂冈/圣马可/美泉宫/卢浮宫"
+        }
+      ]
+    },
+    {
+      "id": "near",
+      "title": "临近出发",
+      "items": [
+        {
+          "id": "colosseum-release",
+          "title": "盯斗兽场放票",
+          "due": "约11/03",
+          "note": "官方滚动放票"
+        },
+        {
+          "id": "quiet-confirm",
+          "title": "逐店静音确认",
+          "due": "11/10–11/25",
+          "note": "后侧/高层/非连通/远离设备；暖气与锁闭寄存"
+        },
+        {
+          "id": "ops-audit",
+          "title": "全程运行核对",
+          "due": "11/17",
+          "note": "航班、铁路施工/罢工、宗教节日时段"
+        },
+        {
+          "id": "offline-docs",
+          "title": "离线票据与行李",
+          "due": "11/24",
+          "note": "行李秤/折叠袋；托运18–19kg"
+        },
+        {
+          "id": "final-72",
+          "title": "72小时最终复核",
+          "due": "11/28",
+          "note": "天气、罢工、航站楼、值机、23kg、闭馆公告"
+        },
+        {
+          "id": "depart",
+          "title": "CAN出发",
+          "due": "12/01",
+          "note": "同票联程办理行李直挂"
+        }
+      ]
+    }
+  ],
+  "visaReality": {
+    "ifEmployed": "申请表填Employed；提交劳动合同、工资流水、个税、社保、个人流水/存款、房产、旧护照、公开工商信息（如有）与英文解释信。",
+    "ifLeft": "申请表填Unemployed / career transition；提交离职证明、历史劳动与收入证据、资产、副业真实证据与解释信。",
+    "unavailable": [
+      "在职证明",
+      "准假证明",
+      "回岗承诺",
+      "公司盖章证明",
+      "盖章营业执照"
+    ],
+    "risk": "替代材料不能视为意大利旅游签标准在职证明的等价替代，存在补件、延长审理或拒签风险。"
+  }
+}

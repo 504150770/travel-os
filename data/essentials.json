@@ -1,0 +1,73 @@
+{
+  "groups": [
+    {
+      "id": "luggage",
+      "title": "行李",
+      "icon": "Luggage",
+      "items": [
+        "托运行李出发18–19kg，上限23kg，至少留4kg购物空间",
+        "带行李秤、折叠旅行袋、防漏收纳、易碎物保护",
+        "护照、药物、现金、电子设备与票据随身",
+        "托运行李到22kg即停止买重物，给机场秤差留余量"
+      ]
+    },
+    {
+      "id": "shopping",
+      "title": "购物",
+      "icon": "ShoppingBag",
+      "items": [
+        "购物总重控制2–4kg；预算最低¥1,500",
+        "意大利：咖啡、巧克力、小皮具、文创",
+        "奥地利：Manner、Mozartkugel、圣诞小物",
+        "捷克：小鼹鼠文创、石榴石、小件玻璃",
+        "法国：护肤、香水、巧克力、茶、小纪念品"
+      ]
+    },
+    {
+      "id": "safety",
+      "title": "安全与支付",
+      "icon": "Shield",
+      "items": [
+        "护照原件贴身；云端与离线各留一份扫描件",
+        "刷卡优先选当地货币，拒绝动态货币转换",
+        "拥挤景点和交通枢纽将手机、钱包放身体前侧",
+        "酒店寄存只有书面确认“锁闭、员工管理”后才视为可用"
+      ]
+    },
+    {
+      "id": "transport",
+      "title": "交通与机场",
+      "icon": "Train",
+      "items": [
+        "欧洲短航班仍按5–6小时门到门执行",
+        "VCE/PRG欧洲航班提前2.5小时到航站楼；CDG国际返程提前3.5小时",
+        "23kg必须在付款页与票面明确显示，不能从最低价推断",
+        "铁路出发前72小时复核罢工、施工、站台与年度换表"
+      ]
+    },
+    {
+      "id": "language",
+      "title": "基础语言",
+      "icon": "Languages",
+      "items": [
+        "意大利语：Buongiorno / Grazie / Un biglietto, per favore",
+        "德语：Guten Tag / Danke / Wo ist der Bahnhof?",
+        "捷克语：Dobrý den / Děkuji / Prosím",
+        "法语：Bonjour / Merci / Une table pour une personne, s’il vous plaît",
+        "静音房：A quiet rear/courtyard room, away from lifts and mechanical equipment, please."
+      ]
+    },
+    {
+      "id": "emergency",
+      "title": "紧急信息",
+      "icon": "PhoneCall",
+      "items": [
+        "欧盟通用紧急电话：112",
+        "证件遗失：先报警并联系中国驻当地使领馆",
+        "保险、银行卡挂失、运营商客服号码出发前写入离线票据",
+        "肉类、奶制品、酒类、植物、香水和液体按12/18入境当日中国海关规则复核"
+      ]
+    }
+  ],
+  "quietMessage": "Quiet room is essential. Please confirm a non-street-facing rear/courtyard room on a high floor, not connecting, away from lifts, stairs, housekeeping rooms, HVAC and mechanical equipment. Please also confirm heating and locked, staff-controlled luggage storage."
+}
