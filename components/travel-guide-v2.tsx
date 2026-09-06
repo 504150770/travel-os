@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { useMemo, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import {
   ArrowLeft, ArrowRight, BedDouble, Camera, Check, ChevronDown, CircleAlert,
   Clock3, Download, Dumbbell, ExternalLink, Heart, Home, ImageIcon, Info,
@@ -25,8 +25,6 @@ const topNav: { id: ViewId; label: string; icon: typeof Home }[] = [
   { id: 'plan', label: 'PLAN', icon: TicketCheck },
   { id: 'more', label: 'MORE', icon: Menu },
 ];
-const now = new Date();
-
 function yuan(value: number) {
   return new Intl.NumberFormat('zh-CN', { style: 'currency', currency: 'CNY', maximumFractionDigits: 0 }).format(value);
 }
@@ -35,12 +33,12 @@ function shortDate(date: string) {
   return new Intl.DateTimeFormat('zh-CN', { month: 'numeric', day: 'numeric', weekday: 'short' }).format(new Date(`${date}T12:00:00`));
 }
 
-function tripDayToday() {
+function tripDayToday(reference: Date) {
   const start = new Date(`${guideData.trip.startDate}T00:00:00`);
   const end = new Date(`${guideData.trip.endDate}T23:59:59`);
-  if (now < start) return 1;
-  if (now > end) return 18;
-  return Math.min(18, Math.max(1, Math.floor((now.getTime() - start.getTime()) / 86400000) + 1));
+  if (reference < start) return 1;
+  if (reference > end) return 18;
+  return Math.min(18, Math.max(1, Math.floor((reference.getTime() - start.getTime()) / 86400000) + 1));
 }
 
 function mapLinks(query: string, xhsKeyword?: string) {
@@ -77,14 +75,14 @@ function ImageStrip({ images, openImage, compact = false }: { images: GuideImage
   </button>)}</div>;
 }
 
-function HomeView({ navigate, actualTotal, nextTask }: { navigate: (view: ViewId) => void; actualTotal: number; nextTask?: Task }) {
-  const daysLeft = Math.ceil((new Date(`${guideData.trip.startDate}T00:00:00`).getTime() - now.getTime()) / 86400000);
+function HomeView({ navigate, actualTotal, nextTask, clock }: { navigate: (view: ViewId) => void; actualTotal: number; nextTask?: Task; clock: Date | null }) {
+  const daysLeft = clock ? Math.ceil((new Date(`${guideData.trip.startDate}T00:00:00`).getTime() - clock.getTime()) / 86400000) : null;
   return <div className="v2-view home-v2">
     <section className="home-cover">
       <Image src={guideData.trip.coverImage} alt="冬季欧洲街景" fill priority sizes="100vw" />
       <div className="cover-shade" />
       <div className="cover-copy"><span>PERSONAL WINTER EUROPE · 2026</span><h1>18天，只走<br />值得记住的地方。</h1><p>罗马 → 佛罗伦萨 → 威尼斯 → 维也纳 → 布拉格 → 巴黎</p><button onClick={() => navigate('trip')}>进入 Trip Mode <ArrowRight /></button></div>
-      <div className="countdown"><b>{daysLeft > 0 ? daysLeft : tripDayToday()}</b><span>{daysLeft > 0 ? '天后出发' : '今日Day'}</span></div>
+      <div className="countdown"><b>{daysLeft === null ? '—' : daysLeft > 0 ? daysLeft : tripDayToday(clock!)}</b><span>{daysLeft === null ? '行程倒计时' : daysLeft > 0 ? '天后出发' : '今日Day'}</span></div>
     </section>
     <section className="route-ribbon">{guideData.trip.cities.map((city) => <div key={city.id}><i style={{ background: city.accent }} /><b>{city.name}</b><span>{city.nights}晚</span></div>)}</section>
     <section className="home-dashboard">
@@ -120,7 +118,7 @@ function FoodMini({ items, favorites, setFavorites }: { items: Restaurant[]; fav
   </section>;
 }
 
-function TripView({ selectedDay, setSelectedDay, openImage, favorites, setFavorites }: { selectedDay: number; setSelectedDay: (day: number) => void; openImage: (image: LightboxImage) => void; favorites: Record<string, boolean>; setFavorites: (next: Record<string, boolean>) => void }) {
+function TripView({ selectedDay, setSelectedDay, openImage, favorites, setFavorites, clock }: { selectedDay: number; setSelectedDay: (day: number) => void; openImage: (image: LightboxImage) => void; favorites: Record<string, boolean>; setFavorites: (next: Record<string, boolean>) => void; clock: Date | null }) {
   const day = guideData.days[selectedDay - 1] as Day;
   const dayImages = (guideData.images as GuideImage[]).filter((image) => image.dayId === day.day);
   const dayRestaurants = (guideData.restaurants as Restaurant[]).filter((item) => item.recommendedDays.includes(day.day)).sort((a,b)=>Number(Boolean(favorites[`food:${b.id}`]))-Number(Boolean(favorites[`food:${a.id}`])));
@@ -131,7 +129,7 @@ function TripView({ selectedDay, setSelectedDay, openImage, favorites, setFavori
   const selectedHotel = stayCity ? (guideData.hotels.hotels as Hotel[]).find((hotel) => hotel.selected && (hotel.city.startsWith('威尼斯') ? '威尼斯' : hotel.city) === stayCity) : undefined;
   return <div className="v2-view trip-v2">
     <div className="day-switcher">{guideData.days.map((item) => <button key={item.day} className={item.day === selectedDay ? 'active' : ''} onClick={() => setSelectedDay(item.day)}><b>D{item.day}</b><span>{item.city.split(' → ').at(-1)}</span></button>)}</div>
-    <div className="day-controls"><button disabled={selectedDay===1} onClick={()=>setSelectedDay(selectedDay-1)}><ArrowLeft />上一天</button><button onClick={()=>setSelectedDay(tripDayToday())}>TODAY · D{tripDayToday()}</button><button disabled={selectedDay===18} onClick={()=>setSelectedDay(selectedDay+1)}>下一天<ArrowRight /></button></div>
+    <div className="day-controls"><button disabled={selectedDay===1} onClick={()=>setSelectedDay(selectedDay-1)}><ArrowLeft />上一天</button><button onClick={()=>setSelectedDay(tripDayToday(clock ?? new Date()))}>TODAY · D{tripDayToday(clock ?? new Date())}</button><button disabled={selectedDay===18} onClick={()=>setSelectedDay(selectedDay+1)}>下一天<ArrowRight /></button></div>
     <section className="day-hero">{dayImages[0] && <Image src={dayImages[0].file} alt={dayImages[0].caption} fill priority sizes="100vw" />}<div className="day-hero-shade"/><div><span>DAY {String(day.day).padStart(2,'0')} · {shortDate(day.date)}</span><h1>{day.theme}</h1><p>{day.city} · {day.pace} · {day.walking}</p></div></section>
     <section className="trip-glance"><div><Route /><span>步行</span><b>{day.walking}</b></div><div><Clock3 /><span>节奏</span><b>{day.pace}</b></div><div><SunMedium /><span>Golden</span><b>{day.goldenHour}</b></div><div><Moon /><span>Blue</span><b>{day.blueHour}</b></div><button onClick={()=>setWeatherOpen(!weatherOpen)}><Info /><span>天气</span><b>{weatherOpen?'出发前72h复核':'预留'}</b></button></section>
     <div className="trip-layout"><main>
@@ -191,9 +189,9 @@ function BackupPanel({ data,onImport,notes,setNotes }: { data:BackupData;onImpor
 function MoreView({ tab,setTab,selectedDay,setSelectedDay,favorites,setFavorites,openImage,backupData,onImport,notes,setNotes }: { tab:MoreTab;setTab:(t:MoreTab)=>void;selectedDay:number;setSelectedDay:(d:number)=>void;favorites:Record<string,boolean>;setFavorites:(v:Record<string,boolean>)=>void;openImage:(image:LightboxImage)=>void;backupData:BackupData;onImport:(d:BackupData)=>void;notes:string;setNotes:(v:string)=>void }) { return <div className="v2-view"><Header eyebrow="MORE" title="住宿、地图与离线备份" note="酒店优先Single Room与睡眠证据；真实房型、价格和营业信息均显示核验状态。"/><div className="subnav"><button className={tab==='stay'?'active':''} onClick={()=>setTab('stay')}>STAY</button><button className={tab==='map'?'active':''} onClick={()=>setTab('map')}>MAP</button><button className={tab==='essentials'?'active':''} onClick={()=>setTab('essentials')}>ESSENTIALS</button><button className={tab==='backup'?'active':''} onClick={()=>setTab('backup')}>BACKUP</button></div>{tab==='stay'&&<StayPanel favorites={favorites} setFavorites={setFavorites} openImage={openImage}/>} {tab==='map'&&<MapPanel selectedDay={selectedDay} setSelectedDay={setSelectedDay}/>} {tab==='essentials'&&<EssentialsPanel/>} {tab==='backup'&&<BackupPanel data={backupData} onImport={onImport} notes={notes} setNotes={setNotes}/>}</div> }
 
 export default function TravelGuideV2() {
-  const duringTrip=now>=new Date(`${guideData.trip.startDate}T00:00:00`)&&now<=new Date(`${guideData.trip.endDate}T23:59:59`);
-  const [view,setView]=useState<ViewId>(duringTrip?'trip':'home');
-  const [selectedDay,setSelectedDay]=useState(tripDayToday());
+  const [clock,setClock]=useState<Date | null>(null);
+  const [view,setView]=useState<ViewId>('home');
+  const [selectedDay,setSelectedDay]=useState(1);
   const [discoverTab,setDiscoverTab]=useState<DiscoverTab>('visual'); const [planTab,setPlanTab]=useState<PlanTab>('bookings'); const [moreTab,setMoreTab]=useState<MoreTab>('stay');
   const [lightbox,setLightbox]=useState<LightboxImage>(null);
   const [bookingStatuses,setBookingStatuses]=useLocalStorage<Record<string,string>>('europe-guide-booking-statuses',{});
@@ -202,6 +200,7 @@ export default function TravelGuideV2() {
   const [favorites,setFavorites]=useLocalStorage<Record<string,boolean>>('europe-guide-favorites',{});
   const [notes,setNotes]=useLocalStorage('europe-guide-notes','');
   const [bookingEdits,setBookingEdits]=useLocalStorage<Record<string,Partial<Booking>>>('europe-guide-booking-edits',{});
+  useEffect(()=>{const frame=requestAnimationFrame(()=>{const current=new Date();setClock(current);const start=new Date(`${guideData.trip.startDate}T00:00:00`);const end=new Date(`${guideData.trip.endDate}T23:59:59`);setSelectedDay(tripDayToday(current));if(current>=start&&current<=end)setView('trip')});return()=>cancelAnimationFrame(frame)},[]);
   const actualTotal=useMemo(()=>Object.values(actuals).reduce((sum,value)=>sum+Number(value||0),0),[actuals]);
   const tasks=guideData.tasks.items as Task[];
   const nextTask=tasks.find((task)=>{const linked=task.linkedBookingId?bookingStatuses[task.linkedBookingId]:undefined;return !(linked&&task.autoCompleteWhen.includes(linked))&&(taskStatuses[task.id]??task.status)!=='Done'});
@@ -211,7 +210,7 @@ export default function TravelGuideV2() {
   return <div className="guide-v2">
     <aside className="side-nav"><button className="v2-brand" onClick={()=>navigate('home')}><b>EU</b><span>WINTER<br/>GUIDE</span></button><nav>{topNav.map(({id,label,icon:Icon})=><button key={id} className={view===id?'active':''} onClick={()=>navigate(id)}><Icon/><span>{label}</span></button>)}</nav><div className="side-meta"><i/><span>Data structure checked</span><b>Real-world facts dated</b></div></aside>
     <main className="v2-main"><header className="v2-topbar"><div><span>PERSONAL EUROPE / 2026</span><b>{topNav.find((item)=>item.id===view)?.label}</b></div><p>12.01 — 12.18 · 15 NIGHTS</p><span>LOCAL FIRST</span></header>
-      {view==='home'&&<HomeView navigate={navigate} actualTotal={actualTotal} nextTask={nextTask}/>} {view==='trip'&&<TripView selectedDay={selectedDay} setSelectedDay={setSelectedDay} openImage={setLightbox} favorites={favorites} setFavorites={setFavorites}/>} {view==='discover'&&<DiscoverView tab={discoverTab} setTab={setDiscoverTab} openImage={setLightbox} favorites={favorites} setFavorites={setFavorites}/>} {view==='plan'&&<PlanView tab={planTab} setTab={setPlanTab} bookingStatuses={bookingStatuses} setBookingStatuses={setBookingStatuses} taskStatuses={taskStatuses} setTaskStatuses={setTaskStatuses} actuals={actuals} setActuals={setActuals} bookingEdits={bookingEdits} setBookingEdits={setBookingEdits}/>} {view==='more'&&<MoreView tab={moreTab} setTab={setMoreTab} selectedDay={selectedDay} setSelectedDay={setSelectedDay} favorites={favorites} setFavorites={setFavorites} openImage={setLightbox} backupData={backupData} onImport={importBackup} notes={notes} setNotes={setNotes}/>} 
+      {view==='home'&&<HomeView navigate={navigate} actualTotal={actualTotal} nextTask={nextTask} clock={clock}/>} {view==='trip'&&<TripView selectedDay={selectedDay} setSelectedDay={setSelectedDay} openImage={setLightbox} favorites={favorites} setFavorites={setFavorites} clock={clock}/>} {view==='discover'&&<DiscoverView tab={discoverTab} setTab={setDiscoverTab} openImage={setLightbox} favorites={favorites} setFavorites={setFavorites}/>} {view==='plan'&&<PlanView tab={planTab} setTab={setPlanTab} bookingStatuses={bookingStatuses} setBookingStatuses={setBookingStatuses} taskStatuses={taskStatuses} setTaskStatuses={setTaskStatuses} actuals={actuals} setActuals={setActuals} bookingEdits={bookingEdits} setBookingEdits={setBookingEdits}/>} {view==='more'&&<MoreView tab={moreTab} setTab={setMoreTab} selectedDay={selectedDay} setSelectedDay={setSelectedDay} favorites={favorites} setFavorites={setFavorites} openImage={setLightbox} backupData={backupData} onImport={importBackup} notes={notes} setNotes={setNotes}/>} 
     </main>
     <nav className="bottom-nav">{topNav.map(({id,label,icon:Icon})=><button key={id} className={view===id?'active':''} onClick={()=>navigate(id)}><Icon/><span>{label}</span></button>)}</nav>
     <Lightbox image={lightbox} onClose={()=>setLightbox(null)}/>
