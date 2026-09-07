@@ -25,7 +25,12 @@ pnpm check
 - `data/gyms.json`：10 家训练候选与 Most Photogenic Top 5
 - `data/restaurants.json`：26 家沿当天路线可用的餐厅与咖啡馆
 - `data/xhs.json`：城市、拍摄、餐饮、GYM、购物与避坑搜索入口
-- `data/hotels.json`：每城 4 家、Single Room、7 类噪音与房型图核验状态
+- `data/hotel-bookings.json`：6 份真实入住凭证，是当前住宿的唯一事实源
+- `data/hotels.json`：旧版每城 4 家候选，仅归档，不覆盖真实订单
+- `data/transport-recommendations.json`：7 段门到门交通与三档候选槽；动态班次、总价和 23kg 行李未核实时保持 `UNVERIFIED`
+- `data/day-plans.json`：可编辑 Current Trip，只保存 Entity 引用、时间和状态
+- `data/activities.json`：原时间轴中非景点活动的 Entity 数据
+- `data/quick-picks.json`：按城市引用 Entity 的快速选择
 - `data/bookings.json`：机酒、铁路、票券、签证、保险、eSIM 的唯一订单状态
 - `data/tasks.json`：总控任务；已关联订单会随 Booking 状态自动完成
 - `data/budget.json`：¥26,000 硬预算与实际支出分类
@@ -33,7 +38,7 @@ pnpm check
 - `data/essentials.json`：途中速查
 - `data/conflicts.json`：两份 PDF 与最新指令的冲突记录
 
-修改价格、酒店、班次、票券或健身房只需更新 JSON；UI 自动读取。所有浏览器状态使用命名空间化 LocalStorage 保存。
+修改价格、班次、票券或健身房只需更新 JSON；UI 自动读取。真实酒店变更只更新 `hotel-bookings.json`。所有浏览器状态使用命名空间化 LocalStorage 保存。
 
 ## 构建链
 

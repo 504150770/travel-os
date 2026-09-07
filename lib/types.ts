@@ -109,6 +109,69 @@ export type Booking = {
   lastVerified: string;
 };
 
+export type HotelBooking = {
+  id: string;
+  city: string;
+  country: string;
+  hotelName: string;
+  address: string;
+  phone: string;
+  checkIn: string;
+  checkOut: string;
+  nights: number;
+  checkInTime: string;
+  checkOutTime: string;
+  roomType: string;
+  bed: string;
+  privateBathroom: boolean;
+  bathroomDetails: string;
+  breakfastIncluded: boolean;
+  breakfastDetails: string;
+  paidOnlineCny: number;
+  payAtProperty: { amount: number; currency: string; cnyApprox: number; label: string } | null;
+  committedCnyApprox: number;
+  paymentStatus: string;
+  bookingStatus: string;
+  freeCancellationUntil: string;
+  cancellationPolicy: string;
+  confirmationNumber: string | null;
+  bookingNumber: string;
+  guestName: string;
+  frontDesk: string;
+  luggageStorage: string;
+  quietRoomRequest: string;
+  heating: string;
+  noise: { street: string; wall: string; corridor: string; mechanical: string };
+  sourceFile: string;
+  sourcePath: string;
+  sourceType: string;
+};
+
+export type TransportCandidate = {
+  rank: string;
+  operator: string | null;
+  service: string | null;
+  departure: string | null;
+  arrival: string | null;
+  priceCny: number | null;
+  baggage23kg: boolean | null;
+  changes: number;
+  status: string;
+};
+
+export type TransportSegment = {
+  id: string;
+  day: number;
+  route: string;
+  date: string;
+  mode: string;
+  doorToDoor: string;
+  recommendation: string;
+  source: string;
+  status: string;
+  candidates: TransportCandidate[];
+};
+
 export type Hotel = {
   id: string;
   city: string;

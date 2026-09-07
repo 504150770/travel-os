@@ -23,7 +23,19 @@
     "photoStatus": "真实餐厅与菜品图片待确认",
     "soloFriendly": "适合1人；高峰时段以现场为准",
     "lastVerified": "2026-09-06",
-    "sourceType": "官方来源或官方旅游机构"
+    "sourceType": "官方来源或官方旅游机构",
+    "category": "Dinner",
+    "address": "待确认",
+    "menu": {
+      "status": "Menu pending verification",
+      "url": null,
+      "type": null,
+      "previews": [],
+      "prices": [],
+      "lastVerified": null
+    },
+    "environmentImage": null,
+    "imageSources": []
   },
   {
     "id": "rome-roscioli",
@@ -49,7 +61,19 @@
     "photoStatus": "真实餐厅与菜品图片待确认",
     "soloFriendly": "适合1人；高峰时段以现场为准",
     "lastVerified": "2026-09-06",
-    "sourceType": "官方来源或官方旅游机构"
+    "sourceType": "官方来源或官方旅游机构",
+    "category": "Dinner",
+    "address": "待确认",
+    "menu": {
+      "status": "Menu pending verification",
+      "url": null,
+      "type": null,
+      "previews": [],
+      "prices": [],
+      "lastVerified": null
+    },
+    "environmentImage": null,
+    "imageSources": []
   },
   {
     "id": "rome-trapizzino",
@@ -75,7 +99,19 @@
     "photoStatus": "真实餐厅与菜品图片待确认",
     "soloFriendly": "适合1人；高峰时段以现场为准",
     "lastVerified": "2026-09-06",
-    "sourceType": "官方来源或官方旅游机构"
+    "sourceType": "官方来源或官方旅游机构",
+    "category": "Snack",
+    "address": "待确认",
+    "menu": {
+      "status": "Menu pending verification",
+      "url": null,
+      "type": null,
+      "previews": [],
+      "prices": [],
+      "lastVerified": null
+    },
+    "environmentImage": null,
+    "imageSources": []
   },
   {
     "id": "rome-santeustachio",
@@ -101,7 +137,19 @@
     "photoStatus": "真实餐厅与菜品图片待确认",
     "soloFriendly": "适合1人；高峰时段以现场为准",
     "lastVerified": "2026-09-06",
-    "sourceType": "官方来源或官方旅游机构"
+    "sourceType": "官方来源或官方旅游机构",
+    "category": "Cafe",
+    "address": "待确认",
+    "menu": {
+      "status": "Menu pending verification",
+      "url": null,
+      "type": null,
+      "previews": [],
+      "prices": [],
+      "lastVerified": null
+    },
+    "environmentImage": null,
+    "imageSources": []
   },
   {
     "id": "florence-vinaio",
@@ -126,7 +174,19 @@
     "photoStatus": "真实餐厅与菜品图片待确认",
     "soloFriendly": "适合1人；高峰时段以现场为准",
     "lastVerified": "2026-09-06",
-    "sourceType": "官方来源或官方旅游机构"
+    "sourceType": "官方来源或官方旅游机构",
+    "category": "Lunch",
+    "address": "待确认",
+    "menu": {
+      "status": "Menu pending verification",
+      "url": null,
+      "type": null,
+      "previews": [],
+      "prices": [],
+      "lastVerified": null
+    },
+    "environmentImage": null,
+    "imageSources": []
   },
   {
     "id": "florence-sabatino",
@@ -151,7 +211,19 @@
     "photoStatus": "真实餐厅与菜品图片待确认",
     "soloFriendly": "适合1人；高峰时段以现场为准",
     "lastVerified": "2026-09-06",
-    "sourceType": "官方来源或官方旅游机构"
+    "sourceType": "官方来源或官方旅游机构",
+    "category": "Dinner",
+    "address": "待确认",
+    "menu": {
+      "status": "Menu pending verification",
+      "url": null,
+      "type": null,
+      "previews": [],
+      "prices": [],
+      "lastVerified": null
+    },
+    "environmentImage": null,
+    "imageSources": []
   },
   {
     "id": "florence-ditta",
@@ -176,7 +248,19 @@
     "photoStatus": "真实餐厅与菜品图片待确认",
     "soloFriendly": "适合1人；高峰时段以现场为准",
     "lastVerified": "2026-09-06",
-    "sourceType": "官方来源或官方旅游机构"
+    "sourceType": "官方来源或官方旅游机构",
+    "category": "Breakfast",
+    "address": "待确认",
+    "menu": {
+      "status": "Menu pending verification",
+      "url": null,
+      "type": null,
+      "previews": [],
+      "prices": [],
+      "lastVerified": null
+    },
+    "environmentImage": null,
+    "imageSources": []
   },
   {
     "id": "florence-nerbone",
@@ -201,7 +285,19 @@
     "photoStatus": "真实餐厅与菜品图片待确认",
     "soloFriendly": "适合1人；高峰时段以现场为准",
     "lastVerified": "2026-09-06",
-    "sourceType": "官方来源或官方旅游机构"
+    "sourceType": "官方来源或官方旅游机构",
+    "category": "Lunch",
+    "address": "待确认",
+    "menu": {
+      "status": "Menu pending verification",
+      "url": null,
+      "type": null,
+      "previews": [],
+      "prices": [],
+      "lastVerified": null
+    },
+    "environmentImage": null,
+    "imageSources": []
   },
   {
     "id": "venice-viterossa",
@@ -226,7 +322,19 @@
     "photoStatus": "真实餐厅与菜品图片待确认",
     "soloFriendly": "适合1人；高峰时段以现场为准",
     "lastVerified": "2026-09-06",
-    "sourceType": "官方来源或官方旅游机构"
+    "sourceType": "官方来源或官方旅游机构",
+    "category": "Dinner",
+    "address": "待确认",
+    "menu": {
+      "status": "Menu pending verification",
+      "url": null,
+      "type": null,
+      "previews": [],
+      "prices": [],
+      "lastVerified": null
+    },
+    "environmentImage": null,
+    "imageSources": []
   },
   {
     "id": "venice-carampane",
@@ -251,7 +359,19 @@
     "photoStatus": "真实餐厅与菜品图片待确认",
     "soloFriendly": "适合1人；高峰时段以现场为准",
     "lastVerified": "2026-09-06",
-    "sourceType": "官方来源或官方旅游机构"
+    "sourceType": "官方来源或官方旅游机构",
+    "category": "Dinner",
+    "address": "待确认",
+    "menu": {
+      "status": "Menu pending verification",
+      "url": null,
+      "type": null,
+      "previews": [],
+      "prices": [],
+      "lastVerified": null
+    },
+    "environmentImage": null,
+    "imageSources": []
   },
   {
     "id": "venice-staffa",
@@ -276,7 +396,19 @@
     "photoStatus": "真实餐厅与菜品图片待确认",
     "soloFriendly": "适合1人；高峰时段以现场为准",
     "lastVerified": "2026-09-06",
-    "sourceType": "地图入口，营业状态待确认"
+    "sourceType": "地图入口，营业状态待确认",
+    "category": "Dinner",
+    "address": "待确认",
+    "menu": {
+      "status": "Menu pending verification",
+      "url": null,
+      "type": null,
+      "previews": [],
+      "prices": [],
+      "lastVerified": null
+    },
+    "environmentImage": null,
+    "imageSources": []
   },
   {
     "id": "venice-florian",
@@ -301,7 +433,19 @@
     "photoStatus": "真实餐厅与菜品图片待确认",
     "soloFriendly": "适合1人；高峰时段以现场为准",
     "lastVerified": "2026-09-06",
-    "sourceType": "官方来源或官方旅游机构"
+    "sourceType": "官方来源或官方旅游机构",
+    "category": "Cafe",
+    "address": "待确认",
+    "menu": {
+      "status": "Menu pending verification",
+      "url": null,
+      "type": null,
+      "previews": [],
+      "prices": [],
+      "lastVerified": null
+    },
+    "environmentImage": null,
+    "imageSources": []
   },
   {
     "id": "vienna-figl",
@@ -326,7 +470,19 @@
     "photoStatus": "真实餐厅与菜品图片待确认",
     "soloFriendly": "适合1人；高峰时段以现场为准",
     "lastVerified": "2026-09-06",
-    "sourceType": "官方来源或官方旅游机构"
+    "sourceType": "官方来源或官方旅游机构",
+    "category": "Dinner",
+    "address": "待确认",
+    "menu": {
+      "status": "Menu pending verification",
+      "url": null,
+      "type": null,
+      "previews": [],
+      "prices": [],
+      "lastVerified": null
+    },
+    "environmentImage": null,
+    "imageSources": []
   },
   {
     "id": "vienna-kameel",
@@ -351,7 +507,19 @@
     "photoStatus": "真实餐厅与菜品图片待确认",
     "soloFriendly": "适合1人；高峰时段以现场为准",
     "lastVerified": "2026-09-06",
-    "sourceType": "官方来源或官方旅游机构"
+    "sourceType": "官方来源或官方旅游机构",
+    "category": "Breakfast",
+    "address": "待确认",
+    "menu": {
+      "status": "Menu pending verification",
+      "url": null,
+      "type": null,
+      "previews": [],
+      "prices": [],
+      "lastVerified": null
+    },
+    "environmentImage": null,
+    "imageSources": []
   },
   {
     "id": "vienna-sperl",
@@ -376,7 +544,19 @@
     "photoStatus": "真实餐厅与菜品图片待确认",
     "soloFriendly": "适合1人；高峰时段以现场为准",
     "lastVerified": "2026-09-06",
-    "sourceType": "官方来源或官方旅游机构"
+    "sourceType": "官方来源或官方旅游机构",
+    "category": "Cafe",
+    "address": "待确认",
+    "menu": {
+      "status": "Menu pending verification",
+      "url": null,
+      "type": null,
+      "previews": [],
+      "prices": [],
+      "lastVerified": null
+    },
+    "environmentImage": null,
+    "imageSources": []
   },
   {
     "id": "vienna-rathaus",
@@ -401,7 +581,19 @@
     "photoStatus": "真实餐厅与菜品图片待确认",
     "soloFriendly": "适合1人；高峰时段以现场为准",
     "lastVerified": "2026-09-06",
-    "sourceType": "官方来源或官方旅游机构"
+    "sourceType": "官方来源或官方旅游机构",
+    "category": "Snack",
+    "address": "待确认",
+    "menu": {
+      "status": "Menu pending verification",
+      "url": null,
+      "type": null,
+      "previews": [],
+      "prices": [],
+      "lastVerified": null
+    },
+    "environmentImage": null,
+    "imageSources": []
   },
   {
     "id": "prague-lokal",
@@ -426,7 +618,19 @@
     "photoStatus": "真实餐厅与菜品图片待确认",
     "soloFriendly": "适合1人；高峰时段以现场为准",
     "lastVerified": "2026-09-06",
-    "sourceType": "官方来源或官方旅游机构"
+    "sourceType": "官方来源或官方旅游机构",
+    "category": "Dinner",
+    "address": "待确认",
+    "menu": {
+      "status": "Menu pending verification",
+      "url": null,
+      "type": null,
+      "previews": [],
+      "prices": [],
+      "lastVerified": null
+    },
+    "environmentImage": null,
+    "imageSources": []
   },
   {
     "id": "prague-louvre",
@@ -451,7 +655,19 @@
     "photoStatus": "真实餐厅与菜品图片待确认",
     "soloFriendly": "适合1人；高峰时段以现场为准",
     "lastVerified": "2026-09-06",
-    "sourceType": "官方来源或官方旅游机构"
+    "sourceType": "官方来源或官方旅游机构",
+    "category": "Breakfast",
+    "address": "待确认",
+    "menu": {
+      "status": "Menu pending verification",
+      "url": null,
+      "type": null,
+      "previews": [],
+      "prices": [],
+      "lastVerified": null
+    },
+    "environmentImage": null,
+    "imageSources": []
   },
   {
     "id": "prague-kantyna",
@@ -476,7 +692,19 @@
     "photoStatus": "真实餐厅与菜品图片待确认",
     "soloFriendly": "适合1人；高峰时段以现场为准",
     "lastVerified": "2026-09-06",
-    "sourceType": "官方来源或官方旅游机构"
+    "sourceType": "官方来源或官方旅游机构",
+    "category": "Dinner",
+    "address": "待确认",
+    "menu": {
+      "status": "Menu pending verification",
+      "url": null,
+      "type": null,
+      "previews": [],
+      "prices": [],
+      "lastVerified": null
+    },
+    "environmentImage": null,
+    "imageSources": []
   },
   {
     "id": "prague-eska",
@@ -501,7 +729,19 @@
     "photoStatus": "真实餐厅与菜品图片待确认",
     "soloFriendly": "适合1人；高峰时段以现场为准",
     "lastVerified": "2026-09-06",
-    "sourceType": "官方来源或官方旅游机构"
+    "sourceType": "官方来源或官方旅游机构",
+    "category": "Breakfast",
+    "address": "待确认",
+    "menu": {
+      "status": "Menu pending verification",
+      "url": null,
+      "type": null,
+      "previews": [],
+      "prices": [],
+      "lastVerified": null
+    },
+    "environmentImage": null,
+    "imageSources": []
   },
   {
     "id": "paris-bouillon",
@@ -529,7 +769,19 @@
     "photoStatus": "真实餐厅与菜品图片待确认",
     "soloFriendly": "适合1人；高峰时段以现场为准",
     "lastVerified": "2026-09-06",
-    "sourceType": "官方来源或官方旅游机构"
+    "sourceType": "官方来源或官方旅游机构",
+    "category": "Dinner",
+    "address": "待确认",
+    "menu": {
+      "status": "Menu pending verification",
+      "url": null,
+      "type": null,
+      "previews": [],
+      "prices": [],
+      "lastVerified": null
+    },
+    "environmentImage": null,
+    "imageSources": []
   },
   {
     "id": "paris-breizh",
@@ -557,7 +809,19 @@
     "photoStatus": "真实餐厅与菜品图片待确认",
     "soloFriendly": "适合1人；高峰时段以现场为准",
     "lastVerified": "2026-09-06",
-    "sourceType": "官方来源或官方旅游机构"
+    "sourceType": "官方来源或官方旅游机构",
+    "category": "Dinner",
+    "address": "待确认",
+    "menu": {
+      "status": "Menu pending verification",
+      "url": null,
+      "type": null,
+      "previews": [],
+      "prices": [],
+      "lastVerified": null
+    },
+    "environmentImage": null,
+    "imageSources": []
   },
   {
     "id": "paris-flore",
@@ -585,7 +849,19 @@
     "photoStatus": "真实餐厅与菜品图片待确认",
     "soloFriendly": "适合1人；高峰时段以现场为准",
     "lastVerified": "2026-09-06",
-    "sourceType": "官方来源或官方旅游机构"
+    "sourceType": "官方来源或官方旅游机构",
+    "category": "Breakfast",
+    "address": "待确认",
+    "menu": {
+      "status": "Menu pending verification",
+      "url": null,
+      "type": null,
+      "previews": [],
+      "prices": [],
+      "lastVerified": null
+    },
+    "environmentImage": null,
+    "imageSources": []
   },
   {
     "id": "paris-louvre-bakery",
@@ -613,7 +889,19 @@
     "photoStatus": "真实餐厅与菜品图片待确认",
     "soloFriendly": "适合1人；高峰时段以现场为准",
     "lastVerified": "2026-09-06",
-    "sourceType": "官方来源或官方旅游机构"
+    "sourceType": "官方来源或官方旅游机构",
+    "category": "Snack",
+    "address": "待确认",
+    "menu": {
+      "status": "Menu pending verification",
+      "url": null,
+      "type": null,
+      "previews": [],
+      "prices": [],
+      "lastVerified": null
+    },
+    "environmentImage": null,
+    "imageSources": []
   },
   {
     "id": "paris-pink",
@@ -641,7 +929,19 @@
     "photoStatus": "真实餐厅与菜品图片待确认",
     "soloFriendly": "适合1人；高峰时段以现场为准",
     "lastVerified": "2026-09-06",
-    "sourceType": "官方来源或官方旅游机构"
+    "sourceType": "官方来源或官方旅游机构",
+    "category": "Dinner",
+    "address": "待确认",
+    "menu": {
+      "status": "Menu pending verification",
+      "url": null,
+      "type": null,
+      "previews": [],
+      "prices": [],
+      "lastVerified": null
+    },
+    "environmentImage": null,
+    "imageSources": []
   },
   {
     "id": "paris-pigalle-cafe",
@@ -669,6 +969,18 @@
     "photoStatus": "真实餐厅与菜品图片待确认",
     "soloFriendly": "适合1人；高峰时段以现场为准",
     "lastVerified": "2026-09-06",
-    "sourceType": "官方来源或官方旅游机构"
+    "sourceType": "官方来源或官方旅游机构",
+    "category": "Breakfast",
+    "address": "待确认",
+    "menu": {
+      "status": "Menu pending verification",
+      "url": null,
+      "type": null,
+      "previews": [],
+      "prices": [],
+      "lastVerified": null
+    },
+    "environmentImage": null,
+    "imageSources": []
   }
 ]

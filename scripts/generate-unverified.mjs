@@ -1,0 +1,71 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const read = (file) => JSON.parse(fs.readFileSync(path.join(root, 'data', file), 'utf8'));
+const restaurants = read('restaurants.json');
+const hotels = read('hotels.json').hotels;
+const gyms = read('gyms.json');
+const options = read('options.json');
+const picks = read('quick-picks.json').cities;
+const images = read('images.json');
+const hotelBookings = read('hotel-bookings.json').items;
+const transport = read('transport-recommendations.json').segments;
+const cities = ['罗马','佛罗伦萨','威尼斯','维也纳','布拉格','巴黎'];
+const imageIds = new Set(images.map((image) => image.placeId).filter(Boolean));
+const rows = [];
+const add = (category, id, name, city, fields, reason, nextAction, priority = 'P1') => rows.push({ category, id, name, city, fields, reason, nextAction, priority });
+
+for (const city of cities) {
+  const count = restaurants.filter((item) => item.city === city).length;
+  if (count < 8) add('FOOD_COVERAGE', `food-coverage-${city}`, `${city}餐饮候选`, city, ['candidateCount'], `当前${count}家，低于目标8–12家；本轮不为凑数补造。`, '下一轮High从官方与可靠订餐平台补充顺路候选。', 'P1');
+}
+for (const item of restaurants) {
+  const missing = [];
+  if (!item.dishImage) missing.push('代表食物图');
+  if (!item.restaurantImage && !item.environmentImage) missing.push('环境图');
+  if (!item.menu?.previews?.length) missing.push('菜单预览');
+  if (missing.length) add('FOOD_IMAGES', item.id, item.name, item.city, missing, item.photoStatus || '待补图', '优先官网Menu/Instagram，再核可靠平台的真实用户图。', 'P1');
+  if (!item.menu?.url || item.menu?.status === 'Menu pending verification') add('FOOD_MENU', item.id, item.name, item.city, ['menuUrl','menuPrices'], '当前菜单与价格未充分验证。', '核对官方Menu PDF或页面并记录日期。', 'P1');
+  const reality = [];
+  if (item.address === '待确认') reality.push('address');
+  if (String(item.hours).includes('待确认')) reality.push('openingHours');
+  if (reality.length) add('FOOD_REALITY', item.id, item.name, item.city, reality, '缺少足够可靠的当前信息。', '从官网与地图资料交叉核验。', 'P2');
+}
+for (const hotel of hotels) {
+  const missingSlots = hotel.roomImages.filter((photo) => !photo.file).length;
+  if (missingSlots) add('HOTEL_ROOM_IMAGES', hotel.id, hotel.name, hotel.city, [`${missingSlots}/3房型图待补`], '无法确认图片确属推荐Single Room。', '逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。', 'P1');
+  add('ARCHIVED_HOTEL', hotel.id, hotel.name, hotel.city, ['旧候选实时价格'], '该酒店仅保留为历史候选，不是当前住宿。', '除非用户决定换房，否则不更新。', 'P2');
+}
+for (const stay of hotelBookings) {
+  const fields = [];
+  if (stay.frontDesk.includes('UNVERIFIED')) fields.push('24小时前台/自助入住');
+  if (stay.luggageStorage === 'UNVERIFIED') fields.push('行李寄存');
+  if (stay.quietRoomRequest.includes('UNVERIFIED')) fields.push('静音请求');
+  if (stay.heating === 'UNVERIFIED') fields.push('暖气');
+  for (const [key, value] of Object.entries(stay.noise)) if (value.includes('UNVERIFIED')) fields.push(`noise.${key}`);
+  if (fields.length) add('REAL_HOTEL_UNVERIFIED', stay.id, stay.hotelName, stay.city, fields, '入住凭证没有提供这些运营与噪音事实。', '取消线前向酒店书面确认，未回复前保持待确认。', 'P0');
+}
+for (const segment of transport) {
+  const pending = segment.candidates.filter((candidate) => candidate.priceCny == null || candidate.departure == null || candidate.baggage23kg == null);
+  if (pending.length) add('TRANSPORT_LIVE_DATA', segment.id, segment.route, `Day ${segment.day}`, ['实时班次','总价','23kg行李','改签条件'], '官方路线存在，但目标日期具体产品尚未形成可出票事实。', '在官方出票页按门到门时间刷新并锁定。', 'P0');
+}
+for (const gym of gyms) {
+  const fields = [];
+  if (String(gym.dayPass).includes('确认')) fields.push('Day Pass');
+  if (String(gym.hours).includes('确认')) fields.push('营业时间');
+  if (fields.length) add('GYM_REALITY', gym.id, gym.name, gym.city, fields, '官网或购买入口证据不足。', '出发前重新核官方页面或联系前台。', 'P1');
+}
+for (const option of options) if (!imageIds.has(option.id)) add('PLACE_IMAGES', option.id, option.name, option.city, ['image'], 'Quick Pick/候选地点缺少已核验真实图片。', '补官方或可追溯摄影来源，并做近似图审计。', 'P2');
+for (const group of picks) for (const pick of group.items) if (!imageIds.has(pick.entityId) && !restaurants.some((item) => item.id === pick.entityId && (item.dishImage || item.restaurantImage)) && !gyms.some((item) => item.id === pick.entityId && item.image)) add('PICK_IMAGES', `${group.city}-${pick.label}`, pick.label, group.city, ['image'], 'Pick引用的Entity暂无图片。', '只在Entity补图，不在Picks复制文件。', 'P2');
+
+const missingImages = rows.filter((row) => ['FOOD_IMAGES','HOTEL_ROOM_IMAGES','PLACE_IMAGES','PICK_IMAGES'].includes(row.category));
+const summary = rows.reduce((acc, row) => { acc[row.category] = (acc[row.category] ?? 0) + 1; return acc; }, {});
+const report = { generatedAt: new Date().toISOString(), policy: '真实性 > 完成率；未验证字段不进入事实结论。', total: rows.length, summary, items: rows };
+fs.mkdirSync(path.join(root, 'audit'), { recursive: true });
+fs.writeFileSync(path.join(root, 'audit', 'unverified-data-list.json'), `${JSON.stringify(report, null, 2)}\n`);
+fs.writeFileSync(path.join(root, 'audit', 'missing-images.json'), `${JSON.stringify({ generatedAt: report.generatedAt, total: missingImages.length, items: missingImages }, null, 2)}\n`);
+const markdown = ['# UNVERIFIED DATA LIST', '', `Generated: ${report.generatedAt}`, '', '> 真实性优先。以下项目没有被当作已验证事实。', '', ...Object.entries(summary).flatMap(([category, count]) => [`## ${category} · ${count}`, '', ...rows.filter((row) => row.category === category).map((row) => `- **${row.city}｜${row.name}** — ${row.fields.join('、')}。${row.reason} 下一步：${row.nextAction}`), ''])].join('\n');
+fs.writeFileSync(path.join(root, 'audit', 'UNVERIFIED-DATA-LIST.md'), `${markdown}\n`);
+console.log(JSON.stringify({ unverified: rows.length, missingImages: missingImages.length, summary }, null, 2));

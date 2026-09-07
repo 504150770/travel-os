@@ -10,10 +10,10 @@
       "id": "hold-hotels",
       "title": "持有6城15晚可退酒店",
       "due": "09/08",
-      "note": "保存取消线与静音备注",
+      "note": "6城15晚真实酒店订单已导入；已支付¥10,651.72，到店税费约¥634.80",
       "group": "现在",
-      "status": "To Do",
-      "linkedBookingId": "hotel-hold",
+      "status": "Done",
+      "linkedBookingId": null,
       "autoCompleteWhen": [
         "Booked",
         "Paid",

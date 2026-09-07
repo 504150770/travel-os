@@ -1,0 +1,401 @@
+[
+  {
+    "id": "activity-d1-01",
+    "type": "activity",
+    "name": "CAN出发",
+    "city": "罗马",
+    "address": "待确认",
+    "coordinates": null,
+    "images": [],
+    "description": "提前到机场，托运行李必须直挂FCO。",
+    "price": null,
+    "openingHours": "不适用",
+    "links": {},
+    "source": "现有行程PDF与Web Guide",
+    "lastVerified": "2026-09-06",
+    "tags": [
+      "飞机"
+    ],
+    "notes": "中转不足2.5小时不选。"
+  },
+  {
+    "id": "activity-d2-01",
+    "type": "activity",
+    "name": "抵达与休息",
+    "city": "罗马",
+    "address": "待确认",
+    "coordinates": null,
+    "images": [],
+    "description": "FCO→Termini→酒店；深夜改官方出租。",
+    "price": null,
+    "openingHours": "不适用",
+    "links": {},
+    "source": "现有行程PDF与Web Guide",
+    "lastVerified": "2026-09-06",
+    "tags": [
+      "机场接驳"
+    ],
+    "notes": "睡意重就继续休息。"
+  },
+  {
+    "id": "activity-d3-03",
+    "type": "activity",
+    "name": "长午餐与咖啡",
+    "city": "罗马",
+    "address": "待确认",
+    "coordinates": null,
+    "images": [],
+    "description": "完整坐下，恢复体力。",
+    "price": null,
+    "openingHours": "不适用",
+    "links": {},
+    "source": "现有行程PDF与Web Guide",
+    "lastVerified": "2026-09-06",
+    "tags": [
+      "步行"
+    ],
+    "notes": "不压缩到45分钟以内。"
+  },
+  {
+    "id": "activity-d4-02",
+    "type": "activity",
+    "name": "Prati午餐",
+    "city": "梵蒂冈 · 罗马",
+    "address": "待确认",
+    "coordinates": null,
+    "images": [],
+    "description": "坐下吃饭，预留绕行到圣彼得的时间。",
+    "price": null,
+    "openingHours": "不适用",
+    "links": {},
+    "source": "现有行程PDF与Web Guide",
+    "lastVerified": "2026-09-06",
+    "tags": [
+      "步行"
+    ],
+    "notes": "至少保留60分钟。"
+  },
+  {
+    "id": "activity-d5-01",
+    "type": "activity",
+    "name": "直达高铁",
+    "city": "佛罗伦萨",
+    "address": "待确认",
+    "coordinates": null,
+    "images": [],
+    "description": "提前20–30分钟到Termini，自己上下行李。",
+    "price": null,
+    "openingHours": "不适用",
+    "links": {},
+    "source": "现有行程PDF与Web Guide",
+    "lastVerified": "2026-09-06",
+    "tags": [
+      "Frecciarossa / Italo"
+    ],
+    "notes": "只选直达。"
+  },
+  {
+    "id": "activity-d7-01",
+    "type": "activity",
+    "name": "直达高铁至Mestre",
+    "city": "威尼斯",
+    "address": "待确认",
+    "coordinates": null,
+    "images": [],
+    "description": "最终住Marghera，在Mestre下车。",
+    "price": null,
+    "openingHours": "不适用",
+    "links": {},
+    "source": "现有行程PDF与Web Guide",
+    "lastVerified": "2026-09-06",
+    "tags": [
+      "Frecciarossa / Italo"
+    ],
+    "notes": "不拖箱入岛。"
+  },
+  {
+    "id": "activity-d8-03",
+    "type": "activity",
+    "name": "长午餐与咖啡",
+    "city": "威尼斯",
+    "address": "待确认",
+    "coordinates": null,
+    "images": [],
+    "description": "坐下休息，等待节日午后参观。",
+    "price": null,
+    "openingHours": "不适用",
+    "links": {},
+    "source": "现有行程PDF与Web Guide",
+    "lastVerified": "2026-09-06",
+    "tags": [
+      "步行"
+    ],
+    "notes": "13:45回到入口。"
+  },
+  {
+    "id": "activity-d9-01",
+    "type": "activity",
+    "name": "Marghera→VCE",
+    "city": "维也纳",
+    "address": "待确认",
+    "coordinates": null,
+    "images": [],
+    "description": "起飞前2.5小时到航站楼，票面含1×23kg。",
+    "price": null,
+    "openingHours": "不适用",
+    "links": {},
+    "source": "现有行程PDF与Web Guide",
+    "lastVerified": "2026-09-06",
+    "tags": [
+      "预约车/出租"
+    ],
+    "notes": "不改TSF。"
+  },
+  {
+    "id": "activity-d9-02",
+    "type": "activity",
+    "name": "VCE→VIE",
+    "city": "维也纳",
+    "address": "待确认",
+    "coordinates": null,
+    "images": [],
+    "description": "冬季雾、除冰和空管可能延误。",
+    "price": null,
+    "openingHours": "不适用",
+    "links": {},
+    "source": "现有行程PDF与Web Guide",
+    "lastVerified": "2026-09-06",
+    "tags": [
+      "Austrian直飞"
+    ],
+    "notes": "门到门预留5–6小时。"
+  },
+  {
+    "id": "activity-d10-02",
+    "type": "activity",
+    "name": "午餐与咖啡",
+    "city": "维也纳",
+    "address": "待确认",
+    "coordinates": null,
+    "images": [],
+    "description": "回城后留完整咖啡时间。",
+    "price": null,
+    "openingHours": "不适用",
+    "links": {},
+    "source": "现有行程PDF与Web Guide",
+    "lastVerified": "2026-09-06",
+    "tags": [
+      "地铁"
+    ],
+    "notes": "15:30前向市政厅移动。"
+  },
+  {
+    "id": "activity-d11-01",
+    "type": "activity",
+    "name": "Wien Hbf→Praha hl.n.",
+    "city": "布拉格",
+    "address": "待确认",
+    "coordinates": null,
+    "images": [],
+    "description": "发车前30分钟到站，自己上下行李。",
+    "price": null,
+    "openingHours": "不适用",
+    "links": {},
+    "source": "现有行程PDF与Web Guide",
+    "lastVerified": "2026-09-06",
+    "tags": [
+      "Railjet直达"
+    ],
+    "notes": "施工、站台与换表前72小时复核。"
+  },
+  {
+    "id": "activity-d11-02",
+    "type": "activity",
+    "name": "入住与下午茶",
+    "city": "布拉格",
+    "address": "待确认",
+    "coordinates": null,
+    "images": [],
+    "description": "带箱优先短程车，不追加景点。",
+    "price": null,
+    "openingHours": "不适用",
+    "links": {},
+    "source": "现有行程PDF与Web Guide",
+    "lastVerified": "2026-09-06",
+    "tags": [
+      "短程出租"
+    ],
+    "notes": "至少休息60分钟。"
+  },
+  {
+    "id": "activity-d13-01",
+    "type": "activity",
+    "name": "PRG→CDG/ORY",
+    "city": "巴黎",
+    "address": "待确认",
+    "coordinates": null,
+    "images": [],
+    "description": "欧洲航班含托运行李后比较CDG/ORY；不选BVA。",
+    "price": null,
+    "openingHours": "不适用",
+    "links": {},
+    "source": "现有行程PDF与Web Guide",
+    "lastVerified": "2026-09-06",
+    "tags": [
+      "直飞"
+    ],
+    "notes": "门到门预留5–6小时。"
+  },
+  {
+    "id": "activity-d13-02",
+    "type": "activity",
+    "name": "入住与咖啡",
+    "city": "巴黎",
+    "address": "待确认",
+    "coordinates": null,
+    "images": [],
+    "description": "先休息，再决定是否出门。",
+    "price": null,
+    "openingHours": "不适用",
+    "links": {},
+    "source": "现有行程PDF与Web Guide",
+    "lastVerified": "2026-09-06",
+    "tags": [
+      "公共交通≤1次/出租"
+    ],
+    "notes": "至少休息45分钟。"
+  },
+  {
+    "id": "activity-d14-02",
+    "type": "activity",
+    "name": "长午餐与咖啡",
+    "city": "巴黎",
+    "address": "待确认",
+    "coordinates": null,
+    "images": [],
+    "description": "不接第二间博物馆。",
+    "price": null,
+    "openingHours": "不适用",
+    "links": {},
+    "source": "现有行程PDF与Web Guide",
+    "lastVerified": "2026-09-06",
+    "tags": [
+      "步行"
+    ],
+    "notes": "至少保留90分钟。"
+  },
+  {
+    "id": "activity-d15-02",
+    "type": "activity",
+    "name": "午餐、咖啡、休息",
+    "city": "巴黎",
+    "address": "待确认",
+    "coordinates": null,
+    "images": [],
+    "description": "把中午完整空出来。",
+    "price": null,
+    "openingHours": "不适用",
+    "links": {},
+    "source": "现有行程PDF与Web Guide",
+    "lastVerified": "2026-09-06",
+    "tags": [
+      "地铁"
+    ],
+    "notes": "15:00开始向凯旋门移动。"
+  },
+  {
+    "id": "activity-d16-03",
+    "type": "activity",
+    "name": "午餐与咖啡",
+    "city": "巴黎",
+    "address": "待确认",
+    "coordinates": null,
+    "images": [],
+    "description": "转往奥斯曼大道前坐下休息。",
+    "price": null,
+    "openingHours": "不适用",
+    "links": {},
+    "source": "现有行程PDF与Web Guide",
+    "lastVerified": "2026-09-06",
+    "tags": [
+      "地铁"
+    ],
+    "notes": "14:30进百货。"
+  },
+  {
+    "id": "activity-d17-01",
+    "type": "activity",
+    "name": "酒店附近早餐",
+    "city": "广州",
+    "address": "待确认",
+    "coordinates": null,
+    "images": [],
+    "description": "附近短走，不补购物。",
+    "price": null,
+    "openingHours": "不适用",
+    "links": {},
+    "source": "现有行程PDF与Web Guide",
+    "lastVerified": "2026-09-06",
+    "tags": [
+      "步行"
+    ],
+    "notes": "按航班倒推离店时间。"
+  },
+  {
+    "id": "activity-d17-03",
+    "type": "activity",
+    "name": "CDG→CAN",
+    "city": "广州",
+    "address": "待确认",
+    "coordinates": null,
+    "images": [],
+    "description": "优先南航直飞；撤班才选单张1转联程。",
+    "price": null,
+    "openingHours": "不适用",
+    "links": {},
+    "source": "现有行程PDF与Web Guide",
+    "lastVerified": "2026-09-06",
+    "tags": [
+      "飞机"
+    ],
+    "notes": "不自拼。"
+  },
+  {
+    "id": "activity-d18-01",
+    "type": "activity",
+    "name": "广州入境与取行李",
+    "city": "佛山",
+    "address": "待确认",
+    "coordinates": null,
+    "images": [],
+    "description": "贵重物品随身，海关规则按入境当日复核。",
+    "price": null,
+    "openingHours": "不适用",
+    "links": {},
+    "source": "现有行程PDF与Web Guide",
+    "lastVerified": "2026-09-06",
+    "tags": [
+      "步行"
+    ],
+    "notes": "不在机场拆包整理。"
+  },
+  {
+    "id": "activity-d18-02",
+    "type": "activity",
+    "name": "广州→佛山",
+    "city": "佛山",
+    "address": "待确认",
+    "coordinates": null,
+    "images": [],
+    "description": "吃饭、休息。",
+    "price": null,
+    "openingHours": "不适用",
+    "links": {},
+    "source": "现有行程PDF与Web Guide",
+    "lastVerified": "2026-09-06",
+    "tags": [
+      "地面交通"
+    ],
+    "notes": "只选少换乘方式。"
+  }
+]

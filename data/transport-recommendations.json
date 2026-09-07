@@ -1,0 +1,118 @@
+{
+  "policy": "直达 > 少换乘 > 省几十元；精确班次、实时票价、23kg行李和改签条件必须在出票页复核。",
+  "verifiedAt": "2026-09-07",
+  "segments": [
+    {
+      "id": "can-fco",
+      "day": 1,
+      "route": "CAN → FCO",
+      "date": "2026-12-01",
+      "mode": "flight",
+      "doorToDoor": "约18–22小时（取决于联程中转）",
+      "recommendation": "优先同票联程；中转2.5–4小时；托运行李直挂FCO。",
+      "source": "https://www.csair.com/",
+      "status": "UNVERIFIED",
+      "candidates": [
+        { "rank": "BEST OVERALL", "operator": null, "service": null, "departure": null, "arrival": null, "priceCny": null, "baggage23kg": null, "changes": 1, "status": "LIVE SEARCH REQUIRED" },
+        { "rank": "BEST VALUE", "operator": null, "service": null, "departure": null, "arrival": null, "priceCny": null, "baggage23kg": null, "changes": 1, "status": "LIVE SEARCH REQUIRED" },
+        { "rank": "BEST COMFORT", "operator": null, "service": null, "departure": null, "arrival": null, "priceCny": null, "baggage23kg": null, "changes": 1, "status": "LIVE SEARCH REQUIRED" }
+      ]
+    },
+    {
+      "id": "rome-florence",
+      "day": 5,
+      "route": "Roma Termini → Firenze S.M.N.",
+      "date": "2026-12-05",
+      "mode": "train",
+      "doorToDoor": "约2.5–3小时（酒店退房、拖箱、候车与到店）",
+      "recommendation": "只选Frecciarossa或Italo直达；提前20–30分钟到站。",
+      "source": "https://www.trenitalia.com/it/frecciarossa/collegamenti-frecciarossa/frecciarossa-roma-firenze.html",
+      "status": "ROUTE VERIFIED / LIVE FARE REQUIRED",
+      "candidates": [
+        { "rank": "BEST OVERALL", "operator": "Trenitalia", "service": "Frecciarossa直达", "departure": null, "arrival": null, "priceCny": null, "baggage23kg": true, "changes": 0, "status": "EXACT TRAIN UNVERIFIED" },
+        { "rank": "BEST VALUE", "operator": "Italo", "service": "Smart直达", "departure": null, "arrival": null, "priceCny": null, "baggage23kg": true, "changes": 0, "status": "EXACT TRAIN UNVERIFIED" },
+        { "rank": "BEST COMFORT", "operator": "Trenitalia", "service": "Frecciarossa Premium/Business直达", "departure": null, "arrival": null, "priceCny": null, "baggage23kg": true, "changes": 0, "status": "EXACT TRAIN UNVERIFIED" }
+      ]
+    },
+    {
+      "id": "florence-venice",
+      "day": 7,
+      "route": "Firenze S.M.N. → Venezia Mestre",
+      "date": "2026-12-07",
+      "mode": "train",
+      "doorToDoor": "约3.5–4小时（退房、拖箱、候车与到店）",
+      "recommendation": "只选直达；目的站Venezia Mestre，不拖箱入岛。",
+      "source": "https://www.italotreno.com/en/destinations-timetable/venice-tickets",
+      "status": "ROUTE VERIFIED / LIVE FARE REQUIRED",
+      "candidates": [
+        { "rank": "BEST OVERALL", "operator": "Trenitalia", "service": "Frecciarossa直达", "departure": null, "arrival": null, "priceCny": null, "baggage23kg": true, "changes": 0, "status": "EXACT TRAIN UNVERIFIED" },
+        { "rank": "BEST VALUE", "operator": "Italo", "service": "Smart直达", "departure": null, "arrival": null, "priceCny": null, "baggage23kg": true, "changes": 0, "status": "EXACT TRAIN UNVERIFIED" },
+        { "rank": "BEST COMFORT", "operator": "Trenitalia", "service": "Frecciarossa Premium/Business直达", "departure": null, "arrival": null, "priceCny": null, "baggage23kg": true, "changes": 0, "status": "EXACT TRAIN UNVERIFIED" }
+      ]
+    },
+    {
+      "id": "vce-vie",
+      "day": 9,
+      "route": "VCE → VIE",
+      "date": "2026-12-09",
+      "mode": "flight",
+      "doorToDoor": "约5–6小时，飞行约1小时05分",
+      "recommendation": "优先Austrian直飞；以含1×23kg托运行李的最终票价比较。",
+      "source": "https://www.austrian.com/lhg/at/en/o-d/cy-cy/venice-vienna",
+      "status": "ROUTE VERIFIED / EXACT FLIGHT UNVERIFIED",
+      "candidates": [
+        { "rank": "BEST OVERALL", "operator": "Austrian Airlines", "service": "VCE–VIE直飞", "departure": null, "arrival": null, "priceCny": null, "baggage23kg": null, "changes": 0, "status": "EXACT FLIGHT + BAGGAGE UNVERIFIED" },
+        { "rank": "BEST VALUE", "operator": "Austrian Airlines", "service": "直飞含托运行李票价", "departure": null, "arrival": null, "priceCny": null, "baggage23kg": null, "changes": 0, "status": "LIVE SEARCH REQUIRED" },
+        { "rank": "BEST COMFORT", "operator": "Austrian Airlines", "service": "直飞Flex条件", "departure": null, "arrival": null, "priceCny": null, "baggage23kg": null, "changes": 0, "status": "LIVE SEARCH REQUIRED" }
+      ]
+    },
+    {
+      "id": "vienna-prague",
+      "day": 11,
+      "route": "Wien Hbf → Praha hl.n.",
+      "date": "2026-12-11",
+      "mode": "train",
+      "doorToDoor": "约5–5.5小时（退房、地铁、候车、车程与到店）",
+      "recommendation": "优先每2小时一班的直达Railjet；不为小额差价增加换乘。",
+      "source": "https://www.oebb.at/en/reiseplanung-services/oebb-zugverbindungen/zugverbindungen-europa/prag",
+      "status": "ROUTE VERIFIED / LIVE FARE REQUIRED",
+      "candidates": [
+        { "rank": "BEST OVERALL", "operator": "ÖBB / České dráhy", "service": "Railjet直达", "departure": null, "arrival": null, "priceCny": null, "baggage23kg": true, "changes": 0, "status": "EXACT TRAIN UNVERIFIED" },
+        { "rank": "BEST VALUE", "operator": "České dráhy", "service": "直达列车优惠票", "departure": null, "arrival": null, "priceCny": null, "baggage23kg": true, "changes": 0, "status": "LIVE SEARCH REQUIRED" },
+        { "rank": "BEST COMFORT", "operator": "ÖBB", "service": "Railjet First直达", "departure": null, "arrival": null, "priceCny": null, "baggage23kg": true, "changes": 0, "status": "LIVE SEARCH REQUIRED" }
+      ]
+    },
+    {
+      "id": "prague-paris",
+      "day": 13,
+      "route": "PRG → CDG/ORY",
+      "date": "2026-12-13",
+      "mode": "flight",
+      "doorToDoor": "约6–7小时（退房、机场、安检、取行李与进城）",
+      "recommendation": "优先直飞；综合23kg行李、抵达机场和到Ivry住宿的门到门时间。",
+      "source": "https://www.prg.aero/en/paris",
+      "status": "ROUTE VERIFIED / EXACT FLIGHT UNVERIFIED",
+      "candidates": [
+        { "rank": "BEST OVERALL", "operator": null, "service": "PRG–CDG/ORY直飞", "departure": null, "arrival": null, "priceCny": null, "baggage23kg": null, "changes": 0, "status": "LIVE SEARCH REQUIRED" },
+        { "rank": "BEST VALUE", "operator": null, "service": "直飞含23kg总价", "departure": null, "arrival": null, "priceCny": null, "baggage23kg": null, "changes": 0, "status": "LIVE SEARCH REQUIRED" },
+        { "rank": "BEST COMFORT", "operator": null, "service": "可改签直飞", "departure": null, "arrival": null, "priceCny": null, "baggage23kg": null, "changes": 0, "status": "LIVE SEARCH REQUIRED" }
+      ]
+    },
+    {
+      "id": "paris-can",
+      "day": 17,
+      "route": "CDG → CAN",
+      "date": "2026-12-17",
+      "mode": "flight",
+      "doorToDoor": "约16–19小时（含Ivry到CDG、值机与广州落地）",
+      "recommendation": "优先南航直飞；若直飞不可售，才选同票一次中转。",
+      "source": "https://www.csair.com/h5/cn/haiwai/europe/Paris/",
+      "status": "ROUTE VERIFIED / EXACT FLIGHT UNVERIFIED",
+      "candidates": [
+        { "rank": "BEST OVERALL", "operator": "China Southern", "service": "CDG–CAN直飞优先", "departure": null, "arrival": null, "priceCny": null, "baggage23kg": null, "changes": 0, "status": "DEC 17 AVAILABILITY UNVERIFIED" },
+        { "rank": "BEST VALUE", "operator": null, "service": "同票一次中转含23kg", "departure": null, "arrival": null, "priceCny": null, "baggage23kg": null, "changes": 1, "status": "LIVE SEARCH REQUIRED" },
+        { "rank": "BEST COMFORT", "operator": "China Southern", "service": "直飞可改签票价", "departure": null, "arrival": null, "priceCny": null, "baggage23kg": null, "changes": 0, "status": "LIVE SEARCH REQUIRED" }
+      ]
+    }
+  ]
+}

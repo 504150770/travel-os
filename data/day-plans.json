@@ -1,0 +1,2275 @@
+{
+  "version": 1,
+  "originalPlanId": "winter-europe-2026-v1",
+  "days": [
+    {
+      "dayId": 1,
+      "activeItems": [
+        {
+          "id": "plan-d1-01",
+          "entityId": "activity-d1-01",
+          "order": 1,
+          "time": "按票面",
+          "duration": "约18–22h门到门",
+          "status": "planned",
+          "notes": "提前到机场，托运行李必须直挂FCO。",
+          "guard": "中转不足2.5小时不选。",
+          "ticket": "已预订后更新"
+        }
+      ],
+      "alternatives": []
+    },
+    {
+      "dayId": 2,
+      "activeItems": [
+        {
+          "id": "plan-d2-01",
+          "entityId": "activity-d2-01",
+          "order": 1,
+          "time": "上午",
+          "duration": "60–90min",
+          "status": "planned",
+          "notes": "FCO→Termini→酒店；深夜改官方出租。",
+          "guard": "睡意重就继续休息。",
+          "ticket": "现场即可"
+        },
+        {
+          "id": "plan-d2-02",
+          "entityId": "trevi",
+          "order": 2,
+          "time": "午后",
+          "duration": "30–45min",
+          "status": "planned",
+          "notes": "从广场边缘进入，先找完整轮廓。",
+          "guard": "排队拥挤超过20分钟只拍广角外圈。",
+          "ticket": "现场即可"
+        },
+        {
+          "id": "plan-d2-03",
+          "entityId": "navona",
+          "order": 3,
+          "time": "傍晚",
+          "duration": "45–60min",
+          "status": "planned",
+          "notes": "坐一杯咖啡，看广场灯光。",
+          "guard": "体力不足直接取消。",
+          "ticket": "无票"
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "backup-d2-01",
+          "entityId": "opt-rome-castel",
+          "order": 1,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d2-02",
+          "entityId": "opt-rome-spanish",
+          "order": 2,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d2-03",
+          "entityId": "opt-rome-pincio",
+          "order": 3,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d2-04",
+          "entityId": "opt-rome-trastevere",
+          "order": 4,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d2-05",
+          "entityId": "rome-armando",
+          "order": 5,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d2-06",
+          "entityId": "rome-roscioli",
+          "order": 6,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d2-07",
+          "entityId": "rome-trapizzino",
+          "order": 7,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d2-08",
+          "entityId": "rome-santeustachio",
+          "order": 8,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d2-09",
+          "entityId": "gym-rome-golden",
+          "order": 9,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        }
+      ]
+    },
+    {
+      "dayId": 3,
+      "activeItems": [
+        {
+          "id": "plan-d3-01",
+          "entityId": "colosseum",
+          "order": 1,
+          "time": "09:30",
+          "duration": "120min",
+          "status": "planned",
+          "notes": "按预约入口入场，不加地下层长团。",
+          "guard": "11:30离开；排队异常时缩短二层。",
+          "ticket": "临近放票再买"
+        },
+        {
+          "id": "plan-d3-02",
+          "entityId": "forum",
+          "order": 2,
+          "time": "11:35",
+          "duration": "25min",
+          "status": "planned",
+          "notes": "从帝国广场大道短看层次，不走山丘环线。",
+          "guard": "12:00前结束。",
+          "ticket": "无票"
+        },
+        {
+          "id": "plan-d3-03",
+          "entityId": "activity-d3-03",
+          "order": 3,
+          "time": "12:00",
+          "duration": "120min",
+          "status": "planned",
+          "notes": "完整坐下，恢复体力。",
+          "guard": "不压缩到45分钟以内。",
+          "ticket": "现场即可"
+        },
+        {
+          "id": "plan-d3-04",
+          "entityId": "pantheon",
+          "order": 4,
+          "time": "14:30",
+          "duration": "45min",
+          "status": "planned",
+          "notes": "内部慢看穹顶，光束取决于天气。",
+          "guard": "15:30后不延伸周边。",
+          "ticket": "提前数日或现场"
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "backup-d3-01",
+          "entityId": "opt-rome-castel",
+          "order": 1,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d3-02",
+          "entityId": "opt-rome-spanish",
+          "order": 2,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d3-03",
+          "entityId": "opt-rome-pincio",
+          "order": 3,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d3-04",
+          "entityId": "opt-rome-trastevere",
+          "order": 4,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d3-05",
+          "entityId": "rome-armando",
+          "order": 5,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d3-06",
+          "entityId": "rome-roscioli",
+          "order": 6,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d3-07",
+          "entityId": "rome-trapizzino",
+          "order": 7,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d3-08",
+          "entityId": "rome-santeustachio",
+          "order": 8,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d3-09",
+          "entityId": "gym-rome-dabliu",
+          "order": 9,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d3-10",
+          "entityId": "gym-rome-golden",
+          "order": 10,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        }
+      ]
+    },
+    {
+      "dayId": 4,
+      "activeItems": [
+        {
+          "id": "plan-d4-01",
+          "entityId": "vatican_museums",
+          "order": 1,
+          "time": "09:00",
+          "duration": "210min",
+          "status": "planned",
+          "notes": "按馆内动线看地图画廊与西斯廷，中途坐下。",
+          "guard": "12:30必须结束；西斯廷禁止摄影。",
+          "ticket": "出签后立即买"
+        },
+        {
+          "id": "plan-d4-02",
+          "entityId": "activity-d4-02",
+          "order": 2,
+          "time": "12:30",
+          "duration": "90min",
+          "status": "planned",
+          "notes": "坐下吃饭，预留绕行到圣彼得的时间。",
+          "guard": "至少保留60分钟。",
+          "ticket": "现场即可"
+        },
+        {
+          "id": "plan-d4-03",
+          "entityId": "st_peter",
+          "order": 3,
+          "time": "14:00",
+          "duration": "150min",
+          "status": "planned",
+          "notes": "安检缓冲已计入，不安排登穹顶。",
+          "guard": "16:30收尾。",
+          "ticket": "常规免费/现场安检"
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "backup-d4-01",
+          "entityId": "rome-armando",
+          "order": 1,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d4-02",
+          "entityId": "rome-roscioli",
+          "order": 2,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d4-03",
+          "entityId": "rome-trapizzino",
+          "order": 3,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d4-04",
+          "entityId": "rome-santeustachio",
+          "order": 4,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d4-05",
+          "entityId": "gym-rome-dabliu",
+          "order": 5,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        }
+      ]
+    },
+    {
+      "dayId": 5,
+      "activeItems": [
+        {
+          "id": "plan-d5-01",
+          "entityId": "activity-d5-01",
+          "order": 1,
+          "time": "10:00前后",
+          "duration": "约1.5h车程",
+          "status": "planned",
+          "notes": "提前20–30分钟到Termini，自己上下行李。",
+          "guard": "只选直达。",
+          "ticket": "出签后买"
+        },
+        {
+          "id": "plan-d5-02",
+          "entityId": "duomo_firenze",
+          "order": 2,
+          "time": "午后",
+          "duration": "45–60min",
+          "status": "planned",
+          "notes": "从街口带人物入画，不登穹顶。",
+          "guard": "15:45前结束。",
+          "ticket": "无票"
+        },
+        {
+          "id": "plan-d5-03",
+          "entityId": "signoria",
+          "order": 3,
+          "time": "15:45",
+          "duration": "60min",
+          "status": "planned",
+          "notes": "商业街慢走，广场短停后喝咖啡。",
+          "guard": "17:00收尾。",
+          "ticket": "无票"
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "backup-d5-01",
+          "entityId": "opt-florence-croce",
+          "order": 1,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d5-02",
+          "entityId": "opt-florence-strozzi",
+          "order": 2,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d5-03",
+          "entityId": "opt-florence-market",
+          "order": 3,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d5-04",
+          "entityId": "opt-florence-smn",
+          "order": 4,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d5-05",
+          "entityId": "florence-vinaio",
+          "order": 5,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d5-06",
+          "entityId": "florence-sabatino",
+          "order": 6,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d5-07",
+          "entityId": "florence-ditta",
+          "order": 7,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d5-08",
+          "entityId": "florence-nerbone",
+          "order": 8,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d5-09",
+          "entityId": "gym-florence-klab",
+          "order": 9,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        }
+      ]
+    },
+    {
+      "dayId": 6,
+      "activeItems": [
+        {
+          "id": "plan-d6-01",
+          "entityId": "ponte_vecchio",
+          "order": 1,
+          "time": "10:00",
+          "duration": "120min",
+          "status": "planned",
+          "notes": "先从圣三一桥看老桥，再过河。",
+          "guard": "12:00转入午餐。",
+          "ticket": "无票"
+        },
+        {
+          "id": "plan-d6-02",
+          "entityId": "oltrarno",
+          "order": 2,
+          "time": "12:00",
+          "duration": "165min",
+          "status": "planned",
+          "notes": "咖啡、手作小店与连续休息。",
+          "guard": "14:45开始上山。",
+          "ticket": "无票"
+        },
+        {
+          "id": "plan-d6-03",
+          "entityId": "piazzale_michelangelo",
+          "order": 3,
+          "time": "15:15",
+          "duration": "90min",
+          "status": "planned",
+          "notes": "乘车上下山，不为夕阳久站受冷。",
+          "guard": "16:45离开。",
+          "ticket": "无票"
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "backup-d6-01",
+          "entityId": "opt-florence-croce",
+          "order": 1,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d6-02",
+          "entityId": "opt-florence-strozzi",
+          "order": 2,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d6-03",
+          "entityId": "opt-florence-market",
+          "order": 3,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d6-04",
+          "entityId": "opt-florence-smn",
+          "order": 4,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d6-05",
+          "entityId": "florence-vinaio",
+          "order": 5,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d6-06",
+          "entityId": "florence-sabatino",
+          "order": 6,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d6-07",
+          "entityId": "florence-ditta",
+          "order": 7,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d6-08",
+          "entityId": "florence-nerbone",
+          "order": 8,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d6-09",
+          "entityId": "gym-florence-klab",
+          "order": 9,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        }
+      ]
+    },
+    {
+      "dayId": 7,
+      "activeItems": [
+        {
+          "id": "plan-d7-01",
+          "entityId": "activity-d7-01",
+          "order": 1,
+          "time": "10:00前后",
+          "duration": "约2h15m车程",
+          "status": "planned",
+          "notes": "最终住Marghera，在Mestre下车。",
+          "guard": "不拖箱入岛。",
+          "ticket": "出签后买"
+        },
+        {
+          "id": "plan-d7-02",
+          "entityId": "grand_canal",
+          "order": 2,
+          "time": "午后",
+          "duration": "60–90min",
+          "status": "planned",
+          "notes": "沿线看宫殿，不横穿全岛赶景点。",
+          "guard": "15:45前决定是否去学院桥。",
+          "ticket": "现场交通票"
+        },
+        {
+          "id": "plan-d7-03",
+          "entityId": "accademia_bridge",
+          "order": 3,
+          "time": "15:00",
+          "duration": "45–60min",
+          "status": "planned",
+          "notes": "只在桥两侧短走，拍运河转弯。",
+          "guard": "16:30收尾。",
+          "ticket": "无票"
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "backup-d7-01",
+          "entityId": "opt-venice-zattere",
+          "order": 1,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d7-02",
+          "entityId": "opt-venice-cannaregio",
+          "order": 2,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d7-03",
+          "entityId": "venice-viterossa",
+          "order": 3,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d7-04",
+          "entityId": "venice-carampane",
+          "order": 4,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d7-05",
+          "entityId": "venice-staffa",
+          "order": 5,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d7-06",
+          "entityId": "venice-florian",
+          "order": 6,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d7-07",
+          "entityId": "gym-mestre-mcfit",
+          "order": 7,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        }
+      ]
+    },
+    {
+      "dayId": 8,
+      "activeItems": [
+        {
+          "id": "plan-d8-01",
+          "entityId": "st_mark_square",
+          "order": 1,
+          "time": "10:00",
+          "duration": "60min",
+          "status": "planned",
+          "notes": "连看总督府外观与城市舞台。",
+          "guard": "11:00转叹息桥。",
+          "ticket": "无票"
+        },
+        {
+          "id": "plan-d8-02",
+          "entityId": "bridge_sighs",
+          "order": 2,
+          "time": "11:00",
+          "duration": "30min",
+          "status": "planned",
+          "notes": "从稻草桥方向看，不做总督府入内。",
+          "guard": "11:30去午餐。",
+          "ticket": "无票"
+        },
+        {
+          "id": "plan-d8-03",
+          "entityId": "activity-d8-03",
+          "order": 3,
+          "time": "11:30",
+          "duration": "150min",
+          "status": "planned",
+          "notes": "坐下休息，等待节日午后参观。",
+          "guard": "13:45回到入口。",
+          "ticket": "现场即可"
+        },
+        {
+          "id": "plan-d8-04",
+          "entityId": "st_mark_basilica",
+          "order": 4,
+          "time": "14:00",
+          "duration": "90min",
+          "status": "planned",
+          "notes": "慢看金色马赛克；宗教安排前一日复核。",
+          "guard": "遇临时礼仪调整按现场通知。",
+          "ticket": "出签后立即买"
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "backup-d8-01",
+          "entityId": "opt-venice-rialto",
+          "order": 1,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d8-02",
+          "entityId": "opt-venice-zattere",
+          "order": 2,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d8-03",
+          "entityId": "opt-venice-giorgio",
+          "order": 3,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d8-04",
+          "entityId": "opt-venice-cannaregio",
+          "order": 4,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d8-05",
+          "entityId": "venice-viterossa",
+          "order": 5,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d8-06",
+          "entityId": "venice-carampane",
+          "order": 6,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d8-07",
+          "entityId": "venice-staffa",
+          "order": 7,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d8-08",
+          "entityId": "venice-florian",
+          "order": 8,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d8-09",
+          "entityId": "gym-mestre-mcfit",
+          "order": 9,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        }
+      ]
+    },
+    {
+      "dayId": 9,
+      "activeItems": [
+        {
+          "id": "plan-d9-01",
+          "entityId": "activity-d9-01",
+          "order": 1,
+          "time": "起飞前约3h",
+          "duration": "20–30min车程",
+          "status": "planned",
+          "notes": "起飞前2.5小时到航站楼，票面含1×23kg。",
+          "guard": "不改TSF。",
+          "ticket": "出签后买"
+        },
+        {
+          "id": "plan-d9-02",
+          "entityId": "activity-d9-02",
+          "order": 2,
+          "time": "白天",
+          "duration": "约1h05m",
+          "status": "planned",
+          "notes": "冬季雾、除冰和空管可能延误。",
+          "guard": "门到门预留5–6小时。",
+          "ticket": "出签后买"
+        },
+        {
+          "id": "plan-d9-03",
+          "entityId": "graben",
+          "order": 3,
+          "time": "傍晚",
+          "duration": "30–60min",
+          "status": "planned",
+          "notes": "看灯饰、吃晚餐，早休息。",
+          "guard": "体力不足直接取消。",
+          "ticket": "无票"
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "backup-d9-01",
+          "entityId": "opt-vienna-belvedere",
+          "order": 1,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d9-02",
+          "entityId": "opt-vienna-stephansdom",
+          "order": 2,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d9-03",
+          "entityId": "opt-vienna-prater",
+          "order": 3,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d9-04",
+          "entityId": "vienna-figl",
+          "order": 4,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d9-05",
+          "entityId": "vienna-kameel",
+          "order": 5,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d9-06",
+          "entityId": "vienna-sperl",
+          "order": 6,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d9-07",
+          "entityId": "vienna-rathaus",
+          "order": 7,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d9-08",
+          "entityId": "gym-vienna-jh",
+          "order": 8,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d9-09",
+          "entityId": "gym-vienna-das",
+          "order": 9,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        }
+      ]
+    },
+    {
+      "dayId": 10,
+      "activeItems": [
+        {
+          "id": "plan-d10-01",
+          "entityId": "schonbrunn",
+          "order": 1,
+          "time": "10:00",
+          "duration": "120min",
+          "status": "planned",
+          "notes": "只看宫殿精华与宫前广场，不爬后山。",
+          "guard": "12:00离开。",
+          "ticket": "出签后立即买"
+        },
+        {
+          "id": "plan-d10-02",
+          "entityId": "activity-d10-02",
+          "order": 2,
+          "time": "12:00",
+          "duration": "210min",
+          "status": "planned",
+          "notes": "回城后留完整咖啡时间。",
+          "guard": "15:30前向市政厅移动。",
+          "ticket": "现场即可"
+        },
+        {
+          "id": "plan-d10-03",
+          "entityId": "rathausplatz",
+          "order": 3,
+          "time": "16:00",
+          "duration": "120min",
+          "status": "planned",
+          "notes": "热饮、小吃、灯光与小购物。",
+          "guard": "18:00结束。",
+          "ticket": "现场即可"
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "backup-d10-01",
+          "entityId": "opt-vienna-belvedere",
+          "order": 1,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d10-02",
+          "entityId": "opt-vienna-stephansdom",
+          "order": 2,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d10-03",
+          "entityId": "opt-vienna-prater",
+          "order": 3,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d10-04",
+          "entityId": "opt-vienna-albertina",
+          "order": 4,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d10-05",
+          "entityId": "vienna-figl",
+          "order": 5,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d10-06",
+          "entityId": "vienna-kameel",
+          "order": 6,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d10-07",
+          "entityId": "vienna-sperl",
+          "order": 7,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d10-08",
+          "entityId": "vienna-rathaus",
+          "order": 8,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d10-09",
+          "entityId": "gym-vienna-jh",
+          "order": 9,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d10-10",
+          "entityId": "gym-vienna-das",
+          "order": 10,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        }
+      ]
+    },
+    {
+      "dayId": 11,
+      "activeItems": [
+        {
+          "id": "plan-d11-01",
+          "entityId": "activity-d11-01",
+          "order": 1,
+          "time": "上午",
+          "duration": "约4h车程",
+          "status": "planned",
+          "notes": "发车前30分钟到站，自己上下行李。",
+          "guard": "施工、站台与换表前72小时复核。",
+          "ticket": "出签后买"
+        },
+        {
+          "id": "plan-d11-02",
+          "entityId": "activity-d11-02",
+          "order": 2,
+          "time": "午后",
+          "duration": "90min",
+          "status": "planned",
+          "notes": "带箱优先短程车，不追加景点。",
+          "guard": "至少休息60分钟。",
+          "ticket": "现场即可"
+        },
+        {
+          "id": "plan-d11-03",
+          "entityId": "prague_old_town",
+          "order": 3,
+          "time": "傍晚",
+          "duration": "45–60min",
+          "status": "planned",
+          "notes": "看圣诞灯光后晚餐。",
+          "guard": "60分钟封顶。",
+          "ticket": "无票"
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "backup-d11-01",
+          "entityId": "opt-prague-kampa",
+          "order": 1,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d11-02",
+          "entityId": "opt-prague-municipal",
+          "order": 2,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d11-03",
+          "entityId": "prague-lokal",
+          "order": 3,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d11-04",
+          "entityId": "prague-louvre",
+          "order": 4,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d11-05",
+          "entityId": "prague-kantyna",
+          "order": 5,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d11-06",
+          "entityId": "prague-eska",
+          "order": 6,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d11-07",
+          "entityId": "gym-prague-form",
+          "order": 7,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d11-08",
+          "entityId": "gym-prague-euforie",
+          "order": 8,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        }
+      ]
+    },
+    {
+      "dayId": 12,
+      "activeItems": [
+        {
+          "id": "plan-d12-01",
+          "entityId": "prague_castle",
+          "order": 1,
+          "time": "09:30",
+          "duration": "60min",
+          "status": "planned",
+          "notes": "冬季内部开放较短，上午先到。",
+          "guard": "10:30转圣维特。",
+          "ticket": "现场即可"
+        },
+        {
+          "id": "plan-d12-02",
+          "entityId": "st_vitus",
+          "order": 2,
+          "time": "10:30",
+          "duration": "90min",
+          "status": "planned",
+          "notes": "看内部与庭院，不做全馆通刷。",
+          "guard": "12:00下山。",
+          "ticket": "城堡主线路现场票"
+        },
+        {
+          "id": "plan-d12-03",
+          "entityId": "mala_strana",
+          "order": 3,
+          "time": "12:00",
+          "duration": "135min",
+          "status": "planned",
+          "notes": "坐下吃饭、咖啡后沿缓坡到河边。",
+          "guard": "14:15到桥边。",
+          "ticket": "现场即可"
+        },
+        {
+          "id": "plan-d12-04",
+          "entityId": "charles_bridge",
+          "order": 4,
+          "time": "14:15",
+          "duration": "105min",
+          "status": "planned",
+          "notes": "慢走、拍人像，天黑后结束主要游览。",
+          "guard": "16:00结束。",
+          "ticket": "无票"
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "backup-d12-01",
+          "entityId": "opt-prague-kampa",
+          "order": 1,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d12-02",
+          "entityId": "opt-prague-strahov",
+          "order": 2,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d12-03",
+          "entityId": "opt-prague-municipal",
+          "order": 3,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d12-04",
+          "entityId": "opt-prague-clementinum",
+          "order": 4,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d12-05",
+          "entityId": "prague-lokal",
+          "order": 5,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d12-06",
+          "entityId": "prague-louvre",
+          "order": 6,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d12-07",
+          "entityId": "prague-kantyna",
+          "order": 7,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d12-08",
+          "entityId": "prague-eska",
+          "order": 8,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d12-09",
+          "entityId": "gym-prague-form",
+          "order": 9,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d12-10",
+          "entityId": "gym-prague-euforie",
+          "order": 10,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        }
+      ]
+    },
+    {
+      "dayId": 13,
+      "activeItems": [
+        {
+          "id": "plan-d13-01",
+          "entityId": "activity-d13-01",
+          "order": 1,
+          "time": "上午至午后",
+          "duration": "约1h45m",
+          "status": "planned",
+          "notes": "欧洲航班含托运行李后比较CDG/ORY；不选BVA。",
+          "guard": "门到门预留5–6小时。",
+          "ticket": "出签后买"
+        },
+        {
+          "id": "plan-d13-02",
+          "entityId": "activity-d13-02",
+          "order": 2,
+          "time": "抵达后",
+          "duration": "90min",
+          "status": "planned",
+          "notes": "先休息，再决定是否出门。",
+          "guard": "至少休息45分钟。",
+          "ticket": "现场即可"
+        },
+        {
+          "id": "plan-d13-03",
+          "entityId": "pont_saint_michel",
+          "order": 3,
+          "time": "傍晚",
+          "duration": "30–60min",
+          "status": "planned",
+          "notes": "只看塞纳河与圣母院外观。",
+          "guard": "60分钟封顶。",
+          "ticket": "无票"
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "backup-d13-01",
+          "entityId": "opt-paris-sainte",
+          "order": 1,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d13-02",
+          "entityId": "opt-paris-marais",
+          "order": 2,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d13-03",
+          "entityId": "paris-bouillon",
+          "order": 3,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d13-04",
+          "entityId": "paris-breizh",
+          "order": 4,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d13-05",
+          "entityId": "paris-flore",
+          "order": 5,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d13-06",
+          "entityId": "paris-louvre-bakery",
+          "order": 6,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d13-07",
+          "entityId": "paris-pink",
+          "order": 7,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d13-08",
+          "entityId": "paris-pigalle-cafe",
+          "order": 8,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d13-09",
+          "entityId": "gym-paris-fpark",
+          "order": 9,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d13-10",
+          "entityId": "gym-paris-basic",
+          "order": 10,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        }
+      ]
+    },
+    {
+      "dayId": 14,
+      "activeItems": [
+        {
+          "id": "plan-d14-01",
+          "entityId": "louvre",
+          "order": 1,
+          "time": "09:30",
+          "duration": "210min",
+          "status": "planned",
+          "notes": "胜利女神、意大利绘画、蒙娜丽莎、维纳斯，按当日动线。",
+          "guard": "13:00止步；周二闭馆。",
+          "ticket": "出签后立即买"
+        },
+        {
+          "id": "plan-d14-02",
+          "entityId": "activity-d14-02",
+          "order": 2,
+          "time": "13:00",
+          "duration": "120min",
+          "status": "planned",
+          "notes": "不接第二间博物馆。",
+          "guard": "至少保留90分钟。",
+          "ticket": "现场即可"
+        },
+        {
+          "id": "plan-d14-03",
+          "entityId": "louvre_pyramid",
+          "order": 3,
+          "time": "15:00",
+          "duration": "90min",
+          "status": "planned",
+          "notes": "拍建筑层次，附近街区轻逛。",
+          "guard": "16:30结束。",
+          "ticket": "无票"
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "backup-d14-01",
+          "entityId": "opt-paris-sainte",
+          "order": 1,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d14-02",
+          "entityId": "opt-paris-orangerie",
+          "order": 2,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d14-03",
+          "entityId": "opt-paris-palaisroyal",
+          "order": 3,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d14-04",
+          "entityId": "paris-bouillon",
+          "order": 4,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d14-05",
+          "entityId": "paris-breizh",
+          "order": 5,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d14-06",
+          "entityId": "paris-flore",
+          "order": 6,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d14-07",
+          "entityId": "paris-louvre-bakery",
+          "order": 7,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d14-08",
+          "entityId": "paris-pink",
+          "order": 8,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d14-09",
+          "entityId": "paris-pigalle-cafe",
+          "order": 9,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d14-10",
+          "entityId": "gym-paris-fpark",
+          "order": 10,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d14-11",
+          "entityId": "gym-paris-basic",
+          "order": 11,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        }
+      ]
+    },
+    {
+      "dayId": 15,
+      "activeItems": [
+        {
+          "id": "plan-d15-01",
+          "entityId": "trocadero",
+          "order": 1,
+          "time": "09:30",
+          "duration": "120min",
+          "status": "planned",
+          "notes": "与铁塔外观组合，步行范围保持紧凑。",
+          "guard": "11:30结束。",
+          "ticket": "无票"
+        },
+        {
+          "id": "plan-d15-02",
+          "entityId": "activity-d15-02",
+          "order": 2,
+          "time": "12:00",
+          "duration": "180min",
+          "status": "planned",
+          "notes": "把中午完整空出来。",
+          "guard": "15:00开始向凯旋门移动。",
+          "ticket": "现场即可"
+        },
+        {
+          "id": "plan-d15-03",
+          "entityId": "arc_triomphe",
+          "order": 3,
+          "time": "15:30",
+          "duration": "105min",
+          "status": "planned",
+          "notes": "天气好再买登顶票；含台阶与排队。",
+          "guard": "17:15离开。",
+          "ticket": "现场/当天买"
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "backup-d15-01",
+          "entityId": "opt-paris-palaisroyal",
+          "order": 1,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d15-02",
+          "entityId": "paris-bouillon",
+          "order": 2,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d15-03",
+          "entityId": "paris-breizh",
+          "order": 3,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d15-04",
+          "entityId": "paris-flore",
+          "order": 4,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d15-05",
+          "entityId": "paris-louvre-bakery",
+          "order": 5,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d15-06",
+          "entityId": "paris-pink",
+          "order": 6,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d15-07",
+          "entityId": "paris-pigalle-cafe",
+          "order": 7,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d15-08",
+          "entityId": "gym-paris-fpark",
+          "order": 8,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d15-09",
+          "entityId": "gym-paris-basic",
+          "order": 9,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        }
+      ]
+    },
+    {
+      "dayId": 16,
+      "activeItems": [
+        {
+          "id": "plan-d16-01",
+          "entityId": "sacre_coeur",
+          "order": 1,
+          "time": "10:00",
+          "duration": "45min",
+          "status": "planned",
+          "notes": "乘车或缆车省主要爬坡。",
+          "guard": "10:45转街巷。",
+          "ticket": "无票"
+        },
+        {
+          "id": "plan-d16-02",
+          "entityId": "montmartre",
+          "order": 2,
+          "time": "10:45",
+          "duration": "75min",
+          "status": "planned",
+          "notes": "慢走，不追逐每个网红机位。",
+          "guard": "12:00午餐。",
+          "ticket": "无票"
+        },
+        {
+          "id": "plan-d16-03",
+          "entityId": "activity-d16-03",
+          "order": 3,
+          "time": "12:00",
+          "duration": "150min",
+          "status": "planned",
+          "notes": "转往奥斯曼大道前坐下休息。",
+          "guard": "14:30进百货。",
+          "ticket": "现场即可"
+        },
+        {
+          "id": "plan-d16-04",
+          "entityId": "galeries_lafayette",
+          "order": 4,
+          "time": "14:30",
+          "duration": "180min",
+          "status": "planned",
+          "notes": "看穹顶与圣诞装置，按清单购物。",
+          "guard": "17:30结束。",
+          "ticket": "无票"
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "backup-d16-01",
+          "entityId": "opt-paris-marais",
+          "order": 1,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d16-02",
+          "entityId": "paris-bouillon",
+          "order": 2,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d16-03",
+          "entityId": "paris-breizh",
+          "order": 3,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d16-04",
+          "entityId": "paris-flore",
+          "order": 4,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d16-05",
+          "entityId": "paris-louvre-bakery",
+          "order": 5,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d16-06",
+          "entityId": "paris-pink",
+          "order": 6,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d16-07",
+          "entityId": "paris-pigalle-cafe",
+          "order": 7,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d16-08",
+          "entityId": "gym-paris-fpark",
+          "order": 8,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d16-09",
+          "entityId": "gym-paris-basic",
+          "order": 9,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        }
+      ]
+    },
+    {
+      "dayId": 17,
+      "activeItems": [
+        {
+          "id": "plan-d17-01",
+          "entityId": "activity-d17-01",
+          "order": 1,
+          "time": "上午",
+          "duration": "30–60min",
+          "status": "planned",
+          "notes": "附近短走，不补购物。",
+          "guard": "按航班倒推离店时间。",
+          "ticket": "现场即可"
+        },
+        {
+          "id": "plan-d17-02",
+          "entityId": "cdg",
+          "order": 2,
+          "time": "起飞前",
+          "duration": "75–120min",
+          "status": "planned",
+          "notes": "国际航班前3.5小时到场，先确认航站楼。",
+          "guard": "只从CDG；23kg写入票面。",
+          "ticket": "已预订后更新"
+        },
+        {
+          "id": "plan-d17-03",
+          "entityId": "activity-d17-03",
+          "order": 3,
+          "time": "夜间",
+          "duration": "跨夜",
+          "status": "planned",
+          "notes": "优先南航直飞；撤班才选单张1转联程。",
+          "guard": "不自拼。",
+          "ticket": "待确认"
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "backup-d17-01",
+          "entityId": "paris-bouillon",
+          "order": 1,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d17-02",
+          "entityId": "paris-breizh",
+          "order": 2,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d17-03",
+          "entityId": "paris-flore",
+          "order": 3,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d17-04",
+          "entityId": "paris-louvre-bakery",
+          "order": 4,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d17-05",
+          "entityId": "paris-pink",
+          "order": 5,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        },
+        {
+          "id": "backup-d17-06",
+          "entityId": "paris-pigalle-cafe",
+          "order": 6,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "",
+          "guard": "",
+          "ticket": "待确认"
+        }
+      ]
+    },
+    {
+      "dayId": 18,
+      "activeItems": [
+        {
+          "id": "plan-d18-01",
+          "entityId": "activity-d18-01",
+          "order": 1,
+          "time": "抵达",
+          "duration": "按现场",
+          "status": "planned",
+          "notes": "贵重物品随身，海关规则按入境当日复核。",
+          "guard": "不在机场拆包整理。",
+          "ticket": "现场即可"
+        },
+        {
+          "id": "plan-d18-02",
+          "entityId": "activity-d18-02",
+          "order": 2,
+          "time": "到家后",
+          "duration": "待确认",
+          "status": "planned",
+          "notes": "吃饭、休息。",
+          "guard": "只选少换乘方式。",
+          "ticket": "现场即可"
+        }
+      ],
+      "alternatives": []
+    }
+  ]
+}

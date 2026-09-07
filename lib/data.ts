@@ -13,6 +13,8 @@ import options from '@/data/options.json';
 import restaurants from '@/data/restaurants.json';
 import tasks from '@/data/tasks.json';
 import xhs from '@/data/xhs.json';
+import hotelBookings from '@/data/hotel-bookings.json';
+import transportRecommendations from '@/data/transport-recommendations.json';
 
 export const guideData = {
   trip,
@@ -30,6 +32,8 @@ export const guideData = {
   restaurants,
   tasks,
   xhs,
+  hotelBookings,
+  transportRecommendations,
 };
 
 export const placeMap = new Map(places.map((place) => [place.id, place]));

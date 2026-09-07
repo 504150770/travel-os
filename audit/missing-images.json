@@ -1,0 +1,1186 @@
+{
+  "generatedAt": "2026-09-07T11:47:55.439Z",
+  "total": 94,
+  "items": [
+    {
+      "category": "FOOD_IMAGES",
+      "id": "rome-armando",
+      "name": "Armando al Pantheon",
+      "city": "罗马",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "rome-roscioli",
+      "name": "Roscioli Salumeria con Cucina",
+      "city": "罗马",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "rome-trapizzino",
+      "name": "Trapizzino Trastevere",
+      "city": "罗马",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "rome-santeustachio",
+      "name": "Sant’Eustachio Il Caffè",
+      "city": "罗马",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "florence-vinaio",
+      "name": "All’Antico Vinaio",
+      "city": "佛罗伦萨",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "florence-sabatino",
+      "name": "Trattoria Sabatino",
+      "city": "佛罗伦萨",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "florence-ditta",
+      "name": "Ditta Artigianale",
+      "city": "佛罗伦萨",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "florence-nerbone",
+      "name": "Da Nerbone",
+      "city": "佛罗伦萨",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "venice-viterossa",
+      "name": "Hostaria Vite Rossa",
+      "city": "威尼斯",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "venice-carampane",
+      "name": "Antiche Carampane",
+      "city": "威尼斯",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "venice-staffa",
+      "name": "Osteria alla Staffa",
+      "city": "威尼斯",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "venice-florian",
+      "name": "Caffè Florian",
+      "city": "威尼斯",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "vienna-figl",
+      "name": "Figlmüller Wollzeile",
+      "city": "维也纳",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "vienna-kameel",
+      "name": "Zum Schwarzen Kameel",
+      "city": "维也纳",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "vienna-sperl",
+      "name": "Café Sperl",
+      "city": "维也纳",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "vienna-rathaus",
+      "name": "Rathausplatz Christmas Market",
+      "city": "维也纳",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "prague-lokal",
+      "name": "Lokál Dlouhááá",
+      "city": "布拉格",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "prague-louvre",
+      "name": "Café Louvre",
+      "city": "布拉格",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "prague-kantyna",
+      "name": "Kantýna",
+      "city": "布拉格",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "prague-eska",
+      "name": "Eska",
+      "city": "布拉格",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "paris-bouillon",
+      "name": "Bouillon Pigalle",
+      "city": "巴黎",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "paris-breizh",
+      "name": "Breizh Café",
+      "city": "巴黎",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "paris-flore",
+      "name": "Café de Flore",
+      "city": "巴黎",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "paris-louvre-bakery",
+      "name": "La Boulangerie du Louvre",
+      "city": "巴黎",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "paris-pink",
+      "name": "Pink Mamma",
+      "city": "巴黎",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "paris-pigalle-cafe",
+      "name": "Café Pigalle",
+      "city": "巴黎",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "HOTEL_ROOM_IMAGES",
+      "id": "rome-palatino",
+      "name": "FH55 Grand Hotel Palatino",
+      "city": "罗马",
+      "fields": [
+        "3/3房型图待补"
+      ],
+      "reason": "无法确认图片确属推荐Single Room。",
+      "nextAction": "逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。",
+      "priority": "P1"
+    },
+    {
+      "category": "HOTEL_ROOM_IMAGES",
+      "id": "rome-deseo",
+      "name": "Deseo Home Guest House",
+      "city": "罗马",
+      "fields": [
+        "3/3房型图待补"
+      ],
+      "reason": "无法确认图片确属推荐Single Room。",
+      "nextAction": "逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。",
+      "priority": "P1"
+    },
+    {
+      "category": "HOTEL_ROOM_IMAGES",
+      "id": "rome-adesso",
+      "name": "Adèsso Hotel",
+      "city": "罗马",
+      "fields": [
+        "3/3房型图待补"
+      ],
+      "reason": "无法确认图片确属推荐Single Room。",
+      "nextAction": "逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。",
+      "priority": "P1"
+    },
+    {
+      "category": "HOTEL_ROOM_IMAGES",
+      "id": "florence-morandi",
+      "name": "Guest House Morandi",
+      "city": "佛罗伦萨",
+      "fields": [
+        "3/3房型图待补"
+      ],
+      "reason": "无法确认图片确属推荐Single Room。",
+      "nextAction": "逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。",
+      "priority": "P1"
+    },
+    {
+      "category": "HOTEL_ROOM_IMAGES",
+      "id": "florence-rapallo",
+      "name": "Hotel Rapallo",
+      "city": "佛罗伦萨",
+      "fields": [
+        "3/3房型图待补"
+      ],
+      "reason": "无法确认图片确属推荐Single Room。",
+      "nextAction": "逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。",
+      "priority": "P1"
+    },
+    {
+      "category": "HOTEL_ROOM_IMAGES",
+      "id": "florence-bnb",
+      "name": "B&B HOTEL Firenze Nuovo Palazzo di Giustizia",
+      "city": "佛罗伦萨",
+      "fields": [
+        "3/3房型图待补"
+      ],
+      "reason": "无法确认图片确属推荐Single Room。",
+      "nextAction": "逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。",
+      "priority": "P1"
+    },
+    {
+      "category": "HOTEL_ROOM_IMAGES",
+      "id": "florence-perseo",
+      "name": "Hotel Perseo",
+      "city": "佛罗伦萨",
+      "fields": [
+        "3/3房型图待补"
+      ],
+      "reason": "无法确认图片确属推荐Single Room。",
+      "nextAction": "逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。",
+      "priority": "P1"
+    },
+    {
+      "category": "HOTEL_ROOM_IMAGES",
+      "id": "venice-mercure",
+      "name": "Hotel Mercure Venezia Marghera",
+      "city": "威尼斯 / Mestre",
+      "fields": [
+        "3/3房型图待补"
+      ],
+      "reason": "无法确认图片确属推荐Single Room。",
+      "nextAction": "逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。",
+      "priority": "P1"
+    },
+    {
+      "category": "HOTEL_ROOM_IMAGES",
+      "id": "venice-stern",
+      "name": "Hotel Palazzo Stern",
+      "city": "威尼斯本岛",
+      "fields": [
+        "3/3房型图待补"
+      ],
+      "reason": "无法确认图片确属推荐Single Room。",
+      "nextAction": "逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。",
+      "priority": "P1"
+    },
+    {
+      "category": "HOTEL_ROOM_IMAGES",
+      "id": "venice-alboretti",
+      "name": "Hotel Agli Alboretti",
+      "city": "威尼斯本岛",
+      "fields": [
+        "3/3房型图待补"
+      ],
+      "reason": "无法确认图片确属推荐Single Room。",
+      "nextAction": "逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。",
+      "priority": "P1"
+    },
+    {
+      "category": "HOTEL_ROOM_IMAGES",
+      "id": "venice-abbazia",
+      "name": "Hotel Abbazia",
+      "city": "威尼斯本岛",
+      "fields": [
+        "3/3房型图待补"
+      ],
+      "reason": "无法确认图片确属推荐Single Room。",
+      "nextAction": "逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。",
+      "priority": "P1"
+    },
+    {
+      "category": "HOTEL_ROOM_IMAGES",
+      "id": "vienna-bnb",
+      "name": "B&B HOTEL Wien-Meidling",
+      "city": "维也纳",
+      "fields": [
+        "3/3房型图待补"
+      ],
+      "reason": "无法确认图片确属推荐Single Room。",
+      "nextAction": "逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。",
+      "priority": "P1"
+    },
+    {
+      "category": "HOTEL_ROOM_IMAGES",
+      "id": "vienna-schani",
+      "name": "Hotel Schani UNO City",
+      "city": "维也纳",
+      "fields": [
+        "3/3房型图待补"
+      ],
+      "reason": "无法确认图片确属推荐Single Room。",
+      "nextAction": "逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。",
+      "priority": "P1"
+    },
+    {
+      "category": "HOTEL_ROOM_IMAGES",
+      "id": "vienna-companion",
+      "name": "The Companion Vienna",
+      "city": "维也纳",
+      "fields": [
+        "3/3房型图待补"
+      ],
+      "reason": "无法确认图片确属推荐Single Room。",
+      "nextAction": "逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。",
+      "priority": "P1"
+    },
+    {
+      "category": "HOTEL_ROOM_IMAGES",
+      "id": "vienna-brauhof",
+      "name": "Hotel Brauhof Wien",
+      "city": "维也纳",
+      "fields": [
+        "3/3房型图待补"
+      ],
+      "reason": "无法确认图片确属推荐Single Room。",
+      "nextAction": "逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。",
+      "priority": "P1"
+    },
+    {
+      "category": "HOTEL_ROOM_IMAGES",
+      "id": "prague-adalbert",
+      "name": "Hotel Adalbert",
+      "city": "布拉格",
+      "fields": [
+        "3/3房型图待补"
+      ],
+      "reason": "无法确认图片确属推荐Single Room。",
+      "nextAction": "逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。",
+      "priority": "P1"
+    },
+    {
+      "category": "HOTEL_ROOM_IMAGES",
+      "id": "prague-julian",
+      "name": "Hotel Julian",
+      "city": "布拉格",
+      "fields": [
+        "3/3房型图待补"
+      ],
+      "reason": "无法确认图片确属推荐Single Room。",
+      "nextAction": "逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。",
+      "priority": "P1"
+    },
+    {
+      "category": "HOTEL_ROOM_IMAGES",
+      "id": "prague-upava",
+      "name": "U Páva",
+      "city": "布拉格",
+      "fields": [
+        "3/3房型图待补"
+      ],
+      "reason": "无法确认图片确属推荐Single Room。",
+      "nextAction": "逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。",
+      "priority": "P1"
+    },
+    {
+      "category": "HOTEL_ROOM_IMAGES",
+      "id": "prague-metropolitan",
+      "name": "Metropolitan Old Town Hotel",
+      "city": "布拉格",
+      "fields": [
+        "3/3房型图待补"
+      ],
+      "reason": "无法确认图片确属推荐Single Room。",
+      "nextAction": "逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。",
+      "priority": "P1"
+    },
+    {
+      "category": "HOTEL_ROOM_IMAGES",
+      "id": "paris-choisy",
+      "name": "B&B HOTEL Paris Italie Porte de Choisy",
+      "city": "巴黎",
+      "fields": [
+        "3/3房型图待补"
+      ],
+      "reason": "无法确认图片确属推荐Single Room。",
+      "nextAction": "逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。",
+      "priority": "P1"
+    },
+    {
+      "category": "HOTEL_ROOM_IMAGES",
+      "id": "paris-motelone",
+      "name": "Motel One Paris–Porte Dorée",
+      "city": "巴黎",
+      "fields": [
+        "3/3房型图待补"
+      ],
+      "reason": "无法确认图片确属推荐Single Room。",
+      "nextAction": "逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。",
+      "priority": "P1"
+    },
+    {
+      "category": "HOTEL_ROOM_IMAGES",
+      "id": "paris-lilas",
+      "name": "B&B HOTEL Paris Porte des Lilas",
+      "city": "巴黎",
+      "fields": [
+        "3/3房型图待补"
+      ],
+      "reason": "无法确认图片确属推荐Single Room。",
+      "nextAction": "逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。",
+      "priority": "P1"
+    },
+    {
+      "category": "HOTEL_ROOM_IMAGES",
+      "id": "paris-pyrenees",
+      "name": "Hotel des Pyrénées",
+      "city": "巴黎",
+      "fields": [
+        "3/3房型图待补"
+      ],
+      "reason": "无法确认图片确属推荐Single Room。",
+      "nextAction": "逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。",
+      "priority": "P1"
+    },
+    {
+      "category": "PLACE_IMAGES",
+      "id": "opt-rome-castel",
+      "name": "圣天使桥 + 圣天使堡外观",
+      "city": "罗马",
+      "fields": [
+        "image"
+      ],
+      "reason": "Quick Pick/候选地点缺少已核验真实图片。",
+      "nextAction": "补官方或可追溯摄影来源，并做近似图审计。",
+      "priority": "P2"
+    },
+    {
+      "category": "PLACE_IMAGES",
+      "id": "opt-rome-spanish",
+      "name": "西班牙台阶 + Via Condotti",
+      "city": "罗马",
+      "fields": [
+        "image"
+      ],
+      "reason": "Quick Pick/候选地点缺少已核验真实图片。",
+      "nextAction": "补官方或可追溯摄影来源，并做近似图审计。",
+      "priority": "P2"
+    },
+    {
+      "category": "PLACE_IMAGES",
+      "id": "opt-rome-pincio",
+      "name": "Pincio露台 + 人民广场",
+      "city": "罗马",
+      "fields": [
+        "image"
+      ],
+      "reason": "Quick Pick/候选地点缺少已核验真实图片。",
+      "nextAction": "补官方或可追溯摄影来源，并做近似图审计。",
+      "priority": "P2"
+    },
+    {
+      "category": "PLACE_IMAGES",
+      "id": "opt-rome-trastevere",
+      "name": "Trastevere街巷",
+      "city": "罗马",
+      "fields": [
+        "image"
+      ],
+      "reason": "Quick Pick/候选地点缺少已核验真实图片。",
+      "nextAction": "补官方或可追溯摄影来源，并做近似图审计。",
+      "priority": "P2"
+    },
+    {
+      "category": "PLACE_IMAGES",
+      "id": "opt-florence-croce",
+      "name": "圣十字广场 + 教堂外观",
+      "city": "佛罗伦萨",
+      "fields": [
+        "image"
+      ],
+      "reason": "Quick Pick/候选地点缺少已核验真实图片。",
+      "nextAction": "补官方或可追溯摄影来源，并做近似图审计。",
+      "priority": "P2"
+    },
+    {
+      "category": "PLACE_IMAGES",
+      "id": "opt-florence-strozzi",
+      "name": "Palazzo Strozzi庭院",
+      "city": "佛罗伦萨",
+      "fields": [
+        "image"
+      ],
+      "reason": "Quick Pick/候选地点缺少已核验真实图片。",
+      "nextAction": "补官方或可追溯摄影来源，并做近似图审计。",
+      "priority": "P2"
+    },
+    {
+      "category": "PLACE_IMAGES",
+      "id": "opt-florence-market",
+      "name": "Mercato Centrale",
+      "city": "佛罗伦萨",
+      "fields": [
+        "image"
+      ],
+      "reason": "Quick Pick/候选地点缺少已核验真实图片。",
+      "nextAction": "补官方或可追溯摄影来源，并做近似图审计。",
+      "priority": "P2"
+    },
+    {
+      "category": "PLACE_IMAGES",
+      "id": "opt-florence-smn",
+      "name": "Santa Maria Novella香氛药房",
+      "city": "佛罗伦萨",
+      "fields": [
+        "image"
+      ],
+      "reason": "Quick Pick/候选地点缺少已核验真实图片。",
+      "nextAction": "补官方或可追溯摄影来源，并做近似图审计。",
+      "priority": "P2"
+    },
+    {
+      "category": "PLACE_IMAGES",
+      "id": "opt-venice-rialto",
+      "name": "里亚托桥清晨",
+      "city": "威尼斯",
+      "fields": [
+        "image"
+      ],
+      "reason": "Quick Pick/候选地点缺少已核验真实图片。",
+      "nextAction": "补官方或可追溯摄影来源，并做近似图审计。",
+      "priority": "P2"
+    },
+    {
+      "category": "PLACE_IMAGES",
+      "id": "opt-venice-zattere",
+      "name": "Zattere海滨长堤",
+      "city": "威尼斯",
+      "fields": [
+        "image"
+      ],
+      "reason": "Quick Pick/候选地点缺少已核验真实图片。",
+      "nextAction": "补官方或可追溯摄影来源，并做近似图审计。",
+      "priority": "P2"
+    },
+    {
+      "category": "PLACE_IMAGES",
+      "id": "opt-venice-giorgio",
+      "name": "圣乔治马焦雷岛",
+      "city": "威尼斯",
+      "fields": [
+        "image"
+      ],
+      "reason": "Quick Pick/候选地点缺少已核验真实图片。",
+      "nextAction": "补官方或可追溯摄影来源，并做近似图审计。",
+      "priority": "P2"
+    },
+    {
+      "category": "PLACE_IMAGES",
+      "id": "opt-venice-cannaregio",
+      "name": "Cannaregio住宅水巷",
+      "city": "威尼斯",
+      "fields": [
+        "image"
+      ],
+      "reason": "Quick Pick/候选地点缺少已核验真实图片。",
+      "nextAction": "补官方或可追溯摄影来源，并做近似图审计。",
+      "priority": "P2"
+    },
+    {
+      "category": "PLACE_IMAGES",
+      "id": "opt-vienna-belvedere",
+      "name": "上美景宫",
+      "city": "维也纳",
+      "fields": [
+        "image"
+      ],
+      "reason": "Quick Pick/候选地点缺少已核验真实图片。",
+      "nextAction": "补官方或可追溯摄影来源，并做近似图审计。",
+      "priority": "P2"
+    },
+    {
+      "category": "PLACE_IMAGES",
+      "id": "opt-vienna-stephansdom",
+      "name": "圣斯蒂芬大教堂 + Graben",
+      "city": "维也纳",
+      "fields": [
+        "image"
+      ],
+      "reason": "Quick Pick/候选地点缺少已核验真实图片。",
+      "nextAction": "补官方或可追溯摄影来源，并做近似图审计。",
+      "priority": "P2"
+    },
+    {
+      "category": "PLACE_IMAGES",
+      "id": "opt-vienna-prater",
+      "name": "Prater摩天轮",
+      "city": "维也纳",
+      "fields": [
+        "image"
+      ],
+      "reason": "Quick Pick/候选地点缺少已核验真实图片。",
+      "nextAction": "补官方或可追溯摄影来源，并做近似图审计。",
+      "priority": "P2"
+    },
+    {
+      "category": "PLACE_IMAGES",
+      "id": "opt-vienna-albertina",
+      "name": "Albertina",
+      "city": "维也纳",
+      "fields": [
+        "image"
+      ],
+      "reason": "Quick Pick/候选地点缺少已核验真实图片。",
+      "nextAction": "补官方或可追溯摄影来源，并做近似图审计。",
+      "priority": "P2"
+    },
+    {
+      "category": "PLACE_IMAGES",
+      "id": "opt-prague-kampa",
+      "name": "Kampa岛 + Lennon Wall",
+      "city": "布拉格",
+      "fields": [
+        "image"
+      ],
+      "reason": "Quick Pick/候选地点缺少已核验真实图片。",
+      "nextAction": "补官方或可追溯摄影来源，并做近似图审计。",
+      "priority": "P2"
+    },
+    {
+      "category": "PLACE_IMAGES",
+      "id": "opt-prague-strahov",
+      "name": "Strahov修道院图书馆",
+      "city": "布拉格",
+      "fields": [
+        "image"
+      ],
+      "reason": "Quick Pick/候选地点缺少已核验真实图片。",
+      "nextAction": "补官方或可追溯摄影来源，并做近似图审计。",
+      "priority": "P2"
+    },
+    {
+      "category": "PLACE_IMAGES",
+      "id": "opt-prague-municipal",
+      "name": "市民会馆 + 火药塔外观",
+      "city": "布拉格",
+      "fields": [
+        "image"
+      ],
+      "reason": "Quick Pick/候选地点缺少已核验真实图片。",
+      "nextAction": "补官方或可追溯摄影来源，并做近似图审计。",
+      "priority": "P2"
+    },
+    {
+      "category": "PLACE_IMAGES",
+      "id": "opt-prague-clementinum",
+      "name": "Clementinum",
+      "city": "布拉格",
+      "fields": [
+        "image"
+      ],
+      "reason": "Quick Pick/候选地点缺少已核验真实图片。",
+      "nextAction": "补官方或可追溯摄影来源，并做近似图审计。",
+      "priority": "P2"
+    },
+    {
+      "category": "PLACE_IMAGES",
+      "id": "opt-paris-sainte",
+      "name": "圣礼拜堂",
+      "city": "巴黎",
+      "fields": [
+        "image"
+      ],
+      "reason": "Quick Pick/候选地点缺少已核验真实图片。",
+      "nextAction": "补官方或可追溯摄影来源，并做近似图审计。",
+      "priority": "P2"
+    },
+    {
+      "category": "PLACE_IMAGES",
+      "id": "opt-paris-orangerie",
+      "name": "橘园美术馆",
+      "city": "巴黎",
+      "fields": [
+        "image"
+      ],
+      "reason": "Quick Pick/候选地点缺少已核验真实图片。",
+      "nextAction": "补官方或可追溯摄影来源，并做近似图审计。",
+      "priority": "P2"
+    },
+    {
+      "category": "PLACE_IMAGES",
+      "id": "opt-paris-palaisroyal",
+      "name": "Palais Royal柱廊 + 花园",
+      "city": "巴黎",
+      "fields": [
+        "image"
+      ],
+      "reason": "Quick Pick/候选地点缺少已核验真实图片。",
+      "nextAction": "补官方或可追溯摄影来源，并做近似图审计。",
+      "priority": "P2"
+    },
+    {
+      "category": "PLACE_IMAGES",
+      "id": "opt-paris-marais",
+      "name": "Le Marais + 孚日广场",
+      "city": "巴黎",
+      "fields": [
+        "image"
+      ],
+      "reason": "Quick Pick/候选地点缺少已核验真实图片。",
+      "nextAction": "补官方或可追溯摄影来源，并做近似图审计。",
+      "priority": "P2"
+    },
+    {
+      "category": "PICK_IMAGES",
+      "id": "罗马-Best View",
+      "name": "Best View",
+      "city": "罗马",
+      "fields": [
+        "image"
+      ],
+      "reason": "Pick引用的Entity暂无图片。",
+      "nextAction": "只在Entity补图，不在Picks复制文件。",
+      "priority": "P2"
+    },
+    {
+      "category": "PICK_IMAGES",
+      "id": "罗马-Best Meal",
+      "name": "Best Meal",
+      "city": "罗马",
+      "fields": [
+        "image"
+      ],
+      "reason": "Pick引用的Entity暂无图片。",
+      "nextAction": "只在Entity补图，不在Picks复制文件。",
+      "priority": "P2"
+    },
+    {
+      "category": "PICK_IMAGES",
+      "id": "罗马-Best Coffee",
+      "name": "Best Coffee",
+      "city": "罗马",
+      "fields": [
+        "image"
+      ],
+      "reason": "Pick引用的Entity暂无图片。",
+      "nextAction": "只在Entity补图，不在Picks复制文件。",
+      "priority": "P2"
+    },
+    {
+      "category": "PICK_IMAGES",
+      "id": "罗马-Best Night Walk",
+      "name": "Best Night Walk",
+      "city": "罗马",
+      "fields": [
+        "image"
+      ],
+      "reason": "Pick引用的Entity暂无图片。",
+      "nextAction": "只在Entity补图，不在Picks复制文件。",
+      "priority": "P2"
+    },
+    {
+      "category": "PICK_IMAGES",
+      "id": "罗马-Best Shopping",
+      "name": "Best Shopping",
+      "city": "罗马",
+      "fields": [
+        "image"
+      ],
+      "reason": "Pick引用的Entity暂无图片。",
+      "nextAction": "只在Entity补图，不在Picks复制文件。",
+      "priority": "P2"
+    },
+    {
+      "category": "PICK_IMAGES",
+      "id": "佛罗伦萨-Best Meal",
+      "name": "Best Meal",
+      "city": "佛罗伦萨",
+      "fields": [
+        "image"
+      ],
+      "reason": "Pick引用的Entity暂无图片。",
+      "nextAction": "只在Entity补图，不在Picks复制文件。",
+      "priority": "P2"
+    },
+    {
+      "category": "PICK_IMAGES",
+      "id": "佛罗伦萨-Best Coffee",
+      "name": "Best Coffee",
+      "city": "佛罗伦萨",
+      "fields": [
+        "image"
+      ],
+      "reason": "Pick引用的Entity暂无图片。",
+      "nextAction": "只在Entity补图，不在Picks复制文件。",
+      "priority": "P2"
+    },
+    {
+      "category": "PICK_IMAGES",
+      "id": "佛罗伦萨-Best Shopping",
+      "name": "Best Shopping",
+      "city": "佛罗伦萨",
+      "fields": [
+        "image"
+      ],
+      "reason": "Pick引用的Entity暂无图片。",
+      "nextAction": "只在Entity补图，不在Picks复制文件。",
+      "priority": "P2"
+    },
+    {
+      "category": "PICK_IMAGES",
+      "id": "威尼斯-Best Photo Spot",
+      "name": "Best Photo Spot",
+      "city": "威尼斯",
+      "fields": [
+        "image"
+      ],
+      "reason": "Pick引用的Entity暂无图片。",
+      "nextAction": "只在Entity补图，不在Picks复制文件。",
+      "priority": "P2"
+    },
+    {
+      "category": "PICK_IMAGES",
+      "id": "威尼斯-Best Meal",
+      "name": "Best Meal",
+      "city": "威尼斯",
+      "fields": [
+        "image"
+      ],
+      "reason": "Pick引用的Entity暂无图片。",
+      "nextAction": "只在Entity补图，不在Picks复制文件。",
+      "priority": "P2"
+    },
+    {
+      "category": "PICK_IMAGES",
+      "id": "威尼斯-Best Coffee / Dessert",
+      "name": "Best Coffee / Dessert",
+      "city": "威尼斯",
+      "fields": [
+        "image"
+      ],
+      "reason": "Pick引用的Entity暂无图片。",
+      "nextAction": "只在Entity补图，不在Picks复制文件。",
+      "priority": "P2"
+    },
+    {
+      "category": "PICK_IMAGES",
+      "id": "威尼斯-Best Night Walk",
+      "name": "Best Night Walk",
+      "city": "威尼斯",
+      "fields": [
+        "image"
+      ],
+      "reason": "Pick引用的Entity暂无图片。",
+      "nextAction": "只在Entity补图，不在Picks复制文件。",
+      "priority": "P2"
+    },
+    {
+      "category": "PICK_IMAGES",
+      "id": "维也纳-Best Photo Spot",
+      "name": "Best Photo Spot",
+      "city": "维也纳",
+      "fields": [
+        "image"
+      ],
+      "reason": "Pick引用的Entity暂无图片。",
+      "nextAction": "只在Entity补图，不在Picks复制文件。",
+      "priority": "P2"
+    },
+    {
+      "category": "PICK_IMAGES",
+      "id": "维也纳-Best Meal",
+      "name": "Best Meal",
+      "city": "维也纳",
+      "fields": [
+        "image"
+      ],
+      "reason": "Pick引用的Entity暂无图片。",
+      "nextAction": "只在Entity补图，不在Picks复制文件。",
+      "priority": "P2"
+    },
+    {
+      "category": "PICK_IMAGES",
+      "id": "维也纳-Best Coffee / Dessert",
+      "name": "Best Coffee / Dessert",
+      "city": "维也纳",
+      "fields": [
+        "image"
+      ],
+      "reason": "Pick引用的Entity暂无图片。",
+      "nextAction": "只在Entity补图，不在Picks复制文件。",
+      "priority": "P2"
+    },
+    {
+      "category": "PICK_IMAGES",
+      "id": "布拉格-Best Meal",
+      "name": "Best Meal",
+      "city": "布拉格",
+      "fields": [
+        "image"
+      ],
+      "reason": "Pick引用的Entity暂无图片。",
+      "nextAction": "只在Entity补图，不在Picks复制文件。",
+      "priority": "P2"
+    },
+    {
+      "category": "PICK_IMAGES",
+      "id": "布拉格-Best Coffee",
+      "name": "Best Coffee",
+      "city": "布拉格",
+      "fields": [
+        "image"
+      ],
+      "reason": "Pick引用的Entity暂无图片。",
+      "nextAction": "只在Entity补图，不在Picks复制文件。",
+      "priority": "P2"
+    },
+    {
+      "category": "PICK_IMAGES",
+      "id": "布拉格-Best Easy Win",
+      "name": "Best Easy Win",
+      "city": "布拉格",
+      "fields": [
+        "image"
+      ],
+      "reason": "Pick引用的Entity暂无图片。",
+      "nextAction": "只在Entity补图，不在Picks复制文件。",
+      "priority": "P2"
+    },
+    {
+      "category": "PICK_IMAGES",
+      "id": "巴黎-Best Photo Spot",
+      "name": "Best Photo Spot",
+      "city": "巴黎",
+      "fields": [
+        "image"
+      ],
+      "reason": "Pick引用的Entity暂无图片。",
+      "nextAction": "只在Entity补图，不在Picks复制文件。",
+      "priority": "P2"
+    },
+    {
+      "category": "PICK_IMAGES",
+      "id": "巴黎-Best Meal",
+      "name": "Best Meal",
+      "city": "巴黎",
+      "fields": [
+        "image"
+      ],
+      "reason": "Pick引用的Entity暂无图片。",
+      "nextAction": "只在Entity补图，不在Picks复制文件。",
+      "priority": "P2"
+    },
+    {
+      "category": "PICK_IMAGES",
+      "id": "巴黎-Best Coffee",
+      "name": "Best Coffee",
+      "city": "巴黎",
+      "fields": [
+        "image"
+      ],
+      "reason": "Pick引用的Entity暂无图片。",
+      "nextAction": "只在Entity补图，不在Picks复制文件。",
+      "priority": "P2"
+    }
+  ]
+}

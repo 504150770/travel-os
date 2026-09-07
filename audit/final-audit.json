@@ -1,24 +1,31 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-06T12:50:53.386Z",
+  "generatedAt": "2026-09-07T11:47:55.185Z",
   "status": "passed",
   "summary": {
     "failures": 0,
-    "warnings": 0,
+    "warnings": 1,
     "days": 18,
+    "editablePlanItems": 195,
+    "entities": 144,
     "places": 39,
     "options": 24,
     "images": 53,
     "gyms": 10,
-    "hotels": 24,
+    "archivedHotelCandidates": 24,
+    "realHotelBookings": 6,
+    "realHotelNights": 15,
+    "realHotelCommittedCny": 11286.52,
+    "transportSegments": 7,
     "restaurants": 26,
     "xhsTopics": 28,
-    "bookings": 19,
+    "bookings": 24,
     "tasks": 14,
     "hotelRoomPhotosPending": 23
   },
   "checks": {
     "schemaValidation": true,
+    "editableEntityPlan": true,
     "tripStructure": true,
     "referenceIntegrity": true,
     "tripStopImageCoverage": true,
@@ -28,6 +35,8 @@
     "visualNearDuplicateDetection": true,
     "hotelAudit": true,
     "hotelSingleRoomAudit": true,
+    "realHotelVoucherAudit": true,
+    "transportStructureAudit": true,
     "gymAudit": true,
     "foodSourceAudit": true,
     "budgetAudit": true,
@@ -41,5 +50,10 @@
     "provenance": true
   },
   "failures": [],
-  "warnings": []
+  "warnings": [
+    {
+      "dimension": "budget",
+      "message": "current real commitments put plan 27630 over hard cap 26000"
+    }
+  ]
 }

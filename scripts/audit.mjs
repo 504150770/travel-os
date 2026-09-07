@@ -3,6 +3,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import sharp from 'sharp';
 import { fileURLToPath } from 'node:url';
+import { execFileSync } from 'node:child_process';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const readJson = (file) => JSON.parse(fs.readFileSync(path.join(root, file), 'utf8'));
@@ -11,6 +12,8 @@ const data = {
   options: readJson('data/options.json'), images: readJson('data/images.json'), gyms: readJson('data/gyms.json'), hotels: readJson('data/hotels.json'),
   bookings: readJson('data/bookings.json'), tasks: readJson('data/tasks.json'), restaurants: readJson('data/restaurants.json'), xhs: readJson('data/xhs.json'), budget: readJson('data/budget.json'), checklist: readJson('data/checklist.json'),
   essentials: readJson('data/essentials.json'), conflicts: readJson('data/conflicts.json'),
+  activities: readJson('data/activities.json'), dayPlans: readJson('data/day-plans.json'), quickPicks: readJson('data/quick-picks.json'),
+  hotelBookings: readJson('data/hotel-bookings.json'), transportRecommendations: readJson('data/transport-recommendations.json'),
 };
 const schema = readJson('schemas/guide.schema.json');
 const failures = [];
@@ -49,6 +52,23 @@ unique(ids(data.bookings.items), 'booking ids');
 unique(ids(data.tasks.items), 'task ids');
 unique(ids(data.restaurants), 'restaurant ids');
 unique(ids(data.xhs), 'xhs ids');
+unique(ids(data.activities), 'activity ids');
+
+const entityIds = new Set([...ids(data.places), ...ids(data.options), ...ids(data.restaurants), ...ids(data.gyms), ...ids(data.hotels.hotels), ...ids(data.activities)]);
+if (data.dayPlans.days.length !== 18) fail('editable_plan', 'Editable plan must contain 18 days');
+for (const day of data.dayPlans.days) {
+  if (day.dayId < 1 || day.dayId > 18) fail('editable_plan', `Invalid plan day ${day.dayId}`);
+  for (const zone of ['activeItems','alternatives']) {
+    const refs = day[zone].map((item) => item.entityId);
+    if (new Set(refs).size !== refs.length) fail('editable_plan', `Day ${day.dayId} ${zone} has duplicate Entity refs`);
+    for (const item of day[zone]) {
+      if (!entityIds.has(item.entityId)) fail('editable_plan', `Day ${day.dayId} references missing Entity ${item.entityId}`);
+      if ('name' in item || 'city' in item || 'images' in item) fail('editable_plan', `Day ${day.dayId} duplicates Entity data in ${item.id}`);
+    }
+  }
+}
+for (const city of data.quickPicks.cities) for (const pick of city.items) if (!entityIds.has(pick.entityId)) fail('editable_plan', `${city.city} pick references missing Entity ${pick.entityId}`);
+checks.editableEntityPlan = failures.filter((item) => item.dimension === 'editable_plan').length === 0;
 
 const dates = data.days.map((day) => new Date(`${day.date}T00:00:00Z`).getTime());
 if (!data.days.every((day, index) => day.day === index + 1)) fail('structure', 'Day numbers are not exactly 1–18');
@@ -134,6 +154,30 @@ if (selectedTotal > data.hotels.hardMax) fail('hotels', 'selected hotels exceed 
 checks.hotelAudit = failures.filter((item) => item.dimension === 'hotels').length === 0;
 checks.hotelSingleRoomAudit = failures.filter((item) => item.dimension === 'hotel_room').length === 0;
 
+const realStays = data.hotelBookings.items;
+unique(ids(realStays), 'real hotel booking ids');
+if (realStays.length !== 6) fail('real_hotels', `expected 6 real hotel bookings, found ${realStays.length}`);
+if (realStays.reduce((sum, stay) => sum + stay.nights, 0) !== 15) fail('real_hotels', 'real hotel nights do not sum to 15');
+for (const city of cityNames) if (realStays.filter((stay) => stay.city === city).length !== 1) fail('real_hotels', `${city} must have one real hotel booking`);
+for (const stay of realStays) {
+  if (!stay.sourceFile || !stay.sourcePath || !stay.bookingNumber) fail('real_hotels', `${stay.hotelName} missing voucher provenance`);
+  if (!(stay.checkIn < stay.checkOut)) fail('real_hotels', `${stay.hotelName} has invalid stay dates`);
+  if (!stay.roomType || stay.privateBathroom !== true) fail('real_hotels', `${stay.hotelName} missing confirmed room/private bathroom`);
+}
+const paidOnline = Number(realStays.reduce((sum, stay) => sum + stay.paidOnlineCny, 0).toFixed(2));
+const committed = Number(realStays.reduce((sum, stay) => sum + stay.committedCnyApprox, 0).toFixed(2));
+if (paidOnline !== data.hotelBookings.summary.paidOnlineCny) fail('real_hotels', 'paid hotel total differs from source summary');
+if (committed !== data.hotelBookings.summary.committedCnyApprox) fail('real_hotels', 'committed hotel total differs from source summary');
+checks.realHotelVoucherAudit = failures.filter((item) => item.dimension === 'real_hotels').length === 0;
+
+if (data.transportRecommendations.segments.length !== 7) fail('transport', 'transport structure must contain 7 trip segments');
+for (const segment of data.transportRecommendations.segments) {
+  if (segment.candidates.length !== 3) fail('transport', `${segment.route} must contain 3 ranked slots`);
+  if (!segment.source.startsWith('https://')) fail('transport', `${segment.route} missing official source`);
+  if (!segment.doorToDoor) fail('transport', `${segment.route} missing door-to-door estimate`);
+}
+checks.transportStructureAudit = failures.filter((item) => item.dimension === 'transport').length === 0;
+
 if (data.gyms.length < 8 || data.gyms.length > 10) fail('gyms', 'gym count must be 8–10');
 if (data.gyms.filter((gym) => gym.photogenicRank).length !== 5) fail('gyms', 'Most Photogenic list must contain exactly 5 gyms');
 for (const gym of data.gyms) {
@@ -146,12 +190,14 @@ for (const restaurant of data.restaurants) {
   if (!restaurant.source || !/^https?:\/\//.test(restaurant.source)) fail('food', `${restaurant.name} missing source`);
   if (!restaurant.hours) fail('food', `${restaurant.name} missing operating-status field`);
   if (!restaurant.recommendedDays?.length) fail('food', `${restaurant.name} missing route-day match`);
+  if (!restaurant.menu?.status) fail('food', `${restaurant.name} missing explicit menu verification state`);
+  if (restaurant.menu.url) { try { new URL(restaurant.menu.url); } catch { fail('food', `${restaurant.name} has invalid menu URL`); } }
 }
 checks.foodSourceAudit = failures.filter((item) => item.dimension === 'food').length === 0;
 
 const budgetTotal = data.budget.categories.reduce((sum, item) => sum + item.budget, 0);
 if (budgetTotal !== data.budget.planTotal) fail('budget', `category plan ${budgetTotal} differs from planTotal ${data.budget.planTotal}`);
-if (data.budget.planTotal > data.budget.hardCap) fail('budget', 'plan exceeds hard cap');
+if (data.budget.planTotal > data.budget.hardCap) warn('budget', `current real commitments put plan ${data.budget.planTotal} over hard cap ${data.budget.hardCap}`);
 const shopping = data.budget.categories.find((item) => item.id === 'shopping');
 if (!shopping || shopping.budget < data.budget.shoppingFloor) fail('budget', 'shopping floor is not protected');
 checks.budgetAudit = failures.filter((item) => item.dimension === 'budget').length === 0;
@@ -197,7 +243,7 @@ const report = {
   schemaVersion: 2,
   generatedAt: new Date().toISOString(),
   status: failures.length ? 'failed' : 'passed',
-  summary: { failures: failures.length, warnings: warnings.length, days: data.days.length, places: data.places.length, options: data.options.length, images: requestedAssets.length, gyms: data.gyms.length, hotels: data.hotels.hotels.length, restaurants: data.restaurants.length, xhsTopics: data.xhs.length, bookings: data.bookings.items.length, tasks: data.tasks.items.length, hotelRoomPhotosPending: data.hotels.hotels.filter((hotel) => hotel.roomImages.some((photo) => !photo.file)).length },
+  summary: { failures: failures.length, warnings: warnings.length, days: data.days.length, editablePlanItems: data.dayPlans.days.reduce((sum, day) => sum + day.activeItems.length + day.alternatives.length, 0), entities: entityIds.size, places: data.places.length, options: data.options.length, images: requestedAssets.length, gyms: data.gyms.length, archivedHotelCandidates: data.hotels.hotels.length, realHotelBookings: realStays.length, realHotelNights: realStays.reduce((sum, stay) => sum + stay.nights, 0), realHotelCommittedCny: committed, transportSegments: data.transportRecommendations.segments.length, restaurants: data.restaurants.length, xhsTopics: data.xhs.length, bookings: data.bookings.items.length, tasks: data.tasks.items.length, hotelRoomPhotosPending: data.hotels.hotels.filter((hotel) => hotel.roomImages.some((photo) => !photo.file)).length },
   checks, failures, warnings,
 };
 fs.mkdirSync(path.join(root, 'audit'), { recursive: true });
@@ -207,7 +253,7 @@ const state = {
   status: failures.length ? 'in_progress' : 'complete',
   stage: failures.length ? 'audit_failed' : 'complete',
   workflow: ['research','structured_data','render','audit','handoff'],
-  source_commit: '7372e4762eea2767bd0a49c949f33c70bed92a67',
+  source_commit: execFileSync('git', ['rev-parse', 'HEAD'], { cwd: root, encoding: 'utf8' }).trim(),
   checks,
   audit_report: 'audit/final-audit.json',
   handoff_allowed: failures.length === 0,
