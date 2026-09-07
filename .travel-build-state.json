@@ -9,7 +9,7 @@
     "audit",
     "handoff"
   ],
-  "source_commit": "cae5b68c701e7016178cfab1424ee318d0e7e194",
+  "source_commit": "bdde02106af9c10fcb8454f17fef5caeac56b9bc",
   "checks": {
     "schemaValidation": true,
     "editableEntityPlan": true,
@@ -41,5 +41,5 @@
   "final_response_allowed": true,
   "continuation_required": false,
   "next_required_action": "Handoff the runnable guide.",
-  "updated_at": "2026-09-07T11:47:55.300Z"
+  "updated_at": "2026-09-07T11:48:27.422Z"
 }
