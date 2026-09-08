@@ -1,10 +1,11 @@
 import places from '@/data/places.json';
 import restaurants from '@/data/restaurants.json';
 import gyms from '@/data/gyms.json';
-import hotels from '@/data/hotels.json';
 import options from '@/data/options.json';
 import activities from '@/data/activities.json';
 import images from '@/data/images.json';
+import shopping from '@/data/shopping.json';
+import hotelBookings from '@/data/hotel-bookings.json';
 
 export type EntityType = 'place' | 'restaurant' | 'cafe' | 'gym' | 'hotel' | 'shopping' | 'photo_spot' | 'activity' | 'custom';
 export type EntityImage = { file: string; caption: string; source: string | null; lastVerified: string | null; status: string; bestTime?: string; composition?: string };
@@ -26,6 +27,7 @@ export type Entity = {
   lastVerified: string;
   tags: string[];
   notes: string;
+  hotelAnchor?: { id: string; name: string; address: string; directionsUrl: string };
   raw: Record<string, unknown>;
 };
 
@@ -69,11 +71,10 @@ const gymEntities: Entity[] = (gyms as Array<Record<string, unknown>>).map((item
   source: textValue(item.source), lastVerified: '2026-09-06', tags: ['gym', textValue(item.tag)], notes: textValue(item.photo), raw: item,
 }));
 
-const hotelEntities: Entity[] = ((hotels as { hotels: Array<Record<string, unknown>> }).hotels).map((item) => ({
-  id: textValue(item.id), type: 'hotel', name: textValue(item.name), city: textValue(item.city), address: '待确认', mapQuery: textValue(item.name), coordinates: null,
-  images: ((item.roomImages as Array<Record<string, unknown>>) || []).filter((photo) => photo.file).map((photo) => ({ file: textValue(photo.file), caption: textValue(photo.caption), source: photo.source ? textValue(photo.source) : null, lastVerified: textValue(item.lastVerified), status: textValue(photo.status) })),
-  description: `${textValue(item.roomName)} · ${textValue(item.transport)}`, priceLabel: item.priceRefundable ? `¥${textValue(item.priceRefundable)}` : '可退价待确认', projectedCostCny: typeof item.priceRefundable === 'number' ? item.priceRefundable : null,
-  openingHours: textValue(item.frontDesk), links: {}, source: textValue(item.priceSource), lastVerified: textValue(item.lastVerified), tags: ['hotel', textValue(item.role), textValue(item.risk)], notes: textValue(item.bookingRequest), raw: item,
+const shoppingEntities: Entity[] = (shopping as Array<Record<string, unknown>>).map((item) => ({
+  id: textValue(item.id), type: 'shopping', name: textValue(item.name), city: textValue(item.city), address: '待确认', mapQuery: textValue(item.mapQuery), coordinates: null,
+  images: [], description: textValue(item.kind), priceLabel: '按现场消费', projectedCostCny: null, openingHours: textValue(item.hours), links: { source: textValue(item.source) },
+  source: textValue(item.source), lastVerified: textValue(item.verifiedAt), tags: ['shopping', textValue(item.kind)], notes: textValue(item.routeFit), raw: item,
 }));
 
 const activityEntities: Entity[] = (activities as Array<Record<string, unknown>>).map((item) => ({
@@ -82,7 +83,24 @@ const activityEntities: Entity[] = (activities as Array<Record<string, unknown>>
   lastVerified: textValue(item.lastVerified), tags: item.tags as string[], notes: textValue(item.notes), raw: item,
 }));
 
-export const entityLibrary: Entity[] = [...placeEntities, ...optionEntities, ...foodEntities, ...gymEntities, ...hotelEntities, ...activityEntities];
+const confirmedHotels = hotelBookings.items as Array<{ id: string; city: string; hotelName: string; address: string }>;
+const hotelForEntity = (entity: Entity) => confirmedHotels.find((stay) => stay.city === normalizeRouteCity(entity.city));
+const addHotelAnchor = (entity: Entity): Entity => {
+  const stay = hotelForEntity(entity);
+  if (!stay) return entity;
+  const destination = entity.address && !entity.address.includes('待确认') ? entity.address : entity.mapQuery || entity.name;
+  return {
+    ...entity,
+    hotelAnchor: {
+      id: stay.id,
+      name: stay.hotelName,
+      address: stay.address,
+      directionsUrl: `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(stay.address)}&destination=${encodeURIComponent(destination)}&travelmode=transit`,
+    },
+  };
+};
+
+export const entityLibrary: Entity[] = [...placeEntities, ...optionEntities, ...foodEntities, ...gymEntities, ...shoppingEntities, ...activityEntities].map(addHotelAnchor);
 export const entityMap = new Map(entityLibrary.map((entity) => [entity.id, entity]));
 
 export function normalizeRouteCity(city: string) {

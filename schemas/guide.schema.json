@@ -3,61 +3,388 @@
   "$id": "https://local.travel/europe-guide.schema.json",
   "title": "Personal Europe Travel Guide",
   "type": "object",
-  "required": ["trip", "days", "places", "options", "images", "gyms", "hotels", "hotelBookings", "transportRecommendations", "bookings", "tasks", "restaurants", "xhs", "budget", "checklist", "essentials", "conflicts", "activities", "dayPlans", "quickPicks"],
+  "required": [
+    "trip",
+    "days",
+    "places",
+    "options",
+    "images",
+    "gyms",
+    "hotelBookings",
+    "transportRecommendations",
+    "bookings",
+    "tasks",
+    "restaurants",
+    "xhs",
+    "budget",
+    "checklist",
+    "essentials",
+    "conflicts",
+    "activities",
+    "dayPlans",
+    "quickPicks",
+    "shopping"
+  ],
   "properties": {
     "trip": {
       "type": "object",
-      "required": ["id", "title", "startDate", "endDate", "europeNights", "hotelChanges", "cities", "coverImage", "sourcePriority"],
-      "properties": { "cities": { "type": "array", "minItems": 6, "maxItems": 6 } }
+      "required": [
+        "id",
+        "title",
+        "startDate",
+        "endDate",
+        "europeNights",
+        "hotelChanges",
+        "cities",
+        "coverImage",
+        "sourcePriority"
+      ],
+      "properties": {
+        "cities": {
+          "type": "array",
+          "minItems": 6,
+          "maxItems": 6
+        }
+      }
     },
     "days": {
-      "type": "array", "minItems": 18, "maxItems": 18,
-      "items": { "type": "object", "required": ["day", "date", "city", "theme", "summary", "walking", "fatigue", "goldenHour", "blueHour", "dayBudget", "gymIds", "lossCut", "timeline", "shooting"] }
+      "type": "array",
+      "minItems": 18,
+      "maxItems": 18,
+      "items": {
+        "type": "object",
+        "required": [
+          "day",
+          "date",
+          "city",
+          "theme",
+          "summary",
+          "walking",
+          "fatigue",
+          "goldenHour",
+          "blueHour",
+          "dayBudget",
+          "gymIds",
+          "lossCut",
+          "timeline",
+          "shooting"
+        ]
+      }
     },
     "places": {
-      "type": "array", "minItems": 1,
-      "items": { "type": "object", "required": ["id", "name", "city", "type", "mapQuery", "coordinateStatus"] }
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "city",
+          "type",
+          "mapQuery",
+          "coordinateStatus"
+        ]
+      }
     },
     "options": {
-      "type": "array", "minItems": 24, "maxItems": 24,
-      "items": { "type": "object", "required": ["id", "city", "name", "kind", "recommendedDays", "duration", "bestFor", "swapRule", "booking", "mapQuery", "source", "status"] }
+      "type": "array",
+      "minItems": 24,
+      "maxItems": 24,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "city",
+          "name",
+          "kind",
+          "recommendedDays",
+          "duration",
+          "bestFor",
+          "swapRule",
+          "booking",
+          "mapQuery",
+          "source",
+          "status"
+        ]
+      }
     },
     "images": {
-      "type": "array", "minItems": 1,
-      "items": { "type": "object", "required": ["id", "day", "dayId", "placeId", "file", "key", "caption", "use", "role", "type", "timeOfDay", "bestTime", "focalLength", "composition", "credit", "sourcePage", "sourceType", "visuallyReviewed", "lastVerified"] }
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "day",
+          "dayId",
+          "placeId",
+          "file",
+          "key",
+          "caption",
+          "use",
+          "role",
+          "type",
+          "timeOfDay",
+          "bestTime",
+          "focalLength",
+          "composition",
+          "credit",
+          "sourcePage",
+          "sourceType",
+          "visuallyReviewed",
+          "lastVerified"
+        ]
+      }
     },
     "gyms": {
-      "type": "array", "minItems": 8, "maxItems": 10,
-      "items": { "type": "object", "required": ["id", "name", "city", "dayPass", "passMethod", "hours", "distance", "equipment", "crowd", "lighting", "style", "photo", "time", "recommendedDays", "image", "source"] }
-    },
-    "hotels": {
-      "type": "object", "required": ["goalRange", "hardMax", "selectedTotal", "quietRequest", "veniceComparison", "hotels"],
-      "properties": { "hotels": { "type": "array", "minItems": 24, "maxItems": 24, "items": { "type": "object", "required": ["id", "city", "role", "name", "rating", "openingRenovation", "roomCondition", "noise", "bed", "heating", "privateBathroom", "frontDeskStorage", "transport", "pros", "cons", "risk", "selected", "roomName", "roomArea", "bedType", "ratingCount", "refundableRoomMatch", "airConditioning", "lateArrival", "luggageStorage", "roomImages", "priceSource", "lastVerified"] } } }
+      "type": "array",
+      "minItems": 8,
+      "maxItems": 10,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "city",
+          "dayPass",
+          "passMethod",
+          "hours",
+          "distance",
+          "equipment",
+          "crowd",
+          "lighting",
+          "style",
+          "photo",
+          "time",
+          "recommendedDays",
+          "image",
+          "source",
+          "hotelId",
+          "hotelName",
+          "hotelPriority",
+          "distanceStatus"
+        ]
+      }
     },
     "hotelBookings": {
       "type": "object",
-      "required": ["sourceOfTruth", "sourcePriority", "verifiedAt", "summary", "items"],
+      "required": [
+        "sourceOfTruth",
+        "sourcePriority",
+        "verifiedAt",
+        "summary",
+        "items"
+      ],
       "properties": {
-        "items": { "type": "array", "minItems": 6, "maxItems": 6, "items": { "type": "object", "required": ["id", "city", "hotelName", "address", "checkIn", "checkOut", "nights", "roomType", "privateBathroom", "paidOnlineCny", "committedCnyApprox", "bookingStatus", "bookingNumber", "sourceFile", "sourcePath"] } }
+        "items": {
+          "type": "array",
+          "minItems": 6,
+          "maxItems": 6,
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "city",
+              "hotelName",
+              "address",
+              "checkIn",
+              "checkOut",
+              "nights",
+              "roomType",
+              "privateBathroom",
+              "paidOnlineCny",
+              "committedCnyApprox",
+              "bookingStatus",
+              "bookingNumber",
+              "sourceFile",
+              "sourcePath"
+            ]
+          }
+        }
       }
     },
     "transportRecommendations": {
       "type": "object",
-      "required": ["policy", "verifiedAt", "segments"],
+      "required": [
+        "policy",
+        "verifiedAt",
+        "segments"
+      ],
       "properties": {
-        "segments": { "type": "array", "minItems": 7, "maxItems": 7, "items": { "type": "object", "required": ["id", "day", "route", "date", "mode", "doorToDoor", "recommendation", "source", "status", "candidates"] } }
+        "segments": {
+          "type": "array",
+          "minItems": 7,
+          "maxItems": 7,
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "day",
+              "route",
+              "date",
+              "mode",
+              "doorToDoor",
+              "recommendation",
+              "source",
+              "status",
+              "candidates"
+            ]
+          }
+        }
       }
     },
-    "bookings": { "type": "object", "required": ["statuses", "items"] },
-    "tasks": { "type": "object", "required": ["statuses", "items"], "properties": { "items": { "type": "array", "minItems": 1, "items": { "type": "object", "required": ["id", "title", "note", "due", "group", "status", "linkedBookingId", "lastVerified"] } } } },
-    "restaurants": { "type": "array", "minItems": 24, "items": { "type": "object", "required": ["id", "city", "name", "meal", "dishes", "price", "hours", "reservation", "distance", "source", "recommendedDays", "mustEat", "mapQuery", "xhsKeyword", "photoStatus", "lastVerified"] } },
-    "xhs": { "type": "array", "minItems": 20, "items": { "type": "object", "required": ["id", "city", "category", "keyword", "url", "linkType", "lastVerified"] } },
-    "budget": { "type": "object", "required": ["hardCap", "targetMin", "targetMax", "shoppingFloor", "planTotal", "categories", "adjustOrder", "neverCut"] },
-    "checklist": { "type": "object", "required": ["groups", "visaReality"] },
-    "essentials": { "type": "object", "required": ["groups", "quietMessage"] },
-    "conflicts": { "type": "object", "required": ["items"] },
-    "activities": { "type": "array", "minItems": 1 },
-    "dayPlans": { "type": "object", "required": ["version", "days"] },
-    "quickPicks": { "type": "object", "required": ["cities"] }
+    "bookings": {
+      "type": "object",
+      "required": [
+        "statuses",
+        "items"
+      ]
+    },
+    "tasks": {
+      "type": "object",
+      "required": [
+        "statuses",
+        "items"
+      ],
+      "properties": {
+        "items": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "title",
+              "note",
+              "due",
+              "group",
+              "status",
+              "linkedBookingId",
+              "lastVerified"
+            ]
+          }
+        }
+      }
+    },
+    "restaurants": {
+      "type": "array",
+      "minItems": 24,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "city",
+          "name",
+          "meal",
+          "dishes",
+          "price",
+          "hours",
+          "reservation",
+          "distance",
+          "source",
+          "recommendedDays",
+          "mustEat",
+          "mapQuery",
+          "xhsKeyword",
+          "photoStatus",
+          "lastVerified",
+          "hotelId",
+          "hotelName",
+          "hotelPriority",
+          "distanceStatus"
+        ]
+      }
+    },
+    "xhs": {
+      "type": "array",
+      "minItems": 20,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "city",
+          "category",
+          "keyword",
+          "url",
+          "linkType",
+          "lastVerified"
+        ]
+      }
+    },
+    "budget": {
+      "type": "object",
+      "required": [
+        "hardCap",
+        "targetMin",
+        "targetMax",
+        "shoppingFloor",
+        "planTotal",
+        "categories",
+        "adjustOrder",
+        "neverCut"
+      ]
+    },
+    "checklist": {
+      "type": "object",
+      "required": [
+        "groups",
+        "visaReality"
+      ]
+    },
+    "essentials": {
+      "type": "object",
+      "required": [
+        "groups",
+        "quietMessage"
+      ]
+    },
+    "conflicts": {
+      "type": "object",
+      "required": [
+        "items"
+      ]
+    },
+    "activities": {
+      "type": "array",
+      "minItems": 1
+    },
+    "dayPlans": {
+      "type": "object",
+      "required": [
+        "version",
+        "days"
+      ]
+    },
+    "quickPicks": {
+      "type": "object",
+      "required": [
+        "cities"
+      ]
+    },
+    "shopping": {
+      "type": "array",
+      "minItems": 26,
+      "maxItems": 40,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "city",
+          "name",
+          "kind",
+          "recommendedDays",
+          "hours",
+          "distance",
+          "routeFit",
+          "mapQuery",
+          "source",
+          "verifiedAt",
+          "hotelId",
+          "hotelName",
+          "hotelPriority",
+          "distanceStatus"
+        ]
+      }
+    }
   }
 }

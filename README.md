@@ -23,10 +23,10 @@ pnpm check
 - `data/options.json`：每城 4 个可替换景点/街区选择，不改变主行程
 - `data/images.json`：全局唯一视觉资产、用途、时间与来源
 - `data/gyms.json`：10 家训练候选与 Most Photogenic Top 5
-- `data/restaurants.json`：26 家沿当天路线可用的餐厅与咖啡馆
+- `data/restaurants.json`：64 家按已订酒店与当天路线排序的餐厅、咖啡馆及回酒店低折腾选项
+- `data/shopping.json`：31 个按已订酒店与当天路线组织的购物候选
 - `data/xhs.json`：城市、拍摄、餐饮、GYM、购物与避坑搜索入口
 - `data/hotel-bookings.json`：6 份真实入住凭证，是当前住宿的唯一事实源
-- `data/hotels.json`：旧版每城 4 家候选，仅归档，不覆盖真实订单
 - `data/transport-recommendations.json`：7 段门到门交通与三档候选槽；动态班次、总价和 23kg 行李未核实时保持 `UNVERIFIED`
 - `data/day-plans.json`：可编辑 Current Trip，只保存 Entity 引用、时间和状态
 - `data/activities.json`：原时间轴中非景点活动的 Entity 数据

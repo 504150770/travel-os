@@ -1,229 +1,292 @@
 # UNVERIFIED DATA LIST
 
-Generated: 2026-09-07T11:48:27.563Z
+Generated: 2026-09-08T01:32:24.145Z
 
 > 真实性优先。以下项目没有被当作已验证事实。
 
-## FOOD_COVERAGE · 6
+P0 13 · P1 156 · P2 106
 
-- **罗马｜罗马餐饮候选** — candidateCount。当前4家，低于目标8–12家；本轮不为凑数补造。 下一步：下一轮High从官方与可靠订餐平台补充顺路候选。
-- **佛罗伦萨｜佛罗伦萨餐饮候选** — candidateCount。当前4家，低于目标8–12家；本轮不为凑数补造。 下一步：下一轮High从官方与可靠订餐平台补充顺路候选。
-- **威尼斯｜威尼斯餐饮候选** — candidateCount。当前4家，低于目标8–12家；本轮不为凑数补造。 下一步：下一轮High从官方与可靠订餐平台补充顺路候选。
-- **维也纳｜维也纳餐饮候选** — candidateCount。当前4家，低于目标8–12家；本轮不为凑数补造。 下一步：下一轮High从官方与可靠订餐平台补充顺路候选。
-- **布拉格｜布拉格餐饮候选** — candidateCount。当前4家，低于目标8–12家；本轮不为凑数补造。 下一步：下一轮High从官方与可靠订餐平台补充顺路候选。
-- **巴黎｜巴黎餐饮候选** — candidateCount。当前6家，低于目标8–12家；本轮不为凑数补造。 下一步：下一轮High从官方与可靠订餐平台补充顺路候选。
+## P0 · 13
 
-## FOOD_IMAGES · 26
+- **罗马｜Colonna Palace Hotel** · REAL_HOTEL_UNVERIFIED — 24小时前台/自助入住、行李寄存、静音请求、暖气、noise.street、noise.wall、noise.corridor、noise.mechanical。入住凭证没有提供这些运营与噪音事实。 下一步：取消线前向酒店书面确认，未回复前保持待确认。
+- **佛罗伦萨｜La Fonderia Firenze** · REAL_HOTEL_UNVERIFIED — 24小时前台/自助入住、行李寄存、静音请求、暖气、noise.street、noise.wall、noise.corridor、noise.mechanical。入住凭证没有提供这些运营与噪音事实。 下一步：取消线前向酒店书面确认，未回复前保持待确认。
+- **威尼斯｜Park Hotel Ai Pini & Restaurant Ai Pini** · REAL_HOTEL_UNVERIFIED — 24小时前台/自助入住、行李寄存、静音请求、暖气、noise.street、noise.wall、noise.corridor、noise.mechanical。入住凭证没有提供这些运营与噪音事实。 下一步：取消线前向酒店书面确认，未回复前保持待确认。
+- **维也纳｜Jimmy's Apartments Lory** · REAL_HOTEL_UNVERIFIED — 24小时前台/自助入住、行李寄存、静音请求、暖气、noise.street、noise.wall、noise.corridor、noise.mechanical。入住凭证没有提供这些运营与噪音事实。 下一步：取消线前向酒店书面确认，未回复前保持待确认。
+- **布拉格｜Self-Service Hotel Ostaš Praha** · REAL_HOTEL_UNVERIFIED — 24小时前台/自助入住、行李寄存、静音请求、暖气、noise.street、noise.wall、noise.corridor、noise.mechanical。入住凭证没有提供这些运营与噪音事实。 下一步：取消线前向酒店书面确认，未回复前保持待确认。
+- **巴黎｜Oden Paris Ivry** · REAL_HOTEL_UNVERIFIED — 24小时前台/自助入住、行李寄存、静音请求、暖气、noise.street、noise.wall、noise.corridor、noise.mechanical。入住凭证没有提供这些运营与噪音事实。 下一步：取消线前向酒店书面确认，未回复前保持待确认。
+- **Day 1｜CAN / HKG → FCO** · TRANSPORT_LIVE_DATA — 实时班次、总价、23kg行李、改签条件。官方路线存在，但目标日期具体产品尚未形成可出票事实。 下一步：在官方出票页按门到门时间刷新并锁定。
+- **Day 5｜Roma Termini → Firenze S.M.N.** · TRANSPORT_LIVE_DATA — 实时班次、总价、23kg行李、改签条件。官方路线存在，但目标日期具体产品尚未形成可出票事实。 下一步：在官方出票页按门到门时间刷新并锁定。
+- **Day 7｜Firenze S.M.N. → Venezia Mestre** · TRANSPORT_LIVE_DATA — 实时班次、总价、23kg行李、改签条件。官方路线存在，但目标日期具体产品尚未形成可出票事实。 下一步：在官方出票页按门到门时间刷新并锁定。
+- **Day 9｜Park Hotel Ai Pini → VCE → VIE → Jimmy’s Apartments Lory** · TRANSPORT_LIVE_DATA — 实时班次、总价、23kg行李、改签条件。官方路线存在，但目标日期具体产品尚未形成可出票事实。 下一步：在官方出票页按门到门时间刷新并锁定。
+- **Day 11｜Wien Hbf → Praha hl.n.** · TRANSPORT_LIVE_DATA — 实时班次、总价、23kg行李、改签条件。官方路线存在，但目标日期具体产品尚未形成可出票事实。 下一步：在官方出票页按门到门时间刷新并锁定。
+- **Day 13｜PRG → ORY / CDG → Oden Paris Ivry** · TRANSPORT_LIVE_DATA — 实时班次、总价、23kg行李、改签条件。官方路线存在，但目标日期具体产品尚未形成可出票事实。 下一步：在官方出票页按门到门时间刷新并锁定。
+- **Day 17｜CDG → CAN / HKG** · TRANSPORT_LIVE_DATA — 实时班次、总价、23kg行李、改签条件。官方路线存在，但目标日期具体产品尚未形成可出票事实。 下一步：在官方出票页按门到门时间刷新并锁定。
 
-- **罗马｜Armando al Pantheon** — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
-- **罗马｜Roscioli Salumeria con Cucina** — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
-- **罗马｜Trapizzino Trastevere** — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
-- **罗马｜Sant’Eustachio Il Caffè** — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
-- **佛罗伦萨｜All’Antico Vinaio** — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
-- **佛罗伦萨｜Trattoria Sabatino** — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
-- **佛罗伦萨｜Ditta Artigianale** — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
-- **佛罗伦萨｜Da Nerbone** — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
-- **威尼斯｜Hostaria Vite Rossa** — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
-- **威尼斯｜Antiche Carampane** — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
-- **威尼斯｜Osteria alla Staffa** — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
-- **威尼斯｜Caffè Florian** — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
-- **维也纳｜Figlmüller Wollzeile** — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
-- **维也纳｜Zum Schwarzen Kameel** — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
-- **维也纳｜Café Sperl** — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
-- **维也纳｜Rathausplatz Christmas Market** — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
-- **布拉格｜Lokál Dlouhááá** — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
-- **布拉格｜Café Louvre** — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
-- **布拉格｜Kantýna** — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
-- **布拉格｜Eska** — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
-- **巴黎｜Bouillon Pigalle** — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
-- **巴黎｜Breizh Café** — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
-- **巴黎｜Café de Flore** — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
-- **巴黎｜La Boulangerie du Louvre** — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
-- **巴黎｜Pink Mamma** — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
-- **巴黎｜Café Pigalle** — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+## P1 · 156
 
-## FOOD_MENU · 26
+- **罗马｜Armando al Pantheon** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **罗马｜Armando al Pantheon** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **罗马｜Roscioli Salumeria con Cucina** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **罗马｜Roscioli Salumeria con Cucina** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **罗马｜Trapizzino Trastevere** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **罗马｜Trapizzino Trastevere** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **罗马｜Sant’Eustachio Il Caffè** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **罗马｜Sant’Eustachio Il Caffè** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **佛罗伦萨｜All’Antico Vinaio** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **佛罗伦萨｜All’Antico Vinaio** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **佛罗伦萨｜Trattoria Sabatino** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **佛罗伦萨｜Ditta Artigianale** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **佛罗伦萨｜Ditta Artigianale** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **佛罗伦萨｜Da Nerbone** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **佛罗伦萨｜Da Nerbone** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **威尼斯｜Hostaria Vite Rossa** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **威尼斯｜Hostaria Vite Rossa** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **威尼斯｜Antiche Carampane** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **威尼斯｜Antiche Carampane** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **威尼斯｜Osteria alla Staffa** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **威尼斯｜Osteria alla Staffa** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **威尼斯｜Caffè Florian** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **威尼斯｜Caffè Florian** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **维也纳｜Figlmüller Wollzeile** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **维也纳｜Zum Schwarzen Kameel** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **维也纳｜Zum Schwarzen Kameel** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **维也纳｜Café Sperl** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **维也纳｜Café Sperl** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **维也纳｜Rathausplatz Christmas Market** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **维也纳｜Rathausplatz Christmas Market** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **布拉格｜Lokál Dlouhááá** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **布拉格｜Café Louvre** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **布拉格｜Café Louvre** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **布拉格｜Kantýna** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **布拉格｜Kantýna** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **布拉格｜Eska** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **布拉格｜Eska** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **巴黎｜Bouillon Pigalle** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **巴黎｜Bouillon Pigalle** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **巴黎｜Breizh Café** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **巴黎｜Café de Flore** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **巴黎｜Café de Flore** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **巴黎｜La Boulangerie du Louvre** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **巴黎｜La Boulangerie du Louvre** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **巴黎｜Pink Mamma** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **巴黎｜Pink Mamma** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **罗马｜Pizzarium Bonci** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **罗马｜Pizzarium Bonci** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **罗马｜Felice a Testaccio** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **罗马｜Felice a Testaccio** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **罗马｜Flavio al Velavevodetto** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **罗马｜Flavio al Velavevodetto** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **罗马｜Two Sizes Tiramisù** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **罗马｜Two Sizes Tiramisù** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **罗马｜Forno Campo de’ Fiori** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **罗马｜Forno Campo de’ Fiori** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **罗马｜Giolitti** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **罗马｜Giolitti** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **佛罗伦萨｜Cammillo Trattoria** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **佛罗伦萨｜Cammillo Trattoria** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **佛罗伦萨｜Cibrèo Trattoria** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **佛罗伦萨｜Cibrèo Trattoria** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **佛罗伦萨｜Gustapizza** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **佛罗伦萨｜Gustapizza** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **佛罗伦萨｜La Ménagère** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **佛罗伦萨｜La Ménagère** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **佛罗伦萨｜Rivoire** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **佛罗伦萨｜Rivoire** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **佛罗伦萨｜Vivoli Gelateria** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **佛罗伦萨｜Vivoli Gelateria** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **威尼斯｜Osteria Plip** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **威尼斯｜Osteria Plip** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **威尼斯｜Frary’s** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **威尼斯｜Frary’s** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **威尼斯｜Ristorante Al Covo** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **威尼斯｜Ristorante Al Covo** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **威尼斯｜Il Paradiso Perduto** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **威尼斯｜Il Paradiso Perduto** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **威尼斯｜Torrefazione Cannaregio** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **威尼斯｜Torrefazione Cannaregio** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **威尼斯｜Gelatoteca Suso** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **威尼斯｜Gelatoteca Suso** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **维也纳｜Café Central** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **维也纳｜Café Central** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **维也纳｜Demel** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **维也纳｜Demel** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **维也纳｜Plachutta Wollzeile** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **维也纳｜Plachutta Wollzeile** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **维也纳｜NENI am Naschmarkt** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **维也纳｜NENI am Naschmarkt** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **维也纳｜Café Landtmann** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **维也纳｜Café Landtmann** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **维也纳｜Vollpension** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **维也纳｜Vollpension** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **布拉格｜Café Savoy** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **布拉格｜Café Savoy** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **布拉格｜Kuchyň** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **布拉格｜Kuchyň** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **布拉格｜U Kroka** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **布拉格｜U Kroka** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **布拉格｜Sisters Bistro** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **布拉格｜Sisters Bistro** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **布拉格｜Choco Café** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **布拉格｜Choco Café** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **布拉格｜EMA espresso bar** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **布拉格｜EMA espresso bar** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **巴黎｜Bouillon Chartier Grands Boulevards** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **巴黎｜Bouillon Chartier Grands Boulevards** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **巴黎｜Angelina Rivoli** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **巴黎｜Angelina Rivoli** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **巴黎｜Le Relais de l’Entrecôte** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **巴黎｜Le Relais de l’Entrecôte** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **巴黎｜Du Pain et des Idées** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **巴黎｜Du Pain et des Idées** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **巴黎｜Stohrer** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **巴黎｜Stohrer** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **巴黎｜Les Enfants du Marché** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **巴黎｜Les Enfants du Marché** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **威尼斯｜Restaurant Ai Pini** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **威尼斯｜Restaurant Ai Pini** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **维也纳｜Tarim Uighur Restaurant** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **维也纳｜Tarim Uighur Restaurant** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **巴黎｜La Table de Mame** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **巴黎｜La Table de Mame** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+- **巴黎｜Fitness Park Porte de Choisy** · GYM_REALITY — Day Pass。官网或购买入口证据不足。 下一步：出发前重新核官方页面或联系前台。
+- **罗马｜Via del Corso** · SHOPPING_REALITY — openingHours、image。已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。 下一步：出发前从官方页面复核，并只补可追溯现场图。
+- **罗马｜Rinascente Roma Tritone** · SHOPPING_REALITY — openingHours、image。已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。 下一步：出发前从官方页面复核，并只补可追溯现场图。
+- **罗马｜Eataly Roma Ostiense** · SHOPPING_REALITY — openingHours、image。已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。 下一步：出发前从官方页面复核，并只补可追溯现场图。
+- **罗马｜Mercato Trionfale** · SHOPPING_REALITY — openingHours、image。已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。 下一步：出发前从官方页面复核，并只补可追溯现场图。
+- **佛罗伦萨｜San Lorenzo Market** · SHOPPING_REALITY — openingHours、image。已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。 下一步：出发前从官方页面复核，并只补可追溯现场图。
+- **佛罗伦萨｜Rinascente Firenze** · SHOPPING_REALITY — openingHours、image。已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。 下一步：出发前从官方页面复核，并只补可追溯现场图。
+- **佛罗伦萨｜Mercato Centrale Firenze** · SHOPPING_REALITY — openingHours、image。已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。 下一步：出发前从官方页面复核，并只补可追溯现场图。
+- **威尼斯｜T Fondaco dei Tedeschi** · SHOPPING_REALITY — openingHours、image。已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。 下一步：出发前从官方页面复核，并只补可追溯现场图。
+- **威尼斯｜Coin Mestre** · SHOPPING_REALITY — openingHours、image。已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。 下一步：出发前从官方页面复核，并只补可追溯现场图。
+- **威尼斯｜Pam Panorama Mestre** · SHOPPING_REALITY — openingHours、image。已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。 下一步：出发前从官方页面复核，并只补可追溯现场图。
+- **威尼斯｜Rialto Market** · SHOPPING_REALITY — openingHours、image。已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。 下一步：出发前从官方页面复核，并只补可追溯现场图。
+- **维也纳｜Mariahilfer Straße** · SHOPPING_REALITY — openingHours、image。已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。 下一步：出发前从官方页面复核，并只补可追溯现场图。
+- **维也纳｜Naschmarkt** · SHOPPING_REALITY — openingHours、image。已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。 下一步：出发前从官方页面复核，并只补可追溯现场图。
+- **维也纳｜STEFFL Department Store** · SHOPPING_REALITY — openingHours、image。已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。 下一步：出发前从官方页面复核，并只补可追溯现场图。
+- **维也纳｜Manner Shop Stephansplatz** · SHOPPING_REALITY — openingHours、image。已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。 下一步：出发前从官方页面复核，并只补可追溯现场图。
+- **维也纳｜Vienna Christmas Market Rathausplatz** · SHOPPING_REALITY — openingHours、image。已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。 下一步：出发前从官方页面复核，并只补可追溯现场图。
+- **维也纳｜BILLA Corso** · SHOPPING_REALITY — openingHours、image。已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。 下一步：出发前从官方页面复核，并只补可追溯现场图。
+- **布拉格｜Palladium Praha** · SHOPPING_REALITY — openingHours、image。已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。 下一步：出发前从官方页面复核，并只补可追溯现场图。
+- **布拉格｜Na Příkopě** · SHOPPING_REALITY — openingHours、image。已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。 下一步：出发前从官方页面复核，并只补可追溯现场图。
+- **布拉格｜Manufaktura** · SHOPPING_REALITY — openingHours、image。已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。 下一步：出发前从官方页面复核，并只补可追溯现场图。
+- **布拉格｜Havelské tržiště** · SHOPPING_REALITY — openingHours、image。已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。 下一步：出发前从官方页面复核，并只补可追溯现场图。
+- **布拉格｜Albert Supermarket** · SHOPPING_REALITY — openingHours、image。已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。 下一步：出发前从官方页面复核，并只补可追溯现场图。
+- **巴黎｜La Samaritaine** · SHOPPING_REALITY — openingHours、image。已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。 下一步：出发前从官方页面复核，并只补可追溯现场图。
+- **巴黎｜Printemps Haussmann** · SHOPPING_REALITY — openingHours、image。已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。 下一步：出发前从官方页面复核，并只补可追溯现场图。
+- **巴黎｜Le BHV Marais** · SHOPPING_REALITY — openingHours、image。已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。 下一步：出发前从官方页面复核，并只补可追溯现场图。
+- **巴黎｜Le Bon Marché Rive Gauche** · SHOPPING_REALITY — openingHours、image。已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。 下一步：出发前从官方页面复核，并只补可追溯现场图。
+- **巴黎｜Avenue des Champs-Élysées** · SHOPPING_REALITY — openingHours、image。已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。 下一步：出发前从官方页面复核，并只补可追溯现场图。
+- **巴黎｜Citypharma Rue du Four** · SHOPPING_REALITY — openingHours、image。已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。 下一步：出发前从官方页面复核，并只补可追溯现场图。
+- **巴黎｜Monoprix** · SHOPPING_REALITY — openingHours、image。已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。 下一步：出发前从官方页面复核，并只补可追溯现场图。
+- **巴黎｜Westfield Forum des Halles** · SHOPPING_REALITY — openingHours、image。已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。 下一步：出发前从官方页面复核，并只补可追溯现场图。
+- **巴黎｜Rue de Rivoli** · SHOPPING_REALITY — openingHours、image。已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。 下一步：出发前从官方页面复核，并只补可追溯现场图。
 
-- **罗马｜Armando al Pantheon** — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **罗马｜Roscioli Salumeria con Cucina** — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **罗马｜Trapizzino Trastevere** — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **罗马｜Sant’Eustachio Il Caffè** — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **佛罗伦萨｜All’Antico Vinaio** — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **佛罗伦萨｜Trattoria Sabatino** — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **佛罗伦萨｜Ditta Artigianale** — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **佛罗伦萨｜Da Nerbone** — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **威尼斯｜Hostaria Vite Rossa** — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **威尼斯｜Antiche Carampane** — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **威尼斯｜Osteria alla Staffa** — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **威尼斯｜Caffè Florian** — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **维也纳｜Figlmüller Wollzeile** — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **维也纳｜Zum Schwarzen Kameel** — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **维也纳｜Café Sperl** — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **维也纳｜Rathausplatz Christmas Market** — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **布拉格｜Lokál Dlouhááá** — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **布拉格｜Café Louvre** — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **布拉格｜Kantýna** — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **布拉格｜Eska** — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **巴黎｜Bouillon Pigalle** — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **巴黎｜Breizh Café** — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **巴黎｜Café de Flore** — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **巴黎｜La Boulangerie du Louvre** — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **巴黎｜Pink Mamma** — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **巴黎｜Café Pigalle** — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
+## P2 · 106
 
-## FOOD_REALITY · 26
-
-- **罗马｜Armando al Pantheon** — address。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
-- **罗马｜Roscioli Salumeria con Cucina** — address、openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
-- **罗马｜Trapizzino Trastevere** — address、openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
-- **罗马｜Sant’Eustachio Il Caffè** — address、openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
-- **佛罗伦萨｜All’Antico Vinaio** — address。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
-- **佛罗伦萨｜Trattoria Sabatino** — address、openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
-- **佛罗伦萨｜Ditta Artigianale** — address、openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
-- **佛罗伦萨｜Da Nerbone** — address、openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
-- **威尼斯｜Hostaria Vite Rossa** — address。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
-- **威尼斯｜Antiche Carampane** — address、openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
-- **威尼斯｜Osteria alla Staffa** — address、openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
-- **威尼斯｜Caffè Florian** — address、openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
-- **维也纳｜Figlmüller Wollzeile** — address、openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
-- **维也纳｜Zum Schwarzen Kameel** — address、openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
-- **维也纳｜Café Sperl** — address、openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
-- **维也纳｜Rathausplatz Christmas Market** — address。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
-- **布拉格｜Lokál Dlouhááá** — address、openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
-- **布拉格｜Café Louvre** — address。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
-- **布拉格｜Kantýna** — address、openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
-- **布拉格｜Eska** — address、openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
-- **巴黎｜Bouillon Pigalle** — address、openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
-- **巴黎｜Breizh Café** — address、openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
-- **巴黎｜Café de Flore** — address。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
-- **巴黎｜La Boulangerie du Louvre** — address、openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
-- **巴黎｜Pink Mamma** — address、openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
-- **巴黎｜Café Pigalle** — address。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
-
-## ARCHIVED_HOTEL · 24
-
-- **罗马｜Vecchia Roma Resort** — 旧候选实时价格。该酒店仅保留为历史候选，不是当前住宿。 下一步：除非用户决定换房，否则不更新。
-- **罗马｜FH55 Grand Hotel Palatino** — 旧候选实时价格。该酒店仅保留为历史候选，不是当前住宿。 下一步：除非用户决定换房，否则不更新。
-- **罗马｜Deseo Home Guest House** — 旧候选实时价格。该酒店仅保留为历史候选，不是当前住宿。 下一步：除非用户决定换房，否则不更新。
-- **罗马｜Adèsso Hotel** — 旧候选实时价格。该酒店仅保留为历史候选，不是当前住宿。 下一步：除非用户决定换房，否则不更新。
-- **佛罗伦萨｜Guest House Morandi** — 旧候选实时价格。该酒店仅保留为历史候选，不是当前住宿。 下一步：除非用户决定换房，否则不更新。
-- **佛罗伦萨｜Hotel Rapallo** — 旧候选实时价格。该酒店仅保留为历史候选，不是当前住宿。 下一步：除非用户决定换房，否则不更新。
-- **佛罗伦萨｜B&B HOTEL Firenze Nuovo Palazzo di Giustizia** — 旧候选实时价格。该酒店仅保留为历史候选，不是当前住宿。 下一步：除非用户决定换房，否则不更新。
-- **佛罗伦萨｜Hotel Perseo** — 旧候选实时价格。该酒店仅保留为历史候选，不是当前住宿。 下一步：除非用户决定换房，否则不更新。
-- **威尼斯 / Mestre｜Hotel Mercure Venezia Marghera** — 旧候选实时价格。该酒店仅保留为历史候选，不是当前住宿。 下一步：除非用户决定换房，否则不更新。
-- **威尼斯本岛｜Hotel Palazzo Stern** — 旧候选实时价格。该酒店仅保留为历史候选，不是当前住宿。 下一步：除非用户决定换房，否则不更新。
-- **威尼斯本岛｜Hotel Agli Alboretti** — 旧候选实时价格。该酒店仅保留为历史候选，不是当前住宿。 下一步：除非用户决定换房，否则不更新。
-- **威尼斯本岛｜Hotel Abbazia** — 旧候选实时价格。该酒店仅保留为历史候选，不是当前住宿。 下一步：除非用户决定换房，否则不更新。
-- **维也纳｜B&B HOTEL Wien-Meidling** — 旧候选实时价格。该酒店仅保留为历史候选，不是当前住宿。 下一步：除非用户决定换房，否则不更新。
-- **维也纳｜Hotel Schani UNO City** — 旧候选实时价格。该酒店仅保留为历史候选，不是当前住宿。 下一步：除非用户决定换房，否则不更新。
-- **维也纳｜The Companion Vienna** — 旧候选实时价格。该酒店仅保留为历史候选，不是当前住宿。 下一步：除非用户决定换房，否则不更新。
-- **维也纳｜Hotel Brauhof Wien** — 旧候选实时价格。该酒店仅保留为历史候选，不是当前住宿。 下一步：除非用户决定换房，否则不更新。
-- **布拉格｜Hotel Adalbert** — 旧候选实时价格。该酒店仅保留为历史候选，不是当前住宿。 下一步：除非用户决定换房，否则不更新。
-- **布拉格｜Hotel Julian** — 旧候选实时价格。该酒店仅保留为历史候选，不是当前住宿。 下一步：除非用户决定换房，否则不更新。
-- **布拉格｜U Páva** — 旧候选实时价格。该酒店仅保留为历史候选，不是当前住宿。 下一步：除非用户决定换房，否则不更新。
-- **布拉格｜Metropolitan Old Town Hotel** — 旧候选实时价格。该酒店仅保留为历史候选，不是当前住宿。 下一步：除非用户决定换房，否则不更新。
-- **巴黎｜B&B HOTEL Paris Italie Porte de Choisy** — 旧候选实时价格。该酒店仅保留为历史候选，不是当前住宿。 下一步：除非用户决定换房，否则不更新。
-- **巴黎｜Motel One Paris–Porte Dorée** — 旧候选实时价格。该酒店仅保留为历史候选，不是当前住宿。 下一步：除非用户决定换房，否则不更新。
-- **巴黎｜B&B HOTEL Paris Porte des Lilas** — 旧候选实时价格。该酒店仅保留为历史候选，不是当前住宿。 下一步：除非用户决定换房，否则不更新。
-- **巴黎｜Hotel des Pyrénées** — 旧候选实时价格。该酒店仅保留为历史候选，不是当前住宿。 下一步：除非用户决定换房，否则不更新。
-
-## HOTEL_ROOM_IMAGES · 23
-
-- **罗马｜FH55 Grand Hotel Palatino** — 3/3房型图待补。无法确认图片确属推荐Single Room。 下一步：逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。
-- **罗马｜Deseo Home Guest House** — 3/3房型图待补。无法确认图片确属推荐Single Room。 下一步：逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。
-- **罗马｜Adèsso Hotel** — 3/3房型图待补。无法确认图片确属推荐Single Room。 下一步：逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。
-- **佛罗伦萨｜Guest House Morandi** — 3/3房型图待补。无法确认图片确属推荐Single Room。 下一步：逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。
-- **佛罗伦萨｜Hotel Rapallo** — 3/3房型图待补。无法确认图片确属推荐Single Room。 下一步：逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。
-- **佛罗伦萨｜B&B HOTEL Firenze Nuovo Palazzo di Giustizia** — 3/3房型图待补。无法确认图片确属推荐Single Room。 下一步：逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。
-- **佛罗伦萨｜Hotel Perseo** — 3/3房型图待补。无法确认图片确属推荐Single Room。 下一步：逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。
-- **威尼斯 / Mestre｜Hotel Mercure Venezia Marghera** — 3/3房型图待补。无法确认图片确属推荐Single Room。 下一步：逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。
-- **威尼斯本岛｜Hotel Palazzo Stern** — 3/3房型图待补。无法确认图片确属推荐Single Room。 下一步：逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。
-- **威尼斯本岛｜Hotel Agli Alboretti** — 3/3房型图待补。无法确认图片确属推荐Single Room。 下一步：逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。
-- **威尼斯本岛｜Hotel Abbazia** — 3/3房型图待补。无法确认图片确属推荐Single Room。 下一步：逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。
-- **维也纳｜B&B HOTEL Wien-Meidling** — 3/3房型图待补。无法确认图片确属推荐Single Room。 下一步：逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。
-- **维也纳｜Hotel Schani UNO City** — 3/3房型图待补。无法确认图片确属推荐Single Room。 下一步：逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。
-- **维也纳｜The Companion Vienna** — 3/3房型图待补。无法确认图片确属推荐Single Room。 下一步：逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。
-- **维也纳｜Hotel Brauhof Wien** — 3/3房型图待补。无法确认图片确属推荐Single Room。 下一步：逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。
-- **布拉格｜Hotel Adalbert** — 3/3房型图待补。无法确认图片确属推荐Single Room。 下一步：逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。
-- **布拉格｜Hotel Julian** — 3/3房型图待补。无法确认图片确属推荐Single Room。 下一步：逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。
-- **布拉格｜U Páva** — 3/3房型图待补。无法确认图片确属推荐Single Room。 下一步：逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。
-- **布拉格｜Metropolitan Old Town Hotel** — 3/3房型图待补。无法确认图片确属推荐Single Room。 下一步：逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。
-- **巴黎｜B&B HOTEL Paris Italie Porte de Choisy** — 3/3房型图待补。无法确认图片确属推荐Single Room。 下一步：逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。
-- **巴黎｜Motel One Paris–Porte Dorée** — 3/3房型图待补。无法确认图片确属推荐Single Room。 下一步：逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。
-- **巴黎｜B&B HOTEL Paris Porte des Lilas** — 3/3房型图待补。无法确认图片确属推荐Single Room。 下一步：逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。
-- **巴黎｜Hotel des Pyrénées** — 3/3房型图待补。无法确认图片确属推荐Single Room。 下一步：逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。
-
-## REAL_HOTEL_UNVERIFIED · 6
-
-- **罗马｜Colonna Palace Hotel** — 24小时前台/自助入住、行李寄存、静音请求、暖气、noise.street、noise.wall、noise.corridor、noise.mechanical。入住凭证没有提供这些运营与噪音事实。 下一步：取消线前向酒店书面确认，未回复前保持待确认。
-- **佛罗伦萨｜La Fonderia Firenze** — 24小时前台/自助入住、行李寄存、静音请求、暖气、noise.street、noise.wall、noise.corridor、noise.mechanical。入住凭证没有提供这些运营与噪音事实。 下一步：取消线前向酒店书面确认，未回复前保持待确认。
-- **威尼斯｜Park Hotel Ai Pini & Restaurant Ai Pini** — 24小时前台/自助入住、行李寄存、静音请求、暖气、noise.street、noise.wall、noise.corridor、noise.mechanical。入住凭证没有提供这些运营与噪音事实。 下一步：取消线前向酒店书面确认，未回复前保持待确认。
-- **维也纳｜Jimmy's Apartments Lory** — 24小时前台/自助入住、行李寄存、静音请求、暖气、noise.street、noise.wall、noise.corridor、noise.mechanical。入住凭证没有提供这些运营与噪音事实。 下一步：取消线前向酒店书面确认，未回复前保持待确认。
-- **布拉格｜Self-Service Hotel Ostaš Praha** — 24小时前台/自助入住、行李寄存、静音请求、暖气、noise.street、noise.wall、noise.corridor、noise.mechanical。入住凭证没有提供这些运营与噪音事实。 下一步：取消线前向酒店书面确认，未回复前保持待确认。
-- **巴黎｜Oden Paris Ivry** — 24小时前台/自助入住、行李寄存、静音请求、暖气、noise.street、noise.wall、noise.corridor、noise.mechanical。入住凭证没有提供这些运营与噪音事实。 下一步：取消线前向酒店书面确认，未回复前保持待确认。
-
-## TRANSPORT_LIVE_DATA · 7
-
-- **Day 1｜CAN → FCO** — 实时班次、总价、23kg行李、改签条件。官方路线存在，但目标日期具体产品尚未形成可出票事实。 下一步：在官方出票页按门到门时间刷新并锁定。
-- **Day 5｜Roma Termini → Firenze S.M.N.** — 实时班次、总价、23kg行李、改签条件。官方路线存在，但目标日期具体产品尚未形成可出票事实。 下一步：在官方出票页按门到门时间刷新并锁定。
-- **Day 7｜Firenze S.M.N. → Venezia Mestre** — 实时班次、总价、23kg行李、改签条件。官方路线存在，但目标日期具体产品尚未形成可出票事实。 下一步：在官方出票页按门到门时间刷新并锁定。
-- **Day 9｜VCE → VIE** — 实时班次、总价、23kg行李、改签条件。官方路线存在，但目标日期具体产品尚未形成可出票事实。 下一步：在官方出票页按门到门时间刷新并锁定。
-- **Day 11｜Wien Hbf → Praha hl.n.** — 实时班次、总价、23kg行李、改签条件。官方路线存在，但目标日期具体产品尚未形成可出票事实。 下一步：在官方出票页按门到门时间刷新并锁定。
-- **Day 13｜PRG → CDG/ORY** — 实时班次、总价、23kg行李、改签条件。官方路线存在，但目标日期具体产品尚未形成可出票事实。 下一步：在官方出票页按门到门时间刷新并锁定。
-- **Day 17｜CDG → CAN** — 实时班次、总价、23kg行李、改签条件。官方路线存在，但目标日期具体产品尚未形成可出票事实。 下一步：在官方出票页按门到门时间刷新并锁定。
-
-## GYM_REALITY · 1
-
-- **巴黎｜Fitness Park Porte de Choisy** — Day Pass。官网或购买入口证据不足。 下一步：出发前重新核官方页面或联系前台。
-
-## PLACE_IMAGES · 24
-
-- **罗马｜圣天使桥 + 圣天使堡外观** — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
-- **罗马｜西班牙台阶 + Via Condotti** — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
-- **罗马｜Pincio露台 + 人民广场** — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
-- **罗马｜Trastevere街巷** — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
-- **佛罗伦萨｜圣十字广场 + 教堂外观** — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
-- **佛罗伦萨｜Palazzo Strozzi庭院** — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
-- **佛罗伦萨｜Mercato Centrale** — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
-- **佛罗伦萨｜Santa Maria Novella香氛药房** — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
-- **威尼斯｜里亚托桥清晨** — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
-- **威尼斯｜Zattere海滨长堤** — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
-- **威尼斯｜圣乔治马焦雷岛** — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
-- **威尼斯｜Cannaregio住宅水巷** — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
-- **维也纳｜上美景宫** — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
-- **维也纳｜圣斯蒂芬大教堂 + Graben** — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
-- **维也纳｜Prater摩天轮** — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
-- **维也纳｜Albertina** — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
-- **布拉格｜Kampa岛 + Lennon Wall** — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
-- **布拉格｜Strahov修道院图书馆** — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
-- **布拉格｜市民会馆 + 火药塔外观** — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
-- **布拉格｜Clementinum** — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
-- **巴黎｜圣礼拜堂** — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
-- **巴黎｜橘园美术馆** — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
-- **巴黎｜Palais Royal柱廊 + 花园** — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
-- **巴黎｜Le Marais + 孚日广场** — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
-
-## PICK_IMAGES · 21
-
-- **罗马｜Best View** — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
-- **罗马｜Best Meal** — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
-- **罗马｜Best Coffee** — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
-- **罗马｜Best Night Walk** — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
-- **罗马｜Best Shopping** — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
-- **佛罗伦萨｜Best Meal** — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
-- **佛罗伦萨｜Best Coffee** — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
-- **佛罗伦萨｜Best Shopping** — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
-- **威尼斯｜Best Photo Spot** — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
-- **威尼斯｜Best Meal** — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
-- **威尼斯｜Best Coffee / Dessert** — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
-- **威尼斯｜Best Night Walk** — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
-- **维也纳｜Best Photo Spot** — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
-- **维也纳｜Best Meal** — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
-- **维也纳｜Best Coffee / Dessert** — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
-- **布拉格｜Best Meal** — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
-- **布拉格｜Best Coffee** — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
-- **布拉格｜Best Easy Win** — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
-- **巴黎｜Best Photo Spot** — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
-- **巴黎｜Best Meal** — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
-- **巴黎｜Best Coffee** — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
+- **罗马｜Armando al Pantheon** · FOOD_REALITY — address。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **罗马｜Roscioli Salumeria con Cucina** · FOOD_REALITY — address、openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **罗马｜Trapizzino Trastevere** · FOOD_REALITY — address、openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **罗马｜Sant’Eustachio Il Caffè** · FOOD_REALITY — address、openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **佛罗伦萨｜All’Antico Vinaio** · FOOD_REALITY — address。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **佛罗伦萨｜Trattoria Sabatino** · FOOD_REALITY — address、openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **佛罗伦萨｜Ditta Artigianale** · FOOD_REALITY — address、openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **佛罗伦萨｜Da Nerbone** · FOOD_REALITY — address、openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **威尼斯｜Hostaria Vite Rossa** · FOOD_REALITY — address。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **威尼斯｜Antiche Carampane** · FOOD_REALITY — address、openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **威尼斯｜Osteria alla Staffa** · FOOD_REALITY — address、openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **威尼斯｜Caffè Florian** · FOOD_REALITY — address、openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **维也纳｜Figlmüller Wollzeile** · FOOD_REALITY — address、openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **维也纳｜Zum Schwarzen Kameel** · FOOD_REALITY — address、openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **维也纳｜Café Sperl** · FOOD_REALITY — address、openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **维也纳｜Rathausplatz Christmas Market** · FOOD_REALITY — address。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **布拉格｜Lokál Dlouhááá** · FOOD_REALITY — address、openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **布拉格｜Café Louvre** · FOOD_REALITY — address。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **布拉格｜Kantýna** · FOOD_REALITY — address、openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **布拉格｜Eska** · FOOD_REALITY — address、openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **巴黎｜Bouillon Pigalle** · FOOD_REALITY — address、openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **巴黎｜Breizh Café** · FOOD_REALITY — address、openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **巴黎｜Café de Flore** · FOOD_REALITY — address。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **巴黎｜La Boulangerie du Louvre** · FOOD_REALITY — address、openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **巴黎｜Pink Mamma** · FOOD_REALITY — address、openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **罗马｜Pizzarium Bonci** · FOOD_REALITY — openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **罗马｜Felice a Testaccio** · FOOD_REALITY — openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **罗马｜Flavio al Velavevodetto** · FOOD_REALITY — openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **罗马｜Two Sizes Tiramisù** · FOOD_REALITY — openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **罗马｜Forno Campo de’ Fiori** · FOOD_REALITY — openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **罗马｜Giolitti** · FOOD_REALITY — openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **佛罗伦萨｜Cammillo Trattoria** · FOOD_REALITY — openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **佛罗伦萨｜Cibrèo Trattoria** · FOOD_REALITY — openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **佛罗伦萨｜Gustapizza** · FOOD_REALITY — openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **佛罗伦萨｜La Ménagère** · FOOD_REALITY — openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **佛罗伦萨｜Rivoire** · FOOD_REALITY — openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **佛罗伦萨｜Vivoli Gelateria** · FOOD_REALITY — openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **威尼斯｜Osteria Plip** · FOOD_REALITY — openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **威尼斯｜Frary’s** · FOOD_REALITY — openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **威尼斯｜Ristorante Al Covo** · FOOD_REALITY — openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **威尼斯｜Il Paradiso Perduto** · FOOD_REALITY — openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **威尼斯｜Torrefazione Cannaregio** · FOOD_REALITY — openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **威尼斯｜Gelatoteca Suso** · FOOD_REALITY — openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **维也纳｜Café Central** · FOOD_REALITY — openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **维也纳｜Demel** · FOOD_REALITY — openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **维也纳｜Plachutta Wollzeile** · FOOD_REALITY — openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **维也纳｜NENI am Naschmarkt** · FOOD_REALITY — openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **维也纳｜Café Landtmann** · FOOD_REALITY — openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **维也纳｜Vollpension** · FOOD_REALITY — openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **布拉格｜Café Savoy** · FOOD_REALITY — openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **布拉格｜Kuchyň** · FOOD_REALITY — openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **布拉格｜U Kroka** · FOOD_REALITY — openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **布拉格｜Sisters Bistro** · FOOD_REALITY — openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **布拉格｜Choco Café** · FOOD_REALITY — openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **布拉格｜EMA espresso bar** · FOOD_REALITY — openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **巴黎｜Bouillon Chartier Grands Boulevards** · FOOD_REALITY — openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **巴黎｜Angelina Rivoli** · FOOD_REALITY — openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **巴黎｜Le Relais de l’Entrecôte** · FOOD_REALITY — openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **巴黎｜Du Pain et des Idées** · FOOD_REALITY — openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **巴黎｜Stohrer** · FOOD_REALITY — openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **巴黎｜Les Enfants du Marché** · FOOD_REALITY — openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
+- **罗马｜圣天使桥 + 圣天使堡外观** · PLACE_IMAGES — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
+- **罗马｜西班牙台阶 + Via Condotti** · PLACE_IMAGES — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
+- **罗马｜Pincio露台 + 人民广场** · PLACE_IMAGES — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
+- **罗马｜Trastevere街巷** · PLACE_IMAGES — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
+- **佛罗伦萨｜圣十字广场 + 教堂外观** · PLACE_IMAGES — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
+- **佛罗伦萨｜Palazzo Strozzi庭院** · PLACE_IMAGES — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
+- **佛罗伦萨｜Mercato Centrale** · PLACE_IMAGES — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
+- **佛罗伦萨｜Santa Maria Novella香氛药房** · PLACE_IMAGES — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
+- **威尼斯｜里亚托桥清晨** · PLACE_IMAGES — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
+- **威尼斯｜Zattere海滨长堤** · PLACE_IMAGES — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
+- **威尼斯｜圣乔治马焦雷岛** · PLACE_IMAGES — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
+- **威尼斯｜Cannaregio住宅水巷** · PLACE_IMAGES — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
+- **维也纳｜上美景宫** · PLACE_IMAGES — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
+- **维也纳｜圣斯蒂芬大教堂 + Graben** · PLACE_IMAGES — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
+- **维也纳｜Prater摩天轮** · PLACE_IMAGES — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
+- **维也纳｜Albertina** · PLACE_IMAGES — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
+- **布拉格｜Kampa岛 + Lennon Wall** · PLACE_IMAGES — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
+- **布拉格｜Strahov修道院图书馆** · PLACE_IMAGES — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
+- **布拉格｜市民会馆 + 火药塔外观** · PLACE_IMAGES — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
+- **布拉格｜Clementinum** · PLACE_IMAGES — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
+- **巴黎｜圣礼拜堂** · PLACE_IMAGES — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
+- **巴黎｜橘园美术馆** · PLACE_IMAGES — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
+- **巴黎｜Palais Royal柱廊 + 花园** · PLACE_IMAGES — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
+- **巴黎｜Le Marais + 孚日广场** · PLACE_IMAGES — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
+- **罗马｜Best View** · PICK_IMAGES — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
+- **罗马｜Best Meal** · PICK_IMAGES — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
+- **罗马｜Best Coffee** · PICK_IMAGES — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
+- **罗马｜Best Night Walk** · PICK_IMAGES — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
+- **罗马｜Best Shopping** · PICK_IMAGES — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
+- **佛罗伦萨｜Best Meal** · PICK_IMAGES — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
+- **佛罗伦萨｜Best Coffee** · PICK_IMAGES — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
+- **佛罗伦萨｜Best Shopping** · PICK_IMAGES — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
+- **威尼斯｜Best Photo Spot** · PICK_IMAGES — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
+- **威尼斯｜Best Meal** · PICK_IMAGES — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
+- **威尼斯｜Best Coffee / Dessert** · PICK_IMAGES — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
+- **威尼斯｜Best Night Walk** · PICK_IMAGES — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
+- **维也纳｜Best Photo Spot** · PICK_IMAGES — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
+- **维也纳｜Best Meal** · PICK_IMAGES — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
+- **维也纳｜Best Coffee / Dessert** · PICK_IMAGES — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
+- **布拉格｜Best Meal** · PICK_IMAGES — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
+- **布拉格｜Best Coffee** · PICK_IMAGES — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
+- **布拉格｜Best Easy Win** · PICK_IMAGES — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
+- **巴黎｜Best Photo Spot** · PICK_IMAGES — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
+- **巴黎｜Best Meal** · PICK_IMAGES — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
+- **巴黎｜Best Coffee** · PICK_IMAGES — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
 

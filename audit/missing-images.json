@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-07T11:48:27.563Z",
-  "total": 94,
+  "generatedAt": "2026-09-08T01:32:24.145Z",
+  "total": 140,
   "items": [
     {
       "category": "FOOD_IMAGES",
@@ -354,8 +354,428 @@
     },
     {
       "category": "FOOD_IMAGES",
-      "id": "paris-pigalle-cafe",
-      "name": "Café Pigalle",
+      "id": "rome-bonci",
+      "name": "Pizzarium Bonci",
+      "city": "罗马",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "rome-felice",
+      "name": "Felice a Testaccio",
+      "city": "罗马",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "rome-flavio",
+      "name": "Flavio al Velavevodetto",
+      "city": "罗马",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "rome-twosizes",
+      "name": "Two Sizes Tiramisù",
+      "city": "罗马",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "rome-forno",
+      "name": "Forno Campo de’ Fiori",
+      "city": "罗马",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "rome-giolitti",
+      "name": "Giolitti",
+      "city": "罗马",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "florence-cammillo",
+      "name": "Cammillo Trattoria",
+      "city": "佛罗伦萨",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "florence-cibreo",
+      "name": "Cibrèo Trattoria",
+      "city": "佛罗伦萨",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "florence-gustapizza",
+      "name": "Gustapizza",
+      "city": "佛罗伦萨",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "florence-menagere",
+      "name": "La Ménagère",
+      "city": "佛罗伦萨",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "florence-rivoire",
+      "name": "Rivoire",
+      "city": "佛罗伦萨",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "florence-vivoli",
+      "name": "Vivoli Gelateria",
+      "city": "佛罗伦萨",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "venice-plip",
+      "name": "Osteria Plip",
+      "city": "威尼斯",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "venice-frarys",
+      "name": "Frary’s",
+      "city": "威尼斯",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "venice-alcovo",
+      "name": "Ristorante Al Covo",
+      "city": "威尼斯",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "venice-paradiso",
+      "name": "Il Paradiso Perduto",
+      "city": "威尼斯",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "venice-torrefazione",
+      "name": "Torrefazione Cannaregio",
+      "city": "威尼斯",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "venice-suso",
+      "name": "Gelatoteca Suso",
+      "city": "威尼斯",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "vienna-central",
+      "name": "Café Central",
+      "city": "维也纳",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "vienna-demel",
+      "name": "Demel",
+      "city": "维也纳",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "vienna-plachutta",
+      "name": "Plachutta Wollzeile",
+      "city": "维也纳",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "vienna-neni",
+      "name": "NENI am Naschmarkt",
+      "city": "维也纳",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "vienna-landtmann",
+      "name": "Café Landtmann",
+      "city": "维也纳",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "vienna-vollpension",
+      "name": "Vollpension",
+      "city": "维也纳",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "prague-savoy",
+      "name": "Café Savoy",
+      "city": "布拉格",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "prague-kuchyn",
+      "name": "Kuchyň",
+      "city": "布拉格",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "prague-ukroka",
+      "name": "U Kroka",
+      "city": "布拉格",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "prague-sisters",
+      "name": "Sisters Bistro",
+      "city": "布拉格",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "prague-choco",
+      "name": "Choco Café",
+      "city": "布拉格",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "prague-ema",
+      "name": "EMA espresso bar",
+      "city": "布拉格",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "paris-chartier",
+      "name": "Bouillon Chartier Grands Boulevards",
       "city": "巴黎",
       "fields": [
         "代表食物图",
@@ -367,279 +787,518 @@
       "priority": "P1"
     },
     {
-      "category": "HOTEL_ROOM_IMAGES",
-      "id": "rome-palatino",
-      "name": "FH55 Grand Hotel Palatino",
+      "category": "FOOD_IMAGES",
+      "id": "paris-angelina",
+      "name": "Angelina Rivoli",
+      "city": "巴黎",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "paris-relais",
+      "name": "Le Relais de l’Entrecôte",
+      "city": "巴黎",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "paris-dupain",
+      "name": "Du Pain et des Idées",
+      "city": "巴黎",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "paris-stohrer",
+      "name": "Stohrer",
+      "city": "巴黎",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "paris-enfants",
+      "name": "Les Enfants du Marché",
+      "city": "巴黎",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "venice-ai-pini-restaurant",
+      "name": "Restaurant Ai Pini",
+      "city": "威尼斯",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "vienna-tarim",
+      "name": "Tarim Uighur Restaurant",
+      "city": "维也纳",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "FOOD_IMAGES",
+      "id": "paris-la-table-de-mame",
+      "name": "La Table de Mame",
+      "city": "巴黎",
+      "fields": [
+        "代表食物图",
+        "环境图",
+        "菜单预览"
+      ],
+      "reason": "真实餐厅与菜品图片待确认",
+      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "priority": "P1"
+    },
+    {
+      "category": "SHOPPING_REALITY",
+      "id": "shop-rome-corso",
+      "name": "Via del Corso",
       "city": "罗马",
       "fields": [
-        "3/3房型图待补"
+        "openingHours",
+        "image"
       ],
-      "reason": "无法确认图片确属推荐Single Room。",
-      "nextAction": "逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。",
+      "reason": "已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。",
+      "nextAction": "出发前从官方页面复核，并只补可追溯现场图。",
       "priority": "P1"
     },
     {
-      "category": "HOTEL_ROOM_IMAGES",
-      "id": "rome-deseo",
-      "name": "Deseo Home Guest House",
+      "category": "SHOPPING_REALITY",
+      "id": "shop-rome-rinascente",
+      "name": "Rinascente Roma Tritone",
       "city": "罗马",
       "fields": [
-        "3/3房型图待补"
+        "openingHours",
+        "image"
       ],
-      "reason": "无法确认图片确属推荐Single Room。",
-      "nextAction": "逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。",
+      "reason": "已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。",
+      "nextAction": "出发前从官方页面复核，并只补可追溯现场图。",
       "priority": "P1"
     },
     {
-      "category": "HOTEL_ROOM_IMAGES",
-      "id": "rome-adesso",
-      "name": "Adèsso Hotel",
+      "category": "SHOPPING_REALITY",
+      "id": "shop-rome-eataly",
+      "name": "Eataly Roma Ostiense",
       "city": "罗马",
       "fields": [
-        "3/3房型图待补"
+        "openingHours",
+        "image"
       ],
-      "reason": "无法确认图片确属推荐Single Room。",
-      "nextAction": "逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。",
+      "reason": "已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。",
+      "nextAction": "出发前从官方页面复核，并只补可追溯现场图。",
       "priority": "P1"
     },
     {
-      "category": "HOTEL_ROOM_IMAGES",
-      "id": "florence-morandi",
-      "name": "Guest House Morandi",
+      "category": "SHOPPING_REALITY",
+      "id": "shop-rome-trionfale",
+      "name": "Mercato Trionfale",
+      "city": "罗马",
+      "fields": [
+        "openingHours",
+        "image"
+      ],
+      "reason": "已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。",
+      "nextAction": "出发前从官方页面复核，并只补可追溯现场图。",
+      "priority": "P1"
+    },
+    {
+      "category": "SHOPPING_REALITY",
+      "id": "shop-florence-sanlorenzo",
+      "name": "San Lorenzo Market",
       "city": "佛罗伦萨",
       "fields": [
-        "3/3房型图待补"
+        "openingHours",
+        "image"
       ],
-      "reason": "无法确认图片确属推荐Single Room。",
-      "nextAction": "逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。",
+      "reason": "已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。",
+      "nextAction": "出发前从官方页面复核，并只补可追溯现场图。",
       "priority": "P1"
     },
     {
-      "category": "HOTEL_ROOM_IMAGES",
-      "id": "florence-rapallo",
-      "name": "Hotel Rapallo",
+      "category": "SHOPPING_REALITY",
+      "id": "shop-florence-rinascente",
+      "name": "Rinascente Firenze",
       "city": "佛罗伦萨",
       "fields": [
-        "3/3房型图待补"
+        "openingHours",
+        "image"
       ],
-      "reason": "无法确认图片确属推荐Single Room。",
-      "nextAction": "逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。",
+      "reason": "已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。",
+      "nextAction": "出发前从官方页面复核，并只补可追溯现场图。",
       "priority": "P1"
     },
     {
-      "category": "HOTEL_ROOM_IMAGES",
-      "id": "florence-bnb",
-      "name": "B&B HOTEL Firenze Nuovo Palazzo di Giustizia",
+      "category": "SHOPPING_REALITY",
+      "id": "shop-florence-centrale",
+      "name": "Mercato Centrale Firenze",
       "city": "佛罗伦萨",
       "fields": [
-        "3/3房型图待补"
+        "openingHours",
+        "image"
       ],
-      "reason": "无法确认图片确属推荐Single Room。",
-      "nextAction": "逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。",
+      "reason": "已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。",
+      "nextAction": "出发前从官方页面复核，并只补可追溯现场图。",
       "priority": "P1"
     },
     {
-      "category": "HOTEL_ROOM_IMAGES",
-      "id": "florence-perseo",
-      "name": "Hotel Perseo",
-      "city": "佛罗伦萨",
+      "category": "SHOPPING_REALITY",
+      "id": "shop-venice-fondaco",
+      "name": "T Fondaco dei Tedeschi",
+      "city": "威尼斯",
       "fields": [
-        "3/3房型图待补"
+        "openingHours",
+        "image"
       ],
-      "reason": "无法确认图片确属推荐Single Room。",
-      "nextAction": "逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。",
+      "reason": "已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。",
+      "nextAction": "出发前从官方页面复核，并只补可追溯现场图。",
       "priority": "P1"
     },
     {
-      "category": "HOTEL_ROOM_IMAGES",
-      "id": "venice-mercure",
-      "name": "Hotel Mercure Venezia Marghera",
-      "city": "威尼斯 / Mestre",
+      "category": "SHOPPING_REALITY",
+      "id": "shop-mestre-coin",
+      "name": "Coin Mestre",
+      "city": "威尼斯",
       "fields": [
-        "3/3房型图待补"
+        "openingHours",
+        "image"
       ],
-      "reason": "无法确认图片确属推荐Single Room。",
-      "nextAction": "逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。",
+      "reason": "已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。",
+      "nextAction": "出发前从官方页面复核，并只补可追溯现场图。",
       "priority": "P1"
     },
     {
-      "category": "HOTEL_ROOM_IMAGES",
-      "id": "venice-stern",
-      "name": "Hotel Palazzo Stern",
-      "city": "威尼斯本岛",
+      "category": "SHOPPING_REALITY",
+      "id": "shop-mestre-pam",
+      "name": "Pam Panorama Mestre",
+      "city": "威尼斯",
       "fields": [
-        "3/3房型图待补"
+        "openingHours",
+        "image"
       ],
-      "reason": "无法确认图片确属推荐Single Room。",
-      "nextAction": "逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。",
+      "reason": "已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。",
+      "nextAction": "出发前从官方页面复核，并只补可追溯现场图。",
       "priority": "P1"
     },
     {
-      "category": "HOTEL_ROOM_IMAGES",
-      "id": "venice-alboretti",
-      "name": "Hotel Agli Alboretti",
-      "city": "威尼斯本岛",
+      "category": "SHOPPING_REALITY",
+      "id": "shop-venice-rialto",
+      "name": "Rialto Market",
+      "city": "威尼斯",
       "fields": [
-        "3/3房型图待补"
+        "openingHours",
+        "image"
       ],
-      "reason": "无法确认图片确属推荐Single Room。",
-      "nextAction": "逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。",
+      "reason": "已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。",
+      "nextAction": "出发前从官方页面复核，并只补可追溯现场图。",
       "priority": "P1"
     },
     {
-      "category": "HOTEL_ROOM_IMAGES",
-      "id": "venice-abbazia",
-      "name": "Hotel Abbazia",
-      "city": "威尼斯本岛",
-      "fields": [
-        "3/3房型图待补"
-      ],
-      "reason": "无法确认图片确属推荐Single Room。",
-      "nextAction": "逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。",
-      "priority": "P1"
-    },
-    {
-      "category": "HOTEL_ROOM_IMAGES",
-      "id": "vienna-bnb",
-      "name": "B&B HOTEL Wien-Meidling",
+      "category": "SHOPPING_REALITY",
+      "id": "shop-vienna-mariahilfer",
+      "name": "Mariahilfer Straße",
       "city": "维也纳",
       "fields": [
-        "3/3房型图待补"
+        "openingHours",
+        "image"
       ],
-      "reason": "无法确认图片确属推荐Single Room。",
-      "nextAction": "逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。",
+      "reason": "已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。",
+      "nextAction": "出发前从官方页面复核，并只补可追溯现场图。",
       "priority": "P1"
     },
     {
-      "category": "HOTEL_ROOM_IMAGES",
-      "id": "vienna-schani",
-      "name": "Hotel Schani UNO City",
+      "category": "SHOPPING_REALITY",
+      "id": "shop-vienna-naschmarkt",
+      "name": "Naschmarkt",
       "city": "维也纳",
       "fields": [
-        "3/3房型图待补"
+        "openingHours",
+        "image"
       ],
-      "reason": "无法确认图片确属推荐Single Room。",
-      "nextAction": "逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。",
+      "reason": "已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。",
+      "nextAction": "出发前从官方页面复核，并只补可追溯现场图。",
       "priority": "P1"
     },
     {
-      "category": "HOTEL_ROOM_IMAGES",
-      "id": "vienna-companion",
-      "name": "The Companion Vienna",
+      "category": "SHOPPING_REALITY",
+      "id": "shop-vienna-steffl",
+      "name": "STEFFL Department Store",
       "city": "维也纳",
       "fields": [
-        "3/3房型图待补"
+        "openingHours",
+        "image"
       ],
-      "reason": "无法确认图片确属推荐Single Room。",
-      "nextAction": "逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。",
+      "reason": "已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。",
+      "nextAction": "出发前从官方页面复核，并只补可追溯现场图。",
       "priority": "P1"
     },
     {
-      "category": "HOTEL_ROOM_IMAGES",
-      "id": "vienna-brauhof",
-      "name": "Hotel Brauhof Wien",
+      "category": "SHOPPING_REALITY",
+      "id": "shop-vienna-manner",
+      "name": "Manner Shop Stephansplatz",
       "city": "维也纳",
       "fields": [
-        "3/3房型图待补"
+        "openingHours",
+        "image"
       ],
-      "reason": "无法确认图片确属推荐Single Room。",
-      "nextAction": "逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。",
+      "reason": "已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。",
+      "nextAction": "出发前从官方页面复核，并只补可追溯现场图。",
       "priority": "P1"
     },
     {
-      "category": "HOTEL_ROOM_IMAGES",
-      "id": "prague-adalbert",
-      "name": "Hotel Adalbert",
+      "category": "SHOPPING_REALITY",
+      "id": "shop-vienna-rathaus",
+      "name": "Vienna Christmas Market Rathausplatz",
+      "city": "维也纳",
+      "fields": [
+        "openingHours",
+        "image"
+      ],
+      "reason": "已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。",
+      "nextAction": "出发前从官方页面复核，并只补可追溯现场图。",
+      "priority": "P1"
+    },
+    {
+      "category": "SHOPPING_REALITY",
+      "id": "shop-vienna-billa",
+      "name": "BILLA Corso",
+      "city": "维也纳",
+      "fields": [
+        "openingHours",
+        "image"
+      ],
+      "reason": "已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。",
+      "nextAction": "出发前从官方页面复核，并只补可追溯现场图。",
+      "priority": "P1"
+    },
+    {
+      "category": "SHOPPING_REALITY",
+      "id": "shop-prague-palladium",
+      "name": "Palladium Praha",
       "city": "布拉格",
       "fields": [
-        "3/3房型图待补"
+        "openingHours",
+        "image"
       ],
-      "reason": "无法确认图片确属推荐Single Room。",
-      "nextAction": "逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。",
+      "reason": "已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。",
+      "nextAction": "出发前从官方页面复核，并只补可追溯现场图。",
       "priority": "P1"
     },
     {
-      "category": "HOTEL_ROOM_IMAGES",
-      "id": "prague-julian",
-      "name": "Hotel Julian",
+      "category": "SHOPPING_REALITY",
+      "id": "shop-prague-prikope",
+      "name": "Na Příkopě",
       "city": "布拉格",
       "fields": [
-        "3/3房型图待补"
+        "openingHours",
+        "image"
       ],
-      "reason": "无法确认图片确属推荐Single Room。",
-      "nextAction": "逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。",
+      "reason": "已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。",
+      "nextAction": "出发前从官方页面复核，并只补可追溯现场图。",
       "priority": "P1"
     },
     {
-      "category": "HOTEL_ROOM_IMAGES",
-      "id": "prague-upava",
-      "name": "U Páva",
+      "category": "SHOPPING_REALITY",
+      "id": "shop-prague-manufaktura",
+      "name": "Manufaktura",
       "city": "布拉格",
       "fields": [
-        "3/3房型图待补"
+        "openingHours",
+        "image"
       ],
-      "reason": "无法确认图片确属推荐Single Room。",
-      "nextAction": "逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。",
+      "reason": "已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。",
+      "nextAction": "出发前从官方页面复核，并只补可追溯现场图。",
       "priority": "P1"
     },
     {
-      "category": "HOTEL_ROOM_IMAGES",
-      "id": "prague-metropolitan",
-      "name": "Metropolitan Old Town Hotel",
+      "category": "SHOPPING_REALITY",
+      "id": "shop-prague-havelske",
+      "name": "Havelské tržiště",
       "city": "布拉格",
       "fields": [
-        "3/3房型图待补"
+        "openingHours",
+        "image"
       ],
-      "reason": "无法确认图片确属推荐Single Room。",
-      "nextAction": "逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。",
+      "reason": "已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。",
+      "nextAction": "出发前从官方页面复核，并只补可追溯现场图。",
       "priority": "P1"
     },
     {
-      "category": "HOTEL_ROOM_IMAGES",
-      "id": "paris-choisy",
-      "name": "B&B HOTEL Paris Italie Porte de Choisy",
-      "city": "巴黎",
+      "category": "SHOPPING_REALITY",
+      "id": "shop-prague-albert",
+      "name": "Albert Supermarket",
+      "city": "布拉格",
       "fields": [
-        "3/3房型图待补"
+        "openingHours",
+        "image"
       ],
-      "reason": "无法确认图片确属推荐Single Room。",
-      "nextAction": "逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。",
+      "reason": "已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。",
+      "nextAction": "出发前从官方页面复核，并只补可追溯现场图。",
       "priority": "P1"
     },
     {
-      "category": "HOTEL_ROOM_IMAGES",
-      "id": "paris-motelone",
-      "name": "Motel One Paris–Porte Dorée",
+      "category": "SHOPPING_REALITY",
+      "id": "shop-paris-samaritaine",
+      "name": "La Samaritaine",
       "city": "巴黎",
       "fields": [
-        "3/3房型图待补"
+        "openingHours",
+        "image"
       ],
-      "reason": "无法确认图片确属推荐Single Room。",
-      "nextAction": "逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。",
+      "reason": "已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。",
+      "nextAction": "出发前从官方页面复核，并只补可追溯现场图。",
       "priority": "P1"
     },
     {
-      "category": "HOTEL_ROOM_IMAGES",
-      "id": "paris-lilas",
-      "name": "B&B HOTEL Paris Porte des Lilas",
+      "category": "SHOPPING_REALITY",
+      "id": "shop-paris-printemps",
+      "name": "Printemps Haussmann",
       "city": "巴黎",
       "fields": [
-        "3/3房型图待补"
+        "openingHours",
+        "image"
       ],
-      "reason": "无法确认图片确属推荐Single Room。",
-      "nextAction": "逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。",
+      "reason": "已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。",
+      "nextAction": "出发前从官方页面复核，并只补可追溯现场图。",
       "priority": "P1"
     },
     {
-      "category": "HOTEL_ROOM_IMAGES",
-      "id": "paris-pyrenees",
-      "name": "Hotel des Pyrénées",
+      "category": "SHOPPING_REALITY",
+      "id": "shop-paris-bhv",
+      "name": "Le BHV Marais",
       "city": "巴黎",
       "fields": [
-        "3/3房型图待补"
+        "openingHours",
+        "image"
       ],
-      "reason": "无法确认图片确属推荐Single Room。",
-      "nextAction": "逐店核官网与OTA同名房型，不能用Double/Suite/公共区替代。",
+      "reason": "已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。",
+      "nextAction": "出发前从官方页面复核，并只补可追溯现场图。",
+      "priority": "P1"
+    },
+    {
+      "category": "SHOPPING_REALITY",
+      "id": "shop-paris-bonmarche",
+      "name": "Le Bon Marché Rive Gauche",
+      "city": "巴黎",
+      "fields": [
+        "openingHours",
+        "image"
+      ],
+      "reason": "已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。",
+      "nextAction": "出发前从官方页面复核，并只补可追溯现场图。",
+      "priority": "P1"
+    },
+    {
+      "category": "SHOPPING_REALITY",
+      "id": "shop-paris-champs",
+      "name": "Avenue des Champs-Élysées",
+      "city": "巴黎",
+      "fields": [
+        "openingHours",
+        "image"
+      ],
+      "reason": "已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。",
+      "nextAction": "出发前从官方页面复核，并只补可追溯现场图。",
+      "priority": "P1"
+    },
+    {
+      "category": "SHOPPING_REALITY",
+      "id": "shop-paris-citypharma",
+      "name": "Citypharma Rue du Four",
+      "city": "巴黎",
+      "fields": [
+        "openingHours",
+        "image"
+      ],
+      "reason": "已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。",
+      "nextAction": "出发前从官方页面复核，并只补可追溯现场图。",
+      "priority": "P1"
+    },
+    {
+      "category": "SHOPPING_REALITY",
+      "id": "shop-paris-monoprix",
+      "name": "Monoprix",
+      "city": "巴黎",
+      "fields": [
+        "openingHours",
+        "image"
+      ],
+      "reason": "已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。",
+      "nextAction": "出发前从官方页面复核，并只补可追溯现场图。",
+      "priority": "P1"
+    },
+    {
+      "category": "SHOPPING_REALITY",
+      "id": "shop-paris-forum",
+      "name": "Westfield Forum des Halles",
+      "city": "巴黎",
+      "fields": [
+        "openingHours",
+        "image"
+      ],
+      "reason": "已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。",
+      "nextAction": "出发前从官方页面复核，并只补可追溯现场图。",
+      "priority": "P1"
+    },
+    {
+      "category": "SHOPPING_REALITY",
+      "id": "shop-paris-rivoli",
+      "name": "Rue de Rivoli",
+      "city": "巴黎",
+      "fields": [
+        "openingHours",
+        "image"
+      ],
+      "reason": "已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。",
+      "nextAction": "出发前从官方页面复核，并只补可追溯现场图。",
       "priority": "P1"
     },
     {

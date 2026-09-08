@@ -3,7 +3,6 @@ import days from '@/data/days.json';
 import places from '@/data/places.json';
 import images from '@/data/images.json';
 import gyms from '@/data/gyms.json';
-import hotels from '@/data/hotels.json';
 import bookings from '@/data/bookings.json';
 import budget from '@/data/budget.json';
 import checklist from '@/data/checklist.json';
@@ -15,6 +14,7 @@ import tasks from '@/data/tasks.json';
 import xhs from '@/data/xhs.json';
 import hotelBookings from '@/data/hotel-bookings.json';
 import transportRecommendations from '@/data/transport-recommendations.json';
+import shopping from '@/data/shopping.json';
 
 export const guideData = {
   trip,
@@ -22,7 +22,6 @@ export const guideData = {
   places,
   images,
   gyms,
-  hotels,
   bookings,
   budget,
   checklist,
@@ -34,6 +33,7 @@ export const guideData = {
   xhs,
   hotelBookings,
   transportRecommendations,
+  shopping,
 };
 
 export const placeMap = new Map(places.map((place) => [place.id, place]));

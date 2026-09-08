@@ -151,11 +151,23 @@ export type TransportCandidate = {
   rank: string;
   operator: string | null;
   service: string | null;
+  flightNo: string | null;
   departure: string | null;
   arrival: string | null;
+  arrivalDate: string;
+  duration: string;
   priceCny: number | null;
+  fareType: string;
   baggage23kg: boolean | null;
+  carryOn: string;
   changes: number;
+  transit: string | null;
+  terminalChange: string | null;
+  selfTransfer: boolean;
+  refundability: string;
+  changeFee: string;
+  checkedAt: string;
+  source: string;
   status: string;
 };
 
@@ -168,42 +180,12 @@ export type TransportSegment = {
   doorToDoor: string;
   recommendation: string;
   source: string;
+  routeSource: string;
+  checkedAt: string;
+  expectedReleaseWindow: string | null;
+  airportComparison?: { airport: string; ground: string; doorToDoorScore: number; decision: string }[];
   status: string;
   candidates: TransportCandidate[];
-};
-
-export type Hotel = {
-  id: string;
-  city: string;
-  role: string;
-  name: string;
-  priceRefundable: number | null;
-  rating: string;
-  openingRenovation: string;
-  roomCondition: string;
-  noise: { street: string; wall: string; corridor: string; mechanical: string; elevator: string; barRestaurant: string; trainTram: string };
-  bed: string;
-  heating: string;
-  privateBathroom: string;
-  frontDeskStorage: string;
-  transport: string;
-  pros: string;
-  cons: string;
-  risk: string;
-  selected: boolean;
-  bookingRequest: string;
-  roomName: string;
-  roomArea: string;
-  bedType: string;
-  ratingCount: string;
-  refundableRoomMatch: string;
-  airConditioning: string;
-  frontDesk: string;
-  lateArrival: string;
-  luggageStorage: string;
-  roomImages: { id: string; file: string | null; caption: string; status: string; source: string | null }[];
-  priceSource: string;
-  lastVerified: string;
 };
 
 export type Restaurant = {

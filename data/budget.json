@@ -70,11 +70,24 @@
       "note": "往返机场、市内接驳与小额应急"
     }
   ],
-  "adjustWhen": "当前预计总额已超过¥26,000，需从非保护项调整；真实酒店订单不以旧候选价覆盖",
+  "fixedCommitted": {
+    "categoryId": "hotels",
+    "amount": 11286.52,
+    "label": "FIXED COMMITTED COST",
+    "note": "6家Confirmed Stay已锁定，不纳入节省项"
+  },
+  "recoveryPlan": [
+    {"id":"international","label":"国际机票","targetSaving":700,"action":"比较CAN/HKG与多城市同单；只接受同票联程、23kg和合理中转"},
+    {"id":"intercity","label":"欧洲跨城","targetSaving":380,"action":"在直达、含23kg或铁路合理退改的前提下锁定目标日低位"},
+    {"id":"food","label":"餐饮","targetSaving":350,"action":"将高价正餐集中在Top Pick，其余用顺路咖啡、市场与简餐"},
+    {"id":"local","label":"市内交通","targetSaving":120,"action":"优先公共交通，拖箱和深夜才用出租车"},
+    {"id":"china_buffer","label":"中国段/应急","targetSaving":80,"action":"确定佛山往返CAN后再压缩冗余接驳预留"}
+  ],
+  "adjustWhen": "当前预计总额高于¥26,000；酒店为固定承诺成本，节省只来自尚未锁定项目",
   "adjustOrder": [
-    "同城静音候选内替换",
-    "压缩高价正餐与可选出租",
-    "购物只保留最低¥1,500"
+    "国际机票在同等23kg与联程条件下比较CAN/HKG",
+    "欧洲交通选择直达且门到门合理的低位票价",
+    "压缩高价正餐与可选出租；购物保留最低¥1,500"
   ],
   "neverCut": [
     "睡眠与安全",

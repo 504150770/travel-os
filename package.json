@@ -9,7 +9,7 @@
     "dev": "vinext dev",
     "build": "vinext build",
     "start": "wrangler dev --config dist/server/wrangler.json",
-    "lint": "oxlint app/page.tsx app/layout.tsx components/travel-guide-v2.tsx components/travel-guide-v3.tsx components/mini-route.tsx hooks/use-local-storage.ts lib scripts",
+    "lint": "oxlint app/page.tsx app/layout.tsx components/travel-guide-v3.tsx components/mini-route.tsx hooks/use-local-storage.ts lib scripts",
     "typecheck": "tsc --noEmit",
     "format": "oxfmt",
     "audit": "node scripts/audit.mjs && node scripts/generate-unverified.mjs",
