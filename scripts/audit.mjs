@@ -15,6 +15,8 @@ const data = {
   activities: readJson('data/activities.json'), dayPlans: readJson('data/day-plans.json'), quickPicks: readJson('data/quick-picks.json'),
   hotelBookings: readJson('data/hotel-bookings.json'), transportRecommendations: readJson('data/transport-recommendations.json'),
   shopping: readJson('data/shopping.json'),
+  dayRoutes: readJson('data/day-routes.json'), transitDayExecution: readJson('data/transit-day-execution.json'),
+  deadlines: readJson('data/deadlines.json'), survival: readJson('data/survival.json'),
 };
 const schema = readJson('schemas/guide.schema.json');
 const failures = [];
@@ -155,6 +157,45 @@ const committed = Number(realStays.reduce((sum, stay) => sum + stay.committedCny
 if (paidOnline !== data.hotelBookings.summary.paidOnlineCny) fail('real_hotels', 'paid hotel total differs from source summary');
 if (committed !== data.hotelBookings.summary.committedCnyApprox) fail('real_hotels', 'committed hotel total differs from source summary');
 checks.realHotelVoucherAudit = failures.filter((item) => item.dimension === 'real_hotels').length === 0;
+for (const stay of realStays) {
+  if (!Number.isFinite(stay.coordinates?.lat) || !Number.isFinite(stay.coordinates?.lng)) fail('hotel_execution', `${stay.hotelName} missing exact geocoded coordinates`);
+  for (const field of ['frontDeskType','onlineCheckIn','luggage','requests','cancellation','images']) if (!stay[field]) fail('hotel_execution', `${stay.hotelName} missing ${field}`);
+}
+const florenceStay = realStays.find((stay) => stay.id === 'stay-florence-fonderia');
+const veniceStay = realStays.find((stay) => stay.id === 'stay-venice-ai-pini');
+const viennaStay = realStays.find((stay) => stay.id === 'stay-vienna-jimmys');
+const pragueStay = realStays.find((stay) => stay.id === 'stay-prague-ostas');
+if (florenceStay?.breakfastTime !== '08:00–09:30' || florenceStay?.onlineCheckIn.requirement !== 'Recommended') fail('hotel_execution', 'La Fonderia execution facts drifted');
+if (veniceStay?.luggage.early !== 'Confirmed' || Object.values(veniceStay?.requests ?? {}).some((value) => value !== 'Requested')) fail('hotel_execution', 'Ai Pini luggage/request facts drifted');
+if (viennaStay?.onlineCheckIn.requirement !== 'Required' || viennaStay?.luggage.early !== 'Confirmed') fail('hotel_execution', "Jimmy's check-in/luggage facts drifted");
+if (pragueStay?.onlineCheckIn.requirement !== 'Required' || pragueStay?.onlineCheckIn.status !== 'Waiting') fail('hotel_execution', 'Ostaš check-in facts drifted');
+checks.hotelExecutionAudit = failures.filter((item) => item.dimension === 'hotel_execution').length === 0;
+
+const hotelIds = new Set(ids(realStays));
+if (data.dayRoutes.length !== 18 || !data.dayRoutes.every((route, index) => route.day === index + 1)) fail('day_routes', 'day route dataset must contain ordered Day 1–18');
+for (const route of data.dayRoutes) {
+  if (route.hotelId && !hotelIds.has(route.hotelId)) fail('day_routes', `Day ${route.day} references missing hotel ${route.hotelId}`);
+  for (const leg of route.legs) {
+    if (!leg.from || !leg.to || !leg.recommendedMode || !leg.recommended) fail('day_routes', `${leg.id} missing route execution fields`);
+    if (leg.status !== 'ROUTED') fail('day_routes', `${leg.id} is not routed`);
+  }
+  if (!route.atGlance?.lateRule || !route.atGlance?.backHotel) fail('day_routes', `Day ${route.day} missing at-a-glance execution fields`);
+}
+checks.dayRouteAudit = failures.filter((item) => item.dimension === 'day_routes').length === 0;
+
+const transitDays = [5,7,9,11,13,17];
+if (data.transitDayExecution.length !== 6 || transitDays.some((day) => !data.transitDayExecution.some((item) => item.day === day))) fail('transit_execution', 'transit execution cards must cover D5/D7/D9/D11/D13/D17');
+const segmentIds = new Set(data.transportRecommendations.segments.map((item) => item.id));
+for (const item of data.transitDayExecution) if (!segmentIds.has(item.segmentId) || !item.delay30 || !item.delay60 || !item.delay90) fail('transit_execution', `Day ${item.day} execution card is incomplete`);
+checks.transitExecutionAudit = failures.filter((item) => item.dimension === 'transit_execution').length === 0;
+
+unique(ids(data.deadlines), 'deadline ids');
+for (const item of data.deadlines) if (!item.date || !item.action || !['Critical','Nice'].includes(item.priority)) fail('deadlines', `${item.id} missing deadline execution fields`);
+checks.deadlineAudit = failures.filter((item) => item.dimension === 'deadlines').length === 0;
+if (data.survival.length !== 6) fail('survival', 'survival dataset must contain six cities');
+for (const item of data.survival) if (!hotelIds.has(item.hotelId) || item.emergency !== '112') fail('survival', `${item.city} survival card is not anchored to its booked hotel`);
+checks.survivalAudit = failures.filter((item) => item.dimension === 'survival').length === 0;
+
 
 if (data.transportRecommendations.segments.length !== 7) fail('transport', 'transport structure must contain 7 trip segments');
 for (const segment of data.transportRecommendations.segments) {
@@ -242,7 +283,7 @@ const report = {
   schemaVersion: 2,
   generatedAt: new Date().toISOString(),
   status: failures.length ? 'failed' : 'passed',
-  summary: { failures: failures.length, warnings: warnings.length, days: data.days.length, editablePlanItems: data.dayPlans.days.reduce((sum, day) => sum + day.activeItems.length + day.alternatives.length, 0), entities: entityIds.size, places: data.places.length, options: data.options.length, images: requestedAssets.length, gyms: data.gyms.length, verifiedGyms: data.gyms.filter((gym) => !String(gym.dayPass).includes('确认') && !String(gym.hours).includes('确认')).length, realHotelBookings: realStays.length, realHotelNights: realStays.reduce((sum, stay) => sum + stay.nights, 0), realHotelCommittedCny: committed, transportSegments: data.transportRecommendations.segments.length, transportTargetDateCaptured: data.transportRecommendations.segments.filter((segment) => segment.candidates.every((candidate) => candidate.departure && candidate.arrival && candidate.priceCny != null)).length, doorToDoorSegments: data.transportRecommendations.segments.filter((segment) => segment.doorToDoor).length, restaurants: data.restaurants.length, verifiedMenus: data.restaurants.filter((item) => item.menu?.status === 'VERIFIED OFFICIAL MENU').length, shopping: data.shopping.length, projectedTotalCny: data.budget.planTotal, hardCapDifferenceCny: data.budget.planTotal - data.budget.hardCap, xhsTopics: data.xhs.length, bookings: data.bookings.items.length, tasks: data.tasks.items.length, confirmedHotelImages: 'DEFERRED' },
+  summary: { failures: failures.length, warnings: warnings.length, days: data.days.length, editablePlanItems: data.dayPlans.days.reduce((sum, day) => sum + day.activeItems.length + day.alternatives.length, 0), entities: entityIds.size, places: data.places.length, options: data.options.length, images: requestedAssets.length, gyms: data.gyms.length, verifiedGyms: data.gyms.filter((gym) => !String(gym.dayPass).includes('确认') && !String(gym.hours).includes('确认')).length, realHotelBookings: realStays.length, realHotelNights: realStays.reduce((sum, stay) => sum + stay.nights, 0), realHotelCommittedCny: committed, transportSegments: data.transportRecommendations.segments.length, transportTargetDateCaptured: data.transportRecommendations.segments.filter((segment) => segment.candidates.every((candidate) => candidate.departure && candidate.arrival && candidate.priceCny != null)).length, doorToDoorSegments: data.transportRecommendations.segments.filter((segment) => segment.doorToDoor).length, restaurants: data.restaurants.length, verifiedMenus: data.restaurants.filter((item) => item.menu?.status === 'VERIFIED OFFICIAL MENU').length, shopping: data.shopping.length, dayRouteLegs: data.dayRoutes.reduce((sum, item) => sum + item.legs.length, 0), transitExecutionCards: data.transitDayExecution.length, deadlines: data.deadlines.length, survivalCities: data.survival.length, projectedTotalCny: data.budget.planTotal, hardCapDifferenceCny: data.budget.planTotal - data.budget.hardCap, xhsTopics: data.xhs.length, bookings: data.bookings.items.length, tasks: data.tasks.items.length, confirmedHotelImages: 'DEFERRED' },
   checks, failures, warnings,
 };
 fs.mkdirSync(path.join(root, 'audit'), { recursive: true });

@@ -23,7 +23,11 @@
     "activities",
     "dayPlans",
     "quickPicks",
-    "shopping"
+    "shopping",
+    "dayRoutes",
+    "transitDayExecution",
+    "deadlines",
+    "survival"
   ],
   "properties": {
     "trip": {
@@ -197,7 +201,15 @@
               "bookingStatus",
               "bookingNumber",
               "sourceFile",
-              "sourcePath"
+              "sourcePath",
+              "coordinates",
+              "frontDeskType",
+              "onlineCheckIn",
+              "luggage",
+              "breakfastTime",
+              "requests",
+              "cancellation",
+              "images"
             ]
           }
         }
@@ -383,6 +395,83 @@
           "hotelName",
           "hotelPriority",
           "distanceStatus"
+        ]
+      }
+    },
+    "dayRoutes": {
+      "type": "array",
+      "minItems": 18,
+      "maxItems": 18,
+      "items": {
+        "type": "object",
+        "required": [
+          "day",
+          "date",
+          "hotelId",
+          "source",
+          "checkedAt",
+          "legs",
+          "summary",
+          "atGlance"
+        ]
+      }
+    },
+    "transitDayExecution": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "required": [
+          "day",
+          "segmentId",
+          "checkout",
+          "toHub",
+          "service",
+          "arrival",
+          "luggage",
+          "afterArrival",
+          "delay30",
+          "delay60",
+          "delay90"
+        ]
+      }
+    },
+    "deadlines": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "date",
+          "time",
+          "category",
+          "title",
+          "status",
+          "priority",
+          "action"
+        ]
+      }
+    },
+    "survival": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "required": [
+          "city",
+          "hotelId",
+          "nearestTransit",
+          "supermarket",
+          "pharmacy",
+          "convenienceFood",
+          "mainStation",
+          "airport",
+          "emergency",
+          "taxi",
+          "hotelPhone"
         ]
       }
     }

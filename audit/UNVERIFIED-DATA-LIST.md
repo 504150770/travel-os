@@ -1,19 +1,41 @@
 # UNVERIFIED DATA LIST
 
-Generated: 2026-09-08T01:32:24.145Z
+Generated: 2026-09-08T05:59:26.710Z
 
 > 真实性优先。以下项目没有被当作已验证事实。
 
-P0 13 · P1 156 · P2 106
+P0 35 · P1 156 · P2 106
 
-## P0 · 13
+## P0 · 35
 
 - **罗马｜Colonna Palace Hotel** · REAL_HOTEL_UNVERIFIED — 24小时前台/自助入住、行李寄存、静音请求、暖气、noise.street、noise.wall、noise.corridor、noise.mechanical。入住凭证没有提供这些运营与噪音事实。 下一步：取消线前向酒店书面确认，未回复前保持待确认。
 - **佛罗伦萨｜La Fonderia Firenze** · REAL_HOTEL_UNVERIFIED — 24小时前台/自助入住、行李寄存、静音请求、暖气、noise.street、noise.wall、noise.corridor、noise.mechanical。入住凭证没有提供这些运营与噪音事实。 下一步：取消线前向酒店书面确认，未回复前保持待确认。
-- **威尼斯｜Park Hotel Ai Pini & Restaurant Ai Pini** · REAL_HOTEL_UNVERIFIED — 24小时前台/自助入住、行李寄存、静音请求、暖气、noise.street、noise.wall、noise.corridor、noise.mechanical。入住凭证没有提供这些运营与噪音事实。 下一步：取消线前向酒店书面确认，未回复前保持待确认。
-- **维也纳｜Jimmy's Apartments Lory** · REAL_HOTEL_UNVERIFIED — 24小时前台/自助入住、行李寄存、静音请求、暖气、noise.street、noise.wall、noise.corridor、noise.mechanical。入住凭证没有提供这些运营与噪音事实。 下一步：取消线前向酒店书面确认，未回复前保持待确认。
-- **布拉格｜Self-Service Hotel Ostaš Praha** · REAL_HOTEL_UNVERIFIED — 24小时前台/自助入住、行李寄存、静音请求、暖气、noise.street、noise.wall、noise.corridor、noise.mechanical。入住凭证没有提供这些运营与噪音事实。 下一步：取消线前向酒店书面确认，未回复前保持待确认。
+- **威尼斯｜Park Hotel Ai Pini & Restaurant Ai Pini** · REAL_HOTEL_UNVERIFIED — 24小时前台/自助入住、暖气、noise.street、noise.wall、noise.corridor、noise.mechanical。入住凭证没有提供这些运营与噪音事实。 下一步：取消线前向酒店书面确认，未回复前保持待确认。
+- **维也纳｜Jimmy's Apartments Lory** · REAL_HOTEL_UNVERIFIED — 静音请求、暖气、noise.street、noise.wall、noise.corridor、noise.mechanical。入住凭证没有提供这些运营与噪音事实。 下一步：取消线前向酒店书面确认，未回复前保持待确认。
+- **布拉格｜Self-Service Hotel Ostaš Praha** · REAL_HOTEL_UNVERIFIED — 行李寄存、静音请求、暖气、noise.street、noise.wall、noise.corridor、noise.mechanical。入住凭证没有提供这些运营与噪音事实。 下一步：取消线前向酒店书面确认，未回复前保持待确认。
 - **巴黎｜Oden Paris Ivry** · REAL_HOTEL_UNVERIFIED — 24小时前台/自助入住、行李寄存、静音请求、暖气、noise.street、noise.wall、noise.corridor、noise.mechanical。入住凭证没有提供这些运营与噪音事实。 下一步：取消线前向酒店书面确认，未回复前保持待确认。
+- **罗马｜Colonna Palace Hotel** · HOTEL_IMAGES — Exterior、Room、Bathroom。酒店外观、房间与卫浴图尚未完成来源和画面核验。 下一步：只补官网或可追溯实拍；完成前显示紧凑“图片待核”。
+- **佛罗伦萨｜La Fonderia Firenze** · HOTEL_IMAGES — Exterior、Room、Bathroom。酒店外观、房间与卫浴图尚未完成来源和画面核验。 下一步：只补官网或可追溯实拍；完成前显示紧凑“图片待核”。
+- **佛罗伦萨｜La Fonderia Firenze** · HOTEL_CHECKIN_LINK — onlineCheckIn.link。入住动作已知，但专属链接只存在于订单邮件或尚未收到。 下一步：在入住邮件到达后补入专属入口。
+- **威尼斯｜Park Hotel Ai Pini & Restaurant Ai Pini** · HOTEL_IMAGES — Exterior、Room、Bathroom。酒店外观、房间与卫浴图尚未完成来源和画面核验。 下一步：只补官网或可追溯实拍；完成前显示紧凑“图片待核”。
+- **维也纳｜Jimmy's Apartments Lory** · HOTEL_IMAGES — Exterior、Room、Bathroom。酒店外观、房间与卫浴图尚未完成来源和画面核验。 下一步：只补官网或可追溯实拍；完成前显示紧凑“图片待核”。
+- **维也纳｜Jimmy's Apartments Lory** · HOTEL_CHECKIN_LINK — onlineCheckIn.link。入住动作已知，但专属链接只存在于订单邮件或尚未收到。 下一步：在入住邮件到达后补入专属入口。
+- **布拉格｜Self-Service Hotel Ostaš Praha** · HOTEL_IMAGES — Exterior、Room、Bathroom。酒店外观、房间与卫浴图尚未完成来源和画面核验。 下一步：只补官网或可追溯实拍；完成前显示紧凑“图片待核”。
+- **布拉格｜Self-Service Hotel Ostaš Praha** · HOTEL_CHECKIN_LINK — onlineCheckIn.link。入住动作已知，但专属链接只存在于订单邮件或尚未收到。 下一步：在入住邮件到达后补入专属入口。
+- **巴黎｜Oden Paris Ivry** · HOTEL_IMAGES — Exterior、Room、Bathroom。酒店外观、房间与卫浴图尚未完成来源和画面核验。 下一步：只补官网或可追溯实拍；完成前显示紧凑“图片待核”。
+- **Day 4｜Day 4 公交段** · ROUTE_TRANSIT — transitMin、transitRoute。步行和出租车路网已核，但实时公共交通班次尚未核验。 下一步：出发前或当天用地图按酒店出发时间刷新。
+- **Day 5｜Day 5 公交段** · ROUTE_TRANSIT — transitMin、transitRoute。步行和出租车路网已核，但实时公共交通班次尚未核验。 下一步：出发前或当天用地图按酒店出发时间刷新。
+- **Day 6｜Day 6 公交段** · ROUTE_TRANSIT — transitMin、transitRoute。步行和出租车路网已核，但实时公共交通班次尚未核验。 下一步：出发前或当天用地图按酒店出发时间刷新。
+- **Day 7｜Day 7 公交段** · ROUTE_TRANSIT — transitMin、transitRoute。步行和出租车路网已核，但实时公共交通班次尚未核验。 下一步：出发前或当天用地图按酒店出发时间刷新。
+- **Day 8｜Day 8 公交段** · ROUTE_TRANSIT — transitMin、transitRoute。步行和出租车路网已核，但实时公共交通班次尚未核验。 下一步：出发前或当天用地图按酒店出发时间刷新。
+- **Day 9｜Day 9 公交段** · ROUTE_TRANSIT — transitMin、transitRoute。步行和出租车路网已核，但实时公共交通班次尚未核验。 下一步：出发前或当天用地图按酒店出发时间刷新。
+- **Day 10｜Day 10 公交段** · ROUTE_TRANSIT — transitMin、transitRoute。步行和出租车路网已核，但实时公共交通班次尚未核验。 下一步：出发前或当天用地图按酒店出发时间刷新。
+- **Day 11｜Day 11 公交段** · ROUTE_TRANSIT — transitMin、transitRoute。步行和出租车路网已核，但实时公共交通班次尚未核验。 下一步：出发前或当天用地图按酒店出发时间刷新。
+- **Day 12｜Day 12 公交段** · ROUTE_TRANSIT — transitMin、transitRoute。步行和出租车路网已核，但实时公共交通班次尚未核验。 下一步：出发前或当天用地图按酒店出发时间刷新。
+- **Day 13｜Day 13 公交段** · ROUTE_TRANSIT — transitMin、transitRoute。步行和出租车路网已核，但实时公共交通班次尚未核验。 下一步：出发前或当天用地图按酒店出发时间刷新。
+- **Day 14｜Day 14 公交段** · ROUTE_TRANSIT — transitMin、transitRoute。步行和出租车路网已核，但实时公共交通班次尚未核验。 下一步：出发前或当天用地图按酒店出发时间刷新。
+- **Day 15｜Day 15 公交段** · ROUTE_TRANSIT — transitMin、transitRoute。步行和出租车路网已核，但实时公共交通班次尚未核验。 下一步：出发前或当天用地图按酒店出发时间刷新。
+- **Day 16｜Day 16 公交段** · ROUTE_TRANSIT — transitMin、transitRoute。步行和出租车路网已核，但实时公共交通班次尚未核验。 下一步：出发前或当天用地图按酒店出发时间刷新。
 - **Day 1｜CAN / HKG → FCO** · TRANSPORT_LIVE_DATA — 实时班次、总价、23kg行李、改签条件。官方路线存在，但目标日期具体产品尚未形成可出票事实。 下一步：在官方出票页按门到门时间刷新并锁定。
 - **Day 5｜Roma Termini → Firenze S.M.N.** · TRANSPORT_LIVE_DATA — 实时班次、总价、23kg行李、改签条件。官方路线存在，但目标日期具体产品尚未形成可出票事实。 下一步：在官方出票页按门到门时间刷新并锁定。
 - **Day 7｜Firenze S.M.N. → Venezia Mestre** · TRANSPORT_LIVE_DATA — 实时班次、总价、23kg行李、改签条件。官方路线存在，但目标日期具体产品尚未形成可出票事实。 下一步：在官方出票页按门到门时间刷新并锁定。

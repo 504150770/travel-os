@@ -12,6 +12,7 @@ const images = read('images.json');
 const hotelBookings = read('hotel-bookings.json').items;
 const transport = read('transport-recommendations.json').segments;
 const shopping = read('shopping.json');
+const dayRoutes = read('day-routes.json');
 const cities = ['罗马','佛罗伦萨','威尼斯','维也纳','布拉格','巴黎'];
 const imageIds = new Set(images.map((image) => image.placeId).filter(Boolean));
 const rows = [];
@@ -42,6 +43,15 @@ for (const stay of hotelBookings) {
   for (const [key, value] of Object.entries(stay.noise)) if (value.includes('UNVERIFIED')) fields.push(`noise.${key}`);
   if (fields.length) add('REAL_HOTEL_UNVERIFIED', stay.id, stay.hotelName, stay.city, fields, '入住凭证没有提供这些运营与噪音事实。', '取消线前向酒店书面确认，未回复前保持待确认。', 'P0');
 }
+for (const stay of hotelBookings) {
+  const missingRoles = (stay.images ?? []).filter((image) => !image.file).map((image) => image.role);
+  if (missingRoles.length) add('HOTEL_IMAGES', `${stay.id}-images`, stay.hotelName, stay.city, missingRoles, '酒店外观、房间与卫浴图尚未完成来源和画面核验。', '只补官网或可追溯实拍；完成前显示紧凑“图片待核”。', 'P0');
+  if (['Required','Recommended'].includes(stay.onlineCheckIn?.requirement) && !stay.onlineCheckIn?.link) add('HOTEL_CHECKIN_LINK', `${stay.id}-checkin`, stay.hotelName, stay.city, ['onlineCheckIn.link'], '入住动作已知，但专属链接只存在于订单邮件或尚未收到。', '在入住邮件到达后补入专属入口。', 'P0');
+}
+for (const route of dayRoutes) {
+  const pending = route.legs.filter((leg) => leg.recommendedMode === 'Transit' && leg.transitMin == null);
+  if (pending.length) add('ROUTE_TRANSIT', `day-${route.day}-transit`, `Day ${route.day} 公交段`, `Day ${route.day}`, ['transitMin','transitRoute'], '步行和出租车路网已核，但实时公共交通班次尚未核验。', '出发前或当天用地图按酒店出发时间刷新。', 'P0');
+}
 for (const segment of transport) {
   const pending = segment.candidates.filter((candidate) => candidate.priceCny == null || candidate.departure == null || candidate.baggage23kg == null);
   if (pending.length) add('TRANSPORT_LIVE_DATA', segment.id, segment.route, `Day ${segment.day}`, ['实时班次','总价','23kg行李','改签条件'], '官方路线存在，但目标日期具体产品尚未形成可出票事实。', '在官方出票页按门到门时间刷新并锁定。', 'P0');
@@ -61,7 +71,7 @@ for (const shop of shopping) {
 for (const option of options) if (!imageIds.has(option.id)) add('PLACE_IMAGES', option.id, option.name, option.city, ['image'], 'Quick Pick/候选地点缺少已核验真实图片。', '补官方或可追溯摄影来源，并做近似图审计。', 'P2');
 for (const group of picks) for (const pick of group.items) if (!imageIds.has(pick.entityId) && !restaurants.some((item) => item.id === pick.entityId && (item.dishImage || item.restaurantImage)) && !gyms.some((item) => item.id === pick.entityId && item.image)) add('PICK_IMAGES', `${group.city}-${pick.label}`, pick.label, group.city, ['image'], 'Pick引用的Entity暂无图片。', '只在Entity补图，不在Picks复制文件。', 'P2');
 
-const missingImageRows = rows.filter((row) => ['FOOD_IMAGES','PLACE_IMAGES','PICK_IMAGES'].includes(row.category) || (row.category === 'SHOPPING_REALITY' && row.fields.includes('image')));
+const missingImageRows = rows.filter((row) => ['FOOD_IMAGES','PLACE_IMAGES','PICK_IMAGES','HOTEL_IMAGES'].includes(row.category) || (row.category === 'SHOPPING_REALITY' && row.fields.includes('image')));
 const missingImages = [...new Map(missingImageRows.map((row) => [`${row.city}|${row.name}`, row])).values()];
 const summary = rows.reduce((acc, row) => { acc[row.category] = (acc[row.category] ?? 0) + 1; return acc; }, {});
 const prioritySummary = rows.reduce((acc, row) => { acc[row.priority] = (acc[row.priority] ?? 0) + 1; return acc; }, { P0: 0, P1: 0, P2: 0 });

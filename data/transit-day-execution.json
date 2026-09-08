@@ -1,0 +1,254 @@
+[
+  {
+    "day": 5,
+    "segmentId": "rome-florence",
+    "checkout": {
+      "breakfast": "08:00",
+      "checkout": "09:00",
+      "leaveHotel": "09:10"
+    },
+    "toHub": {
+      "from": "Colonna Palace Hotel",
+      "to": "Roma Termini",
+      "mode": "Taxi / Bus",
+      "duration": "20–30 min",
+      "largeBag": "28寸箱建议Taxi；公交仅在不拥挤时",
+      "latestLeave": "按09:00–10:30目标车次倒推，最晚发车前60分钟离店"
+    },
+    "service": {
+      "operator": "Trenitalia / Italo",
+      "service": "直达高铁 · 目标班次待出票页确认",
+      "departure": "09:00–10:30目标窗口",
+      "arrival": "约1h25–1h35后",
+      "buffer": "到站前25–35 min",
+      "baggage": "铁路可带大箱；优先预留行李架附近座位",
+      "status": "To Book"
+    },
+    "arrival": {
+      "from": "Firenze S.M.N.",
+      "to": "La Fonderia Firenze",
+      "mode": "Taxi优先 / Tram+walk",
+      "duration": "Taxi约10–15 min；公共交通20–30 min",
+      "changes": "Taxi 0次；公共交通可能1次",
+      "largeBag": "建议Taxi"
+    },
+    "luggage": {
+      "early": "Unknown",
+      "fallback": "SMN站内正规行李寄存；营业时间待复核"
+    },
+    "afterArrival": "约14:30后可排主教座堂外观",
+    "delay30": "缩短主教座堂外观",
+    "delay60": "删除领主广场",
+    "delay90": "只入住、晚餐与休息"
+  },
+  {
+    "day": 7,
+    "segmentId": "florence-venice",
+    "checkout": {
+      "breakfast": "08:00",
+      "checkout": "09:00",
+      "leaveHotel": "09:15"
+    },
+    "toHub": {
+      "from": "La Fonderia Firenze",
+      "to": "Firenze S.M.N.",
+      "mode": "Taxi优先",
+      "duration": "10–20 min",
+      "largeBag": "28寸箱建议Taxi",
+      "latestLeave": "按09:30–11:00目标车次倒推，最晚发车前60分钟离店"
+    },
+    "service": {
+      "operator": "Trenitalia / Italo",
+      "service": "直达 Venezia Mestre · 目标班次待出票页确认",
+      "departure": "09:30–11:00目标窗口",
+      "arrival": "约2h15后",
+      "buffer": "到站前25–35 min",
+      "baggage": "铁路可带大箱；不去Santa Lucia再折返",
+      "status": "To Book"
+    },
+    "arrival": {
+      "from": "Venezia Mestre",
+      "to": "Park Hotel Ai Pini",
+      "mode": "Taxi优先 / Bus",
+      "duration": "Taxi约10–15 min；公交15–25 min",
+      "changes": "Taxi 0次",
+      "largeBag": "建议Taxi"
+    },
+    "luggage": {
+      "early": "Confirmed",
+      "fallback": "酒店明确允许早上提前寄存大行李"
+    },
+    "afterArrival": "约14:30后可排大运河水上巴士",
+    "delay30": "缩短水上巴士体验",
+    "delay60": "删除学院桥",
+    "delay90": "只入住和酒店附近晚餐"
+  },
+  {
+    "day": 9,
+    "segmentId": "vce-vie",
+    "checkout": {
+      "breakfast": "08:30自行解决",
+      "checkout": "10:30",
+      "leaveHotel": "11:30"
+    },
+    "toHub": {
+      "from": "Park Hotel Ai Pini",
+      "to": "VCE",
+      "mode": "Taxi优先 / Bus",
+      "duration": "Taxi约25–35 min；公交35–50 min",
+      "largeBag": "28寸箱优先Taxi",
+      "latestLeave": "14:35航班建议11:30离店"
+    },
+    "service": {
+      "operator": "Austrian / Air Dolomiti",
+      "service": "VCE–VIE直飞 · 推荐14:35",
+      "departure": "14:35",
+      "arrival": "15:45",
+      "buffer": "提前2小时到VCE",
+      "baggage": "23kg待出票页加入并确认",
+      "status": "To Book"
+    },
+    "arrival": {
+      "from": "VIE",
+      "to": "Jimmy's Apartments Lory",
+      "mode": "Taxi优先 / Railjet+市内交通",
+      "duration": "Taxi约25–40 min；公共交通约50–70 min",
+      "changes": "Taxi 0次；公共交通1–2次",
+      "largeBag": "建议Taxi"
+    },
+    "luggage": {
+      "early": "Confirmed",
+      "fallback": "地下室免费 luggage room；一楼 lounge 可等待"
+    },
+    "afterArrival": "约18:00后仅排格拉本短逛",
+    "delay30": "格拉本只走主街",
+    "delay60": "删除格拉本",
+    "delay90": "只完成Guest Registration、入住和晚餐"
+  },
+  {
+    "day": 11,
+    "segmentId": "vienna-prague",
+    "checkout": {
+      "breakfast": "08:00前自行解决",
+      "checkout": "09:00",
+      "leaveHotel": "09:10"
+    },
+    "toHub": {
+      "from": "Jimmy's Apartments Lory",
+      "to": "Wien Hbf",
+      "mode": "Taxi优先 / 市内交通",
+      "duration": "Taxi约15–25 min；公共交通20–30 min",
+      "largeBag": "28寸箱建议Taxi",
+      "latestLeave": "按10:00目标直达车倒推，最晚09:10离店"
+    },
+    "service": {
+      "operator": "ÖBB / České dráhy",
+      "service": "Railjet / EC直达 · 精确班次待确认",
+      "departure": "约10:00目标窗口",
+      "arrival": "约4小时后",
+      "buffer": "到站前25–35 min",
+      "baggage": "铁路可带大箱；建议订座并靠近行李架",
+      "status": "To Book"
+    },
+    "arrival": {
+      "from": "Praha hl.n.",
+      "to": "Self-Service Hotel Ostaš Praha",
+      "mode": "Taxi优先 / Tram",
+      "duration": "Taxi约10–15 min；电车15–25 min",
+      "changes": "Taxi 0次；电车可能1次",
+      "largeBag": "建议Taxi"
+    },
+    "luggage": {
+      "early": "Unknown",
+      "fallback": "Praha hl.n.正规行李寄存；营业时间待复核"
+    },
+    "afterArrival": "完成Alfred online check-in后，傍晚可去老城广场",
+    "delay30": "老城只看主广场",
+    "delay60": "删除下午茶",
+    "delay90": "只入住和酒店附近晚餐"
+  },
+  {
+    "day": 13,
+    "segmentId": "prague-paris",
+    "checkout": {
+      "breakfast": "07:00–07:30",
+      "checkout": "07:00",
+      "leaveHotel": "07:15"
+    },
+    "toHub": {
+      "from": "Self-Service Hotel Ostaš Praha",
+      "to": "PRG",
+      "mode": "预约Taxi优先",
+      "duration": "25–40 min",
+      "largeBag": "28寸箱建议预约Taxi",
+      "latestLeave": "10:30航班建议07:15离店"
+    },
+    "service": {
+      "operator": "Transavia",
+      "service": "PRG–ORY直飞 · 推荐10:30",
+      "departure": "10:30",
+      "arrival": "12:25",
+      "buffer": "提前2小时到PRG",
+      "baggage": "基础票不含23kg；必须另加并核总价",
+      "status": "To Book"
+    },
+    "arrival": {
+      "from": "ORY",
+      "to": "Oden Paris Ivry",
+      "mode": "Taxi优先 / Metro-Tram组合",
+      "duration": "Taxi约20–35 min；公共交通35–55 min",
+      "changes": "Taxi 0次；公共交通1–2次",
+      "largeBag": "建议Taxi"
+    },
+    "luggage": {
+      "early": "Unknown",
+      "fallback": "若酒店不能寄存，使用巴黎正规行李寄存平台；下单前核营业时间"
+    },
+    "afterArrival": "约17:30后可排圣母院外观与塞纳河",
+    "delay30": "只看圣母院外观",
+    "delay60": "删除圣米歇尔桥停留",
+    "delay90": "只入住、酒店附近晚餐"
+  },
+  {
+    "day": 17,
+    "segmentId": "paris-can",
+    "checkout": {
+      "breakfast": "06:00简餐",
+      "checkout": "06:20",
+      "leaveHotel": "06:30"
+    },
+    "toHub": {
+      "from": "Oden Paris Ivry",
+      "to": "CDG",
+      "mode": "预约Taxi优先 / RER组合",
+      "duration": "Taxi约40–65 min；公共交通60–85 min",
+      "largeBag": "28寸箱和冬季早班优先预约Taxi",
+      "latestLeave": "11:05直飞建议06:30离店"
+    },
+    "service": {
+      "operator": "China Southern",
+      "service": "CDG–CAN直飞 · 推荐11:05",
+      "departure": "11:05",
+      "arrival": "次日06:05",
+      "buffer": "提前3小时到CDG",
+      "baggage": "23kg待出票页确认；不可接受不含托运行李",
+      "status": "To Book"
+    },
+    "arrival": {
+      "from": "CAN",
+      "to": "佛山",
+      "mode": "预约接机 / 城际交通",
+      "duration": "按入境、取箱后实时判断",
+      "changes": "预约车0次",
+      "largeBag": "长途飞行后优先少换乘"
+    },
+    "luggage": {
+      "early": "不适用",
+      "fallback": "行李全程托运并保留4kg购物余量"
+    },
+    "afterArrival": "不排景点",
+    "delay30": "不影响国内接驳预留",
+    "delay60": "通知接机方调整",
+    "delay90": "取消非必要中途停留，直接回家"
+  }
+]

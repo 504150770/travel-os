@@ -1,0 +1,80 @@
+[
+  {
+    "city": "罗马",
+    "hotelId": "stay-rome-colonna",
+    "nearestTransit": "Spagna / Barberini Metro A；实际最近公交站点用地图搜索",
+    "supermarket": "Coop / Carrefour Express nearby search",
+    "pharmacy": "Farmacia nearby search",
+    "convenienceFood": "酒店周边便利食品实时搜索",
+    "mainStation": "Roma Termini",
+    "airport": "FCO",
+    "emergency": "112",
+    "taxi": "Roma Capitale official taxi / Uber",
+    "hotelPhone": "0039-06675191"
+  },
+  {
+    "city": "佛罗伦萨",
+    "hotelId": "stay-florence-fonderia",
+    "nearestTransit": "Paolo Uccello Tram T1方向；实际步行入口待地图复核",
+    "supermarket": "Coop.fi nearby search",
+    "pharmacy": "Farmacia nearby search",
+    "convenienceFood": "SMN或酒店周边便利食品实时搜索",
+    "mainStation": "Firenze S.M.N.",
+    "airport": "FLR",
+    "emergency": "112",
+    "taxi": "Taxi 4242 / 4390；现场复核",
+    "hotelPhone": "0039-3383202068"
+  },
+  {
+    "city": "威尼斯",
+    "hotelId": "stay-venice-ai-pini",
+    "nearestTransit": "Via Miranese沿线公交；具体站名与冬季班次待地图复核",
+    "supermarket": "Lidl / Interspar Mestre nearby search",
+    "pharmacy": "Farmacia Mestre nearby search",
+    "convenienceFood": "酒店同址餐厅 / Mestre nearby search",
+    "mainStation": "Venezia Mestre",
+    "airport": "VCE",
+    "emergency": "112",
+    "taxi": "Radio Taxi Mestre / official taxi",
+    "hotelPhone": "0039-041-917722"
+  },
+  {
+    "city": "维也纳",
+    "hotelId": "stay-vienna-jimmys",
+    "nearestTransit": "Enkplatz U3；实际步行入口待地图复核",
+    "supermarket": "BILLA / SPAR nearby search",
+    "pharmacy": "Apotheke nearby search",
+    "convenienceFood": "Lorystraße / Simmeringer Hauptstraße nearby search",
+    "mainStation": "Wien Hbf",
+    "airport": "VIE",
+    "emergency": "112",
+    "taxi": "Taxi 40100 / Uber / Bolt",
+    "hotelPhone": "0043-1-9970010"
+  },
+  {
+    "city": "布拉格",
+    "hotelId": "stay-prague-ostas",
+    "nearestTransit": "Lipanská tram；实际步行入口待地图复核",
+    "supermarket": "Albert / BILLA nearby search",
+    "pharmacy": "Lékárna nearby search",
+    "convenienceFood": "Žižkov nearby search",
+    "mainStation": "Praha hl.n.",
+    "airport": "PRG",
+    "emergency": "112",
+    "taxi": "Liftago / Bolt / official taxi",
+    "hotelPhone": "00420-702081106"
+  },
+  {
+    "city": "巴黎",
+    "hotelId": "stay-paris-oden",
+    "nearestTransit": "Pierre et Marie Curie Metro 7；实际步行入口待地图复核",
+    "supermarket": "Carrefour / Franprix nearby search",
+    "pharmacy": "Pharmacie nearby search",
+    "convenienceFood": "La Table de Mame / nearby bakery search",
+    "mainStation": "Gare de Lyon",
+    "airport": "ORY / CDG",
+    "emergency": "112",
+    "taxi": "G7 / official taxi / Uber",
+    "hotelPhone": "0033-1-77673932"
+  }
+]

@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-08T01:32:24.145Z",
+  "generatedAt": "2026-09-08T05:59:26.710Z",
   "policy": "真实性 > 完成率；未验证字段不进入事实结论。",
-  "total": 275,
+  "total": 297,
   "prioritySummary": {
-    "P0": 13,
+    "P0": 35,
     "P1": 156,
     "P2": 106
   },
@@ -12,6 +12,9 @@
     "FOOD_MENU": 60,
     "FOOD_REALITY": 61,
     "REAL_HOTEL_UNVERIFIED": 6,
+    "HOTEL_IMAGES": 6,
+    "HOTEL_CHECKIN_LINK": 3,
+    "ROUTE_TRANSIT": 13,
     "TRANSPORT_LIVE_DATA": 7,
     "GYM_REALITY": 1,
     "SHOPPING_REALITY": 31,
@@ -2491,8 +2494,6 @@
       "city": "威尼斯",
       "fields": [
         "24小时前台/自助入住",
-        "行李寄存",
-        "静音请求",
         "暖气",
         "noise.street",
         "noise.wall",
@@ -2509,8 +2510,6 @@
       "name": "Jimmy's Apartments Lory",
       "city": "维也纳",
       "fields": [
-        "24小时前台/自助入住",
-        "行李寄存",
         "静音请求",
         "暖气",
         "noise.street",
@@ -2528,7 +2527,6 @@
       "name": "Self-Service Hotel Ostaš Praha",
       "city": "布拉格",
       "fields": [
-        "24小时前台/自助入住",
         "行李寄存",
         "静音请求",
         "暖气",
@@ -2558,6 +2556,295 @@
       ],
       "reason": "入住凭证没有提供这些运营与噪音事实。",
       "nextAction": "取消线前向酒店书面确认，未回复前保持待确认。",
+      "priority": "P0"
+    },
+    {
+      "category": "HOTEL_IMAGES",
+      "id": "stay-rome-colonna-images",
+      "name": "Colonna Palace Hotel",
+      "city": "罗马",
+      "fields": [
+        "Exterior",
+        "Room",
+        "Bathroom"
+      ],
+      "reason": "酒店外观、房间与卫浴图尚未完成来源和画面核验。",
+      "nextAction": "只补官网或可追溯实拍；完成前显示紧凑“图片待核”。",
+      "priority": "P0"
+    },
+    {
+      "category": "HOTEL_IMAGES",
+      "id": "stay-florence-fonderia-images",
+      "name": "La Fonderia Firenze",
+      "city": "佛罗伦萨",
+      "fields": [
+        "Exterior",
+        "Room",
+        "Bathroom"
+      ],
+      "reason": "酒店外观、房间与卫浴图尚未完成来源和画面核验。",
+      "nextAction": "只补官网或可追溯实拍；完成前显示紧凑“图片待核”。",
+      "priority": "P0"
+    },
+    {
+      "category": "HOTEL_CHECKIN_LINK",
+      "id": "stay-florence-fonderia-checkin",
+      "name": "La Fonderia Firenze",
+      "city": "佛罗伦萨",
+      "fields": [
+        "onlineCheckIn.link"
+      ],
+      "reason": "入住动作已知，但专属链接只存在于订单邮件或尚未收到。",
+      "nextAction": "在入住邮件到达后补入专属入口。",
+      "priority": "P0"
+    },
+    {
+      "category": "HOTEL_IMAGES",
+      "id": "stay-venice-ai-pini-images",
+      "name": "Park Hotel Ai Pini & Restaurant Ai Pini",
+      "city": "威尼斯",
+      "fields": [
+        "Exterior",
+        "Room",
+        "Bathroom"
+      ],
+      "reason": "酒店外观、房间与卫浴图尚未完成来源和画面核验。",
+      "nextAction": "只补官网或可追溯实拍；完成前显示紧凑“图片待核”。",
+      "priority": "P0"
+    },
+    {
+      "category": "HOTEL_IMAGES",
+      "id": "stay-vienna-jimmys-images",
+      "name": "Jimmy's Apartments Lory",
+      "city": "维也纳",
+      "fields": [
+        "Exterior",
+        "Room",
+        "Bathroom"
+      ],
+      "reason": "酒店外观、房间与卫浴图尚未完成来源和画面核验。",
+      "nextAction": "只补官网或可追溯实拍；完成前显示紧凑“图片待核”。",
+      "priority": "P0"
+    },
+    {
+      "category": "HOTEL_CHECKIN_LINK",
+      "id": "stay-vienna-jimmys-checkin",
+      "name": "Jimmy's Apartments Lory",
+      "city": "维也纳",
+      "fields": [
+        "onlineCheckIn.link"
+      ],
+      "reason": "入住动作已知，但专属链接只存在于订单邮件或尚未收到。",
+      "nextAction": "在入住邮件到达后补入专属入口。",
+      "priority": "P0"
+    },
+    {
+      "category": "HOTEL_IMAGES",
+      "id": "stay-prague-ostas-images",
+      "name": "Self-Service Hotel Ostaš Praha",
+      "city": "布拉格",
+      "fields": [
+        "Exterior",
+        "Room",
+        "Bathroom"
+      ],
+      "reason": "酒店外观、房间与卫浴图尚未完成来源和画面核验。",
+      "nextAction": "只补官网或可追溯实拍；完成前显示紧凑“图片待核”。",
+      "priority": "P0"
+    },
+    {
+      "category": "HOTEL_CHECKIN_LINK",
+      "id": "stay-prague-ostas-checkin",
+      "name": "Self-Service Hotel Ostaš Praha",
+      "city": "布拉格",
+      "fields": [
+        "onlineCheckIn.link"
+      ],
+      "reason": "入住动作已知，但专属链接只存在于订单邮件或尚未收到。",
+      "nextAction": "在入住邮件到达后补入专属入口。",
+      "priority": "P0"
+    },
+    {
+      "category": "HOTEL_IMAGES",
+      "id": "stay-paris-oden-images",
+      "name": "Oden Paris Ivry",
+      "city": "巴黎",
+      "fields": [
+        "Exterior",
+        "Room",
+        "Bathroom"
+      ],
+      "reason": "酒店外观、房间与卫浴图尚未完成来源和画面核验。",
+      "nextAction": "只补官网或可追溯实拍；完成前显示紧凑“图片待核”。",
+      "priority": "P0"
+    },
+    {
+      "category": "ROUTE_TRANSIT",
+      "id": "day-4-transit",
+      "name": "Day 4 公交段",
+      "city": "Day 4",
+      "fields": [
+        "transitMin",
+        "transitRoute"
+      ],
+      "reason": "步行和出租车路网已核，但实时公共交通班次尚未核验。",
+      "nextAction": "出发前或当天用地图按酒店出发时间刷新。",
+      "priority": "P0"
+    },
+    {
+      "category": "ROUTE_TRANSIT",
+      "id": "day-5-transit",
+      "name": "Day 5 公交段",
+      "city": "Day 5",
+      "fields": [
+        "transitMin",
+        "transitRoute"
+      ],
+      "reason": "步行和出租车路网已核，但实时公共交通班次尚未核验。",
+      "nextAction": "出发前或当天用地图按酒店出发时间刷新。",
+      "priority": "P0"
+    },
+    {
+      "category": "ROUTE_TRANSIT",
+      "id": "day-6-transit",
+      "name": "Day 6 公交段",
+      "city": "Day 6",
+      "fields": [
+        "transitMin",
+        "transitRoute"
+      ],
+      "reason": "步行和出租车路网已核，但实时公共交通班次尚未核验。",
+      "nextAction": "出发前或当天用地图按酒店出发时间刷新。",
+      "priority": "P0"
+    },
+    {
+      "category": "ROUTE_TRANSIT",
+      "id": "day-7-transit",
+      "name": "Day 7 公交段",
+      "city": "Day 7",
+      "fields": [
+        "transitMin",
+        "transitRoute"
+      ],
+      "reason": "步行和出租车路网已核，但实时公共交通班次尚未核验。",
+      "nextAction": "出发前或当天用地图按酒店出发时间刷新。",
+      "priority": "P0"
+    },
+    {
+      "category": "ROUTE_TRANSIT",
+      "id": "day-8-transit",
+      "name": "Day 8 公交段",
+      "city": "Day 8",
+      "fields": [
+        "transitMin",
+        "transitRoute"
+      ],
+      "reason": "步行和出租车路网已核，但实时公共交通班次尚未核验。",
+      "nextAction": "出发前或当天用地图按酒店出发时间刷新。",
+      "priority": "P0"
+    },
+    {
+      "category": "ROUTE_TRANSIT",
+      "id": "day-9-transit",
+      "name": "Day 9 公交段",
+      "city": "Day 9",
+      "fields": [
+        "transitMin",
+        "transitRoute"
+      ],
+      "reason": "步行和出租车路网已核，但实时公共交通班次尚未核验。",
+      "nextAction": "出发前或当天用地图按酒店出发时间刷新。",
+      "priority": "P0"
+    },
+    {
+      "category": "ROUTE_TRANSIT",
+      "id": "day-10-transit",
+      "name": "Day 10 公交段",
+      "city": "Day 10",
+      "fields": [
+        "transitMin",
+        "transitRoute"
+      ],
+      "reason": "步行和出租车路网已核，但实时公共交通班次尚未核验。",
+      "nextAction": "出发前或当天用地图按酒店出发时间刷新。",
+      "priority": "P0"
+    },
+    {
+      "category": "ROUTE_TRANSIT",
+      "id": "day-11-transit",
+      "name": "Day 11 公交段",
+      "city": "Day 11",
+      "fields": [
+        "transitMin",
+        "transitRoute"
+      ],
+      "reason": "步行和出租车路网已核，但实时公共交通班次尚未核验。",
+      "nextAction": "出发前或当天用地图按酒店出发时间刷新。",
+      "priority": "P0"
+    },
+    {
+      "category": "ROUTE_TRANSIT",
+      "id": "day-12-transit",
+      "name": "Day 12 公交段",
+      "city": "Day 12",
+      "fields": [
+        "transitMin",
+        "transitRoute"
+      ],
+      "reason": "步行和出租车路网已核，但实时公共交通班次尚未核验。",
+      "nextAction": "出发前或当天用地图按酒店出发时间刷新。",
+      "priority": "P0"
+    },
+    {
+      "category": "ROUTE_TRANSIT",
+      "id": "day-13-transit",
+      "name": "Day 13 公交段",
+      "city": "Day 13",
+      "fields": [
+        "transitMin",
+        "transitRoute"
+      ],
+      "reason": "步行和出租车路网已核，但实时公共交通班次尚未核验。",
+      "nextAction": "出发前或当天用地图按酒店出发时间刷新。",
+      "priority": "P0"
+    },
+    {
+      "category": "ROUTE_TRANSIT",
+      "id": "day-14-transit",
+      "name": "Day 14 公交段",
+      "city": "Day 14",
+      "fields": [
+        "transitMin",
+        "transitRoute"
+      ],
+      "reason": "步行和出租车路网已核，但实时公共交通班次尚未核验。",
+      "nextAction": "出发前或当天用地图按酒店出发时间刷新。",
+      "priority": "P0"
+    },
+    {
+      "category": "ROUTE_TRANSIT",
+      "id": "day-15-transit",
+      "name": "Day 15 公交段",
+      "city": "Day 15",
+      "fields": [
+        "transitMin",
+        "transitRoute"
+      ],
+      "reason": "步行和出租车路网已核，但实时公共交通班次尚未核验。",
+      "nextAction": "出发前或当天用地图按酒店出发时间刷新。",
+      "priority": "P0"
+    },
+    {
+      "category": "ROUTE_TRANSIT",
+      "id": "day-16-transit",
+      "name": "Day 16 公交段",
+      "city": "Day 16",
+      "fields": [
+        "transitMin",
+        "transitRoute"
+      ],
+      "reason": "步行和出租车路网已核，但实时公共交通班次尚未核验。",
+      "nextAction": "出发前或当天用地图按酒店出发时间刷新。",
       "priority": "P0"
     },
     {

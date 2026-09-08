@@ -145,7 +145,63 @@ export type HotelBooking = {
   sourceFile: string;
   sourcePath: string;
   sourceType: string;
+  coordinates: { lat: number; lng: number };
+  coordinateStatus: string;
+  coordinateSource: string;
+  coordinateVerifiedAt: string;
+  frontDeskType: string;
+  onlineCheckIn: { requirement: string; status: string; link: string | null; deadline: string; note: string; completionDefault: boolean };
+  luggage: { early: string; afterCheckout: string; location: string; fee: string; status: string; note: string };
+  breakfastTime: string;
+  requests: { quietRoom: string; nonSmoking: string; awayFromElevator: string; awayFromStreet: string; awayFromServiceArea: string };
+  cancellation: { freeUntil: string; afterDeadline: string };
+  images: { role: string; file: string | null; source: string | null; status: string }[];
 };
+
+export type DayRouteLeg = {
+  id: string;
+  fromId: string;
+  from: string;
+  toId: string;
+  to: string;
+  distanceKm: number | null;
+  walkMin: number | null;
+  transitMin: number | null;
+  taxiTime: string;
+  recommendedMode: 'Walk' | 'Transit';
+  recommended: string;
+  baggageAdvice: string;
+  status: string;
+};
+
+export type DayRoute = {
+  day: number;
+  date: string;
+  hotelId: string | null;
+  source: string;
+  checkedAt: string;
+  legs: DayRouteLeg[];
+  summary: { walkingKm: number | null; walkingMin: number | null; transitMin: number | null; transfers: number; longestWalkMin: number | null; returnToHotel: string; status: string };
+  atGlance: { start: string; firstStop: string; mustLeaveHotel: string; mustBook: string; meal: string; gym: string; goldenHour: string; lateRule: string; backHotel: string; tomorrow: string };
+};
+
+export type TransitDayExecution = {
+  day: number;
+  segmentId: string;
+  checkout: { breakfast: string; checkout: string; leaveHotel: string };
+  toHub: { from: string; to: string; mode: string; duration: string; largeBag: string; latestLeave: string };
+  service: { operator: string; service: string; departure: string; arrival: string; buffer: string; baggage: string; status: string };
+  arrival: { from: string; to: string; mode: string; duration: string; changes: string; largeBag: string };
+  luggage: { early: string; fallback: string };
+  afterArrival: string;
+  delay30: string;
+  delay60: string;
+  delay90: string;
+};
+
+export type DeadlineItem = { id: string; date: string; time: string; category: string; title: string; status: string; priority: 'Critical' | 'Nice'; action: string; link: string | null; hotelId?: string };
+
+export type SurvivalCity = { city: string; hotelId: string; nearestTransit: string; supermarket: string; pharmacy: string; convenienceFood: string; mainStation: string; airport: string; emergency: string; taxi: string; hotelPhone: string };
 
 export type TransportCandidate = {
   rank: string;

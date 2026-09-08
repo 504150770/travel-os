@@ -28,6 +28,10 @@ pnpm check
 - `data/xhs.json`：城市、拍摄、餐饮、GYM、购物与避坑搜索入口
 - `data/hotel-bookings.json`：6 份真实入住凭证，是当前住宿的唯一事实源
 - `data/transport-recommendations.json`：7 段门到门交通与三档候选槽；动态班次、总价和 23kg 行李未核实时保持 `UNVERIFIED`
+- `data/day-routes.json`：18 天酒店出发/回程、48 段真实路网距离与 Today at a Glance
+- `data/transit-day-execution.json`：6 个跨城日的退房、拖箱、候车/值机、抵达与延误止损卡
+- `data/deadlines.json`：酒店取消、签证、交通、门票、在线入住和航班值机截止节点
+- `data/survival.json`：按已订酒店锚定的 6 城应急与生活速查
 - `data/day-plans.json`：可编辑 Current Trip，只保存 Entity 引用、时间和状态
 - `data/activities.json`：原时间轴中非景点活动的 Entity 数据
 - `data/quick-picks.json`：按城市引用 Entity 的快速选择
@@ -48,4 +52,4 @@ pnpm check
 
 `schemas/guide.schema.json` 定义结构；`scripts/audit.mjs` 检查缺失字段、交叉引用、全部行程点配图、图片内容与感知哈希去重、18天连续日期、15晚/5次换酒店、酒店噪音维度与房型图证据、餐饮来源、Booking/Task联动、预算和外链。结果写入 `audit/final-audit.json`，并更新 `.travel-build-state.json`。只有审计通过时 `handoff_allowed` 才为 `true`。
 
-浏览器中的订单、任务、实际支出、收藏、备注和订单补充信息可在 `MORE → BACKUP` 导出为 JSON，并在另一台设备中恢复。
+浏览器中的订单、任务、实际支出、收藏、在线入住、截止节点、备注和订单补充信息可在 `MORE → BACKUP` 导出为 JSON，并在另一台设备中恢复。

@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-08T01:32:24.145Z",
-  "total": 140,
+  "generatedAt": "2026-09-08T05:59:26.710Z",
+  "total": 146,
   "items": [
     {
       "category": "FOOD_IMAGES",
@@ -897,6 +897,90 @@
       "reason": "真实餐厅与菜品图片待确认",
       "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
       "priority": "P1"
+    },
+    {
+      "category": "HOTEL_IMAGES",
+      "id": "stay-rome-colonna-images",
+      "name": "Colonna Palace Hotel",
+      "city": "罗马",
+      "fields": [
+        "Exterior",
+        "Room",
+        "Bathroom"
+      ],
+      "reason": "酒店外观、房间与卫浴图尚未完成来源和画面核验。",
+      "nextAction": "只补官网或可追溯实拍；完成前显示紧凑“图片待核”。",
+      "priority": "P0"
+    },
+    {
+      "category": "HOTEL_IMAGES",
+      "id": "stay-florence-fonderia-images",
+      "name": "La Fonderia Firenze",
+      "city": "佛罗伦萨",
+      "fields": [
+        "Exterior",
+        "Room",
+        "Bathroom"
+      ],
+      "reason": "酒店外观、房间与卫浴图尚未完成来源和画面核验。",
+      "nextAction": "只补官网或可追溯实拍；完成前显示紧凑“图片待核”。",
+      "priority": "P0"
+    },
+    {
+      "category": "HOTEL_IMAGES",
+      "id": "stay-venice-ai-pini-images",
+      "name": "Park Hotel Ai Pini & Restaurant Ai Pini",
+      "city": "威尼斯",
+      "fields": [
+        "Exterior",
+        "Room",
+        "Bathroom"
+      ],
+      "reason": "酒店外观、房间与卫浴图尚未完成来源和画面核验。",
+      "nextAction": "只补官网或可追溯实拍；完成前显示紧凑“图片待核”。",
+      "priority": "P0"
+    },
+    {
+      "category": "HOTEL_IMAGES",
+      "id": "stay-vienna-jimmys-images",
+      "name": "Jimmy's Apartments Lory",
+      "city": "维也纳",
+      "fields": [
+        "Exterior",
+        "Room",
+        "Bathroom"
+      ],
+      "reason": "酒店外观、房间与卫浴图尚未完成来源和画面核验。",
+      "nextAction": "只补官网或可追溯实拍；完成前显示紧凑“图片待核”。",
+      "priority": "P0"
+    },
+    {
+      "category": "HOTEL_IMAGES",
+      "id": "stay-prague-ostas-images",
+      "name": "Self-Service Hotel Ostaš Praha",
+      "city": "布拉格",
+      "fields": [
+        "Exterior",
+        "Room",
+        "Bathroom"
+      ],
+      "reason": "酒店外观、房间与卫浴图尚未完成来源和画面核验。",
+      "nextAction": "只补官网或可追溯实拍；完成前显示紧凑“图片待核”。",
+      "priority": "P0"
+    },
+    {
+      "category": "HOTEL_IMAGES",
+      "id": "stay-paris-oden-images",
+      "name": "Oden Paris Ivry",
+      "city": "巴黎",
+      "fields": [
+        "Exterior",
+        "Room",
+        "Bathroom"
+      ],
+      "reason": "酒店外观、房间与卫浴图尚未完成来源和画面核验。",
+      "nextAction": "只补官网或可追溯实拍；完成前显示紧凑“图片待核”。",
+      "priority": "P0"
     },
     {
       "category": "SHOPPING_REALITY",

@@ -51,9 +51,16 @@
     {
       "id": "food",
       "name": "餐饮与咖啡",
-      "budget": 3000,
+      "budget": 2700,
       "protected": false,
-      "note": "每天至少一顿坐下用餐，并保留咖啡休息"
+      "note": "按酒店与当天主线选餐；高价正餐集中在Top Pick"
+    },
+    {
+      "id": "gym",
+      "name": "GYM Day Pass",
+      "budget": 300,
+      "protected": false,
+      "note": "5–6次训练候选；只在当日体力允许时使用"
     },
     {
       "id": "shopping",
@@ -77,11 +84,36 @@
     "note": "6家Confirmed Stay已锁定，不纳入节省项"
   },
   "recoveryPlan": [
-    {"id":"international","label":"国际机票","targetSaving":700,"action":"比较CAN/HKG与多城市同单；只接受同票联程、23kg和合理中转"},
-    {"id":"intercity","label":"欧洲跨城","targetSaving":380,"action":"在直达、含23kg或铁路合理退改的前提下锁定目标日低位"},
-    {"id":"food","label":"餐饮","targetSaving":350,"action":"将高价正餐集中在Top Pick，其余用顺路咖啡、市场与简餐"},
-    {"id":"local","label":"市内交通","targetSaving":120,"action":"优先公共交通，拖箱和深夜才用出租车"},
-    {"id":"china_buffer","label":"中国段/应急","targetSaving":80,"action":"确定佛山往返CAN后再压缩冗余接驳预留"}
+    {
+      "id": "international",
+      "label": "国际机票",
+      "targetSaving": 700,
+      "action": "比较CAN/HKG与多城市同单；只接受同票联程、23kg和合理中转"
+    },
+    {
+      "id": "intercity",
+      "label": "欧洲跨城",
+      "targetSaving": 380,
+      "action": "在直达、含23kg或铁路合理退改的前提下锁定目标日低位"
+    },
+    {
+      "id": "food",
+      "label": "餐饮",
+      "targetSaving": 350,
+      "action": "将高价正餐集中在Top Pick，其余用顺路咖啡、市场与简餐"
+    },
+    {
+      "id": "local",
+      "label": "市内交通",
+      "targetSaving": 120,
+      "action": "优先公共交通，拖箱和深夜才用出租车"
+    },
+    {
+      "id": "china_buffer",
+      "label": "中国段/应急",
+      "targetSaving": 80,
+      "action": "确定佛山往返CAN后再压缩冗余接驳预留"
+    }
   ],
   "adjustWhen": "当前预计总额高于¥26,000；酒店为固定承诺成本，节省只来自尚未锁定项目",
   "adjustOrder": [

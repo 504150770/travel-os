@@ -15,6 +15,10 @@ import xhs from '@/data/xhs.json';
 import hotelBookings from '@/data/hotel-bookings.json';
 import transportRecommendations from '@/data/transport-recommendations.json';
 import shopping from '@/data/shopping.json';
+import dayRoutes from '@/data/day-routes.json';
+import transitDayExecution from '@/data/transit-day-execution.json';
+import deadlines from '@/data/deadlines.json';
+import survival from '@/data/survival.json';
 
 export const guideData = {
   trip,
@@ -34,6 +38,10 @@ export const guideData = {
   hotelBookings,
   transportRecommendations,
   shopping,
+  dayRoutes,
+  transitDayExecution,
+  deadlines,
+  survival,
 };
 
 export const placeMap = new Map(places.map((place) => [place.id, place]));

@@ -32,7 +32,12 @@
       "breakfastIncluded": true,
       "breakfastDetails": "12月3–5日，每日1人",
       "paidOnlineCny": 2439.68,
-      "payAtProperty": { "amount": 22.5, "currency": "EUR", "cnyApprox": 175.35, "label": "城市税" },
+      "payAtProperty": {
+        "amount": 22.5,
+        "currency": "EUR",
+        "cnyApprox": 175.35,
+        "label": "城市税"
+      },
       "committedCnyApprox": 2615.03,
       "paymentStatus": "Paid online; city tax due at property",
       "bookingStatus": "Confirmed",
@@ -45,10 +50,71 @@
       "luggageStorage": "UNVERIFIED",
       "quietRoomRequest": "UNVERIFIED",
       "heating": "UNVERIFIED",
-      "noise": { "street": "UNVERIFIED", "wall": "UNVERIFIED", "corridor": "UNVERIFIED", "mechanical": "UNVERIFIED" },
+      "noise": {
+        "street": "UNVERIFIED",
+        "wall": "UNVERIFIED",
+        "corridor": "UNVERIFIED",
+        "mechanical": "UNVERIFIED"
+      },
       "sourceFile": "Rome Hotel.pdf",
       "sourcePath": "C:/Users/50415/OneDrive/Desktop/visa/Hotel/Rome Hotel.pdf",
-      "sourceType": "OTA check-in voucher"
+      "sourceType": "OTA check-in voucher",
+      "coordinates": {
+        "lat": 41.9009349,
+        "lng": 12.4786786
+      },
+      "coordinateStatus": "VERIFIED ADDRESS GEOCODE",
+      "coordinateSource": "OpenStreetMap Nominatim",
+      "coordinateVerifiedAt": "2026-09-08",
+      "frontDeskType": "Unknown",
+      "onlineCheckIn": {
+        "requirement": "Unknown",
+        "status": "Waiting",
+        "link": null,
+        "deadline": "入住前完成（具体截止待邮件）",
+        "note": "未收到可靠在线入住要求",
+        "completionDefault": false
+      },
+      "luggage": {
+        "early": "Unknown",
+        "afterCheckout": "Unknown",
+        "location": "Unknown",
+        "fee": "Unknown",
+        "status": "Unknown",
+        "note": "需在取消线前书面确认"
+      },
+      "breakfastTime": "时间待确认",
+      "requests": {
+        "quietRoom": "Unknown",
+        "nonSmoking": "Unknown",
+        "awayFromElevator": "Unknown",
+        "awayFromStreet": "Unknown",
+        "awayFromServiceArea": "Unknown"
+      },
+      "cancellation": {
+        "freeUntil": "2026-11-28T15:00:00+01:00",
+        "afterDeadline": "2026-11-28 15:00前免费取消；其后收取CNY 2,521.68"
+      },
+      "images": [
+        {
+          "role": "Exterior",
+          "file": null,
+          "source": null,
+          "status": "IMAGE PENDING VERIFICATION"
+        },
+        {
+          "role": "Room",
+          "file": null,
+          "source": null,
+          "status": "IMAGE PENDING VERIFICATION"
+        },
+        {
+          "role": "Bathroom",
+          "file": null,
+          "source": null,
+          "status": "IMAGE PENDING VERIFICATION"
+        }
+      ]
     },
     {
       "id": "stay-florence-fonderia",
@@ -61,7 +127,7 @@
       "checkOut": "2026-12-07",
       "nights": 2,
       "checkInTime": "15:00–19:00",
-      "checkOutTime": "11:00前",
+      "checkOutTime": "10:00前",
       "roomType": "Singola Con Bagno Privato Esterno",
       "bed": "1张单人床",
       "privateBathroom": true,
@@ -69,7 +135,12 @@
       "breakfastIncluded": true,
       "breakfastDetails": "12月6–7日，每日1人",
       "paidOnlineCny": 959.24,
-      "payAtProperty": { "amount": 12, "currency": "EUR", "cnyApprox": 93.53, "label": "其他税费" },
+      "payAtProperty": {
+        "amount": 12,
+        "currency": "EUR",
+        "cnyApprox": 93.53,
+        "label": "其他税费"
+      },
       "committedCnyApprox": 1052.77,
       "paymentStatus": "Paid online; local tax due at property",
       "bookingStatus": "Confirmed",
@@ -82,10 +153,71 @@
       "luggageStorage": "UNVERIFIED",
       "quietRoomRequest": "UNVERIFIED",
       "heating": "UNVERIFIED",
-      "noise": { "street": "UNVERIFIED", "wall": "UNVERIFIED", "corridor": "UNVERIFIED", "mechanical": "UNVERIFIED" },
+      "noise": {
+        "street": "UNVERIFIED",
+        "wall": "UNVERIFIED",
+        "corridor": "UNVERIFIED",
+        "mechanical": "UNVERIFIED"
+      },
       "sourceFile": "Florence Hotel.pdf",
       "sourcePath": "C:/Users/50415/OneDrive/Desktop/visa/Hotel/Florence Hotel.pdf",
-      "sourceType": "OTA check-in voucher"
+      "sourceType": "OTA check-in voucher",
+      "coordinates": {
+        "lat": 43.772806,
+        "lng": 11.2371279
+      },
+      "coordinateStatus": "VERIFIED ADDRESS GEOCODE",
+      "coordinateSource": "OpenStreetMap Nominatim",
+      "coordinateVerifiedAt": "2026-09-08",
+      "frontDeskType": "Traditional reception · limited hours",
+      "onlineCheckIn": {
+        "requirement": "Recommended",
+        "status": "Ready",
+        "link": null,
+        "deadline": "建议抵达前完成",
+        "note": "邮件已提供 online check-in link；请从原邮件打开。Reception hours vary by message · use 13:00 as conservative cutoff",
+        "completionDefault": false
+      },
+      "luggage": {
+        "early": "Unknown",
+        "afterCheckout": "Unknown",
+        "location": "Unknown",
+        "fee": "Unknown",
+        "status": "Unknown",
+        "note": "Reception hours存在两版邮件差异；需按13:00保守截止确认寄存"
+      },
+      "breakfastTime": "08:00–09:30",
+      "requests": {
+        "quietRoom": "Unknown",
+        "nonSmoking": "Unknown",
+        "awayFromElevator": "Unknown",
+        "awayFromStreet": "Unknown",
+        "awayFromServiceArea": "Unknown"
+      },
+      "cancellation": {
+        "freeUntil": "2026-11-30T23:59:00+01:00",
+        "afterDeadline": "2026-11-30 23:59前免费取消；之后分阶段收费，以凭证为准"
+      },
+      "images": [
+        {
+          "role": "Exterior",
+          "file": null,
+          "source": null,
+          "status": "IMAGE PENDING VERIFICATION"
+        },
+        {
+          "role": "Room",
+          "file": null,
+          "source": null,
+          "status": "IMAGE PENDING VERIFICATION"
+        },
+        {
+          "role": "Bathroom",
+          "file": null,
+          "source": null,
+          "status": "IMAGE PENDING VERIFICATION"
+        }
+      ]
     },
     {
       "id": "stay-venice-ai-pini",
@@ -106,7 +238,12 @@
       "breakfastIncluded": false,
       "breakfastDetails": "不含餐",
       "paidOnlineCny": 1036.34,
-      "payAtProperty": { "amount": 9, "currency": "EUR", "cnyApprox": 70.15, "label": "强制费用" },
+      "payAtProperty": {
+        "amount": 9,
+        "currency": "EUR",
+        "cnyApprox": 70.15,
+        "label": "强制费用"
+      },
       "committedCnyApprox": 1106.49,
       "paymentStatus": "Paid online; mandatory fee due at property",
       "bookingStatus": "Confirmed",
@@ -116,13 +253,74 @@
       "bookingNumber": "1128150744293523",
       "guestName": "LAO/JIACONG",
       "frontDesk": "UNVERIFIED",
-      "luggageStorage": "UNVERIFIED",
-      "quietRoomRequest": "UNVERIFIED",
+      "luggageStorage": "CONFIRMED · early large-luggage storage",
+      "quietRoomRequest": "REQUESTED · subject to availability",
       "heating": "UNVERIFIED",
-      "noise": { "street": "UNVERIFIED", "wall": "UNVERIFIED", "corridor": "UNVERIFIED", "mechanical": "UNVERIFIED" },
+      "noise": {
+        "street": "UNVERIFIED",
+        "wall": "UNVERIFIED",
+        "corridor": "UNVERIFIED",
+        "mechanical": "UNVERIFIED"
+      },
       "sourceFile": "Venice Hotel.pdf",
       "sourcePath": "C:/Users/50415/OneDrive/Desktop/visa/Hotel/Venice Hotel.pdf",
-      "sourceType": "OTA check-in voucher"
+      "sourceType": "OTA check-in voucher",
+      "coordinates": {
+        "lat": 45.486558,
+        "lng": 12.21772
+      },
+      "coordinateStatus": "VERIFIED ADDRESS GEOCODE",
+      "coordinateSource": "OpenStreetMap Nominatim",
+      "coordinateVerifiedAt": "2026-09-08",
+      "frontDeskType": "Traditional reception",
+      "onlineCheckIn": {
+        "requirement": "Not Required",
+        "status": "Not Required",
+        "link": null,
+        "deadline": "不适用",
+        "note": "当前没有在线入住要求",
+        "completionDefault": true
+      },
+      "luggage": {
+        "early": "Confirmed",
+        "afterCheckout": "Unknown",
+        "location": "酒店行李寄存处",
+        "fee": "未说明收费",
+        "status": "Confirmed",
+        "note": "酒店明确允许早上提前寄存大行李"
+      },
+      "breakfastTime": "Unknown",
+      "requests": {
+        "quietRoom": "Requested",
+        "nonSmoking": "Requested",
+        "awayFromElevator": "Requested",
+        "awayFromStreet": "Requested",
+        "awayFromServiceArea": "Requested"
+      },
+      "cancellation": {
+        "freeUntil": "2026-12-04T16:00:00+01:00",
+        "afterDeadline": "2026-12-04 16:00前免费取消；之后分阶段收费，以凭证为准"
+      },
+      "images": [
+        {
+          "role": "Exterior",
+          "file": null,
+          "source": null,
+          "status": "IMAGE PENDING VERIFICATION"
+        },
+        {
+          "role": "Room",
+          "file": null,
+          "source": null,
+          "status": "IMAGE PENDING VERIFICATION"
+        },
+        {
+          "role": "Bathroom",
+          "file": null,
+          "source": null,
+          "status": "IMAGE PENDING VERIFICATION"
+        }
+      ]
     },
     {
       "id": "stay-vienna-jimmys",
@@ -152,14 +350,75 @@
       "confirmationNumber": "2552904432",
       "bookingNumber": "1128150745083611",
       "guestName": "LAO/JIACONG",
-      "frontDesk": "自助/前台方式UNVERIFIED",
-      "luggageStorage": "UNVERIFIED",
+      "frontDesk": "Self / contactless check-in",
+      "luggageStorage": "CONFIRMED · basement luggage room",
       "quietRoomRequest": "UNVERIFIED",
       "heating": "UNVERIFIED",
-      "noise": { "street": "UNVERIFIED", "wall": "UNVERIFIED", "corridor": "UNVERIFIED", "mechanical": "UNVERIFIED" },
+      "noise": {
+        "street": "UNVERIFIED",
+        "wall": "UNVERIFIED",
+        "corridor": "UNVERIFIED",
+        "mechanical": "UNVERIFIED"
+      },
       "sourceFile": "Vienna Hotel.pdf",
       "sourcePath": "C:/Users/50415/OneDrive/Desktop/visa/Hotel/Vienna Hotel.pdf",
-      "sourceType": "OTA check-in voucher"
+      "sourceType": "OTA check-in voucher",
+      "coordinates": {
+        "lat": 48.176712,
+        "lng": 16.4086891
+      },
+      "coordinateStatus": "VERIFIED ADDRESS GEOCODE",
+      "coordinateSource": "OpenStreetMap Nominatim",
+      "coordinateVerifiedAt": "2026-09-08",
+      "frontDeskType": "Self check-in / Contactless",
+      "onlineCheckIn": {
+        "requirement": "Required",
+        "status": "Required",
+        "link": null,
+        "deadline": "入住前完成 Guest Registration",
+        "note": "完成 registration 后才能生成 keycode；入住当天10:00发送 key information；酒店需要email",
+        "completionDefault": false
+      },
+      "luggage": {
+        "early": "Confirmed",
+        "afterCheckout": "Unknown",
+        "location": "地下室免费 luggage room；一楼 lounge 可等待",
+        "fee": "Free",
+        "status": "Confirmed",
+        "note": "luggage room door code 与 main door code 相同"
+      },
+      "breakfastTime": "Unknown",
+      "requests": {
+        "quietRoom": "Unknown",
+        "nonSmoking": "Unknown",
+        "awayFromElevator": "Unknown",
+        "awayFromStreet": "Unknown",
+        "awayFromServiceArea": "Unknown"
+      },
+      "cancellation": {
+        "freeUntil": "2026-12-06T23:59:00+01:00",
+        "afterDeadline": "2026-12-06 23:59前免费取消；之后收取CNY 1,463.80"
+      },
+      "images": [
+        {
+          "role": "Exterior",
+          "file": null,
+          "source": null,
+          "status": "IMAGE PENDING VERIFICATION"
+        },
+        {
+          "role": "Room",
+          "file": null,
+          "source": null,
+          "status": "IMAGE PENDING VERIFICATION"
+        },
+        {
+          "role": "Bathroom",
+          "file": null,
+          "source": null,
+          "status": "IMAGE PENDING VERIFICATION"
+        }
+      ]
     },
     {
       "id": "stay-prague-ostas",
@@ -180,7 +439,12 @@
       "breakfastIncluded": true,
       "breakfastDetails": "12月12–13日，每日1人",
       "paidOnlineCny": 1803.03,
-      "payAtProperty": { "amount": 99.7, "currency": "CZK", "cnyApprox": 32.13, "label": "其他税费" },
+      "payAtProperty": {
+        "amount": 99.7,
+        "currency": "CZK",
+        "cnyApprox": 32.13,
+        "label": "其他税费"
+      },
       "committedCnyApprox": 1835.16,
       "paymentStatus": "Paid online; local tax due at property",
       "bookingStatus": "Confirmed",
@@ -189,14 +453,75 @@
       "confirmationNumber": "S1_2552924180",
       "bookingNumber": "1128150745523141",
       "guestName": "LAO/JIACONG",
-      "frontDesk": "酒店标注Self-Service；人工前台UNVERIFIED",
+      "frontDesk": "Self-service hotel · Alfred automatic receptionist",
       "luggageStorage": "UNVERIFIED",
       "quietRoomRequest": "庭院景房型已确认；其他静音条件UNVERIFIED",
       "heating": "UNVERIFIED",
-      "noise": { "street": "庭院景房型已确认；实际街噪UNVERIFIED", "wall": "UNVERIFIED", "corridor": "UNVERIFIED", "mechanical": "UNVERIFIED" },
+      "noise": {
+        "street": "庭院景房型已确认；实际街噪UNVERIFIED",
+        "wall": "UNVERIFIED",
+        "corridor": "UNVERIFIED",
+        "mechanical": "UNVERIFIED"
+      },
       "sourceFile": "Prague Hotel.pdf",
       "sourcePath": "C:/Users/50415/OneDrive/Desktop/visa/Hotel/Prague Hotel.pdf",
-      "sourceType": "OTA check-in voucher"
+      "sourceType": "OTA check-in voucher",
+      "coordinates": {
+        "lat": 50.0861846,
+        "lng": 14.4460814
+      },
+      "coordinateStatus": "VERIFIED ADDRESS GEOCODE",
+      "coordinateSource": "OpenStreetMap Nominatim",
+      "coordinateVerifiedAt": "2026-09-08",
+      "frontDeskType": "Self-service / Contactless",
+      "onlineCheckIn": {
+        "requirement": "Required",
+        "status": "Waiting",
+        "link": null,
+        "deadline": "收到 Alfred 邮件后、入住前完成",
+        "note": "入住前几天由 Alfred automatic receptionist 发送；完成后查看 room number、main door PIN、room door PIN",
+        "completionDefault": false
+      },
+      "luggage": {
+        "early": "Unknown",
+        "afterCheckout": "Unknown",
+        "location": "Unknown",
+        "fee": "Unknown",
+        "status": "Unknown",
+        "note": "需在取消线前书面确认"
+      },
+      "breakfastTime": "时间待确认",
+      "requests": {
+        "quietRoom": "Unknown",
+        "nonSmoking": "Unknown",
+        "awayFromElevator": "Unknown",
+        "awayFromStreet": "Unknown",
+        "awayFromServiceArea": "Unknown"
+      },
+      "cancellation": {
+        "freeUntil": "2026-12-10T18:00:00+01:00",
+        "afterDeadline": "2026-12-10 18:00前免费取消；之后分阶段收费，以凭证为准"
+      },
+      "images": [
+        {
+          "role": "Exterior",
+          "file": null,
+          "source": null,
+          "status": "IMAGE PENDING VERIFICATION"
+        },
+        {
+          "role": "Room",
+          "file": null,
+          "source": null,
+          "status": "IMAGE PENDING VERIFICATION"
+        },
+        {
+          "role": "Bathroom",
+          "file": null,
+          "source": null,
+          "status": "IMAGE PENDING VERIFICATION"
+        }
+      ]
     },
     {
       "id": "stay-paris-oden",
@@ -217,7 +542,12 @@
       "breakfastIncluded": false,
       "breakfastDetails": "不含餐",
       "paidOnlineCny": 3023.63,
-      "payAtProperty": { "amount": 33.8, "currency": "EUR", "cnyApprox": 263.64, "label": "城市税" },
+      "payAtProperty": {
+        "amount": 33.8,
+        "currency": "EUR",
+        "cnyApprox": 263.64,
+        "label": "城市税"
+      },
       "committedCnyApprox": 3287.27,
       "paymentStatus": "Paid online; city tax due at property",
       "bookingStatus": "Confirmed",
@@ -230,10 +560,71 @@
       "luggageStorage": "UNVERIFIED",
       "quietRoomRequest": "UNVERIFIED",
       "heating": "UNVERIFIED",
-      "noise": { "street": "UNVERIFIED", "wall": "UNVERIFIED", "corridor": "UNVERIFIED", "mechanical": "UNVERIFIED" },
+      "noise": {
+        "street": "UNVERIFIED",
+        "wall": "UNVERIFIED",
+        "corridor": "UNVERIFIED",
+        "mechanical": "UNVERIFIED"
+      },
       "sourceFile": "Paris Hotel.pdf",
       "sourcePath": "C:/Users/50415/OneDrive/Desktop/visa/Hotel/Paris Hotel.pdf",
-      "sourceType": "OTA check-in voucher"
+      "sourceType": "OTA check-in voucher",
+      "coordinates": {
+        "lat": 48.8188144,
+        "lng": 2.3808359
+      },
+      "coordinateStatus": "VERIFIED ADDRESS GEOCODE",
+      "coordinateSource": "OpenStreetMap Nominatim",
+      "coordinateVerifiedAt": "2026-09-08",
+      "frontDeskType": "Unknown",
+      "onlineCheckIn": {
+        "requirement": "Unknown",
+        "status": "Waiting",
+        "link": null,
+        "deadline": "入住前完成（具体截止待邮件）",
+        "note": "未收到可靠在线入住要求",
+        "completionDefault": false
+      },
+      "luggage": {
+        "early": "Unknown",
+        "afterCheckout": "Unknown",
+        "location": "Unknown",
+        "fee": "Unknown",
+        "status": "Unknown",
+        "note": "需在取消线前书面确认"
+      },
+      "breakfastTime": "Unknown",
+      "requests": {
+        "quietRoom": "Unknown",
+        "nonSmoking": "Unknown",
+        "awayFromElevator": "Unknown",
+        "awayFromStreet": "Unknown",
+        "awayFromServiceArea": "Unknown"
+      },
+      "cancellation": {
+        "freeUntil": "2026-12-12T17:00:00+01:00",
+        "afterDeadline": "2026-12-12 17:00前免费取消；之后分阶段收费，以凭证为准"
+      },
+      "images": [
+        {
+          "role": "Exterior",
+          "file": null,
+          "source": null,
+          "status": "IMAGE PENDING VERIFICATION"
+        },
+        {
+          "role": "Room",
+          "file": null,
+          "source": null,
+          "status": "IMAGE PENDING VERIFICATION"
+        },
+        {
+          "role": "Bathroom",
+          "file": null,
+          "source": null,
+          "status": "IMAGE PENDING VERIFICATION"
+        }
+      ]
     }
   ]
 }
