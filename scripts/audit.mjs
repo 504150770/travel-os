@@ -92,6 +92,10 @@ checks.referenceIntegrity = failures.filter((item) => item.dimension === 'refere
 
 const imagesByPlace = new Map();
 for (const image of data.images) if (image.placeId) imagesByPlace.set(image.placeId, [...(imagesByPlace.get(image.placeId) ?? []), image]);
+for (const day of data.days) {
+  const heroes = data.images.filter((image) => image.dayId === day.day && image.role === 'hero');
+  if (heroes.length !== 1) fail('trip_media', `Day ${day.day} must have exactly one stable hero image; found ${heroes.length}`);
+}
 for (const day of data.days) for (const stop of day.timeline) {
   if (stop.placeId && !imagesByPlace.get(stop.placeId)?.length) fail('trip_media', `Day ${day.day} stop ${stop.placeId} has no image`);
 }

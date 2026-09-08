@@ -168,7 +168,7 @@ export type DayRouteLeg = {
   walkMin: number | null;
   transitMin: number | null;
   taxiTime: string;
-  recommendedMode: 'Walk' | 'Transit';
+  recommendedMode: 'Walk' | 'Transit' | 'Taxi';
   recommended: string;
   baggageAdvice: string;
   status: string;

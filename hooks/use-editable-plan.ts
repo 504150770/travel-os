@@ -44,8 +44,8 @@ export function useEditablePlan() {
 
   const addEntity = (entityId: string, dayId: number, target: 'activeItems' | 'alternatives', defaults?: Partial<PlanItem>) => {
     const next = { ...plan, days: plan.days.map((day) => {
+      if (day.dayId !== dayId) return day;
       const cleared = { ...day, activeItems: day.activeItems.filter((item) => item.entityId !== entityId), alternatives: day.alternatives.filter((item) => item.entityId !== entityId), removedItems: (day.removedItems ?? []).filter((item) => item.entityId !== entityId) };
-      if (day.dayId !== dayId) return cleared;
       const item: PlanItem = { id: `user-${entityId}-d${dayId}-${Date.now()}`, entityId, order: cleared[target].length + 1, time: defaults?.time ?? '待安排', duration: defaults?.duration ?? '待确认', status: target === 'activeItems' ? 'planned' : 'backup', notes: defaults?.notes ?? '', guard: '', ticket: '待确认' };
       return { ...cleared, [target]: [...cleared[target], item] };
     }) };
@@ -62,7 +62,8 @@ export function useEditablePlan() {
     ...day.activeItems.filter((item) => item.entityId === entityId).map(() => ({ dayId: day.dayId, zone: 'trip' as const })),
     ...day.alternatives.filter((item) => item.entityId === entityId).map(() => ({ dayId: day.dayId, zone: 'backup' as const })),
     ]);
-    return matches.find((item) => item.dayId === preferredDayId) ?? matches.find((item) => item.zone === 'trip') ?? matches[0] ?? null;
+    if (preferredDayId !== undefined) return matches.find((item) => item.dayId === preferredDayId) ?? null;
+    return matches.find((item) => item.zone === 'trip') ?? matches[0] ?? null;
   };
 
   return { plan, originalPlan: normalize(pristine), undo, undoLast, moveWithin, transfer, moveDay, addEntity, updateItem, resetDay, resetTrip, deleteEntity, placement };
