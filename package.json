@@ -13,8 +13,9 @@
     "typecheck": "tsc --noEmit",
     "format": "oxfmt",
     "audit": "node scripts/audit.mjs && node scripts/generate-unverified.mjs",
+    "test:linkage": "node --experimental-strip-types scripts/linkage-test.mjs",
     "unverified": "node scripts/generate-unverified.mjs",
-    "check": "pnpm lint && pnpm typecheck && pnpm build && pnpm run audit"
+    "check": "pnpm lint && pnpm typecheck && pnpm test:linkage && pnpm build && pnpm run audit"
   },
   "dependencies": {
     "@base-ui/react": "1.7.0",

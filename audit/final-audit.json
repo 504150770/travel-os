@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-08T07:01:54.854Z",
+  "generatedAt": "2026-09-09T05:50:08.624Z",
   "status": "passed",
   "summary": {
     "failures": 0,
@@ -29,7 +29,7 @@
     "projectedTotalCny": 27630,
     "hardCapDifferenceCny": 1630,
     "xhsTopics": 28,
-    "bookings": 24,
+    "bookings": 18,
     "tasks": 14,
     "confirmedHotelImages": "DEFERRED"
   },
@@ -43,8 +43,10 @@
     "imageDeduplication": true,
     "brokenImageDetection": true,
     "visualNearDuplicateDetection": true,
+    "hotelSingleSource": true,
     "realHotelVoucherAudit": true,
     "hotelExecutionAudit": true,
+    "offlineShellAudit": true,
     "dayRouteAudit": true,
     "transitExecutionAudit": true,
     "deadlineAudit": true,

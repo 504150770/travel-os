@@ -46,12 +46,7 @@
       "group": "现在",
       "status": "To Do",
       "linkedBookingId": "visa",
-      "autoCompleteWhen": [
-        "Booked",
-        "Paid",
-        "Confirmed",
-        "Completed"
-      ],
+      "autoCompleteWhen": [],
       "lastVerified": "2026-09-06"
     },
     {
@@ -62,12 +57,7 @@
       "group": "现在",
       "status": "To Do",
       "linkedBookingId": "visa",
-      "autoCompleteWhen": [
-        "Booked",
-        "Paid",
-        "Confirmed",
-        "Completed"
-      ],
+      "autoCompleteWhen": [],
       "lastVerified": "2026-09-06"
     },
     {
@@ -78,12 +68,7 @@
       "group": "递签与出签",
       "status": "To Do",
       "linkedBookingId": "visa",
-      "autoCompleteWhen": [
-        "Booked",
-        "Paid",
-        "Confirmed",
-        "Completed"
-      ],
+      "autoCompleteWhen": [],
       "lastVerified": "2026-09-06"
     },
     {
@@ -94,12 +79,7 @@
       "group": "递签与出签",
       "status": "To Do",
       "linkedBookingId": "visa",
-      "autoCompleteWhen": [
-        "Booked",
-        "Paid",
-        "Confirmed",
-        "Completed"
-      ],
+      "autoCompleteWhen": [],
       "lastVerified": "2026-09-06"
     },
     {
@@ -126,12 +106,7 @@
       "group": "出签后48小时",
       "status": "To Do",
       "linkedBookingId": "colosseum",
-      "autoCompleteWhen": [
-        "Booked",
-        "Paid",
-        "Confirmed",
-        "Completed"
-      ],
+      "autoCompleteWhen": [],
       "lastVerified": "2026-09-06"
     },
     {
@@ -222,12 +197,7 @@
       "group": "临近出发",
       "status": "To Do",
       "linkedBookingId": "flight-can-fco",
-      "autoCompleteWhen": [
-        "Booked",
-        "Paid",
-        "Confirmed",
-        "Completed"
-      ],
+      "autoCompleteWhen": [],
       "lastVerified": "2026-09-06"
     }
   ]

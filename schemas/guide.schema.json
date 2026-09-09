@@ -190,27 +190,36 @@
               "id",
               "city",
               "hotelName",
-              "address",
               "checkIn",
               "checkOut",
               "nights",
-              "roomType",
-              "privateBathroom",
-              "paidOnlineCny",
-              "committedCnyApprox",
               "bookingStatus",
               "bookingNumber",
               "sourceFile",
               "sourcePath",
               "coordinates",
-              "frontDeskType",
-              "onlineCheckIn",
-              "luggage",
-              "breakfastTime",
-              "requests",
-              "cancellation",
-              "images"
-            ]
+              "images",
+              "execution"
+            ],
+            "properties": {
+              "execution": {
+                "type": "object",
+                "required": [
+                  "address",
+                  "roomType",
+                  "privateBathroom",
+                  "paidOnlineCny",
+                  "committedCnyApprox",
+                  "frontDeskType",
+                  "onlineCheckIn",
+                  "luggage",
+                  "breakfastTime",
+                  "requests",
+                  "cancellation"
+                ],
+                "properties": {}
+              }
+            }
           }
         }
       }

@@ -36,17 +36,17 @@ for (const item of restaurants) {
 }
 for (const stay of hotelBookings) {
   const fields = [];
-  if (stay.frontDesk.includes('UNVERIFIED')) fields.push('24小时前台/自助入住');
-  if (stay.luggageStorage === 'UNVERIFIED') fields.push('行李寄存');
-  if (stay.quietRoomRequest.includes('UNVERIFIED')) fields.push('静音请求');
-  if (stay.heating === 'UNVERIFIED') fields.push('暖气');
-  for (const [key, value] of Object.entries(stay.noise)) if (value.includes('UNVERIFIED')) fields.push(`noise.${key}`);
+  if (stay.execution.frontDeskType.includes('UNVERIFIED')) fields.push('24小时前台/自助入住');
+  if (stay.execution.luggage.early === 'UNVERIFIED') fields.push('行李寄存');
+  if (stay.execution.requests.quietRoom.includes('UNVERIFIED')) fields.push('静音请求');
+  if (stay.execution.heating === 'UNVERIFIED') fields.push('暖气');
+  for (const [key, value] of Object.entries(stay.execution.noise)) if (value.includes('UNVERIFIED')) fields.push(`noise.${key}`);
   if (fields.length) add('REAL_HOTEL_UNVERIFIED', stay.id, stay.hotelName, stay.city, fields, '入住凭证没有提供这些运营与噪音事实。', '取消线前向酒店书面确认，未回复前保持待确认。', 'P0');
 }
 for (const stay of hotelBookings) {
   const missingRoles = (stay.images ?? []).filter((image) => !image.file).map((image) => image.role);
   if (missingRoles.length) add('HOTEL_IMAGES', `${stay.id}-images`, stay.hotelName, stay.city, missingRoles, '酒店外观、房间与卫浴图尚未完成来源和画面核验。', '只补官网或可追溯实拍；完成前显示紧凑“图片待核”。', 'P0');
-  if (['Required','Recommended'].includes(stay.onlineCheckIn?.requirement) && !stay.onlineCheckIn?.link) add('HOTEL_CHECKIN_LINK', `${stay.id}-checkin`, stay.hotelName, stay.city, ['onlineCheckIn.link'], '入住动作已知，但专属链接只存在于订单邮件或尚未收到。', '在入住邮件到达后补入专属入口。', 'P0');
+  if (['Required','Recommended'].includes(stay.execution.onlineCheckIn?.requirement) && !stay.execution.onlineCheckIn?.link) add('HOTEL_CHECKIN_LINK', `${stay.id}-checkin`, stay.hotelName, stay.city, ['onlineCheckIn.link'], '入住动作已知，但专属链接只存在于订单邮件或尚未收到。', '在入住邮件到达后补入专属入口。', 'P0');
 }
 for (const route of dayRoutes) {
   const pending = route.legs.filter((leg) => leg.recommendedMode === 'Transit' && leg.transitMin == null);

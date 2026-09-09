@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-08T07:01:55.187Z",
+  "generatedAt": "2026-09-09T05:50:08.823Z",
   "policy": "真实性 > 完成率；未验证字段不进入事实结论。",
   "total": 297,
   "prioritySummary": {
@@ -2455,9 +2455,6 @@
       "name": "Colonna Palace Hotel",
       "city": "罗马",
       "fields": [
-        "24小时前台/自助入住",
-        "行李寄存",
-        "静音请求",
         "暖气",
         "noise.street",
         "noise.wall",
@@ -2474,9 +2471,6 @@
       "name": "La Fonderia Firenze",
       "city": "佛罗伦萨",
       "fields": [
-        "24小时前台/自助入住",
-        "行李寄存",
-        "静音请求",
         "暖气",
         "noise.street",
         "noise.wall",
@@ -2493,7 +2487,6 @@
       "name": "Park Hotel Ai Pini & Restaurant Ai Pini",
       "city": "威尼斯",
       "fields": [
-        "24小时前台/自助入住",
         "暖气",
         "noise.street",
         "noise.wall",
@@ -2510,7 +2503,6 @@
       "name": "Jimmy's Apartments Lory",
       "city": "维也纳",
       "fields": [
-        "静音请求",
         "暖气",
         "noise.street",
         "noise.wall",
@@ -2527,8 +2519,6 @@
       "name": "Self-Service Hotel Ostaš Praha",
       "city": "布拉格",
       "fields": [
-        "行李寄存",
-        "静音请求",
         "暖气",
         "noise.street",
         "noise.wall",
@@ -2545,9 +2535,6 @@
       "name": "Oden Paris Ivry",
       "city": "巴黎",
       "fields": [
-        "24小时前台/自助入住",
-        "行李寄存",
-        "静音请求",
         "暖气",
         "noise.street",
         "noise.wall",

@@ -1,6 +1,6 @@
 # UNVERIFIED DATA LIST
 
-Generated: 2026-09-08T07:01:55.187Z
+Generated: 2026-09-09T05:50:08.823Z
 
 > 真实性优先。以下项目没有被当作已验证事实。
 
@@ -8,12 +8,12 @@ P0 35 · P1 156 · P2 106
 
 ## P0 · 35
 
-- **罗马｜Colonna Palace Hotel** · REAL_HOTEL_UNVERIFIED — 24小时前台/自助入住、行李寄存、静音请求、暖气、noise.street、noise.wall、noise.corridor、noise.mechanical。入住凭证没有提供这些运营与噪音事实。 下一步：取消线前向酒店书面确认，未回复前保持待确认。
-- **佛罗伦萨｜La Fonderia Firenze** · REAL_HOTEL_UNVERIFIED — 24小时前台/自助入住、行李寄存、静音请求、暖气、noise.street、noise.wall、noise.corridor、noise.mechanical。入住凭证没有提供这些运营与噪音事实。 下一步：取消线前向酒店书面确认，未回复前保持待确认。
-- **威尼斯｜Park Hotel Ai Pini & Restaurant Ai Pini** · REAL_HOTEL_UNVERIFIED — 24小时前台/自助入住、暖气、noise.street、noise.wall、noise.corridor、noise.mechanical。入住凭证没有提供这些运营与噪音事实。 下一步：取消线前向酒店书面确认，未回复前保持待确认。
-- **维也纳｜Jimmy's Apartments Lory** · REAL_HOTEL_UNVERIFIED — 静音请求、暖气、noise.street、noise.wall、noise.corridor、noise.mechanical。入住凭证没有提供这些运营与噪音事实。 下一步：取消线前向酒店书面确认，未回复前保持待确认。
-- **布拉格｜Self-Service Hotel Ostaš Praha** · REAL_HOTEL_UNVERIFIED — 行李寄存、静音请求、暖气、noise.street、noise.wall、noise.corridor、noise.mechanical。入住凭证没有提供这些运营与噪音事实。 下一步：取消线前向酒店书面确认，未回复前保持待确认。
-- **巴黎｜Oden Paris Ivry** · REAL_HOTEL_UNVERIFIED — 24小时前台/自助入住、行李寄存、静音请求、暖气、noise.street、noise.wall、noise.corridor、noise.mechanical。入住凭证没有提供这些运营与噪音事实。 下一步：取消线前向酒店书面确认，未回复前保持待确认。
+- **罗马｜Colonna Palace Hotel** · REAL_HOTEL_UNVERIFIED — 暖气、noise.street、noise.wall、noise.corridor、noise.mechanical。入住凭证没有提供这些运营与噪音事实。 下一步：取消线前向酒店书面确认，未回复前保持待确认。
+- **佛罗伦萨｜La Fonderia Firenze** · REAL_HOTEL_UNVERIFIED — 暖气、noise.street、noise.wall、noise.corridor、noise.mechanical。入住凭证没有提供这些运营与噪音事实。 下一步：取消线前向酒店书面确认，未回复前保持待确认。
+- **威尼斯｜Park Hotel Ai Pini & Restaurant Ai Pini** · REAL_HOTEL_UNVERIFIED — 暖气、noise.street、noise.wall、noise.corridor、noise.mechanical。入住凭证没有提供这些运营与噪音事实。 下一步：取消线前向酒店书面确认，未回复前保持待确认。
+- **维也纳｜Jimmy's Apartments Lory** · REAL_HOTEL_UNVERIFIED — 暖气、noise.street、noise.wall、noise.corridor、noise.mechanical。入住凭证没有提供这些运营与噪音事实。 下一步：取消线前向酒店书面确认，未回复前保持待确认。
+- **布拉格｜Self-Service Hotel Ostaš Praha** · REAL_HOTEL_UNVERIFIED — 暖气、noise.street、noise.wall、noise.corridor、noise.mechanical。入住凭证没有提供这些运营与噪音事实。 下一步：取消线前向酒店书面确认，未回复前保持待确认。
+- **巴黎｜Oden Paris Ivry** · REAL_HOTEL_UNVERIFIED — 暖气、noise.street、noise.wall、noise.corridor、noise.mechanical。入住凭证没有提供这些运营与噪音事实。 下一步：取消线前向酒店书面确认，未回复前保持待确认。
 - **罗马｜Colonna Palace Hotel** · HOTEL_IMAGES — Exterior、Room、Bathroom。酒店外观、房间与卫浴图尚未完成来源和画面核验。 下一步：只补官网或可追溯实拍；完成前显示紧凑“图片待核”。
 - **佛罗伦萨｜La Fonderia Firenze** · HOTEL_IMAGES — Exterior、Room、Bathroom。酒店外观、房间与卫浴图尚未完成来源和画面核验。 下一步：只补官网或可追溯实拍；完成前显示紧凑“图片待核”。
 - **佛罗伦萨｜La Fonderia Firenze** · HOTEL_CHECKIN_LINK — onlineCheckIn.link。入住动作已知，但专属链接只存在于订单邮件或尚未收到。 下一步：在入住邮件到达后补入专属入口。

@@ -148,32 +148,39 @@ checks.visualNearDuplicateDetection = failures.filter((item) => item.dimension =
 const cityNames = data.trip.cities.map((city) => city.name);
 const realStays = data.hotelBookings.items;
 unique(ids(realStays), 'real hotel booking ids');
+if (data.bookings.items.some((item) => item.category === '酒店')) fail('hotel_single_source', 'bookings.json must not duplicate canonical hotel rows');
+checks.hotelSingleSource = failures.filter((item) => item.dimension === 'hotel_single_source').length === 0;
 if (realStays.length !== 6) fail('real_hotels', `expected 6 real hotel bookings, found ${realStays.length}`);
 if (realStays.reduce((sum, stay) => sum + stay.nights, 0) !== 15) fail('real_hotels', 'real hotel nights do not sum to 15');
 for (const city of cityNames) if (realStays.filter((stay) => stay.city === city).length !== 1) fail('real_hotels', `${city} must have one real hotel booking`);
 for (const stay of realStays) {
   if (!stay.sourceFile || !stay.sourcePath || !stay.bookingNumber) fail('real_hotels', `${stay.hotelName} missing voucher provenance`);
   if (!(stay.checkIn < stay.checkOut)) fail('real_hotels', `${stay.hotelName} has invalid stay dates`);
-  if (!stay.roomType || stay.privateBathroom !== true) fail('real_hotels', `${stay.hotelName} missing confirmed room/private bathroom`);
+  if (!stay.execution.roomType || stay.execution.privateBathroom !== true) fail('real_hotels', `${stay.hotelName} missing confirmed room/private bathroom`);
 }
-const paidOnline = Number(realStays.reduce((sum, stay) => sum + stay.paidOnlineCny, 0).toFixed(2));
-const committed = Number(realStays.reduce((sum, stay) => sum + stay.committedCnyApprox, 0).toFixed(2));
+const paidOnline = Number(realStays.reduce((sum, stay) => sum + stay.execution.paidOnlineCny, 0).toFixed(2));
+const committed = Number(realStays.reduce((sum, stay) => sum + stay.execution.committedCnyApprox, 0).toFixed(2));
 if (paidOnline !== data.hotelBookings.summary.paidOnlineCny) fail('real_hotels', 'paid hotel total differs from source summary');
 if (committed !== data.hotelBookings.summary.committedCnyApprox) fail('real_hotels', 'committed hotel total differs from source summary');
 checks.realHotelVoucherAudit = failures.filter((item) => item.dimension === 'real_hotels').length === 0;
 for (const stay of realStays) {
   if (!Number.isFinite(stay.coordinates?.lat) || !Number.isFinite(stay.coordinates?.lng)) fail('hotel_execution', `${stay.hotelName} missing exact geocoded coordinates`);
-  for (const field of ['frontDeskType','onlineCheckIn','luggage','requests','cancellation','images']) if (!stay[field]) fail('hotel_execution', `${stay.hotelName} missing ${field}`);
+  for (const field of ['frontDeskType','onlineCheckIn','luggage','requests','cancellation']) if (!stay.execution[field]) fail('hotel_execution', `${stay.hotelName} missing ${field}`);
 }
 const florenceStay = realStays.find((stay) => stay.id === 'stay-florence-fonderia');
 const veniceStay = realStays.find((stay) => stay.id === 'stay-venice-ai-pini');
 const viennaStay = realStays.find((stay) => stay.id === 'stay-vienna-jimmys');
 const pragueStay = realStays.find((stay) => stay.id === 'stay-prague-ostas');
-if (florenceStay?.breakfastTime !== '08:00–09:30' || florenceStay?.onlineCheckIn.requirement !== 'Recommended') fail('hotel_execution', 'La Fonderia execution facts drifted');
-if (veniceStay?.luggage.early !== 'Confirmed' || Object.values(veniceStay?.requests ?? {}).some((value) => value !== 'Requested')) fail('hotel_execution', 'Ai Pini luggage/request facts drifted');
-if (viennaStay?.onlineCheckIn.requirement !== 'Required' || viennaStay?.luggage.early !== 'Confirmed') fail('hotel_execution', "Jimmy's check-in/luggage facts drifted");
-if (pragueStay?.onlineCheckIn.requirement !== 'Required' || pragueStay?.onlineCheckIn.status !== 'Waiting') fail('hotel_execution', 'Ostaš check-in facts drifted');
+if (florenceStay?.execution.breakfastTime !== '08:00–09:30' || florenceStay?.execution.onlineCheckIn.requirement !== 'Recommended') fail('hotel_execution', 'La Fonderia execution facts drifted');
+if (veniceStay?.execution.luggage.early !== 'Confirmed' || Object.values(veniceStay?.execution.requests ?? {}).some((value) => value !== 'Requested')) fail('hotel_execution', 'Ai Pini luggage/request facts drifted');
+if (viennaStay?.execution.onlineCheckIn.requirement !== 'Required' || viennaStay?.execution.luggage.early !== 'Confirmed') fail('hotel_execution', "Jimmy's check-in/luggage facts drifted");
+if (pragueStay?.execution.onlineCheckIn.requirement !== 'Required' || pragueStay?.execution.onlineCheckIn.status !== 'Waiting') fail('hotel_execution', 'Ostaš check-in facts drifted');
 checks.hotelExecutionAudit = failures.filter((item) => item.dimension === 'hotel_execution').length === 0;
+
+for (const asset of ['public/manifest.webmanifest', 'public/sw.js']) {
+  if (!fs.existsSync(path.join(root, asset))) fail('offline', `${asset} missing`);
+}
+checks.offlineShellAudit = failures.filter((item) => item.dimension === 'offline').length === 0;
 
 const hotelIds = new Set(ids(realStays));
 if (data.dayRoutes.length !== 18 || !data.dayRoutes.every((route, index) => route.day === index + 1)) fail('day_routes', 'day route dataset must contain ordered Day 1–18');

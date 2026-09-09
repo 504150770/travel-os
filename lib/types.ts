@@ -1,9 +1,4 @@
-export type ViewId =
-  | 'home'
-  | 'trip'
-  | 'discover'
-  | 'plan'
-  | 'more';
+export type ViewId = 'home' | 'trip' | 'discover' | 'plan' | 'more';
 
 export type Place = {
   id: string;
@@ -109,7 +104,7 @@ export type Booking = {
   lastVerified: string;
 };
 
-export type HotelBooking = {
+type HotelRecord = {
   id: string;
   city: string;
   country: string;
@@ -128,18 +123,18 @@ export type HotelBooking = {
   breakfastIncluded: boolean;
   breakfastDetails: string;
   paidOnlineCny: number;
-  payAtProperty: { amount: number; currency: string; cnyApprox: number; label: string } | null;
+  payAtProperty: {
+    amount: number;
+    currency: string;
+    cnyApprox: number;
+    label: string;
+  } | null;
   committedCnyApprox: number;
   paymentStatus: string;
   bookingStatus: string;
-  freeCancellationUntil: string;
-  cancellationPolicy: string;
   confirmationNumber: string | null;
   bookingNumber: string;
   guestName: string;
-  frontDesk: string;
-  luggageStorage: string;
-  quietRoomRequest: string;
   heating: string;
   noise: { street: string; wall: string; corridor: string; mechanical: string };
   sourceFile: string;
@@ -150,12 +145,37 @@ export type HotelBooking = {
   coordinateSource: string;
   coordinateVerifiedAt: string;
   frontDeskType: string;
-  onlineCheckIn: { requirement: string; status: string; link: string | null; deadline: string; note: string; completionDefault: boolean };
-  luggage: { early: string; afterCheckout: string; location: string; fee: string; status: string; note: string };
+  onlineCheckIn: {
+    requirement: string;
+    status: string;
+    link: string | null;
+    deadline: string;
+    note: string;
+    completionDefault: boolean;
+  };
+  luggage: {
+    early: string;
+    afterCheckout: string;
+    location: string;
+    fee: string;
+    status: string;
+    note: string;
+  };
   breakfastTime: string;
-  requests: { quietRoom: string; nonSmoking: string; awayFromElevator: string; awayFromStreet: string; awayFromServiceArea: string };
+  requests: {
+    quietRoom: string;
+    nonSmoking: string;
+    awayFromElevator: string;
+    awayFromStreet: string;
+    awayFromServiceArea: string;
+  };
   cancellation: { freeUntil: string; afterDeadline: string };
-  images: { role: string; file: string | null; source: string | null; status: string }[];
+  images: {
+    role: string;
+    file: string | null;
+    source: string | null;
+    status: string;
+  }[];
 };
 
 export type DayRouteLeg = {
@@ -181,17 +201,58 @@ export type DayRoute = {
   source: string;
   checkedAt: string;
   legs: DayRouteLeg[];
-  summary: { walkingKm: number | null; walkingMin: number | null; transitMin: number | null; transfers: number; longestWalkMin: number | null; returnToHotel: string; status: string };
-  atGlance: { start: string; firstStop: string; mustLeaveHotel: string; mustBook: string; meal: string; gym: string; goldenHour: string; lateRule: string; backHotel: string; tomorrow: string };
+  summary: {
+    walkingKm: number | null;
+    walkingMin: number | null;
+    transitMin: number | null;
+    transfers: number;
+    longestWalkMin: number | null;
+    returnToHotel: string;
+    status: string;
+  };
+  atGlance: {
+    start: string;
+    firstStop: string;
+    mustLeaveHotel: string;
+    mustBook: string;
+    meal: string;
+    gym: string;
+    goldenHour: string;
+    lateRule: string;
+    backHotel: string;
+    tomorrow: string;
+  };
 };
 
 export type TransitDayExecution = {
   day: number;
   segmentId: string;
   checkout: { breakfast: string; checkout: string; leaveHotel: string };
-  toHub: { from: string; to: string; mode: string; duration: string; largeBag: string; latestLeave: string };
-  service: { operator: string; service: string; departure: string; arrival: string; buffer: string; baggage: string; status: string };
-  arrival: { from: string; to: string; mode: string; duration: string; changes: string; largeBag: string };
+  toHub: {
+    from: string;
+    to: string;
+    mode: string;
+    duration: string;
+    largeBag: string;
+    latestLeave: string;
+  };
+  service: {
+    operator: string;
+    service: string;
+    departure: string;
+    arrival: string;
+    buffer: string;
+    baggage: string;
+    status: string;
+  };
+  arrival: {
+    from: string;
+    to: string;
+    mode: string;
+    duration: string;
+    changes: string;
+    largeBag: string;
+  };
   luggage: { early: string; fallback: string };
   afterArrival: string;
   delay30: string;
@@ -199,9 +260,32 @@ export type TransitDayExecution = {
   delay90: string;
 };
 
-export type DeadlineItem = { id: string; date: string; time: string; category: string; title: string; status: string; priority: 'Critical' | 'Nice'; action: string; link: string | null; hotelId?: string };
+export type DeadlineItem = {
+  id: string;
+  date: string;
+  time: string;
+  category: string;
+  title: string;
+  status: string;
+  priority: 'Critical' | 'Nice';
+  action: string;
+  link: string | null;
+  hotelId?: string;
+};
 
-export type SurvivalCity = { city: string; hotelId: string; nearestTransit: string; supermarket: string; pharmacy: string; convenienceFood: string; mainStation: string; airport: string; emergency: string; taxi: string; hotelPhone: string };
+export type SurvivalCity = {
+  city: string;
+  hotelId: string;
+  nearestTransit: string;
+  supermarket: string;
+  pharmacy: string;
+  convenienceFood: string;
+  mainStation: string;
+  airport: string;
+  emergency: string;
+  taxi: string;
+  hotelPhone: string;
+};
 
 export type TransportCandidate = {
   rank: string;
@@ -239,7 +323,12 @@ export type TransportSegment = {
   routeSource: string;
   checkedAt: string;
   expectedReleaseWindow: string | null;
-  airportComparison?: { airport: string; ground: string; doorToDoorScore: number; decision: string }[];
+  airportComparison?: {
+    airport: string;
+    ground: string;
+    doorToDoorScore: number;
+    decision: string;
+  }[];
   status: string;
   candidates: TransportCandidate[];
 };
@@ -302,4 +391,33 @@ export type PlaceOption = {
   mapQuery: string;
   source: string;
   status: string;
+};
+
+export type HotelExecution = Pick<
+  HotelRecord,
+  | 'address'
+  | 'phone'
+  | 'checkInTime'
+  | 'checkOutTime'
+  | 'roomType'
+  | 'bed'
+  | 'privateBathroom'
+  | 'bathroomDetails'
+  | 'breakfastIncluded'
+  | 'breakfastDetails'
+  | 'paidOnlineCny'
+  | 'payAtProperty'
+  | 'committedCnyApprox'
+  | 'paymentStatus'
+  | 'heating'
+  | 'noise'
+  | 'frontDeskType'
+  | 'onlineCheckIn'
+  | 'luggage'
+  | 'breakfastTime'
+  | 'requests'
+  | 'cancellation'
+>;
+export type HotelBooking = Omit<HotelRecord, keyof HotelExecution> & {
+  execution: HotelExecution;
 };
