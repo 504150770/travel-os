@@ -1,11 +1,11 @@
 {
   "name": "欧洲18天 Travel OS",
   "short_name": "Travel OS",
-  "description": "个人冬季欧洲旅行现场执行系统",
+  "description": "18天欧洲冬日行程、住宿与现场执行指南",
   "start_url": "/?view=home",
   "display": "standalone",
-  "background_color": "#f4f1eb",
-  "theme_color": "#17241f",
+  "background_color": "#ffffff",
+  "theme_color": "#5DADE2",
   "icons": [
     { "src": "/images/travel-os-icon-192.webp", "sizes": "192x192", "type": "image/webp", "purpose": "any" },
     { "src": "/images/travel-os-icon-512.webp", "sizes": "512x512", "type": "image/webp", "purpose": "any maskable" }

@@ -99,11 +99,11 @@ type CustomEntity = Entity & { type: EntityType };
 type AddMode = 'place' | 'food' | 'gym' | 'custom';
 
 const nav: { id: ViewId; label: string; icon: typeof Home }[] = [
-  { id: 'home', label: 'HOME', icon: Home },
-  { id: 'trip', label: 'TRIP', icon: Route },
-  { id: 'discover', label: 'DISCOVER', icon: Search },
-  { id: 'plan', label: 'PLAN', icon: TicketCheck },
-  { id: 'more', label: 'MORE', icon: Menu },
+  { id: 'home', label: 'Home', icon: Home },
+  { id: 'trip', label: 'Trip', icon: Route },
+  { id: 'discover', label: 'Discover', icon: Search },
+  { id: 'plan', label: 'Plan', icon: TicketCheck },
+  { id: 'more', label: 'More', icon: Menu },
 ];
 const cityNames = ['罗马', '佛罗伦萨', '威尼斯', '维也纳', '布拉格', '巴黎'];
 const yuan = (value: number) =>
@@ -973,17 +973,17 @@ function DayFood({
   };
   const groups = [
     {
-      label: 'BEST NEARBY',
+      label: 'BEST FOR TODAY',
       items: choose((entity) => Number(entity.raw.hotelPriority ?? 99) <= 2),
     },
     {
-      label: 'BEST PROPER MEAL',
+      label: 'A PROPER MEAL',
       items: choose((entity) =>
         ['Lunch', 'Dinner'].includes(String(entity.raw.category)),
       ),
     },
     {
-      label: 'QUICK BACKUP',
+      label: 'QUICK & EASY',
       items: choose((entity) =>
         ['Breakfast', 'Snack'].includes(String(entity.raw.category)),
       ),
@@ -997,7 +997,7 @@ function DayFood({
       ),
     },
     {
-      label: 'COFFEE / DESSERT',
+      label: 'COFFEE & DESSERT',
       items: choose(
         (entity) =>
           entity.type === 'cafe' ||
@@ -1014,7 +1014,7 @@ function DayFood({
       />
       <div>
         <small>
-          {topPick ? 'TOP PICK' : 'ALTERNATIVE'} · {entity.priceLabel}
+          {topPick ? 'ROUTE PICK' : 'ANOTHER OPTION'} · {entity.priceLabel}
         </small>
         <h3>{entity.name}</h3>
         <dl className="food-facts">
@@ -1062,7 +1062,7 @@ function DayFood({
           <h2>今天吃什么</h2>
           {stay && <p>住宿基点：{stay.hotelName}</p>}
           <p className="route-context-note">
-            CURRENT ROUTE · {dayState.routeContext}
+            今天顺路 · {dayState.routeContext}
           </p>
         </div>
         <Utensils />
@@ -1299,7 +1299,7 @@ function DayGym({
   return (
     <section id="day-gym" className="gym-option">
       <header>
-        <span>GYM OPTION</span>
+        <span>FIT FOR TONIGHT</span>
         <h2>今天要不要练</h2>
         <p className={`gym-fit ${fit.level}`}>
           {fit.label} · {fit.reason}
@@ -1339,7 +1339,7 @@ function DayGym({
                   )}
                 </div>
                 <span>
-                  {index === 0 ? 'TOP PICK' : 'BACKUP'} ·{' '}
+                  {index === 0 ? 'EASY FIT TONIGHT' : 'ANOTHER OPTION'} ·{' '}
                   {String(entity.raw.tag)}
                 </span>
                 <h3>{entity.name}</h3>
@@ -3174,14 +3174,10 @@ export default function TravelGuideV3() {
     : null;
   return (
     <div className="guide-v2">
-      <aside className="side-nav">
+      <header className="side-nav">
         <button className="v2-brand" onClick={() => navigate('home')}>
-          <b>EU</b>
-          <span>
-            TRAVEL
-            <br />
-            OS
-          </span>
+          <b>Travel OS</b>
+          <span>Europe 2026</span>
         </button>
         <nav>
           {nav.map(({ id, label, icon: Icon }) => (
@@ -3196,18 +3192,18 @@ export default function TravelGuideV3() {
           ))}
         </nav>
         <div className="side-meta">
-          <i />
-          <span>Entity Library active</span>
-          <b>Local-first editable plan</b>
+          <span>D{todayDay(clock ?? new Date())}</span>
+          <i className={online ? 'online' : 'offline'} />
+          <b>{online ? 'Saved' : 'Offline'}</b>
         </div>
-      </aside>
+      </header>
       <main className="v2-main">
         <header className="v2-topbar">
           <div>
-            <span>PERSONAL EUROPE / 2026</span>
+            <span>EUROPE 2026</span>
             <b>{nav.find((item) => item.id === view)?.label}</b>
           </div>
-          <p>12.01 — 12.18 · 15 NIGHTS</p>
+          <p>18 days · 6 cities · Dec 1–18</p>
           <span
             className={online ? 'connectivity online' : 'connectivity offline'}
           >
@@ -3227,15 +3223,15 @@ export default function TravelGuideV3() {
                 />
                 <div className="cover-shade" />
                 <div className="cover-copy">
-                  <span>PERSONAL WINTER EUROPE · 2026</span>
+                  <span>EUROPE 2026</span>
                   <h1>
-                    我的欧洲
+                    Europe,
                     <br />
-                    旅行操作系统。
+                    your way.
                   </h1>
-                  <p>原始计划保留 · 当前计划可随时改 · 数据本地保存</p>
+                  <p>18 Days · 6 Cities</p>
                   <button onClick={() => navigate('trip')}>
-                    进入 Trip Mode <ArrowRight />
+                    Continue Trip <ArrowRight />
                   </button>
                 </div>
                 <div className="countdown">
@@ -3243,18 +3239,21 @@ export default function TravelGuideV3() {
                   <span>{daysLeft === null ? '行程倒计时' : '天后出发'}</span>
                 </div>
               </section>
+              <div className="home-section-heading">
+                <span>UPCOMING TRIP</span>
+                <h2>六座城市，一条冬日路线</h2>
+              </div>
               <section className="route-ribbon">
                 {guideData.trip.cities.map((city) => (
                   <div key={city.id}>
-                    <i style={{ background: city.accent }} />
                     <b>{city.name}</b>
-                    <span>{city.nights}晚</span>
+                    <span>{city.country} · {city.nights}晚</span>
                   </div>
                 ))}
               </section>
               <section className="home-dashboard">
-                <article>
-                  <span>NEXT ACTION · {nextAction?.due ?? 'OPEN'}</span>
+                <article className="home-next-action">
+                  <span>NEXT ACTION · {nextAction?.due ?? 'READY'}</span>
                   <h2>{nextAction?.title ?? '当前任务已完成'}</h2>
                   <p>{nextAction?.detail}</p>
                   <button
@@ -3268,11 +3267,11 @@ export default function TravelGuideV3() {
                       );
                     }}
                   >
-                    打开 Plan <ArrowRight />
+                    View next action <ArrowRight />
                   </button>
                 </article>
                 <article>
-                  <span>PROJECTED / ACTUAL</span>
+                  <span>TRIP BUDGET</span>
                   <h2>
                     {yuan(budgetState.projected)} / {yuan(actualTotal)}
                   </h2>
@@ -3286,15 +3285,15 @@ export default function TravelGuideV3() {
                       setPlanTab('budget');
                     }}
                   >
-                    管理预算 <ArrowRight />
+                    View budget <ArrowRight />
                   </button>
                 </article>
                 <article>
-                  <span>MY CURRENT PLAN</span>
+                  <span>QUICK ACCESS</span>
                   <h2>{activeEntities.length} 个正式项目</h2>
                   <p>支持加入、备选、换天、排序、自定义与撤销。</p>
                   <button onClick={() => navigate('trip')}>
-                    开始编辑 <ArrowRight />
+                    Open itinerary <ArrowRight />
                   </button>
                 </article>
               </section>

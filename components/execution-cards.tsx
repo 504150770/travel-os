@@ -70,7 +70,7 @@ export function RouteLegCard({ leg }: { leg: DayRouteLeg }) {
         <Icon />
       </div>
       <div>
-        <b>{leg.recommendedMode.toUpperCase()} · RECOMMENDED</b>
+        <b>{leg.recommendedMode}</b>
         <strong>{primary}</strong>
         <small>{backup}</small>
       </div>
@@ -83,8 +83,8 @@ export function TodayAtGlance({ day, route }: { day: Day; route: DayRoute }) {
   return (
     <section className="today-glance">
       <header>
-        <span>TODAY AT A GLANCE</span>
-        <h2>出门前只看这一块</h2>
+        <span>TODAY</span>
+        <h2>今天一眼看懂</h2>
       </header>
       <div>
         <p>
@@ -113,11 +113,11 @@ export function TodayAtGlance({ day, route }: { day: Day; route: DayRoute }) {
           {a.backHotel}
         </p>
         <p className="late">
-          <b>Late Rule</b>
+          <b>来不及时</b>
           {a.lateRule}
         </p>
         <p>
-          <b>Tomorrow</b>
+          <b>明天</b>
           {a.tomorrow}
         </p>
       </div>
@@ -304,7 +304,7 @@ export function HotelExecutionCard({
         <span>{stay.execution.paymentStatus}</span>
       </div>
       <details className="hotel-detail-toggle">
-        <summary>View Stay Details</summary>
+        <summary>View Stay</summary>
         <div className="hotel-execution-grid">
           <section>
             <h3>CHECK-IN</h3>

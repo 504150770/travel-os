@@ -24,18 +24,18 @@ import { useDialogLifecycle } from '@/hooks/use-dialog-lifecycle';
 function modeMeta(mode: DayRouteLeg['recommendedMode']) {
   if (mode === 'Walk')
     return {
-      label: 'WALK · RECOMMENDED',
+      label: 'Walk',
       Icon: Footprints,
       google: 'walking',
     } as const;
   if (mode === 'Taxi')
     return {
-      label: 'TAXI · RECOMMENDED',
+      label: 'Taxi',
       Icon: CarTaxiFront,
       google: 'driving',
     } as const;
   return {
-    label: 'PUBLIC TRANSIT · RECOMMENDED',
+    label: 'Public transit',
     Icon: BusFront,
     google: 'transit',
   } as const;
@@ -80,7 +80,7 @@ function RouteMove({
         <span className="route-flow-line" />
         <MapPin />
         <div>
-          <b>ROUTE PENDING</b>
+          <b>Route check</b>
           <strong>路线待计算</strong>
           <small>
             {leg.from} → {leg.to} · 点击导航获取实时路线
@@ -110,13 +110,13 @@ function RouteMove({
                 ? '出发前复核'
                 : `${leg.walkMin} min · ${leg.distanceKm} km`}
             </strong>
-            <small>Taxi backup · {leg.taxiTime}</small>
+            <small>Taxi 备选 · {leg.taxiTime}</small>
           </>
         ) : leg.recommendedMode === 'Taxi' ? (
           <>
             <strong>{leg.taxiTime}</strong>
             <small>
-              Walking backup ·{' '}
+              步行备选 ·{' '}
               {leg.walkMin == null ? '待复核' : `${leg.walkMin} min`}
             </small>
           </>
@@ -128,9 +128,9 @@ function RouteMove({
                 : `约 ${leg.transitMin} min`}
             </strong>
             <small>
-              Walking backup ·{' '}
+              步行备选 ·{' '}
               {leg.walkMin == null ? '待复核' : `${leg.walkMin} min`} · Taxi
-              backup · {leg.taxiTime}
+              备选 · {leg.taxiTime}
             </small>
           </>
         )}
@@ -188,7 +188,7 @@ export function MiniRoute({
           <Hotel />
         </span>
         <div>
-          <small>START</small>
+          <small>出发</small>
           <h3>{hotel?.hotelName ?? route.atGlance.start}</h3>
           <p>{route.atGlance.mustLeaveHotel} 出发</p>
         </div>
@@ -211,7 +211,7 @@ export function MiniRoute({
             >
               <span>{returning ? <Hotel /> : index + 1}</span>
               <div>
-                <small>{returning ? 'RETURN' : (stop?.time ?? 'ARRIVE')}</small>
+                <small>{returning ? '返回' : (stop?.time ?? '抵达')}</small>
                 <h3>{leg.to}</h3>
                 <p>
                   {returning
