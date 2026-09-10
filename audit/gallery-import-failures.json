@@ -1,0 +1,62 @@
+[
+  {
+    "id": "rome-roscioli",
+    "page": "https://www.lonelyplanet.com/articles/romes-top-dishes-taste",
+    "reason": "page HTTP 404"
+  },
+  {
+    "id": "rome-santeustachio",
+    "page": "https://www.santeustachioilcaffe.it/",
+    "reason": "fetch failed"
+  },
+  {
+    "id": "rome-forno",
+    "page": "https://www.fornocampodefiori.com/",
+    "reason": "fetch failed"
+  },
+  {
+    "id": "florence-cammillo",
+    "page": "https://www.cammillo.com/",
+    "reason": "fetch failed"
+  },
+  {
+    "id": "florence-gustapizza",
+    "page": "https://www.gustapizza.com/",
+    "reason": "fetch failed"
+  },
+  {
+    "id": "florence-gustapizza",
+    "page": "https://www.tripadvisor.com/Restaurant_Review-g187895-d1155597-Reviews-Gustapizza-Florence_Tuscany.html",
+    "reason": "page HTTP 403"
+  },
+  {
+    "id": "florence-rivoire",
+    "page": "https://www.thefork.ch/restaurant/rivoire-firenze-r805157/menu",
+    "reason": "page HTTP 403"
+  },
+  {
+    "id": "venice-plip",
+    "page": "https://osteria.plip.it/",
+    "reason": "fetch failed"
+  },
+  {
+    "id": "venice-frarys",
+    "page": "https://restaurantguru.it/Frarys-Venice",
+    "reason": "page HTTP 403"
+  },
+  {
+    "id": "venice-torrefazione",
+    "page": "https://www.torrefazionecannaregio.it/",
+    "reason": "page HTTP 403"
+  },
+  {
+    "id": "vienna-tarim",
+    "page": "https://www.tarim.wien/",
+    "reason": "fetch failed"
+  },
+  {
+    "id": "vienna-tarim",
+    "page": "https://de.restaurantguru.com/Tarim-Uigur-Restaurant-Vienna",
+    "reason": "page HTTP 503"
+  }
+]

@@ -115,7 +115,7 @@ checks.optionAudit = failures.filter((item) => item.dimension === 'options').len
 const hotelAssets = data.hotelBookings.items.flatMap((stay) => stay.images.map((image) => image.file).filter(Boolean));
 for (const stay of data.hotelBookings.items) {
   for (const role of ['Entrance', 'Room', 'Bathroom']) {
-    const image = stay.images.find((item) => item.role === role && item.file);
+    const image = stay.images.find((item) => item.role?.toLowerCase() === role.toLowerCase() && item.file);
     if (!image) fail('hotel_media', `${stay.id} missing ${role} image`);
     else if (![image.caption, image.source, image.sourcePage, image.lastVerified, image.entityId].every(Boolean)) fail('hotel_media', `${stay.id} ${role} image metadata incomplete`);
   }
@@ -129,8 +129,9 @@ checks.mediaMetadataAudit = failures.filter((item) => item.dimension === 'media_
 const requestedAssets = [
   data.trip.coverImage,
   ...data.images.map((item) => item.file),
-  ...data.gyms.map((item) => item.image),
-  ...data.restaurants.flatMap((item) => [item.dishImage, item.restaurantImage, item.environmentImage]).filter(Boolean),
+  ...data.gyms.flatMap((item) => (item.images ?? (item.image ? [{ file: item.image }] : [])).map((image) => image.file)),
+  ...data.restaurants.flatMap((item) => (item.images ?? item.imageSources ?? [item.dishImage, item.restaurantImage, item.environmentImage]
+    .filter(Boolean).map((file) => ({ file }))).map((image) => image.file)),
   ...data.shopping.map((item) => item.image).filter(Boolean),
   ...hotelAssets,
 ];

@@ -84,6 +84,12 @@ import {
 } from '@/lib/action-queue';
 import { calculateBudget } from '@/lib/budget-calculator';
 import { canonicalBookings } from '@/lib/hotel-execution';
+import { MediaGallery } from '@/components/media-gallery';
+import {
+  openGalleryRequest,
+  selectCoverImage,
+  type GalleryRequest,
+} from '@/lib/media';
 
 type DiscoverTab = 'places' | 'food' | 'gym' | 'shopping' | 'picks' | 'photos';
 type PlanTab =
@@ -94,7 +100,7 @@ type PlanTab =
   | 'tasks'
   | 'budget';
 type MoreTab = 'stay' | 'map' | 'survival' | 'essentials' | 'backup';
-type LightboxImage = { src: string; caption: string } | null;
+type LightboxImage = GalleryRequest | null;
 type CustomEntity = Entity & { type: EntityType };
 type AddMode = 'place' | 'food' | 'gym' | 'custom';
 
@@ -152,11 +158,13 @@ const todayDay = (date: Date) => {
 
 function Media({
   images,
+  entityId,
   name,
   open,
   hero = false,
 }: {
   images: EntityImage[];
+  entityId: string;
   name: string;
   open: (image: LightboxImage) => void;
   hero?: boolean;
@@ -168,29 +176,29 @@ function Media({
         <span>PHOTO PENDING</span>
       </div>
     );
+  const cover = selectCoverImage(images);
   return (
-    <div className={`entity-media ${hero ? 'hero' : ''}`}>
-      {images.slice(0, hero ? 1 : 3).map((image) => (
-        <button
-          key={`${image.file}-${image.caption}`}
-          onClick={() => open({ src: image.file, caption: image.caption })}
-        >
-          {image.file.startsWith('/') ? (
-            <Image
-              src={image.file}
-              alt={image.caption || name}
-              fill
-              sizes={hero ? '100vw' : '(max-width:680px) 88vw, 420px'}
-            />
-          ) : (
-            <span
-              className="remote-image"
-              title={image.caption || name}
-              style={{ backgroundImage: `url(${image.file})` }}
-            />
-          )}
-        </button>
-      ))}
+    <div className={`entity-media cover-only ${hero ? 'hero' : ''}`}>
+      <button
+        onClick={() => open(openGalleryRequest(entityId, name, images, cover))}
+        aria-label={`Open ${name} gallery, ${images.length} photos`}
+      >
+        {cover.file.startsWith('/') ? (
+          <Image
+            src={cover.file}
+            alt={cover.title || cover.caption || name}
+            fill
+            sizes={hero ? '100vw' : '(max-width:680px) 88vw, 420px'}
+          />
+        ) : (
+          <span
+            className="remote-image"
+            title={cover.title || cover.caption || name}
+            style={{ backgroundImage: `url(${cover.file})` }}
+          />
+        )}
+        <span className="media-count">{images.length} Photos</span>
+      </button>
     </div>
   );
 }
@@ -365,7 +373,7 @@ function PlanStop({
             {ticketState}
           </span>
         </div>
-        <Media images={entity.images} name={entity.name} open={open} />
+        <Media images={entity.images} entityId={entity.id} name={entity.name} open={open} />
         <p>{item.notes || entity.description}</p>
         <div className="stop-core-actions">
           <button
@@ -460,7 +468,8 @@ function AlternativePool({
           return (
             <article key={item.id}>
               <Media
-                images={entity.images.slice(0, 1)}
+                images={entity.images}
+                entityId={entity.id}
                 name={entity.name}
                 open={open}
               />
@@ -605,9 +614,14 @@ function QuickAdd({
           ? [
               {
                 file: form.image,
+                role: 'cover',
+                title: form.name,
                 caption: form.name,
                 source: null,
+                sourcePage: null,
                 lastVerified: null,
+                isCover: true,
+                priority: 1,
                 status: 'user-provided',
               },
             ]
@@ -735,7 +749,8 @@ function QuickAdd({
               {candidates.map((entity) => (
                 <article key={entity.id}>
                   <Media
-                    images={entity.images.slice(0, 1)}
+                    images={entity.images}
+                    entityId={entity.id}
                     name={entity.name}
                     open={() => {}}
                   />
@@ -1008,7 +1023,8 @@ function DayFood({
   const compact = (entity: Entity, topPick = false) => (
     <article key={entity.id} className={topPick ? 'food-top-pick' : ''}>
       <Media
-        images={entity.images.slice(0, 1)}
+        images={entity.images}
+        entityId={entity.id}
         name={entity.name}
         open={open}
       />
@@ -1090,11 +1106,13 @@ function GymDetailModal({
   entity,
   dayId,
   actions,
+  open,
   close,
 }: {
   entity: Entity;
   dayId: number;
   actions: ReturnType<typeof useEditablePlan>;
+  open: (image: LightboxImage) => void;
   close: () => void;
 }) {
   const dialogRef = useDialogLifecycle(close);
@@ -1109,6 +1127,7 @@ function GymDetailModal({
   const item = active ?? backup;
   const links = mapLinks(entity);
   const raw = entity.raw;
+  const cover = selectCoverImage(entity.images);
   const add = () =>
     actions.addEntity(entity.id, dayId, 'activeItems', { duration: '90min' });
   const remove = () =>
@@ -1135,10 +1154,14 @@ function GymDetailModal({
         <button className="detail-close" onClick={close} aria-label="关闭">
           <X />
         </button>
-        <div className="detail-hero">
-          {entity.images[0] ? (
+        <button
+          className="detail-hero detail-hero-button"
+          onClick={() => cover && open(openGalleryRequest(entity.id, entity.name, entity.images, cover))}
+          aria-label={`Open ${entity.name} gallery`}
+        >
+          {cover ? (
             <Image
-              src={entity.images[0].file}
+              src={cover.file}
               alt={entity.name}
               fill
               sizes="(max-width:680px) 100vw, 720px"
@@ -1149,7 +1172,8 @@ function GymDetailModal({
               <span>PHOTO PENDING</span>
             </div>
           )}
-        </div>
+          {cover && <span className="media-count">{entity.images.length} Photos</span>}
+        </button>
         <div className="detail-body">
           <span>GYM DETAIL · {String(raw.tag)}</span>
           <h2>{entity.name}</h2>
@@ -1763,6 +1787,7 @@ function TripView({
           entity={selectedGym}
           dayId={selectedDay}
           actions={actions}
+          open={open}
           close={() => setSelectedGym(null)}
         />
       )}
@@ -1774,15 +1799,25 @@ function EntityDetailModal({
   entity,
   selectedDay,
   actions,
+  open,
   close,
 }: {
   entity: Entity;
   selectedDay: number;
   actions: ReturnType<typeof useEditablePlan>;
+  open: (image: LightboxImage) => void;
   close: () => void;
 }) {
   const dialogRef = useDialogLifecycle(close);
   const links = mapLinks(entity);
+  const cover = selectCoverImage(entity.images);
+  const dishLabel = typeof entity.raw.dishes === 'string' ? entity.raw.dishes : '';
+  const orders = ['restaurant', 'cafe'].includes(entity.type)
+    ? dishLabel
+        .split(/[、，,；;]/)
+        .map((item) => item.trim())
+        .filter(Boolean)
+    : [];
   return (
     <div
       className="detail-backdrop"
@@ -1799,10 +1834,14 @@ function EntityDetailModal({
         <button className="detail-close" onClick={close} aria-label="关闭">
           <X />
         </button>
-        <div className="detail-hero">
-          {entity.images[0] ? (
+        <button
+          className="detail-hero detail-hero-button"
+          onClick={() => cover && open(openGalleryRequest(entity.id, entity.name, entity.images, cover))}
+          aria-label={`Open ${entity.name} gallery`}
+        >
+          {cover ? (
             <Image
-              src={entity.images[0].file}
+              src={cover.file}
               alt={entity.name}
               fill
               sizes="(max-width:680px) 100vw, 720px"
@@ -1813,7 +1852,8 @@ function EntityDetailModal({
               <span>PHOTO PENDING</span>
             </div>
           )}
-        </div>
+          {cover && <span className="media-count">{entity.images.length} Photos</span>}
+        </button>
         <div className="detail-body">
           <span>
             {entity.type.toUpperCase()} · {entity.city}
@@ -1822,6 +1862,28 @@ function EntityDetailModal({
           <p className="entity-detail-copy">
             {entity.description || entity.notes || '现场信息以官方页面为准。'}
           </p>
+          {orders.length > 0 && (
+            <section className="what-to-order">
+              <span>WHAT TO ORDER</span>
+              <div>
+                {orders.map((order) => {
+                  const related = entity.images.find((image) =>
+                    `${image.title} ${image.caption}`.toLowerCase().includes(order.toLowerCase()),
+                  );
+                  return (
+                    <button
+                      key={order}
+                      disabled={!related}
+                      onClick={() => related && open(openGalleryRequest(entity.id, entity.name, entity.images, related))}
+                    >
+                      {related && <Image src={related.file} alt={related.title} width={72} height={54} />}
+                      <span>{order}</span>
+                    </button>
+                  );
+                })}
+              </div>
+            </section>
+          )}
           <div className="detail-facts">
             <p>
               <b>价格 / 票务</b>
@@ -1899,7 +1961,7 @@ function ExploreCard({
       : '点击从酒店出发获取实时路线';
   return (
     <article className="explore-card">
-      <Media images={entity.images} name={entity.name} open={open} />
+      <Media images={entity.images} entityId={entity.id} name={entity.name} open={open} />
       <Favorite id={entity.id} value={favorites} setValue={setFavorites} />
       <button className="explore-open" onClick={() => inspect(entity)}>
         <small>
@@ -2065,7 +2127,8 @@ function DiscoverView({
                 <article key={`${pick.label}-${pick.entityId}`}>
                   <span>{pick.label}</span>
                   <Media
-                    images={entity.images.slice(0, 1)}
+                    images={entity.images}
+                    entityId={entity.id}
                     name={entity.name}
                     open={open}
                   />
@@ -2089,7 +2152,7 @@ function DiscoverView({
                 <button
                   className="visual-image"
                   onClick={() =>
-                    open({ src: image.file, caption: image.caption })
+                    open(openGalleryRequest(entity.id, entity.name, entity.images, image))
                   }
                 >
                   <Image
@@ -2141,6 +2204,7 @@ function DiscoverView({
           entity={detailEntity}
           selectedDay={selectedDay}
           actions={actions}
+          open={open}
           close={() => setDetailEntity(null)}
         />
       )}
@@ -2617,8 +2681,10 @@ function PlanView({
 
 function Stay({
   privateLinks = {},
+  open,
 }: {
   privateLinks?: Record<string, string>;
+  open: (image: LightboxImage) => void;
 }) {
   return (
     <div className="confirmed-stays">
@@ -2638,6 +2704,7 @@ function Stay({
             key={stay.id}
             stay={stay}
             privateCheckInLink={privateLinks[stay.id]}
+            openGallery={(gallery) => open(gallery)}
           />
         ))}
       </div>
@@ -2672,6 +2739,7 @@ function MoreView({
   actions,
   resolve,
   privateLinks,
+  open,
 }: {
   tab: MoreTab;
   setTab: (t: MoreTab) => void;
@@ -2684,6 +2752,7 @@ function MoreView({
   actions: ReturnType<typeof useEditablePlan>;
   resolve: (id: string) => Entity | undefined;
   privateLinks: Record<string, string>;
+  open: (image: LightboxImage) => void;
 }) {
   const fileRef = useRef<HTMLInputElement>(null);
   const exportJson = () => {
@@ -2735,7 +2804,7 @@ function MoreView({
           BACKUP
         </button>
       </div>
-      {tab === 'stay' && <Stay privateLinks={privateLinks} />}{' '}
+      {tab === 'stay' && <Stay privateLinks={privateLinks} open={open} />}{' '}
       {tab === 'map' && (
         <div>
           <div className="day-switcher">
@@ -2839,36 +2908,6 @@ function MoreView({
         </div>
       )}
     </div>
-  );
-}
-
-function Lightbox({
-  image,
-  close,
-}: {
-  image: LightboxImage;
-  close: () => void;
-}) {
-  const dialogRef = useDialogLifecycle(close, Boolean(image));
-  if (!image) return null;
-  return (
-    <dialog ref={dialogRef} className="v2-lightbox" open aria-modal="true">
-      <button onClick={close}>
-        <X />
-      </button>
-      <div>
-        {image.src.startsWith('/') ? (
-          <Image src={image.src} alt={image.caption} fill sizes="96vw" />
-        ) : (
-          <span
-            className="remote-image"
-            title={image.caption}
-            style={{ backgroundImage: `url(${image.src})` }}
-          />
-        )}
-      </div>
-      <p>{image.caption}</p>
-    </dialog>
   );
 }
 
@@ -3400,6 +3439,7 @@ export default function TravelGuideV3() {
               actions={actions}
               resolve={resolve}
               privateLinks={privateLinks}
+              open={setLightbox}
             />
           )}
         </div>
@@ -3422,7 +3462,7 @@ export default function TravelGuideV3() {
           撤销：{actions.undo.label}
         </button>
       )}
-      <Lightbox image={lightbox} close={() => setLightbox(null)} />
+      <MediaGallery gallery={lightbox} close={() => setLightbox(null)} />
     </div>
   );
 }

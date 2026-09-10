@@ -1,3 +1,5 @@
+import type { GalleryImage } from '@/lib/media';
+
 export type ViewId = 'home' | 'trip' | 'discover' | 'plan' | 'more';
 
 export type Place = {
@@ -79,6 +81,7 @@ export type Gym = {
   rating: number;
   photogenicRank: number | null;
   image: string;
+  images?: GalleryImage[];
   source: string;
 };
 
@@ -179,6 +182,9 @@ type HotelRecord = {
     originalUrl?: string;
     lastVerified?: string;
     entityId?: string;
+    title?: string;
+    isCover?: boolean;
+    priority?: number;
     status: string;
   }[];
 };
@@ -355,6 +361,7 @@ export type Restaurant = {
   xhsKeyword: string;
   restaurantImage: string | null;
   dishImage: string | null;
+  images?: GalleryImage[];
   photoStatus: string;
   soloFriendly: string;
   lastVerified: string;

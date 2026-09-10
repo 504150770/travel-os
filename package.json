@@ -12,7 +12,7 @@
     "lint": "oxlint app/page.tsx app/layout.tsx components/travel-guide-v3.tsx components/mini-route.tsx hooks/use-local-storage.ts lib scripts",
     "typecheck": "tsc --noEmit",
     "format": "oxfmt",
-    "audit": "node scripts/generate-media-metadata.mjs && node scripts/audit.mjs && node scripts/generate-unverified.mjs && node scripts/asset-coverage.mjs --write",
+    "audit": "node scripts/generate-media-metadata.mjs && node scripts/audit.mjs && node scripts/generate-unverified.mjs && node scripts/asset-coverage.mjs --write && node scripts/gallery-quality-audit.mjs --write",
     "test:linkage": "node --experimental-strip-types scripts/linkage-test.mjs",
     "unverified": "node scripts/generate-unverified.mjs",
     "check": "pnpm lint && pnpm typecheck && pnpm test:linkage && pnpm build && pnpm run audit"

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-10T02:09:29.970Z",
+  "generatedAt": "2026-09-10T03:48:05.075Z",
   "status": "passed",
   "summary": {
     "failures": 0,
@@ -10,7 +10,7 @@
     "entities": 189,
     "places": 39,
     "options": 24,
-    "images": 102,
+    "images": 287,
     "gyms": 10,
     "verifiedGyms": 9,
     "realHotelBookings": 6,
@@ -31,8 +31,8 @@
     "xhsTopics": 28,
     "bookings": 18,
     "tasks": 14,
-    "confirmedHotelImages": 18,
-    "mediaMetadataRecords": 101
+    "confirmedHotelImages": 30,
+    "mediaMetadataRecords": 286
   },
   "checks": {
     "schemaValidation": true,

@@ -1,0 +1,1445 @@
+{
+  "generatedAt": "2026-09-10T03:48:06.204Z",
+  "criteria": {
+    "food": ">=4 images, >=2 dishes, environment/entrance, dish cover",
+    "gym": ">=3 images with equipment",
+    "hotel": ">=5 images with entrance/room/bathroom",
+    "place": ">=3 images"
+  },
+  "summary": {
+    "food": {
+      "ready": 24,
+      "total": 34,
+      "percentage": 71,
+      "averageImages": 3.88,
+      "unmet": [
+        "rome-santeustachio",
+        "venice-florian",
+        "prague-lokal",
+        "prague-kantyna",
+        "paris-breizh",
+        "paris-flore",
+        "florence-rivoire",
+        "venice-plip",
+        "venice-ai-pini-restaurant",
+        "paris-la-table-de-mame"
+      ]
+    },
+    "gym": {
+      "ready": 4,
+      "total": 6,
+      "percentage": 67,
+      "averageImages": 2.5,
+      "unmet": [
+        "gym-rome-dabliu",
+        "gym-mestre-mcfit"
+      ]
+    },
+    "hotel": {
+      "ready": 6,
+      "total": 6,
+      "percentage": 100,
+      "averageImages": 5,
+      "unmet": []
+    },
+    "place": {
+      "ready": 34,
+      "total": 34,
+      "percentage": 100,
+      "averageImages": 3,
+      "unmet": []
+    }
+  },
+  "GalleryReadyCoverage": {
+    "ready": 68,
+    "total": 80,
+    "percentage": 85
+  },
+  "referencedGalleryBytes": 29705966,
+  "entities": {
+    "food": [
+      {
+        "id": "rome-armando",
+        "name": "Armando al Pantheon",
+        "type": "food",
+        "imageCount": 4,
+        "roleCoverage": [
+          "entrance",
+          "dish",
+          "interior"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": true,
+        "hasInterior": true,
+        "hasSignatureDish": true,
+        "coverRole": "dish",
+        "dishCount": 2,
+        "galleryReady": true
+      },
+      {
+        "id": "rome-roscioli",
+        "name": "Roscioli Salumeria con Cucina",
+        "type": "food",
+        "imageCount": 4,
+        "roleCoverage": [
+          "dish",
+          "interior",
+          "entrance"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": true,
+        "hasInterior": true,
+        "hasSignatureDish": true,
+        "coverRole": "dish",
+        "dishCount": 2,
+        "galleryReady": true
+      },
+      {
+        "id": "rome-trapizzino",
+        "name": "Trapizzino Trastevere",
+        "type": "food",
+        "imageCount": 4,
+        "roleCoverage": [
+          "dish",
+          "entrance"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": true,
+        "hasInterior": false,
+        "hasSignatureDish": true,
+        "coverRole": "dish",
+        "dishCount": 3,
+        "galleryReady": true
+      },
+      {
+        "id": "rome-santeustachio",
+        "name": "Sant’Eustachio Il Caffè",
+        "type": "food",
+        "imageCount": 4,
+        "roleCoverage": [
+          "exterior",
+          "entrance",
+          "interior",
+          "dish"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": true,
+        "hasInterior": true,
+        "hasSignatureDish": true,
+        "coverRole": "dish",
+        "dishCount": 1,
+        "galleryReady": false
+      },
+      {
+        "id": "florence-sabatino",
+        "name": "Trattoria Sabatino",
+        "type": "food",
+        "imageCount": 5,
+        "roleCoverage": [
+          "entrance",
+          "detail",
+          "dish",
+          "interior"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": true,
+        "hasInterior": true,
+        "hasSignatureDish": true,
+        "coverRole": "dish",
+        "dishCount": 2,
+        "galleryReady": true
+      },
+      {
+        "id": "florence-ditta",
+        "name": "Ditta Artigianale",
+        "type": "food",
+        "imageCount": 4,
+        "roleCoverage": [
+          "dish",
+          "interior"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": true,
+        "hasSignatureDish": true,
+        "coverRole": "dish",
+        "dishCount": 3,
+        "galleryReady": true
+      },
+      {
+        "id": "venice-viterossa",
+        "name": "Hostaria Vite Rossa",
+        "type": "food",
+        "imageCount": 4,
+        "roleCoverage": [
+          "dish",
+          "interior"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": true,
+        "hasSignatureDish": true,
+        "coverRole": "dish",
+        "dishCount": 3,
+        "galleryReady": true
+      },
+      {
+        "id": "venice-florian",
+        "name": "Caffè Florian",
+        "type": "food",
+        "imageCount": 3,
+        "roleCoverage": [
+          "interior",
+          "dish"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": true,
+        "hasSignatureDish": true,
+        "coverRole": "dish",
+        "dishCount": 1,
+        "galleryReady": false
+      },
+      {
+        "id": "vienna-kameel",
+        "name": "Zum Schwarzen Kameel",
+        "type": "food",
+        "imageCount": 4,
+        "roleCoverage": [
+          "interior",
+          "dish"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": true,
+        "hasSignatureDish": true,
+        "coverRole": "dish",
+        "dishCount": 2,
+        "galleryReady": true
+      },
+      {
+        "id": "prague-lokal",
+        "name": "Lokál Dlouhááá",
+        "type": "food",
+        "imageCount": 5,
+        "roleCoverage": [
+          "interior",
+          "dish",
+          "entrance"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": true,
+        "hasInterior": true,
+        "hasSignatureDish": true,
+        "coverRole": "dish",
+        "dishCount": 1,
+        "galleryReady": false
+      },
+      {
+        "id": "prague-kantyna",
+        "name": "Kantýna",
+        "type": "food",
+        "imageCount": 2,
+        "roleCoverage": [
+          "dish",
+          "interior"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": true,
+        "hasSignatureDish": true,
+        "coverRole": "dish",
+        "dishCount": 1,
+        "galleryReady": false
+      },
+      {
+        "id": "prague-eska",
+        "name": "Eska",
+        "type": "food",
+        "imageCount": 4,
+        "roleCoverage": [
+          "entrance",
+          "interior",
+          "dish"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": true,
+        "hasInterior": true,
+        "hasSignatureDish": true,
+        "coverRole": "dish",
+        "dishCount": 2,
+        "galleryReady": true
+      },
+      {
+        "id": "paris-breizh",
+        "name": "Breizh Café",
+        "type": "food",
+        "imageCount": 3,
+        "roleCoverage": [
+          "dish"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": false,
+        "hasSignatureDish": true,
+        "coverRole": "dish",
+        "dishCount": 3,
+        "galleryReady": false
+      },
+      {
+        "id": "paris-flore",
+        "name": "Café de Flore",
+        "type": "food",
+        "imageCount": 3,
+        "roleCoverage": [
+          "dish",
+          "entrance",
+          "interior"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": true,
+        "hasInterior": true,
+        "hasSignatureDish": true,
+        "coverRole": "dish",
+        "dishCount": 1,
+        "galleryReady": false
+      },
+      {
+        "id": "rome-forno",
+        "name": "Forno Campo de’ Fiori",
+        "type": "food",
+        "imageCount": 4,
+        "roleCoverage": [
+          "dish",
+          "entrance",
+          "interior"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": true,
+        "hasInterior": true,
+        "hasSignatureDish": true,
+        "coverRole": "dish",
+        "dishCount": 2,
+        "galleryReady": true
+      },
+      {
+        "id": "rome-giolitti",
+        "name": "Giolitti",
+        "type": "food",
+        "imageCount": 4,
+        "roleCoverage": [
+          "dish",
+          "interior"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": true,
+        "hasSignatureDish": true,
+        "coverRole": "dish",
+        "dishCount": 3,
+        "galleryReady": true
+      },
+      {
+        "id": "florence-cammillo",
+        "name": "Cammillo Trattoria",
+        "type": "food",
+        "imageCount": 6,
+        "roleCoverage": [
+          "entrance",
+          "interior",
+          "dish"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": true,
+        "hasInterior": true,
+        "hasSignatureDish": true,
+        "coverRole": "dish",
+        "dishCount": 2,
+        "galleryReady": true
+      },
+      {
+        "id": "florence-gustapizza",
+        "name": "Gustapizza",
+        "type": "food",
+        "imageCount": 4,
+        "roleCoverage": [
+          "dish",
+          "entrance",
+          "interior"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": true,
+        "hasInterior": true,
+        "hasSignatureDish": true,
+        "coverRole": "dish",
+        "dishCount": 2,
+        "galleryReady": true
+      },
+      {
+        "id": "florence-rivoire",
+        "name": "Rivoire",
+        "type": "food",
+        "imageCount": 4,
+        "roleCoverage": [
+          "dish"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": false,
+        "hasSignatureDish": true,
+        "coverRole": "dish",
+        "dishCount": 4,
+        "galleryReady": false
+      },
+      {
+        "id": "venice-plip",
+        "name": "Osteria Plip",
+        "type": "food",
+        "imageCount": 1,
+        "roleCoverage": [
+          "dish"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": false,
+        "hasSignatureDish": true,
+        "coverRole": "dish",
+        "dishCount": 1,
+        "galleryReady": false
+      },
+      {
+        "id": "venice-frarys",
+        "name": "Frary’s",
+        "type": "food",
+        "imageCount": 4,
+        "roleCoverage": [
+          "dish",
+          "entrance"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": true,
+        "hasInterior": false,
+        "hasSignatureDish": true,
+        "coverRole": "dish",
+        "dishCount": 3,
+        "galleryReady": true
+      },
+      {
+        "id": "venice-torrefazione",
+        "name": "Torrefazione Cannaregio",
+        "type": "food",
+        "imageCount": 5,
+        "roleCoverage": [
+          "interior",
+          "entrance",
+          "dish"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": true,
+        "hasInterior": true,
+        "hasSignatureDish": true,
+        "coverRole": "dish",
+        "dishCount": 2,
+        "galleryReady": true
+      },
+      {
+        "id": "vienna-central",
+        "name": "Café Central",
+        "type": "food",
+        "imageCount": 5,
+        "roleCoverage": [
+          "exterior",
+          "entrance",
+          "dish",
+          "interior"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": true,
+        "hasInterior": true,
+        "hasSignatureDish": true,
+        "coverRole": "dish",
+        "dishCount": 2,
+        "galleryReady": true
+      },
+      {
+        "id": "vienna-demel",
+        "name": "Demel",
+        "type": "food",
+        "imageCount": 4,
+        "roleCoverage": [
+          "interior",
+          "dish"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": true,
+        "hasSignatureDish": true,
+        "coverRole": "dish",
+        "dishCount": 3,
+        "galleryReady": true
+      },
+      {
+        "id": "vienna-plachutta",
+        "name": "Plachutta Wollzeile",
+        "type": "food",
+        "imageCount": 5,
+        "roleCoverage": [
+          "dish",
+          "entrance",
+          "interior"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": true,
+        "hasInterior": true,
+        "hasSignatureDish": true,
+        "coverRole": "dish",
+        "dishCount": 3,
+        "galleryReady": true
+      },
+      {
+        "id": "prague-savoy",
+        "name": "Café Savoy",
+        "type": "food",
+        "imageCount": 4,
+        "roleCoverage": [
+          "interior",
+          "dish"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": true,
+        "hasSignatureDish": true,
+        "coverRole": "dish",
+        "dishCount": 2,
+        "galleryReady": true
+      },
+      {
+        "id": "prague-choco",
+        "name": "Choco Café",
+        "type": "food",
+        "imageCount": 4,
+        "roleCoverage": [
+          "interior",
+          "dish"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": true,
+        "hasSignatureDish": true,
+        "coverRole": "dish",
+        "dishCount": 2,
+        "galleryReady": true
+      },
+      {
+        "id": "paris-angelina",
+        "name": "Angelina Rivoli",
+        "type": "food",
+        "imageCount": 5,
+        "roleCoverage": [
+          "dish",
+          "interior"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": true,
+        "hasSignatureDish": true,
+        "coverRole": "dish",
+        "dishCount": 4,
+        "galleryReady": true
+      },
+      {
+        "id": "paris-dupain",
+        "name": "Du Pain et des Idées",
+        "type": "food",
+        "imageCount": 4,
+        "roleCoverage": [
+          "entrance",
+          "exterior",
+          "dish"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": true,
+        "hasInterior": false,
+        "hasSignatureDish": true,
+        "coverRole": "dish",
+        "dishCount": 2,
+        "galleryReady": true
+      },
+      {
+        "id": "paris-stohrer",
+        "name": "Stohrer",
+        "type": "food",
+        "imageCount": 5,
+        "roleCoverage": [
+          "dish",
+          "interior"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": true,
+        "hasSignatureDish": true,
+        "coverRole": "dish",
+        "dishCount": 4,
+        "galleryReady": true
+      },
+      {
+        "id": "paris-enfants",
+        "name": "Les Enfants du Marché",
+        "type": "food",
+        "imageCount": 4,
+        "roleCoverage": [
+          "dish",
+          "interior"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": true,
+        "hasSignatureDish": true,
+        "coverRole": "dish",
+        "dishCount": 2,
+        "galleryReady": true
+      },
+      {
+        "id": "venice-ai-pini-restaurant",
+        "name": "Restaurant Ai Pini",
+        "type": "food",
+        "imageCount": 2,
+        "roleCoverage": [
+          "interior",
+          "dish"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": true,
+        "hasSignatureDish": true,
+        "coverRole": "dish",
+        "dishCount": 1,
+        "galleryReady": false
+      },
+      {
+        "id": "vienna-tarim",
+        "name": "Tarim Uighur Restaurant",
+        "type": "food",
+        "imageCount": 4,
+        "roleCoverage": [
+          "dish",
+          "interior"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": true,
+        "hasSignatureDish": true,
+        "coverRole": "dish",
+        "dishCount": 3,
+        "galleryReady": true
+      },
+      {
+        "id": "paris-la-table-de-mame",
+        "name": "La Table de Mame",
+        "type": "food",
+        "imageCount": 1,
+        "roleCoverage": [
+          "interior"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": true,
+        "hasSignatureDish": false,
+        "coverRole": "interior",
+        "dishCount": 0,
+        "galleryReady": false
+      }
+    ],
+    "gym": [
+      {
+        "id": "gym-rome-dabliu",
+        "name": "Dabliu Club Parioli",
+        "type": "gym",
+        "imageCount": 2,
+        "roleCoverage": [
+          "equipment",
+          "interior"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": true,
+        "hasSignatureDish": false,
+        "coverRole": "equipment",
+        "galleryReady": false
+      },
+      {
+        "id": "gym-florence-klab",
+        "name": "Klab Marignolle",
+        "type": "gym",
+        "imageCount": 3,
+        "roleCoverage": [
+          "equipment",
+          "interior",
+          "detail"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": true,
+        "hasSignatureDish": false,
+        "coverRole": "equipment",
+        "galleryReady": true
+      },
+      {
+        "id": "gym-mestre-mcfit",
+        "name": "McFIT Mestre · Via Don Peron",
+        "type": "gym",
+        "imageCount": 1,
+        "roleCoverage": [
+          "equipment"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": false,
+        "hasSignatureDish": false,
+        "coverRole": "equipment",
+        "galleryReady": false
+      },
+      {
+        "id": "gym-vienna-jh",
+        "name": "John Harris Schillerplatz",
+        "type": "gym",
+        "imageCount": 3,
+        "roleCoverage": [
+          "equipment",
+          "detail",
+          "interior"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": true,
+        "hasSignatureDish": false,
+        "coverRole": "equipment",
+        "galleryReady": true
+      },
+      {
+        "id": "gym-prague-form",
+        "name": "Form Factory I. P. Pavlova",
+        "type": "gym",
+        "imageCount": 3,
+        "roleCoverage": [
+          "equipment",
+          "detail"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": false,
+        "hasSignatureDish": false,
+        "coverRole": "equipment",
+        "galleryReady": true
+      },
+      {
+        "id": "gym-paris-fpark",
+        "name": "Fitness Park Porte de Choisy",
+        "type": "gym",
+        "imageCount": 3,
+        "roleCoverage": [
+          "equipment",
+          "interior"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": true,
+        "hasSignatureDish": false,
+        "coverRole": "equipment",
+        "galleryReady": true
+      }
+    ],
+    "hotel": [
+      {
+        "id": "stay-rome-colonna",
+        "name": "Colonna Palace Hotel",
+        "type": "hotel",
+        "imageCount": 5,
+        "roleCoverage": [
+          "entrance",
+          "room",
+          "bathroom",
+          "interior",
+          "detail"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": true,
+        "hasInterior": true,
+        "hasSignatureDish": false,
+        "coverRole": "room",
+        "galleryReady": true
+      },
+      {
+        "id": "stay-florence-fonderia",
+        "name": "La Fonderia Firenze",
+        "type": "hotel",
+        "imageCount": 5,
+        "roleCoverage": [
+          "entrance",
+          "room",
+          "bathroom",
+          "detail"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": true,
+        "hasInterior": true,
+        "hasSignatureDish": false,
+        "coverRole": "room",
+        "galleryReady": true
+      },
+      {
+        "id": "stay-venice-ai-pini",
+        "name": "Park Hotel Ai Pini & Restaurant Ai Pini",
+        "type": "hotel",
+        "imageCount": 5,
+        "roleCoverage": [
+          "entrance",
+          "room",
+          "bathroom",
+          "interior"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": true,
+        "hasInterior": true,
+        "hasSignatureDish": false,
+        "coverRole": "room",
+        "galleryReady": true
+      },
+      {
+        "id": "stay-vienna-jimmys",
+        "name": "Jimmy's Apartments Lory",
+        "type": "hotel",
+        "imageCount": 5,
+        "roleCoverage": [
+          "entrance",
+          "room",
+          "bathroom",
+          "detail",
+          "interior"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": true,
+        "hasInterior": true,
+        "hasSignatureDish": false,
+        "coverRole": "room",
+        "galleryReady": true
+      },
+      {
+        "id": "stay-prague-ostas",
+        "name": "Self-Service Hotel Ostaš Praha",
+        "type": "hotel",
+        "imageCount": 5,
+        "roleCoverage": [
+          "entrance",
+          "room",
+          "bathroom",
+          "interior",
+          "detail"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": true,
+        "hasInterior": true,
+        "hasSignatureDish": false,
+        "coverRole": "room",
+        "galleryReady": true
+      },
+      {
+        "id": "stay-paris-oden",
+        "name": "Oden Paris Ivry",
+        "type": "hotel",
+        "imageCount": 5,
+        "roleCoverage": [
+          "entrance",
+          "room",
+          "bathroom"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": true,
+        "hasInterior": true,
+        "hasSignatureDish": false,
+        "coverRole": "room",
+        "galleryReady": true
+      }
+    ],
+    "place": [
+      {
+        "id": "trevi",
+        "name": "特雷维喷泉",
+        "type": "place",
+        "imageCount": 3,
+        "roleCoverage": [
+          "hero",
+          "detail",
+          "photo-angle"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": false,
+        "hasSignatureDish": false,
+        "coverRole": "hero",
+        "galleryReady": true
+      },
+      {
+        "id": "navona",
+        "name": "纳沃纳广场",
+        "type": "place",
+        "imageCount": 3,
+        "roleCoverage": [
+          "stop",
+          "detail",
+          "photo-angle"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": false,
+        "hasSignatureDish": false,
+        "coverRole": "stop",
+        "galleryReady": true
+      },
+      {
+        "id": "colosseum",
+        "name": "斗兽场",
+        "type": "place",
+        "imageCount": 3,
+        "roleCoverage": [
+          "hero",
+          "detail",
+          "photo-angle"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": false,
+        "hasSignatureDish": false,
+        "coverRole": "hero",
+        "galleryReady": true
+      },
+      {
+        "id": "forum",
+        "name": "古罗马广场",
+        "type": "place",
+        "imageCount": 3,
+        "roleCoverage": [
+          "stop",
+          "detail",
+          "photo-angle"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": false,
+        "hasSignatureDish": false,
+        "coverRole": "stop",
+        "galleryReady": true
+      },
+      {
+        "id": "pantheon",
+        "name": "万神殿",
+        "type": "place",
+        "imageCount": 3,
+        "roleCoverage": [
+          "stop",
+          "detail",
+          "photo-angle"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": false,
+        "hasSignatureDish": false,
+        "coverRole": "stop",
+        "galleryReady": true
+      },
+      {
+        "id": "vatican_museums",
+        "name": "梵蒂冈博物馆",
+        "type": "place",
+        "imageCount": 3,
+        "roleCoverage": [
+          "hero",
+          "detail",
+          "photo-angle"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": false,
+        "hasSignatureDish": false,
+        "coverRole": "hero",
+        "galleryReady": true
+      },
+      {
+        "id": "st_peter",
+        "name": "圣彼得大教堂与广场",
+        "type": "place",
+        "imageCount": 3,
+        "roleCoverage": [
+          "stop",
+          "detail",
+          "photo-angle"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": false,
+        "hasSignatureDish": false,
+        "coverRole": "stop",
+        "galleryReady": true
+      },
+      {
+        "id": "duomo_firenze",
+        "name": "圣母百花大教堂",
+        "type": "place",
+        "imageCount": 3,
+        "roleCoverage": [
+          "hero",
+          "detail",
+          "photo-angle"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": false,
+        "hasSignatureDish": false,
+        "coverRole": "hero",
+        "galleryReady": true
+      },
+      {
+        "id": "signoria",
+        "name": "领主广场",
+        "type": "place",
+        "imageCount": 3,
+        "roleCoverage": [
+          "stop",
+          "detail",
+          "photo-angle"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": false,
+        "hasSignatureDish": false,
+        "coverRole": "stop",
+        "galleryReady": true
+      },
+      {
+        "id": "ponte_vecchio",
+        "name": "老桥",
+        "type": "place",
+        "imageCount": 3,
+        "roleCoverage": [
+          "stop",
+          "detail",
+          "photo-angle"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": false,
+        "hasSignatureDish": false,
+        "coverRole": "stop",
+        "galleryReady": true
+      },
+      {
+        "id": "oltrarno",
+        "name": "Oltrarno / Santo Spirito",
+        "type": "place",
+        "imageCount": 3,
+        "roleCoverage": [
+          "stop",
+          "detail",
+          "photo-angle"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": false,
+        "hasSignatureDish": false,
+        "coverRole": "stop",
+        "galleryReady": true
+      },
+      {
+        "id": "piazzale_michelangelo",
+        "name": "米开朗基罗广场",
+        "type": "place",
+        "imageCount": 3,
+        "roleCoverage": [
+          "hero",
+          "detail",
+          "photo-angle"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": false,
+        "hasSignatureDish": false,
+        "coverRole": "hero",
+        "galleryReady": true
+      },
+      {
+        "id": "grand_canal",
+        "name": "大运河",
+        "type": "place",
+        "imageCount": 3,
+        "roleCoverage": [
+          "hero",
+          "detail",
+          "photo-angle"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": false,
+        "hasSignatureDish": false,
+        "coverRole": "hero",
+        "galleryReady": true
+      },
+      {
+        "id": "accademia_bridge",
+        "name": "学院桥",
+        "type": "place",
+        "imageCount": 3,
+        "roleCoverage": [
+          "stop",
+          "detail",
+          "photo-angle"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": false,
+        "hasSignatureDish": false,
+        "coverRole": "stop",
+        "galleryReady": true
+      },
+      {
+        "id": "st_mark_square",
+        "name": "圣马可广场",
+        "type": "place",
+        "imageCount": 3,
+        "roleCoverage": [
+          "hero",
+          "detail",
+          "photo-angle"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": false,
+        "hasSignatureDish": false,
+        "coverRole": "hero",
+        "galleryReady": true
+      },
+      {
+        "id": "bridge_sighs",
+        "name": "叹息桥",
+        "type": "place",
+        "imageCount": 3,
+        "roleCoverage": [
+          "stop",
+          "detail",
+          "photo-angle"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": false,
+        "hasSignatureDish": false,
+        "coverRole": "stop",
+        "galleryReady": true
+      },
+      {
+        "id": "st_mark_basilica",
+        "name": "圣马可大教堂",
+        "type": "place",
+        "imageCount": 3,
+        "roleCoverage": [
+          "stop",
+          "detail",
+          "photo-angle"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": false,
+        "hasSignatureDish": false,
+        "coverRole": "stop",
+        "galleryReady": true
+      },
+      {
+        "id": "graben",
+        "name": "格拉本大街",
+        "type": "place",
+        "imageCount": 3,
+        "roleCoverage": [
+          "stop",
+          "detail",
+          "photo-angle"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": false,
+        "hasSignatureDish": false,
+        "coverRole": "stop",
+        "galleryReady": true
+      },
+      {
+        "id": "schonbrunn",
+        "name": "美泉宫",
+        "type": "place",
+        "imageCount": 3,
+        "roleCoverage": [
+          "hero",
+          "detail",
+          "photo-angle"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": false,
+        "hasSignatureDish": false,
+        "coverRole": "hero",
+        "galleryReady": true
+      },
+      {
+        "id": "rathausplatz",
+        "name": "市政厅圣诞市场",
+        "type": "place",
+        "imageCount": 3,
+        "roleCoverage": [
+          "stop",
+          "detail",
+          "photo-angle"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": false,
+        "hasSignatureDish": false,
+        "coverRole": "stop",
+        "galleryReady": true
+      },
+      {
+        "id": "prague_old_town",
+        "name": "老城广场",
+        "type": "place",
+        "imageCount": 3,
+        "roleCoverage": [
+          "hero",
+          "stop",
+          "photo-angle"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": false,
+        "hasSignatureDish": false,
+        "coverRole": "hero",
+        "galleryReady": true
+      },
+      {
+        "id": "prague_castle",
+        "name": "布拉格城堡",
+        "type": "place",
+        "imageCount": 3,
+        "roleCoverage": [
+          "hero",
+          "detail",
+          "photo-angle"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": false,
+        "hasSignatureDish": false,
+        "coverRole": "hero",
+        "galleryReady": true
+      },
+      {
+        "id": "st_vitus",
+        "name": "圣维特大教堂",
+        "type": "place",
+        "imageCount": 3,
+        "roleCoverage": [
+          "stop",
+          "detail",
+          "photo-angle"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": false,
+        "hasSignatureDish": false,
+        "coverRole": "stop",
+        "galleryReady": true
+      },
+      {
+        "id": "mala_strana",
+        "name": "小城区",
+        "type": "place",
+        "imageCount": 3,
+        "roleCoverage": [
+          "stop",
+          "detail",
+          "photo-angle"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": false,
+        "hasSignatureDish": false,
+        "coverRole": "stop",
+        "galleryReady": true
+      },
+      {
+        "id": "charles_bridge",
+        "name": "查理大桥",
+        "type": "place",
+        "imageCount": 3,
+        "roleCoverage": [
+          "stop",
+          "detail",
+          "photo-angle"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": false,
+        "hasSignatureDish": false,
+        "coverRole": "stop",
+        "galleryReady": true
+      },
+      {
+        "id": "pont_saint_michel",
+        "name": "圣米歇尔桥",
+        "type": "place",
+        "imageCount": 3,
+        "roleCoverage": [
+          "hero",
+          "stop",
+          "photo-angle"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": false,
+        "hasSignatureDish": false,
+        "coverRole": "hero",
+        "galleryReady": true
+      },
+      {
+        "id": "louvre",
+        "name": "卢浮宫",
+        "type": "place",
+        "imageCount": 3,
+        "roleCoverage": [
+          "hero",
+          "detail",
+          "photo-angle"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": false,
+        "hasSignatureDish": false,
+        "coverRole": "hero",
+        "galleryReady": true
+      },
+      {
+        "id": "louvre_pyramid",
+        "name": "卢浮宫金字塔",
+        "type": "place",
+        "imageCount": 3,
+        "roleCoverage": [
+          "stop",
+          "detail",
+          "photo-angle"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": false,
+        "hasSignatureDish": false,
+        "coverRole": "stop",
+        "galleryReady": true
+      },
+      {
+        "id": "trocadero",
+        "name": "特罗卡德罗",
+        "type": "place",
+        "imageCount": 3,
+        "roleCoverage": [
+          "hero",
+          "detail",
+          "photo-angle"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": false,
+        "hasSignatureDish": false,
+        "coverRole": "hero",
+        "galleryReady": true
+      },
+      {
+        "id": "arc_triomphe",
+        "name": "凯旋门",
+        "type": "place",
+        "imageCount": 3,
+        "roleCoverage": [
+          "stop",
+          "detail",
+          "photo-angle"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": false,
+        "hasSignatureDish": false,
+        "coverRole": "stop",
+        "galleryReady": true
+      },
+      {
+        "id": "sacre_coeur",
+        "name": "圣心堂",
+        "type": "place",
+        "imageCount": 3,
+        "roleCoverage": [
+          "stop",
+          "detail",
+          "photo-angle"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": false,
+        "hasSignatureDish": false,
+        "coverRole": "stop",
+        "galleryReady": true
+      },
+      {
+        "id": "montmartre",
+        "name": "蒙马特街巷",
+        "type": "place",
+        "imageCount": 3,
+        "roleCoverage": [
+          "hero",
+          "detail",
+          "photo-angle"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": false,
+        "hasSignatureDish": false,
+        "coverRole": "hero",
+        "galleryReady": true
+      },
+      {
+        "id": "galeries_lafayette",
+        "name": "老佛爷百货",
+        "type": "place",
+        "imageCount": 3,
+        "roleCoverage": [
+          "stop",
+          "detail",
+          "photo-angle"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": false,
+        "hasSignatureDish": false,
+        "coverRole": "stop",
+        "galleryReady": true
+      },
+      {
+        "id": "cdg",
+        "name": "巴黎戴高乐机场",
+        "type": "place",
+        "imageCount": 3,
+        "roleCoverage": [
+          "hero",
+          "detail",
+          "photo-angle"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": false,
+        "hasSignatureDish": false,
+        "coverRole": "hero",
+        "galleryReady": true
+      }
+    ]
+  }
+}

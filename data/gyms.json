@@ -26,7 +26,34 @@
     "hotelId": "stay-rome-colonna",
     "hotelName": "Colonna Palace Hotel",
     "hotelPriority": 1,
-    "distanceStatus": "PLANNING ESTIMATE；出发前用 From Hotel 实时复核"
+    "distanceStatus": "PLANNING ESTIMATE；出发前用 From Hotel 实时复核",
+    "images": [
+      {
+        "file": "/images/gym_rome_dabliu.webp",
+        "role": "equipment",
+        "title": "Dabliu Club Parioli",
+        "caption": "Dabliu Club Parioli real-world visual",
+        "source": "Source recorded on entity",
+        "sourcePage": "https://www.dabliu.com/club/roma-parioli/",
+        "lastVerified": "2026-09-06",
+        "isCover": true,
+        "priority": 1,
+        "entityId": "gym-rome-dabliu"
+      },
+      {
+        "file": "/images/gym/gym-rome-dabliu/curated-1.webp",
+        "role": "interior",
+        "title": "Parioli club interior",
+        "caption": "Dabliu Club Parioli · Parioli club interior",
+        "source": "Restaurant Guru venue gallery",
+        "sourcePage": "https://restaurantguru.com/Dabliu-Parioli-Fitness-Club-Rome",
+        "originalUrl": "https://img3.restaurantguru.com/c5e3-Dabliu-Parioli-Fitness-Club-Rome-interior.jpg",
+        "lastVerified": "2026-09-10",
+        "isCover": false,
+        "priority": 2,
+        "entityId": "gym-rome-dabliu"
+      }
+    ]
   },
   {
     "id": "gym-rome-golden",
@@ -84,7 +111,47 @@
     "hotelId": "stay-florence-fonderia",
     "hotelName": "La Fonderia Firenze",
     "hotelPriority": 3,
-    "distanceStatus": "PLANNING ESTIMATE；出发前用 From Hotel 实时复核"
+    "distanceStatus": "PLANNING ESTIMATE；出发前用 From Hotel 实时复核",
+    "images": [
+      {
+        "file": "/images/gym_florence_klab.webp",
+        "role": "equipment",
+        "title": "Klab Marignolle",
+        "caption": "Klab Marignolle real-world visual",
+        "source": "Source recorded on entity",
+        "sourcePage": "https://www.klab.it/marignolle-firenze/",
+        "lastVerified": "2026-09-06",
+        "isCover": true,
+        "priority": 1,
+        "entityId": "gym-florence-klab"
+      },
+      {
+        "file": "/images/gym/gym-florence-klab/02.webp",
+        "role": "interior",
+        "title": "Klab Marignolle interior",
+        "caption": "Klab Marignolle · interior",
+        "source": "Official business website",
+        "sourcePage": "https://www.klab.it/marignolle-firenze/",
+        "originalUrl": "https://www.klab.it/wp-content/uploads/2022/11/sala-cardio-1-uai-720x576.jpg",
+        "lastVerified": "2026-09-10",
+        "isCover": false,
+        "priority": 2,
+        "entityId": "gym-florence-klab"
+      },
+      {
+        "file": "/images/gym/gym-florence-klab/03.webp",
+        "role": "detail",
+        "title": "Piscina di Klab Marignolle",
+        "caption": "Klab Marignolle · Piscina di Klab Marignolle",
+        "source": "Official business website",
+        "sourcePage": "https://www.klab.it/marignolle-firenze/",
+        "originalUrl": "https://www.klab.it/wp-content/uploads/2022/09/klab-marignolle-piscina-nuoto-firenze-scandicci-uai-720x542.jpg",
+        "lastVerified": "2026-09-10",
+        "isCover": false,
+        "priority": 3,
+        "entityId": "gym-florence-klab"
+      }
+    ]
   },
   {
     "id": "gym-mestre-mcfit",
@@ -113,7 +180,21 @@
     "hotelId": "stay-venice-ai-pini",
     "hotelName": "Park Hotel Ai Pini & Restaurant Ai Pini",
     "hotelPriority": 4,
-    "distanceStatus": "PLANNING ESTIMATE；出发前用 From Hotel 实时复核"
+    "distanceStatus": "PLANNING ESTIMATE；出发前用 From Hotel 实时复核",
+    "images": [
+      {
+        "file": "/images/gym_mestre_mcfit.webp",
+        "role": "equipment",
+        "title": "McFIT Mestre · Via Don Peron",
+        "caption": "McFIT Mestre · Via Don Peron real-world visual",
+        "source": "Source recorded on entity",
+        "sourcePage": "https://wellhub.com/it-it/search/partners/mcfit-mestre/",
+        "lastVerified": "2026-09-06",
+        "isCover": true,
+        "priority": 1,
+        "entityId": "gym-mestre-mcfit"
+      }
+    ]
   },
   {
     "id": "gym-vienna-jh",
@@ -142,7 +223,47 @@
     "hotelId": "stay-vienna-jimmys",
     "hotelName": "Jimmy's Apartments Lory",
     "hotelPriority": 5,
-    "distanceStatus": "PLANNING ESTIMATE；出发前用 From Hotel 实时复核"
+    "distanceStatus": "PLANNING ESTIMATE；出发前用 From Hotel 实时复核",
+    "images": [
+      {
+        "file": "/images/gym_vienna_jh.webp",
+        "role": "equipment",
+        "title": "John Harris Schillerplatz",
+        "caption": "John Harris Schillerplatz real-world visual",
+        "source": "Source recorded on entity",
+        "sourcePage": "https://www.johnharris.at/en/studios/detail/1/schillerplatz.html",
+        "lastVerified": "2026-09-06",
+        "isCover": true,
+        "priority": 1,
+        "entityId": "gym-vienna-jh"
+      },
+      {
+        "file": "/images/gym/gym-vienna-jh/02.webp",
+        "role": "detail",
+        "title": "John Harris Schillerplatz detail",
+        "caption": "John Harris Schillerplatz · detail",
+        "source": "Official business website",
+        "sourcePage": "https://www.johnharris.at/en/studios/detail/1/schillerplatz.html",
+        "originalUrl": "https://www.johnharris.at/xstorage/1/_cache/20220705/EingangSchillerplatz2021_3_cropped_1_3080_1_ee5d5fd1a09370b4b22943c7b0876fac.webp",
+        "lastVerified": "2026-09-10",
+        "isCover": false,
+        "priority": 2,
+        "entityId": "gym-vienna-jh"
+      },
+      {
+        "file": "/images/gym/gym-vienna-jh/03.webp",
+        "role": "interior",
+        "title": "Schillerplatz training floor",
+        "caption": "John Harris Schillerplatz · Schillerplatz training floor",
+        "source": "Official business website",
+        "sourcePage": "https://www.johnharris.at/en/studios/detail/1/schillerplatz.html",
+        "originalUrl": "https://www.johnharris.at/xstorage/1/_cache/20220614/(c)-Tim-Walker-2073_218_1_264a7a75df7b1d50efc13c3a5e6768a7.webp",
+        "lastVerified": "2026-09-10",
+        "isCover": false,
+        "priority": 3,
+        "entityId": "gym-vienna-jh"
+      }
+    ]
   },
   {
     "id": "gym-vienna-das",
@@ -200,7 +321,47 @@
     "hotelId": "stay-prague-ostas",
     "hotelName": "Self-Service Hotel Ostaš Praha",
     "hotelPriority": 7,
-    "distanceStatus": "PLANNING ESTIMATE；出发前用 From Hotel 实时复核"
+    "distanceStatus": "PLANNING ESTIMATE；出发前用 From Hotel 实时复核",
+    "images": [
+      {
+        "file": "/images/gym_prague_form.webp",
+        "role": "equipment",
+        "title": "Form Factory I. P. Pavlova",
+        "caption": "Form Factory I. P. Pavlova real-world visual",
+        "source": "Source recorded on entity",
+        "sourcePage": "https://www.formfactory.cz/nove-otevrene-fitko-i-p-pavlova/",
+        "lastVerified": "2026-09-06",
+        "isCover": true,
+        "priority": 1,
+        "entityId": "gym-prague-form"
+      },
+      {
+        "file": "/images/gym/gym-prague-form/02.webp",
+        "role": "detail",
+        "title": "Form Factory I. P. Pavlova detail",
+        "caption": "Form Factory I. P. Pavlova · detail",
+        "source": "Official business website",
+        "sourcePage": "https://www.formfactory.cz/nove-otevrene-fitko-i-p-pavlova/",
+        "originalUrl": "https://www.formfactory.cz/wp-content/uploads/2026/06/2026-06_uvod2.jpg",
+        "lastVerified": "2026-09-10",
+        "isCover": false,
+        "priority": 2,
+        "entityId": "gym-prague-form"
+      },
+      {
+        "file": "/images/gym/gym-prague-form/03.webp",
+        "role": "detail",
+        "title": "Form Factory I. P. Pavlova detail",
+        "caption": "Form Factory I. P. Pavlova · detail",
+        "source": "Official business website",
+        "sourcePage": "https://www.formfactory.cz/nove-otevrene-fitko-i-p-pavlova/",
+        "originalUrl": "https://www.formfactory.cz/wp-content/uploads/2024/08/2024-08_features.jpg",
+        "lastVerified": "2026-09-10",
+        "isCover": false,
+        "priority": 3,
+        "entityId": "gym-prague-form"
+      }
+    ]
   },
   {
     "id": "gym-prague-euforie",
@@ -260,7 +421,47 @@
     "hotelId": "stay-paris-oden",
     "hotelName": "Oden Paris Ivry",
     "hotelPriority": 9,
-    "distanceStatus": "PLANNING ESTIMATE；出发前用 From Hotel 实时复核"
+    "distanceStatus": "PLANNING ESTIMATE；出发前用 From Hotel 实时复核",
+    "images": [
+      {
+        "file": "/images/gym_paris_fpark.webp",
+        "role": "equipment",
+        "title": "Fitness Park Porte de Choisy",
+        "caption": "Fitness Park Porte de Choisy real-world visual",
+        "source": "Source recorded on entity",
+        "sourcePage": "https://sallesdesport.fitness/fr/i/746-fitness-park-paris-porte-de-choisy/",
+        "lastVerified": "2026-09-06",
+        "isCover": true,
+        "priority": 1,
+        "entityId": "gym-paris-fpark"
+      },
+      {
+        "file": "/images/gym/gym-paris-fpark/curated-1.webp",
+        "role": "interior",
+        "title": "Cardio and overall floor",
+        "caption": "Fitness Park Porte de Choisy · Cardio and overall floor",
+        "source": "Ma Salle de Sport",
+        "sourcePage": "https://www.masalledesport.com/salle/12111%2Cfitness-park-paris-porte-de-choisy%2Cclub-de-fitness%2Cparis%2C75013%2Cfr",
+        "originalUrl": "https://datas.masalledesport.com/prod/place/12111/galerie/1636732725073.jpg",
+        "lastVerified": "2026-09-10",
+        "isCover": false,
+        "priority": 2,
+        "entityId": "gym-paris-fpark"
+      },
+      {
+        "file": "/images/gym/gym-paris-fpark/curated-2.webp",
+        "role": "equipment",
+        "title": "Strength equipment zone",
+        "caption": "Fitness Park Porte de Choisy · Strength equipment zone",
+        "source": "Ma Salle de Sport venue gallery",
+        "sourcePage": "https://www.masalledesport.com/salle/12111%2Cfitness-park-paris-porte-de-choisy%2Cclub-de-fitness%2Cparis%2C75013%2Cfr",
+        "originalUrl": "https://datas.masalledesport.com/prod/place/12111/galerie/1636732696186.jpg",
+        "lastVerified": "2026-09-10",
+        "isCover": false,
+        "priority": 3,
+        "entityId": "gym-paris-fpark"
+      }
+    ]
   },
   {
     "id": "gym-paris-basic",

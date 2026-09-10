@@ -27,16 +27,22 @@ const add = (row) => {
 
 for (const image of images) add({ ...image, entityId: image.entityId || image.placeId || `day-${image.dayId}` });
 for (const stay of hotelData.items) for (const image of stay.images || []) add(image);
-for (const restaurant of restaurants) for (const image of restaurant.imageSources || []) add(image);
-for (const gym of gyms) if (gym.image) add({
-  file: gym.image,
-  caption: `${gym.name} official fitness visual`,
-  source: 'Official gym website',
-  sourcePage: gym.source,
-  lastVerified: gym.lastVerified || '2026-09-10',
-  role: 'Gym',
-  entityId: gym.id,
-});
+for (const restaurant of restaurants) {
+  const gallery = restaurant.images || restaurant.imageSources || [];
+  for (const image of gallery) add({ ...image, entityId: image.entityId || restaurant.id });
+}
+for (const gym of gyms) {
+  const gallery = gym.images || (gym.image ? [{
+    file: gym.image,
+    caption: `${gym.name} official fitness visual`,
+    source: 'Official gym website',
+    sourcePage: gym.source,
+    lastVerified: gym.lastVerified || gym.verifiedAt || '2026-09-10',
+    role: 'equipment',
+    entityId: gym.id,
+  }] : []);
+  for (const image of gallery) add({ ...image, entityId: image.entityId || gym.id });
+}
 for (const shop of shopping) if (shop.image) add({
   file: shop.image,
   caption: `${shop.name} official venue visual`,

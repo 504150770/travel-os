@@ -36,11 +36,13 @@ for (const image of images) {
   imageByEntity.set(entityId, rows);
 }
 for (const item of restaurants) {
-  const files = [item.dishImage, item.restaurantImage, item.environmentImage].filter(Boolean);
-  if (files.length) imageByEntity.set(item.id, files.map((file) => ({ file })));
+  const rows = item.images ?? item.imageSources ?? [item.dishImage, item.restaurantImage, item.environmentImage]
+    .filter(Boolean).map((file) => ({ file }));
+  if (rows.length) imageByEntity.set(item.id, rows);
 }
 for (const item of gyms) {
-  if (item.image) imageByEntity.set(item.id, [{ file: item.image }]);
+  const rows = item.images ?? (item.image ? [{ file: item.image }] : []);
+  if (rows.length) imageByEntity.set(item.id, rows);
 }
 for (const item of shopping) {
   if (item.image) imageByEntity.set(item.id, [{ file: item.image }]);
@@ -97,8 +99,10 @@ const topGymIds = [...new Set(
 const refs = [
   ...images.map((item) => ({ entityId: item.entityId ?? item.placeId ?? `day-${item.dayId}`, file: item.file })),
   ...hotels.flatMap((item) => item.images.map((image) => ({ entityId: item.id, file: image.file }))),
-  ...restaurants.flatMap((item) => [item.dishImage, item.restaurantImage, item.environmentImage].filter(Boolean).map((file) => ({ entityId: item.id, file }))),
-  ...gyms.filter((item) => item.image).map((item) => ({ entityId: item.id, file: item.image })),
+  ...restaurants.flatMap((item) => (item.images ?? item.imageSources ?? [item.dishImage, item.restaurantImage, item.environmentImage]
+    .filter(Boolean).map((file) => ({ file }))).map((image) => ({ entityId: item.id, file: image.file }))),
+  ...gyms.flatMap((item) => (item.images ?? (item.image ? [{ file: item.image }] : []))
+    .map((image) => ({ entityId: item.id, file: image.file }))),
   ...shopping.filter((item) => item.image).map((item) => ({ entityId: item.id, file: item.image })),
 ];
 const brokenImages = refs.filter(({ file }) => {

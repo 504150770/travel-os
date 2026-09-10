@@ -43,9 +43,12 @@
           "sourcePage": "https://www.hotelcolonnapalace.com/",
           "originalUrl": "https://www.hotelcolonnapalace.com/images/home-banner-1.jpg",
           "lastVerified": "2026-09-10",
-          "role": "Entrance",
+          "role": "entrance",
           "entityId": "stay-rome-colonna",
-          "status": "VERIFIED REAL PROPERTY PHOTO"
+          "status": "VERIFIED REAL PROPERTY PHOTO",
+          "title": "Colonna Palace exterior on Piazza Montecitorio",
+          "isCover": false,
+          "priority": 2
         },
         {
           "file": "/images/hotels/stay-rome-colonna/room.webp",
@@ -54,9 +57,12 @@
           "sourcePage": "https://www.hotelcolonnapalace.com/rooms.html",
           "originalUrl": "https://www.hotelcolonnapalace.com/images/room-6.jpg",
           "lastVerified": "2026-09-10",
-          "role": "Room",
+          "role": "room",
           "entityId": "stay-rome-colonna",
-          "status": "VERIFIED REAL PROPERTY PHOTO"
+          "status": "VERIFIED REAL PROPERTY PHOTO",
+          "title": "Classic room interior",
+          "isCover": true,
+          "priority": 1
         },
         {
           "file": "/images/hotels/stay-rome-colonna/bathroom.webp",
@@ -65,7 +71,38 @@
           "sourcePage": "https://www.hotelcolonnapalace.com/rooms.html",
           "originalUrl": "https://www.hotelcolonnapalace.com/images/room-2-2.jpg",
           "lastVerified": "2026-09-10",
-          "role": "Bathroom",
+          "role": "bathroom",
+          "entityId": "stay-rome-colonna",
+          "status": "VERIFIED REAL PROPERTY PHOTO",
+          "title": "Private bathroom with shower",
+          "isCover": false,
+          "priority": 4
+        },
+        {
+          "file": "/images/hotels/stay-rome-colonna/interior-4.webp",
+          "role": "interior",
+          "title": "Suite sitting area",
+          "caption": "Guest-room sitting area",
+          "source": "Official property website",
+          "sourcePage": "https://www.hotelcolonnapalace.com/",
+          "originalUrl": "https://www.hotelcolonnapalace.com/images/room-11-2.jpg",
+          "lastVerified": "2026-09-10",
+          "isCover": false,
+          "priority": 4,
+          "entityId": "stay-rome-colonna",
+          "status": "VERIFIED REAL PROPERTY PHOTO"
+        },
+        {
+          "file": "/images/hotels/stay-rome-colonna/detail-5.webp",
+          "role": "detail",
+          "title": "In-room breakfast setting",
+          "caption": "Breakfast and room-service setting",
+          "source": "Official property website",
+          "sourcePage": "https://www.hotelcolonnapalace.com/",
+          "originalUrl": "https://www.hotelcolonnapalace.com/images/room-11-3.jpg",
+          "lastVerified": "2026-09-10",
+          "isCover": false,
+          "priority": 5,
           "entityId": "stay-rome-colonna",
           "status": "VERIFIED REAL PROPERTY PHOTO"
         }
@@ -164,9 +201,12 @@
           "sourcePage": "https://www.fonderiafirenze.com/en/",
           "originalUrl": "https://www.fonderiafirenze.com/images/about/fonderiafirenze-location-1.jpg",
           "lastVerified": "2026-09-10",
-          "role": "Entrance",
+          "role": "entrance",
           "entityId": "stay-florence-fonderia",
-          "status": "VERIFIED REAL PROPERTY PHOTO"
+          "status": "VERIFIED REAL PROPERTY PHOTO",
+          "title": "La Fonderia property courtyard and arrival setting",
+          "isCover": false,
+          "priority": 2
         },
         {
           "file": "/images/hotels/stay-florence-fonderia/room.webp",
@@ -175,9 +215,12 @@
           "sourcePage": "https://www.fonderiafirenze.com/en/rooms-for-your-holiday-in-florence/piombo-single-room-private-external-bathroom",
           "originalUrl": "https://www.fonderiafirenze.com/images/rooms/piombo/gallery/fonderiafirenze-camera-piombo-16.jpg",
           "lastVerified": "2026-09-10",
-          "role": "Room",
+          "role": "room",
           "entityId": "stay-florence-fonderia",
-          "status": "VERIFIED REAL PROPERTY PHOTO"
+          "status": "VERIFIED REAL PROPERTY PHOTO",
+          "title": "Piombo single room",
+          "isCover": true,
+          "priority": 1
         },
         {
           "file": "/images/hotels/stay-florence-fonderia/bathroom.webp",
@@ -186,7 +229,38 @@
           "sourcePage": "https://www.fonderiafirenze.com/en/rooms-for-your-holiday-in-florence/piombo-single-room-private-external-bathroom",
           "originalUrl": "https://www.fonderiafirenze.com/images/rooms/piombo/gallery/fonderiafirenze-camera-piombo-10.jpg",
           "lastVerified": "2026-09-10",
-          "role": "Bathroom",
+          "role": "bathroom",
+          "entityId": "stay-florence-fonderia",
+          "status": "VERIFIED REAL PROPERTY PHOTO",
+          "title": "Piombo private external bathroom",
+          "isCover": false,
+          "priority": 4
+        },
+        {
+          "file": "/images/hotels/stay-florence-fonderia/detail-4.webp",
+          "role": "detail",
+          "title": "Piombo room threshold",
+          "caption": "Room and private-bathroom relationship",
+          "source": "Official property website",
+          "sourcePage": "https://www.fonderiafirenze.com/en/",
+          "originalUrl": "https://www.fonderiafirenze.com/images/rooms/piombo/gallery/fonderiafirenze-camera-piombo-14.jpg",
+          "lastVerified": "2026-09-10",
+          "isCover": false,
+          "priority": 4,
+          "entityId": "stay-florence-fonderia",
+          "status": "VERIFIED REAL PROPERTY PHOTO"
+        },
+        {
+          "file": "/images/hotels/stay-florence-fonderia/bathroom-5.webp",
+          "role": "bathroom",
+          "title": "Private external bathroom entrance",
+          "caption": "Private bathroom entrance from the room",
+          "source": "Official property website",
+          "sourcePage": "https://www.fonderiafirenze.com/en/",
+          "originalUrl": "https://www.fonderiafirenze.com/images/rooms/piombo/gallery/fonderiafirenze-camera-piombo-18.jpg",
+          "lastVerified": "2026-09-10",
+          "isCover": false,
+          "priority": 5,
           "entityId": "stay-florence-fonderia",
           "status": "VERIFIED REAL PROPERTY PHOTO"
         }
@@ -285,9 +359,12 @@
           "sourcePage": "https://www.booking.com/hotel/it/park-ai-pini.html",
           "originalUrl": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/255770289.jpg?k=305a83f858ebe84257cf6a6c7f470f4e489c8568adc5adeaf8585fe9b167f26f&o=",
           "lastVerified": "2026-09-10",
-          "role": "Entrance",
+          "role": "entrance",
           "entityId": "stay-venice-ai-pini",
-          "status": "VERIFIED REAL PROPERTY PHOTO"
+          "status": "VERIFIED REAL PROPERTY PHOTO",
+          "title": "Ai Pini exterior and garden approach",
+          "isCover": false,
+          "priority": 2
         },
         {
           "file": "/images/hotels/stay-venice-ai-pini/room.webp",
@@ -296,9 +373,12 @@
           "sourcePage": "https://hotelaipini.it/en/accommodation/",
           "originalUrl": "https://hotelaipini.it/wp-content/uploads/2024/12/camera-standard-ai-pini.jpg",
           "lastVerified": "2026-09-10",
-          "role": "Room",
+          "role": "room",
           "entityId": "stay-venice-ai-pini",
-          "status": "VERIFIED REAL PROPERTY PHOTO"
+          "status": "VERIFIED REAL PROPERTY PHOTO",
+          "title": "Standard room interior",
+          "isCover": true,
+          "priority": 1
         },
         {
           "file": "/images/hotels/stay-venice-ai-pini/bathroom.webp",
@@ -307,7 +387,38 @@
           "sourcePage": "https://hotelaipini.it/en/accommodation/",
           "originalUrl": "https://hotelaipini.it/wp-content/uploads/2024/12/bagno-standard-ai-pini.jpg",
           "lastVerified": "2026-09-10",
-          "role": "Bathroom",
+          "role": "bathroom",
+          "entityId": "stay-venice-ai-pini",
+          "status": "VERIFIED REAL PROPERTY PHOTO",
+          "title": "Standard room private bathroom",
+          "isCover": false,
+          "priority": 4
+        },
+        {
+          "file": "/images/hotels/stay-venice-ai-pini/interior-4.webp",
+          "role": "interior",
+          "title": "Ai Pini reception identity wall",
+          "caption": "Arrival and reception context",
+          "source": "Official property website",
+          "sourcePage": "https://hotelaipini.it/en/accommodation/",
+          "originalUrl": "https://hotelaipini.it/wp-content/uploads/2024/12/ai-pini.jpg",
+          "lastVerified": "2026-09-10",
+          "isCover": false,
+          "priority": 4,
+          "entityId": "stay-venice-ai-pini",
+          "status": "VERIFIED REAL PROPERTY PHOTO"
+        },
+        {
+          "file": "/images/hotels/stay-venice-ai-pini/room-5.webp",
+          "role": "room",
+          "title": "Alternative guest-room view",
+          "caption": "Guest-room layout and desk view",
+          "source": "Official property website",
+          "sourcePage": "https://hotelaipini.it/en/accommodation/",
+          "originalUrl": "https://hotelaipini.it/wp-content/uploads/2024/12/camera.jpg",
+          "lastVerified": "2026-09-10",
+          "isCover": false,
+          "priority": 5,
           "entityId": "stay-venice-ai-pini",
           "status": "VERIFIED REAL PROPERTY PHOTO"
         }
@@ -406,9 +517,12 @@
           "sourcePage": "https://jimmys.at/en/info/lory",
           "originalUrl": "https://jimmys.at/img/soga_entrance.jpg",
           "lastVerified": "2026-09-10",
-          "role": "Entrance",
+          "role": "entrance",
           "entityId": "stay-vienna-jimmys",
-          "status": "VERIFIED REAL PROPERTY PHOTO"
+          "status": "VERIFIED REAL PROPERTY PHOTO",
+          "title": "Jimmy's Lory entrance and keypad",
+          "isCover": false,
+          "priority": 2
         },
         {
           "file": "/images/hotels/stay-vienna-jimmys/room.webp",
@@ -417,9 +531,12 @@
           "sourcePage": "https://jimmys.at/en/locations/lory",
           "originalUrl": "https://jimmys.at/img/locations/lory/9/jimmys_apartments_lory_9_0.jpg",
           "lastVerified": "2026-09-10",
-          "role": "Room",
+          "role": "room",
           "entityId": "stay-vienna-jimmys",
-          "status": "VERIFIED REAL PROPERTY PHOTO"
+          "status": "VERIFIED REAL PROPERTY PHOTO",
+          "title": "Executive one-bedroom apartment interior",
+          "isCover": true,
+          "priority": 1
         },
         {
           "file": "/images/hotels/stay-vienna-jimmys/bathroom.webp",
@@ -428,7 +545,38 @@
           "sourcePage": "https://jimmys.at/en/locations/lory",
           "originalUrl": "https://jimmys.at/img/locations/lory/9/jimmys_apartments_lory_9_10.jpg",
           "lastVerified": "2026-09-10",
-          "role": "Bathroom",
+          "role": "bathroom",
+          "entityId": "stay-vienna-jimmys",
+          "status": "VERIFIED REAL PROPERTY PHOTO",
+          "title": "Executive apartment private bathroom",
+          "isCover": false,
+          "priority": 4
+        },
+        {
+          "file": "/images/hotels/stay-vienna-jimmys/detail-4.webp",
+          "role": "detail",
+          "title": "Apartment kitchenette",
+          "caption": "Executive apartment kitchenette",
+          "source": "Official property website",
+          "sourcePage": "https://jimmys.at/en/info/lory",
+          "originalUrl": "https://jimmys.at/img/locations/lory/9/jimmys_apartments_lory_9_3.jpg",
+          "lastVerified": "2026-09-10",
+          "isCover": false,
+          "priority": 4,
+          "entityId": "stay-vienna-jimmys",
+          "status": "VERIFIED REAL PROPERTY PHOTO"
+        },
+        {
+          "file": "/images/hotels/stay-vienna-jimmys/interior-5.webp",
+          "role": "interior",
+          "title": "Alternative apartment living area",
+          "caption": "Executive apartment living area from a second angle",
+          "source": "Official property website",
+          "sourcePage": "https://jimmys.at/en/locations/lory",
+          "originalUrl": "https://jimmys.at/img/locations/lory/9/jimmys_apartments_lory_9_1.jpg",
+          "lastVerified": "2026-09-10",
+          "isCover": false,
+          "priority": 5,
           "entityId": "stay-vienna-jimmys",
           "status": "VERIFIED REAL PROPERTY PHOTO"
         }
@@ -522,9 +670,12 @@
           "sourcePage": "https://www.hotelostas.cz/en/contact/",
           "originalUrl": "https://9e0fc22837.clvaw-cdnwnd.com/165ebff75ddda5ff0bd641de4f540faa/200000036-d25bbd25bd/20200611_150110.jpg?ph=9e0fc22837",
           "lastVerified": "2026-09-10",
-          "role": "Entrance",
+          "role": "entrance",
           "entityId": "stay-prague-ostas",
-          "status": "VERIFIED REAL PROPERTY PHOTO"
+          "status": "VERIFIED REAL PROPERTY PHOTO",
+          "title": "Hotel Ostaš signed street facade",
+          "isCover": false,
+          "priority": 2
         },
         {
           "file": "/images/hotels/stay-prague-ostas/room.webp",
@@ -533,9 +684,12 @@
           "sourcePage": "https://www.hotelostas.cz/en/rooms/",
           "originalUrl": "https://9e0fc22837.clvaw-cdnwnd.com/165ebff75ddda5ff0bd641de4f540faa/200000459-bec12bec17/700/7IV07588-1.webp?ph=9e0fc22837",
           "lastVerified": "2026-09-10",
-          "role": "Room",
+          "role": "room",
           "entityId": "stay-prague-ostas",
-          "status": "VERIFIED REAL PROPERTY PHOTO"
+          "status": "VERIFIED REAL PROPERTY PHOTO",
+          "title": "Ostaš guest room interior",
+          "isCover": true,
+          "priority": 1
         },
         {
           "file": "/images/hotels/stay-prague-ostas/bathroom.webp",
@@ -544,7 +698,38 @@
           "sourcePage": "https://www.momondo.com/hotels/prague/Hotel-Ostas.mhd200892.ksp",
           "originalUrl": "https://content.r9cdn.net/himg/d1/5d/f2/expedia_group-200892-4ece35-416898.jpg",
           "lastVerified": "2026-09-10",
-          "role": "Bathroom",
+          "role": "bathroom",
+          "entityId": "stay-prague-ostas",
+          "status": "VERIFIED REAL PROPERTY PHOTO",
+          "title": "Ostaš private bathroom",
+          "isCover": false,
+          "priority": 4
+        },
+        {
+          "file": "/images/hotels/stay-prague-ostas/interior-4.webp",
+          "role": "interior",
+          "title": "Ostaš courtyard terrace",
+          "caption": "Shared courtyard and terrace",
+          "source": "Official property website",
+          "sourcePage": "https://www.hotelostas.cz/en/contact/",
+          "originalUrl": "https://9e0fc22837.clvaw-cdnwnd.com/165ebff75ddda5ff0bd641de4f540faa/200000213-75fbe75fc0/700/20200611_144137-52.jpg?ph=9e0fc22837",
+          "lastVerified": "2026-09-10",
+          "isCover": false,
+          "priority": 4,
+          "entityId": "stay-prague-ostas",
+          "status": "VERIFIED REAL PROPERTY PHOTO"
+        },
+        {
+          "file": "/images/hotels/stay-prague-ostas/detail-5.webp",
+          "role": "detail",
+          "title": "Interior circulation",
+          "caption": "Stair and upper-floor arrival context",
+          "source": "Official property website",
+          "sourcePage": "https://www.hotelostas.cz/en/contact/",
+          "originalUrl": "https://9e0fc22837.clvaw-cdnwnd.com/165ebff75ddda5ff0bd641de4f540faa/200000466-c21d9c21dd/7IV07577.jpg?ph=9e0fc22837",
+          "lastVerified": "2026-09-10",
+          "isCover": false,
+          "priority": 5,
           "entityId": "stay-prague-ostas",
           "status": "VERIFIED REAL PROPERTY PHOTO"
         }
@@ -643,9 +828,12 @@
           "sourcePage": "https://oden-paris-ivry.com/",
           "originalUrl": "https://oden-paris-ivry.com/wp-content/uploads/2023/07/oden-paris-ivry0002.jpg",
           "lastVerified": "2026-09-10",
-          "role": "Entrance",
+          "role": "entrance",
           "entityId": "stay-paris-oden",
-          "status": "VERIFIED REAL PROPERTY PHOTO"
+          "status": "VERIFIED REAL PROPERTY PHOTO",
+          "title": "Oden Paris Ivry street facade and entrance",
+          "isCover": false,
+          "priority": 2
         },
         {
           "file": "/images/hotels/stay-paris-oden/room.webp",
@@ -654,9 +842,12 @@
           "sourcePage": "https://oden-paris-ivry.com/chambres/",
           "originalUrl": "https://oden-paris-ivry.com/wp-content/uploads/2024/07/oden-double-standard0009.jpg",
           "lastVerified": "2026-09-10",
-          "role": "Room",
+          "role": "room",
           "entityId": "stay-paris-oden",
-          "status": "VERIFIED REAL PROPERTY PHOTO"
+          "status": "VERIFIED REAL PROPERTY PHOTO",
+          "title": "Standard double room interior",
+          "isCover": true,
+          "priority": 1
         },
         {
           "file": "/images/hotels/stay-paris-oden/bathroom.webp",
@@ -665,7 +856,38 @@
           "sourcePage": "https://oden-paris-ivry.com/chambres/",
           "originalUrl": "https://oden-paris-ivry.com/wp-content/uploads/2024/07/oden-double-standard0007.jpg",
           "lastVerified": "2026-09-10",
-          "role": "Bathroom",
+          "role": "bathroom",
+          "entityId": "stay-paris-oden",
+          "status": "VERIFIED REAL PROPERTY PHOTO",
+          "title": "Standard double private bathroom",
+          "isCover": false,
+          "priority": 4
+        },
+        {
+          "file": "/images/hotels/stay-paris-oden/bathroom-4.webp",
+          "role": "bathroom",
+          "title": "Bathroom vanity",
+          "caption": "Standard room bathroom vanity and mirror",
+          "source": "Official property website",
+          "sourcePage": "https://oden-paris-ivry.com/",
+          "originalUrl": "https://oden-paris-ivry.com/wp-content/uploads/2024/07/oden-double-standard0008.jpg",
+          "lastVerified": "2026-09-10",
+          "isCover": false,
+          "priority": 4,
+          "entityId": "stay-paris-oden",
+          "status": "VERIFIED REAL PROPERTY PHOTO"
+        },
+        {
+          "file": "/images/hotels/stay-paris-oden/bathroom-5.webp",
+          "role": "bathroom",
+          "title": "Bathroom shower layout",
+          "caption": "Standard room shower and bathroom layout",
+          "source": "Official property website",
+          "sourcePage": "https://oden-paris-ivry.com/",
+          "originalUrl": "https://oden-paris-ivry.com/wp-content/uploads/2024/07/oden-deluxe0005.jpg",
+          "lastVerified": "2026-09-10",
+          "isCover": false,
+          "priority": 5,
           "entityId": "stay-paris-oden",
           "status": "VERIFIED REAL PROPERTY PHOTO"
         }

@@ -9,8 +9,6 @@ import {
   BusFront,
   CarTaxiFront,
   Check,
-  ChevronLeft,
-  ChevronRight,
   Clock3,
   ExternalLink,
   Footprints,
@@ -30,6 +28,13 @@ import type {
   TransportSegment,
 } from '@/lib/types';
 import { checkinActionId, deadlineActionId } from '@/lib/action-queue';
+import {
+  normalizeGalleryImage,
+  openGalleryRequest,
+  orderedGalleryImages,
+  selectCoverImage,
+  type GalleryRequest,
+} from '@/lib/media';
 
 const statusClass = (value: string) =>
   value === 'Confirmed' || value === 'Not Required' || value === 'Ready'
@@ -251,15 +256,23 @@ function CopyButton({ value }: { value: string }) {
 export function HotelExecutionCard({
   stay,
   privateCheckInLink,
+  openGallery,
 }: {
   stay: HotelBooking;
   privateCheckInLink?: string;
+  openGallery: (gallery: GalleryRequest) => void;
 }) {
-  const verifiedImages = stay.images.filter((image) => image.file) as Array<
-    (typeof stay.images)[number] & { file: string }
-  >;
-  const [photoIndex, setPhotoIndex] = useState(0);
-  const activePhoto = verifiedImages[photoIndex] ?? verifiedImages[0];
+  const verifiedImages = orderedGalleryImages(stay.images
+    .filter((image): image is typeof image & { file: string } => Boolean(image.file))
+    .map((image) => normalizeGalleryImage({
+      ...image,
+      file: image.file,
+      title: image.title || image.caption || `${stay.hotelName} ${image.role}`,
+      role: image.role,
+      isCover: image.isCover,
+      priority: image.priority,
+    }, { entityId: stay.id, title: stay.hotelName, source: image.source || undefined, lastVerified: image.lastVerified })));
+  const cover = selectCoverImage(verifiedImages);
   const maps = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(stay.execution.address)}`;
   const atProperty = stay.execution.payAtProperty
     ? `${stay.execution.payAtProperty.amount} ${stay.execution.payAtProperty.currency}`
@@ -284,50 +297,26 @@ export function HotelExecutionCard({
           {stay.checkIn} → {stay.checkOut}
         </b>
       </header>
-      {activePhoto ? (
-        <div className="hotel-media-carousel">
+      {cover ? (
+        <button
+          className="hotel-media-carousel hotel-gallery-cover"
+          onClick={() => openGallery(openGalleryRequest(stay.id, stay.hotelName, verifiedImages, cover))}
+          aria-label={`Open ${stay.hotelName} gallery, ${verifiedImages.length} photos`}
+        >
           <figure>
             <Image
-              src={activePhoto.file}
-              alt={activePhoto.caption || `${stay.hotelName} ${activePhoto.role}`}
+              src={cover.file}
+              alt={cover.title}
               fill
               sizes="(max-width:680px) 100vw, 720px"
             />
             <figcaption>
-              <b>{activePhoto.role}</b>
-              <span>{activePhoto.caption}</span>
-              <small>{photoIndex + 1} / {verifiedImages.length}</small>
+              <b>{cover.role}</b>
+              <span>{cover.caption}</span>
+              <small>{verifiedImages.length} Photos</small>
             </figcaption>
           </figure>
-          {verifiedImages.length > 1 && (
-            <>
-              <button
-                className="hotel-media-prev"
-                aria-label="Previous hotel photo"
-                onClick={() => setPhotoIndex((photoIndex - 1 + verifiedImages.length) % verifiedImages.length)}
-              >
-                <ChevronLeft />
-              </button>
-              <button
-                className="hotel-media-next"
-                aria-label="Next hotel photo"
-                onClick={() => setPhotoIndex((photoIndex + 1) % verifiedImages.length)}
-              >
-                <ChevronRight />
-              </button>
-              <div className="hotel-media-dots" aria-label="Hotel photo selector">
-                {verifiedImages.map((image, index) => (
-                  <button
-                    key={image.role}
-                    aria-label={`View ${image.role} photo`}
-                    aria-current={index === photoIndex}
-                    onClick={() => setPhotoIndex(index)}
-                  />
-                ))}
-              </div>
-            </>
-          )}
-        </div>
+        </button>
       ) : (
         <div className="hotel-media-fallback">No verified property photo</div>
       )}

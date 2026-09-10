@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-10T02:09:30.344Z",
+  "generatedAt": "2026-09-10T03:48:05.936Z",
   "originalMissingImages": 146,
   "remainingMissingImages": 98,
   "addedImages": 48,
   "publicImages": {
-    "count": 107,
-    "bytes": 11820650
+    "count": 292,
+    "bytes": 31083882
   },
   "hotel": {
     "complete": 6,
