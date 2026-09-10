@@ -37,6 +37,9 @@ next-env.d.ts
 /outputs/
 /work/
 
+/public/.next/
+/public/assets-next/
+
 # generated visual QA working files
 /research/image-candidates/
 /research/download.log
