@@ -2,7 +2,7 @@
   "version": 2,
   "functions": {
     "api/travel-app.mjs": {
-      "includeFiles": "dist/client/_next/**"
+      "includeFiles": "{dist/client/_next/**,public/**}"
     }
   },
   "routes": [

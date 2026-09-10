@@ -27,6 +27,7 @@ function toFetchRequest(request) {
 }
 
 const assetRoot = resolve(process.cwd(), 'dist', 'client', '_next');
+const publicRoot = resolve(process.cwd(), 'public');
 const contentTypes = {
   '.css': 'text/css; charset=utf-8',
   '.gif': 'image/gif',
@@ -35,20 +36,20 @@ const contentTypes = {
   '.jpg': 'image/jpeg',
   '.js': 'text/javascript; charset=utf-8',
   '.json': 'application/json; charset=utf-8',
+  '.map': 'application/json; charset=utf-8',
+  '.mp4': 'video/mp4',
   '.png': 'image/png',
   '.svg': 'image/svg+xml',
+  '.txt': 'text/plain; charset=utf-8',
   '.webp': 'image/webp',
   '.woff': 'font/woff',
   '.woff2': 'font/woff2',
+  '.xml': 'application/xml; charset=utf-8',
 };
 
-async function serveNextAsset(request, response) {
-  const requestPath = new URL(request.url, 'https://localhost').pathname;
-  if (!requestPath.startsWith('/_next/')) return false;
-
-  const relativePath = decodeURIComponent(requestPath.slice('/_next/'.length));
-  const filePath = resolve(assetRoot, relativePath);
-  if (!filePath.startsWith(`${assetRoot}${sep}`)) {
+async function serveFile(request, response, root, relativePath) {
+  const filePath = resolve(root, relativePath);
+  if (!filePath.startsWith(`${root}${sep}`)) {
     response.statusCode = 400;
     response.end('Bad request');
     return true;
@@ -70,8 +71,42 @@ async function serveNextAsset(request, response) {
   return true;
 }
 
+async function serveStaticAsset(request, response) {
+  const requestPath = new URL(request.url, 'https://localhost').pathname;
+
+  try {
+    if (requestPath.startsWith('/_next/')) {
+      return serveFile(
+        request,
+        response,
+        assetRoot,
+        decodeURIComponent(requestPath.slice('/_next/'.length)),
+      );
+    }
+
+    if (request.method === 'GET' || request.method === 'HEAD') {
+      const relativePath = decodeURIComponent(requestPath.slice(1));
+      const filePath = resolve(publicRoot, relativePath);
+      if (filePath.startsWith(`${publicRoot}${sep}`)) {
+        try {
+          const fileStat = await stat(filePath);
+          if (fileStat.isFile()) return serveFile(request, response, publicRoot, relativePath);
+        } catch {
+          // Continue to the app for routes that are not public files.
+        }
+      }
+    }
+  } catch {
+    response.statusCode = 400;
+    response.end('Bad request');
+    return true;
+  }
+
+  return false;
+}
+
 export default async function handler(request, response) {
-  if (await serveNextAsset(request, response)) return;
+  if (await serveStaticAsset(request, response)) return;
 
   const fetchRequest = toFetchRequest(request);
   const fetchResponse = await app.fetch(fetchRequest);
