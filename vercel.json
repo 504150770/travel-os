@@ -2,10 +2,13 @@
   "version": 2,
   "functions": {
     "api/travel-app.mjs": {
-      "includeFiles": "{dist/client/_next/**,public/**}"
+      "includeFiles": "dist/client/_next/**"
     }
   },
   "routes": [
+    {
+      "handle": "filesystem"
+    },
     {
       "src": "^/(.*)$",
       "dest": "/api/travel-app.mjs"

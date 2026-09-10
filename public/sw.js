@@ -1,4 +1,4 @@
-const SHELL_CACHE = 'europe-travel-os-shell-v8';
+const SHELL_CACHE = 'europe-travel-os-shell-v9';
 const OFFLINE_PREFIX = 'europe-travel-os-offline-';
 const SHELL = ['/', '/?view=home', '/manifest.webmanifest', '/offline-core.json'];
 
@@ -44,6 +44,13 @@ self.addEventListener('fetch', (event) => {
     event.respondWith(fetch(request).then((response) => {
       const copy = response.clone(); caches.open(SHELL_CACHE).then((cache) => cache.put(request, copy)); return response;
     }).catch(async () => (await caches.match(request)) || (await caches.match('/'))));
+    return;
+  }
+  if (url.pathname.startsWith('/images/')) {
+    event.respondWith(fetch(request).then((response) => {
+      if (response.ok) caches.open(SHELL_CACHE).then((cache) => cache.put(request, response.clone()));
+      return response;
+    }).catch(async () => (await caches.match(request)) || Response.error()));
     return;
   }
   event.respondWith(caches.match(request).then((cached) => {
