@@ -1,0 +1,22 @@
+{
+  "generatedAt": "2026-09-10T06:07:49.961Z",
+  "version": "e127bc6ebd7b",
+  "assetCount": 193,
+  "mediaAssetCount": 186,
+  "totalBytes": 20322804,
+  "expected": {
+    "dayHero": 18,
+    "hotels": 6,
+    "places": 34,
+    "food": 34,
+    "gym": 6
+  },
+  "coverage": {
+    "dayHero": 18,
+    "hotels": 6,
+    "places": 34,
+    "food": 34,
+    "gym": 6
+  },
+  "passed": true
+}

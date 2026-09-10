@@ -1,0 +1,1320 @@
+{
+  "generatedAt": "2026-09-10T06:07:49.961Z",
+  "version": "e127bc6ebd7b",
+  "assetCount": 193,
+  "mediaAssetCount": 186,
+  "totalBytes": 20322804,
+  "assets": [
+    "/",
+    "/?view=home",
+    "/?view=trip&day=3",
+    "/?view=more&tab=backup",
+    "/manifest.webmanifest",
+    "/sw.js",
+    "/offline-core.json",
+    "/images/arc_blue.webp",
+    "/images/cdg_sunrise.webp",
+    "/images/eiffel_couple.webp",
+    "/images/flight_depart.webp",
+    "/images/food/florence-cammillo.webp",
+    "/images/food/florence-cammillo/curated-01.webp",
+    "/images/food/florence-cammillo/curated-02.webp",
+    "/images/food/florence-ditta/curated-01.webp",
+    "/images/food/florence-ditta/curated-02.webp",
+    "/images/food/florence-ditta/curated-03.webp",
+    "/images/food/florence-gustapizza.webp",
+    "/images/food/florence-gustapizza/curated-01.webp",
+    "/images/food/florence-gustapizza/curated-03.webp",
+    "/images/food/florence-rivoire.webp",
+    "/images/food/florence-rivoire/03.webp",
+    "/images/food/florence-sabatino.webp",
+    "/images/food/florence-sabatino/curated-01.webp",
+    "/images/food/florence-sabatino/curated-02.webp",
+    "/images/food/paris-angelina.webp",
+    "/images/food/paris-angelina/02.webp",
+    "/images/food/paris-angelina/05.webp",
+    "/images/food/paris-breizh.webp",
+    "/images/food/paris-breizh/02.webp",
+    "/images/food/paris-dupain.webp",
+    "/images/food/paris-dupain/curated-01.webp",
+    "/images/food/paris-dupain/curated-02.webp",
+    "/images/food/paris-enfants.webp",
+    "/images/food/paris-enfants/03.webp",
+    "/images/food/paris-enfants/04.webp",
+    "/images/food/paris-flore.webp",
+    "/images/food/paris-flore/02.webp",
+    "/images/food/paris-la-table-de-mame/03.webp",
+    "/images/food/paris-stohrer.webp",
+    "/images/food/paris-stohrer/03.webp",
+    "/images/food/paris-stohrer/curated-02.webp",
+    "/images/food/prague-choco.webp",
+    "/images/food/prague-choco/02.webp",
+    "/images/food/prague-choco/curated-02.webp",
+    "/images/food/prague-eska.webp",
+    "/images/food/prague-eska/03.webp",
+    "/images/food/prague-eska/04.webp",
+    "/images/food/prague-kantyna.webp",
+    "/images/food/prague-kantyna/02.webp",
+    "/images/food/prague-lokal.webp",
+    "/images/food/prague-lokal/04.webp",
+    "/images/food/prague-savoy.webp",
+    "/images/food/prague-savoy/04.webp",
+    "/images/food/prague-savoy/05.webp",
+    "/images/food/rome-armando.webp",
+    "/images/food/rome-armando/02.webp",
+    "/images/food/rome-armando/04.webp",
+    "/images/food/rome-forno.webp",
+    "/images/food/rome-forno/04.webp",
+    "/images/food/rome-forno/05.webp",
+    "/images/food/rome-giolitti.webp",
+    "/images/food/rome-giolitti/02.webp",
+    "/images/food/rome-giolitti/04.webp",
+    "/images/food/rome-roscioli.webp",
+    "/images/food/rome-roscioli/curated-01.webp",
+    "/images/food/rome-roscioli/curated-02.webp",
+    "/images/food/rome-santeustachio.webp",
+    "/images/food/rome-santeustachio/curated-01.webp",
+    "/images/food/rome-trapizzino.webp",
+    "/images/food/rome-trapizzino/02.webp",
+    "/images/food/rome-trapizzino/04.webp",
+    "/images/food/venice-ai-pini-restaurant/04.webp",
+    "/images/food/venice-ai-pini-restaurant/05.webp",
+    "/images/food/venice-florian.webp",
+    "/images/food/venice-florian/02.webp",
+    "/images/food/venice-frarys.webp",
+    "/images/food/venice-frarys/curated-01.webp",
+    "/images/food/venice-frarys/curated-02.webp",
+    "/images/food/venice-plip.webp",
+    "/images/food/venice-torrefazione.webp",
+    "/images/food/venice-torrefazione/curated-03.webp",
+    "/images/food/venice-torrefazione/curated-04.webp",
+    "/images/food/venice-viterossa.webp",
+    "/images/food/venice-viterossa/curated-01.webp",
+    "/images/food/venice-viterossa/curated-03.webp",
+    "/images/food/vienna-central.webp",
+    "/images/food/vienna-central/curated-01.webp",
+    "/images/food/vienna-central/curated-02.webp",
+    "/images/food/vienna-demel.webp",
+    "/images/food/vienna-demel/03.webp",
+    "/images/food/vienna-demel/04.webp",
+    "/images/food/vienna-kameel.webp",
+    "/images/food/vienna-kameel/03.webp",
+    "/images/food/vienna-kameel/05.webp",
+    "/images/food/vienna-plachutta.webp",
+    "/images/food/vienna-plachutta/02.webp",
+    "/images/food/vienna-plachutta/04.webp",
+    "/images/food/vienna-tarim.webp",
+    "/images/food/vienna-tarim/curated-01.webp",
+    "/images/food/vienna-tarim/curated-03.webp",
+    "/images/gallery.webp",
+    "/images/gym_florence_klab.webp",
+    "/images/gym_mestre_mcfit.webp",
+    "/images/gym_paris_fpark.webp",
+    "/images/gym_prague_form.webp",
+    "/images/gym_rome_dabliu.webp",
+    "/images/gym_vienna_jh.webp",
+    "/images/gym/gym-paris-fpark/curated-2.webp",
+    "/images/hotels/stay-florence-fonderia/bathroom.webp",
+    "/images/hotels/stay-florence-fonderia/entrance.webp",
+    "/images/hotels/stay-florence-fonderia/room.webp",
+    "/images/hotels/stay-paris-oden/bathroom.webp",
+    "/images/hotels/stay-paris-oden/entrance.webp",
+    "/images/hotels/stay-paris-oden/room.webp",
+    "/images/hotels/stay-prague-ostas/bathroom.webp",
+    "/images/hotels/stay-prague-ostas/entrance.webp",
+    "/images/hotels/stay-prague-ostas/room.webp",
+    "/images/hotels/stay-rome-colonna/bathroom.webp",
+    "/images/hotels/stay-rome-colonna/entrance.webp",
+    "/images/hotels/stay-rome-colonna/room.webp",
+    "/images/hotels/stay-venice-ai-pini/bathroom.webp",
+    "/images/hotels/stay-venice-ai-pini/entrance.webp",
+    "/images/hotels/stay-venice-ai-pini/room.webp",
+    "/images/hotels/stay-vienna-jimmys/bathroom.webp",
+    "/images/hotels/stay-vienna-jimmys/entrance.webp",
+    "/images/hotels/stay-vienna-jimmys/room.webp",
+    "/images/lafayette_xmas.webp",
+    "/images/latin_night.webp",
+    "/images/louvre2.webp",
+    "/images/montmartre.webp",
+    "/images/notredame.webp",
+    "/images/p12_2.webp",
+    "/images/p14_0.webp",
+    "/images/p16_0.webp",
+    "/images/p17_0.webp",
+    "/images/p18_0.webp",
+    "/images/p20_1.webp",
+    "/images/p24_2.webp",
+    "/images/p25_2.webp",
+    "/images/p26_0.webp",
+    "/images/p27_2.webp",
+    "/images/p34_0.webp",
+    "/images/p36_2.webp",
+    "/images/p37_1.webp",
+    "/images/p39_0.webp",
+    "/images/p4_0.webp",
+    "/images/p42_1.webp",
+    "/images/p44_0.webp",
+    "/images/p46_0.webp",
+    "/images/p5_0.webp",
+    "/images/p7_0.webp",
+    "/images/p9_0.webp",
+    "/images/places/accademia_bridge/02.webp",
+    "/images/places/arc_triomphe/02.webp",
+    "/images/places/bridge_sighs/02.webp",
+    "/images/places/cdg/02.webp",
+    "/images/places/charles_bridge/02.webp",
+    "/images/places/colosseum/02.webp",
+    "/images/places/duomo_firenze/02.webp",
+    "/images/places/forum/02.webp",
+    "/images/places/galeries_lafayette/02.webp",
+    "/images/places/graben/02.webp",
+    "/images/places/grand_canal/02.webp",
+    "/images/places/louvre_pyramid/02.webp",
+    "/images/places/louvre/02.webp",
+    "/images/places/mala_strana/02.webp",
+    "/images/places/montmartre/02.webp",
+    "/images/places/navona/02.webp",
+    "/images/places/oltrarno/02.webp",
+    "/images/places/pantheon/02.webp",
+    "/images/places/piazzale_michelangelo/02.webp",
+    "/images/places/ponte_vecchio/02.webp",
+    "/images/places/prague_castle/02.webp",
+    "/images/places/rathausplatz/02.webp",
+    "/images/places/sacre_coeur/02.webp",
+    "/images/places/schonbrunn/02.webp",
+    "/images/places/signoria/02.webp",
+    "/images/places/st_mark_basilica/02.webp",
+    "/images/places/st_mark_square/02.webp",
+    "/images/places/st_peter/02.webp",
+    "/images/places/st_vitus/02.webp",
+    "/images/places/trevi/02.webp",
+    "/images/places/trocadero/02.webp",
+    "/images/places/vatican_museums/02.webp",
+    "/images/vce_airport.webp",
+    "/images/visual-34.webp",
+    "/images/visual-35.webp",
+    "/images/visual-36.webp",
+    "/images/visual-37.webp",
+    "/images/visual-38.webp",
+    "/images/visual-39.webp",
+    "/images/wing_sunrise.webp"
+  ],
+  "selection": [
+    {
+      "file": "/images/arc_blue.webp",
+      "group": "placeCover",
+      "entityId": "arc_triomphe",
+      "role": "stop"
+    },
+    {
+      "file": "/images/cdg_sunrise.webp",
+      "group": "placeCover",
+      "entityId": "cdg",
+      "role": "hero"
+    },
+    {
+      "file": "/images/eiffel_couple.webp",
+      "group": "placeCover",
+      "entityId": "trocadero",
+      "role": "hero"
+    },
+    {
+      "file": "/images/flight_depart.webp",
+      "group": "dayHero",
+      "entityId": "day-1",
+      "role": "hero"
+    },
+    {
+      "file": "/images/food/florence-cammillo.webp",
+      "group": "foodContext",
+      "entityId": "florence-cammillo",
+      "role": "entrance"
+    },
+    {
+      "file": "/images/food/florence-cammillo/curated-01.webp",
+      "group": "foodCover",
+      "entityId": "florence-cammillo",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/florence-cammillo/curated-02.webp",
+      "group": "foodDish",
+      "entityId": "florence-cammillo",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/florence-ditta/curated-01.webp",
+      "group": "foodCover",
+      "entityId": "florence-ditta",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/florence-ditta/curated-02.webp",
+      "group": "foodDish",
+      "entityId": "florence-ditta",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/florence-ditta/curated-03.webp",
+      "group": "foodContext",
+      "entityId": "florence-ditta",
+      "role": "interior"
+    },
+    {
+      "file": "/images/food/florence-gustapizza.webp",
+      "group": "foodCover",
+      "entityId": "florence-gustapizza",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/florence-gustapizza/curated-01.webp",
+      "group": "foodContext",
+      "entityId": "florence-gustapizza",
+      "role": "entrance"
+    },
+    {
+      "file": "/images/food/florence-gustapizza/curated-03.webp",
+      "group": "foodDish",
+      "entityId": "florence-gustapizza",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/florence-rivoire.webp",
+      "group": "foodCover",
+      "entityId": "florence-rivoire",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/florence-rivoire/03.webp",
+      "group": "foodDish",
+      "entityId": "florence-rivoire",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/florence-sabatino.webp",
+      "group": "foodContext",
+      "entityId": "florence-sabatino",
+      "role": "entrance"
+    },
+    {
+      "file": "/images/food/florence-sabatino/curated-01.webp",
+      "group": "foodCover",
+      "entityId": "florence-sabatino",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/florence-sabatino/curated-02.webp",
+      "group": "foodDish",
+      "entityId": "florence-sabatino",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/paris-angelina.webp",
+      "group": "foodCover",
+      "entityId": "paris-angelina",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/paris-angelina/02.webp",
+      "group": "foodDish",
+      "entityId": "paris-angelina",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/paris-angelina/05.webp",
+      "group": "foodContext",
+      "entityId": "paris-angelina",
+      "role": "interior"
+    },
+    {
+      "file": "/images/food/paris-breizh.webp",
+      "group": "foodCover",
+      "entityId": "paris-breizh",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/paris-breizh/02.webp",
+      "group": "foodDish",
+      "entityId": "paris-breizh",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/paris-dupain.webp",
+      "group": "foodContext",
+      "entityId": "paris-dupain",
+      "role": "entrance"
+    },
+    {
+      "file": "/images/food/paris-dupain/curated-01.webp",
+      "group": "foodCover",
+      "entityId": "paris-dupain",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/paris-dupain/curated-02.webp",
+      "group": "foodDish",
+      "entityId": "paris-dupain",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/paris-enfants.webp",
+      "group": "foodCover",
+      "entityId": "paris-enfants",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/paris-enfants/03.webp",
+      "group": "foodContext",
+      "entityId": "paris-enfants",
+      "role": "interior"
+    },
+    {
+      "file": "/images/food/paris-enfants/04.webp",
+      "group": "foodDish",
+      "entityId": "paris-enfants",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/paris-flore.webp",
+      "group": "foodCover",
+      "entityId": "paris-flore",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/paris-flore/02.webp",
+      "group": "foodContext",
+      "entityId": "paris-flore",
+      "role": "entrance"
+    },
+    {
+      "file": "/images/food/paris-la-table-de-mame/03.webp",
+      "group": "foodCover",
+      "entityId": "paris-la-table-de-mame",
+      "role": "interior"
+    },
+    {
+      "file": "/images/food/paris-stohrer.webp",
+      "group": "foodCover",
+      "entityId": "paris-stohrer",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/paris-stohrer/03.webp",
+      "group": "foodDish",
+      "entityId": "paris-stohrer",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/paris-stohrer/curated-02.webp",
+      "group": "foodContext",
+      "entityId": "paris-stohrer",
+      "role": "interior"
+    },
+    {
+      "file": "/images/food/prague-choco.webp",
+      "group": "foodContext",
+      "entityId": "prague-choco",
+      "role": "interior"
+    },
+    {
+      "file": "/images/food/prague-choco/02.webp",
+      "group": "foodCover",
+      "entityId": "prague-choco",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/prague-choco/curated-02.webp",
+      "group": "foodDish",
+      "entityId": "prague-choco",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/prague-eska.webp",
+      "group": "foodContext",
+      "entityId": "prague-eska",
+      "role": "entrance"
+    },
+    {
+      "file": "/images/food/prague-eska/03.webp",
+      "group": "foodCover",
+      "entityId": "prague-eska",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/prague-eska/04.webp",
+      "group": "foodDish",
+      "entityId": "prague-eska",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/prague-kantyna.webp",
+      "group": "foodCover",
+      "entityId": "prague-kantyna",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/prague-kantyna/02.webp",
+      "group": "foodContext",
+      "entityId": "prague-kantyna",
+      "role": "interior"
+    },
+    {
+      "file": "/images/food/prague-lokal.webp",
+      "group": "foodContext",
+      "entityId": "prague-lokal",
+      "role": "interior"
+    },
+    {
+      "file": "/images/food/prague-lokal/04.webp",
+      "group": "foodCover",
+      "entityId": "prague-lokal",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/prague-savoy.webp",
+      "group": "foodContext",
+      "entityId": "prague-savoy",
+      "role": "interior"
+    },
+    {
+      "file": "/images/food/prague-savoy/04.webp",
+      "group": "foodCover",
+      "entityId": "prague-savoy",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/prague-savoy/05.webp",
+      "group": "foodDish",
+      "entityId": "prague-savoy",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/rome-armando.webp",
+      "group": "foodContext",
+      "entityId": "rome-armando",
+      "role": "entrance"
+    },
+    {
+      "file": "/images/food/rome-armando/02.webp",
+      "group": "foodCover",
+      "entityId": "rome-armando",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/rome-armando/04.webp",
+      "group": "foodDish",
+      "entityId": "rome-armando",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/rome-forno.webp",
+      "group": "foodContext",
+      "entityId": "rome-forno",
+      "role": "entrance"
+    },
+    {
+      "file": "/images/food/rome-forno/04.webp",
+      "group": "foodCover",
+      "entityId": "rome-forno",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/rome-forno/05.webp",
+      "group": "foodDish",
+      "entityId": "rome-forno",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/rome-giolitti.webp",
+      "group": "foodCover",
+      "entityId": "rome-giolitti",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/rome-giolitti/02.webp",
+      "group": "foodDish",
+      "entityId": "rome-giolitti",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/rome-giolitti/04.webp",
+      "group": "foodContext",
+      "entityId": "rome-giolitti",
+      "role": "interior"
+    },
+    {
+      "file": "/images/food/rome-roscioli.webp",
+      "group": "foodCover",
+      "entityId": "rome-roscioli",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/rome-roscioli/curated-01.webp",
+      "group": "foodDish",
+      "entityId": "rome-roscioli",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/rome-roscioli/curated-02.webp",
+      "group": "foodContext",
+      "entityId": "rome-roscioli",
+      "role": "interior"
+    },
+    {
+      "file": "/images/food/rome-santeustachio.webp",
+      "group": "foodContext",
+      "entityId": "rome-santeustachio",
+      "role": "exterior"
+    },
+    {
+      "file": "/images/food/rome-santeustachio/curated-01.webp",
+      "group": "foodCover",
+      "entityId": "rome-santeustachio",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/rome-trapizzino.webp",
+      "group": "foodCover",
+      "entityId": "rome-trapizzino",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/rome-trapizzino/02.webp",
+      "group": "foodDish",
+      "entityId": "rome-trapizzino",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/rome-trapizzino/04.webp",
+      "group": "foodContext",
+      "entityId": "rome-trapizzino",
+      "role": "entrance"
+    },
+    {
+      "file": "/images/food/venice-ai-pini-restaurant/04.webp",
+      "group": "foodContext",
+      "entityId": "venice-ai-pini-restaurant",
+      "role": "interior"
+    },
+    {
+      "file": "/images/food/venice-ai-pini-restaurant/05.webp",
+      "group": "foodCover",
+      "entityId": "venice-ai-pini-restaurant",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/venice-florian.webp",
+      "group": "foodContext",
+      "entityId": "venice-florian",
+      "role": "interior"
+    },
+    {
+      "file": "/images/food/venice-florian/02.webp",
+      "group": "foodCover",
+      "entityId": "venice-florian",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/venice-frarys.webp",
+      "group": "foodCover",
+      "entityId": "venice-frarys",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/venice-frarys/curated-01.webp",
+      "group": "foodContext",
+      "entityId": "venice-frarys",
+      "role": "entrance"
+    },
+    {
+      "file": "/images/food/venice-frarys/curated-02.webp",
+      "group": "foodDish",
+      "entityId": "venice-frarys",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/venice-plip.webp",
+      "group": "foodCover",
+      "entityId": "venice-plip",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/venice-torrefazione.webp",
+      "group": "foodContext",
+      "entityId": "venice-torrefazione",
+      "role": "interior"
+    },
+    {
+      "file": "/images/food/venice-torrefazione/curated-03.webp",
+      "group": "foodCover",
+      "entityId": "venice-torrefazione",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/venice-torrefazione/curated-04.webp",
+      "group": "foodDish",
+      "entityId": "venice-torrefazione",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/venice-viterossa.webp",
+      "group": "foodCover",
+      "entityId": "venice-viterossa",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/venice-viterossa/curated-01.webp",
+      "group": "foodDish",
+      "entityId": "venice-viterossa",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/venice-viterossa/curated-03.webp",
+      "group": "foodContext",
+      "entityId": "venice-viterossa",
+      "role": "interior"
+    },
+    {
+      "file": "/images/food/vienna-central.webp",
+      "group": "foodContext",
+      "entityId": "vienna-central",
+      "role": "exterior"
+    },
+    {
+      "file": "/images/food/vienna-central/curated-01.webp",
+      "group": "foodCover",
+      "entityId": "vienna-central",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/vienna-central/curated-02.webp",
+      "group": "foodDish",
+      "entityId": "vienna-central",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/vienna-demel.webp",
+      "group": "foodContext",
+      "entityId": "vienna-demel",
+      "role": "interior"
+    },
+    {
+      "file": "/images/food/vienna-demel/03.webp",
+      "group": "foodCover",
+      "entityId": "vienna-demel",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/vienna-demel/04.webp",
+      "group": "foodDish",
+      "entityId": "vienna-demel",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/vienna-kameel.webp",
+      "group": "foodContext",
+      "entityId": "vienna-kameel",
+      "role": "interior"
+    },
+    {
+      "file": "/images/food/vienna-kameel/03.webp",
+      "group": "foodCover",
+      "entityId": "vienna-kameel",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/vienna-kameel/05.webp",
+      "group": "foodDish",
+      "entityId": "vienna-kameel",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/vienna-plachutta.webp",
+      "group": "foodCover",
+      "entityId": "vienna-plachutta",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/vienna-plachutta/02.webp",
+      "group": "foodDish",
+      "entityId": "vienna-plachutta",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/vienna-plachutta/04.webp",
+      "group": "foodContext",
+      "entityId": "vienna-plachutta",
+      "role": "entrance"
+    },
+    {
+      "file": "/images/food/vienna-tarim.webp",
+      "group": "foodCover",
+      "entityId": "vienna-tarim",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/vienna-tarim/curated-01.webp",
+      "group": "foodDish",
+      "entityId": "vienna-tarim",
+      "role": "dish"
+    },
+    {
+      "file": "/images/food/vienna-tarim/curated-03.webp",
+      "group": "foodContext",
+      "entityId": "vienna-tarim",
+      "role": "interior"
+    },
+    {
+      "file": "/images/gallery.webp",
+      "group": "placeCover",
+      "entityId": "louvre",
+      "role": "hero"
+    },
+    {
+      "file": "/images/gym_florence_klab.webp",
+      "group": "gymEquipment",
+      "entityId": "gym-florence-klab",
+      "role": "equipment"
+    },
+    {
+      "file": "/images/gym_mestre_mcfit.webp",
+      "group": "gymEquipment",
+      "entityId": "gym-mestre-mcfit",
+      "role": "equipment"
+    },
+    {
+      "file": "/images/gym_paris_fpark.webp",
+      "group": "gymCover",
+      "entityId": "gym-paris-fpark",
+      "role": "equipment"
+    },
+    {
+      "file": "/images/gym_prague_form.webp",
+      "group": "gymEquipment",
+      "entityId": "gym-prague-form",
+      "role": "equipment"
+    },
+    {
+      "file": "/images/gym_rome_dabliu.webp",
+      "group": "gymEquipment",
+      "entityId": "gym-rome-dabliu",
+      "role": "equipment"
+    },
+    {
+      "file": "/images/gym_vienna_jh.webp",
+      "group": "gymEquipment",
+      "entityId": "gym-vienna-jh",
+      "role": "equipment"
+    },
+    {
+      "file": "/images/gym/gym-paris-fpark/curated-2.webp",
+      "group": "gymEquipment",
+      "entityId": "gym-paris-fpark",
+      "role": "equipment"
+    },
+    {
+      "file": "/images/hotels/stay-florence-fonderia/bathroom.webp",
+      "group": "hotelbathroom",
+      "entityId": "stay-florence-fonderia",
+      "role": "bathroom"
+    },
+    {
+      "file": "/images/hotels/stay-florence-fonderia/entrance.webp",
+      "group": "hotelentrance",
+      "entityId": "stay-florence-fonderia",
+      "role": "entrance"
+    },
+    {
+      "file": "/images/hotels/stay-florence-fonderia/room.webp",
+      "group": "hotelroom",
+      "entityId": "stay-florence-fonderia",
+      "role": "room"
+    },
+    {
+      "file": "/images/hotels/stay-paris-oden/bathroom.webp",
+      "group": "hotelbathroom",
+      "entityId": "stay-paris-oden",
+      "role": "bathroom"
+    },
+    {
+      "file": "/images/hotels/stay-paris-oden/entrance.webp",
+      "group": "hotelentrance",
+      "entityId": "stay-paris-oden",
+      "role": "entrance"
+    },
+    {
+      "file": "/images/hotels/stay-paris-oden/room.webp",
+      "group": "hotelroom",
+      "entityId": "stay-paris-oden",
+      "role": "room"
+    },
+    {
+      "file": "/images/hotels/stay-prague-ostas/bathroom.webp",
+      "group": "hotelbathroom",
+      "entityId": "stay-prague-ostas",
+      "role": "bathroom"
+    },
+    {
+      "file": "/images/hotels/stay-prague-ostas/entrance.webp",
+      "group": "hotelentrance",
+      "entityId": "stay-prague-ostas",
+      "role": "entrance"
+    },
+    {
+      "file": "/images/hotels/stay-prague-ostas/room.webp",
+      "group": "hotelroom",
+      "entityId": "stay-prague-ostas",
+      "role": "room"
+    },
+    {
+      "file": "/images/hotels/stay-rome-colonna/bathroom.webp",
+      "group": "hotelbathroom",
+      "entityId": "stay-rome-colonna",
+      "role": "bathroom"
+    },
+    {
+      "file": "/images/hotels/stay-rome-colonna/entrance.webp",
+      "group": "hotelentrance",
+      "entityId": "stay-rome-colonna",
+      "role": "entrance"
+    },
+    {
+      "file": "/images/hotels/stay-rome-colonna/room.webp",
+      "group": "hotelroom",
+      "entityId": "stay-rome-colonna",
+      "role": "room"
+    },
+    {
+      "file": "/images/hotels/stay-venice-ai-pini/bathroom.webp",
+      "group": "hotelbathroom",
+      "entityId": "stay-venice-ai-pini",
+      "role": "bathroom"
+    },
+    {
+      "file": "/images/hotels/stay-venice-ai-pini/entrance.webp",
+      "group": "hotelentrance",
+      "entityId": "stay-venice-ai-pini",
+      "role": "entrance"
+    },
+    {
+      "file": "/images/hotels/stay-venice-ai-pini/room.webp",
+      "group": "hotelroom",
+      "entityId": "stay-venice-ai-pini",
+      "role": "room"
+    },
+    {
+      "file": "/images/hotels/stay-vienna-jimmys/bathroom.webp",
+      "group": "hotelbathroom",
+      "entityId": "stay-vienna-jimmys",
+      "role": "bathroom"
+    },
+    {
+      "file": "/images/hotels/stay-vienna-jimmys/entrance.webp",
+      "group": "hotelentrance",
+      "entityId": "stay-vienna-jimmys",
+      "role": "entrance"
+    },
+    {
+      "file": "/images/hotels/stay-vienna-jimmys/room.webp",
+      "group": "hotelroom",
+      "entityId": "stay-vienna-jimmys",
+      "role": "room"
+    },
+    {
+      "file": "/images/lafayette_xmas.webp",
+      "group": "placeCover",
+      "entityId": "galeries_lafayette",
+      "role": "stop"
+    },
+    {
+      "file": "/images/latin_night.webp",
+      "group": "placeAux",
+      "entityId": "pont_saint_michel",
+      "role": "stop"
+    },
+    {
+      "file": "/images/louvre2.webp",
+      "group": "placeCover",
+      "entityId": "louvre_pyramid",
+      "role": "stop"
+    },
+    {
+      "file": "/images/montmartre.webp",
+      "group": "placeCover",
+      "entityId": "montmartre",
+      "role": "hero"
+    },
+    {
+      "file": "/images/notredame.webp",
+      "group": "placeCover",
+      "entityId": "pont_saint_michel",
+      "role": "hero"
+    },
+    {
+      "file": "/images/p12_2.webp",
+      "group": "placeCover",
+      "entityId": "vatican_museums",
+      "role": "hero"
+    },
+    {
+      "file": "/images/p14_0.webp",
+      "group": "placeCover",
+      "entityId": "st_peter",
+      "role": "stop"
+    },
+    {
+      "file": "/images/p16_0.webp",
+      "group": "placeCover",
+      "entityId": "duomo_firenze",
+      "role": "hero"
+    },
+    {
+      "file": "/images/p17_0.webp",
+      "group": "placeCover",
+      "entityId": "signoria",
+      "role": "stop"
+    },
+    {
+      "file": "/images/p18_0.webp",
+      "group": "placeCover",
+      "entityId": "piazzale_michelangelo",
+      "role": "hero"
+    },
+    {
+      "file": "/images/p20_1.webp",
+      "group": "placeCover",
+      "entityId": "ponte_vecchio",
+      "role": "stop"
+    },
+    {
+      "file": "/images/p24_2.webp",
+      "group": "placeCover",
+      "entityId": "st_mark_square",
+      "role": "hero"
+    },
+    {
+      "file": "/images/p25_2.webp",
+      "group": "placeCover",
+      "entityId": "st_mark_basilica",
+      "role": "stop"
+    },
+    {
+      "file": "/images/p26_0.webp",
+      "group": "placeCover",
+      "entityId": "accademia_bridge",
+      "role": "stop"
+    },
+    {
+      "file": "/images/p27_2.webp",
+      "group": "placeCover",
+      "entityId": "grand_canal",
+      "role": "hero"
+    },
+    {
+      "file": "/images/p34_0.webp",
+      "group": "placeCover",
+      "entityId": "prague_old_town",
+      "role": "hero"
+    },
+    {
+      "file": "/images/p36_2.webp",
+      "group": "placeCover",
+      "entityId": "charles_bridge",
+      "role": "stop"
+    },
+    {
+      "file": "/images/p37_1.webp",
+      "group": "placeAux",
+      "entityId": "prague_old_town",
+      "role": "stop"
+    },
+    {
+      "file": "/images/p39_0.webp",
+      "group": "placeCover",
+      "entityId": "prague_castle",
+      "role": "hero"
+    },
+    {
+      "file": "/images/p4_0.webp",
+      "group": "placeCover",
+      "entityId": "trevi",
+      "role": "hero"
+    },
+    {
+      "file": "/images/p42_1.webp",
+      "group": "placeCover",
+      "entityId": "graben",
+      "role": "stop"
+    },
+    {
+      "file": "/images/p44_0.webp",
+      "group": "placeCover",
+      "entityId": "schonbrunn",
+      "role": "hero"
+    },
+    {
+      "file": "/images/p46_0.webp",
+      "group": "placeCover",
+      "entityId": "rathausplatz",
+      "role": "stop"
+    },
+    {
+      "file": "/images/p5_0.webp",
+      "group": "placeCover",
+      "entityId": "navona",
+      "role": "stop"
+    },
+    {
+      "file": "/images/p7_0.webp",
+      "group": "placeCover",
+      "entityId": "colosseum",
+      "role": "hero"
+    },
+    {
+      "file": "/images/p9_0.webp",
+      "group": "placeCover",
+      "entityId": "pantheon",
+      "role": "stop"
+    },
+    {
+      "file": "/images/places/accademia_bridge/02.webp",
+      "group": "placeAux",
+      "entityId": "accademia_bridge",
+      "role": "detail"
+    },
+    {
+      "file": "/images/places/arc_triomphe/02.webp",
+      "group": "placeAux",
+      "entityId": "arc_triomphe",
+      "role": "detail"
+    },
+    {
+      "file": "/images/places/bridge_sighs/02.webp",
+      "group": "placeAux",
+      "entityId": "bridge_sighs",
+      "role": "detail"
+    },
+    {
+      "file": "/images/places/cdg/02.webp",
+      "group": "placeAux",
+      "entityId": "cdg",
+      "role": "detail"
+    },
+    {
+      "file": "/images/places/charles_bridge/02.webp",
+      "group": "placeAux",
+      "entityId": "charles_bridge",
+      "role": "detail"
+    },
+    {
+      "file": "/images/places/colosseum/02.webp",
+      "group": "placeAux",
+      "entityId": "colosseum",
+      "role": "detail"
+    },
+    {
+      "file": "/images/places/duomo_firenze/02.webp",
+      "group": "placeAux",
+      "entityId": "duomo_firenze",
+      "role": "detail"
+    },
+    {
+      "file": "/images/places/forum/02.webp",
+      "group": "placeAux",
+      "entityId": "forum",
+      "role": "detail"
+    },
+    {
+      "file": "/images/places/galeries_lafayette/02.webp",
+      "group": "placeAux",
+      "entityId": "galeries_lafayette",
+      "role": "detail"
+    },
+    {
+      "file": "/images/places/graben/02.webp",
+      "group": "placeAux",
+      "entityId": "graben",
+      "role": "detail"
+    },
+    {
+      "file": "/images/places/grand_canal/02.webp",
+      "group": "placeAux",
+      "entityId": "grand_canal",
+      "role": "detail"
+    },
+    {
+      "file": "/images/places/louvre_pyramid/02.webp",
+      "group": "placeAux",
+      "entityId": "louvre_pyramid",
+      "role": "detail"
+    },
+    {
+      "file": "/images/places/louvre/02.webp",
+      "group": "placeAux",
+      "entityId": "louvre",
+      "role": "detail"
+    },
+    {
+      "file": "/images/places/mala_strana/02.webp",
+      "group": "placeAux",
+      "entityId": "mala_strana",
+      "role": "detail"
+    },
+    {
+      "file": "/images/places/montmartre/02.webp",
+      "group": "placeAux",
+      "entityId": "montmartre",
+      "role": "detail"
+    },
+    {
+      "file": "/images/places/navona/02.webp",
+      "group": "placeAux",
+      "entityId": "navona",
+      "role": "detail"
+    },
+    {
+      "file": "/images/places/oltrarno/02.webp",
+      "group": "placeAux",
+      "entityId": "oltrarno",
+      "role": "detail"
+    },
+    {
+      "file": "/images/places/pantheon/02.webp",
+      "group": "placeAux",
+      "entityId": "pantheon",
+      "role": "detail"
+    },
+    {
+      "file": "/images/places/piazzale_michelangelo/02.webp",
+      "group": "placeAux",
+      "entityId": "piazzale_michelangelo",
+      "role": "detail"
+    },
+    {
+      "file": "/images/places/ponte_vecchio/02.webp",
+      "group": "placeAux",
+      "entityId": "ponte_vecchio",
+      "role": "detail"
+    },
+    {
+      "file": "/images/places/prague_castle/02.webp",
+      "group": "placeAux",
+      "entityId": "prague_castle",
+      "role": "detail"
+    },
+    {
+      "file": "/images/places/rathausplatz/02.webp",
+      "group": "placeAux",
+      "entityId": "rathausplatz",
+      "role": "detail"
+    },
+    {
+      "file": "/images/places/sacre_coeur/02.webp",
+      "group": "placeAux",
+      "entityId": "sacre_coeur",
+      "role": "detail"
+    },
+    {
+      "file": "/images/places/schonbrunn/02.webp",
+      "group": "placeAux",
+      "entityId": "schonbrunn",
+      "role": "detail"
+    },
+    {
+      "file": "/images/places/signoria/02.webp",
+      "group": "placeAux",
+      "entityId": "signoria",
+      "role": "detail"
+    },
+    {
+      "file": "/images/places/st_mark_basilica/02.webp",
+      "group": "placeAux",
+      "entityId": "st_mark_basilica",
+      "role": "detail"
+    },
+    {
+      "file": "/images/places/st_mark_square/02.webp",
+      "group": "placeAux",
+      "entityId": "st_mark_square",
+      "role": "detail"
+    },
+    {
+      "file": "/images/places/st_peter/02.webp",
+      "group": "placeAux",
+      "entityId": "st_peter",
+      "role": "detail"
+    },
+    {
+      "file": "/images/places/st_vitus/02.webp",
+      "group": "placeAux",
+      "entityId": "st_vitus",
+      "role": "detail"
+    },
+    {
+      "file": "/images/places/trevi/02.webp",
+      "group": "placeAux",
+      "entityId": "trevi",
+      "role": "detail"
+    },
+    {
+      "file": "/images/places/trocadero/02.webp",
+      "group": "placeAux",
+      "entityId": "trocadero",
+      "role": "detail"
+    },
+    {
+      "file": "/images/places/vatican_museums/02.webp",
+      "group": "placeAux",
+      "entityId": "vatican_museums",
+      "role": "detail"
+    },
+    {
+      "file": "/images/vce_airport.webp",
+      "group": "dayHero",
+      "entityId": "day-9",
+      "role": "hero"
+    },
+    {
+      "file": "/images/visual-34.webp",
+      "group": "placeCover",
+      "entityId": "forum",
+      "role": "stop"
+    },
+    {
+      "file": "/images/visual-35.webp",
+      "group": "placeCover",
+      "entityId": "oltrarno",
+      "role": "stop"
+    },
+    {
+      "file": "/images/visual-36.webp",
+      "group": "placeCover",
+      "entityId": "bridge_sighs",
+      "role": "stop"
+    },
+    {
+      "file": "/images/visual-37.webp",
+      "group": "placeCover",
+      "entityId": "st_vitus",
+      "role": "stop"
+    },
+    {
+      "file": "/images/visual-38.webp",
+      "group": "placeCover",
+      "entityId": "mala_strana",
+      "role": "stop"
+    },
+    {
+      "file": "/images/visual-39.webp",
+      "group": "placeCover",
+      "entityId": "sacre_coeur",
+      "role": "stop"
+    },
+    {
+      "file": "/images/wing_sunrise.webp",
+      "group": "dayHero",
+      "entityId": "day-18",
+      "role": "hero"
+    }
+  ]
+}

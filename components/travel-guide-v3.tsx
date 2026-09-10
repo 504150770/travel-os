@@ -85,6 +85,7 @@ import {
 import { calculateBudget } from '@/lib/budget-calculator';
 import { canonicalBookings } from '@/lib/hotel-execution';
 import { MediaGallery } from '@/components/media-gallery';
+import { OfflinePackControl } from '@/components/offline-pack-control';
 import {
   openGalleryRequest,
   selectCoverImage,
@@ -185,6 +186,7 @@ function Media({
       >
         {cover.file.startsWith('/') ? (
           <Image
+            unoptimized
             src={cover.file}
             alt={cover.title || cover.caption || name}
             fill
@@ -1161,6 +1163,7 @@ function GymDetailModal({
         >
           {cover ? (
             <Image
+              unoptimized
               src={cover.file}
               alt={entity.name}
               fill
@@ -1350,6 +1353,7 @@ function DayGym({
                 <div>
                   {entity.images[0] ? (
                     <Image
+                      unoptimized
                       src={entity.images[0].file}
                       alt={entity.name}
                       fill
@@ -1621,6 +1625,7 @@ function TripView({
         <section className="day-hero">
           {hero ? (
             <Image
+              unoptimized
               key={hero.file}
               src={hero.file}
               alt={hero.caption}
@@ -1841,6 +1846,7 @@ function EntityDetailModal({
         >
           {cover ? (
             <Image
+              unoptimized
               src={cover.file}
               alt={entity.name}
               fill
@@ -1868,7 +1874,7 @@ function EntityDetailModal({
               <div>
                 {orders.map((order) => {
                   const related = entity.images.find((image) =>
-                    `${image.title} ${image.caption}`.toLowerCase().includes(order.toLowerCase()),
+                    image.matchesDishes?.some((dish) => dish === order),
                   );
                   return (
                     <button
@@ -1876,7 +1882,7 @@ function EntityDetailModal({
                       disabled={!related}
                       onClick={() => related && open(openGalleryRequest(entity.id, entity.name, entity.images, related))}
                     >
-                      {related && <Image src={related.file} alt={related.title} width={72} height={54} />}
+                      {related && <Image unoptimized src={related.file} alt={related.title} width={72} height={54} />}
                       <span>{order}</span>
                     </button>
                   );
@@ -2156,6 +2162,7 @@ function DiscoverView({
                   }
                 >
                   <Image
+                    unoptimized
                     src={image.file}
                     alt={image.caption}
                     fill
@@ -2870,6 +2877,7 @@ function MoreView({
       )}{' '}
       {tab === 'backup' && (
         <div className="backup-v2">
+          <OfflinePackControl />
           <article>
             <Download />
             <h2>EXPORT TRAVEL DATA</h2>
@@ -3254,6 +3262,7 @@ export default function TravelGuideV3() {
             <div className="v2-view home-v2">
               <section className="home-cover">
                 <Image
+                  unoptimized
                   src={guideData.trip.coverImage}
                   alt="冬季欧洲街景"
                   fill

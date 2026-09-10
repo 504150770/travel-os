@@ -1,0 +1,1679 @@
+{
+  "generatedAt": "2026-09-10T06:06:53.130Z",
+  "correctedCount": 239,
+  "corrected": [
+    {
+      "entityId": null,
+      "file": "/images/flight_depart.webp",
+      "from": null,
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Airplanes_at_sunrise.JPG"
+    },
+    {
+      "entityId": "trevi",
+      "file": "/images/p4_0.webp",
+      "from": null,
+      "to": "Local Visual Source",
+      "sourcePage": "本地来源：视觉册原始摄影索引"
+    },
+    {
+      "entityId": "navona",
+      "file": "/images/p5_0.webp",
+      "from": null,
+      "to": "Local Visual Source",
+      "sourcePage": "本地来源：视觉册原始摄影索引"
+    },
+    {
+      "entityId": "colosseum",
+      "file": "/images/p7_0.webp",
+      "from": null,
+      "to": "Local Visual Source",
+      "sourcePage": "本地来源：视觉册原始摄影索引"
+    },
+    {
+      "entityId": "pantheon",
+      "file": "/images/p9_0.webp",
+      "from": null,
+      "to": "Local Visual Source",
+      "sourcePage": "本地来源：视觉册原始摄影索引"
+    },
+    {
+      "entityId": "forum",
+      "file": "/images/visual-34.webp",
+      "from": null,
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:ForumRomanumColumns_10050024c.jpg"
+    },
+    {
+      "entityId": "vatican_museums",
+      "file": "/images/p12_2.webp",
+      "from": null,
+      "to": "Local Visual Source",
+      "sourcePage": "本地来源：视觉册原始摄影索引"
+    },
+    {
+      "entityId": "st_peter",
+      "file": "/images/p14_0.webp",
+      "from": null,
+      "to": "Local Visual Source",
+      "sourcePage": "本地来源：视觉册原始摄影索引"
+    },
+    {
+      "entityId": "duomo_firenze",
+      "file": "/images/p16_0.webp",
+      "from": null,
+      "to": "Local Visual Source",
+      "sourcePage": "本地来源：视觉册原始摄影索引"
+    },
+    {
+      "entityId": "signoria",
+      "file": "/images/p17_0.webp",
+      "from": null,
+      "to": "Local Visual Source",
+      "sourcePage": "本地来源：视觉册原始摄影索引"
+    },
+    {
+      "entityId": "piazzale_michelangelo",
+      "file": "/images/p18_0.webp",
+      "from": null,
+      "to": "Local Visual Source",
+      "sourcePage": "本地来源：视觉册原始摄影索引"
+    },
+    {
+      "entityId": "ponte_vecchio",
+      "file": "/images/p20_1.webp",
+      "from": null,
+      "to": "Local Visual Source",
+      "sourcePage": "本地来源：视觉册原始摄影索引"
+    },
+    {
+      "entityId": "oltrarno",
+      "file": "/images/visual-35.webp",
+      "from": null,
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Oltrarno.JPG"
+    },
+    {
+      "entityId": "grand_canal",
+      "file": "/images/p27_2.webp",
+      "from": null,
+      "to": "Local Visual Source",
+      "sourcePage": "本地来源：视觉册原始摄影索引"
+    },
+    {
+      "entityId": "accademia_bridge",
+      "file": "/images/p26_0.webp",
+      "from": null,
+      "to": "Local Visual Source",
+      "sourcePage": "本地来源：视觉册原始摄影索引"
+    },
+    {
+      "entityId": "st_mark_square",
+      "file": "/images/p24_2.webp",
+      "from": null,
+      "to": "Local Visual Source",
+      "sourcePage": "本地来源：视觉册原始摄影索引"
+    },
+    {
+      "entityId": "st_mark_basilica",
+      "file": "/images/p25_2.webp",
+      "from": null,
+      "to": "Local Visual Source",
+      "sourcePage": "本地来源：视觉册原始摄影索引"
+    },
+    {
+      "entityId": "bridge_sighs",
+      "file": "/images/visual-36.webp",
+      "from": null,
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Bridge_of_Sighs,_Venice_(30127461850).jpg"
+    },
+    {
+      "entityId": null,
+      "file": "/images/vce_airport.webp",
+      "from": null,
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Venice_Marco_Polo_Airport_terminal.jpg"
+    },
+    {
+      "entityId": "graben",
+      "file": "/images/p42_1.webp",
+      "from": null,
+      "to": "Local Visual Source",
+      "sourcePage": "本地来源：视觉册原始摄影索引"
+    },
+    {
+      "entityId": "schonbrunn",
+      "file": "/images/p44_0.webp",
+      "from": null,
+      "to": "Local Visual Source",
+      "sourcePage": "本地来源：视觉册原始摄影索引"
+    },
+    {
+      "entityId": "rathausplatz",
+      "file": "/images/p46_0.webp",
+      "from": null,
+      "to": "Local Visual Source",
+      "sourcePage": "本地来源：视觉册原始摄影索引"
+    },
+    {
+      "entityId": "prague_old_town",
+      "file": "/images/p34_0.webp",
+      "from": null,
+      "to": "Local Visual Source",
+      "sourcePage": "本地来源：视觉册原始摄影索引"
+    },
+    {
+      "entityId": "prague_old_town",
+      "file": "/images/p37_1.webp",
+      "from": null,
+      "to": "Local Visual Source",
+      "sourcePage": "本地来源：视觉册原始摄影索引"
+    },
+    {
+      "entityId": "prague_castle",
+      "file": "/images/p39_0.webp",
+      "from": null,
+      "to": "Local Visual Source",
+      "sourcePage": "本地来源：视觉册原始摄影索引"
+    },
+    {
+      "entityId": "charles_bridge",
+      "file": "/images/p36_2.webp",
+      "from": null,
+      "to": "Local Visual Source",
+      "sourcePage": "本地来源：视觉册原始摄影索引"
+    },
+    {
+      "entityId": "st_vitus",
+      "file": "/images/visual-37.webp",
+      "from": null,
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:St_vitus_cathedral_interior.jpg"
+    },
+    {
+      "entityId": "mala_strana",
+      "file": "/images/visual-38.webp",
+      "from": null,
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Malá_Strana_January_2026.jpg"
+    },
+    {
+      "entityId": "pont_saint_michel",
+      "file": "/images/notredame.webp",
+      "from": null,
+      "to": "Unsplash",
+      "sourcePage": "https://unsplash.com/s/photos/notre-dame"
+    },
+    {
+      "entityId": "pont_saint_michel",
+      "file": "/images/latin_night.webp",
+      "from": null,
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Night_life_in_the_Latin_Quarter,_Paris_1_July_2017.jpg"
+    },
+    {
+      "entityId": "louvre",
+      "file": "/images/gallery.webp",
+      "from": null,
+      "to": "Unsplash",
+      "sourcePage": "https://unsplash.com/photos/H3APOiYLyzk"
+    },
+    {
+      "entityId": "louvre_pyramid",
+      "file": "/images/louvre2.webp",
+      "from": null,
+      "to": "Unsplash",
+      "sourcePage": "https://unsplash.com/photos/TTz_H1FrdIc"
+    },
+    {
+      "entityId": "trocadero",
+      "file": "/images/eiffel_couple.webp",
+      "from": null,
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Couple_au_Trocadero,_Paris_18_Octobre_2013.jpg"
+    },
+    {
+      "entityId": "arc_triomphe",
+      "file": "/images/arc_blue.webp",
+      "from": null,
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Arc_de_Triomphe_de_l%27%C3%89toile_at_blue_hour,_Paris_8-2014_2.jpg"
+    },
+    {
+      "entityId": "montmartre",
+      "file": "/images/montmartre.webp",
+      "from": null,
+      "to": "Unsplash",
+      "sourcePage": "https://unsplash.com/photos/NLrBr0KQRLg"
+    },
+    {
+      "entityId": "galeries_lafayette",
+      "file": "/images/lafayette_xmas.webp",
+      "from": null,
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Christmas_tree_at_Galeries_Lafayette_Haussmann_in_Paris,_2025.jpg"
+    },
+    {
+      "entityId": "sacre_coeur",
+      "file": "/images/visual-39.webp",
+      "from": null,
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Basilique_du_Sacré_Coeur_at_night.jpg"
+    },
+    {
+      "entityId": "cdg",
+      "file": "/images/cdg_sunrise.webp",
+      "from": null,
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Paris-Charles_de_Gaulle_Airport_sunrise.jpg"
+    },
+    {
+      "entityId": null,
+      "file": "/images/wing_sunrise.webp",
+      "from": null,
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Wing_with_morning_sunrise_sky.jpg"
+    },
+    {
+      "entityId": "trevi",
+      "file": "/images/places/trevi/02.webp",
+      "from": "Wikimedia Commons · Public domain",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Fontana_di_Trevi_di_notte.JPG"
+    },
+    {
+      "entityId": "trevi",
+      "file": "/images/places/trevi/03.webp",
+      "from": "Wikimedia Commons · CC BY-SA 4.0",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Rome_(IT),_Trevi-Brunnen_--_2013_--_3593.jpg"
+    },
+    {
+      "entityId": "navona",
+      "file": "/images/places/navona/02.webp",
+      "from": "Wikimedia Commons · CC BY-SA 3.0",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Piazza_Navona_1.jpg"
+    },
+    {
+      "entityId": "navona",
+      "file": "/images/places/navona/03.webp",
+      "from": "Wikimedia Commons · CC0",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Obelisk_piazza_Navona,_Rome,_Italy.jpg"
+    },
+    {
+      "entityId": "colosseum",
+      "file": "/images/places/colosseum/02.webp",
+      "from": "Wikimedia Commons · CC BY-SA 2.5",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Colosseum_in_Rome,_Italy_-_April_2007.jpg"
+    },
+    {
+      "entityId": "colosseum",
+      "file": "/images/places/colosseum/03.webp",
+      "from": "Wikimedia Commons · CC BY-SA 4.0",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Exterior_of_the_Colosseum_03.jpg"
+    },
+    {
+      "entityId": "forum",
+      "file": "/images/places/forum/02.webp",
+      "from": "Wikimedia Commons · CC0",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Detail_forum_Romanum_Rome_3.jpg"
+    },
+    {
+      "entityId": "forum",
+      "file": "/images/places/forum/03.webp",
+      "from": "Wikimedia Commons · CC BY-SA 3.0",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Forum_romanum_6k_(5760x2097).jpg"
+    },
+    {
+      "entityId": "pantheon",
+      "file": "/images/places/pantheon/02.webp",
+      "from": "Wikimedia Commons · CC BY-SA 2.5",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Rome_Pantheon_front.jpg"
+    },
+    {
+      "entityId": "pantheon",
+      "file": "/images/places/pantheon/03.webp",
+      "from": "Wikimedia Commons · CC BY-SA 4.0",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Rome_(IT),_Pantheon_--_2013_--_3572.jpg"
+    },
+    {
+      "entityId": "vatican_museums",
+      "file": "/images/places/vatican_museums/02.webp",
+      "from": "Wikimedia Commons · CC BY-SA 4.0",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:VaticanMuseumStaircase.jpg"
+    },
+    {
+      "entityId": "vatican_museums",
+      "file": "/images/places/vatican_museums/03.webp",
+      "from": "Wikimedia Commons · CC BY-SA 3.0",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Mura_vaticane_-_ingresso_ai_Musei_00410.JPG"
+    },
+    {
+      "entityId": "st_peter",
+      "file": "/images/places/st_peter/02.webp",
+      "from": "Wikimedia Commons · CC BY-SA 2.5",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Vatican_StPaul_Statue.jpg"
+    },
+    {
+      "entityId": "st_peter",
+      "file": "/images/places/st_peter/03.webp",
+      "from": "Wikimedia Commons · CC BY-SA 3.0",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:St_Peter%27s_Square,_Vatican_City_-_April_2007.jpg"
+    },
+    {
+      "entityId": "duomo_firenze",
+      "file": "/images/places/duomo_firenze/02.webp",
+      "from": "Wikimedia Commons · CC BY-SA 2.5",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:CampanileGiotto-01.jpg"
+    },
+    {
+      "entityId": "duomo_firenze",
+      "file": "/images/places/duomo_firenze/03.webp",
+      "from": "Wikimedia Commons · CC0",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Clock_24_hours_Florence_Cathedral.jpg"
+    },
+    {
+      "entityId": "signoria",
+      "file": "/images/places/signoria/02.webp",
+      "from": "Wikimedia Commons · CC BY 3.0",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Florence_-_David_-_t%C3%AAte.jpg"
+    },
+    {
+      "entityId": "signoria",
+      "file": "/images/places/signoria/03.webp",
+      "from": "Wikimedia Commons · CC BY-SA 3.0",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Arso_Savonarola_Firenze.jpg"
+    },
+    {
+      "entityId": "ponte_vecchio",
+      "file": "/images/places/ponte_vecchio/02.webp",
+      "from": "Wikimedia Commons · CC0",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Ponte_Vecchio_Arno_Florence.jpg"
+    },
+    {
+      "entityId": "ponte_vecchio",
+      "file": "/images/places/ponte_vecchio/03.webp",
+      "from": "Wikimedia Commons · CC BY-SA 3.0",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Ponte_Vecchio_at_dusk_1.JPG"
+    },
+    {
+      "entityId": "oltrarno",
+      "file": "/images/places/oltrarno/02.webp",
+      "from": "Wikimedia Commons · CC BY-SA 3.0",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Chiesa_Santo_Spirito,_Firenze.jpg"
+    },
+    {
+      "entityId": "oltrarno",
+      "file": "/images/places/oltrarno/03.webp",
+      "from": "Wikimedia Commons · Public domain",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Santo_Spirito_Filippo_Brunelleschi.jpg"
+    },
+    {
+      "entityId": "piazzale_michelangelo",
+      "file": "/images/places/piazzale_michelangelo/02.webp",
+      "from": "Wikimedia Commons · CC BY-SA 4.0",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Florence_Duomo_from_Michelangelo_hill.jpg"
+    },
+    {
+      "entityId": "piazzale_michelangelo",
+      "file": "/images/places/piazzale_michelangelo/03.webp",
+      "from": "Wikimedia Commons · CC BY-SA 3.0",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Florence_Italy_Bronze-replica-of-Michelangelos-David-at-Piazzale-Michelangelo-01.jpg"
+    },
+    {
+      "entityId": "grand_canal",
+      "file": "/images/places/grand_canal/02.webp",
+      "from": "Wikimedia Commons · Public domain",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Claude_Monet,_Le_Grand_Canal.jpg"
+    },
+    {
+      "entityId": "grand_canal",
+      "file": "/images/places/grand_canal/03.webp",
+      "from": "Wikimedia Commons · CC BY-SA 3.0",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Canal_Grande_from_the_Accademia_bridge.jpg"
+    },
+    {
+      "entityId": "accademia_bridge",
+      "file": "/images/places/accademia_bridge/02.webp",
+      "from": "Wikimedia Commons · CC BY-SA 3.0",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Kanal_wenecki.jpg"
+    },
+    {
+      "entityId": "accademia_bridge",
+      "file": "/images/places/accademia_bridge/03.webp",
+      "from": "Wikimedia Commons · CC BY-SA 3.0",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Rio_della_Zecca.jpg"
+    },
+    {
+      "entityId": "st_mark_square",
+      "file": "/images/places/st_mark_square/02.webp",
+      "from": "Wikimedia Commons · Public domain",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Canaletto_-_The_Piazza_San_Marco_in_Venice_-_Google_Art_Project.jpg"
+    },
+    {
+      "entityId": "st_mark_square",
+      "file": "/images/places/st_mark_square/03.webp",
+      "from": "Wikimedia Commons · Public domain",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Giovanni_Antonio_Canal,_il_Canaletto_-_Piazza_San_Marco_-_WGA03883.jpg"
+    },
+    {
+      "entityId": "bridge_sighs",
+      "file": "/images/places/bridge_sighs/02.webp",
+      "from": "Wikimedia Commons · Public domain",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Ralph_Curtis_-_The_Bridge_of_Sighs,_Venice.jpg"
+    },
+    {
+      "entityId": "bridge_sighs",
+      "file": "/images/places/bridge_sighs/03.webp",
+      "from": "Wikimedia Commons · CC BY-SA 4.0",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Bridge_of_Sighs_(Venice)_01.JPG"
+    },
+    {
+      "entityId": "st_mark_basilica",
+      "file": "/images/places/st_mark_basilica/02.webp",
+      "from": "Wikimedia Commons · CC BY-SA 2.5",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Venice_-_St._Marc%27s_Basilica_01.jpg"
+    },
+    {
+      "entityId": "st_mark_basilica",
+      "file": "/images/places/st_mark_basilica/03.webp",
+      "from": "Wikimedia Commons · CC BY-SA 4.0",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:San_Marco_cathedral_in_Venice.JPG"
+    },
+    {
+      "entityId": "graben",
+      "file": "/images/places/graben/02.webp",
+      "from": "Wikimedia Commons · CC BY 2.5",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sttephanplatz,_Graben,_Vienna,_Austria.jpg"
+    },
+    {
+      "entityId": "graben",
+      "file": "/images/places/graben/03.webp",
+      "from": "Wikimedia Commons · CC0",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:PestSa%C3%BCle_Graben_Vienna_top.jpg"
+    },
+    {
+      "entityId": "schonbrunn",
+      "file": "/images/places/schonbrunn/02.webp",
+      "from": "Wikimedia Commons · CC BY-SA 3.0 de",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Schloss_Sch%C3%B6nbrunn_Wien_2014_(Zuschnitt_1).jpg"
+    },
+    {
+      "entityId": "schonbrunn",
+      "file": "/images/places/schonbrunn/03.webp",
+      "from": "Wikimedia Commons · CC BY-SA 4.0",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Schoenbrunn_Palace_as_seen_from_Neptune_Fountain,_September_2016.jpg"
+    },
+    {
+      "entityId": "rathausplatz",
+      "file": "/images/places/rathausplatz/02.webp",
+      "from": "Wikimedia Commons · CC BY-SA 2.5",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Rathausplatz_Vienna_June_2006_168.jpg"
+    },
+    {
+      "entityId": "rathausplatz",
+      "file": "/images/places/rathausplatz/03.webp",
+      "from": "Wikimedia Commons · CC BY-SA 3.0",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Rathausplatz_01.jpg"
+    },
+    {
+      "entityId": "prague_old_town",
+      "file": "/images/places/prague_old_town/03.webp",
+      "from": "Wikimedia Commons · CC BY 3.0",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Prague_old_town_square_panorama.jpg"
+    },
+    {
+      "entityId": "prague_castle",
+      "file": "/images/places/prague_castle/02.webp",
+      "from": "Wikimedia Commons · CC BY 2.5",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:PragueCathedral03.jpg"
+    },
+    {
+      "entityId": "prague_castle",
+      "file": "/images/places/prague_castle/03.webp",
+      "from": "Wikimedia Commons · CC BY-SA 4.0",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Prague_Castle_Guard_-_winter.jpg"
+    },
+    {
+      "entityId": "st_vitus",
+      "file": "/images/places/st_vitus/02.webp",
+      "from": "Wikimedia Commons · Public domain",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:FFridrich,_Prazsky_hrad,_bazilika_sv._Ji%C5%99%C3%AD.jpg"
+    },
+    {
+      "entityId": "st_vitus",
+      "file": "/images/places/st_vitus/03.webp",
+      "from": "Wikimedia Commons · CC BY-SA 4.0",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:St_Vitus_Cathedral_-_Stained_glass_(retouch).jpg"
+    },
+    {
+      "entityId": "mala_strana",
+      "file": "/images/places/mala_strana/02.webp",
+      "from": "Wikimedia Commons · CC BY-SA 3.0",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:PragueCzechRepublicMalaStranaMostecka.jpg"
+    },
+    {
+      "entityId": "mala_strana",
+      "file": "/images/places/mala_strana/03.webp",
+      "from": "Wikimedia Commons · CC BY-SA 3.0",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Mal%C3%A1_Strana,_Prague_1,_Czech_Republic_-_panoramio_(50).jpg"
+    },
+    {
+      "entityId": "charles_bridge",
+      "file": "/images/places/charles_bridge/02.webp",
+      "from": "Wikimedia Commons · CC BY-SA 4.0",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Prague_skyline_at_dawn.jpg"
+    },
+    {
+      "entityId": "charles_bridge",
+      "file": "/images/places/charles_bridge/03.webp",
+      "from": "Wikimedia Commons · CC BY-SA 4.0",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:North_view_of_Charles_Bridge_from_M%C3%A1nes%C5%AFv_most,_Prague_20160808_1.jpg"
+    },
+    {
+      "entityId": "pont_saint_michel",
+      "file": "/images/places/pont_saint_michel/03.webp",
+      "from": "Wikimedia Commons · CC BY-SA 3.0",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:View_towards_Pont_Saint-Michel_from_Pont_Neuf,_Aug_2010,_v.2.jpg"
+    },
+    {
+      "entityId": "louvre",
+      "file": "/images/places/louvre/02.webp",
+      "from": "Wikimedia Commons · CC BY-SA 3.0",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Le_Louvre_-_Aile_Richelieu.jpg"
+    },
+    {
+      "entityId": "louvre",
+      "file": "/images/places/louvre/03.webp",
+      "from": "Wikimedia Commons · Public domain",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Portrait_of_a_flamen,_Louvre_museum,_Paris,_Ma431.jpg"
+    },
+    {
+      "entityId": "louvre_pyramid",
+      "file": "/images/places/louvre_pyramid/02.webp",
+      "from": "Wikimedia Commons · CC BY 2.5",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Cour_Napol%C3%A9on_at_night_-_Louvre.jpg"
+    },
+    {
+      "entityId": "louvre_pyramid",
+      "file": "/images/places/louvre_pyramid/03.webp",
+      "from": "Wikimedia Commons · Public domain",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:View_of_the_Louvre_Palace_from_inside_of_the_Louvre_Pyramid_004.jpg"
+    },
+    {
+      "entityId": "trocadero",
+      "file": "/images/places/trocadero/02.webp",
+      "from": "Wikimedia Commons · CC BY-SA 3.0",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Place_du_Trocad%C3%A9ro_-_neige_-_3.JPG"
+    },
+    {
+      "entityId": "trocadero",
+      "file": "/images/places/trocadero/03.webp",
+      "from": "Wikimedia Commons · CC BY-SA 3.0",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Place_du_Trocad%C3%A9ro-et-du-11-Novembre_%C3%A0_Paris_le_23_avril_2015_-_24.jpg"
+    },
+    {
+      "entityId": "arc_triomphe",
+      "file": "/images/places/arc_triomphe/02.webp",
+      "from": "Wikimedia Commons · CC BY-SA 3.0",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Arc_Triomphe.jpg"
+    },
+    {
+      "entityId": "arc_triomphe",
+      "file": "/images/places/arc_triomphe/03.webp",
+      "from": "Wikimedia Commons · Public domain",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Arc_de_Triomphe_du_Carrousel_1890-1900.jpg"
+    },
+    {
+      "entityId": "sacre_coeur",
+      "file": "/images/places/sacre_coeur/02.webp",
+      "from": "Wikimedia Commons · CC BY 3.0",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Paris_-_Sacr%C3%A9-C%C5%93ur_-_Kuppel_zur_blauen_Stunde.jpg"
+    },
+    {
+      "entityId": "sacre_coeur",
+      "file": "/images/places/sacre_coeur/03.webp",
+      "from": "Wikimedia Commons · CC BY-SA 3.0",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:View_of_Paris_North_west_from_the_dome_of_Sacr%C3%A9_Coeur_DSC_0047.JPG"
+    },
+    {
+      "entityId": "montmartre",
+      "file": "/images/places/montmartre/02.webp",
+      "from": "Wikimedia Commons · CC BY-SA 3.0",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Place_du_Tertre,_Paris_22_November_2006_001.jpg"
+    },
+    {
+      "entityId": "montmartre",
+      "file": "/images/places/montmartre/03.webp",
+      "from": "Wikimedia Commons · CC BY-SA 3.0",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Place_du_Tertre,_Paris_22_November_2006_002.jpg"
+    },
+    {
+      "entityId": "galeries_lafayette",
+      "file": "/images/places/galeries_lafayette/02.webp",
+      "from": "Wikimedia Commons · CC BY-SA 3.0",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Galerie_Lafayette_Haussmann_Dome.jpg"
+    },
+    {
+      "entityId": "galeries_lafayette",
+      "file": "/images/places/galeries_lafayette/03.webp",
+      "from": "Wikimedia Commons · CC BY-SA 3.0",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Paris_75009_Boulevard_Haussmann_no_048_Galeries_Lafayette_Gourmet_%2B_Homme.jpg"
+    },
+    {
+      "entityId": "cdg",
+      "file": "/images/places/cdg/02.webp",
+      "from": "Wikimedia Commons · CC BY-SA 3.0",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Paris-Charles_de_Gaulle_Airport_Boeing_747.jpg"
+    },
+    {
+      "entityId": "cdg",
+      "file": "/images/places/cdg/03.webp",
+      "from": "Wikimedia Commons · CC0",
+      "to": "Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Charles_de_Gaulle_International_Airport_in_France.jpg"
+    },
+    {
+      "entityId": "stay-rome-colonna",
+      "file": "/images/hotels/stay-rome-colonna/entrance.webp",
+      "from": "Official property website",
+      "to": "Official Website",
+      "sourcePage": "https://www.hotelcolonnapalace.com/"
+    },
+    {
+      "entityId": "stay-rome-colonna",
+      "file": "/images/hotels/stay-rome-colonna/room.webp",
+      "from": "Official property website",
+      "to": "Official Website",
+      "sourcePage": "https://www.hotelcolonnapalace.com/rooms.html"
+    },
+    {
+      "entityId": "stay-rome-colonna",
+      "file": "/images/hotels/stay-rome-colonna/bathroom.webp",
+      "from": "Official property website",
+      "to": "Official Website",
+      "sourcePage": "https://www.hotelcolonnapalace.com/rooms.html"
+    },
+    {
+      "entityId": "stay-rome-colonna",
+      "file": "/images/hotels/stay-rome-colonna/interior-4.webp",
+      "from": "Official property website",
+      "to": "Official Website",
+      "sourcePage": "https://www.hotelcolonnapalace.com/"
+    },
+    {
+      "entityId": "stay-rome-colonna",
+      "file": "/images/hotels/stay-rome-colonna/detail-5.webp",
+      "from": "Official property website",
+      "to": "Official Website",
+      "sourcePage": "https://www.hotelcolonnapalace.com/"
+    },
+    {
+      "entityId": "stay-florence-fonderia",
+      "file": "/images/hotels/stay-florence-fonderia/entrance.webp",
+      "from": "Official property website",
+      "to": "Official Website",
+      "sourcePage": "https://www.fonderiafirenze.com/en/"
+    },
+    {
+      "entityId": "stay-florence-fonderia",
+      "file": "/images/hotels/stay-florence-fonderia/room.webp",
+      "from": "Official property website",
+      "to": "Official Website",
+      "sourcePage": "https://www.fonderiafirenze.com/en/rooms-for-your-holiday-in-florence/piombo-single-room-private-external-bathroom"
+    },
+    {
+      "entityId": "stay-florence-fonderia",
+      "file": "/images/hotels/stay-florence-fonderia/bathroom.webp",
+      "from": "Official property website",
+      "to": "Official Website",
+      "sourcePage": "https://www.fonderiafirenze.com/en/rooms-for-your-holiday-in-florence/piombo-single-room-private-external-bathroom"
+    },
+    {
+      "entityId": "stay-florence-fonderia",
+      "file": "/images/hotels/stay-florence-fonderia/detail-4.webp",
+      "from": "Official property website",
+      "to": "Official Website",
+      "sourcePage": "https://www.fonderiafirenze.com/en/"
+    },
+    {
+      "entityId": "stay-florence-fonderia",
+      "file": "/images/hotels/stay-florence-fonderia/bathroom-5.webp",
+      "from": "Official property website",
+      "to": "Official Website",
+      "sourcePage": "https://www.fonderiafirenze.com/en/"
+    },
+    {
+      "entityId": "stay-venice-ai-pini",
+      "file": "/images/hotels/stay-venice-ai-pini/room.webp",
+      "from": "Official property website",
+      "to": "Official Website",
+      "sourcePage": "https://hotelaipini.it/en/accommodation/"
+    },
+    {
+      "entityId": "stay-venice-ai-pini",
+      "file": "/images/hotels/stay-venice-ai-pini/bathroom.webp",
+      "from": "Official property website",
+      "to": "Official Website",
+      "sourcePage": "https://hotelaipini.it/en/accommodation/"
+    },
+    {
+      "entityId": "stay-venice-ai-pini",
+      "file": "/images/hotels/stay-venice-ai-pini/interior-4.webp",
+      "from": "Official property website",
+      "to": "Official Website",
+      "sourcePage": "https://hotelaipini.it/en/accommodation/"
+    },
+    {
+      "entityId": "stay-venice-ai-pini",
+      "file": "/images/hotels/stay-venice-ai-pini/room-5.webp",
+      "from": "Official property website",
+      "to": "Official Website",
+      "sourcePage": "https://hotelaipini.it/en/accommodation/"
+    },
+    {
+      "entityId": "stay-vienna-jimmys",
+      "file": "/images/hotels/stay-vienna-jimmys/entrance.webp",
+      "from": "Official property website",
+      "to": "Official Website",
+      "sourcePage": "https://jimmys.at/en/info/lory"
+    },
+    {
+      "entityId": "stay-vienna-jimmys",
+      "file": "/images/hotels/stay-vienna-jimmys/room.webp",
+      "from": "Official property website",
+      "to": "Official Website",
+      "sourcePage": "https://jimmys.at/en/locations/lory"
+    },
+    {
+      "entityId": "stay-vienna-jimmys",
+      "file": "/images/hotels/stay-vienna-jimmys/bathroom.webp",
+      "from": "Official property website",
+      "to": "Official Website",
+      "sourcePage": "https://jimmys.at/en/locations/lory"
+    },
+    {
+      "entityId": "stay-vienna-jimmys",
+      "file": "/images/hotels/stay-vienna-jimmys/detail-4.webp",
+      "from": "Official property website",
+      "to": "Official Website",
+      "sourcePage": "https://jimmys.at/en/info/lory"
+    },
+    {
+      "entityId": "stay-vienna-jimmys",
+      "file": "/images/hotels/stay-vienna-jimmys/interior-5.webp",
+      "from": "Official property website",
+      "to": "Official Website",
+      "sourcePage": "https://jimmys.at/en/locations/lory"
+    },
+    {
+      "entityId": "stay-prague-ostas",
+      "file": "/images/hotels/stay-prague-ostas/entrance.webp",
+      "from": "Official property website",
+      "to": "Official Website",
+      "sourcePage": "https://www.hotelostas.cz/en/contact/"
+    },
+    {
+      "entityId": "stay-prague-ostas",
+      "file": "/images/hotels/stay-prague-ostas/room.webp",
+      "from": "Official property website",
+      "to": "Official Website",
+      "sourcePage": "https://www.hotelostas.cz/en/rooms/"
+    },
+    {
+      "entityId": "stay-prague-ostas",
+      "file": "/images/hotels/stay-prague-ostas/interior-4.webp",
+      "from": "Official property website",
+      "to": "Official Website",
+      "sourcePage": "https://www.hotelostas.cz/en/contact/"
+    },
+    {
+      "entityId": "stay-prague-ostas",
+      "file": "/images/hotels/stay-prague-ostas/detail-5.webp",
+      "from": "Official property website",
+      "to": "Official Website",
+      "sourcePage": "https://www.hotelostas.cz/en/contact/"
+    },
+    {
+      "entityId": "stay-paris-oden",
+      "file": "/images/hotels/stay-paris-oden/entrance.webp",
+      "from": "Official property website",
+      "to": "Official Website",
+      "sourcePage": "https://oden-paris-ivry.com/"
+    },
+    {
+      "entityId": "stay-paris-oden",
+      "file": "/images/hotels/stay-paris-oden/room.webp",
+      "from": "Official property website",
+      "to": "Official Website",
+      "sourcePage": "https://oden-paris-ivry.com/chambres/"
+    },
+    {
+      "entityId": "stay-paris-oden",
+      "file": "/images/hotels/stay-paris-oden/bathroom.webp",
+      "from": "Official property website",
+      "to": "Official Website",
+      "sourcePage": "https://oden-paris-ivry.com/chambres/"
+    },
+    {
+      "entityId": "stay-paris-oden",
+      "file": "/images/hotels/stay-paris-oden/bathroom-4.webp",
+      "from": "Official property website",
+      "to": "Official Website",
+      "sourcePage": "https://oden-paris-ivry.com/"
+    },
+    {
+      "entityId": "stay-paris-oden",
+      "file": "/images/hotels/stay-paris-oden/bathroom-5.webp",
+      "from": "Official property website",
+      "to": "Official Website",
+      "sourcePage": "https://oden-paris-ivry.com/"
+    },
+    {
+      "entityId": "rome-armando",
+      "file": "/images/food/rome-armando.webp",
+      "from": "Official restaurant website",
+      "to": "Official Website",
+      "sourcePage": "https://armandoalpantheon.it/"
+    },
+    {
+      "entityId": "rome-armando",
+      "file": "/images/food/rome-armando/02.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://armandoalpantheon.it/"
+    },
+    {
+      "entityId": "rome-armando",
+      "file": "/images/food/rome-armando/04.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://armandoalpantheon.it/"
+    },
+    {
+      "entityId": "rome-armando",
+      "file": "/images/food/rome-armando/05.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://armandoalpantheon.it/"
+    },
+    {
+      "entityId": "rome-roscioli",
+      "file": "/images/food/rome-roscioli/curated-03.webp",
+      "from": "Entity-specific editorial",
+      "to": "Venue-specific editorial",
+      "sourcePage": "https://note.com/dolcevitazu/n/nf70d451588af"
+    },
+    {
+      "entityId": "rome-trapizzino",
+      "file": "/images/food/rome-trapizzino.webp",
+      "from": "Official restaurant website",
+      "to": "Official Website",
+      "sourcePage": "https://www.trapizzino.it/en/"
+    },
+    {
+      "entityId": "rome-trapizzino",
+      "file": "/images/food/rome-trapizzino/02.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://www.trapizzino.it/en/"
+    },
+    {
+      "entityId": "rome-trapizzino",
+      "file": "/images/food/rome-trapizzino/03.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://www.trapizzino.it/en/"
+    },
+    {
+      "entityId": "rome-trapizzino",
+      "file": "/images/food/rome-trapizzino/04.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://www.trapizzino.it/en/"
+    },
+    {
+      "entityId": "rome-santeustachio",
+      "file": "/images/food/rome-santeustachio.webp",
+      "from": "WAUG Rome coffee guide",
+      "to": "WAUG",
+      "sourcePage": "https://www.waug.com/en/magazines/615"
+    },
+    {
+      "entityId": "rome-santeustachio",
+      "file": "/images/food/rome-santeustachio/02.webp",
+      "from": "Official business website",
+      "to": "WAUG",
+      "sourcePage": "https://www.waug.com/en/magazines/615"
+    },
+    {
+      "entityId": "rome-santeustachio",
+      "file": "/images/food/rome-santeustachio/04.webp",
+      "from": "Official business website",
+      "to": "WAUG",
+      "sourcePage": "https://www.waug.com/en/magazines/615"
+    },
+    {
+      "entityId": "florence-sabatino",
+      "file": "/images/food/florence-sabatino/02.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://www.trattoriasabatino.it/menu/"
+    },
+    {
+      "entityId": "venice-viterossa",
+      "file": "/images/food/venice-viterossa.webp",
+      "from": "Official restaurant website",
+      "to": "Official Website",
+      "sourcePage": "https://www.hostariaviterossa.it/it/"
+    },
+    {
+      "entityId": "venice-viterossa",
+      "file": "/images/food/venice-viterossa/curated-01.webp",
+      "from": "Official restaurant website",
+      "to": "Official Website",
+      "sourcePage": "https://www.hostariaviterossa.it/"
+    },
+    {
+      "entityId": "venice-viterossa",
+      "file": "/images/food/venice-viterossa/curated-02.webp",
+      "from": "Yelp venue gallery",
+      "to": "Yelp",
+      "sourcePage": "https://www.yelp.com/biz/hostaria-vite-rossa-venezia"
+    },
+    {
+      "entityId": "venice-viterossa",
+      "file": "/images/food/venice-viterossa/curated-03.webp",
+      "from": "AutoReserve venue gallery",
+      "to": "AutoReserve",
+      "sourcePage": "https://autoreserve.com/en/restaurants/CCXpBYu1n55M5bXC3b1b"
+    },
+    {
+      "entityId": "venice-florian",
+      "file": "/images/food/venice-florian.webp",
+      "from": "Official restaurant website",
+      "to": "Official Website",
+      "sourcePage": "https://caffeflorian.com/"
+    },
+    {
+      "entityId": "venice-florian",
+      "file": "/images/food/venice-florian/02.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://caffeflorian.com/"
+    },
+    {
+      "entityId": "venice-florian",
+      "file": "/images/food/venice-florian/03.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://caffeflorian.com/"
+    },
+    {
+      "entityId": "vienna-kameel",
+      "file": "/images/food/vienna-kameel.webp",
+      "from": "Official restaurant website",
+      "to": "Official Website",
+      "sourcePage": "https://schwarzeskameel.at/"
+    },
+    {
+      "entityId": "vienna-kameel",
+      "file": "/images/food/vienna-kameel/03.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://schwarzeskameel.at/"
+    },
+    {
+      "entityId": "vienna-kameel",
+      "file": "/images/food/vienna-kameel/04.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://schwarzeskameel.at/"
+    },
+    {
+      "entityId": "vienna-kameel",
+      "file": "/images/food/vienna-kameel/05.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://schwarzeskameel.at/"
+    },
+    {
+      "entityId": "prague-lokal",
+      "file": "/images/food/prague-lokal.webp",
+      "from": "Official restaurant website",
+      "to": "Official Website",
+      "sourcePage": "https://lokal-dlouha.ambi.cz/en/"
+    },
+    {
+      "entityId": "prague-lokal",
+      "file": "/images/food/prague-lokal/02.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://lokal-dlouha.ambi.cz/en/"
+    },
+    {
+      "entityId": "prague-lokal",
+      "file": "/images/food/prague-lokal/03.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://lokal-dlouha.ambi.cz/en/"
+    },
+    {
+      "entityId": "prague-lokal",
+      "file": "/images/food/prague-lokal/04.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://lokal-dlouha.ambi.cz/en/"
+    },
+    {
+      "entityId": "prague-lokal",
+      "file": "/images/food/prague-lokal/05.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://lokal-dlouha.ambi.cz/en/ajax/gallery/?id=63"
+    },
+    {
+      "entityId": "prague-kantyna",
+      "file": "/images/food/prague-kantyna.webp",
+      "from": "Official restaurant website",
+      "to": "Official Website",
+      "sourcePage": "https://www.kantyna.ambi.cz/"
+    },
+    {
+      "entityId": "prague-kantyna",
+      "file": "/images/food/prague-kantyna/02.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://www.kantyna.ambi.cz/"
+    },
+    {
+      "entityId": "prague-eska",
+      "file": "/images/food/prague-eska.webp",
+      "from": "Official restaurant website",
+      "to": "Official Website",
+      "sourcePage": "https://eska.ambi.cz/"
+    },
+    {
+      "entityId": "prague-eska",
+      "file": "/images/food/prague-eska/02.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://eska.ambi.cz/"
+    },
+    {
+      "entityId": "prague-eska",
+      "file": "/images/food/prague-eska/03.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://eska.ambi.cz/"
+    },
+    {
+      "entityId": "prague-eska",
+      "file": "/images/food/prague-eska/04.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://eska.ambi.cz/"
+    },
+    {
+      "entityId": "paris-breizh",
+      "file": "/images/food/paris-breizh.webp",
+      "from": "Official restaurant website",
+      "to": "Official Website",
+      "sourcePage": "https://www.breizhcafe.com/"
+    },
+    {
+      "entityId": "paris-breizh",
+      "file": "/images/food/paris-breizh/02.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://www.breizhcafe.com/"
+    },
+    {
+      "entityId": "paris-breizh",
+      "file": "/images/food/paris-breizh/04.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://www.breizhcafe.com/"
+    },
+    {
+      "entityId": "paris-flore",
+      "file": "/images/food/paris-flore.webp",
+      "from": "Official restaurant website",
+      "to": "Official Website",
+      "sourcePage": "https://cafedeflore.fr/"
+    },
+    {
+      "entityId": "paris-flore",
+      "file": "/images/food/paris-flore/02.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://cafedeflore.fr/"
+    },
+    {
+      "entityId": "paris-flore",
+      "file": "/images/food/paris-flore/03.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://cafedeflore.fr/"
+    },
+    {
+      "entityId": "rome-forno",
+      "file": "/images/food/rome-forno/02.webp",
+      "from": "Official business website",
+      "to": "Condé Nast Traveler",
+      "sourcePage": "https://www.cntraveler.com/restaurants/rome/forno-campo-de-fiori"
+    },
+    {
+      "entityId": "rome-forno",
+      "file": "/images/food/rome-forno/05.webp",
+      "from": "Official business website",
+      "to": "Condé Nast Traveler",
+      "sourcePage": "https://www.cntraveler.com/restaurants/rome/forno-campo-de-fiori"
+    },
+    {
+      "entityId": "rome-giolitti",
+      "file": "/images/food/rome-giolitti.webp",
+      "from": "Official restaurant website",
+      "to": "Official Website",
+      "sourcePage": "https://www.giolitti.it/"
+    },
+    {
+      "entityId": "rome-giolitti",
+      "file": "/images/food/rome-giolitti/02.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://www.giolitti.it/"
+    },
+    {
+      "entityId": "rome-giolitti",
+      "file": "/images/food/rome-giolitti/04.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://www.giolitti.it/"
+    },
+    {
+      "entityId": "rome-giolitti",
+      "file": "/images/food/rome-giolitti/05.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://www.giolitti.it/"
+    },
+    {
+      "entityId": "florence-cammillo",
+      "file": "/images/food/florence-cammillo/02.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://www.firenzemadeintuscany.com/it/articolo/la-storia-e-i-piatti-da-non-perdere-della-storica-trattoria-cammillo/"
+    },
+    {
+      "entityId": "florence-cammillo",
+      "file": "/images/food/florence-cammillo/03.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://www.firenzemadeintuscany.com/it/articolo/la-storia-e-i-piatti-da-non-perdere-della-storica-trattoria-cammillo/"
+    },
+    {
+      "entityId": "florence-cammillo",
+      "file": "/images/food/florence-cammillo/04.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://www.firenzemadeintuscany.com/it/articolo/la-storia-e-i-piatti-da-non-perdere-della-storica-trattoria-cammillo/"
+    },
+    {
+      "entityId": "florence-gustapizza",
+      "file": "/images/food/florence-gustapizza.webp",
+      "from": "Tripadvisor venue gallery",
+      "to": "Tripadvisor",
+      "sourcePage": "https://www.tripadvisor.com/Restaurant_Review-g187895-d1155597-Reviews-Gustapizza-Florence_Tuscany.html"
+    },
+    {
+      "entityId": "florence-rivoire",
+      "file": "/images/food/florence-rivoire.webp",
+      "from": "TheFork menu gallery",
+      "to": "TheFork",
+      "sourcePage": "https://www.thefork.ch/restaurant/rivoire-firenze-r805157/menu"
+    },
+    {
+      "entityId": "florence-rivoire",
+      "file": "/images/food/florence-rivoire/03.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://rivoire.it/"
+    },
+    {
+      "entityId": "florence-rivoire",
+      "file": "/images/food/florence-rivoire/04.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://rivoire.it/"
+    },
+    {
+      "entityId": "florence-rivoire",
+      "file": "/images/food/florence-rivoire/05.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://rivoire.it/"
+    },
+    {
+      "entityId": "venice-plip",
+      "file": "/images/food/venice-plip.webp",
+      "from": "Sluurpy venue gallery",
+      "to": "Sluurpy",
+      "sourcePage": "https://www.sluurpy.it/album/191590"
+    },
+    {
+      "entityId": "venice-frarys",
+      "file": "/images/food/venice-frarys.webp",
+      "from": "Restaurant Guru venue gallery",
+      "to": "Restaurant Guru",
+      "sourcePage": "https://restaurantguru.it/Frarys-Venice"
+    },
+    {
+      "entityId": "venice-frarys",
+      "file": "/images/food/venice-frarys/curated-01.webp",
+      "from": "Official restaurant website",
+      "to": "Official Website",
+      "sourcePage": "https://www.frarysvenezia.it/ristorante.html"
+    },
+    {
+      "entityId": "vienna-central",
+      "file": "/images/food/vienna-central.webp",
+      "from": "Official restaurant website",
+      "to": "Official Website",
+      "sourcePage": "https://cafecentral.wien/en/"
+    },
+    {
+      "entityId": "vienna-central",
+      "file": "/images/food/vienna-central/02.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://cafecentral.wien/en/"
+    },
+    {
+      "entityId": "vienna-demel",
+      "file": "/images/food/vienna-demel.webp",
+      "from": "Official restaurant website",
+      "to": "Official Website",
+      "sourcePage": "https://www.demel.com/"
+    },
+    {
+      "entityId": "vienna-demel",
+      "file": "/images/food/vienna-demel/03.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://www.demel.com/"
+    },
+    {
+      "entityId": "vienna-demel",
+      "file": "/images/food/vienna-demel/04.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://www.demel.com/"
+    },
+    {
+      "entityId": "vienna-demel",
+      "file": "/images/food/vienna-demel/05.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://www.demel.com/"
+    },
+    {
+      "entityId": "vienna-plachutta",
+      "file": "/images/food/vienna-plachutta.webp",
+      "from": "Trip.com venue gallery",
+      "to": "Trip.com",
+      "sourcePage": "https://in.trip.com/restaurant/austria/vienna/detail/plachutta-wollzeile-17207986/"
+    },
+    {
+      "entityId": "vienna-plachutta",
+      "file": "/images/food/vienna-plachutta/02.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://www.plachutta.at/en/"
+    },
+    {
+      "entityId": "vienna-plachutta",
+      "file": "/images/food/vienna-plachutta/03.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://www.plachutta.at/en/"
+    },
+    {
+      "entityId": "vienna-plachutta",
+      "file": "/images/food/vienna-plachutta/04.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://www.plachutta.at/en/"
+    },
+    {
+      "entityId": "vienna-plachutta",
+      "file": "/images/food/vienna-plachutta/05.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://www.plachutta.at/en/"
+    },
+    {
+      "entityId": "prague-savoy",
+      "file": "/images/food/prague-savoy.webp",
+      "from": "Official restaurant website",
+      "to": "Official Website",
+      "sourcePage": "https://www.cafesavoy.ambi.cz/en/"
+    },
+    {
+      "entityId": "prague-savoy",
+      "file": "/images/food/prague-savoy/03.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://www.cafesavoy.ambi.cz/en/"
+    },
+    {
+      "entityId": "prague-savoy",
+      "file": "/images/food/prague-savoy/04.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://www.cafesavoy.ambi.cz/en/"
+    },
+    {
+      "entityId": "prague-savoy",
+      "file": "/images/food/prague-savoy/05.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://www.cafesavoy.ambi.cz/en/"
+    },
+    {
+      "entityId": "prague-choco",
+      "file": "/images/food/prague-choco.webp",
+      "from": "Official restaurant website",
+      "to": "Official Website",
+      "sourcePage": "https://www.choco-cafe.cz/"
+    },
+    {
+      "entityId": "prague-choco",
+      "file": "/images/food/prague-choco/02.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://www.choco-cafe.cz/"
+    },
+    {
+      "entityId": "paris-angelina",
+      "file": "/images/food/paris-angelina/02.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://www.angelina-paris.fr/"
+    },
+    {
+      "entityId": "paris-angelina",
+      "file": "/images/food/paris-angelina/03.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://www.angelina-paris.fr/"
+    },
+    {
+      "entityId": "paris-angelina",
+      "file": "/images/food/paris-angelina/04.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://www.angelina-paris.fr/"
+    },
+    {
+      "entityId": "paris-angelina",
+      "file": "/images/food/paris-angelina/05.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://www.angelina-paris.fr/"
+    },
+    {
+      "entityId": "paris-dupain",
+      "file": "/images/food/paris-dupain/04.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://www.dupainetdesidees.com/"
+    },
+    {
+      "entityId": "paris-stohrer",
+      "file": "/images/food/paris-stohrer.webp",
+      "from": "Official restaurant website",
+      "to": "Official Website",
+      "sourcePage": "https://stohrer.fr/"
+    },
+    {
+      "entityId": "paris-stohrer",
+      "file": "/images/food/paris-stohrer/03.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://stohrer.fr/"
+    },
+    {
+      "entityId": "paris-stohrer",
+      "file": "/images/food/paris-stohrer/05.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://stohrer.fr/"
+    },
+    {
+      "entityId": "paris-enfants",
+      "file": "/images/food/paris-enfants.webp",
+      "from": "Official restaurant website",
+      "to": "Official Website",
+      "sourcePage": "https://www.lesenfantsdumarche.fr/"
+    },
+    {
+      "entityId": "paris-enfants",
+      "file": "/images/food/paris-enfants/03.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://www.lesenfantsdumarche.fr/le-restaurant-biarritz"
+    },
+    {
+      "entityId": "paris-enfants",
+      "file": "/images/food/paris-enfants/04.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://www.lesenfantsdumarche.fr/le-restaurant-biarritz"
+    },
+    {
+      "entityId": "paris-enfants",
+      "file": "/images/food/paris-enfants/05.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://www.lesenfantsdumarche.fr/le-restaurant-biarritz"
+    },
+    {
+      "entityId": "venice-ai-pini-restaurant",
+      "file": "/images/food/venice-ai-pini-restaurant/04.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://ristoranteaipini.it/en/"
+    },
+    {
+      "entityId": "venice-ai-pini-restaurant",
+      "file": "/images/food/venice-ai-pini-restaurant/05.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://ristoranteaipini.it/en/"
+    },
+    {
+      "entityId": "vienna-tarim",
+      "file": "/images/food/vienna-tarim.webp",
+      "from": "Restaurant Guru venue gallery",
+      "to": "Restaurant Guru",
+      "sourcePage": "https://de.restaurantguru.com/Tarim-Uigur-Restaurant-Vienna"
+    },
+    {
+      "entityId": "vienna-tarim",
+      "file": "/images/food/vienna-tarim/curated-01.webp",
+      "from": "Wolt business menu",
+      "to": "Wolt Business Menu",
+      "sourcePage": "https://wolt.com/de-at/aut/vienna/restaurant/tarim-uigur-restaurant"
+    },
+    {
+      "entityId": "vienna-tarim",
+      "file": "/images/food/vienna-tarim/curated-02.webp",
+      "from": "TheFork venue gallery",
+      "to": "TheFork",
+      "sourcePage": "https://www.thefork.com/restaurant/tarim-uigur-restaurant-r848723"
+    },
+    {
+      "entityId": "vienna-tarim",
+      "file": "/images/food/vienna-tarim/curated-03.webp",
+      "from": "TheFork venue gallery",
+      "to": "TheFork",
+      "sourcePage": "https://www.thefork.at/restaurant/tarim-uigur-restaurant-r848723"
+    },
+    {
+      "entityId": "paris-la-table-de-mame",
+      "file": "/images/food/paris-la-table-de-mame/03.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://icioncuisine.com/restaurant/st-miguel-1183"
+    },
+    {
+      "entityId": "gym-rome-dabliu",
+      "file": "/images/gym/gym-rome-dabliu/curated-1.webp",
+      "from": "Restaurant Guru venue gallery",
+      "to": "Restaurant Guru",
+      "sourcePage": "https://restaurantguru.com/Dabliu-Parioli-Fitness-Club-Rome"
+    },
+    {
+      "entityId": "gym-florence-klab",
+      "file": "/images/gym/gym-florence-klab/02.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://www.klab.it/marignolle-firenze/"
+    },
+    {
+      "entityId": "gym-florence-klab",
+      "file": "/images/gym/gym-florence-klab/03.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://www.klab.it/marignolle-firenze/"
+    },
+    {
+      "entityId": "gym-vienna-jh",
+      "file": "/images/gym/gym-vienna-jh/02.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://www.johnharris.at/en/studios/detail/1/schillerplatz.html"
+    },
+    {
+      "entityId": "gym-vienna-jh",
+      "file": "/images/gym/gym-vienna-jh/03.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://www.johnharris.at/en/studios/detail/1/schillerplatz.html"
+    },
+    {
+      "entityId": "gym-prague-form",
+      "file": "/images/gym/gym-prague-form/02.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://www.formfactory.cz/nove-otevrene-fitko-i-p-pavlova/"
+    },
+    {
+      "entityId": "gym-prague-form",
+      "file": "/images/gym/gym-prague-form/03.webp",
+      "from": "Official business website",
+      "to": "Official Website",
+      "sourcePage": "https://www.formfactory.cz/nove-otevrene-fitko-i-p-pavlova/"
+    },
+    {
+      "entityId": "gym-paris-fpark",
+      "file": "/images/gym/gym-paris-fpark/curated-2.webp",
+      "from": "Ma Salle de Sport venue gallery",
+      "to": "Ma Salle de Sport",
+      "sourcePage": "https://www.masalledesport.com/salle/12111%2Cfitness-park-paris-porte-de-choisy%2Cclub-de-fitness%2Cparis%2C75013%2Cfr"
+    },
+    {
+      "entityId": "florence-cammillo",
+      "file": "/images/food/florence-cammillo/02.webp",
+      "from": "Official Website",
+      "to": "Firenze Made in Tuscany",
+      "sourcePage": "https://www.firenzemadeintuscany.com/it/articolo/la-storia-e-i-piatti-da-non-perdere-della-storica-trattoria-cammillo/"
+    },
+    {
+      "entityId": "florence-cammillo",
+      "file": "/images/food/florence-cammillo/03.webp",
+      "from": "Official Website",
+      "to": "Firenze Made in Tuscany",
+      "sourcePage": "https://www.firenzemadeintuscany.com/it/articolo/la-storia-e-i-piatti-da-non-perdere-della-storica-trattoria-cammillo/"
+    },
+    {
+      "entityId": "florence-cammillo",
+      "file": "/images/food/florence-cammillo/04.webp",
+      "from": "Official Website",
+      "to": "Firenze Made in Tuscany",
+      "sourcePage": "https://www.firenzemadeintuscany.com/it/articolo/la-storia-e-i-piatti-da-non-perdere-della-storica-trattoria-cammillo/"
+    },
+    {
+      "entityId": "paris-la-table-de-mame",
+      "file": "/images/food/paris-la-table-de-mame/03.webp",
+      "from": "Official Website",
+      "to": "Ici On Cuisine venue listing",
+      "sourcePage": "https://icioncuisine.com/restaurant/st-miguel-1183"
+    }
+  ]
+}

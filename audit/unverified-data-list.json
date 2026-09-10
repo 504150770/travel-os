@@ -1,11 +1,16 @@
 {
-  "generatedAt": "2026-09-10T03:48:05.426Z",
+  "generatedAt": "2026-09-10T06:07:49.087Z",
   "policy": "真实性 > 完成率；未验证字段不进入事实结论。",
   "total": 249,
   "prioritySummary": {
-    "P0": 29,
-    "P1": 122,
+    "P0": 23,
+    "P1": 128,
     "P2": 98
+  },
+  "actionWindowSummary": {
+    "ACTIONABLE_NOW": 0,
+    "VERIFY_BEFORE_TRIP": 10,
+    "VERIFY_ON_THE_DAY": 13
   },
   "summary": {
     "FOOD_MENU": 60,
@@ -1924,9 +1929,13 @@
         "noise.corridor",
         "noise.mechanical"
       ],
-      "reason": "入住凭证没有提供这些运营与噪音事实。",
+      "reason": "入住凭证没有提供这些舒适度与运营事实，不影响当前订单有效性。",
       "nextAction": "取消线前向酒店书面确认，未回复前保持待确认。",
-      "priority": "P0"
+      "priority": "P1",
+      "actionWindow": "VERIFY_BEFORE_TRIP",
+      "verifyAfter": "2026-11-01",
+      "verifyBefore": "2026-11-28T15:00:00+01:00",
+      "freshness": "Recheck after any hotel reply"
     },
     {
       "category": "REAL_HOTEL_UNVERIFIED",
@@ -1940,9 +1949,13 @@
         "noise.corridor",
         "noise.mechanical"
       ],
-      "reason": "入住凭证没有提供这些运营与噪音事实。",
+      "reason": "入住凭证没有提供这些舒适度与运营事实，不影响当前订单有效性。",
       "nextAction": "取消线前向酒店书面确认，未回复前保持待确认。",
-      "priority": "P0"
+      "priority": "P1",
+      "actionWindow": "VERIFY_BEFORE_TRIP",
+      "verifyAfter": "2026-11-01",
+      "verifyBefore": "2026-11-30T23:59:00+01:00",
+      "freshness": "Recheck after any hotel reply"
     },
     {
       "category": "REAL_HOTEL_UNVERIFIED",
@@ -1956,9 +1969,13 @@
         "noise.corridor",
         "noise.mechanical"
       ],
-      "reason": "入住凭证没有提供这些运营与噪音事实。",
+      "reason": "入住凭证没有提供这些舒适度与运营事实，不影响当前订单有效性。",
       "nextAction": "取消线前向酒店书面确认，未回复前保持待确认。",
-      "priority": "P0"
+      "priority": "P1",
+      "actionWindow": "VERIFY_BEFORE_TRIP",
+      "verifyAfter": "2026-11-01",
+      "verifyBefore": "2026-12-04T16:00:00+01:00",
+      "freshness": "Recheck after any hotel reply"
     },
     {
       "category": "REAL_HOTEL_UNVERIFIED",
@@ -1972,9 +1989,13 @@
         "noise.corridor",
         "noise.mechanical"
       ],
-      "reason": "入住凭证没有提供这些运营与噪音事实。",
+      "reason": "入住凭证没有提供这些舒适度与运营事实，不影响当前订单有效性。",
       "nextAction": "取消线前向酒店书面确认，未回复前保持待确认。",
-      "priority": "P0"
+      "priority": "P1",
+      "actionWindow": "VERIFY_BEFORE_TRIP",
+      "verifyAfter": "2026-11-01",
+      "verifyBefore": "2026-12-06T23:59:00+01:00",
+      "freshness": "Recheck after any hotel reply"
     },
     {
       "category": "REAL_HOTEL_UNVERIFIED",
@@ -1988,9 +2009,13 @@
         "noise.corridor",
         "noise.mechanical"
       ],
-      "reason": "入住凭证没有提供这些运营与噪音事实。",
+      "reason": "入住凭证没有提供这些舒适度与运营事实，不影响当前订单有效性。",
       "nextAction": "取消线前向酒店书面确认，未回复前保持待确认。",
-      "priority": "P0"
+      "priority": "P1",
+      "actionWindow": "VERIFY_BEFORE_TRIP",
+      "verifyAfter": "2026-11-01",
+      "verifyBefore": "2026-12-10T18:00:00+01:00",
+      "freshness": "Recheck after any hotel reply"
     },
     {
       "category": "REAL_HOTEL_UNVERIFIED",
@@ -2004,9 +2029,13 @@
         "noise.corridor",
         "noise.mechanical"
       ],
-      "reason": "入住凭证没有提供这些运营与噪音事实。",
+      "reason": "入住凭证没有提供这些舒适度与运营事实，不影响当前订单有效性。",
       "nextAction": "取消线前向酒店书面确认，未回复前保持待确认。",
-      "priority": "P0"
+      "priority": "P1",
+      "actionWindow": "VERIFY_BEFORE_TRIP",
+      "verifyAfter": "2026-11-01",
+      "verifyBefore": "2026-12-12T17:00:00+01:00",
+      "freshness": "Recheck after any hotel reply"
     },
     {
       "category": "HOTEL_CHECKIN_LINK",
@@ -2016,9 +2045,13 @@
       "fields": [
         "onlineCheckIn.link"
       ],
-      "reason": "入住动作已知，但专属链接只存在于订单邮件或尚未收到。",
-      "nextAction": "在入住邮件到达后补入专属入口。",
-      "priority": "P0"
+      "reason": "Waiting for hotel email；专属链接只保存在本机私有存储。",
+      "nextAction": "收到邮件后在酒店卡片填入专属入口，状态会转为READY。",
+      "priority": "P0",
+      "actionWindow": "VERIFY_BEFORE_TRIP",
+      "verifyAfter": "2026-11-20",
+      "verifyBefore": "2026-12-05",
+      "freshness": "Valid until check-in is completed"
     },
     {
       "category": "HOTEL_CHECKIN_LINK",
@@ -2028,9 +2061,13 @@
       "fields": [
         "onlineCheckIn.link"
       ],
-      "reason": "入住动作已知，但专属链接只存在于订单邮件或尚未收到。",
-      "nextAction": "在入住邮件到达后补入专属入口。",
-      "priority": "P0"
+      "reason": "Waiting for hotel email；专属链接只保存在本机私有存储。",
+      "nextAction": "收到邮件后在酒店卡片填入专属入口，状态会转为READY。",
+      "priority": "P0",
+      "actionWindow": "VERIFY_BEFORE_TRIP",
+      "verifyAfter": "2026-11-20",
+      "verifyBefore": "2026-12-09",
+      "freshness": "Valid until check-in is completed"
     },
     {
       "category": "HOTEL_CHECKIN_LINK",
@@ -2040,9 +2077,13 @@
       "fields": [
         "onlineCheckIn.link"
       ],
-      "reason": "入住动作已知，但专属链接只存在于订单邮件或尚未收到。",
-      "nextAction": "在入住邮件到达后补入专属入口。",
-      "priority": "P0"
+      "reason": "Waiting for hotel email；专属链接只保存在本机私有存储。",
+      "nextAction": "收到邮件后在酒店卡片填入专属入口，状态会转为READY。",
+      "priority": "P0",
+      "actionWindow": "VERIFY_BEFORE_TRIP",
+      "verifyAfter": "2026-11-20",
+      "verifyBefore": "2026-12-11",
+      "freshness": "Valid until check-in is completed"
     },
     {
       "category": "ROUTE_TRANSIT",
@@ -2053,9 +2094,13 @@
         "transitMin",
         "transitRoute"
       ],
-      "reason": "步行和出租车路网已核，但实时公共交通班次尚未核验。",
-      "nextAction": "出发前或当天用地图按酒店出发时间刷新。",
-      "priority": "P0"
+      "reason": "步行和出租车路网已核，但实时公共交通班次需临近出发刷新。",
+      "nextAction": "Day -1及当天用地图按酒店出发时间刷新。",
+      "priority": "P0",
+      "actionWindow": "VERIFY_ON_THE_DAY",
+      "verifyAfter": "2026-12-03",
+      "verifyBefore": "2026-12-04",
+      "freshness": "24 hours"
     },
     {
       "category": "ROUTE_TRANSIT",
@@ -2066,9 +2111,13 @@
         "transitMin",
         "transitRoute"
       ],
-      "reason": "步行和出租车路网已核，但实时公共交通班次尚未核验。",
-      "nextAction": "出发前或当天用地图按酒店出发时间刷新。",
-      "priority": "P0"
+      "reason": "步行和出租车路网已核，但实时公共交通班次需临近出发刷新。",
+      "nextAction": "Day -1及当天用地图按酒店出发时间刷新。",
+      "priority": "P0",
+      "actionWindow": "VERIFY_ON_THE_DAY",
+      "verifyAfter": "2026-12-04",
+      "verifyBefore": "2026-12-05",
+      "freshness": "24 hours"
     },
     {
       "category": "ROUTE_TRANSIT",
@@ -2079,9 +2128,13 @@
         "transitMin",
         "transitRoute"
       ],
-      "reason": "步行和出租车路网已核，但实时公共交通班次尚未核验。",
-      "nextAction": "出发前或当天用地图按酒店出发时间刷新。",
-      "priority": "P0"
+      "reason": "步行和出租车路网已核，但实时公共交通班次需临近出发刷新。",
+      "nextAction": "Day -1及当天用地图按酒店出发时间刷新。",
+      "priority": "P0",
+      "actionWindow": "VERIFY_ON_THE_DAY",
+      "verifyAfter": "2026-12-05",
+      "verifyBefore": "2026-12-06",
+      "freshness": "24 hours"
     },
     {
       "category": "ROUTE_TRANSIT",
@@ -2092,9 +2145,13 @@
         "transitMin",
         "transitRoute"
       ],
-      "reason": "步行和出租车路网已核，但实时公共交通班次尚未核验。",
-      "nextAction": "出发前或当天用地图按酒店出发时间刷新。",
-      "priority": "P0"
+      "reason": "步行和出租车路网已核，但实时公共交通班次需临近出发刷新。",
+      "nextAction": "Day -1及当天用地图按酒店出发时间刷新。",
+      "priority": "P0",
+      "actionWindow": "VERIFY_ON_THE_DAY",
+      "verifyAfter": "2026-12-06",
+      "verifyBefore": "2026-12-07",
+      "freshness": "24 hours"
     },
     {
       "category": "ROUTE_TRANSIT",
@@ -2105,9 +2162,13 @@
         "transitMin",
         "transitRoute"
       ],
-      "reason": "步行和出租车路网已核，但实时公共交通班次尚未核验。",
-      "nextAction": "出发前或当天用地图按酒店出发时间刷新。",
-      "priority": "P0"
+      "reason": "步行和出租车路网已核，但实时公共交通班次需临近出发刷新。",
+      "nextAction": "Day -1及当天用地图按酒店出发时间刷新。",
+      "priority": "P0",
+      "actionWindow": "VERIFY_ON_THE_DAY",
+      "verifyAfter": "2026-12-07",
+      "verifyBefore": "2026-12-08",
+      "freshness": "24 hours"
     },
     {
       "category": "ROUTE_TRANSIT",
@@ -2118,9 +2179,13 @@
         "transitMin",
         "transitRoute"
       ],
-      "reason": "步行和出租车路网已核，但实时公共交通班次尚未核验。",
-      "nextAction": "出发前或当天用地图按酒店出发时间刷新。",
-      "priority": "P0"
+      "reason": "步行和出租车路网已核，但实时公共交通班次需临近出发刷新。",
+      "nextAction": "Day -1及当天用地图按酒店出发时间刷新。",
+      "priority": "P0",
+      "actionWindow": "VERIFY_ON_THE_DAY",
+      "verifyAfter": "2026-12-08",
+      "verifyBefore": "2026-12-09",
+      "freshness": "24 hours"
     },
     {
       "category": "ROUTE_TRANSIT",
@@ -2131,9 +2196,13 @@
         "transitMin",
         "transitRoute"
       ],
-      "reason": "步行和出租车路网已核，但实时公共交通班次尚未核验。",
-      "nextAction": "出发前或当天用地图按酒店出发时间刷新。",
-      "priority": "P0"
+      "reason": "步行和出租车路网已核，但实时公共交通班次需临近出发刷新。",
+      "nextAction": "Day -1及当天用地图按酒店出发时间刷新。",
+      "priority": "P0",
+      "actionWindow": "VERIFY_ON_THE_DAY",
+      "verifyAfter": "2026-12-09",
+      "verifyBefore": "2026-12-10",
+      "freshness": "24 hours"
     },
     {
       "category": "ROUTE_TRANSIT",
@@ -2144,9 +2213,13 @@
         "transitMin",
         "transitRoute"
       ],
-      "reason": "步行和出租车路网已核，但实时公共交通班次尚未核验。",
-      "nextAction": "出发前或当天用地图按酒店出发时间刷新。",
-      "priority": "P0"
+      "reason": "步行和出租车路网已核，但实时公共交通班次需临近出发刷新。",
+      "nextAction": "Day -1及当天用地图按酒店出发时间刷新。",
+      "priority": "P0",
+      "actionWindow": "VERIFY_ON_THE_DAY",
+      "verifyAfter": "2026-12-10",
+      "verifyBefore": "2026-12-11",
+      "freshness": "24 hours"
     },
     {
       "category": "ROUTE_TRANSIT",
@@ -2157,9 +2230,13 @@
         "transitMin",
         "transitRoute"
       ],
-      "reason": "步行和出租车路网已核，但实时公共交通班次尚未核验。",
-      "nextAction": "出发前或当天用地图按酒店出发时间刷新。",
-      "priority": "P0"
+      "reason": "步行和出租车路网已核，但实时公共交通班次需临近出发刷新。",
+      "nextAction": "Day -1及当天用地图按酒店出发时间刷新。",
+      "priority": "P0",
+      "actionWindow": "VERIFY_ON_THE_DAY",
+      "verifyAfter": "2026-12-11",
+      "verifyBefore": "2026-12-12",
+      "freshness": "24 hours"
     },
     {
       "category": "ROUTE_TRANSIT",
@@ -2170,9 +2247,13 @@
         "transitMin",
         "transitRoute"
       ],
-      "reason": "步行和出租车路网已核，但实时公共交通班次尚未核验。",
-      "nextAction": "出发前或当天用地图按酒店出发时间刷新。",
-      "priority": "P0"
+      "reason": "步行和出租车路网已核，但实时公共交通班次需临近出发刷新。",
+      "nextAction": "Day -1及当天用地图按酒店出发时间刷新。",
+      "priority": "P0",
+      "actionWindow": "VERIFY_ON_THE_DAY",
+      "verifyAfter": "2026-12-12",
+      "verifyBefore": "2026-12-13",
+      "freshness": "24 hours"
     },
     {
       "category": "ROUTE_TRANSIT",
@@ -2183,9 +2264,13 @@
         "transitMin",
         "transitRoute"
       ],
-      "reason": "步行和出租车路网已核，但实时公共交通班次尚未核验。",
-      "nextAction": "出发前或当天用地图按酒店出发时间刷新。",
-      "priority": "P0"
+      "reason": "步行和出租车路网已核，但实时公共交通班次需临近出发刷新。",
+      "nextAction": "Day -1及当天用地图按酒店出发时间刷新。",
+      "priority": "P0",
+      "actionWindow": "VERIFY_ON_THE_DAY",
+      "verifyAfter": "2026-12-13",
+      "verifyBefore": "2026-12-14",
+      "freshness": "24 hours"
     },
     {
       "category": "ROUTE_TRANSIT",
@@ -2196,9 +2281,13 @@
         "transitMin",
         "transitRoute"
       ],
-      "reason": "步行和出租车路网已核，但实时公共交通班次尚未核验。",
-      "nextAction": "出发前或当天用地图按酒店出发时间刷新。",
-      "priority": "P0"
+      "reason": "步行和出租车路网已核，但实时公共交通班次需临近出发刷新。",
+      "nextAction": "Day -1及当天用地图按酒店出发时间刷新。",
+      "priority": "P0",
+      "actionWindow": "VERIFY_ON_THE_DAY",
+      "verifyAfter": "2026-12-14",
+      "verifyBefore": "2026-12-15",
+      "freshness": "24 hours"
     },
     {
       "category": "ROUTE_TRANSIT",
@@ -2209,9 +2298,13 @@
         "transitMin",
         "transitRoute"
       ],
-      "reason": "步行和出租车路网已核，但实时公共交通班次尚未核验。",
-      "nextAction": "出发前或当天用地图按酒店出发时间刷新。",
-      "priority": "P0"
+      "reason": "步行和出租车路网已核，但实时公共交通班次需临近出发刷新。",
+      "nextAction": "Day -1及当天用地图按酒店出发时间刷新。",
+      "priority": "P0",
+      "actionWindow": "VERIFY_ON_THE_DAY",
+      "verifyAfter": "2026-12-15",
+      "verifyBefore": "2026-12-16",
+      "freshness": "24 hours"
     },
     {
       "category": "TRANSPORT_LIVE_DATA",
@@ -2225,8 +2318,12 @@
         "改签条件"
       ],
       "reason": "官方路线存在，但目标日期具体产品尚未形成可出票事实。",
-      "nextAction": "在官方出票页按门到门时间刷新并锁定。",
-      "priority": "P0"
+      "nextAction": "出票窗口开启后在官方页刷新并锁定。",
+      "priority": "P0",
+      "actionWindow": "VERIFY_BEFORE_TRIP",
+      "verifyAfter": "2026-09-30",
+      "verifyBefore": "2026-12-01",
+      "freshness": "Refresh after schedule or fare changes"
     },
     {
       "category": "TRANSPORT_LIVE_DATA",
@@ -2240,8 +2337,12 @@
         "改签条件"
       ],
       "reason": "官方路线存在，但目标日期具体产品尚未形成可出票事实。",
-      "nextAction": "在官方出票页按门到门时间刷新并锁定。",
-      "priority": "P0"
+      "nextAction": "出票窗口开启后在官方页刷新并锁定。",
+      "priority": "P0",
+      "actionWindow": "VERIFY_BEFORE_TRIP",
+      "verifyAfter": "2026-09-30",
+      "verifyBefore": "2026-12-05",
+      "freshness": "Refresh after schedule or fare changes"
     },
     {
       "category": "TRANSPORT_LIVE_DATA",
@@ -2255,8 +2356,12 @@
         "改签条件"
       ],
       "reason": "官方路线存在，但目标日期具体产品尚未形成可出票事实。",
-      "nextAction": "在官方出票页按门到门时间刷新并锁定。",
-      "priority": "P0"
+      "nextAction": "出票窗口开启后在官方页刷新并锁定。",
+      "priority": "P0",
+      "actionWindow": "VERIFY_BEFORE_TRIP",
+      "verifyAfter": "2026-09-30",
+      "verifyBefore": "2026-12-07",
+      "freshness": "Refresh after schedule or fare changes"
     },
     {
       "category": "TRANSPORT_LIVE_DATA",
@@ -2270,8 +2375,12 @@
         "改签条件"
       ],
       "reason": "官方路线存在，但目标日期具体产品尚未形成可出票事实。",
-      "nextAction": "在官方出票页按门到门时间刷新并锁定。",
-      "priority": "P0"
+      "nextAction": "出票窗口开启后在官方页刷新并锁定。",
+      "priority": "P0",
+      "actionWindow": "VERIFY_BEFORE_TRIP",
+      "verifyAfter": "2026-09-30",
+      "verifyBefore": "2026-12-09",
+      "freshness": "Refresh after schedule or fare changes"
     },
     {
       "category": "TRANSPORT_LIVE_DATA",
@@ -2285,8 +2394,12 @@
         "改签条件"
       ],
       "reason": "官方路线存在，但目标日期具体产品尚未形成可出票事实。",
-      "nextAction": "在官方出票页按门到门时间刷新并锁定。",
-      "priority": "P0"
+      "nextAction": "出票窗口开启后在官方页刷新并锁定。",
+      "priority": "P0",
+      "actionWindow": "VERIFY_BEFORE_TRIP",
+      "verifyAfter": "2026-09-30",
+      "verifyBefore": "2026-12-11",
+      "freshness": "Refresh after schedule or fare changes"
     },
     {
       "category": "TRANSPORT_LIVE_DATA",
@@ -2300,8 +2413,12 @@
         "改签条件"
       ],
       "reason": "官方路线存在，但目标日期具体产品尚未形成可出票事实。",
-      "nextAction": "在官方出票页按门到门时间刷新并锁定。",
-      "priority": "P0"
+      "nextAction": "出票窗口开启后在官方页刷新并锁定。",
+      "priority": "P0",
+      "actionWindow": "VERIFY_BEFORE_TRIP",
+      "verifyAfter": "2026-09-30",
+      "verifyBefore": "2026-12-13",
+      "freshness": "Refresh after schedule or fare changes"
     },
     {
       "category": "TRANSPORT_LIVE_DATA",
@@ -2315,8 +2432,12 @@
         "改签条件"
       ],
       "reason": "官方路线存在，但目标日期具体产品尚未形成可出票事实。",
-      "nextAction": "在官方出票页按门到门时间刷新并锁定。",
-      "priority": "P0"
+      "nextAction": "出票窗口开启后在官方页刷新并锁定。",
+      "priority": "P0",
+      "actionWindow": "VERIFY_BEFORE_TRIP",
+      "verifyAfter": "2026-09-30",
+      "verifyBefore": "2026-12-17",
+      "freshness": "Refresh after schedule or fare changes"
     },
     {
       "category": "GYM_REALITY",

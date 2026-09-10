@@ -10,6 +10,7 @@ const placeImages = read('data/images.json');
 const dayPlans = read('data/day-plans.json').days;
 const places = read('data/places.json');
 const days = read('data/days.json');
+const metadata = read('data/media-metadata.json');
 
 const normalizedRole = (image) => String(image.role || '').toLowerCase();
 const gallery = (item, legacy = []) => item.images ?? item.imageSources ?? legacy.filter(Boolean).map((file) => ({ file }));
@@ -68,7 +69,9 @@ const food = restaurants.filter((item) => selectedFoodIds.has(item.id)).map((ite
   const row = base(item.id, item.name, 'food', gallery(item, [item.dishImage, item.restaurantImage, item.environmentImage]));
   const images = gallery(item, [item.dishImage, item.restaurantImage, item.environmentImage]);
   const dishCount = validFiles(images).filter((image) => normalizedRole(image) === 'dish').length;
-  return { ...row, dishCount, galleryReady: row.imageCount >= 4 && dishCount >= 2 && (row.hasEntrance || row.hasInterior) && row.coverRole === 'dish' };
+  const recommendedDishes = String(item.dishes || '').split(/[、，,；;]/).map((dish) => dish.trim()).filter(Boolean);
+  const matchedDishes = [...new Set(images.flatMap((image) => image.matchesDishes || []))];
+  return { ...row, dishCount, recommendedDishes, matchedDishes, dishMatches: recommendedDishes.filter((dish) => matchedDishes.includes(dish)).length, galleryReady: row.imageCount >= 4 && dishCount >= 2 && (row.hasEntrance || row.hasInterior) && row.coverRole === 'dish' };
 });
 const gym = gyms.filter((item) => topGymIds.has(item.id)).map((item) => {
   const row = base(item.id, item.name, 'gym', gallery(item, [item.image]));
@@ -100,6 +103,15 @@ const summary = Object.fromEntries(
   }]),
 );
 const all = Object.values(categories).flat();
+const recommendedDishCount = food.reduce((sum, row) => sum + row.recommendedDishes.length, 0);
+const matchedDishCount = food.reduce((sum, row) => sum + row.dishMatches, 0);
+const thirdParty = new Map([['cntraveler.com', 'Condé Nast Traveler'], ['happycow.net', 'HappyCow'], ['restaurantguru.com', 'Restaurant Guru'], ['restaurantguru.it', 'Restaurant Guru'], ['unsplash.com', 'Unsplash'], ['yelp.com', 'Yelp'], ['trip.com', 'Trip.com'], ['thefork.com', 'TheFork'], ['thefork.at', 'TheFork'], ['thefork.ch', 'TheFork'], ['wolt.com', 'Wolt Business Menu'], ['tripadvisor.com', 'Tripadvisor'], ['sluurpy.it', 'Sluurpy'], ['firenzemadeintuscany.com', 'Firenze Made in Tuscany'], ['masalledesport.com', 'Ma Salle de Sport'], ['palestre.fitness', 'Palestre.Fitness venue listing'], ['icioncuisine.com', 'Ici On Cuisine venue listing']]);
+const host = (value) => { try { return new URL(value).hostname.replace(/^www\./, ''); } catch { return ''; } };
+const expectedSource = (sourcePage) => { const value = host(sourcePage); for (const [domain, label] of thirdParty) if (value === domain || value.endsWith(`.${domain}`)) return label; return null; };
+const accurateRows = metadata.filter((image) => !expectedSource(image.sourcePage) || image.source === expectedSource(image.sourcePage));
+const trustedRows = metadata.filter((image) => /Official|Wikimedia Commons|Local Visual Source|Condé Nast Traveler|Lonely Planet|Vogue France|The Infatuation/i.test(image.source));
+const componentSource = readFileSync(join(root, 'components/media-gallery.tsx'), 'utf8');
+const modalAccessible = componentSource.includes('.showModal()') && componentSource.includes('onCancel=') && componentSource.includes('triggerRef.current?.focus') && !/\sopen\s*(?:\n|>)/.test(componentSource);
 const referenced = new Set(all.flatMap((row) => {
   if (row.type === 'food') return gallery(restaurants.find((item) => item.id === row.id) || {}, []).map((image) => image.file);
   if (row.type === 'gym') return gallery(gyms.find((item) => item.id === row.id) || {}, []).map((image) => image.file);
@@ -115,6 +127,11 @@ const report = {
   criteria: { food: '>=4 images, >=2 dishes, environment/entrance, dish cover', gym: '>=3 images with equipment', hotel: '>=5 images with entrance/room/bathroom', place: '>=3 images' },
   summary,
   GalleryReadyCoverage: { ready: all.filter((row) => row.galleryReady).length, total: all.length, percentage: Math.round(all.filter((row) => row.galleryReady).length / all.length * 100) },
+  dishMatchCoverage: { matched: matchedDishCount, total: recommendedDishCount, percentage: recommendedDishCount ? Math.round(matchedDishCount / recommendedDishCount * 100) : 100 },
+  accurateSourceCoverage: { accurate: accurateRows.length, total: metadata.length, percentage: metadata.length ? Math.round(accurateRows.length / metadata.length * 100) : 100 },
+  officialOrTrustedSourceCoverage: { trusted: trustedRows.length, total: metadata.length, percentage: metadata.length ? Math.round(trustedRows.length / metadata.length * 100) : 100 },
+  galleryModalAccessible: modalAccessible,
+  offlineCoreCoverage: existsSync(join(root, 'audit', 'offline-core.json')) ? read('audit/offline-core.json') : { passed: false, reason: 'Generate offline core after gallery audit' },
   referencedGalleryBytes: totalBytes,
   entities: categories,
 };

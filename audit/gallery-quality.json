@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-10T03:48:06.204Z",
+  "generatedAt": "2026-09-10T06:07:50.202Z",
   "criteria": {
     "food": ">=4 images, >=2 dishes, environment/entrance, dish cover",
     "gym": ">=3 images with equipment",
@@ -55,6 +55,44 @@
     "total": 80,
     "percentage": 85
   },
+  "dishMatchCoverage": {
+    "matched": 38,
+    "total": 70,
+    "percentage": 54
+  },
+  "accurateSourceCoverage": {
+    "accurate": 286,
+    "total": 286,
+    "percentage": 100
+  },
+  "officialOrTrustedSourceCoverage": {
+    "trusted": 218,
+    "total": 286,
+    "percentage": 76
+  },
+  "galleryModalAccessible": true,
+  "offlineCoreCoverage": {
+    "generatedAt": "2026-09-10T06:07:49.961Z",
+    "version": "e127bc6ebd7b",
+    "assetCount": 193,
+    "mediaAssetCount": 186,
+    "totalBytes": 20322804,
+    "expected": {
+      "dayHero": 18,
+      "hotels": 6,
+      "places": 34,
+      "food": 34,
+      "gym": 6
+    },
+    "coverage": {
+      "dayHero": 18,
+      "hotels": 6,
+      "places": 34,
+      "food": 34,
+      "gym": 6
+    },
+    "passed": true
+  },
   "referencedGalleryBytes": 29705966,
   "entities": {
     "food": [
@@ -74,6 +112,14 @@
         "hasSignatureDish": true,
         "coverRole": "dish",
         "dishCount": 2,
+        "recommendedDishes": [
+          "Carbonara",
+          "Coda alla vaccinara"
+        ],
+        "matchedDishes": [
+          "Carbonara"
+        ],
+        "dishMatches": 1,
         "galleryReady": true
       },
       {
@@ -92,6 +138,16 @@
         "hasSignatureDish": true,
         "coverRole": "dish",
         "dishCount": 2,
+        "recommendedDishes": [
+          "Carbonara",
+          "Cacio e pepe",
+          "熟食拼盘"
+        ],
+        "matchedDishes": [
+          "Carbonara",
+          "Cacio e pepe"
+        ],
+        "dishMatches": 2,
         "galleryReady": true
       },
       {
@@ -109,6 +165,13 @@
         "hasSignatureDish": true,
         "coverRole": "dish",
         "dishCount": 3,
+        "recommendedDishes": [
+          "Pollo alla cacciatora Trapizzino"
+        ],
+        "matchedDishes": [
+          "Pollo alla cacciatora Trapizzino"
+        ],
+        "dishMatches": 1,
         "galleryReady": true
       },
       {
@@ -128,6 +191,14 @@
         "hasSignatureDish": true,
         "coverRole": "dish",
         "dishCount": 1,
+        "recommendedDishes": [
+          "Gran Caffè",
+          "Espresso"
+        ],
+        "matchedDishes": [
+          "Gran Caffè"
+        ],
+        "dishMatches": 1,
         "galleryReady": false
       },
       {
@@ -147,6 +218,15 @@
         "hasSignatureDish": true,
         "coverRole": "dish",
         "dishCount": 2,
+        "recommendedDishes": [
+          "Ribollita",
+          "炖肉",
+          "当日菜单"
+        ],
+        "matchedDishes": [
+          "炖肉"
+        ],
+        "dishMatches": 1,
         "galleryReady": true
       },
       {
@@ -164,6 +244,14 @@
         "hasSignatureDish": true,
         "coverRole": "dish",
         "dishCount": 3,
+        "recommendedDishes": [
+          "Flat white",
+          "意式早餐"
+        ],
+        "matchedDishes": [
+          "Flat white"
+        ],
+        "dishMatches": 1,
         "galleryReady": true
       },
       {
@@ -181,6 +269,17 @@
         "hasSignatureDish": true,
         "coverRole": "dish",
         "dishCount": 3,
+        "recommendedDishes": [
+          "Cicchetti",
+          "海鲜",
+          "鲜意面"
+        ],
+        "matchedDishes": [
+          "海鲜",
+          "鲜意面",
+          "Cicchetti"
+        ],
+        "dishMatches": 3,
         "galleryReady": true
       },
       {
@@ -198,6 +297,12 @@
         "hasSignatureDish": true,
         "coverRole": "dish",
         "dishCount": 1,
+        "recommendedDishes": [
+          "Espresso",
+          "热巧克力"
+        ],
+        "matchedDishes": [],
+        "dishMatches": 0,
         "galleryReady": false
       },
       {
@@ -215,6 +320,12 @@
         "hasSignatureDish": true,
         "coverRole": "dish",
         "dishCount": 2,
+        "recommendedDishes": [
+          "开放式三明治",
+          "Tafelspitz"
+        ],
+        "matchedDishes": [],
+        "dishMatches": 0,
         "galleryReady": true
       },
       {
@@ -233,6 +344,13 @@
         "hasSignatureDish": true,
         "coverRole": "dish",
         "dishCount": 1,
+        "recommendedDishes": [
+          "Svíčková",
+          "炸奶酪",
+          "皮尔森啤酒"
+        ],
+        "matchedDishes": [],
+        "dishMatches": 0,
         "galleryReady": false
       },
       {
@@ -250,6 +368,14 @@
         "hasSignatureDish": true,
         "coverRole": "dish",
         "dishCount": 1,
+        "recommendedDishes": [
+          "捷克牛肉",
+          "塔塔牛肉"
+        ],
+        "matchedDishes": [
+          "捷克牛肉"
+        ],
+        "dishMatches": 1,
         "galleryReady": false
       },
       {
@@ -268,6 +394,14 @@
         "hasSignatureDish": true,
         "coverRole": "dish",
         "dishCount": 2,
+        "recommendedDishes": [
+          "开放式三明治",
+          "发酵与烘焙"
+        ],
+        "matchedDishes": [
+          "发酵与烘焙"
+        ],
+        "dishMatches": 1,
         "galleryReady": true
       },
       {
@@ -284,6 +418,15 @@
         "hasSignatureDish": true,
         "coverRole": "dish",
         "dishCount": 3,
+        "recommendedDishes": [
+          "荞麦可丽饼",
+          "苹果酒"
+        ],
+        "matchedDishes": [
+          "荞麦可丽饼",
+          "苹果酒"
+        ],
+        "dishMatches": 2,
         "galleryReady": false
       },
       {
@@ -302,6 +445,14 @@
         "hasSignatureDish": true,
         "coverRole": "dish",
         "dishCount": 1,
+        "recommendedDishes": [
+          "Café crème",
+          "Croque monsieur"
+        ],
+        "matchedDishes": [
+          "Café crème"
+        ],
+        "dishMatches": 1,
         "galleryReady": false
       },
       {
@@ -320,6 +471,14 @@
         "hasSignatureDish": true,
         "coverRole": "dish",
         "dishCount": 2,
+        "recommendedDishes": [
+          "Pizza bianca",
+          "烘焙"
+        ],
+        "matchedDishes": [
+          "烘焙"
+        ],
+        "dishMatches": 1,
         "galleryReady": true
       },
       {
@@ -337,6 +496,14 @@
         "hasSignatureDish": true,
         "coverRole": "dish",
         "dishCount": 3,
+        "recommendedDishes": [
+          "Gelato",
+          "咖啡"
+        ],
+        "matchedDishes": [
+          "Gelato"
+        ],
+        "dishMatches": 1,
         "galleryReady": true
       },
       {
@@ -355,6 +522,14 @@
         "hasSignatureDish": true,
         "coverRole": "dish",
         "dishCount": 2,
+        "recommendedDishes": [
+          "Tuscan pasta",
+          "炖肉"
+        ],
+        "matchedDishes": [
+          "Tuscan pasta"
+        ],
+        "dishMatches": 1,
         "galleryReady": true
       },
       {
@@ -373,6 +548,13 @@
         "hasSignatureDish": true,
         "coverRole": "dish",
         "dishCount": 2,
+        "recommendedDishes": [
+          "现烤披萨"
+        ],
+        "matchedDishes": [
+          "现烤披萨"
+        ],
+        "dishMatches": 1,
         "galleryReady": true
       },
       {
@@ -389,6 +571,12 @@
         "hasSignatureDish": true,
         "coverRole": "dish",
         "dishCount": 4,
+        "recommendedDishes": [
+          "热巧克力",
+          "甜点"
+        ],
+        "matchedDishes": [],
+        "dishMatches": 0,
         "galleryReady": false
       },
       {
@@ -405,6 +593,14 @@
         "hasSignatureDish": true,
         "coverRole": "dish",
         "dishCount": 1,
+        "recommendedDishes": [
+          "Veneto seasonal dishes",
+          "精酿"
+        ],
+        "matchedDishes": [
+          "Veneto seasonal dishes"
+        ],
+        "dishMatches": 1,
         "galleryReady": false
       },
       {
@@ -422,6 +618,13 @@
         "hasSignatureDish": true,
         "coverRole": "dish",
         "dishCount": 3,
+        "recommendedDishes": [
+          "地中海与中东菜"
+        ],
+        "matchedDishes": [
+          "地中海与中东菜"
+        ],
+        "dishMatches": 1,
         "galleryReady": true
       },
       {
@@ -440,6 +643,14 @@
         "hasSignatureDish": true,
         "coverRole": "dish",
         "dishCount": 2,
+        "recommendedDishes": [
+          "Espresso",
+          "烘焙咖啡"
+        ],
+        "matchedDishes": [
+          "Espresso"
+        ],
+        "dishMatches": 1,
         "galleryReady": true
       },
       {
@@ -459,6 +670,15 @@
         "hasSignatureDish": true,
         "coverRole": "dish",
         "dishCount": 2,
+        "recommendedDishes": [
+          "Viennese coffee",
+          "蛋糕"
+        ],
+        "matchedDishes": [
+          "Viennese coffee",
+          "蛋糕"
+        ],
+        "dishMatches": 2,
         "galleryReady": true
       },
       {
@@ -476,6 +696,14 @@
         "hasSignatureDish": true,
         "coverRole": "dish",
         "dishCount": 3,
+        "recommendedDishes": [
+          "Sachertorte",
+          "糕点"
+        ],
+        "matchedDishes": [
+          "糕点"
+        ],
+        "dishMatches": 1,
         "galleryReady": true
       },
       {
@@ -494,6 +722,13 @@
         "hasSignatureDish": true,
         "coverRole": "dish",
         "dishCount": 3,
+        "recommendedDishes": [
+          "Tafelspitz"
+        ],
+        "matchedDishes": [
+          "Tafelspitz"
+        ],
+        "dishMatches": 1,
         "galleryReady": true
       },
       {
@@ -511,6 +746,14 @@
         "hasSignatureDish": true,
         "coverRole": "dish",
         "dishCount": 2,
+        "recommendedDishes": [
+          "捷克早餐",
+          "糕点"
+        ],
+        "matchedDishes": [
+          "捷克早餐"
+        ],
+        "dishMatches": 1,
         "galleryReady": true
       },
       {
@@ -528,6 +771,15 @@
         "hasSignatureDish": true,
         "coverRole": "dish",
         "dishCount": 2,
+        "recommendedDishes": [
+          "热巧克力",
+          "蛋糕"
+        ],
+        "matchedDishes": [
+          "热巧克力",
+          "蛋糕"
+        ],
+        "dishMatches": 2,
         "galleryReady": true
       },
       {
@@ -545,6 +797,15 @@
         "hasSignatureDish": true,
         "coverRole": "dish",
         "dishCount": 4,
+        "recommendedDishes": [
+          "Mont-Blanc",
+          "热巧克力"
+        ],
+        "matchedDishes": [
+          "Mont-Blanc",
+          "热巧克力"
+        ],
+        "dishMatches": 2,
         "galleryReady": true
       },
       {
@@ -563,6 +824,15 @@
         "hasSignatureDish": true,
         "coverRole": "dish",
         "dishCount": 2,
+        "recommendedDishes": [
+          "Escargot pastry",
+          "面包"
+        ],
+        "matchedDishes": [
+          "面包",
+          "Escargot pastry"
+        ],
+        "dishMatches": 2,
         "galleryReady": true
       },
       {
@@ -580,6 +850,15 @@
         "hasSignatureDish": true,
         "coverRole": "dish",
         "dishCount": 4,
+        "recommendedDishes": [
+          "Rum baba",
+          "法式糕点"
+        ],
+        "matchedDishes": [
+          "法式糕点",
+          "Rum baba"
+        ],
+        "dishMatches": 2,
         "galleryReady": true
       },
       {
@@ -597,6 +876,14 @@
         "hasSignatureDish": true,
         "coverRole": "dish",
         "dishCount": 2,
+        "recommendedDishes": [
+          "市场海鲜",
+          "当日菜"
+        ],
+        "matchedDishes": [
+          "市场海鲜"
+        ],
+        "dishMatches": 1,
         "galleryReady": true
       },
       {
@@ -614,6 +901,15 @@
         "hasSignatureDish": true,
         "coverRole": "dish",
         "dishCount": 1,
+        "recommendedDishes": [
+          "海鲜",
+          "威尼斯地方菜",
+          "具体当日菜单待确认"
+        ],
+        "matchedDishes": [
+          "海鲜"
+        ],
+        "dishMatches": 1,
         "galleryReady": false
       },
       {
@@ -631,6 +927,14 @@
         "hasSignatureDish": true,
         "coverRole": "dish",
         "dishCount": 3,
+        "recommendedDishes": [
+          "手工拉面",
+          "香料肉类与中亚菜"
+        ],
+        "matchedDishes": [
+          "手工拉面"
+        ],
+        "dishMatches": 1,
         "galleryReady": true
       },
       {
@@ -647,6 +951,13 @@
         "hasSignatureDish": false,
         "coverRole": "interior",
         "dishCount": 0,
+        "recommendedDishes": [
+          "法式",
+          "非洲与亚洲融合菜",
+          "当日菜式待确认"
+        ],
+        "matchedDishes": [],
+        "dishMatches": 0,
         "galleryReady": false
       }
     ],

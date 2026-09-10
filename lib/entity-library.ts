@@ -157,6 +157,7 @@ const foodEntities: Entity[] = (
       isCover: Boolean(row.isCover),
       priority: Number(row.priority ?? index + 1),
       status: 'verified',
+      matchesDishes: Array.isArray(row.matchesDishes) ? row.matchesDishes.map((dish) => textValue(dish)) : undefined,
       }, { entityId: textValue(item.id), title: textValue(item.name), source: textValue(item.source), lastVerified: textValue(item.lastVerified) });
     }));
   return {

@@ -11,17 +11,26 @@ const [images, hotelData, restaurants, gyms, shopping] = await Promise.all([
   read('shopping.json'),
 ]);
 const rows = [];
+const recordedSourceLabel = (value) => {
+  try {
+    const host = new URL(value).hostname;
+    if (host.includes('masalledesport.com')) return 'Ma Salle de Sport';
+    if (host.includes('palestre.fitness')) return 'Palestre.Fitness venue listing';
+  } catch { /* retain neutral label */ }
+  return 'Source recorded on entity';
+};
 const add = (row) => {
   if (!row.file) return;
   rows.push({
     file: row.file,
     caption: row.caption || '',
-    source: row.source || 'Source recorded on entity',
+    source: row.source || row.credit || 'Source recorded on entity',
     sourcePage: row.sourcePage || row.source || '',
     lastVerified: row.lastVerified || row.verifiedAt || '2026-09-10',
     role: row.role || 'Entity',
     entityId: row.entityId || row.placeId || '',
     ...(row.originalUrl ? { originalUrl: row.originalUrl } : {}),
+    ...(row.matchesDishes ? { matchesDishes: row.matchesDishes } : {}),
   });
 };
 
@@ -35,7 +44,7 @@ for (const gym of gyms) {
   const gallery = gym.images || (gym.image ? [{
     file: gym.image,
     caption: `${gym.name} official fitness visual`,
-    source: 'Official gym website',
+    source: recordedSourceLabel(gym.source),
     sourcePage: gym.source,
     lastVerified: gym.lastVerified || gym.verifiedAt || '2026-09-10',
     role: 'equipment',

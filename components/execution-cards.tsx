@@ -305,6 +305,7 @@ export function HotelExecutionCard({
         >
           <figure>
             <Image
+              unoptimized
               src={cover.file}
               alt={cover.title}
               fill

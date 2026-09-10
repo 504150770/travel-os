@@ -13,10 +13,11 @@ const hotelBookings = read('hotel-bookings.json').items;
 const transport = read('transport-recommendations.json').segments;
 const shopping = read('shopping.json');
 const dayRoutes = read('day-routes.json');
+const days = read('days.json');
 const cities = ['罗马','佛罗伦萨','威尼斯','维也纳','布拉格','巴黎'];
 const imageIds = new Set(images.map((image) => image.placeId).filter(Boolean));
 const rows = [];
-const add = (category, id, name, city, fields, reason, nextAction, priority = 'P1') => rows.push({ category, id, name, city, fields, reason, nextAction, priority });
+const add = (category, id, name, city, fields, reason, nextAction, priority = 'P1', timing = {}) => rows.push({ category, id, name, city, fields, reason, nextAction, priority, ...timing });
 
 for (const city of cities) {
   const count = restaurants.filter((item) => item.city === city).length;
@@ -39,20 +40,25 @@ for (const stay of hotelBookings) {
   if (stay.execution.requests.quietRoom.includes('UNVERIFIED')) fields.push('静音请求');
   if (stay.execution.heating === 'UNVERIFIED') fields.push('暖气');
   for (const [key, value] of Object.entries(stay.execution.noise)) if (value.includes('UNVERIFIED')) fields.push(`noise.${key}`);
-  if (fields.length) add('REAL_HOTEL_UNVERIFIED', stay.id, stay.hotelName, stay.city, fields, '入住凭证没有提供这些运营与噪音事实。', '取消线前向酒店书面确认，未回复前保持待确认。', 'P0');
+  if (fields.length) add('REAL_HOTEL_UNVERIFIED', stay.id, stay.hotelName, stay.city, fields, '入住凭证没有提供这些舒适度与运营事实，不影响当前订单有效性。', '取消线前向酒店书面确认，未回复前保持待确认。', 'P1', { actionWindow: 'VERIFY_BEFORE_TRIP', verifyAfter: '2026-11-01', verifyBefore: stay.execution.cancellation?.freeUntil || stay.checkIn, freshness: 'Recheck after any hotel reply' });
 }
 for (const stay of hotelBookings) {
   const missingRoles = (stay.images ?? []).filter((image) => !image.file).map((image) => image.role);
   if (missingRoles.length) add('HOTEL_IMAGES', `${stay.id}-images`, stay.hotelName, stay.city, missingRoles, '酒店外观、房间与卫浴图尚未完成来源和画面核验。', '只补官网或可追溯实拍；完成前显示紧凑“图片待核”。', 'P0');
-  if (['Required','Recommended'].includes(stay.execution.onlineCheckIn?.requirement) && !stay.execution.onlineCheckIn?.link) add('HOTEL_CHECKIN_LINK', `${stay.id}-checkin`, stay.hotelName, stay.city, ['onlineCheckIn.link'], '入住动作已知，但专属链接只存在于订单邮件或尚未收到。', '在入住邮件到达后补入专属入口。', 'P0');
+  if (['Required','Recommended'].includes(stay.execution.onlineCheckIn?.requirement) && !stay.execution.onlineCheckIn?.link) add('HOTEL_CHECKIN_LINK', `${stay.id}-checkin`, stay.hotelName, stay.city, ['onlineCheckIn.link'], 'Waiting for hotel email；专属链接只保存在本机私有存储。', '收到邮件后在酒店卡片填入专属入口，状态会转为READY。', 'P0', { actionWindow: 'VERIFY_BEFORE_TRIP', verifyAfter: '2026-11-20', verifyBefore: stay.checkIn, freshness: 'Valid until check-in is completed' });
 }
 for (const route of dayRoutes) {
   const pending = route.legs.filter((leg) => leg.recommendedMode === 'Transit' && leg.transitMin == null);
-  if (pending.length) add('ROUTE_TRANSIT', `day-${route.day}-transit`, `Day ${route.day} 公交段`, `Day ${route.day}`, ['transitMin','transitRoute'], '步行和出租车路网已核，但实时公共交通班次尚未核验。', '出发前或当天用地图按酒店出发时间刷新。', 'P0');
+  if (pending.length) {
+    const tripDay = days[route.day - 1]?.date;
+    const prior = tripDay ? new Date(`${tripDay}T00:00:00Z`) : null;
+    if (prior) prior.setUTCDate(prior.getUTCDate() - 1);
+    add('ROUTE_TRANSIT', `day-${route.day}-transit`, `Day ${route.day} 公交段`, `Day ${route.day}`, ['transitMin','transitRoute'], '步行和出租车路网已核，但实时公共交通班次需临近出发刷新。', 'Day -1及当天用地图按酒店出发时间刷新。', 'P0', { actionWindow: 'VERIFY_ON_THE_DAY', verifyAfter: prior?.toISOString().slice(0, 10) || null, verifyBefore: tripDay || null, freshness: '24 hours' });
+  }
 }
 for (const segment of transport) {
   const pending = segment.candidates.filter((candidate) => candidate.priceCny == null || candidate.departure == null || candidate.baggage23kg == null);
-  if (pending.length) add('TRANSPORT_LIVE_DATA', segment.id, segment.route, `Day ${segment.day}`, ['实时班次','总价','23kg行李','改签条件'], '官方路线存在，但目标日期具体产品尚未形成可出票事实。', '在官方出票页按门到门时间刷新并锁定。', 'P0');
+  if (pending.length) add('TRANSPORT_LIVE_DATA', segment.id, segment.route, `Day ${segment.day}`, ['实时班次','总价','23kg行李','改签条件'], '官方路线存在，但目标日期具体产品尚未形成可出票事实。', '出票窗口开启后在官方页刷新并锁定。', 'P0', { actionWindow: 'VERIFY_BEFORE_TRIP', verifyAfter: '2026-09-30', verifyBefore: days[segment.day - 1]?.date || null, freshness: 'Refresh after schedule or fare changes' });
 }
 for (const gym of gyms) {
   const fields = [];
@@ -73,10 +79,11 @@ const missingImageRows = rows.filter((row) => ['FOOD_IMAGES','PLACE_IMAGES','PIC
 const missingImages = [...new Map(missingImageRows.map((row) => [`${row.city}|${row.name}`, row])).values()];
 const summary = rows.reduce((acc, row) => { acc[row.category] = (acc[row.category] ?? 0) + 1; return acc; }, {});
 const prioritySummary = rows.reduce((acc, row) => { acc[row.priority] = (acc[row.priority] ?? 0) + 1; return acc; }, { P0: 0, P1: 0, P2: 0 });
-const report = { generatedAt: new Date().toISOString(), policy: '真实性 > 完成率；未验证字段不进入事实结论。', total: rows.length, prioritySummary, summary, items: rows };
+const actionWindowSummary = rows.filter((row) => row.priority === 'P0').reduce((acc, row) => { const key = row.actionWindow || 'ACTIONABLE_NOW'; acc[key] = (acc[key] ?? 0) + 1; return acc; }, { ACTIONABLE_NOW: 0, VERIFY_BEFORE_TRIP: 0, VERIFY_ON_THE_DAY: 0 });
+const report = { generatedAt: new Date().toISOString(), policy: '真实性 > 完成率；未验证字段不进入事实结论。', total: rows.length, prioritySummary, actionWindowSummary, summary, items: rows };
 fs.mkdirSync(path.join(root, 'audit'), { recursive: true });
 fs.writeFileSync(path.join(root, 'audit', 'unverified-data-list.json'), `${JSON.stringify(report, null, 2)}\n`);
 fs.writeFileSync(path.join(root, 'audit', 'missing-images.json'), `${JSON.stringify({ generatedAt: report.generatedAt, total: missingImages.length, items: missingImages }, null, 2)}\n`);
 const markdown = ['# UNVERIFIED DATA LIST', '', `Generated: ${report.generatedAt}`, '', '> 真实性优先。以下项目没有被当作已验证事实。', '', `P0 ${prioritySummary.P0} · P1 ${prioritySummary.P1} · P2 ${prioritySummary.P2}`, '', ...['P0','P1','P2'].flatMap((priority) => [`## ${priority} · ${prioritySummary[priority]}`, '', ...rows.filter((row) => row.priority === priority).map((row) => `- **${row.city}｜${row.name}** · ${row.category} — ${row.fields.join('、')}。${row.reason} 下一步：${row.nextAction}`), ''])].join('\n');
 fs.writeFileSync(path.join(root, 'audit', 'UNVERIFIED-DATA-LIST.md'), `${markdown}\n`);
-console.log(JSON.stringify({ unverified: rows.length, missingImages: missingImages.length, prioritySummary, summary }, null, 2));
+console.log(JSON.stringify({ unverified: rows.length, missingImages: missingImages.length, prioritySummary, actionWindowSummary, summary }, null, 2));

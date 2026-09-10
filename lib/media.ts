@@ -12,6 +12,7 @@ export type GalleryImage = {
   status?: string;
   bestTime?: string;
   composition?: string;
+  matchesDishes?: string[];
 };
 
 export type GalleryRequest = {
@@ -56,6 +57,7 @@ export function normalizeGalleryImage(
     status: image.status,
     bestTime: image.bestTime,
     composition: image.composition,
+    matchesDishes: image.matchesDishes,
   };
 }
 

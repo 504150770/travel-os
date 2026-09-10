@@ -15,6 +15,7 @@ export function MediaGallery({
   const [index, setIndex] = useState(gallery?.index ?? 0);
   const touchStart = useRef<number | null>(null);
   const dialogRef = useRef<HTMLDialogElement>(null);
+  const triggerRef = useRef<HTMLElement | null>(null);
   const count = gallery?.images.length ?? 0;
 
   useEffect(() => {
@@ -24,6 +25,11 @@ export function MediaGallery({
 
   useEffect(() => {
     if (!gallery) return;
+    const dialog = dialogRef.current;
+    if (!dialog) return;
+    triggerRef.current = document.activeElement instanceof HTMLElement
+      ? document.activeElement
+      : null;
     const scrollY = window.scrollY;
     const body = document.body;
     const previous = {
@@ -36,14 +42,17 @@ export function MediaGallery({
     body.style.top = `-${scrollY}px`;
     body.style.width = '100%';
     body.style.overflow = 'hidden';
-    dialogRef.current?.focus();
+    if (!dialog.open) dialog.showModal();
+    dialog.querySelector<HTMLButtonElement>('button')?.focus();
     return () => {
+      if (dialog.open) dialog.close();
       body.style.position = previous.position;
       body.style.top = previous.top;
       body.style.width = previous.width;
       body.style.overflow = previous.overflow;
       window.scrollTo({ top: scrollY, behavior: 'instant' });
       window.requestAnimationFrame(() => window.scrollTo({ top: scrollY, behavior: 'instant' }));
+      window.requestAnimationFrame(() => triggerRef.current?.focus({ preventScroll: true }));
     };
   }, [gallery]);
 
@@ -68,12 +77,14 @@ export function MediaGallery({
     <dialog
       ref={dialogRef}
       className="media-gallery"
-      open
       aria-modal="true"
       aria-label={`${gallery.name} photos`}
       tabIndex={-1}
+      onCancel={(event) => {
+        event.preventDefault();
+        close();
+      }}
       onKeyDown={(event) => {
-        if (event.key === 'Escape') close();
         if (event.key === 'ArrowLeft' && count > 1) move(-1);
         if (event.key === 'ArrowRight' && count > 1) move(1);
       }}
@@ -97,6 +108,7 @@ export function MediaGallery({
       </header>
       <div className="media-gallery-stage">
         <Image
+          unoptimized
           key={image.file}
           src={image.file}
           alt={image.title || image.caption}
