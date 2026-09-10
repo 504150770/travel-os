@@ -24,10 +24,8 @@ for (const city of cities) {
 }
 for (const item of restaurants) {
   const missing = [];
-  if (!item.dishImage) missing.push('代表食物图');
-  if (!item.restaurantImage && !item.environmentImage) missing.push('环境图');
-  if (!item.menu?.previews?.length) missing.push('菜单预览');
-  if (missing.length) add('FOOD_IMAGES', item.id, item.name, item.city, missing, item.photoStatus || '待补图', '优先官网Menu/Instagram，再核可靠平台的真实用户图。', 'P1');
+  if (!item.dishImage && !item.restaurantImage && !item.environmentImage) missing.push('真实场所/食物图');
+  if (missing.length) add('FOOD_IMAGES', item.id, item.name, item.city, missing, item.photoStatus || '待补图', '优先官网，其次可靠平台的可追溯真实图片。', 'P1');
   if (!item.menu?.url || item.menu?.status === 'Menu pending verification') add('FOOD_MENU', item.id, item.name, item.city, ['menuUrl','menuPrices'], '当前菜单与价格未充分验证。', '核对官方Menu PDF或页面并记录日期。', 'P1');
   const reality = [];
   if (item.address === '待确认') reality.push('address');

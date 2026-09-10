@@ -1,0 +1,963 @@
+[
+  {
+    "file": "/images/p26_0.webp",
+    "caption": "学院桥 / 运河转弯",
+    "source": "Source recorded on entity",
+    "sourcePage": "本地来源：视觉册原始摄影索引",
+    "lastVerified": "2026-09-06",
+    "role": "stop",
+    "entityId": "accademia_bridge"
+  },
+  {
+    "file": "/images/arc_blue.webp",
+    "caption": "凯旋门 / 都市光轨",
+    "source": "Source recorded on entity",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Arc_de_Triomphe_de_l%27%C3%89toile_at_blue_hour,_Paris_8-2014_2.jpg",
+    "lastVerified": "2026-09-06",
+    "role": "stop",
+    "entityId": "arc_triomphe"
+  },
+  {
+    "file": "/images/visual-36.webp",
+    "caption": "Bridge of Sighs / canal axis",
+    "source": "Source recorded on entity",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Bridge_of_Sighs,_Venice_(30127461850).jpg",
+    "lastVerified": "2026-09-06",
+    "role": "stop",
+    "entityId": "bridge_sighs"
+  },
+  {
+    "file": "/images/cdg_sunrise.webp",
+    "caption": "巴黎清晨 / 向机场出发",
+    "source": "Source recorded on entity",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Paris-Charles_de_Gaulle_Airport_sunrise.jpg",
+    "lastVerified": "2026-09-06",
+    "role": "hero",
+    "entityId": "cdg"
+  },
+  {
+    "file": "/images/p36_2.webp",
+    "caption": "查理大桥 / 人物尺度",
+    "source": "Source recorded on entity",
+    "sourcePage": "本地来源：视觉册原始摄影索引",
+    "lastVerified": "2026-09-06",
+    "role": "stop",
+    "entityId": "charles_bridge"
+  },
+  {
+    "file": "/images/p7_0.webp",
+    "caption": "斗兽场 / 建筑尺度",
+    "source": "Source recorded on entity",
+    "sourcePage": "本地来源：视觉册原始摄影索引",
+    "lastVerified": "2026-09-06",
+    "role": "hero",
+    "entityId": "colosseum"
+  },
+  {
+    "file": "/images/flight_depart.webp",
+    "caption": "国际出发 / 跨夜航程",
+    "source": "Source recorded on entity",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Airplanes_at_sunrise.JPG",
+    "lastVerified": "2026-09-06",
+    "role": "hero",
+    "entityId": "day-1"
+  },
+  {
+    "file": "/images/wing_sunrise.webp",
+    "caption": "机翼晨光 / 旅程收束",
+    "source": "Source recorded on entity",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Wing_with_morning_sunrise_sky.jpg",
+    "lastVerified": "2026-09-06",
+    "role": "hero",
+    "entityId": "day-18"
+  },
+  {
+    "file": "/images/vce_airport.webp",
+    "caption": "VCE机场 / 真实转场",
+    "source": "Source recorded on entity",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Venice_Marco_Polo_Airport_terminal.jpg",
+    "lastVerified": "2026-09-06",
+    "role": "hero",
+    "entityId": "day-9"
+  },
+  {
+    "file": "/images/p16_0.webp",
+    "caption": "圣母百花 / 大理石立面",
+    "source": "Source recorded on entity",
+    "sourcePage": "本地来源：视觉册原始摄影索引",
+    "lastVerified": "2026-09-06",
+    "role": "hero",
+    "entityId": "duomo_firenze"
+  },
+  {
+    "file": "/images/food/florence-cammillo.webp",
+    "caption": "Cammillo Trattoria — venue or signature food visual",
+    "source": "Firenze Made in Tuscany",
+    "sourcePage": "https://www.firenzemadeintuscany.com/it/articolo/la-storia-e-i-piatti-da-non-perdere-della-storica-trattoria-cammillo/",
+    "lastVerified": "2026-09-10",
+    "role": "Restaurant",
+    "entityId": "florence-cammillo",
+    "originalUrl": "https://www.firenzemadeintuscany.com/assets/w%3D1040__images.ctfassets.net_7dc7gq8ix1ml_1feqQZNdKQEBo49X0CCnZH_a2550ddf8d8341a25381c4446000584a__W5A4406.jpg"
+  },
+  {
+    "file": "/images/food/florence-ditta.webp",
+    "caption": "Ditta Artigianale — official venue visual",
+    "source": "Official restaurant website",
+    "sourcePage": "https://dittaartigianale.it/",
+    "lastVerified": "2026-09-10",
+    "role": "Restaurant",
+    "entityId": "florence-ditta",
+    "originalUrl": "https://dittaartigianale.it/cdn/shop/files/Tostato_dal_Miglior_Roaster_d_Italia_consegnato_direttamente_a_casa_tua._2.png?v=1781533341&width=1920"
+  },
+  {
+    "file": "/images/food/florence-gustapizza.webp",
+    "caption": "Gustapizza — venue or signature food visual",
+    "source": "Tripadvisor venue gallery",
+    "sourcePage": "https://www.tripadvisor.com/Restaurant_Review-g187895-d1155597-Reviews-Gustapizza-Florence_Tuscany.html",
+    "lastVerified": "2026-09-10",
+    "role": "Restaurant",
+    "entityId": "florence-gustapizza",
+    "originalUrl": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2e/08/68/c5/caption.jpg?h=-1&s=1&w=1200"
+  },
+  {
+    "file": "/images/food/florence-rivoire.webp",
+    "caption": "Rivoire — venue or signature food visual",
+    "source": "TheFork menu gallery",
+    "sourcePage": "https://www.thefork.ch/restaurant/rivoire-firenze-r805157/menu",
+    "lastVerified": "2026-09-10",
+    "role": "Restaurant",
+    "entityId": "florence-rivoire",
+    "originalUrl": "https://cdn.thefork.com/tf-lab/image/upload/w_500%2Ch_500%2Cc_fill%2Cq_auto%2Cf_auto%2Cg_auto%3Asubject/restaurant/4a87ef59-8df5-4c72-9618-9ed140758bb2/6f35ae8f-fdce-4fb6-8365-3fa4d684fa73.jpg"
+  },
+  {
+    "file": "/images/food/florence-sabatino.webp",
+    "caption": "Trattoria Sabatino — venue or signature food visual",
+    "source": "SERICA Florence editorial",
+    "sourcePage": "https://serica-watches.com/en/blogs/serica-stories/a-day-in-the-life-firenze-italie",
+    "lastVerified": "2026-09-10",
+    "role": "Restaurant",
+    "entityId": "florence-sabatino",
+    "originalUrl": "https://serica-watches.com/cdn/shop/files/Firenze_A_day-in-the-life-1.jpg?crop=center&height=3931&v=1755080367&width=3024"
+  },
+  {
+    "file": "/images/visual-34.webp",
+    "caption": "Roman Forum / columns and archaeological layers",
+    "source": "Source recorded on entity",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:ForumRomanumColumns_10050024c.jpg",
+    "lastVerified": "2026-09-06",
+    "role": "stop",
+    "entityId": "forum"
+  },
+  {
+    "file": "/images/lafayette_xmas.webp",
+    "caption": "老佛爷 / 圣诞装置",
+    "source": "Source recorded on entity",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Christmas_tree_at_Galeries_Lafayette_Haussmann_in_Paris,_2025.jpg",
+    "lastVerified": "2026-09-06",
+    "role": "stop",
+    "entityId": "galeries_lafayette"
+  },
+  {
+    "file": "/images/p42_1.webp",
+    "caption": "格拉本 / 冬季灯饰",
+    "source": "Source recorded on entity",
+    "sourcePage": "本地来源：视觉册原始摄影索引",
+    "lastVerified": "2026-09-06",
+    "role": "stop",
+    "entityId": "graben"
+  },
+  {
+    "file": "/images/p27_2.webp",
+    "caption": "大运河 / 从水面进入威尼斯",
+    "source": "Source recorded on entity",
+    "sourcePage": "本地来源：视觉册原始摄影索引",
+    "lastVerified": "2026-09-06",
+    "role": "hero",
+    "entityId": "grand_canal"
+  },
+  {
+    "file": "/images/gym_florence_klab.webp",
+    "caption": "Klab Marignolle official fitness visual",
+    "source": "Official gym website",
+    "sourcePage": "https://www.klab.it/marignolle-firenze/",
+    "lastVerified": "2026-09-10",
+    "role": "Gym",
+    "entityId": "gym-florence-klab"
+  },
+  {
+    "file": "/images/gym_mestre_mcfit.webp",
+    "caption": "McFIT Mestre · Via Don Peron official fitness visual",
+    "source": "Official gym website",
+    "sourcePage": "https://wellhub.com/it-it/search/partners/mcfit-mestre/",
+    "lastVerified": "2026-09-10",
+    "role": "Gym",
+    "entityId": "gym-mestre-mcfit"
+  },
+  {
+    "file": "/images/gym_paris_basic.webp",
+    "caption": "Basic-Fit Rue Tolbiac official fitness visual",
+    "source": "Official gym website",
+    "sourcePage": "https://www.masalledesport.com/salle/13210%2Cbasic-fit-rue-tolbiac%2Cclub-de-fitness%2Cparis%2C75013%2Cfr",
+    "lastVerified": "2026-09-10",
+    "role": "Gym",
+    "entityId": "gym-paris-basic"
+  },
+  {
+    "file": "/images/gym_paris_fpark.webp",
+    "caption": "Fitness Park Porte de Choisy official fitness visual",
+    "source": "Official gym website",
+    "sourcePage": "https://sallesdesport.fitness/fr/i/746-fitness-park-paris-porte-de-choisy/",
+    "lastVerified": "2026-09-10",
+    "role": "Gym",
+    "entityId": "gym-paris-fpark"
+  },
+  {
+    "file": "/images/gym_prague_euforie.webp",
+    "caption": "Euforie Fitness Smíchov official fitness visual",
+    "source": "Official gym website",
+    "sourcePage": "https://www.euforie.cz/cs/kontakt/praha-5-smichov",
+    "lastVerified": "2026-09-10",
+    "role": "Gym",
+    "entityId": "gym-prague-euforie"
+  },
+  {
+    "file": "/images/gym_prague_form.webp",
+    "caption": "Form Factory I. P. Pavlova official fitness visual",
+    "source": "Official gym website",
+    "sourcePage": "https://www.formfactory.cz/nove-otevrene-fitko-i-p-pavlova/",
+    "lastVerified": "2026-09-10",
+    "role": "Gym",
+    "entityId": "gym-prague-form"
+  },
+  {
+    "file": "/images/gym_rome_dabliu.webp",
+    "caption": "Dabliu Club Parioli official fitness visual",
+    "source": "Official gym website",
+    "sourcePage": "https://www.dabliu.com/club/roma-parioli/",
+    "lastVerified": "2026-09-10",
+    "role": "Gym",
+    "entityId": "gym-rome-dabliu"
+  },
+  {
+    "file": "/images/gym_rome_golden.webp",
+    "caption": "Golden Power Marconi official fitness visual",
+    "source": "Official gym website",
+    "sourcePage": "https://palestre.fitness/it/i/19689-golden-power/",
+    "lastVerified": "2026-09-10",
+    "role": "Gym",
+    "entityId": "gym-rome-golden"
+  },
+  {
+    "file": "/images/gym_vienna_das.webp",
+    "caption": "DAS GYM · Handelskai official fitness visual",
+    "source": "Official gym website",
+    "sourcePage": "https://shop.dasgym.com/products/das-gym-tageskarte",
+    "lastVerified": "2026-09-10",
+    "role": "Gym",
+    "entityId": "gym-vienna-das"
+  },
+  {
+    "file": "/images/gym_vienna_jh.webp",
+    "caption": "John Harris Schillerplatz official fitness visual",
+    "source": "Official gym website",
+    "sourcePage": "https://www.johnharris.at/en/studios/detail/1/schillerplatz.html",
+    "lastVerified": "2026-09-10",
+    "role": "Gym",
+    "entityId": "gym-vienna-jh"
+  },
+  {
+    "file": "/images/gallery.webp",
+    "caption": "卢浮宫 / 作品与空间",
+    "source": "Source recorded on entity",
+    "sourcePage": "https://unsplash.com/photos/H3APOiYLyzk",
+    "lastVerified": "2026-09-06",
+    "role": "hero",
+    "entityId": "louvre"
+  },
+  {
+    "file": "/images/louvre2.webp",
+    "caption": "卢浮宫金字塔 / 几何层次",
+    "source": "Source recorded on entity",
+    "sourcePage": "https://unsplash.com/photos/TTz_H1FrdIc",
+    "lastVerified": "2026-09-06",
+    "role": "stop",
+    "entityId": "louvre_pyramid"
+  },
+  {
+    "file": "/images/visual-38.webp",
+    "caption": "Malá Strana / winter morning street",
+    "source": "Source recorded on entity",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Malá_Strana_January_2026.jpg",
+    "lastVerified": "2026-09-06",
+    "role": "stop",
+    "entityId": "mala_strana"
+  },
+  {
+    "file": "/images/montmartre.webp",
+    "caption": "蒙马特 / 街巷质感",
+    "source": "Source recorded on entity",
+    "sourcePage": "https://unsplash.com/photos/NLrBr0KQRLg",
+    "lastVerified": "2026-09-06",
+    "role": "hero",
+    "entityId": "montmartre"
+  },
+  {
+    "file": "/images/p5_0.webp",
+    "caption": "纳沃纳广场 / 城市客厅",
+    "source": "Source recorded on entity",
+    "sourcePage": "本地来源：视觉册原始摄影索引",
+    "lastVerified": "2026-09-06",
+    "role": "stop",
+    "entityId": "navona"
+  },
+  {
+    "file": "/images/visual-35.webp",
+    "caption": "Oltrarno / residential street texture",
+    "source": "Source recorded on entity",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Oltrarno.JPG",
+    "lastVerified": "2026-09-06",
+    "role": "stop",
+    "entityId": "oltrarno"
+  },
+  {
+    "file": "/images/p9_0.webp",
+    "caption": "万神殿 / 穹顶与天眼",
+    "source": "Source recorded on entity",
+    "sourcePage": "本地来源：视觉册原始摄影索引",
+    "lastVerified": "2026-09-06",
+    "role": "stop",
+    "entityId": "pantheon"
+  },
+  {
+    "file": "/images/food/paris-angelina.webp",
+    "caption": "Angelina Rivoli — venue or signature food visual",
+    "source": "Paris Secret",
+    "sourcePage": "https://parissecret.com/en/the-angelina-paris-recipe-for-creamy-hot-chocolate/",
+    "lastVerified": "2026-09-10",
+    "role": "Restaurant",
+    "entityId": "paris-angelina",
+    "originalUrl": "https://offloadmedia.feverup.com/parissecret.com/wp-content/uploads/2020/11/28050310/ANGE_RIVOLI_CHOCOLAT_CHAUD_VERSION_TABLE-redim_0-1024x599.jpg"
+  },
+  {
+    "file": "/images/food/paris-breizh.webp",
+    "caption": "Breizh Café — official venue visual",
+    "source": "Official restaurant website",
+    "sourcePage": "https://www.breizhcafe.com/",
+    "lastVerified": "2026-09-10",
+    "role": "Restaurant",
+    "entityId": "paris-breizh",
+    "originalUrl": "https://images.squarespace-cdn.com/content/v1/619f05c41ec5d21532f581fb/b1062583-f206-4d65-b383-e56eb54015cb/2500-BreizhCafe-Auteuil%40SimonDetraz-40-copie.jpg"
+  },
+  {
+    "file": "/images/food/paris-dupain.webp",
+    "caption": "Du Pain et des Idées — venue or signature food visual",
+    "source": "Vogue France",
+    "sourcePage": "https://www.vogue.fr/lifestyle/article/les-meilleures-boulangeries-a-paris",
+    "lastVerified": "2026-09-10",
+    "role": "Restaurant",
+    "entityId": "paris-dupain",
+    "originalUrl": "https://media.vogue.fr/photos/5c63f0763d44a060c4cbc46b/master/w_1600%2Cc_limit/hhh.jpg"
+  },
+  {
+    "file": "/images/food/paris-enfants.webp",
+    "caption": "Les Enfants du Marché — official venue visual",
+    "source": "Official restaurant website",
+    "sourcePage": "https://www.lesenfantsdumarche.fr/",
+    "lastVerified": "2026-09-10",
+    "role": "Restaurant",
+    "entityId": "paris-enfants",
+    "originalUrl": "https://images.squarespace-cdn.com/content/v1/678cd2c34c22544a99d3fb08/b91eb3b1-bd98-4a41-8941-71ce923ee37f/Capture+d%E2%80%99%C3%A9cran+2025-10-23+%C3%A0+13.53.20.png"
+  },
+  {
+    "file": "/images/food/paris-flore.webp",
+    "caption": "Café de Flore — official venue visual",
+    "source": "Official restaurant website",
+    "sourcePage": "https://cafedeflore.fr/",
+    "lastVerified": "2026-09-10",
+    "role": "Restaurant",
+    "entityId": "paris-flore",
+    "originalUrl": "https://cafedeflore.fr/wp-content/uploads/2022/07/cdf_hero1.jpeg"
+  },
+  {
+    "file": "/images/food/paris-la-table-de-mame.webp",
+    "caption": "La Table de Mame — official venue visual",
+    "source": "Official restaurant website",
+    "sourcePage": "https://icioncuisine.com/restaurant/la-table-de-mame-23437",
+    "lastVerified": "2026-09-10",
+    "role": "Restaurant",
+    "entityId": "paris-la-table-de-mame",
+    "originalUrl": "https://img.icioncuisine.com/1/4/0/4/9/414049/c/google-places-23437-large.jpg"
+  },
+  {
+    "file": "/images/food/paris-stohrer.webp",
+    "caption": "Stohrer — official venue visual",
+    "source": "Official restaurant website",
+    "sourcePage": "https://stohrer.fr/",
+    "lastVerified": "2026-09-10",
+    "role": "Restaurant",
+    "entityId": "paris-stohrer",
+    "originalUrl": "https://stohrer.fr/wp-content/uploads/2021/10/patisseries-slide.jpg"
+  },
+  {
+    "file": "/images/p18_0.webp",
+    "caption": "米开朗基罗广场 / 红顶全景",
+    "source": "Source recorded on entity",
+    "sourcePage": "本地来源：视觉册原始摄影索引",
+    "lastVerified": "2026-09-06",
+    "role": "hero",
+    "entityId": "piazzale_michelangelo"
+  },
+  {
+    "file": "/images/notredame.webp",
+    "caption": "塞纳河与圣母院 / 城市序章",
+    "source": "Source recorded on entity",
+    "sourcePage": "https://unsplash.com/s/photos/notre-dame",
+    "lastVerified": "2026-09-06",
+    "role": "hero",
+    "entityId": "pont_saint_michel"
+  },
+  {
+    "file": "/images/latin_night.webp",
+    "caption": "拉丁区 / 巴黎街景",
+    "source": "Source recorded on entity",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Night_life_in_the_Latin_Quarter,_Paris_1_July_2017.jpg",
+    "lastVerified": "2026-09-06",
+    "role": "stop",
+    "entityId": "pont_saint_michel"
+  },
+  {
+    "file": "/images/p20_1.webp",
+    "caption": "老桥 / 阿诺河立面",
+    "source": "Source recorded on entity",
+    "sourcePage": "本地来源：视觉册原始摄影索引",
+    "lastVerified": "2026-09-06",
+    "role": "stop",
+    "entityId": "ponte_vecchio"
+  },
+  {
+    "file": "/images/p39_0.webp",
+    "caption": "城堡区 / 红顶层次",
+    "source": "Source recorded on entity",
+    "sourcePage": "本地来源：视觉册原始摄影索引",
+    "lastVerified": "2026-09-06",
+    "role": "hero",
+    "entityId": "prague_castle"
+  },
+  {
+    "file": "/images/p34_0.webp",
+    "caption": "布拉格老城 / 圣诞灯光",
+    "source": "Source recorded on entity",
+    "sourcePage": "本地来源：视觉册原始摄影索引",
+    "lastVerified": "2026-09-06",
+    "role": "hero",
+    "entityId": "prague_old_town"
+  },
+  {
+    "file": "/images/p37_1.webp",
+    "caption": "老城街巷 / 到达后的短走",
+    "source": "Source recorded on entity",
+    "sourcePage": "本地来源：视觉册原始摄影索引",
+    "lastVerified": "2026-09-06",
+    "role": "stop",
+    "entityId": "prague_old_town"
+  },
+  {
+    "file": "/images/food/prague-choco.webp",
+    "caption": "Choco Café — official venue visual",
+    "source": "Official restaurant website",
+    "sourcePage": "https://www.choco-cafe.cz/",
+    "lastVerified": "2026-09-10",
+    "role": "Restaurant",
+    "entityId": "prague-choco",
+    "originalUrl": "https://cdn.myshoptet.com/usr/www.choco-cafe.cz/user/banners/choco-cafe-uvodni-foto.jpg?64ea0c94"
+  },
+  {
+    "file": "/images/food/prague-eska.webp",
+    "caption": "Eska — official venue visual",
+    "source": "Official restaurant website",
+    "sourcePage": "https://eska.ambi.cz/",
+    "lastVerified": "2026-09-10",
+    "role": "Restaurant",
+    "entityId": "prague-eska",
+    "originalUrl": "https://eska.ambi.cz/cf-image?url=https%3A%2F%2Fdata.eu.cntmbr.com%2Fambiente%2Fambiente-prod%2F8d709556-cd07-4ec2-91c9-c1ad793238bf.jpeg&width=1499&quality=75&format=auto"
+  },
+  {
+    "file": "/images/food/prague-kantyna.webp",
+    "caption": "Kantýna — official venue visual",
+    "source": "Official restaurant website",
+    "sourcePage": "https://www.kantyna.ambi.cz/",
+    "lastVerified": "2026-09-10",
+    "role": "Restaurant",
+    "entityId": "prague-kantyna",
+    "originalUrl": "https://www.kantyna.ambi.cz/cf-image?url=https%3A%2F%2Fdata.eu.cntmbr.com%2Fambiente%2Fambiente-prod%2F497ee169-accf-4040-9fb0-b8680ac908a2.jpeg&width=1920&quality=75&format=auto"
+  },
+  {
+    "file": "/images/food/prague-lokal.webp",
+    "caption": "Lokál Dlouhááá — official venue visual",
+    "source": "Official restaurant website",
+    "sourcePage": "https://lokal-dlouha.ambi.cz/en/",
+    "lastVerified": "2026-09-10",
+    "role": "Restaurant",
+    "entityId": "prague-lokal",
+    "originalUrl": "https://lokal-dlouha.ambi.cz/assets/fb/lokal-1.jpg"
+  },
+  {
+    "file": "/images/food/prague-savoy.webp",
+    "caption": "Café Savoy — official venue visual",
+    "source": "Official restaurant website",
+    "sourcePage": "https://www.cafesavoy.ambi.cz/en/",
+    "lastVerified": "2026-09-10",
+    "role": "Restaurant",
+    "entityId": "prague-savoy",
+    "originalUrl": "https://www.cafesavoy.ambi.cz/cf-image?url=https%3A%2F%2Fdata.eu.cntmbr.com%2Fambiente%2Fambiente-prod%2Fb975715e-b0ce-49ae-9981-99f5b36a2ebb.jpeg&width=1920&quality=75&format=auto"
+  },
+  {
+    "file": "/images/p46_0.webp",
+    "caption": "市政厅圣诞市场 / 暖光",
+    "source": "Source recorded on entity",
+    "sourcePage": "本地来源：视觉册原始摄影索引",
+    "lastVerified": "2026-09-06",
+    "role": "stop",
+    "entityId": "rathausplatz"
+  },
+  {
+    "file": "/images/food/rome-armando.webp",
+    "caption": "Armando al Pantheon — official venue visual",
+    "source": "Official restaurant website",
+    "sourcePage": "https://armandoalpantheon.it/",
+    "lastVerified": "2026-09-10",
+    "role": "Restaurant",
+    "entityId": "rome-armando",
+    "originalUrl": "http://armandoalpantheon.it/wp-content/uploads/revslider/le-chef-header1-eng/famiglia-slide-home-armando-pantheon-1.jpg"
+  },
+  {
+    "file": "/images/food/rome-forno.webp",
+    "caption": "Forno Campo de’ Fiori — venue or signature food visual",
+    "source": "Condé Nast Traveler",
+    "sourcePage": "https://www.cntraveler.com/restaurants/rome/forno-campo-de-fiori",
+    "lastVerified": "2026-09-10",
+    "role": "Restaurant",
+    "entityId": "rome-forno",
+    "originalUrl": "https://media.cntraveler.com/photos/5dfbe7bc69d1500009e514c0/16%3A9/w_2560%2Cc_limit/FORNOCAMPODEIFIORIIMG_13522019-SabrinaRossi-Rome.jpg?mbid=social_retweet"
+  },
+  {
+    "file": "/images/food/rome-giolitti.webp",
+    "caption": "Giolitti — official venue visual",
+    "source": "Official restaurant website",
+    "sourcePage": "https://www.giolitti.it/",
+    "lastVerified": "2026-09-10",
+    "role": "Restaurant",
+    "entityId": "rome-giolitti",
+    "originalUrl": "https://www.giolitti.it/wp-content/uploads/2025/07/tradizione.jpg"
+  },
+  {
+    "file": "/images/food/rome-roscioli.webp",
+    "caption": "Roscioli Salumeria con Cucina — venue or signature food visual",
+    "source": "Lonely Planet",
+    "sourcePage": "https://www.lonelyplanet.com/articles/romes-top-dishes-taste",
+    "lastVerified": "2026-09-10",
+    "role": "Restaurant",
+    "entityId": "rome-roscioli",
+    "originalUrl": "https://lp-cms-production.imgix.net/features/2017/09/Carbonara5-5f31fb9a7f9a.jpg?auto=format%2Ccompress&fit=crop&h=810&q=72&w=1440"
+  },
+  {
+    "file": "/images/food/rome-santeustachio.webp",
+    "caption": "Sant’Eustachio Il Caffè — venue or signature food visual",
+    "source": "WAUG Rome coffee guide",
+    "sourcePage": "https://www.waug.com/en/magazines/615",
+    "lastVerified": "2026-09-10",
+    "role": "Restaurant",
+    "entityId": "rome-santeustachio",
+    "originalUrl": "https://d2mgzmtdeipcjp.cloudfront.net/files/magazine/2024/06/12/17181687688127.jpg"
+  },
+  {
+    "file": "/images/food/rome-trapizzino.webp",
+    "caption": "Trapizzino Trastevere — official venue visual",
+    "source": "Official restaurant website",
+    "sourcePage": "https://www.trapizzino.it/en/",
+    "lastVerified": "2026-09-10",
+    "role": "Restaurant",
+    "entityId": "rome-trapizzino",
+    "originalUrl": "https://www.trapizzino.it/cms/wp-content/uploads/2018/08/trapizzino-milano-marghera13.jpg"
+  },
+  {
+    "file": "/images/visual-39.webp",
+    "caption": "Sacré-Cœur / night facade",
+    "source": "Source recorded on entity",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Basilique_du_Sacré_Coeur_at_night.jpg",
+    "lastVerified": "2026-09-06",
+    "role": "stop",
+    "entityId": "sacre_coeur"
+  },
+  {
+    "file": "/images/p44_0.webp",
+    "caption": "美泉宫 / 宫殿尺度",
+    "source": "Source recorded on entity",
+    "sourcePage": "本地来源：视觉册原始摄影索引",
+    "lastVerified": "2026-09-06",
+    "role": "hero",
+    "entityId": "schonbrunn"
+  },
+  {
+    "file": "/images/p17_0.webp",
+    "caption": "领主广场 / 雕塑与旧宫",
+    "source": "Source recorded on entity",
+    "sourcePage": "本地来源：视觉册原始摄影索引",
+    "lastVerified": "2026-09-06",
+    "role": "stop",
+    "entityId": "signoria"
+  },
+  {
+    "file": "/images/p25_2.webp",
+    "caption": "圣马可教堂 / 金色外观",
+    "source": "Source recorded on entity",
+    "sourcePage": "本地来源：视觉册原始摄影索引",
+    "lastVerified": "2026-09-06",
+    "role": "stop",
+    "entityId": "st_mark_basilica"
+  },
+  {
+    "file": "/images/p24_2.webp",
+    "caption": "圣马可广场 / 拱廊",
+    "source": "Source recorded on entity",
+    "sourcePage": "本地来源：视觉册原始摄影索引",
+    "lastVerified": "2026-09-06",
+    "role": "hero",
+    "entityId": "st_mark_square"
+  },
+  {
+    "file": "/images/p14_0.webp",
+    "caption": "圣彼得广场 / 柱廊",
+    "source": "Source recorded on entity",
+    "sourcePage": "本地来源：视觉册原始摄影索引",
+    "lastVerified": "2026-09-06",
+    "role": "stop",
+    "entityId": "st_peter"
+  },
+  {
+    "file": "/images/visual-37.webp",
+    "caption": "St. Vitus / nave and vertical scale",
+    "source": "Source recorded on entity",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:St_vitus_cathedral_interior.jpg",
+    "lastVerified": "2026-09-06",
+    "role": "stop",
+    "entityId": "st_vitus"
+  },
+  {
+    "file": "/images/hotels/stay-florence-fonderia/bathroom.webp",
+    "caption": "Piombo private external bathroom",
+    "source": "Official property website",
+    "sourcePage": "https://www.fonderiafirenze.com/en/rooms-for-your-holiday-in-florence/piombo-single-room-private-external-bathroom",
+    "lastVerified": "2026-09-10",
+    "role": "Bathroom",
+    "entityId": "stay-florence-fonderia",
+    "originalUrl": "https://www.fonderiafirenze.com/images/rooms/piombo/gallery/fonderiafirenze-camera-piombo-10.jpg"
+  },
+  {
+    "file": "/images/hotels/stay-florence-fonderia/entrance.webp",
+    "caption": "La Fonderia property courtyard and arrival setting",
+    "source": "Official property website",
+    "sourcePage": "https://www.fonderiafirenze.com/en/",
+    "lastVerified": "2026-09-10",
+    "role": "Entrance",
+    "entityId": "stay-florence-fonderia",
+    "originalUrl": "https://www.fonderiafirenze.com/images/about/fonderiafirenze-location-1.jpg"
+  },
+  {
+    "file": "/images/hotels/stay-florence-fonderia/room.webp",
+    "caption": "Piombo single room",
+    "source": "Official property website",
+    "sourcePage": "https://www.fonderiafirenze.com/en/rooms-for-your-holiday-in-florence/piombo-single-room-private-external-bathroom",
+    "lastVerified": "2026-09-10",
+    "role": "Room",
+    "entityId": "stay-florence-fonderia",
+    "originalUrl": "https://www.fonderiafirenze.com/images/rooms/piombo/gallery/fonderiafirenze-camera-piombo-16.jpg"
+  },
+  {
+    "file": "/images/hotels/stay-paris-oden/bathroom.webp",
+    "caption": "Standard double private bathroom",
+    "source": "Official property website",
+    "sourcePage": "https://oden-paris-ivry.com/chambres/",
+    "lastVerified": "2026-09-10",
+    "role": "Bathroom",
+    "entityId": "stay-paris-oden",
+    "originalUrl": "https://oden-paris-ivry.com/wp-content/uploads/2024/07/oden-double-standard0007.jpg"
+  },
+  {
+    "file": "/images/hotels/stay-paris-oden/entrance.webp",
+    "caption": "Oden Paris Ivry street facade and entrance",
+    "source": "Official property website",
+    "sourcePage": "https://oden-paris-ivry.com/",
+    "lastVerified": "2026-09-10",
+    "role": "Entrance",
+    "entityId": "stay-paris-oden",
+    "originalUrl": "https://oden-paris-ivry.com/wp-content/uploads/2023/07/oden-paris-ivry0002.jpg"
+  },
+  {
+    "file": "/images/hotels/stay-paris-oden/room.webp",
+    "caption": "Standard double room interior",
+    "source": "Official property website",
+    "sourcePage": "https://oden-paris-ivry.com/chambres/",
+    "lastVerified": "2026-09-10",
+    "role": "Room",
+    "entityId": "stay-paris-oden",
+    "originalUrl": "https://oden-paris-ivry.com/wp-content/uploads/2024/07/oden-double-standard0009.jpg"
+  },
+  {
+    "file": "/images/hotels/stay-prague-ostas/bathroom.webp",
+    "caption": "Ostaš private bathroom",
+    "source": "Momondo / Expedia property photo",
+    "sourcePage": "https://www.momondo.com/hotels/prague/Hotel-Ostas.mhd200892.ksp",
+    "lastVerified": "2026-09-10",
+    "role": "Bathroom",
+    "entityId": "stay-prague-ostas",
+    "originalUrl": "https://content.r9cdn.net/himg/d1/5d/f2/expedia_group-200892-4ece35-416898.jpg"
+  },
+  {
+    "file": "/images/hotels/stay-prague-ostas/entrance.webp",
+    "caption": "Hotel Ostaš signed street facade",
+    "source": "Official property website",
+    "sourcePage": "https://www.hotelostas.cz/en/contact/",
+    "lastVerified": "2026-09-10",
+    "role": "Entrance",
+    "entityId": "stay-prague-ostas",
+    "originalUrl": "https://9e0fc22837.clvaw-cdnwnd.com/165ebff75ddda5ff0bd641de4f540faa/200000036-d25bbd25bd/20200611_150110.jpg?ph=9e0fc22837"
+  },
+  {
+    "file": "/images/hotels/stay-prague-ostas/room.webp",
+    "caption": "Ostaš guest room interior",
+    "source": "Official property website",
+    "sourcePage": "https://www.hotelostas.cz/en/rooms/",
+    "lastVerified": "2026-09-10",
+    "role": "Room",
+    "entityId": "stay-prague-ostas",
+    "originalUrl": "https://9e0fc22837.clvaw-cdnwnd.com/165ebff75ddda5ff0bd641de4f540faa/200000459-bec12bec17/700/7IV07588-1.webp?ph=9e0fc22837"
+  },
+  {
+    "file": "/images/hotels/stay-rome-colonna/bathroom.webp",
+    "caption": "Private bathroom with shower",
+    "source": "Official property website",
+    "sourcePage": "https://www.hotelcolonnapalace.com/rooms.html",
+    "lastVerified": "2026-09-10",
+    "role": "Bathroom",
+    "entityId": "stay-rome-colonna",
+    "originalUrl": "https://www.hotelcolonnapalace.com/images/room-2-2.jpg"
+  },
+  {
+    "file": "/images/hotels/stay-rome-colonna/entrance.webp",
+    "caption": "Colonna Palace exterior on Piazza Montecitorio",
+    "source": "Official property website",
+    "sourcePage": "https://www.hotelcolonnapalace.com/",
+    "lastVerified": "2026-09-10",
+    "role": "Entrance",
+    "entityId": "stay-rome-colonna",
+    "originalUrl": "https://www.hotelcolonnapalace.com/images/home-banner-1.jpg"
+  },
+  {
+    "file": "/images/hotels/stay-rome-colonna/room.webp",
+    "caption": "Classic room interior",
+    "source": "Official property website",
+    "sourcePage": "https://www.hotelcolonnapalace.com/rooms.html",
+    "lastVerified": "2026-09-10",
+    "role": "Room",
+    "entityId": "stay-rome-colonna",
+    "originalUrl": "https://www.hotelcolonnapalace.com/images/room-6.jpg"
+  },
+  {
+    "file": "/images/hotels/stay-venice-ai-pini/bathroom.webp",
+    "caption": "Standard room private bathroom",
+    "source": "Official property website",
+    "sourcePage": "https://hotelaipini.it/en/accommodation/",
+    "lastVerified": "2026-09-10",
+    "role": "Bathroom",
+    "entityId": "stay-venice-ai-pini",
+    "originalUrl": "https://hotelaipini.it/wp-content/uploads/2024/12/bagno-standard-ai-pini.jpg"
+  },
+  {
+    "file": "/images/hotels/stay-venice-ai-pini/entrance.webp",
+    "caption": "Ai Pini exterior and garden approach",
+    "source": "Booking.com property photo",
+    "sourcePage": "https://www.booking.com/hotel/it/park-ai-pini.html",
+    "lastVerified": "2026-09-10",
+    "role": "Entrance",
+    "entityId": "stay-venice-ai-pini",
+    "originalUrl": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/255770289.jpg?k=305a83f858ebe84257cf6a6c7f470f4e489c8568adc5adeaf8585fe9b167f26f&o="
+  },
+  {
+    "file": "/images/hotels/stay-venice-ai-pini/room.webp",
+    "caption": "Standard room interior",
+    "source": "Official property website",
+    "sourcePage": "https://hotelaipini.it/en/accommodation/",
+    "lastVerified": "2026-09-10",
+    "role": "Room",
+    "entityId": "stay-venice-ai-pini",
+    "originalUrl": "https://hotelaipini.it/wp-content/uploads/2024/12/camera-standard-ai-pini.jpg"
+  },
+  {
+    "file": "/images/hotels/stay-vienna-jimmys/bathroom.webp",
+    "caption": "Executive apartment private bathroom",
+    "source": "Official property website",
+    "sourcePage": "https://jimmys.at/en/locations/lory",
+    "lastVerified": "2026-09-10",
+    "role": "Bathroom",
+    "entityId": "stay-vienna-jimmys",
+    "originalUrl": "https://jimmys.at/img/locations/lory/9/jimmys_apartments_lory_9_10.jpg"
+  },
+  {
+    "file": "/images/hotels/stay-vienna-jimmys/entrance.webp",
+    "caption": "Jimmy's Lory entrance and keypad",
+    "source": "Official property website",
+    "sourcePage": "https://jimmys.at/en/info/lory",
+    "lastVerified": "2026-09-10",
+    "role": "Entrance",
+    "entityId": "stay-vienna-jimmys",
+    "originalUrl": "https://jimmys.at/img/soga_entrance.jpg"
+  },
+  {
+    "file": "/images/hotels/stay-vienna-jimmys/room.webp",
+    "caption": "Executive one-bedroom apartment interior",
+    "source": "Official property website",
+    "sourcePage": "https://jimmys.at/en/locations/lory",
+    "lastVerified": "2026-09-10",
+    "role": "Room",
+    "entityId": "stay-vienna-jimmys",
+    "originalUrl": "https://jimmys.at/img/locations/lory/9/jimmys_apartments_lory_9_0.jpg"
+  },
+  {
+    "file": "/images/p4_0.webp",
+    "caption": "许愿池 / 白色雕塑与水声",
+    "source": "Source recorded on entity",
+    "sourcePage": "本地来源：视觉册原始摄影索引",
+    "lastVerified": "2026-09-06",
+    "role": "hero",
+    "entityId": "trevi"
+  },
+  {
+    "file": "/images/eiffel_couple.webp",
+    "caption": "特罗卡德罗 / 人像距离",
+    "source": "Source recorded on entity",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Couple_au_Trocadero,_Paris_18_Octobre_2013.jpg",
+    "lastVerified": "2026-09-06",
+    "role": "hero",
+    "entityId": "trocadero"
+  },
+  {
+    "file": "/images/p12_2.webp",
+    "caption": "梵蒂冈博物馆 / 地图画廊",
+    "source": "Source recorded on entity",
+    "sourcePage": "本地来源：视觉册原始摄影索引",
+    "lastVerified": "2026-09-06",
+    "role": "hero",
+    "entityId": "vatican_museums"
+  },
+  {
+    "file": "/images/food/venice-ai-pini-restaurant.webp",
+    "caption": "Restaurant Ai Pini — official venue visual",
+    "source": "Official restaurant website",
+    "sourcePage": "https://ristoranteaipini.it/en/contacts/",
+    "lastVerified": "2026-09-10",
+    "role": "Restaurant",
+    "entityId": "venice-ai-pini-restaurant",
+    "originalUrl": "https://ristoranteaipini.it/wp-content/uploads/2024/08/DSC6967-1024x683.jpg"
+  },
+  {
+    "file": "/images/food/venice-florian.webp",
+    "caption": "Caffè Florian — official venue visual",
+    "source": "Official restaurant website",
+    "sourcePage": "https://caffeflorian.com/",
+    "lastVerified": "2026-09-10",
+    "role": "Restaurant",
+    "entityId": "venice-florian",
+    "originalUrl": "http://caffeflorian.com/wp-content/uploads/2022/10/Sala-Stagioni_2-LOW-1920.jpg"
+  },
+  {
+    "file": "/images/food/venice-frarys.webp",
+    "caption": "Frary’s — venue or signature food visual",
+    "source": "Restaurant Guru venue gallery",
+    "sourcePage": "https://restaurantguru.it/Frarys-Venice",
+    "lastVerified": "2026-09-10",
+    "role": "Restaurant",
+    "entityId": "venice-frarys",
+    "originalUrl": "https://img02.restaurantguru.com/c6a6-Frarys-dishes.jpg"
+  },
+  {
+    "file": "/images/food/venice-plip.webp",
+    "caption": "Osteria Plip — venue or signature food visual",
+    "source": "Sluurpy venue gallery",
+    "sourcePage": "https://www.sluurpy.it/album/191590",
+    "lastVerified": "2026-09-10",
+    "role": "Restaurant",
+    "entityId": "venice-plip",
+    "originalUrl": "https://menu.sluurpy.it/foto-g/191590/4270013.jpg"
+  },
+  {
+    "file": "/images/food/venice-torrefazione.webp",
+    "caption": "Torrefazione Cannaregio — venue or signature food visual",
+    "source": "Venezia Autentica",
+    "sourcePage": "https://veneziaautentica.com/venice-shop-bar-coffee-torrefazione-cannaregio/",
+    "lastVerified": "2026-09-10",
+    "role": "Restaurant",
+    "entityId": "venice-torrefazione",
+    "originalUrl": "https://veneziaautentica.com/wp-content/uploads/2016/07/torrefazione-cannaregio-8.jpg"
+  },
+  {
+    "file": "/images/food/venice-viterossa.webp",
+    "caption": "Hostaria Vite Rossa — official venue visual",
+    "source": "Official restaurant website",
+    "sourcePage": "https://www.hostariaviterossa.it/it/",
+    "lastVerified": "2026-09-10",
+    "role": "Restaurant",
+    "entityId": "venice-viterossa",
+    "originalUrl": "https://www.hostariaviterossa.it/media/formato4/img_187.jpg"
+  },
+  {
+    "file": "/images/food/vienna-central.webp",
+    "caption": "Café Central — official venue visual",
+    "source": "Official restaurant website",
+    "sourcePage": "https://cafecentral.wien/en/",
+    "lastVerified": "2026-09-10",
+    "role": "Restaurant",
+    "entityId": "vienna-central",
+    "originalUrl": "https://cafecentral.wien/wp-content/uploads/vbg218882_caf_central__auszenansicht-1-845x684.jpg"
+  },
+  {
+    "file": "/images/food/vienna-demel.webp",
+    "caption": "Demel — official venue visual",
+    "source": "Official restaurant website",
+    "sourcePage": "https://www.demel.com/",
+    "lastVerified": "2026-09-10",
+    "role": "Restaurant",
+    "entityId": "vienna-demel",
+    "originalUrl": "https://www.demel.com/cdn/shop/files/Demel_2016_04-fruehling-end-sRGB_small_f789e4f4-9936-4e6e-8127-21e31eee7c38.webp?v=1657785041&width=1500"
+  },
+  {
+    "file": "/images/food/vienna-kameel.webp",
+    "caption": "Zum Schwarzen Kameel — official venue visual",
+    "source": "Official restaurant website",
+    "sourcePage": "https://schwarzeskameel.at/",
+    "lastVerified": "2026-09-10",
+    "role": "Restaurant",
+    "entityId": "vienna-kameel",
+    "originalUrl": "https://schwarzeskameel.at/wp-content/uploads/2025/10/Bildschirmfoto-2025-10-29-um-13.13.52-e1761740851872.png"
+  },
+  {
+    "file": "/images/food/vienna-plachutta.webp",
+    "caption": "Plachutta Wollzeile — venue or signature food visual",
+    "source": "Trip.com venue gallery",
+    "sourcePage": "https://in.trip.com/restaurant/austria/vienna/detail/plachutta-wollzeile-17207986/",
+    "lastVerified": "2026-09-10",
+    "role": "Restaurant",
+    "entityId": "vienna-plachutta",
+    "originalUrl": "https://ak-d.tripcdn.com/images/0106i12000feswvul08B6_D_750_520_Q90.jpg?proc=autoorient"
+  },
+  {
+    "file": "/images/food/vienna-tarim.webp",
+    "caption": "Tarim Uighur Restaurant — venue or signature food visual",
+    "source": "Restaurant Guru venue gallery",
+    "sourcePage": "https://de.restaurantguru.com/Tarim-Uigur-Restaurant-Vienna",
+    "lastVerified": "2026-09-10",
+    "role": "Restaurant",
+    "entityId": "vienna-tarim",
+    "originalUrl": "https://img02.restaurantguru.com/c599-Tarim-Uigur-Restaurant-Vienna-food.jpg"
+  }
+]

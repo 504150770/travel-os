@@ -37,22 +37,37 @@
       "coordinateVerifiedAt": "2026-09-08",
       "images": [
         {
-          "role": "Exterior",
-          "file": null,
-          "source": null,
-          "status": "IMAGE PENDING VERIFICATION"
+          "file": "/images/hotels/stay-rome-colonna/entrance.webp",
+          "caption": "Colonna Palace exterior on Piazza Montecitorio",
+          "source": "Official property website",
+          "sourcePage": "https://www.hotelcolonnapalace.com/",
+          "originalUrl": "https://www.hotelcolonnapalace.com/images/home-banner-1.jpg",
+          "lastVerified": "2026-09-10",
+          "role": "Entrance",
+          "entityId": "stay-rome-colonna",
+          "status": "VERIFIED REAL PROPERTY PHOTO"
         },
         {
+          "file": "/images/hotels/stay-rome-colonna/room.webp",
+          "caption": "Classic room interior",
+          "source": "Official property website",
+          "sourcePage": "https://www.hotelcolonnapalace.com/rooms.html",
+          "originalUrl": "https://www.hotelcolonnapalace.com/images/room-6.jpg",
+          "lastVerified": "2026-09-10",
           "role": "Room",
-          "file": null,
-          "source": null,
-          "status": "IMAGE PENDING VERIFICATION"
+          "entityId": "stay-rome-colonna",
+          "status": "VERIFIED REAL PROPERTY PHOTO"
         },
         {
+          "file": "/images/hotels/stay-rome-colonna/bathroom.webp",
+          "caption": "Private bathroom with shower",
+          "source": "Official property website",
+          "sourcePage": "https://www.hotelcolonnapalace.com/rooms.html",
+          "originalUrl": "https://www.hotelcolonnapalace.com/images/room-2-2.jpg",
+          "lastVerified": "2026-09-10",
           "role": "Bathroom",
-          "file": null,
-          "source": null,
-          "status": "IMAGE PENDING VERIFICATION"
+          "entityId": "stay-rome-colonna",
+          "status": "VERIFIED REAL PROPERTY PHOTO"
         }
       ],
       "execution": {
@@ -111,6 +126,12 @@
           "freeUntil": "2026-11-28T15:00:00+01:00",
           "afterDeadline": "2026-11-28 15:00前免费取消；其后收取CNY 2,521.68"
         }
+      },
+      "realityCheck": {
+        "source": "Google Maps search",
+        "sourcePage": "https://www.google.com/maps/search/?api=1&query=Colonna%20Palace%20Hotel%2C%20Piazza%20di%20Monte%20Citorio%2C%2012%2C%20Rome%2C%20Lazio%2C%2000186%2C%20Italy",
+        "lastVerified": "2026-09-10",
+        "note": "Name, address and arrival context cross-check link."
       }
     },
     {
@@ -137,22 +158,37 @@
       "coordinateVerifiedAt": "2026-09-08",
       "images": [
         {
-          "role": "Exterior",
-          "file": null,
-          "source": null,
-          "status": "IMAGE PENDING VERIFICATION"
+          "file": "/images/hotels/stay-florence-fonderia/entrance.webp",
+          "caption": "La Fonderia property courtyard and arrival setting",
+          "source": "Official property website",
+          "sourcePage": "https://www.fonderiafirenze.com/en/",
+          "originalUrl": "https://www.fonderiafirenze.com/images/about/fonderiafirenze-location-1.jpg",
+          "lastVerified": "2026-09-10",
+          "role": "Entrance",
+          "entityId": "stay-florence-fonderia",
+          "status": "VERIFIED REAL PROPERTY PHOTO"
         },
         {
+          "file": "/images/hotels/stay-florence-fonderia/room.webp",
+          "caption": "Piombo single room",
+          "source": "Official property website",
+          "sourcePage": "https://www.fonderiafirenze.com/en/rooms-for-your-holiday-in-florence/piombo-single-room-private-external-bathroom",
+          "originalUrl": "https://www.fonderiafirenze.com/images/rooms/piombo/gallery/fonderiafirenze-camera-piombo-16.jpg",
+          "lastVerified": "2026-09-10",
           "role": "Room",
-          "file": null,
-          "source": null,
-          "status": "IMAGE PENDING VERIFICATION"
+          "entityId": "stay-florence-fonderia",
+          "status": "VERIFIED REAL PROPERTY PHOTO"
         },
         {
+          "file": "/images/hotels/stay-florence-fonderia/bathroom.webp",
+          "caption": "Piombo private external bathroom",
+          "source": "Official property website",
+          "sourcePage": "https://www.fonderiafirenze.com/en/rooms-for-your-holiday-in-florence/piombo-single-room-private-external-bathroom",
+          "originalUrl": "https://www.fonderiafirenze.com/images/rooms/piombo/gallery/fonderiafirenze-camera-piombo-10.jpg",
+          "lastVerified": "2026-09-10",
           "role": "Bathroom",
-          "file": null,
-          "source": null,
-          "status": "IMAGE PENDING VERIFICATION"
+          "entityId": "stay-florence-fonderia",
+          "status": "VERIFIED REAL PROPERTY PHOTO"
         }
       ],
       "execution": {
@@ -211,6 +247,12 @@
           "freeUntil": "2026-11-30T23:59:00+01:00",
           "afterDeadline": "2026-11-30 23:59前免费取消；之后分阶段收费，以凭证为准"
         }
+      },
+      "realityCheck": {
+        "source": "Google Maps search",
+        "sourcePage": "https://www.google.com/maps/search/?api=1&query=La%20Fonderia%20Firenze%2C%20Via%20Della%20Fonderia%2C%2065%2FA%2C%20Florence%2C%20Tuscany%2C%2050142%2C%20Italy",
+        "lastVerified": "2026-09-10",
+        "note": "Name, address and arrival context cross-check link."
       }
     },
     {
@@ -237,22 +279,37 @@
       "coordinateVerifiedAt": "2026-09-08",
       "images": [
         {
-          "role": "Exterior",
-          "file": null,
-          "source": null,
-          "status": "IMAGE PENDING VERIFICATION"
+          "file": "/images/hotels/stay-venice-ai-pini/entrance.webp",
+          "caption": "Ai Pini exterior and garden approach",
+          "source": "Booking.com property photo",
+          "sourcePage": "https://www.booking.com/hotel/it/park-ai-pini.html",
+          "originalUrl": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/255770289.jpg?k=305a83f858ebe84257cf6a6c7f470f4e489c8568adc5adeaf8585fe9b167f26f&o=",
+          "lastVerified": "2026-09-10",
+          "role": "Entrance",
+          "entityId": "stay-venice-ai-pini",
+          "status": "VERIFIED REAL PROPERTY PHOTO"
         },
         {
+          "file": "/images/hotels/stay-venice-ai-pini/room.webp",
+          "caption": "Standard room interior",
+          "source": "Official property website",
+          "sourcePage": "https://hotelaipini.it/en/accommodation/",
+          "originalUrl": "https://hotelaipini.it/wp-content/uploads/2024/12/camera-standard-ai-pini.jpg",
+          "lastVerified": "2026-09-10",
           "role": "Room",
-          "file": null,
-          "source": null,
-          "status": "IMAGE PENDING VERIFICATION"
+          "entityId": "stay-venice-ai-pini",
+          "status": "VERIFIED REAL PROPERTY PHOTO"
         },
         {
+          "file": "/images/hotels/stay-venice-ai-pini/bathroom.webp",
+          "caption": "Standard room private bathroom",
+          "source": "Official property website",
+          "sourcePage": "https://hotelaipini.it/en/accommodation/",
+          "originalUrl": "https://hotelaipini.it/wp-content/uploads/2024/12/bagno-standard-ai-pini.jpg",
+          "lastVerified": "2026-09-10",
           "role": "Bathroom",
-          "file": null,
-          "source": null,
-          "status": "IMAGE PENDING VERIFICATION"
+          "entityId": "stay-venice-ai-pini",
+          "status": "VERIFIED REAL PROPERTY PHOTO"
         }
       ],
       "execution": {
@@ -311,6 +368,12 @@
           "freeUntil": "2026-12-04T16:00:00+01:00",
           "afterDeadline": "2026-12-04 16:00前免费取消；之后分阶段收费，以凭证为准"
         }
+      },
+      "realityCheck": {
+        "source": "Google Maps search",
+        "sourcePage": "https://www.google.com/maps/search/?api=1&query=Park%20Hotel%20Ai%20Pini%20%26%20Restaurant%20Ai%20Pini%2C%20Via%20Miranese%2C%20176%2C%20Venice%2C%20Veneto%2C%2030174%2C%20Italy",
+        "lastVerified": "2026-09-10",
+        "note": "Name, address and arrival context cross-check link."
       }
     },
     {
@@ -337,22 +400,37 @@
       "coordinateVerifiedAt": "2026-09-08",
       "images": [
         {
-          "role": "Exterior",
-          "file": null,
-          "source": null,
-          "status": "IMAGE PENDING VERIFICATION"
+          "file": "/images/hotels/stay-vienna-jimmys/entrance.webp",
+          "caption": "Jimmy's Lory entrance and keypad",
+          "source": "Official property website",
+          "sourcePage": "https://jimmys.at/en/info/lory",
+          "originalUrl": "https://jimmys.at/img/soga_entrance.jpg",
+          "lastVerified": "2026-09-10",
+          "role": "Entrance",
+          "entityId": "stay-vienna-jimmys",
+          "status": "VERIFIED REAL PROPERTY PHOTO"
         },
         {
+          "file": "/images/hotels/stay-vienna-jimmys/room.webp",
+          "caption": "Executive one-bedroom apartment interior",
+          "source": "Official property website",
+          "sourcePage": "https://jimmys.at/en/locations/lory",
+          "originalUrl": "https://jimmys.at/img/locations/lory/9/jimmys_apartments_lory_9_0.jpg",
+          "lastVerified": "2026-09-10",
           "role": "Room",
-          "file": null,
-          "source": null,
-          "status": "IMAGE PENDING VERIFICATION"
+          "entityId": "stay-vienna-jimmys",
+          "status": "VERIFIED REAL PROPERTY PHOTO"
         },
         {
+          "file": "/images/hotels/stay-vienna-jimmys/bathroom.webp",
+          "caption": "Executive apartment private bathroom",
+          "source": "Official property website",
+          "sourcePage": "https://jimmys.at/en/locations/lory",
+          "originalUrl": "https://jimmys.at/img/locations/lory/9/jimmys_apartments_lory_9_10.jpg",
+          "lastVerified": "2026-09-10",
           "role": "Bathroom",
-          "file": null,
-          "source": null,
-          "status": "IMAGE PENDING VERIFICATION"
+          "entityId": "stay-vienna-jimmys",
+          "status": "VERIFIED REAL PROPERTY PHOTO"
         }
       ],
       "execution": {
@@ -406,6 +484,12 @@
           "freeUntil": "2026-12-06T23:59:00+01:00",
           "afterDeadline": "2026-12-06 23:59前免费取消；之后收取CNY 1,463.80"
         }
+      },
+      "realityCheck": {
+        "source": "Google Maps search",
+        "sourcePage": "https://www.google.com/maps/search/?api=1&query=Jimmy's%20Apartments%20Lory%2C%20Lorystra%C3%9Fe%204%2C%20Simmering%2C%20Vienna%2C%201110%2C%20Austria",
+        "lastVerified": "2026-09-10",
+        "note": "Name, address and arrival context cross-check link."
       }
     },
     {
@@ -432,22 +516,37 @@
       "coordinateVerifiedAt": "2026-09-08",
       "images": [
         {
-          "role": "Exterior",
-          "file": null,
-          "source": null,
-          "status": "IMAGE PENDING VERIFICATION"
+          "file": "/images/hotels/stay-prague-ostas/entrance.webp",
+          "caption": "Hotel Ostaš signed street facade",
+          "source": "Official property website",
+          "sourcePage": "https://www.hotelostas.cz/en/contact/",
+          "originalUrl": "https://9e0fc22837.clvaw-cdnwnd.com/165ebff75ddda5ff0bd641de4f540faa/200000036-d25bbd25bd/20200611_150110.jpg?ph=9e0fc22837",
+          "lastVerified": "2026-09-10",
+          "role": "Entrance",
+          "entityId": "stay-prague-ostas",
+          "status": "VERIFIED REAL PROPERTY PHOTO"
         },
         {
+          "file": "/images/hotels/stay-prague-ostas/room.webp",
+          "caption": "Ostaš guest room interior",
+          "source": "Official property website",
+          "sourcePage": "https://www.hotelostas.cz/en/rooms/",
+          "originalUrl": "https://9e0fc22837.clvaw-cdnwnd.com/165ebff75ddda5ff0bd641de4f540faa/200000459-bec12bec17/700/7IV07588-1.webp?ph=9e0fc22837",
+          "lastVerified": "2026-09-10",
           "role": "Room",
-          "file": null,
-          "source": null,
-          "status": "IMAGE PENDING VERIFICATION"
+          "entityId": "stay-prague-ostas",
+          "status": "VERIFIED REAL PROPERTY PHOTO"
         },
         {
+          "file": "/images/hotels/stay-prague-ostas/bathroom.webp",
+          "caption": "Ostaš private bathroom",
+          "source": "Momondo / Expedia property photo",
+          "sourcePage": "https://www.momondo.com/hotels/prague/Hotel-Ostas.mhd200892.ksp",
+          "originalUrl": "https://content.r9cdn.net/himg/d1/5d/f2/expedia_group-200892-4ece35-416898.jpg",
+          "lastVerified": "2026-09-10",
           "role": "Bathroom",
-          "file": null,
-          "source": null,
-          "status": "IMAGE PENDING VERIFICATION"
+          "entityId": "stay-prague-ostas",
+          "status": "VERIFIED REAL PROPERTY PHOTO"
         }
       ],
       "execution": {
@@ -506,6 +605,12 @@
           "freeUntil": "2026-12-10T18:00:00+01:00",
           "afterDeadline": "2026-12-10 18:00前免费取消；之后分阶段收费，以凭证为准"
         }
+      },
+      "realityCheck": {
+        "source": "Google Maps search",
+        "sourcePage": "https://www.google.com/maps/search/?api=1&query=Self-Service%20Hotel%20Osta%C5%A1%20Praha%2C%20Orebitsk%C3%A1%208%2C%20Praha%203-%C5%BDi%C5%BEkov%2C%20Prague%203%2C%20Prague%2C%2013000%2C%20Czech%20Republic",
+        "lastVerified": "2026-09-10",
+        "note": "Name, address and arrival context cross-check link."
       }
     },
     {
@@ -532,22 +637,37 @@
       "coordinateVerifiedAt": "2026-09-08",
       "images": [
         {
-          "role": "Exterior",
-          "file": null,
-          "source": null,
-          "status": "IMAGE PENDING VERIFICATION"
+          "file": "/images/hotels/stay-paris-oden/entrance.webp",
+          "caption": "Oden Paris Ivry street facade and entrance",
+          "source": "Official property website",
+          "sourcePage": "https://oden-paris-ivry.com/",
+          "originalUrl": "https://oden-paris-ivry.com/wp-content/uploads/2023/07/oden-paris-ivry0002.jpg",
+          "lastVerified": "2026-09-10",
+          "role": "Entrance",
+          "entityId": "stay-paris-oden",
+          "status": "VERIFIED REAL PROPERTY PHOTO"
         },
         {
+          "file": "/images/hotels/stay-paris-oden/room.webp",
+          "caption": "Standard double room interior",
+          "source": "Official property website",
+          "sourcePage": "https://oden-paris-ivry.com/chambres/",
+          "originalUrl": "https://oden-paris-ivry.com/wp-content/uploads/2024/07/oden-double-standard0009.jpg",
+          "lastVerified": "2026-09-10",
           "role": "Room",
-          "file": null,
-          "source": null,
-          "status": "IMAGE PENDING VERIFICATION"
+          "entityId": "stay-paris-oden",
+          "status": "VERIFIED REAL PROPERTY PHOTO"
         },
         {
+          "file": "/images/hotels/stay-paris-oden/bathroom.webp",
+          "caption": "Standard double private bathroom",
+          "source": "Official property website",
+          "sourcePage": "https://oden-paris-ivry.com/chambres/",
+          "originalUrl": "https://oden-paris-ivry.com/wp-content/uploads/2024/07/oden-double-standard0007.jpg",
+          "lastVerified": "2026-09-10",
           "role": "Bathroom",
-          "file": null,
-          "source": null,
-          "status": "IMAGE PENDING VERIFICATION"
+          "entityId": "stay-paris-oden",
+          "status": "VERIFIED REAL PROPERTY PHOTO"
         }
       ],
       "execution": {
@@ -606,7 +726,14 @@
           "freeUntil": "2026-12-12T17:00:00+01:00",
           "afterDeadline": "2026-12-12 17:00前免费取消；之后分阶段收费，以凭证为准"
         }
+      },
+      "realityCheck": {
+        "source": "Google Maps search",
+        "sourcePage": "https://www.google.com/maps/search/?api=1&query=Oden%20Paris%20Ivry%2C%2023%20Avenue%20Pierre%20Semard%2C%20Ivry-sur-Seine%2C%2094200%2C%20France",
+        "lastVerified": "2026-09-10",
+        "note": "Name, address and arrival context cross-check link."
       }
     }
-  ]
+  ],
+  "imagesVerifiedAt": "2026-09-10"
 }

@@ -1,0 +1,96 @@
+{
+  "generatedAt": "2026-09-10T02:09:30.344Z",
+  "originalMissingImages": 146,
+  "remainingMissingImages": 98,
+  "addedImages": 48,
+  "publicImages": {
+    "count": 107,
+    "bytes": 11820650
+  },
+  "hotel": {
+    "complete": 6,
+    "total": 6,
+    "ids": [
+      "stay-rome-colonna",
+      "stay-florence-fonderia",
+      "stay-venice-ai-pini",
+      "stay-vienna-jimmys",
+      "stay-prague-ostas",
+      "stay-paris-oden"
+    ]
+  },
+  "hero": {
+    "covered": 18,
+    "total": 18,
+    "missingDays": []
+  },
+  "currentPlan": {
+    "covered": 34,
+    "total": 34,
+    "percentage": 100,
+    "missing": []
+  },
+  "topFood": {
+    "covered": 34,
+    "total": 34,
+    "percentage": 100,
+    "ids": [
+      "rome-armando",
+      "rome-roscioli",
+      "rome-forno",
+      "rome-santeustachio",
+      "rome-giolitti",
+      "rome-trapizzino",
+      "florence-sabatino",
+      "florence-cammillo",
+      "florence-ditta",
+      "florence-gustapizza",
+      "florence-rivoire",
+      "venice-ai-pini-restaurant",
+      "venice-plip",
+      "venice-florian",
+      "venice-viterossa",
+      "venice-frarys",
+      "venice-torrefazione",
+      "vienna-tarim",
+      "vienna-plachutta",
+      "vienna-kameel",
+      "vienna-central",
+      "vienna-demel",
+      "prague-eska",
+      "prague-kantyna",
+      "prague-savoy",
+      "prague-lokal",
+      "prague-choco",
+      "paris-la-table-de-mame",
+      "paris-breizh",
+      "paris-dupain",
+      "paris-enfants",
+      "paris-flore",
+      "paris-angelina",
+      "paris-stohrer"
+    ],
+    "missing": []
+  },
+  "topGym": {
+    "covered": 6,
+    "total": 6,
+    "percentage": 100,
+    "ids": [
+      "gym-rome-dabliu",
+      "gym-florence-klab",
+      "gym-mestre-mcfit",
+      "gym-vienna-jh",
+      "gym-prague-form",
+      "gym-paris-fpark"
+    ]
+  },
+  "brokenImages": [],
+  "duplicateImages": [],
+  "missingByCategory": {
+    "FOOD_IMAGES": 30,
+    "SHOPPING_REALITY": 31,
+    "PLACE_IMAGES": 24,
+    "PICK_IMAGES": 13
+  }
+}

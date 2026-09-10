@@ -1,103 +1,17 @@
 {
-  "generatedAt": "2026-09-10T00:49:36.851Z",
-  "total": 146,
+  "generatedAt": "2026-09-10T02:09:30.163Z",
+  "total": 98,
   "items": [
-    {
-      "category": "FOOD_IMAGES",
-      "id": "rome-armando",
-      "name": "Armando al Pantheon",
-      "city": "罗马",
-      "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
-      ],
-      "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
-      "priority": "P1"
-    },
-    {
-      "category": "FOOD_IMAGES",
-      "id": "rome-roscioli",
-      "name": "Roscioli Salumeria con Cucina",
-      "city": "罗马",
-      "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
-      ],
-      "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
-      "priority": "P1"
-    },
-    {
-      "category": "FOOD_IMAGES",
-      "id": "rome-trapizzino",
-      "name": "Trapizzino Trastevere",
-      "city": "罗马",
-      "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
-      ],
-      "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
-      "priority": "P1"
-    },
-    {
-      "category": "FOOD_IMAGES",
-      "id": "rome-santeustachio",
-      "name": "Sant’Eustachio Il Caffè",
-      "city": "罗马",
-      "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
-      ],
-      "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
-      "priority": "P1"
-    },
     {
       "category": "FOOD_IMAGES",
       "id": "florence-vinaio",
       "name": "All’Antico Vinaio",
       "city": "佛罗伦萨",
       "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
+        "真实场所/食物图"
       ],
       "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
-      "priority": "P1"
-    },
-    {
-      "category": "FOOD_IMAGES",
-      "id": "florence-sabatino",
-      "name": "Trattoria Sabatino",
-      "city": "佛罗伦萨",
-      "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
-      ],
-      "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
-      "priority": "P1"
-    },
-    {
-      "category": "FOOD_IMAGES",
-      "id": "florence-ditta",
-      "name": "Ditta Artigianale",
-      "city": "佛罗伦萨",
-      "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
-      ],
-      "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "nextAction": "优先官网，其次可靠平台的可追溯真实图片。",
       "priority": "P1"
     },
     {
@@ -106,26 +20,10 @@
       "name": "Da Nerbone",
       "city": "佛罗伦萨",
       "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
+        "真实场所/食物图"
       ],
       "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
-      "priority": "P1"
-    },
-    {
-      "category": "FOOD_IMAGES",
-      "id": "venice-viterossa",
-      "name": "Hostaria Vite Rossa",
-      "city": "威尼斯",
-      "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
-      ],
-      "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "nextAction": "优先官网，其次可靠平台的可追溯真实图片。",
       "priority": "P1"
     },
     {
@@ -134,12 +32,10 @@
       "name": "Antiche Carampane",
       "city": "威尼斯",
       "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
+        "真实场所/食物图"
       ],
       "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "nextAction": "优先官网，其次可靠平台的可追溯真实图片。",
       "priority": "P1"
     },
     {
@@ -148,26 +44,10 @@
       "name": "Osteria alla Staffa",
       "city": "威尼斯",
       "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
+        "真实场所/食物图"
       ],
       "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
-      "priority": "P1"
-    },
-    {
-      "category": "FOOD_IMAGES",
-      "id": "venice-florian",
-      "name": "Caffè Florian",
-      "city": "威尼斯",
-      "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
-      ],
-      "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "nextAction": "优先官网，其次可靠平台的可追溯真实图片。",
       "priority": "P1"
     },
     {
@@ -176,26 +56,10 @@
       "name": "Figlmüller Wollzeile",
       "city": "维也纳",
       "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
+        "真实场所/食物图"
       ],
       "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
-      "priority": "P1"
-    },
-    {
-      "category": "FOOD_IMAGES",
-      "id": "vienna-kameel",
-      "name": "Zum Schwarzen Kameel",
-      "city": "维也纳",
-      "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
-      ],
-      "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "nextAction": "优先官网，其次可靠平台的可追溯真实图片。",
       "priority": "P1"
     },
     {
@@ -204,12 +68,10 @@
       "name": "Café Sperl",
       "city": "维也纳",
       "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
+        "真实场所/食物图"
       ],
       "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "nextAction": "优先官网，其次可靠平台的可追溯真实图片。",
       "priority": "P1"
     },
     {
@@ -218,26 +80,10 @@
       "name": "Rathausplatz Christmas Market",
       "city": "维也纳",
       "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
+        "真实场所/食物图"
       ],
       "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
-      "priority": "P1"
-    },
-    {
-      "category": "FOOD_IMAGES",
-      "id": "prague-lokal",
-      "name": "Lokál Dlouhááá",
-      "city": "布拉格",
-      "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
-      ],
-      "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "nextAction": "优先官网，其次可靠平台的可追溯真实图片。",
       "priority": "P1"
     },
     {
@@ -246,40 +92,10 @@
       "name": "Café Louvre",
       "city": "布拉格",
       "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
+        "真实场所/食物图"
       ],
       "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
-      "priority": "P1"
-    },
-    {
-      "category": "FOOD_IMAGES",
-      "id": "prague-kantyna",
-      "name": "Kantýna",
-      "city": "布拉格",
-      "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
-      ],
-      "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
-      "priority": "P1"
-    },
-    {
-      "category": "FOOD_IMAGES",
-      "id": "prague-eska",
-      "name": "Eska",
-      "city": "布拉格",
-      "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
-      ],
-      "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "nextAction": "优先官网，其次可靠平台的可追溯真实图片。",
       "priority": "P1"
     },
     {
@@ -288,40 +104,10 @@
       "name": "Bouillon Pigalle",
       "city": "巴黎",
       "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
+        "真实场所/食物图"
       ],
       "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
-      "priority": "P1"
-    },
-    {
-      "category": "FOOD_IMAGES",
-      "id": "paris-breizh",
-      "name": "Breizh Café",
-      "city": "巴黎",
-      "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
-      ],
-      "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
-      "priority": "P1"
-    },
-    {
-      "category": "FOOD_IMAGES",
-      "id": "paris-flore",
-      "name": "Café de Flore",
-      "city": "巴黎",
-      "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
-      ],
-      "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "nextAction": "优先官网，其次可靠平台的可追溯真实图片。",
       "priority": "P1"
     },
     {
@@ -330,12 +116,10 @@
       "name": "La Boulangerie du Louvre",
       "city": "巴黎",
       "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
+        "真实场所/食物图"
       ],
       "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "nextAction": "优先官网，其次可靠平台的可追溯真实图片。",
       "priority": "P1"
     },
     {
@@ -344,12 +128,10 @@
       "name": "Pink Mamma",
       "city": "巴黎",
       "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
+        "真实场所/食物图"
       ],
       "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "nextAction": "优先官网，其次可靠平台的可追溯真实图片。",
       "priority": "P1"
     },
     {
@@ -358,12 +140,10 @@
       "name": "Pizzarium Bonci",
       "city": "罗马",
       "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
+        "真实场所/食物图"
       ],
       "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "nextAction": "优先官网，其次可靠平台的可追溯真实图片。",
       "priority": "P1"
     },
     {
@@ -372,12 +152,10 @@
       "name": "Felice a Testaccio",
       "city": "罗马",
       "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
+        "真实场所/食物图"
       ],
       "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "nextAction": "优先官网，其次可靠平台的可追溯真实图片。",
       "priority": "P1"
     },
     {
@@ -386,12 +164,10 @@
       "name": "Flavio al Velavevodetto",
       "city": "罗马",
       "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
+        "真实场所/食物图"
       ],
       "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "nextAction": "优先官网，其次可靠平台的可追溯真实图片。",
       "priority": "P1"
     },
     {
@@ -400,54 +176,10 @@
       "name": "Two Sizes Tiramisù",
       "city": "罗马",
       "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
+        "真实场所/食物图"
       ],
       "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
-      "priority": "P1"
-    },
-    {
-      "category": "FOOD_IMAGES",
-      "id": "rome-forno",
-      "name": "Forno Campo de’ Fiori",
-      "city": "罗马",
-      "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
-      ],
-      "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
-      "priority": "P1"
-    },
-    {
-      "category": "FOOD_IMAGES",
-      "id": "rome-giolitti",
-      "name": "Giolitti",
-      "city": "罗马",
-      "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
-      ],
-      "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
-      "priority": "P1"
-    },
-    {
-      "category": "FOOD_IMAGES",
-      "id": "florence-cammillo",
-      "name": "Cammillo Trattoria",
-      "city": "佛罗伦萨",
-      "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
-      ],
-      "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "nextAction": "优先官网，其次可靠平台的可追溯真实图片。",
       "priority": "P1"
     },
     {
@@ -456,26 +188,10 @@
       "name": "Cibrèo Trattoria",
       "city": "佛罗伦萨",
       "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
+        "真实场所/食物图"
       ],
       "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
-      "priority": "P1"
-    },
-    {
-      "category": "FOOD_IMAGES",
-      "id": "florence-gustapizza",
-      "name": "Gustapizza",
-      "city": "佛罗伦萨",
-      "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
-      ],
-      "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "nextAction": "优先官网，其次可靠平台的可追溯真实图片。",
       "priority": "P1"
     },
     {
@@ -484,26 +200,10 @@
       "name": "La Ménagère",
       "city": "佛罗伦萨",
       "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
+        "真实场所/食物图"
       ],
       "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
-      "priority": "P1"
-    },
-    {
-      "category": "FOOD_IMAGES",
-      "id": "florence-rivoire",
-      "name": "Rivoire",
-      "city": "佛罗伦萨",
-      "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
-      ],
-      "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "nextAction": "优先官网，其次可靠平台的可追溯真实图片。",
       "priority": "P1"
     },
     {
@@ -512,40 +212,10 @@
       "name": "Vivoli Gelateria",
       "city": "佛罗伦萨",
       "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
+        "真实场所/食物图"
       ],
       "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
-      "priority": "P1"
-    },
-    {
-      "category": "FOOD_IMAGES",
-      "id": "venice-plip",
-      "name": "Osteria Plip",
-      "city": "威尼斯",
-      "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
-      ],
-      "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
-      "priority": "P1"
-    },
-    {
-      "category": "FOOD_IMAGES",
-      "id": "venice-frarys",
-      "name": "Frary’s",
-      "city": "威尼斯",
-      "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
-      ],
-      "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "nextAction": "优先官网，其次可靠平台的可追溯真实图片。",
       "priority": "P1"
     },
     {
@@ -554,12 +224,10 @@
       "name": "Ristorante Al Covo",
       "city": "威尼斯",
       "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
+        "真实场所/食物图"
       ],
       "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "nextAction": "优先官网，其次可靠平台的可追溯真实图片。",
       "priority": "P1"
     },
     {
@@ -568,26 +236,10 @@
       "name": "Il Paradiso Perduto",
       "city": "威尼斯",
       "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
+        "真实场所/食物图"
       ],
       "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
-      "priority": "P1"
-    },
-    {
-      "category": "FOOD_IMAGES",
-      "id": "venice-torrefazione",
-      "name": "Torrefazione Cannaregio",
-      "city": "威尼斯",
-      "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
-      ],
-      "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "nextAction": "优先官网，其次可靠平台的可追溯真实图片。",
       "priority": "P1"
     },
     {
@@ -596,54 +248,10 @@
       "name": "Gelatoteca Suso",
       "city": "威尼斯",
       "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
+        "真实场所/食物图"
       ],
       "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
-      "priority": "P1"
-    },
-    {
-      "category": "FOOD_IMAGES",
-      "id": "vienna-central",
-      "name": "Café Central",
-      "city": "维也纳",
-      "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
-      ],
-      "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
-      "priority": "P1"
-    },
-    {
-      "category": "FOOD_IMAGES",
-      "id": "vienna-demel",
-      "name": "Demel",
-      "city": "维也纳",
-      "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
-      ],
-      "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
-      "priority": "P1"
-    },
-    {
-      "category": "FOOD_IMAGES",
-      "id": "vienna-plachutta",
-      "name": "Plachutta Wollzeile",
-      "city": "维也纳",
-      "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
-      ],
-      "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "nextAction": "优先官网，其次可靠平台的可追溯真实图片。",
       "priority": "P1"
     },
     {
@@ -652,12 +260,10 @@
       "name": "NENI am Naschmarkt",
       "city": "维也纳",
       "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
+        "真实场所/食物图"
       ],
       "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "nextAction": "优先官网，其次可靠平台的可追溯真实图片。",
       "priority": "P1"
     },
     {
@@ -666,12 +272,10 @@
       "name": "Café Landtmann",
       "city": "维也纳",
       "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
+        "真实场所/食物图"
       ],
       "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "nextAction": "优先官网，其次可靠平台的可追溯真实图片。",
       "priority": "P1"
     },
     {
@@ -680,26 +284,10 @@
       "name": "Vollpension",
       "city": "维也纳",
       "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
+        "真实场所/食物图"
       ],
       "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
-      "priority": "P1"
-    },
-    {
-      "category": "FOOD_IMAGES",
-      "id": "prague-savoy",
-      "name": "Café Savoy",
-      "city": "布拉格",
-      "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
-      ],
-      "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "nextAction": "优先官网，其次可靠平台的可追溯真实图片。",
       "priority": "P1"
     },
     {
@@ -708,12 +296,10 @@
       "name": "Kuchyň",
       "city": "布拉格",
       "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
+        "真实场所/食物图"
       ],
       "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "nextAction": "优先官网，其次可靠平台的可追溯真实图片。",
       "priority": "P1"
     },
     {
@@ -722,12 +308,10 @@
       "name": "U Kroka",
       "city": "布拉格",
       "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
+        "真实场所/食物图"
       ],
       "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "nextAction": "优先官网，其次可靠平台的可追溯真实图片。",
       "priority": "P1"
     },
     {
@@ -736,26 +320,10 @@
       "name": "Sisters Bistro",
       "city": "布拉格",
       "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
+        "真实场所/食物图"
       ],
       "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
-      "priority": "P1"
-    },
-    {
-      "category": "FOOD_IMAGES",
-      "id": "prague-choco",
-      "name": "Choco Café",
-      "city": "布拉格",
-      "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
-      ],
-      "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "nextAction": "优先官网，其次可靠平台的可追溯真实图片。",
       "priority": "P1"
     },
     {
@@ -764,12 +332,10 @@
       "name": "EMA espresso bar",
       "city": "布拉格",
       "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
+        "真实场所/食物图"
       ],
       "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "nextAction": "优先官网，其次可靠平台的可追溯真实图片。",
       "priority": "P1"
     },
     {
@@ -778,26 +344,10 @@
       "name": "Bouillon Chartier Grands Boulevards",
       "city": "巴黎",
       "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
+        "真实场所/食物图"
       ],
       "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
-      "priority": "P1"
-    },
-    {
-      "category": "FOOD_IMAGES",
-      "id": "paris-angelina",
-      "name": "Angelina Rivoli",
-      "city": "巴黎",
-      "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
-      ],
-      "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "nextAction": "优先官网，其次可靠平台的可追溯真实图片。",
       "priority": "P1"
     },
     {
@@ -806,181 +356,11 @@
       "name": "Le Relais de l’Entrecôte",
       "city": "巴黎",
       "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
+        "真实场所/食物图"
       ],
       "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
+      "nextAction": "优先官网，其次可靠平台的可追溯真实图片。",
       "priority": "P1"
-    },
-    {
-      "category": "FOOD_IMAGES",
-      "id": "paris-dupain",
-      "name": "Du Pain et des Idées",
-      "city": "巴黎",
-      "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
-      ],
-      "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
-      "priority": "P1"
-    },
-    {
-      "category": "FOOD_IMAGES",
-      "id": "paris-stohrer",
-      "name": "Stohrer",
-      "city": "巴黎",
-      "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
-      ],
-      "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
-      "priority": "P1"
-    },
-    {
-      "category": "FOOD_IMAGES",
-      "id": "paris-enfants",
-      "name": "Les Enfants du Marché",
-      "city": "巴黎",
-      "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
-      ],
-      "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
-      "priority": "P1"
-    },
-    {
-      "category": "FOOD_IMAGES",
-      "id": "venice-ai-pini-restaurant",
-      "name": "Restaurant Ai Pini",
-      "city": "威尼斯",
-      "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
-      ],
-      "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
-      "priority": "P1"
-    },
-    {
-      "category": "FOOD_IMAGES",
-      "id": "vienna-tarim",
-      "name": "Tarim Uighur Restaurant",
-      "city": "维也纳",
-      "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
-      ],
-      "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
-      "priority": "P1"
-    },
-    {
-      "category": "FOOD_IMAGES",
-      "id": "paris-la-table-de-mame",
-      "name": "La Table de Mame",
-      "city": "巴黎",
-      "fields": [
-        "代表食物图",
-        "环境图",
-        "菜单预览"
-      ],
-      "reason": "真实餐厅与菜品图片待确认",
-      "nextAction": "优先官网Menu/Instagram，再核可靠平台的真实用户图。",
-      "priority": "P1"
-    },
-    {
-      "category": "HOTEL_IMAGES",
-      "id": "stay-rome-colonna-images",
-      "name": "Colonna Palace Hotel",
-      "city": "罗马",
-      "fields": [
-        "Exterior",
-        "Room",
-        "Bathroom"
-      ],
-      "reason": "酒店外观、房间与卫浴图尚未完成来源和画面核验。",
-      "nextAction": "只补官网或可追溯实拍；完成前显示紧凑“图片待核”。",
-      "priority": "P0"
-    },
-    {
-      "category": "HOTEL_IMAGES",
-      "id": "stay-florence-fonderia-images",
-      "name": "La Fonderia Firenze",
-      "city": "佛罗伦萨",
-      "fields": [
-        "Exterior",
-        "Room",
-        "Bathroom"
-      ],
-      "reason": "酒店外观、房间与卫浴图尚未完成来源和画面核验。",
-      "nextAction": "只补官网或可追溯实拍；完成前显示紧凑“图片待核”。",
-      "priority": "P0"
-    },
-    {
-      "category": "HOTEL_IMAGES",
-      "id": "stay-venice-ai-pini-images",
-      "name": "Park Hotel Ai Pini & Restaurant Ai Pini",
-      "city": "威尼斯",
-      "fields": [
-        "Exterior",
-        "Room",
-        "Bathroom"
-      ],
-      "reason": "酒店外观、房间与卫浴图尚未完成来源和画面核验。",
-      "nextAction": "只补官网或可追溯实拍；完成前显示紧凑“图片待核”。",
-      "priority": "P0"
-    },
-    {
-      "category": "HOTEL_IMAGES",
-      "id": "stay-vienna-jimmys-images",
-      "name": "Jimmy's Apartments Lory",
-      "city": "维也纳",
-      "fields": [
-        "Exterior",
-        "Room",
-        "Bathroom"
-      ],
-      "reason": "酒店外观、房间与卫浴图尚未完成来源和画面核验。",
-      "nextAction": "只补官网或可追溯实拍；完成前显示紧凑“图片待核”。",
-      "priority": "P0"
-    },
-    {
-      "category": "HOTEL_IMAGES",
-      "id": "stay-prague-ostas-images",
-      "name": "Self-Service Hotel Ostaš Praha",
-      "city": "布拉格",
-      "fields": [
-        "Exterior",
-        "Room",
-        "Bathroom"
-      ],
-      "reason": "酒店外观、房间与卫浴图尚未完成来源和画面核验。",
-      "nextAction": "只补官网或可追溯实拍；完成前显示紧凑“图片待核”。",
-      "priority": "P0"
-    },
-    {
-      "category": "HOTEL_IMAGES",
-      "id": "stay-paris-oden-images",
-      "name": "Oden Paris Ivry",
-      "city": "巴黎",
-      "fields": [
-        "Exterior",
-        "Room",
-        "Bathroom"
-      ],
-      "reason": "酒店外观、房间与卫浴图尚未完成来源和画面核验。",
-      "nextAction": "只补官网或可追溯实拍；完成前显示紧凑“图片待核”。",
-      "priority": "P0"
     },
     {
       "category": "SHOPPING_REALITY",
@@ -1687,30 +1067,6 @@
     },
     {
       "category": "PICK_IMAGES",
-      "id": "罗马-Best Meal",
-      "name": "Best Meal",
-      "city": "罗马",
-      "fields": [
-        "image"
-      ],
-      "reason": "Pick引用的Entity暂无图片。",
-      "nextAction": "只在Entity补图，不在Picks复制文件。",
-      "priority": "P2"
-    },
-    {
-      "category": "PICK_IMAGES",
-      "id": "罗马-Best Coffee",
-      "name": "Best Coffee",
-      "city": "罗马",
-      "fields": [
-        "image"
-      ],
-      "reason": "Pick引用的Entity暂无图片。",
-      "nextAction": "只在Entity补图，不在Picks复制文件。",
-      "priority": "P2"
-    },
-    {
-      "category": "PICK_IMAGES",
       "id": "罗马-Best Night Walk",
       "name": "Best Night Walk",
       "city": "罗马",
@@ -1735,30 +1091,6 @@
     },
     {
       "category": "PICK_IMAGES",
-      "id": "佛罗伦萨-Best Meal",
-      "name": "Best Meal",
-      "city": "佛罗伦萨",
-      "fields": [
-        "image"
-      ],
-      "reason": "Pick引用的Entity暂无图片。",
-      "nextAction": "只在Entity补图，不在Picks复制文件。",
-      "priority": "P2"
-    },
-    {
-      "category": "PICK_IMAGES",
-      "id": "佛罗伦萨-Best Coffee",
-      "name": "Best Coffee",
-      "city": "佛罗伦萨",
-      "fields": [
-        "image"
-      ],
-      "reason": "Pick引用的Entity暂无图片。",
-      "nextAction": "只在Entity补图，不在Picks复制文件。",
-      "priority": "P2"
-    },
-    {
-      "category": "PICK_IMAGES",
       "id": "佛罗伦萨-Best Shopping",
       "name": "Best Shopping",
       "city": "佛罗伦萨",
@@ -1773,30 +1105,6 @@
       "category": "PICK_IMAGES",
       "id": "威尼斯-Best Photo Spot",
       "name": "Best Photo Spot",
-      "city": "威尼斯",
-      "fields": [
-        "image"
-      ],
-      "reason": "Pick引用的Entity暂无图片。",
-      "nextAction": "只在Entity补图，不在Picks复制文件。",
-      "priority": "P2"
-    },
-    {
-      "category": "PICK_IMAGES",
-      "id": "威尼斯-Best Meal",
-      "name": "Best Meal",
-      "city": "威尼斯",
-      "fields": [
-        "image"
-      ],
-      "reason": "Pick引用的Entity暂无图片。",
-      "nextAction": "只在Entity补图，不在Picks复制文件。",
-      "priority": "P2"
-    },
-    {
-      "category": "PICK_IMAGES",
-      "id": "威尼斯-Best Coffee / Dessert",
-      "name": "Best Coffee / Dessert",
       "city": "威尼斯",
       "fields": [
         "image"
@@ -1855,18 +1163,6 @@
     },
     {
       "category": "PICK_IMAGES",
-      "id": "布拉格-Best Meal",
-      "name": "Best Meal",
-      "city": "布拉格",
-      "fields": [
-        "image"
-      ],
-      "reason": "Pick引用的Entity暂无图片。",
-      "nextAction": "只在Entity补图，不在Picks复制文件。",
-      "priority": "P2"
-    },
-    {
-      "category": "PICK_IMAGES",
       "id": "布拉格-Best Coffee",
       "name": "Best Coffee",
       "city": "布拉格",
@@ -1905,18 +1201,6 @@
       "category": "PICK_IMAGES",
       "id": "巴黎-Best Meal",
       "name": "Best Meal",
-      "city": "巴黎",
-      "fields": [
-        "image"
-      ],
-      "reason": "Pick引用的Entity暂无图片。",
-      "nextAction": "只在Entity补图，不在Picks复制文件。",
-      "priority": "P2"
-    },
-    {
-      "category": "PICK_IMAGES",
-      "id": "巴黎-Best Coffee",
-      "name": "Best Coffee",
       "city": "巴黎",
       "fields": [
         "image"

@@ -174,6 +174,11 @@ type HotelRecord = {
     role: string;
     file: string | null;
     source: string | null;
+    caption?: string;
+    sourcePage?: string;
+    originalUrl?: string;
+    lastVerified?: string;
+    entityId?: string;
     status: string;
   }[];
 };

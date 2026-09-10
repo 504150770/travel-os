@@ -1,12 +1,12 @@
 # UNVERIFIED DATA LIST
 
-Generated: 2026-09-10T00:49:36.851Z
+Generated: 2026-09-10T02:09:30.163Z
 
 > 真实性优先。以下项目没有被当作已验证事实。
 
-P0 35 · P1 156 · P2 106
+P0 29 · P1 122 · P2 98
 
-## P0 · 35
+## P0 · 29
 
 - **罗马｜Colonna Palace Hotel** · REAL_HOTEL_UNVERIFIED — 暖气、noise.street、noise.wall、noise.corridor、noise.mechanical。入住凭证没有提供这些运营与噪音事实。 下一步：取消线前向酒店书面确认，未回复前保持待确认。
 - **佛罗伦萨｜La Fonderia Firenze** · REAL_HOTEL_UNVERIFIED — 暖气、noise.street、noise.wall、noise.corridor、noise.mechanical。入住凭证没有提供这些运营与噪音事实。 下一步：取消线前向酒店书面确认，未回复前保持待确认。
@@ -14,15 +14,9 @@ P0 35 · P1 156 · P2 106
 - **维也纳｜Jimmy's Apartments Lory** · REAL_HOTEL_UNVERIFIED — 暖气、noise.street、noise.wall、noise.corridor、noise.mechanical。入住凭证没有提供这些运营与噪音事实。 下一步：取消线前向酒店书面确认，未回复前保持待确认。
 - **布拉格｜Self-Service Hotel Ostaš Praha** · REAL_HOTEL_UNVERIFIED — 暖气、noise.street、noise.wall、noise.corridor、noise.mechanical。入住凭证没有提供这些运营与噪音事实。 下一步：取消线前向酒店书面确认，未回复前保持待确认。
 - **巴黎｜Oden Paris Ivry** · REAL_HOTEL_UNVERIFIED — 暖气、noise.street、noise.wall、noise.corridor、noise.mechanical。入住凭证没有提供这些运营与噪音事实。 下一步：取消线前向酒店书面确认，未回复前保持待确认。
-- **罗马｜Colonna Palace Hotel** · HOTEL_IMAGES — Exterior、Room、Bathroom。酒店外观、房间与卫浴图尚未完成来源和画面核验。 下一步：只补官网或可追溯实拍；完成前显示紧凑“图片待核”。
-- **佛罗伦萨｜La Fonderia Firenze** · HOTEL_IMAGES — Exterior、Room、Bathroom。酒店外观、房间与卫浴图尚未完成来源和画面核验。 下一步：只补官网或可追溯实拍；完成前显示紧凑“图片待核”。
 - **佛罗伦萨｜La Fonderia Firenze** · HOTEL_CHECKIN_LINK — onlineCheckIn.link。入住动作已知，但专属链接只存在于订单邮件或尚未收到。 下一步：在入住邮件到达后补入专属入口。
-- **威尼斯｜Park Hotel Ai Pini & Restaurant Ai Pini** · HOTEL_IMAGES — Exterior、Room、Bathroom。酒店外观、房间与卫浴图尚未完成来源和画面核验。 下一步：只补官网或可追溯实拍；完成前显示紧凑“图片待核”。
-- **维也纳｜Jimmy's Apartments Lory** · HOTEL_IMAGES — Exterior、Room、Bathroom。酒店外观、房间与卫浴图尚未完成来源和画面核验。 下一步：只补官网或可追溯实拍；完成前显示紧凑“图片待核”。
 - **维也纳｜Jimmy's Apartments Lory** · HOTEL_CHECKIN_LINK — onlineCheckIn.link。入住动作已知，但专属链接只存在于订单邮件或尚未收到。 下一步：在入住邮件到达后补入专属入口。
-- **布拉格｜Self-Service Hotel Ostaš Praha** · HOTEL_IMAGES — Exterior、Room、Bathroom。酒店外观、房间与卫浴图尚未完成来源和画面核验。 下一步：只补官网或可追溯实拍；完成前显示紧凑“图片待核”。
 - **布拉格｜Self-Service Hotel Ostaš Praha** · HOTEL_CHECKIN_LINK — onlineCheckIn.link。入住动作已知，但专属链接只存在于订单邮件或尚未收到。 下一步：在入住邮件到达后补入专属入口。
-- **巴黎｜Oden Paris Ivry** · HOTEL_IMAGES — Exterior、Room、Bathroom。酒店外观、房间与卫浴图尚未完成来源和画面核验。 下一步：只补官网或可追溯实拍；完成前显示紧凑“图片待核”。
 - **Day 4｜Day 4 公交段** · ROUTE_TRANSIT — transitMin、transitRoute。步行和出租车路网已核，但实时公共交通班次尚未核验。 下一步：出发前或当天用地图按酒店出发时间刷新。
 - **Day 5｜Day 5 公交段** · ROUTE_TRANSIT — transitMin、transitRoute。步行和出租车路网已核，但实时公共交通班次尚未核验。 下一步：出发前或当天用地图按酒店出发时间刷新。
 - **Day 6｜Day 6 公交段** · ROUTE_TRANSIT — transitMin、transitRoute。步行和出租车路网已核，但实时公共交通班次尚未核验。 下一步：出发前或当天用地图按酒店出发时间刷新。
@@ -44,131 +38,97 @@ P0 35 · P1 156 · P2 106
 - **Day 13｜PRG → ORY / CDG → Oden Paris Ivry** · TRANSPORT_LIVE_DATA — 实时班次、总价、23kg行李、改签条件。官方路线存在，但目标日期具体产品尚未形成可出票事实。 下一步：在官方出票页按门到门时间刷新并锁定。
 - **Day 17｜CDG → CAN / HKG** · TRANSPORT_LIVE_DATA — 实时班次、总价、23kg行李、改签条件。官方路线存在，但目标日期具体产品尚未形成可出票事实。 下一步：在官方出票页按门到门时间刷新并锁定。
 
-## P1 · 156
+## P1 · 122
 
-- **罗马｜Armando al Pantheon** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
 - **罗马｜Armando al Pantheon** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **罗马｜Roscioli Salumeria con Cucina** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
 - **罗马｜Roscioli Salumeria con Cucina** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **罗马｜Trapizzino Trastevere** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
 - **罗马｜Trapizzino Trastevere** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **罗马｜Sant’Eustachio Il Caffè** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
 - **罗马｜Sant’Eustachio Il Caffè** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **佛罗伦萨｜All’Antico Vinaio** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **佛罗伦萨｜All’Antico Vinaio** · FOOD_IMAGES — 真实场所/食物图。真实餐厅与菜品图片待确认 下一步：优先官网，其次可靠平台的可追溯真实图片。
 - **佛罗伦萨｜All’Antico Vinaio** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **佛罗伦萨｜Trattoria Sabatino** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
-- **佛罗伦萨｜Ditta Artigianale** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
 - **佛罗伦萨｜Ditta Artigianale** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **佛罗伦萨｜Da Nerbone** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **佛罗伦萨｜Da Nerbone** · FOOD_IMAGES — 真实场所/食物图。真实餐厅与菜品图片待确认 下一步：优先官网，其次可靠平台的可追溯真实图片。
 - **佛罗伦萨｜Da Nerbone** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **威尼斯｜Hostaria Vite Rossa** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
 - **威尼斯｜Hostaria Vite Rossa** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **威尼斯｜Antiche Carampane** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **威尼斯｜Antiche Carampane** · FOOD_IMAGES — 真实场所/食物图。真实餐厅与菜品图片待确认 下一步：优先官网，其次可靠平台的可追溯真实图片。
 - **威尼斯｜Antiche Carampane** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **威尼斯｜Osteria alla Staffa** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **威尼斯｜Osteria alla Staffa** · FOOD_IMAGES — 真实场所/食物图。真实餐厅与菜品图片待确认 下一步：优先官网，其次可靠平台的可追溯真实图片。
 - **威尼斯｜Osteria alla Staffa** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **威尼斯｜Caffè Florian** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
 - **威尼斯｜Caffè Florian** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **维也纳｜Figlmüller Wollzeile** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
-- **维也纳｜Zum Schwarzen Kameel** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **维也纳｜Figlmüller Wollzeile** · FOOD_IMAGES — 真实场所/食物图。真实餐厅与菜品图片待确认 下一步：优先官网，其次可靠平台的可追溯真实图片。
 - **维也纳｜Zum Schwarzen Kameel** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **维也纳｜Café Sperl** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **维也纳｜Café Sperl** · FOOD_IMAGES — 真实场所/食物图。真实餐厅与菜品图片待确认 下一步：优先官网，其次可靠平台的可追溯真实图片。
 - **维也纳｜Café Sperl** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **维也纳｜Rathausplatz Christmas Market** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **维也纳｜Rathausplatz Christmas Market** · FOOD_IMAGES — 真实场所/食物图。真实餐厅与菜品图片待确认 下一步：优先官网，其次可靠平台的可追溯真实图片。
 - **维也纳｜Rathausplatz Christmas Market** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **布拉格｜Lokál Dlouhááá** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
-- **布拉格｜Café Louvre** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **布拉格｜Café Louvre** · FOOD_IMAGES — 真实场所/食物图。真实餐厅与菜品图片待确认 下一步：优先官网，其次可靠平台的可追溯真实图片。
 - **布拉格｜Café Louvre** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **布拉格｜Kantýna** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
 - **布拉格｜Kantýna** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **布拉格｜Eska** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
 - **布拉格｜Eska** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **巴黎｜Bouillon Pigalle** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **巴黎｜Bouillon Pigalle** · FOOD_IMAGES — 真实场所/食物图。真实餐厅与菜品图片待确认 下一步：优先官网，其次可靠平台的可追溯真实图片。
 - **巴黎｜Bouillon Pigalle** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **巴黎｜Breizh Café** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
-- **巴黎｜Café de Flore** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
 - **巴黎｜Café de Flore** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **巴黎｜La Boulangerie du Louvre** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **巴黎｜La Boulangerie du Louvre** · FOOD_IMAGES — 真实场所/食物图。真实餐厅与菜品图片待确认 下一步：优先官网，其次可靠平台的可追溯真实图片。
 - **巴黎｜La Boulangerie du Louvre** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **巴黎｜Pink Mamma** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **巴黎｜Pink Mamma** · FOOD_IMAGES — 真实场所/食物图。真实餐厅与菜品图片待确认 下一步：优先官网，其次可靠平台的可追溯真实图片。
 - **巴黎｜Pink Mamma** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **罗马｜Pizzarium Bonci** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **罗马｜Pizzarium Bonci** · FOOD_IMAGES — 真实场所/食物图。真实餐厅与菜品图片待确认 下一步：优先官网，其次可靠平台的可追溯真实图片。
 - **罗马｜Pizzarium Bonci** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **罗马｜Felice a Testaccio** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **罗马｜Felice a Testaccio** · FOOD_IMAGES — 真实场所/食物图。真实餐厅与菜品图片待确认 下一步：优先官网，其次可靠平台的可追溯真实图片。
 - **罗马｜Felice a Testaccio** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **罗马｜Flavio al Velavevodetto** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **罗马｜Flavio al Velavevodetto** · FOOD_IMAGES — 真实场所/食物图。真实餐厅与菜品图片待确认 下一步：优先官网，其次可靠平台的可追溯真实图片。
 - **罗马｜Flavio al Velavevodetto** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **罗马｜Two Sizes Tiramisù** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **罗马｜Two Sizes Tiramisù** · FOOD_IMAGES — 真实场所/食物图。真实餐厅与菜品图片待确认 下一步：优先官网，其次可靠平台的可追溯真实图片。
 - **罗马｜Two Sizes Tiramisù** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **罗马｜Forno Campo de’ Fiori** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
 - **罗马｜Forno Campo de’ Fiori** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **罗马｜Giolitti** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
 - **罗马｜Giolitti** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **佛罗伦萨｜Cammillo Trattoria** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
 - **佛罗伦萨｜Cammillo Trattoria** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **佛罗伦萨｜Cibrèo Trattoria** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **佛罗伦萨｜Cibrèo Trattoria** · FOOD_IMAGES — 真实场所/食物图。真实餐厅与菜品图片待确认 下一步：优先官网，其次可靠平台的可追溯真实图片。
 - **佛罗伦萨｜Cibrèo Trattoria** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **佛罗伦萨｜Gustapizza** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
 - **佛罗伦萨｜Gustapizza** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **佛罗伦萨｜La Ménagère** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **佛罗伦萨｜La Ménagère** · FOOD_IMAGES — 真实场所/食物图。真实餐厅与菜品图片待确认 下一步：优先官网，其次可靠平台的可追溯真实图片。
 - **佛罗伦萨｜La Ménagère** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **佛罗伦萨｜Rivoire** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
 - **佛罗伦萨｜Rivoire** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **佛罗伦萨｜Vivoli Gelateria** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **佛罗伦萨｜Vivoli Gelateria** · FOOD_IMAGES — 真实场所/食物图。真实餐厅与菜品图片待确认 下一步：优先官网，其次可靠平台的可追溯真实图片。
 - **佛罗伦萨｜Vivoli Gelateria** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **威尼斯｜Osteria Plip** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
 - **威尼斯｜Osteria Plip** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **威尼斯｜Frary’s** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
 - **威尼斯｜Frary’s** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **威尼斯｜Ristorante Al Covo** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **威尼斯｜Ristorante Al Covo** · FOOD_IMAGES — 真实场所/食物图。真实餐厅与菜品图片待确认 下一步：优先官网，其次可靠平台的可追溯真实图片。
 - **威尼斯｜Ristorante Al Covo** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **威尼斯｜Il Paradiso Perduto** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **威尼斯｜Il Paradiso Perduto** · FOOD_IMAGES — 真实场所/食物图。真实餐厅与菜品图片待确认 下一步：优先官网，其次可靠平台的可追溯真实图片。
 - **威尼斯｜Il Paradiso Perduto** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **威尼斯｜Torrefazione Cannaregio** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
 - **威尼斯｜Torrefazione Cannaregio** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **威尼斯｜Gelatoteca Suso** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **威尼斯｜Gelatoteca Suso** · FOOD_IMAGES — 真实场所/食物图。真实餐厅与菜品图片待确认 下一步：优先官网，其次可靠平台的可追溯真实图片。
 - **威尼斯｜Gelatoteca Suso** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **维也纳｜Café Central** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
 - **维也纳｜Café Central** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **维也纳｜Demel** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
 - **维也纳｜Demel** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **维也纳｜Plachutta Wollzeile** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
 - **维也纳｜Plachutta Wollzeile** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **维也纳｜NENI am Naschmarkt** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **维也纳｜NENI am Naschmarkt** · FOOD_IMAGES — 真实场所/食物图。真实餐厅与菜品图片待确认 下一步：优先官网，其次可靠平台的可追溯真实图片。
 - **维也纳｜NENI am Naschmarkt** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **维也纳｜Café Landtmann** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **维也纳｜Café Landtmann** · FOOD_IMAGES — 真实场所/食物图。真实餐厅与菜品图片待确认 下一步：优先官网，其次可靠平台的可追溯真实图片。
 - **维也纳｜Café Landtmann** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **维也纳｜Vollpension** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **维也纳｜Vollpension** · FOOD_IMAGES — 真实场所/食物图。真实餐厅与菜品图片待确认 下一步：优先官网，其次可靠平台的可追溯真实图片。
 - **维也纳｜Vollpension** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **布拉格｜Café Savoy** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
 - **布拉格｜Café Savoy** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **布拉格｜Kuchyň** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **布拉格｜Kuchyň** · FOOD_IMAGES — 真实场所/食物图。真实餐厅与菜品图片待确认 下一步：优先官网，其次可靠平台的可追溯真实图片。
 - **布拉格｜Kuchyň** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **布拉格｜U Kroka** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **布拉格｜U Kroka** · FOOD_IMAGES — 真实场所/食物图。真实餐厅与菜品图片待确认 下一步：优先官网，其次可靠平台的可追溯真实图片。
 - **布拉格｜U Kroka** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **布拉格｜Sisters Bistro** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **布拉格｜Sisters Bistro** · FOOD_IMAGES — 真实场所/食物图。真实餐厅与菜品图片待确认 下一步：优先官网，其次可靠平台的可追溯真实图片。
 - **布拉格｜Sisters Bistro** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **布拉格｜Choco Café** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
 - **布拉格｜Choco Café** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **布拉格｜EMA espresso bar** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **布拉格｜EMA espresso bar** · FOOD_IMAGES — 真实场所/食物图。真实餐厅与菜品图片待确认 下一步：优先官网，其次可靠平台的可追溯真实图片。
 - **布拉格｜EMA espresso bar** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **巴黎｜Bouillon Chartier Grands Boulevards** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **巴黎｜Bouillon Chartier Grands Boulevards** · FOOD_IMAGES — 真实场所/食物图。真实餐厅与菜品图片待确认 下一步：优先官网，其次可靠平台的可追溯真实图片。
 - **巴黎｜Bouillon Chartier Grands Boulevards** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **巴黎｜Angelina Rivoli** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
 - **巴黎｜Angelina Rivoli** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **巴黎｜Le Relais de l’Entrecôte** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
+- **巴黎｜Le Relais de l’Entrecôte** · FOOD_IMAGES — 真实场所/食物图。真实餐厅与菜品图片待确认 下一步：优先官网，其次可靠平台的可追溯真实图片。
 - **巴黎｜Le Relais de l’Entrecôte** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **巴黎｜Du Pain et des Idées** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
 - **巴黎｜Du Pain et des Idées** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **巴黎｜Stohrer** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
 - **巴黎｜Stohrer** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **巴黎｜Les Enfants du Marché** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
 - **巴黎｜Les Enfants du Marché** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **威尼斯｜Restaurant Ai Pini** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
 - **威尼斯｜Restaurant Ai Pini** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **维也纳｜Tarim Uighur Restaurant** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
 - **维也纳｜Tarim Uighur Restaurant** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
-- **巴黎｜La Table de Mame** · FOOD_IMAGES — 代表食物图、环境图、菜单预览。真实餐厅与菜品图片待确认 下一步：优先官网Menu/Instagram，再核可靠平台的真实用户图。
 - **巴黎｜La Table de Mame** · FOOD_MENU — menuUrl、menuPrices。当前菜单与价格未充分验证。 下一步：核对官方Menu PDF或页面并记录日期。
 - **巴黎｜Fitness Park Porte de Choisy** · GYM_REALITY — Day Pass。官网或购买入口证据不足。 下一步：出发前重新核官方页面或联系前台。
 - **罗马｜Via del Corso** · SHOPPING_REALITY — openingHours、image。已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。 下一步：出发前从官方页面复核，并只补可追溯现场图。
@@ -203,7 +163,7 @@ P0 35 · P1 156 · P2 106
 - **巴黎｜Westfield Forum des Halles** · SHOPPING_REALITY — openingHours、image。已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。 下一步：出发前从官方页面复核，并只补可追溯现场图。
 - **巴黎｜Rue de Rivoli** · SHOPPING_REALITY — openingHours、image。已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。 下一步：出发前从官方页面复核，并只补可追溯现场图。
 
-## P2 · 106
+## P2 · 98
 
 - **罗马｜Armando al Pantheon** · FOOD_REALITY — address。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
 - **罗马｜Roscioli Salumeria con Cucina** · FOOD_REALITY — address、openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
@@ -291,24 +251,16 @@ P0 35 · P1 156 · P2 106
 - **巴黎｜Palais Royal柱廊 + 花园** · PLACE_IMAGES — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
 - **巴黎｜Le Marais + 孚日广场** · PLACE_IMAGES — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
 - **罗马｜Best View** · PICK_IMAGES — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
-- **罗马｜Best Meal** · PICK_IMAGES — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
-- **罗马｜Best Coffee** · PICK_IMAGES — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
 - **罗马｜Best Night Walk** · PICK_IMAGES — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
 - **罗马｜Best Shopping** · PICK_IMAGES — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
-- **佛罗伦萨｜Best Meal** · PICK_IMAGES — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
-- **佛罗伦萨｜Best Coffee** · PICK_IMAGES — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
 - **佛罗伦萨｜Best Shopping** · PICK_IMAGES — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
 - **威尼斯｜Best Photo Spot** · PICK_IMAGES — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
-- **威尼斯｜Best Meal** · PICK_IMAGES — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
-- **威尼斯｜Best Coffee / Dessert** · PICK_IMAGES — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
 - **威尼斯｜Best Night Walk** · PICK_IMAGES — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
 - **维也纳｜Best Photo Spot** · PICK_IMAGES — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
 - **维也纳｜Best Meal** · PICK_IMAGES — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
 - **维也纳｜Best Coffee / Dessert** · PICK_IMAGES — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
-- **布拉格｜Best Meal** · PICK_IMAGES — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
 - **布拉格｜Best Coffee** · PICK_IMAGES — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
 - **布拉格｜Best Easy Win** · PICK_IMAGES — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
 - **巴黎｜Best Photo Spot** · PICK_IMAGES — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
 - **巴黎｜Best Meal** · PICK_IMAGES — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
-- **巴黎｜Best Coffee** · PICK_IMAGES — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
 

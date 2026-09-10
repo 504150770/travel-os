@@ -36,3 +36,8 @@ next-env.d.ts
 /.wrangler/
 /outputs/
 /work/
+
+# generated visual QA working files
+/research/image-candidates/
+/research/download.log
+/research/*contact-sheet*.png

@@ -9,6 +9,8 @@ import {
   BusFront,
   CarTaxiFront,
   Check,
+  ChevronLeft,
+  ChevronRight,
   Clock3,
   ExternalLink,
   Footprints,
@@ -253,6 +255,11 @@ export function HotelExecutionCard({
   stay: HotelBooking;
   privateCheckInLink?: string;
 }) {
+  const verifiedImages = stay.images.filter((image) => image.file) as Array<
+    (typeof stay.images)[number] & { file: string }
+  >;
+  const [photoIndex, setPhotoIndex] = useState(0);
+  const activePhoto = verifiedImages[photoIndex] ?? verifiedImages[0];
   const maps = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(stay.execution.address)}`;
   const atProperty = stay.execution.payAtProperty
     ? `${stay.execution.payAtProperty.amount} ${stay.execution.payAtProperty.currency}`
@@ -277,26 +284,53 @@ export function HotelExecutionCard({
           {stay.checkIn} → {stay.checkOut}
         </b>
       </header>
-      <div className="hotel-photo-slots">
-        {stay.images.map((image) =>
-          image.file ? (
-            <figure key={image.role}>
-              <Image
-                src={image.file}
-                alt={`${stay.hotelName} ${image.role}`}
-                fill
-                sizes="(max-width:680px) 33vw, 24vw"
-              />
-              <figcaption>{image.role}</figcaption>
-            </figure>
-          ) : (
-            <div key={image.role}>
-              <span>{image.role}</span>
-              <b>PHOTO PENDING</b>
-            </div>
-          ),
-        )}
-      </div>
+      {activePhoto ? (
+        <div className="hotel-media-carousel">
+          <figure>
+            <Image
+              src={activePhoto.file}
+              alt={activePhoto.caption || `${stay.hotelName} ${activePhoto.role}`}
+              fill
+              sizes="(max-width:680px) 100vw, 720px"
+            />
+            <figcaption>
+              <b>{activePhoto.role}</b>
+              <span>{activePhoto.caption}</span>
+              <small>{photoIndex + 1} / {verifiedImages.length}</small>
+            </figcaption>
+          </figure>
+          {verifiedImages.length > 1 && (
+            <>
+              <button
+                className="hotel-media-prev"
+                aria-label="Previous hotel photo"
+                onClick={() => setPhotoIndex((photoIndex - 1 + verifiedImages.length) % verifiedImages.length)}
+              >
+                <ChevronLeft />
+              </button>
+              <button
+                className="hotel-media-next"
+                aria-label="Next hotel photo"
+                onClick={() => setPhotoIndex((photoIndex + 1) % verifiedImages.length)}
+              >
+                <ChevronRight />
+              </button>
+              <div className="hotel-media-dots" aria-label="Hotel photo selector">
+                {verifiedImages.map((image, index) => (
+                  <button
+                    key={image.role}
+                    aria-label={`View ${image.role} photo`}
+                    aria-current={index === photoIndex}
+                    onClick={() => setPhotoIndex(index)}
+                  />
+                ))}
+              </div>
+            </>
+          )}
+        </div>
+      ) : (
+        <div className="hotel-media-fallback">No verified property photo</div>
+      )}
       <div className="hotel-summary-chips" aria-label="住宿关键信息">
         <span>{displayValue(stay.execution.frontDeskType)}</span>
         <span>入住 {stay.execution.checkInTime}</span>

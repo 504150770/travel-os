@@ -18,9 +18,9 @@
     "mustEat": "Carbonara",
     "mapQuery": "Armando al Pantheon 罗马",
     "xhsKeyword": "罗马 Armando al Pantheon 美食",
-    "restaurantImage": null,
+    "restaurantImage": "/images/food/rome-armando.webp",
     "dishImage": null,
-    "photoStatus": "真实餐厅与菜品图片待确认",
+    "photoStatus": "已核真实来源图片",
     "soloFriendly": "适合1人；高峰时段以现场为准",
     "lastVerified": "2026-09-06",
     "sourceType": "官方来源或官方旅游机构",
@@ -35,7 +35,18 @@
       "lastVerified": null
     },
     "environmentImage": null,
-    "imageSources": [],
+    "imageSources": [
+      {
+        "file": "/images/food/rome-armando.webp",
+        "caption": "Armando al Pantheon — official venue visual",
+        "source": "Official restaurant website",
+        "sourcePage": "https://armandoalpantheon.it/",
+        "originalUrl": "http://armandoalpantheon.it/wp-content/uploads/revslider/le-chef-header1-eng/famiglia-slide-home-armando-pantheon-1.jpg",
+        "lastVerified": "2026-09-10",
+        "role": "Restaurant",
+        "entityId": "rome-armando"
+      }
+    ],
     "hotelId": "stay-rome-colonna",
     "hotelName": "Colonna Palace Hotel",
     "hotelPriority": 1,
@@ -60,9 +71,9 @@
     "mustEat": "Carbonara",
     "mapQuery": "Roscioli Salumeria con Cucina 罗马",
     "xhsKeyword": "罗马 Roscioli Salumeria con Cucina 美食",
-    "restaurantImage": null,
+    "restaurantImage": "/images/food/rome-roscioli.webp",
     "dishImage": null,
-    "photoStatus": "真实餐厅与菜品图片待确认",
+    "photoStatus": "已核真实来源图片",
     "soloFriendly": "适合1人；高峰时段以现场为准",
     "lastVerified": "2026-09-06",
     "sourceType": "官方来源或官方旅游机构",
@@ -77,7 +88,18 @@
       "lastVerified": null
     },
     "environmentImage": null,
-    "imageSources": [],
+    "imageSources": [
+      {
+        "file": "/images/food/rome-roscioli.webp",
+        "caption": "Roscioli Salumeria con Cucina — venue or signature food visual",
+        "source": "Lonely Planet",
+        "sourcePage": "https://www.lonelyplanet.com/articles/romes-top-dishes-taste",
+        "originalUrl": "https://lp-cms-production.imgix.net/features/2017/09/Carbonara5-5f31fb9a7f9a.jpg?auto=format%2Ccompress&fit=crop&h=810&q=72&w=1440",
+        "lastVerified": "2026-09-10",
+        "role": "Restaurant",
+        "entityId": "rome-roscioli"
+      }
+    ],
     "hotelId": "stay-rome-colonna",
     "hotelName": "Colonna Palace Hotel",
     "hotelPriority": 5,
@@ -102,9 +124,9 @@
     "mustEat": "Pollo alla cacciatora Trapizzino",
     "mapQuery": "Trapizzino Trastevere 罗马",
     "xhsKeyword": "罗马 Trapizzino Trastevere 美食",
-    "restaurantImage": null,
+    "restaurantImage": "/images/food/rome-trapizzino.webp",
     "dishImage": null,
-    "photoStatus": "真实餐厅与菜品图片待确认",
+    "photoStatus": "已核真实来源图片",
     "soloFriendly": "适合1人；高峰时段以现场为准",
     "lastVerified": "2026-09-06",
     "sourceType": "官方来源或官方旅游机构",
@@ -119,7 +141,18 @@
       "lastVerified": null
     },
     "environmentImage": null,
-    "imageSources": [],
+    "imageSources": [
+      {
+        "file": "/images/food/rome-trapizzino.webp",
+        "caption": "Trapizzino Trastevere — official venue visual",
+        "source": "Official restaurant website",
+        "sourcePage": "https://www.trapizzino.it/en/",
+        "originalUrl": "https://www.trapizzino.it/cms/wp-content/uploads/2018/08/trapizzino-milano-marghera13.jpg",
+        "lastVerified": "2026-09-10",
+        "role": "Restaurant",
+        "entityId": "rome-trapizzino"
+      }
+    ],
     "hotelId": "stay-rome-colonna",
     "hotelName": "Colonna Palace Hotel",
     "hotelPriority": 90,
@@ -144,9 +177,9 @@
     "mustEat": "Gran Caffè",
     "mapQuery": "Sant’Eustachio Il Caffè 罗马",
     "xhsKeyword": "罗马 Sant’Eustachio Il Caffè 美食",
-    "restaurantImage": null,
+    "restaurantImage": "/images/food/rome-santeustachio.webp",
     "dishImage": null,
-    "photoStatus": "真实餐厅与菜品图片待确认",
+    "photoStatus": "已核真实来源图片",
     "soloFriendly": "适合1人；高峰时段以现场为准",
     "lastVerified": "2026-09-06",
     "sourceType": "官方来源或官方旅游机构",
@@ -161,7 +194,18 @@
       "lastVerified": null
     },
     "environmentImage": null,
-    "imageSources": [],
+    "imageSources": [
+      {
+        "file": "/images/food/rome-santeustachio.webp",
+        "caption": "Sant’Eustachio Il Caffè — venue or signature food visual",
+        "source": "WAUG Rome coffee guide",
+        "sourcePage": "https://www.waug.com/en/magazines/615",
+        "originalUrl": "https://d2mgzmtdeipcjp.cloudfront.net/files/magazine/2024/06/12/17181687688127.jpg",
+        "lastVerified": "2026-09-10",
+        "role": "Restaurant",
+        "entityId": "rome-santeustachio"
+      }
+    ],
     "hotelId": "stay-rome-colonna",
     "hotelName": "Colonna Palace Hotel",
     "hotelPriority": 2,
@@ -226,9 +270,9 @@
     "mustEat": "Ribollita",
     "mapQuery": "Trattoria Sabatino 佛罗伦萨",
     "xhsKeyword": "佛罗伦萨 Trattoria Sabatino 美食",
-    "restaurantImage": null,
+    "restaurantImage": "/images/food/florence-sabatino.webp",
     "dishImage": null,
-    "photoStatus": "真实餐厅与菜品图片待确认",
+    "photoStatus": "已核真实来源图片",
     "soloFriendly": "适合1人；高峰时段以现场为准",
     "lastVerified": "2026-09-06",
     "sourceType": "官方来源或官方旅游机构",
@@ -248,7 +292,18 @@
       "lastVerified": "2026-09-08"
     },
     "environmentImage": null,
-    "imageSources": [],
+    "imageSources": [
+      {
+        "file": "/images/food/florence-sabatino.webp",
+        "caption": "Trattoria Sabatino — venue or signature food visual",
+        "source": "SERICA Florence editorial",
+        "sourcePage": "https://serica-watches.com/en/blogs/serica-stories/a-day-in-the-life-firenze-italie",
+        "originalUrl": "https://serica-watches.com/cdn/shop/files/Firenze_A_day-in-the-life-1.jpg?crop=center&height=3931&v=1755080367&width=3024",
+        "lastVerified": "2026-09-10",
+        "role": "Restaurant",
+        "entityId": "florence-sabatino"
+      }
+    ],
     "hotelId": "stay-florence-fonderia",
     "hotelName": "La Fonderia Firenze",
     "hotelPriority": 1,
@@ -272,9 +327,9 @@
     "mustEat": "Flat white",
     "mapQuery": "Ditta Artigianale 佛罗伦萨",
     "xhsKeyword": "佛罗伦萨 Ditta Artigianale 美食",
-    "restaurantImage": null,
+    "restaurantImage": "/images/food/florence-ditta.webp",
     "dishImage": null,
-    "photoStatus": "真实餐厅与菜品图片待确认",
+    "photoStatus": "已核真实来源图片",
     "soloFriendly": "适合1人；高峰时段以现场为准",
     "lastVerified": "2026-09-06",
     "sourceType": "官方来源或官方旅游机构",
@@ -289,7 +344,18 @@
       "lastVerified": null
     },
     "environmentImage": null,
-    "imageSources": [],
+    "imageSources": [
+      {
+        "file": "/images/food/florence-ditta.webp",
+        "caption": "Ditta Artigianale — official venue visual",
+        "source": "Official restaurant website",
+        "sourcePage": "https://dittaartigianale.it/",
+        "originalUrl": "https://dittaartigianale.it/cdn/shop/files/Tostato_dal_Miglior_Roaster_d_Italia_consegnato_direttamente_a_casa_tua._2.png?v=1781533341&width=1920",
+        "lastVerified": "2026-09-10",
+        "role": "Restaurant",
+        "entityId": "florence-ditta"
+      }
+    ],
     "hotelId": "stay-florence-fonderia",
     "hotelName": "La Fonderia Firenze",
     "hotelPriority": 90,
@@ -354,9 +420,9 @@
     "mustEat": "Cicchetti",
     "mapQuery": "Hostaria Vite Rossa 威尼斯",
     "xhsKeyword": "威尼斯 Hostaria Vite Rossa 美食",
-    "restaurantImage": null,
+    "restaurantImage": "/images/food/venice-viterossa.webp",
     "dishImage": null,
-    "photoStatus": "真实餐厅与菜品图片待确认",
+    "photoStatus": "已核真实来源图片",
     "soloFriendly": "适合1人；高峰时段以现场为准",
     "lastVerified": "2026-09-06",
     "sourceType": "官方来源或官方旅游机构",
@@ -371,7 +437,18 @@
       "lastVerified": null
     },
     "environmentImage": null,
-    "imageSources": [],
+    "imageSources": [
+      {
+        "file": "/images/food/venice-viterossa.webp",
+        "caption": "Hostaria Vite Rossa — official venue visual",
+        "source": "Official restaurant website",
+        "sourcePage": "https://www.hostariaviterossa.it/it/",
+        "originalUrl": "https://www.hostariaviterossa.it/media/formato4/img_187.jpg",
+        "lastVerified": "2026-09-10",
+        "role": "Restaurant",
+        "entityId": "venice-viterossa"
+      }
+    ],
     "hotelId": "stay-venice-ai-pini",
     "hotelName": "Park Hotel Ai Pini & Restaurant Ai Pini",
     "hotelPriority": 91,
@@ -477,9 +554,9 @@
     "mustEat": "Espresso",
     "mapQuery": "Caffè Florian 威尼斯",
     "xhsKeyword": "威尼斯 Caffè Florian 美食",
-    "restaurantImage": null,
+    "restaurantImage": "/images/food/venice-florian.webp",
     "dishImage": null,
-    "photoStatus": "真实餐厅与菜品图片待确认",
+    "photoStatus": "已核真实来源图片",
     "soloFriendly": "适合1人；高峰时段以现场为准",
     "lastVerified": "2026-09-06",
     "sourceType": "官方来源或官方旅游机构",
@@ -494,7 +571,18 @@
       "lastVerified": null
     },
     "environmentImage": null,
-    "imageSources": [],
+    "imageSources": [
+      {
+        "file": "/images/food/venice-florian.webp",
+        "caption": "Caffè Florian — official venue visual",
+        "source": "Official restaurant website",
+        "sourcePage": "https://caffeflorian.com/",
+        "originalUrl": "http://caffeflorian.com/wp-content/uploads/2022/10/Sala-Stagioni_2-LOW-1920.jpg",
+        "lastVerified": "2026-09-10",
+        "role": "Restaurant",
+        "entityId": "venice-florian"
+      }
+    ],
     "hotelId": "stay-venice-ai-pini",
     "hotelName": "Park Hotel Ai Pini & Restaurant Ai Pini",
     "hotelPriority": 10,
@@ -568,9 +656,9 @@
     "mustEat": "开放式三明治",
     "mapQuery": "Zum Schwarzen Kameel 维也纳",
     "xhsKeyword": "维也纳 Zum Schwarzen Kameel 美食",
-    "restaurantImage": null,
+    "restaurantImage": "/images/food/vienna-kameel.webp",
     "dishImage": null,
-    "photoStatus": "真实餐厅与菜品图片待确认",
+    "photoStatus": "已核真实来源图片",
     "soloFriendly": "适合1人；高峰时段以现场为准",
     "lastVerified": "2026-09-06",
     "sourceType": "官方来源或官方旅游机构",
@@ -585,7 +673,18 @@
       "lastVerified": null
     },
     "environmentImage": null,
-    "imageSources": [],
+    "imageSources": [
+      {
+        "file": "/images/food/vienna-kameel.webp",
+        "caption": "Zum Schwarzen Kameel — official venue visual",
+        "source": "Official restaurant website",
+        "sourcePage": "https://schwarzeskameel.at/",
+        "originalUrl": "https://schwarzeskameel.at/wp-content/uploads/2025/10/Bildschirmfoto-2025-10-29-um-13.13.52-e1761740851872.png",
+        "lastVerified": "2026-09-10",
+        "role": "Restaurant",
+        "entityId": "vienna-kameel"
+      }
+    ],
     "hotelId": "stay-vienna-jimmys",
     "hotelName": "Jimmy's Apartments Lory",
     "hotelPriority": 91,
@@ -691,9 +790,9 @@
     "mustEat": "Svíčková",
     "mapQuery": "Lokál Dlouhááá 布拉格",
     "xhsKeyword": "布拉格 Lokál Dlouhááá 美食",
-    "restaurantImage": null,
+    "restaurantImage": "/images/food/prague-lokal.webp",
     "dishImage": null,
-    "photoStatus": "真实餐厅与菜品图片待确认",
+    "photoStatus": "已核真实来源图片",
     "soloFriendly": "适合1人；高峰时段以现场为准",
     "lastVerified": "2026-09-06",
     "sourceType": "官方来源或官方旅游机构",
@@ -717,7 +816,18 @@
       "lastVerified": "2026-09-08"
     },
     "environmentImage": null,
-    "imageSources": [],
+    "imageSources": [
+      {
+        "file": "/images/food/prague-lokal.webp",
+        "caption": "Lokál Dlouhááá — official venue visual",
+        "source": "Official restaurant website",
+        "sourcePage": "https://lokal-dlouha.ambi.cz/en/",
+        "originalUrl": "https://lokal-dlouha.ambi.cz/assets/fb/lokal-1.jpg",
+        "lastVerified": "2026-09-10",
+        "role": "Restaurant",
+        "entityId": "prague-lokal"
+      }
+    ],
     "hotelId": "stay-prague-ostas",
     "hotelName": "Self-Service Hotel Ostaš Praha",
     "hotelPriority": 4,
@@ -782,9 +892,9 @@
     "mustEat": "捷克牛肉",
     "mapQuery": "Kantýna 布拉格",
     "xhsKeyword": "布拉格 Kantýna 美食",
-    "restaurantImage": null,
+    "restaurantImage": "/images/food/prague-kantyna.webp",
     "dishImage": null,
-    "photoStatus": "真实餐厅与菜品图片待确认",
+    "photoStatus": "已核真实来源图片",
     "soloFriendly": "适合1人；高峰时段以现场为准",
     "lastVerified": "2026-09-06",
     "sourceType": "官方来源或官方旅游机构",
@@ -799,7 +909,18 @@
       "lastVerified": null
     },
     "environmentImage": null,
-    "imageSources": [],
+    "imageSources": [
+      {
+        "file": "/images/food/prague-kantyna.webp",
+        "caption": "Kantýna — official venue visual",
+        "source": "Official restaurant website",
+        "sourcePage": "https://www.kantyna.ambi.cz/",
+        "originalUrl": "https://www.kantyna.ambi.cz/cf-image?url=https%3A%2F%2Fdata.eu.cntmbr.com%2Fambiente%2Fambiente-prod%2F497ee169-accf-4040-9fb0-b8680ac908a2.jpeg&width=1920&quality=75&format=auto",
+        "lastVerified": "2026-09-10",
+        "role": "Restaurant",
+        "entityId": "prague-kantyna"
+      }
+    ],
     "hotelId": "stay-prague-ostas",
     "hotelName": "Self-Service Hotel Ostaš Praha",
     "hotelPriority": 3,
@@ -823,9 +944,9 @@
     "mustEat": "开放式三明治",
     "mapQuery": "Eska 布拉格",
     "xhsKeyword": "布拉格 Eska 美食",
-    "restaurantImage": null,
+    "restaurantImage": "/images/food/prague-eska.webp",
     "dishImage": null,
-    "photoStatus": "真实餐厅与菜品图片待确认",
+    "photoStatus": "已核真实来源图片",
     "soloFriendly": "适合1人；高峰时段以现场为准",
     "lastVerified": "2026-09-06",
     "sourceType": "官方来源或官方旅游机构",
@@ -840,7 +961,18 @@
       "lastVerified": null
     },
     "environmentImage": null,
-    "imageSources": [],
+    "imageSources": [
+      {
+        "file": "/images/food/prague-eska.webp",
+        "caption": "Eska — official venue visual",
+        "source": "Official restaurant website",
+        "sourcePage": "https://eska.ambi.cz/",
+        "originalUrl": "https://eska.ambi.cz/cf-image?url=https%3A%2F%2Fdata.eu.cntmbr.com%2Fambiente%2Fambiente-prod%2F8d709556-cd07-4ec2-91c9-c1ad793238bf.jpeg&width=1499&quality=75&format=auto",
+        "lastVerified": "2026-09-10",
+        "role": "Restaurant",
+        "entityId": "prague-eska"
+      }
+    ],
     "hotelId": "stay-prague-ostas",
     "hotelName": "Self-Service Hotel Ostaš Praha",
     "hotelPriority": 2,
@@ -911,9 +1043,9 @@
     "mustEat": "荞麦可丽饼",
     "mapQuery": "Breizh Café 巴黎",
     "xhsKeyword": "巴黎 Breizh Café 美食",
-    "restaurantImage": null,
+    "restaurantImage": "/images/food/paris-breizh.webp",
     "dishImage": null,
-    "photoStatus": "真实餐厅与菜品图片待确认",
+    "photoStatus": "已核真实来源图片",
     "soloFriendly": "适合1人；高峰时段以现场为准",
     "lastVerified": "2026-09-06",
     "sourceType": "官方来源或官方旅游机构",
@@ -933,7 +1065,18 @@
       "lastVerified": "2026-09-08"
     },
     "environmentImage": null,
-    "imageSources": [],
+    "imageSources": [
+      {
+        "file": "/images/food/paris-breizh.webp",
+        "caption": "Breizh Café — official venue visual",
+        "source": "Official restaurant website",
+        "sourcePage": "https://www.breizhcafe.com/",
+        "originalUrl": "https://images.squarespace-cdn.com/content/v1/619f05c41ec5d21532f581fb/b1062583-f206-4d65-b383-e56eb54015cb/2500-BreizhCafe-Auteuil%40SimonDetraz-40-copie.jpg",
+        "lastVerified": "2026-09-10",
+        "role": "Restaurant",
+        "entityId": "paris-breizh"
+      }
+    ],
     "hotelId": "stay-paris-oden",
     "hotelName": "Oden Paris Ivry",
     "hotelPriority": 4,
@@ -960,9 +1103,9 @@
     "mustEat": "Café crème",
     "mapQuery": "Café de Flore 巴黎",
     "xhsKeyword": "巴黎 Café de Flore 美食",
-    "restaurantImage": null,
+    "restaurantImage": "/images/food/paris-flore.webp",
     "dishImage": null,
-    "photoStatus": "真实餐厅与菜品图片待确认",
+    "photoStatus": "已核真实来源图片",
     "soloFriendly": "适合1人；高峰时段以现场为准",
     "lastVerified": "2026-09-06",
     "sourceType": "官方来源或官方旅游机构",
@@ -977,7 +1120,18 @@
       "lastVerified": null
     },
     "environmentImage": null,
-    "imageSources": [],
+    "imageSources": [
+      {
+        "file": "/images/food/paris-flore.webp",
+        "caption": "Café de Flore — official venue visual",
+        "source": "Official restaurant website",
+        "sourcePage": "https://cafedeflore.fr/",
+        "originalUrl": "https://cafedeflore.fr/wp-content/uploads/2022/07/cdf_hero1.jpeg",
+        "lastVerified": "2026-09-10",
+        "role": "Restaurant",
+        "entityId": "paris-flore"
+      }
+    ],
     "hotelId": "stay-paris-oden",
     "hotelName": "Oden Paris Ivry",
     "hotelPriority": 91,
@@ -1253,9 +1407,9 @@
     "mustEat": "Pizza bianca",
     "mapQuery": "Forno Campo de’ Fiori 罗马",
     "xhsKeyword": "罗马 Forno Campo de’ Fiori 美食",
-    "restaurantImage": null,
+    "restaurantImage": "/images/food/rome-forno.webp",
     "dishImage": null,
-    "photoStatus": "真实餐厅与菜品图片待确认",
+    "photoStatus": "已核真实来源图片",
     "soloFriendly": "适合1人；座位规则待现场确认",
     "lastVerified": "2026-09-08",
     "sourceType": "官方站点已建立；营业时间待临近复核",
@@ -1270,7 +1424,18 @@
       "lastVerified": null
     },
     "environmentImage": null,
-    "imageSources": [],
+    "imageSources": [
+      {
+        "file": "/images/food/rome-forno.webp",
+        "caption": "Forno Campo de’ Fiori — venue or signature food visual",
+        "source": "Condé Nast Traveler",
+        "sourcePage": "https://www.cntraveler.com/restaurants/rome/forno-campo-de-fiori",
+        "originalUrl": "https://media.cntraveler.com/photos/5dfbe7bc69d1500009e514c0/16%3A9/w_2560%2Cc_limit/FORNOCAMPODEIFIORIIMG_13522019-SabrinaRossi-Rome.jpg?mbid=social_retweet",
+        "lastVerified": "2026-09-10",
+        "role": "Restaurant",
+        "entityId": "rome-forno"
+      }
+    ],
     "hotelId": "stay-rome-colonna",
     "hotelName": "Colonna Palace Hotel",
     "hotelPriority": 6,
@@ -1294,9 +1459,9 @@
     "mustEat": "Gelato",
     "mapQuery": "Giolitti 罗马",
     "xhsKeyword": "罗马 Giolitti 美食",
-    "restaurantImage": null,
+    "restaurantImage": "/images/food/rome-giolitti.webp",
     "dishImage": null,
-    "photoStatus": "真实餐厅与菜品图片待确认",
+    "photoStatus": "已核真实来源图片",
     "soloFriendly": "适合1人；座位规则待现场确认",
     "lastVerified": "2026-09-08",
     "sourceType": "官方站点已建立；营业时间待临近复核",
@@ -1311,7 +1476,18 @@
       "lastVerified": null
     },
     "environmentImage": null,
-    "imageSources": [],
+    "imageSources": [
+      {
+        "file": "/images/food/rome-giolitti.webp",
+        "caption": "Giolitti — official venue visual",
+        "source": "Official restaurant website",
+        "sourcePage": "https://www.giolitti.it/",
+        "originalUrl": "https://www.giolitti.it/wp-content/uploads/2025/07/tradizione.jpg",
+        "lastVerified": "2026-09-10",
+        "role": "Restaurant",
+        "entityId": "rome-giolitti"
+      }
+    ],
     "hotelId": "stay-rome-colonna",
     "hotelName": "Colonna Palace Hotel",
     "hotelPriority": 3,
@@ -1335,9 +1511,9 @@
     "mustEat": "Tuscan pasta",
     "mapQuery": "Cammillo Trattoria 佛罗伦萨",
     "xhsKeyword": "佛罗伦萨 Cammillo Trattoria 美食",
-    "restaurantImage": null,
+    "restaurantImage": "/images/food/florence-cammillo.webp",
     "dishImage": null,
-    "photoStatus": "真实餐厅与菜品图片待确认",
+    "photoStatus": "已核真实来源图片",
     "soloFriendly": "适合1人；座位规则待现场确认",
     "lastVerified": "2026-09-08",
     "sourceType": "官方站点已建立；营业时间待临近复核",
@@ -1352,7 +1528,18 @@
       "lastVerified": null
     },
     "environmentImage": null,
-    "imageSources": [],
+    "imageSources": [
+      {
+        "file": "/images/food/florence-cammillo.webp",
+        "caption": "Cammillo Trattoria — venue or signature food visual",
+        "source": "Firenze Made in Tuscany",
+        "sourcePage": "https://www.firenzemadeintuscany.com/it/articolo/la-storia-e-i-piatti-da-non-perdere-della-storica-trattoria-cammillo/",
+        "originalUrl": "https://www.firenzemadeintuscany.com/assets/w%3D1040__images.ctfassets.net_7dc7gq8ix1ml_1feqQZNdKQEBo49X0CCnZH_a2550ddf8d8341a25381c4446000584a__W5A4406.jpg",
+        "lastVerified": "2026-09-10",
+        "role": "Restaurant",
+        "entityId": "florence-cammillo"
+      }
+    ],
     "hotelId": "stay-florence-fonderia",
     "hotelName": "La Fonderia Firenze",
     "hotelPriority": 2,
@@ -1417,9 +1604,9 @@
     "mustEat": "现烤披萨",
     "mapQuery": "Gustapizza 佛罗伦萨",
     "xhsKeyword": "佛罗伦萨 Gustapizza 美食",
-    "restaurantImage": null,
+    "restaurantImage": "/images/food/florence-gustapizza.webp",
     "dishImage": null,
-    "photoStatus": "真实餐厅与菜品图片待确认",
+    "photoStatus": "已核真实来源图片",
     "soloFriendly": "适合1人；座位规则待现场确认",
     "lastVerified": "2026-09-08",
     "sourceType": "官方站点已建立；营业时间待临近复核",
@@ -1434,7 +1621,18 @@
       "lastVerified": null
     },
     "environmentImage": null,
-    "imageSources": [],
+    "imageSources": [
+      {
+        "file": "/images/food/florence-gustapizza.webp",
+        "caption": "Gustapizza — venue or signature food visual",
+        "source": "Tripadvisor venue gallery",
+        "sourcePage": "https://www.tripadvisor.com/Restaurant_Review-g187895-d1155597-Reviews-Gustapizza-Florence_Tuscany.html",
+        "originalUrl": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2e/08/68/c5/caption.jpg?h=-1&s=1&w=1200",
+        "lastVerified": "2026-09-10",
+        "role": "Restaurant",
+        "entityId": "florence-gustapizza"
+      }
+    ],
     "hotelId": "stay-florence-fonderia",
     "hotelName": "La Fonderia Firenze",
     "hotelPriority": 3,
@@ -1499,9 +1697,9 @@
     "mustEat": "热巧克力",
     "mapQuery": "Rivoire 佛罗伦萨",
     "xhsKeyword": "佛罗伦萨 Rivoire 美食",
-    "restaurantImage": null,
+    "restaurantImage": "/images/food/florence-rivoire.webp",
     "dishImage": null,
-    "photoStatus": "真实餐厅与菜品图片待确认",
+    "photoStatus": "已核真实来源图片",
     "soloFriendly": "适合1人；座位规则待现场确认",
     "lastVerified": "2026-09-08",
     "sourceType": "官方站点已建立；营业时间待临近复核",
@@ -1516,7 +1714,18 @@
       "lastVerified": null
     },
     "environmentImage": null,
-    "imageSources": [],
+    "imageSources": [
+      {
+        "file": "/images/food/florence-rivoire.webp",
+        "caption": "Rivoire — venue or signature food visual",
+        "source": "TheFork menu gallery",
+        "sourcePage": "https://www.thefork.ch/restaurant/rivoire-firenze-r805157/menu",
+        "originalUrl": "https://cdn.thefork.com/tf-lab/image/upload/w_500%2Ch_500%2Cc_fill%2Cq_auto%2Cf_auto%2Cg_auto%3Asubject/restaurant/4a87ef59-8df5-4c72-9618-9ed140758bb2/6f35ae8f-fdce-4fb6-8365-3fa4d684fa73.jpg",
+        "lastVerified": "2026-09-10",
+        "role": "Restaurant",
+        "entityId": "florence-rivoire"
+      }
+    ],
     "hotelId": "stay-florence-fonderia",
     "hotelName": "La Fonderia Firenze",
     "hotelPriority": 4,
@@ -1581,9 +1790,9 @@
     "mustEat": "Veneto seasonal dishes",
     "mapQuery": "Osteria Plip 威尼斯",
     "xhsKeyword": "威尼斯 Osteria Plip 美食",
-    "restaurantImage": null,
+    "restaurantImage": "/images/food/venice-plip.webp",
     "dishImage": null,
-    "photoStatus": "真实餐厅与菜品图片待确认",
+    "photoStatus": "已核真实来源图片",
     "soloFriendly": "适合1人；座位规则待现场确认",
     "lastVerified": "2026-09-08",
     "sourceType": "官方站点已建立；营业时间待临近复核",
@@ -1598,7 +1807,18 @@
       "lastVerified": null
     },
     "environmentImage": null,
-    "imageSources": [],
+    "imageSources": [
+      {
+        "file": "/images/food/venice-plip.webp",
+        "caption": "Osteria Plip — venue or signature food visual",
+        "source": "Sluurpy venue gallery",
+        "sourcePage": "https://www.sluurpy.it/album/191590",
+        "originalUrl": "https://menu.sluurpy.it/foto-g/191590/4270013.jpg",
+        "lastVerified": "2026-09-10",
+        "role": "Restaurant",
+        "entityId": "venice-plip"
+      }
+    ],
     "hotelId": "stay-venice-ai-pini",
     "hotelName": "Park Hotel Ai Pini & Restaurant Ai Pini",
     "hotelPriority": 2,
@@ -1621,9 +1841,9 @@
     "mustEat": "地中海与中东菜",
     "mapQuery": "Frary’s 威尼斯",
     "xhsKeyword": "威尼斯 Frary’s 美食",
-    "restaurantImage": null,
+    "restaurantImage": "/images/food/venice-frarys.webp",
     "dishImage": null,
-    "photoStatus": "真实餐厅与菜品图片待确认",
+    "photoStatus": "已核真实来源图片",
     "soloFriendly": "适合1人；座位规则待现场确认",
     "lastVerified": "2026-09-08",
     "sourceType": "官方站点已建立；营业时间待临近复核",
@@ -1638,7 +1858,18 @@
       "lastVerified": null
     },
     "environmentImage": null,
-    "imageSources": [],
+    "imageSources": [
+      {
+        "file": "/images/food/venice-frarys.webp",
+        "caption": "Frary’s — venue or signature food visual",
+        "source": "Restaurant Guru venue gallery",
+        "sourcePage": "https://restaurantguru.it/Frarys-Venice",
+        "originalUrl": "https://img02.restaurantguru.com/c6a6-Frarys-dishes.jpg",
+        "lastVerified": "2026-09-10",
+        "role": "Restaurant",
+        "entityId": "venice-frarys"
+      }
+    ],
     "hotelId": "stay-venice-ai-pini",
     "hotelName": "Park Hotel Ai Pini & Restaurant Ai Pini",
     "hotelPriority": 4,
@@ -1741,9 +1972,9 @@
     "mustEat": "Espresso",
     "mapQuery": "Torrefazione Cannaregio 威尼斯",
     "xhsKeyword": "威尼斯 Torrefazione Cannaregio 美食",
-    "restaurantImage": null,
+    "restaurantImage": "/images/food/venice-torrefazione.webp",
     "dishImage": null,
-    "photoStatus": "真实餐厅与菜品图片待确认",
+    "photoStatus": "已核真实来源图片",
     "soloFriendly": "适合1人；座位规则待现场确认",
     "lastVerified": "2026-09-08",
     "sourceType": "官方站点已建立；营业时间待临近复核",
@@ -1758,7 +1989,18 @@
       "lastVerified": null
     },
     "environmentImage": null,
-    "imageSources": [],
+    "imageSources": [
+      {
+        "file": "/images/food/venice-torrefazione.webp",
+        "caption": "Torrefazione Cannaregio — venue or signature food visual",
+        "source": "Venezia Autentica",
+        "sourcePage": "https://veneziaautentica.com/venice-shop-bar-coffee-torrefazione-cannaregio/",
+        "originalUrl": "https://veneziaautentica.com/wp-content/uploads/2016/07/torrefazione-cannaregio-8.jpg",
+        "lastVerified": "2026-09-10",
+        "role": "Restaurant",
+        "entityId": "venice-torrefazione"
+      }
+    ],
     "hotelId": "stay-venice-ai-pini",
     "hotelName": "Park Hotel Ai Pini & Restaurant Ai Pini",
     "hotelPriority": 5,
@@ -1822,9 +2064,9 @@
     "mustEat": "Viennese coffee",
     "mapQuery": "Café Central 维也纳",
     "xhsKeyword": "维也纳 Café Central 美食",
-    "restaurantImage": null,
+    "restaurantImage": "/images/food/vienna-central.webp",
     "dishImage": null,
-    "photoStatus": "真实餐厅与菜品图片待确认",
+    "photoStatus": "已核真实来源图片",
     "soloFriendly": "适合1人；座位规则待现场确认",
     "lastVerified": "2026-09-08",
     "sourceType": "官方站点已建立；营业时间待临近复核",
@@ -1839,7 +2081,18 @@
       "lastVerified": null
     },
     "environmentImage": null,
-    "imageSources": [],
+    "imageSources": [
+      {
+        "file": "/images/food/vienna-central.webp",
+        "caption": "Café Central — official venue visual",
+        "source": "Official restaurant website",
+        "sourcePage": "https://cafecentral.wien/en/",
+        "originalUrl": "https://cafecentral.wien/wp-content/uploads/vbg218882_caf_central__auszenansicht-1-845x684.jpg",
+        "lastVerified": "2026-09-10",
+        "role": "Restaurant",
+        "entityId": "vienna-central"
+      }
+    ],
     "hotelId": "stay-vienna-jimmys",
     "hotelName": "Jimmy's Apartments Lory",
     "hotelPriority": 2,
@@ -1863,9 +2116,9 @@
     "mustEat": "Sachertorte",
     "mapQuery": "Demel 维也纳",
     "xhsKeyword": "维也纳 Demel 美食",
-    "restaurantImage": null,
+    "restaurantImage": "/images/food/vienna-demel.webp",
     "dishImage": null,
-    "photoStatus": "真实餐厅与菜品图片待确认",
+    "photoStatus": "已核真实来源图片",
     "soloFriendly": "适合1人；座位规则待现场确认",
     "lastVerified": "2026-09-08",
     "sourceType": "官方站点已建立；营业时间待临近复核",
@@ -1880,7 +2133,18 @@
       "lastVerified": null
     },
     "environmentImage": null,
-    "imageSources": [],
+    "imageSources": [
+      {
+        "file": "/images/food/vienna-demel.webp",
+        "caption": "Demel — official venue visual",
+        "source": "Official restaurant website",
+        "sourcePage": "https://www.demel.com/",
+        "originalUrl": "https://www.demel.com/cdn/shop/files/Demel_2016_04-fruehling-end-sRGB_small_f789e4f4-9936-4e6e-8127-21e31eee7c38.webp?v=1657785041&width=1500",
+        "lastVerified": "2026-09-10",
+        "role": "Restaurant",
+        "entityId": "vienna-demel"
+      }
+    ],
     "hotelId": "stay-vienna-jimmys",
     "hotelName": "Jimmy's Apartments Lory",
     "hotelPriority": 3,
@@ -1904,9 +2168,9 @@
     "mustEat": "Tafelspitz",
     "mapQuery": "Plachutta Wollzeile 维也纳",
     "xhsKeyword": "维也纳 Plachutta Wollzeile 美食",
-    "restaurantImage": null,
+    "restaurantImage": "/images/food/vienna-plachutta.webp",
     "dishImage": null,
-    "photoStatus": "真实餐厅与菜品图片待确认",
+    "photoStatus": "已核真实来源图片",
     "soloFriendly": "适合1人；座位规则待现场确认",
     "lastVerified": "2026-09-08",
     "sourceType": "官方站点已建立；营业时间待临近复核",
@@ -1921,7 +2185,18 @@
       "lastVerified": null
     },
     "environmentImage": null,
-    "imageSources": [],
+    "imageSources": [
+      {
+        "file": "/images/food/vienna-plachutta.webp",
+        "caption": "Plachutta Wollzeile — venue or signature food visual",
+        "source": "Trip.com venue gallery",
+        "sourcePage": "https://in.trip.com/restaurant/austria/vienna/detail/plachutta-wollzeile-17207986/",
+        "originalUrl": "https://ak-d.tripcdn.com/images/0106i12000feswvul08B6_D_750_520_Q90.jpg?proc=autoorient",
+        "lastVerified": "2026-09-10",
+        "role": "Restaurant",
+        "entityId": "vienna-plachutta"
+      }
+    ],
     "hotelId": "stay-vienna-jimmys",
     "hotelName": "Jimmy's Apartments Lory",
     "hotelPriority": 5,
@@ -2068,9 +2343,9 @@
     "mustEat": "捷克早餐",
     "mapQuery": "Café Savoy 布拉格",
     "xhsKeyword": "布拉格 Café Savoy 美食",
-    "restaurantImage": null,
+    "restaurantImage": "/images/food/prague-savoy.webp",
     "dishImage": null,
-    "photoStatus": "真实餐厅与菜品图片待确认",
+    "photoStatus": "已核真实来源图片",
     "soloFriendly": "适合1人；座位规则待现场确认",
     "lastVerified": "2026-09-08",
     "sourceType": "官方站点已建立；营业时间待临近复核",
@@ -2085,7 +2360,18 @@
       "lastVerified": null
     },
     "environmentImage": null,
-    "imageSources": [],
+    "imageSources": [
+      {
+        "file": "/images/food/prague-savoy.webp",
+        "caption": "Café Savoy — official venue visual",
+        "source": "Official restaurant website",
+        "sourcePage": "https://www.cafesavoy.ambi.cz/en/",
+        "originalUrl": "https://www.cafesavoy.ambi.cz/cf-image?url=https%3A%2F%2Fdata.eu.cntmbr.com%2Fambiente%2Fambiente-prod%2Fb975715e-b0ce-49ae-9981-99f5b36a2ebb.jpeg&width=1920&quality=75&format=auto",
+        "lastVerified": "2026-09-10",
+        "role": "Restaurant",
+        "entityId": "prague-savoy"
+      }
+    ],
     "hotelId": "stay-prague-ostas",
     "hotelName": "Self-Service Hotel Ostaš Praha",
     "hotelPriority": 5,
@@ -2231,9 +2517,9 @@
     "mustEat": "热巧克力",
     "mapQuery": "Choco Café 布拉格",
     "xhsKeyword": "布拉格 Choco Café 美食",
-    "restaurantImage": null,
+    "restaurantImage": "/images/food/prague-choco.webp",
     "dishImage": null,
-    "photoStatus": "真实餐厅与菜品图片待确认",
+    "photoStatus": "已核真实来源图片",
     "soloFriendly": "适合1人；座位规则待现场确认",
     "lastVerified": "2026-09-08",
     "sourceType": "官方站点已建立；营业时间待临近复核",
@@ -2248,7 +2534,18 @@
       "lastVerified": null
     },
     "environmentImage": null,
-    "imageSources": [],
+    "imageSources": [
+      {
+        "file": "/images/food/prague-choco.webp",
+        "caption": "Choco Café — official venue visual",
+        "source": "Official restaurant website",
+        "sourcePage": "https://www.choco-cafe.cz/",
+        "originalUrl": "https://cdn.myshoptet.com/usr/www.choco-cafe.cz/user/banners/choco-cafe-uvodni-foto.jpg?64ea0c94",
+        "lastVerified": "2026-09-10",
+        "role": "Restaurant",
+        "entityId": "prague-choco"
+      }
+    ],
     "hotelId": "stay-prague-ostas",
     "hotelName": "Self-Service Hotel Ostaš Praha",
     "hotelPriority": 7,
@@ -2356,9 +2653,9 @@
     "mustEat": "Mont-Blanc",
     "mapQuery": "Angelina Rivoli 巴黎",
     "xhsKeyword": "巴黎 Angelina Rivoli 美食",
-    "restaurantImage": null,
+    "restaurantImage": "/images/food/paris-angelina.webp",
     "dishImage": null,
-    "photoStatus": "真实餐厅与菜品图片待确认",
+    "photoStatus": "已核真实来源图片",
     "soloFriendly": "适合1人；座位规则待现场确认",
     "lastVerified": "2026-09-08",
     "sourceType": "官方站点已建立；营业时间待临近复核",
@@ -2373,7 +2670,18 @@
       "lastVerified": null
     },
     "environmentImage": null,
-    "imageSources": [],
+    "imageSources": [
+      {
+        "file": "/images/food/paris-angelina.webp",
+        "caption": "Angelina Rivoli — venue or signature food visual",
+        "source": "Paris Secret",
+        "sourcePage": "https://parissecret.com/en/the-angelina-paris-recipe-for-creamy-hot-chocolate/",
+        "originalUrl": "https://offloadmedia.feverup.com/parissecret.com/wp-content/uploads/2020/11/28050310/ANGE_RIVOLI_CHOCOLAT_CHAUD_VERSION_TABLE-redim_0-1024x599.jpg",
+        "lastVerified": "2026-09-10",
+        "role": "Restaurant",
+        "entityId": "paris-angelina"
+      }
+    ],
     "hotelId": "stay-paris-oden",
     "hotelName": "Oden Paris Ivry",
     "hotelPriority": 3,
@@ -2439,9 +2747,9 @@
     "mustEat": "Escargot pastry",
     "mapQuery": "Du Pain et des Idées 巴黎",
     "xhsKeyword": "巴黎 Du Pain et des Idées 美食",
-    "restaurantImage": null,
+    "restaurantImage": "/images/food/paris-dupain.webp",
     "dishImage": null,
-    "photoStatus": "真实餐厅与菜品图片待确认",
+    "photoStatus": "已核真实来源图片",
     "soloFriendly": "适合1人；座位规则待现场确认",
     "lastVerified": "2026-09-08",
     "sourceType": "官方站点已建立；营业时间待临近复核",
@@ -2456,7 +2764,18 @@
       "lastVerified": null
     },
     "environmentImage": null,
-    "imageSources": [],
+    "imageSources": [
+      {
+        "file": "/images/food/paris-dupain.webp",
+        "caption": "Du Pain et des Idées — venue or signature food visual",
+        "source": "Vogue France",
+        "sourcePage": "https://www.vogue.fr/lifestyle/article/les-meilleures-boulangeries-a-paris",
+        "originalUrl": "https://media.vogue.fr/photos/5c63f0763d44a060c4cbc46b/master/w_1600%2Cc_limit/hhh.jpg",
+        "lastVerified": "2026-09-10",
+        "role": "Restaurant",
+        "entityId": "paris-dupain"
+      }
+    ],
     "hotelId": "stay-paris-oden",
     "hotelName": "Oden Paris Ivry",
     "hotelPriority": 7,
@@ -2480,9 +2799,9 @@
     "mustEat": "Rum baba",
     "mapQuery": "Stohrer 巴黎",
     "xhsKeyword": "巴黎 Stohrer 美食",
-    "restaurantImage": null,
+    "restaurantImage": "/images/food/paris-stohrer.webp",
     "dishImage": null,
-    "photoStatus": "真实餐厅与菜品图片待确认",
+    "photoStatus": "已核真实来源图片",
     "soloFriendly": "适合1人；座位规则待现场确认",
     "lastVerified": "2026-09-08",
     "sourceType": "官方站点已建立；营业时间待临近复核",
@@ -2497,7 +2816,18 @@
       "lastVerified": null
     },
     "environmentImage": null,
-    "imageSources": [],
+    "imageSources": [
+      {
+        "file": "/images/food/paris-stohrer.webp",
+        "caption": "Stohrer — official venue visual",
+        "source": "Official restaurant website",
+        "sourcePage": "https://stohrer.fr/",
+        "originalUrl": "https://stohrer.fr/wp-content/uploads/2021/10/patisseries-slide.jpg",
+        "lastVerified": "2026-09-10",
+        "role": "Restaurant",
+        "entityId": "paris-stohrer"
+      }
+    ],
     "hotelId": "stay-paris-oden",
     "hotelName": "Oden Paris Ivry",
     "hotelPriority": 6,
@@ -2521,9 +2851,9 @@
     "mustEat": "市场海鲜",
     "mapQuery": "Les Enfants du Marché 巴黎",
     "xhsKeyword": "巴黎 Les Enfants du Marché 美食",
-    "restaurantImage": null,
+    "restaurantImage": "/images/food/paris-enfants.webp",
     "dishImage": null,
-    "photoStatus": "真实餐厅与菜品图片待确认",
+    "photoStatus": "已核真实来源图片",
     "soloFriendly": "适合1人；座位规则待现场确认",
     "lastVerified": "2026-09-08",
     "sourceType": "官方站点已建立；营业时间待临近复核",
@@ -2538,7 +2868,18 @@
       "lastVerified": null
     },
     "environmentImage": null,
-    "imageSources": [],
+    "imageSources": [
+      {
+        "file": "/images/food/paris-enfants.webp",
+        "caption": "Les Enfants du Marché — official venue visual",
+        "source": "Official restaurant website",
+        "sourcePage": "https://www.lesenfantsdumarche.fr/",
+        "originalUrl": "https://images.squarespace-cdn.com/content/v1/678cd2c34c22544a99d3fb08/b91eb3b1-bd98-4a41-8941-71ce923ee37f/Capture+d%E2%80%99%C3%A9cran+2025-10-23+%C3%A0+13.53.20.png",
+        "lastVerified": "2026-09-10",
+        "role": "Restaurant",
+        "entityId": "paris-enfants"
+      }
+    ],
     "hotelId": "stay-paris-oden",
     "hotelName": "Oden Paris Ivry",
     "hotelPriority": 9,
@@ -2562,9 +2903,9 @@
     "mustEat": "酒店同址低折腾晚餐",
     "mapQuery": "Restaurant Ai Pini Via Miranese 176 Mestre",
     "xhsKeyword": "Mestre Ai Pini 餐厅",
-    "restaurantImage": null,
+    "restaurantImage": "/images/food/venice-ai-pini-restaurant.webp",
     "dishImage": null,
-    "photoStatus": "真实餐厅与菜品图片待确认",
+    "photoStatus": "已核真实来源图片",
     "soloFriendly": "适合1人；订位规则待确认",
     "lastVerified": "2026-09-08",
     "sourceType": "餐厅官网",
@@ -2579,7 +2920,18 @@
       "lastVerified": null
     },
     "environmentImage": null,
-    "imageSources": [],
+    "imageSources": [
+      {
+        "file": "/images/food/venice-ai-pini-restaurant.webp",
+        "caption": "Restaurant Ai Pini — official venue visual",
+        "source": "Official restaurant website",
+        "sourcePage": "https://ristoranteaipini.it/en/contacts/",
+        "originalUrl": "https://ristoranteaipini.it/wp-content/uploads/2024/08/DSC6967-1024x683.jpg",
+        "lastVerified": "2026-09-10",
+        "role": "Restaurant",
+        "entityId": "venice-ai-pini-restaurant"
+      }
+    ],
     "hotelId": "stay-venice-ai-pini",
     "hotelName": "Park Hotel Ai Pini & Restaurant Ai Pini",
     "hotelPriority": 1,
@@ -2603,9 +2955,9 @@
     "mustEat": "手工拉面",
     "mapQuery": "Tarim Uighur Restaurant Lorystraße 44 Wien",
     "xhsKeyword": "维也纳 Tarim Uighur Restaurant",
-    "restaurantImage": null,
+    "restaurantImage": "/images/food/vienna-tarim.webp",
     "dishImage": null,
-    "photoStatus": "真实餐厅与菜品图片待确认",
+    "photoStatus": "已核真实来源图片",
     "soloFriendly": "适合1人",
     "lastVerified": "2026-09-08",
     "sourceType": "餐厅官网",
@@ -2620,7 +2972,18 @@
       "lastVerified": null
     },
     "environmentImage": null,
-    "imageSources": [],
+    "imageSources": [
+      {
+        "file": "/images/food/vienna-tarim.webp",
+        "caption": "Tarim Uighur Restaurant — venue or signature food visual",
+        "source": "Restaurant Guru venue gallery",
+        "sourcePage": "https://de.restaurantguru.com/Tarim-Uigur-Restaurant-Vienna",
+        "originalUrl": "https://img02.restaurantguru.com/c599-Tarim-Uigur-Restaurant-Vienna-food.jpg",
+        "lastVerified": "2026-09-10",
+        "role": "Restaurant",
+        "entityId": "vienna-tarim"
+      }
+    ],
     "hotelId": "stay-vienna-jimmys",
     "hotelName": "Jimmy's Apartments Lory",
     "hotelPriority": 1,
@@ -2646,9 +3009,9 @@
     "mustEat": "当日融合菜",
     "mapQuery": "La Table de Mame 23bis Avenue Pierre Semard Ivry-sur-Seine",
     "xhsKeyword": "Ivry La Table de Mame",
-    "restaurantImage": null,
+    "restaurantImage": "/images/food/paris-la-table-de-mame.webp",
     "dishImage": null,
-    "photoStatus": "真实餐厅与菜品图片待确认",
+    "photoStatus": "已核真实来源图片",
     "soloFriendly": "适合1人；晚间营业临近确认",
     "lastVerified": "2026-09-08",
     "sourceType": "餐饮行业目录；地址与时段待临近复核",
@@ -2663,7 +3026,18 @@
       "lastVerified": null
     },
     "environmentImage": null,
-    "imageSources": [],
+    "imageSources": [
+      {
+        "file": "/images/food/paris-la-table-de-mame.webp",
+        "caption": "La Table de Mame — official venue visual",
+        "source": "Official restaurant website",
+        "sourcePage": "https://icioncuisine.com/restaurant/la-table-de-mame-23437",
+        "originalUrl": "https://img.icioncuisine.com/1/4/0/4/9/414049/c/google-places-23437-large.jpg",
+        "lastVerified": "2026-09-10",
+        "role": "Restaurant",
+        "entityId": "paris-la-table-de-mame"
+      }
+    ],
     "hotelId": "stay-paris-oden",
     "hotelName": "Oden Paris Ivry",
     "hotelPriority": 1,

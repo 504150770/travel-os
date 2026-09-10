@@ -21,6 +21,9 @@ export type EntityImage = {
   file: string;
   caption: string;
   source: string | null;
+  sourcePage?: string | null;
+  role?: string;
+  entityId?: string;
   lastVerified: string | null;
   status: string;
   bestTime?: string;
@@ -65,7 +68,10 @@ const imageFor = (placeId: string): EntityImage[] =>
     .map((item) => ({
       file: textValue(item.file),
       caption: textValue(item.caption),
-      source: textValue(item.sourcePage || '') || null,
+      source: textValue(item.source || item.sourcePage || '') || null,
+      sourcePage: textValue(item.sourcePage || '') || null,
+      role: textValue(item.role || ''),
+      entityId: textValue(item.entityId || item.placeId || placeId),
       lastVerified: textValue(item.lastVerified || '') || null,
       status: 'verified',
       bestTime: textValue(item.bestTime, '待确认'),
@@ -129,22 +135,31 @@ const foodEntities: Entity[] = (
   restaurants as Array<Record<string, unknown>>
 ).map((item) => {
   const menu = item.menu as Record<string, unknown> | undefined;
+  const sourceRows = Array.isArray(item.imageSources)
+    ? (item.imageSources as Array<Record<string, unknown>>)
+    : [];
   const foodImages = [
     item.dishImage,
     item.restaurantImage,
     item.environmentImage,
   ]
     .filter(Boolean)
-    .map((file, index) => ({
+    .map((file, index) => {
+      const metadata = sourceRows.find((row) => row.file === file);
+      return {
       file: textValue(file),
-      caption:
-        index === 0
-          ? `${textValue(item.name)}代表菜`
-          : `${textValue(item.name)}环境`,
-      source: textValue(item.source),
-      lastVerified: textValue(item.lastVerified),
+      caption: textValue(
+        metadata?.caption,
+        index === 0 ? `${textValue(item.name)}实景` : `${textValue(item.name)}环境`,
+      ),
+      source: textValue(metadata?.source || item.source),
+      sourcePage: textValue(metadata?.sourcePage || item.source),
+      role: textValue(metadata?.role || (index === 0 ? 'Restaurant' : 'Environment')),
+      entityId: textValue(metadata?.entityId || item.id),
+      lastVerified: textValue(metadata?.lastVerified || item.lastVerified),
       status: 'verified',
-    }));
+      };
+    });
   return {
     id: textValue(item.id),
     type:
