@@ -18,11 +18,14 @@
     "test:gallery-offline": "node scripts/gallery-offline-test.mjs",
     "test:architecture": "node scripts/architecture-audit.mjs",
     "test:mobile": "node --experimental-strip-types scripts/mobile-shell-test.mjs",
+    "test:desktop-workspace": "node --experimental-strip-types scripts/desktop-workspace-test.mjs",
     "unverified": "node scripts/generate-unverified.mjs",
     "check": "pnpm lint && pnpm typecheck && pnpm test:linkage && pnpm build && pnpm run audit"
   },
   "dependencies": {
     "@base-ui/react": "1.7.0",
+    "@dnd-kit/core": "6.3.1",
+    "@dnd-kit/sortable": "10.0.0",
     "@shadcn/react": "0.3.0",
     "class-variance-authority": "0.7.1",
     "clsx": "2.1.1",

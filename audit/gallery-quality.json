@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-11T05:12:50.157Z",
+  "generatedAt": "2026-09-11T05:51:47.014Z",
   "criteria": {
     "food": ">=4 images, >=2 dishes, environment/entrance, dish cover",
     "gym": ">=3 images with equipment",
@@ -72,8 +72,8 @@
   },
   "galleryModalAccessible": true,
   "offlineCoreCoverage": {
-    "generatedAt": "2026-09-11T05:12:49.820Z",
-    "version": "d3a3abf6ba3e",
+    "generatedAt": "2026-09-11T05:51:46.683Z",
+    "version": "89270cf0e8ff",
     "assetCount": 193,
     "mediaAssetCount": 186,
     "totalBytes": 20322804,

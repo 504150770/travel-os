@@ -1,4 +1,4 @@
-import type { DayRoute } from '../../lib/types';
+import type { MapPoint } from '@/features/map/mapModel';
 
 export type MobileView = 'today' | 'map' | 'explore' | 'plan' | 'more';
 
@@ -29,29 +29,7 @@ export function desktopViewForMobile(view: MobileView) {
   return view;
 }
 
-export type MobileMapPoint = {
-  id: string;
-  name: string;
-  kind: 'hotel' | 'stop' | 'food' | 'gym';
-  lat: number;
-  lng: number;
-  image?: string;
-  detail?: string;
-  entityId?: string;
-};
-
-export function routeCoordinateOrder(
-  route: DayRoute,
-  points: MobileMapPoint[],
-): [number, number][] {
-  const byId = new Map(points.map((point) => [point.id, point]));
-  if (!route.legs.length) return points.map((point) => [point.lat, point.lng]);
-  const ids = [route.legs[0].fromId, ...route.legs.map((leg) => leg.toId)];
-  return ids.flatMap((id) => {
-    const point = byId.get(id);
-    return point ? [[point.lat, point.lng] as [number, number]] : [];
-  });
-}
+export type MobileMapPoint = MapPoint;
 
 export function compactModeLabel(mode: 'Walk' | 'Transit' | 'Taxi') {
   if (mode === 'Walk') return 'Walk';

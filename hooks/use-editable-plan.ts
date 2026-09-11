@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import originalPlan from '@/data/day-plans.json';
 import { useLocalStorage } from '@/hooks/use-local-storage';
+import { reorderPlanItems } from '@/features/trip/planModel';
 
 export type PlanItem = {
   id: string;
@@ -80,6 +81,16 @@ export function useEditablePlan() {
         return { ...day, activeItems: reindex(items) };
       },
       direction < 0 ? '上移项目' : '下移项目',
+    );
+
+  const reorderWithin = (dayId: number, activeId: string, overId: string) =>
+    updateDay(
+      dayId,
+      (day) => ({
+        ...day,
+        activeItems: reorderPlanItems(day.activeItems, activeId, overId),
+      }),
+      '调整行程顺序',
     );
 
   const transfer = (
@@ -262,6 +273,7 @@ export function useEditablePlan() {
     undo,
     undoLast,
     moveWithin,
+    reorderWithin,
     transfer,
     moveDay,
     addEntity,

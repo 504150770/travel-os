@@ -525,7 +525,7 @@ textarea { width: 100%; min-height: 150px; resize: vertical; }
   .transit-execution-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   body { padding-bottom: 78px; }
   .side-nav { grid-template-columns: 1fr auto; height: 64px; padding: 0 20px; }
   .v2-brand b { font-size: 19px; }

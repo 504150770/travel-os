@@ -5,8 +5,8 @@ import {
   desktopViewForMobile,
   desktopViewFromUrl,
   mobileViewFromUrl,
-  routeCoordinateOrder,
 } from '../features/mobile/mobileModel.ts';
+import { routeCoordinateOrder } from '../features/map/mapModel.ts';
 
 assert.equal(mobileViewFromUrl('trip'), 'today');
 assert.equal(mobileViewFromUrl('home'), 'today');
