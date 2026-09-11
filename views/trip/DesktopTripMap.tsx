@@ -1,12 +1,15 @@
 'use client';
 
 import Image from 'next/image';
-import { Component, lazy, Suspense, type ReactNode } from 'react';
+import { Component, lazy, Suspense, useState, type ReactNode } from 'react';
 import { Crosshair, ExternalLink, Navigation, Plus } from 'lucide-react';
 import type { Entity } from '@/lib/entity-library';
 import type { DayRoute } from '@/lib/types';
 import type { MapPoint } from '@/features/map/mapModel';
 import { mapLinks } from '@/features/trip/tripModel';
+import type { CurrentLocation } from '@/features/map/location/locationModel';
+import { approximateDistanceLabel } from '@/features/map/location/locationModel';
+import type { RouteGeometryState } from '@/features/map/routing/useRouteGeometry';
 
 const MapCanvas = lazy(() => import('@/components/map/MapCanvas'));
 
@@ -30,6 +33,8 @@ export function DesktopTripMap({
   resolve,
   openDetails,
   addCandidate,
+  currentLocation,
+  locationFocusToken,
 }: {
   points: MapPoint[];
   route: DayRoute;
@@ -41,7 +46,10 @@ export function DesktopTripMap({
   resolve: (id: string) => Entity | undefined;
   openDetails: (entity: Entity | null, hotel: boolean) => void;
   addCandidate: (entity: Entity) => void;
+  currentLocation: CurrentLocation | null;
+  locationFocusToken: number;
 }) {
+  const [routeStatus, setRouteStatus] = useState<RouteGeometryState['status']>('loading');
   const selected = points.find((point) => point.id === selectedPointId) ?? null;
   const entity = selected?.entityId ? resolve(selected.entityId) : undefined;
   const navigate = entity
@@ -62,10 +70,15 @@ export function DesktopTripMap({
             fitToken={fitToken}
             className="desktop-map-canvas"
             onSelect={(point) => selectPoint(point.id)}
+            currentLocation={currentLocation}
+            locationFocusToken={locationFocusToken}
+            onRouteStatus={setRouteStatus}
           />
         </Suspense>
       </DesktopMapBoundary>
-      <div className="workspace-map-disclaimer">Schematic point order · use Navigate for live directions</div>
+      <div className="workspace-map-disclaimer">
+        {routeStatus === 'fallback' ? 'Dashed = route overview · detailed route unavailable' : routeStatus === 'cached' ? 'Solid = routed road · using cached route' : routeStatus === 'routed' ? 'Solid = routed road · dashed = route overview' : 'Loading detailed route…'}
+      </div>
       {selected && (
         <article className="workspace-map-preview">
           {selected.image && <Image unoptimized src={selected.image} alt="" width={88} height={76} />}
@@ -73,6 +86,7 @@ export function DesktopTripMap({
             <span>{selected.kind === 'hotel' ? 'HOTEL' : selected.kind.toUpperCase()}</span>
             <h2>{selected.name}</h2>
             <p>{selected.time ? `${selected.time} · ${selected.duration}` : selected.detail}</p>
+            {currentLocation && <small>{approximateDistanceLabel(currentLocation, selected)} · approximate</small>}
             {selected.ticket && <small>{selected.ticket}</small>}
           </div>
           <div>

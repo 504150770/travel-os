@@ -13,6 +13,7 @@ import {
   Route,
   Search,
   Utensils,
+  LocateFixed,
 } from 'lucide-react';
 import { useCallback, useMemo, useRef, useState, useSyncExternalStore } from 'react';
 import type { PanelImperativeHandle } from 'react-resizable-panels';
@@ -31,6 +32,9 @@ import { DayDetailsDrawer, EntityDetailDrawer, ExploreDrawer } from '@/views/tri
 import { GymDetailModal } from '@/views/trip/DayGym';
 import { QuickAdd } from '@/views/trip/QuickAdd';
 import '@/views/trip/desktop-workspace.css';
+import { useCurrentLocation } from '@/features/map/location/useCurrentLocation';
+import { useWeatherContext } from '@/features/weather/useWeatherContext';
+import { WeatherChip } from '@/components/weather/WeatherChip';
 
 const DEFAULT_PANEL = 420;
 const MIN_PANEL = 340;
@@ -89,6 +93,7 @@ export default function DesktopTripWorkspace(props: DesktopTripWorkspaceProps) {
   const [showGym, setShowGym] = useState(false);
   const [fitRequest, setFitRequest] = useState(0);
   const [candidates, setCandidates] = useState<Entity[]>([]);
+  const location = useCurrentLocation();
 
   const food = useMemo(() => selectRelevantFood({ entities, day: trip.day, planDay: trip.planDay }), [entities, trip.day, trip.planDay]);
   const currentIds = useMemo(() => new Set(trip.planDay.activeItems.map((item) => item.entityId)), [trip.planDay.activeItems]);
@@ -101,6 +106,11 @@ export default function DesktopTripWorkspace(props: DesktopTripWorkspaceProps) {
     gyms: showGym ? trip.optionalGyms : [],
     candidates: drawer === 'explore' ? markerCandidates : [],
   }), [drawer, food, markerCandidates, resolve, showFood, showGym, trip.optionalGyms, trip.planDay, trip.stay]);
+  const weather = useWeatherContext({
+    city: routeCityForDay(trip.day),
+    date: trip.day.date,
+    coordinates: trip.stay?.coordinates,
+  });
 
   const changeDay = (day: number) => {
     setSelectedPointId(null);
@@ -164,6 +174,7 @@ export default function DesktopTripWorkspace(props: DesktopTripWorkspaceProps) {
         </dialog>}
       </div>
       <div className="workspace-tools">
+        <WeatherChip weather={weather} />
         <span className="workspace-mode"><Layers3 /> Plan + Map</span>
         <button onClick={() => { setDrawer('details'); setDetailEntity(null); }}><Info /> Day details</button>
         <button onClick={() => { setDrawer('explore'); setDetailEntity(null); }}><Search /> Explore</button>
@@ -175,9 +186,10 @@ export default function DesktopTripWorkspace(props: DesktopTripWorkspaceProps) {
       <button className={showFood ? 'active' : ''} onClick={() => setShowFood((value) => !value)}><Utensils /> Food</button>
       <button className={showGym ? 'active' : ''} onClick={() => setShowGym((value) => !value)}><Dumbbell /> Gym</button>
       <button onClick={() => setFitRequest((value) => value + 1)}><CircleDot /> Fit Day</button>
+      <button onClick={location.request} disabled={location.state.status === 'locating'} title={location.state.status === 'error' ? location.state.message : undefined}><LocateFixed /> {location.state.status === 'locating' ? 'Locating' : 'My Location'}</button>
     </div>
     {compact ? <div className="workspace-compact-stage">
-      <DesktopTripMap points={points} route={trip.currentRoute} selectedPointId={selectedPointId} selectedLegId={selectedLegId} showRoute={showRoute} fitToken={`${selectedDay}:${fitRequest}`} selectPoint={selectPoint} resolve={resolve} openDetails={openDetails} addCandidate={addCandidate} />
+      <DesktopTripMap points={points} route={trip.currentRoute} selectedPointId={selectedPointId} selectedLegId={selectedLegId} showRoute={showRoute} fitToken={`${selectedDay}:${fitRequest}`} selectPoint={selectPoint} resolve={resolve} openDetails={openDetails} addCandidate={addCandidate} currentLocation={location.state.position} locationFocusToken={location.focusToken} />
       {!planCollapsed && planPane}
     </div> : <ResizablePanelGroup key={panelEpoch} id="desktop-trip-group" orientation="horizontal" className="workspace-split">
       <ResizablePanel id="plan" panelRef={panelRef} defaultSize={`${panelWidth}px`} minSize={`${MIN_PANEL}px`} maxSize={`${MAX_PANEL}px`} collapsible collapsedSize="0px" onResize={(size) => {
@@ -185,7 +197,7 @@ export default function DesktopTripWorkspace(props: DesktopTripWorkspaceProps) {
         if (size.inPixels >= MIN_PANEL) window.localStorage.setItem(PANEL_KEY, String(Math.round(size.inPixels)));
       }}>{planPane}</ResizablePanel>
       <ResizableHandle className="workspace-resize-handle" withHandle onDoubleClick={resetPanel} title="Drag to resize · double-click to reset" />
-      <ResizablePanel id="map" minSize="320px"><DesktopTripMap points={points} route={trip.currentRoute} selectedPointId={selectedPointId} selectedLegId={selectedLegId} showRoute={showRoute} fitToken={`${selectedDay}:${fitRequest}`} selectPoint={selectPoint} resolve={resolve} openDetails={openDetails} addCandidate={addCandidate} /></ResizablePanel>
+      <ResizablePanel id="map" minSize="320px"><DesktopTripMap points={points} route={trip.currentRoute} selectedPointId={selectedPointId} selectedLegId={selectedLegId} showRoute={showRoute} fitToken={`${selectedDay}:${fitRequest}`} selectPoint={selectPoint} resolve={resolve} openDetails={openDetails} addCandidate={addCandidate} currentLocation={location.state.position} locationFocusToken={location.focusToken} /></ResizablePanel>
     </ResizablePanelGroup>}
     {planCollapsed && <button className="workspace-show-plan" onClick={togglePlan}><PanelLeftOpen /> Show Plan</button>}
     <DayDetailsDrawer open={drawer === 'details'} close={closeDrawer} day={trip.day} dayState={trip.dayState} entities={entities} resolve={resolve} actions={actions} openGallery={open} preferredTransport={preferredTransport} actionStatuses={actionStatuses} privateLinks={privateLinks} openGym={trip.setSelectedGym} />

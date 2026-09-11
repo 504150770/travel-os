@@ -16,6 +16,10 @@ import {
 import { MobileEntitySheet } from '@/components/mobile/MobileEntitySheet';
 import { MobileHotelSheet } from '@/components/mobile/MobileHotelSheet';
 import { MobilePlanItemSheet } from '@/components/mobile/MobilePlanItemSheet';
+import { useCurrentLocation } from '@/features/map/location/useCurrentLocation';
+import { approximateDistanceLabel } from '@/features/map/location/locationModel';
+import { useWeatherContext } from '@/features/weather/useWeatherContext';
+import { routeCityForDay } from '@/features/trip/tripModel';
 
 const MobileMapScreen = lazy(async () => {
   const loaded = await import('@/components/mobile/MobileMapScreen');
@@ -41,6 +45,7 @@ export function MobileTripWorkspace({
   const [hotelOpen, setHotelOpen] = useState(false);
   const [actions, setActions] = useState<ActionSelection | null>(null);
   const [mapPoint, setMapPoint] = useState<MobileMapPoint | null>(null);
+  const location = useCurrentLocation();
   const food = useMemo(
     () =>
       mobileFoodPicks({
@@ -62,6 +67,15 @@ export function MobileTripWorkspace({
       }),
     [controller.resolve, food, gym, trip.planDay, trip.stay],
   );
+  const weather = useWeatherContext({
+    city: routeCityForDay(trip.day),
+    date: trip.day.date,
+    coordinates: trip.stay?.coordinates,
+  });
+  const nextStop = mapPoints.find((point) => point.kind === 'stop');
+  const nextStopDistance = location.state.position && nextStop
+    ? approximateDistanceLabel(location.state.position, nextStop)
+    : undefined;
 
   return (
     <>
@@ -76,6 +90,9 @@ export function MobileTripWorkspace({
             select={setMapPoint}
             openEntity={setEntity}
             resolve={controller.resolve}
+            location={location.state}
+            requestLocation={location.request}
+            locationFocusToken={location.focusToken}
           />
         </Suspense>
       ) : (
@@ -88,6 +105,8 @@ export function MobileTripWorkspace({
           openHotel={() => setHotelOpen(true)}
           openActions={setActions}
           openDayPicker={openDayPicker}
+          weather={weather}
+          nextStopDistance={nextStopDistance}
         />
       )}
       <MobileEntitySheet

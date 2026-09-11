@@ -77,7 +77,7 @@
 .workspace-map-preview button, .workspace-map-preview a { display: inline-flex; min-height: 36px; align-items: center; justify-content: center; gap: 5px; padding: 0 10px; border: 1px solid var(--line); border-radius: 8px; background: #fff; font-size: 11px; font-weight: 650; }
 .workspace-map-preview button { border-color: var(--accent); background: var(--accent); color: #fff; }
 .workspace-map-preview svg { width: 13px; height: 13px; }
-.workspace-map-tools { position: absolute; z-index: 550; top: 82px; right: 16px; display: flex; gap: 6px; }
+.workspace-map-tools { position: absolute; z-index: 550; top: 82px; right: 64px; display: flex; gap: 6px; }
 .workspace-map-tools button { min-height: 38px; border-color: rgb(255 255 255 / .8); box-shadow: 0 2px 9px rgb(0 0 0 / .08); }
 .workspace-map-tools button.active { border-color: var(--accent); background: var(--accent-soft); color: #2478ad; }
 .workspace-show-plan { position: absolute; z-index: 560; top: 84px; left: 16px; box-shadow: var(--shadow-float); }

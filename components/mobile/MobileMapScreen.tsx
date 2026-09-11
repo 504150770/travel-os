@@ -1,12 +1,15 @@
 'use client';
 
 import Image from 'next/image';
-import { Component, lazy, Suspense, type ReactNode } from 'react';
+import { Component, lazy, Suspense, useState, type ReactNode } from 'react';
 import { ChevronRight, LocateFixed, Navigation } from 'lucide-react';
 import type { Entity } from '@/lib/entity-library';
 import type { DayRoute } from '@/lib/types';
 import type { MobileMapPoint } from '@/features/mobile/mobileModel';
 import { mapLinks } from '@/features/trip/tripModel';
+import type { LocationState } from '@/features/map/location/locationModel';
+import { approximateDistanceLabel } from '@/features/map/location/locationModel';
+import type { RouteGeometryState } from '@/features/map/routing/useRouteGeometry';
 
 const MobileMapCanvas = lazy(() => import('@/components/mobile/map/MobileMapCanvas'));
 
@@ -37,6 +40,9 @@ export function MobileMapScreen({
   select,
   openEntity,
   resolve,
+  location,
+  requestLocation,
+  locationFocusToken,
 }: {
   route: DayRoute;
   points: MobileMapPoint[];
@@ -46,14 +52,26 @@ export function MobileMapScreen({
   select: (point: MobileMapPoint | null) => void;
   openEntity: (entity: Entity) => void;
   resolve: (id: string) => Entity | undefined;
+  location: LocationState;
+  requestLocation: () => void;
+  locationFocusToken: number;
 }) {
+  const [routeStatus, setRouteStatus] = useState<RouteGeometryState['status']>('loading');
   const selectedEntity = selected?.entityId ? resolve(selected.entityId) : undefined;
+  const proximity = selected && location.position
+    ? approximateDistanceLabel(location.position, selected)
+    : undefined;
   return (
     <main className="mobile-map-screen" data-mobile-screen="map">
       <div className="mobile-map-summary">
         <span>DAY {route.day} ROUTE</span>
         <b>{route.summary.transfers} legs · {route.summary.walkingKm ?? '—'} km</b>
+        <small>{routeStatus === 'cached' ? 'Using cached route' : routeStatus === 'fallback' ? 'Route overview' : routeStatus === 'routed' ? 'Detailed walking route' : 'Loading route…'}</small>
       </div>
+      <button className="mobile-location-button" onClick={requestLocation} disabled={location.status === 'locating'}>
+        <LocateFixed /> {location.status === 'locating' ? 'Locating…' : 'My Location'}
+      </button>
+      {location.status === 'error' && <p className="mobile-location-error">{location.message}</p>}
       <MapBoundary>
         <Suspense
           fallback={
@@ -63,7 +81,14 @@ export function MobileMapScreen({
             </div>
           }
         >
-          <MobileMapCanvas points={points} route={route} onSelect={select} />
+          <MobileMapCanvas
+            points={points}
+            route={route}
+            onSelect={select}
+            currentLocation={location.position}
+            locationFocusToken={locationFocusToken}
+            onRouteStatus={setRouteStatus}
+          />
         </Suspense>
       </MapBoundary>
 
@@ -82,6 +107,7 @@ export function MobileMapScreen({
             <span>{selected.kind.toUpperCase()}</span>
             <h2>{selected.name}</h2>
             <p>{selected.detail}</p>
+            {proximity && <small>{proximity} · approximate</small>}
           </div>
           <div>
             {selectedEntity && (

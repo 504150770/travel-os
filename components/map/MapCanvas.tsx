@@ -5,8 +5,10 @@ import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import '@/components/map/map.css';
 import type { DayRoute } from '@/lib/types';
-import { legCoordinatePair, routeCoordinateOrder, type MapPoint } from '@/features/map/mapModel';
+import { type MapPoint } from '@/features/map/mapModel';
 import { MOBILE_TILE_PROVIDER } from '@/components/mobile/map/mapProvider';
+import { useRouteGeometry, type RouteGeometryState } from '@/features/map/routing/useRouteGeometry';
+import type { CurrentLocation } from '@/features/map/location/locationModel';
 
 const escapeText = (value: string) => value
   .replaceAll('&', '&amp;')
@@ -39,8 +41,11 @@ export default function MapCanvas({
   selectedLegId = null,
   showRoute = true,
   fitToken,
+  currentLocation = null,
+  locationFocusToken = 0,
   className = '',
   onSelect,
+  onRouteStatus,
 }: {
   points: MapPoint[];
   route: DayRoute;
@@ -48,18 +53,23 @@ export default function MapCanvas({
   selectedLegId?: string | null;
   showRoute?: boolean;
   fitToken: string | number;
+  currentLocation?: CurrentLocation | null;
+  locationFocusToken?: number;
   className?: string;
   onSelect: (point: MapPoint) => void;
+  onRouteStatus?: (status: RouteGeometryState['status']) => void;
 }) {
   const nodeRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<L.Map | null>(null);
   const markerLayerRef = useRef<L.LayerGroup | null>(null);
   const routeLayerRef = useRef<L.LayerGroup | null>(null);
+  const locationLayerRef = useRef<L.LayerGroup | null>(null);
   const markerRefs = useRef(new Map<string, L.Marker>());
   const selectRef = useRef(onSelect);
   const pointsRef = useRef(points);
   selectRef.current = onSelect;
   pointsRef.current = points;
+  const routeGeometry = useRouteGeometry(route, points);
 
   useEffect(() => {
     if (!nodeRef.current) return;
@@ -69,9 +79,11 @@ export default function MapCanvas({
       attribution: MOBILE_TILE_PROVIDER.attribution,
       maxZoom: MOBILE_TILE_PROVIDER.maxZoom,
     }).addTo(map);
+    map.attributionControl.addAttribution('Routing © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a> · <a href="https://routing.openstreetmap.de/about.html">FOSSGIS</a> · <a href="https://www.openstreetmap.org/fixthemap">Fix the map</a>');
     L.control.zoom({ position: 'topright' }).addTo(map);
     markerLayerRef.current = L.layerGroup().addTo(map);
     routeLayerRef.current = L.layerGroup().addTo(map);
+    locationLayerRef.current = L.layerGroup().addTo(map);
     fitMap(map, pointsRef.current);
     const observer = new ResizeObserver(() => map.invalidateSize({ pan: false }));
     observer.observe(nodeRef.current);
@@ -105,6 +117,10 @@ export default function MapCanvas({
   }, [points, selectedPointId]);
 
   useEffect(() => {
+    onRouteStatus?.(routeGeometry.status);
+  }, [onRouteStatus, routeGeometry.status]);
+
+  useEffect(() => {
     const map = mapRef.current;
     if (!map || !selectedPointId) return;
     const point = points.find((item) => item.id === selectedPointId);
@@ -118,16 +134,43 @@ export default function MapCanvas({
     if (!routeLayer) return;
     routeLayer.clearLayers();
     if (!showRoute) return;
-    const ordered = routeCoordinateOrder(route, points);
-    if (ordered.length > 1) {
-      L.polyline(ordered, { color: '#d8eefb', weight: 9, opacity: 0.92, lineCap: 'round' }).addTo(routeLayer);
-      L.polyline(ordered, { color: '#5dade2', weight: 4, opacity: 0.95, dashArray: '2 8', lineCap: 'round' }).addTo(routeLayer);
-    }
-    const selected = legCoordinatePair(route, points, selectedLegId);
-    if (selected.length === 2) {
-      L.polyline(selected, { color: '#2478ad', weight: 7, opacity: 0.9, lineCap: 'round' }).addTo(routeLayer);
-    }
-  }, [points, route, selectedLegId, showRoute]);
+    routeGeometry.geometries.forEach((geometry) => {
+      const selected = geometry.legId === selectedLegId;
+      if (geometry.source === 'routed') {
+        L.polyline(geometry.coordinates, {
+          color: '#d8eefb', weight: selected ? 12 : 9, opacity: 0.94, lineCap: 'round', lineJoin: 'round',
+        }).addTo(routeLayer);
+        L.polyline(geometry.coordinates, {
+          color: selected ? '#2478ad' : '#5dade2', weight: selected ? 6 : 4, opacity: 0.98, lineCap: 'round', lineJoin: 'round',
+        }).addTo(routeLayer);
+      } else {
+        L.polyline(geometry.coordinates, {
+          color: selected ? '#2478ad' : '#5dade2', weight: selected ? 6 : 4, opacity: 0.82,
+          dashArray: '8 10', lineCap: 'round',
+        }).addTo(routeLayer);
+      }
+    });
+  }, [routeGeometry.geometries, selectedLegId, showRoute]);
+
+  useEffect(() => {
+    const layer = locationLayerRef.current;
+    if (!layer) return;
+    layer.clearLayers();
+    if (!currentLocation) return;
+    L.circle([currentLocation.lat, currentLocation.lng], {
+      radius: Math.max(8, currentLocation.accuracy),
+      color: '#2478ad', fillColor: '#5dade2', fillOpacity: 0.12, opacity: 0.28, weight: 1,
+    }).addTo(layer);
+    L.circleMarker([currentLocation.lat, currentLocation.lng], {
+      radius: 8, color: '#fff', fillColor: '#287fd1', fillOpacity: 1, weight: 3,
+    }).bindTooltip('Your location').addTo(layer);
+  }, [currentLocation]);
+
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map || !currentLocation || locationFocusToken < 1) return;
+    map.setView([currentLocation.lat, currentLocation.lng], Math.max(map.getZoom(), 15), { animate: true });
+  }, [currentLocation, locationFocusToken]);
 
   useEffect(() => {
     const map = mapRef.current;

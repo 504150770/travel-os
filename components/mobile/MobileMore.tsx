@@ -9,6 +9,7 @@ import type { HotelBooking, SurvivalCity } from '@/lib/types';
 import { guideData } from '@/lib/data';
 import { realStays } from '@/features/trip/tripModel';
 import { OfflinePackControl } from '@/components/offline-pack-control';
+import { OfflineMapFallback } from '@/components/offline-map-fallback';
 import { MobileHotelSheet } from '@/components/mobile/MobileHotelSheet';
 
 type MorePanel = 'stays' | 'essentials' | 'survival' | 'offline' | 'backup';
@@ -135,6 +136,12 @@ export function MobileMore({ controller }: { controller: AppController }) {
           <h2>Offline trip pack</h2>
           <p>下载当前核心行程、路线和精选媒体。地图瓦片不包含在离线包内。</p>
           <OfflinePackControl />
+          <OfflineMapFallback
+            selectedDay={controller.selectedDay}
+            plan={controller.actions.plan}
+            entities={controller.entities}
+            resolve={controller.resolve}
+          />
         </section>
       )}
 

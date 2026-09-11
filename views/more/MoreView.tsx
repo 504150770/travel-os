@@ -9,6 +9,7 @@ import { deriveCurrentDayState } from '@/lib/derive-current-day';
 import { MiniRoute } from '@/components/mini-route';
 import { HotelExecutionCard, SurvivalGrid } from '@/components/execution-cards';
 import { OfflinePackControl } from '@/components/offline-pack-control';
+import { OfflineMapFallback } from '@/components/offline-map-fallback';
 import type { BackupPayload, LightboxImage, MoreTab } from '@/features/app/appModel';
 import { yuan } from '@/features/app/appModel';
 import { dayRoutes, hotelForNight, realStays, routeCityForDay } from '@/features/trip/tripModel';
@@ -57,6 +58,7 @@ export function MoreView({
   notes,
   setNotes,
   actions,
+  entities,
   resolve,
   privateLinks,
   open,
@@ -70,6 +72,7 @@ export function MoreView({
   notes: string;
   setNotes: (v: string) => void;
   actions: ReturnType<typeof useEditablePlan>;
+  entities: Entity[];
   resolve: (id: string) => Entity | undefined;
   privateLinks: Record<string, string>;
   open: (image: LightboxImage) => void;
@@ -152,6 +155,7 @@ export function MoreView({
               );
             })()}
           </section>
+          <OfflineMapFallback selectedDay={selectedDay} plan={actions.plan} entities={entities} resolve={resolve} />
         </div>
       )}{' '}
       {tab === 'survival' && (

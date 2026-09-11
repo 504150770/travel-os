@@ -55,7 +55,7 @@ export default function TravelGuideV3() {
         {view === 'more' && <MoreView
           tab={moreTab} setTab={selectMoreTab} selectedDay={selectedDay}
           setSelectedDay={selectMoreDay} backup={backup} importBackup={importBackup}
-          notes={notes} setNotes={setNotes} actions={actions} resolve={resolve}
+          notes={notes} setNotes={setNotes} actions={actions} entities={entities} resolve={resolve}
           privateLinks={privateLinks} open={setLightbox}
         />}
       </div>

@@ -19,6 +19,7 @@
     "test:architecture": "node scripts/architecture-audit.mjs",
     "test:mobile": "node --experimental-strip-types scripts/mobile-shell-test.mjs",
     "test:desktop-workspace": "node --experimental-strip-types scripts/desktop-workspace-test.mjs",
+    "test:travel-intelligence": "node --experimental-strip-types scripts/travel-intelligence-test.mjs",
     "unverified": "node scripts/generate-unverified.mjs",
     "check": "pnpm lint && pnpm typecheck && pnpm test:linkage && pnpm build && pnpm run audit"
   },

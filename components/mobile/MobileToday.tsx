@@ -20,6 +20,8 @@ import type { ReturnTypeUseTripController } from '@/features/mobile/mobileTypes'
 import { deriveGymFit } from '@/lib/derive-current-day';
 import { mapLinks, routeCityForDay } from '@/features/trip/tripModel';
 import { selectCoverImage } from '@/lib/media';
+import type { WeatherContextState } from '@/features/weather/useWeatherContext';
+import { WeatherChip } from '@/components/weather/WeatherChip';
 
 export type ActionSelection = {
   item: PlanItem;
@@ -45,6 +47,8 @@ export function MobileToday({
   openHotel,
   openActions,
   openDayPicker,
+  weather,
+  nextStopDistance,
 }: {
   controller: AppController;
   trip: ReturnTypeUseTripController;
@@ -54,6 +58,8 @@ export function MobileToday({
   openHotel: () => void;
   openActions: (selection: ActionSelection) => void;
   openDayPicker: () => void;
+  weather: WeatherContextState;
+  nextStopDistance?: string;
 }) {
   const { day, planDay, stay, dayState, currentRoute } = trip;
   const rows = planDay.activeItems.flatMap((item) => {
@@ -79,6 +85,7 @@ export function MobileToday({
           <p>
             Day {day.day} · {day.date.slice(5).replace('-', '/')}
           </p>
+          <WeatherChip weather={weather} compact />
         </div>
         <button onClick={openDayPicker} aria-label="选择旅行日">
           D{day.day} <ChevronRight />
@@ -108,6 +115,7 @@ export function MobileToday({
               <span>{next.item.time}</span>
               <h2>{next.entity.name}</h2>
               <p>{firstLeg ? legLabel(firstLeg) : next.item.duration}</p>
+              {nextStopDistance && <small>{nextStopDistance} · approximate</small>}
               <small>{next.item.ticket}</small>
             </div>
           </div>
