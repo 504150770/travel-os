@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { Check, Download, HeartPulse, Upload, WifiOff } from 'lucide-react';
-import { useRef, useState } from 'react';
+import { lazy, Suspense, useEffect, useRef, useState } from 'react';
 import type { AppController } from '@/features/app/useAppController';
 import type { MoreTab } from '@/features/app/appModel';
 import type { HotelBooking, SurvivalCity } from '@/lib/types';
@@ -12,10 +12,15 @@ import { OfflinePackControl } from '@/components/offline-pack-control';
 import { OfflineMapFallback } from '@/components/offline-map-fallback';
 import { MobileHotelSheet } from '@/components/mobile/MobileHotelSheet';
 
-type MorePanel = 'stays' | 'essentials' | 'survival' | 'offline' | 'backup';
+type MorePanel = 'stays' | 'documents' | 'packing' | 'essentials' | 'survival' | 'offline' | 'backup';
+
+const DocumentsPanel = lazy(async () => ({ default: (await import('@/components/documents/DocumentsPanel')).DocumentsPanel }));
+const PackingPanel = lazy(async () => ({ default: (await import('@/components/packing/PackingPanel')).PackingPanel }));
 
 const panels: Array<[MorePanel, string]> = [
   ['stays', 'Hotels'],
+  ['documents', 'Documents'],
+  ['packing', 'Packing'],
   ['essentials', 'Essentials'],
   ['survival', 'Survival'],
   ['offline', 'Offline'],
@@ -24,6 +29,8 @@ const panels: Array<[MorePanel, string]> = [
 
 const mobilePanelForTab: Record<MoreTab, MorePanel> = {
   stay: 'stays',
+  documents: 'documents',
+  packing: 'packing',
   map: 'stays',
   survival: 'survival',
   essentials: 'essentials',
@@ -32,6 +39,8 @@ const mobilePanelForTab: Record<MoreTab, MorePanel> = {
 
 const moreTabForPanel: Partial<Record<MorePanel, MoreTab>> = {
   stays: 'stay',
+  documents: 'documents',
+  packing: 'packing',
   survival: 'survival',
   essentials: 'essentials',
   backup: 'backup',
@@ -40,6 +49,12 @@ const moreTabForPanel: Partial<Record<MorePanel, MoreTab>> = {
 export function MobileMore({ controller }: { controller: AppController }) {
   const [panel, setPanel] = useState<MorePanel>(() => mobilePanelForTab[controller.moreTab]);
   const [stay, setStay] = useState<HotelBooking | null>(null);
+  useEffect(() => {
+    const next = mobilePanelForTab[controller.moreTab];
+    if (!next) return;
+    const timer = window.setTimeout(() => setPanel(next), 0);
+    return () => window.clearTimeout(timer);
+  }, [controller.moreTab]);
   const fileRef = useRef<HTMLInputElement>(null);
   const exportBackup = () => {
     const url = URL.createObjectURL(
@@ -104,6 +119,9 @@ export function MobileMore({ controller }: { controller: AppController }) {
         </div>
       )}
 
+      {panel === 'documents' && <Suspense fallback={<p className="readiness-loading">Opening local vault…</p>}><DocumentsPanel bookings={controller.bookings} /></Suspense>}
+      {panel === 'packing' && <Suspense fallback={<p className="readiness-loading">Opening packing list…</p>}><PackingPanel items={controller.packingItems} setItems={controller.setPackingItems} /></Suspense>}
+
       {panel === 'essentials' && (
         <div className="mobile-accordion-list">
           {guideData.essentials.groups.map((group) => (
@@ -148,7 +166,7 @@ export function MobileMore({ controller }: { controller: AppController }) {
       {panel === 'backup' && (
         <section className="mobile-backup-panel">
           <h2>Backup / Restore</h2>
-          <p>包含 Current Plan、自定义项目、状态、收藏、预算实际支出和偏好交通。</p>
+          <p>包含 Current Plan、自定义项目、状态、收藏、Packing、预算实际支出和偏好交通。Documents 只保存在此设备。</p>
           <button onClick={exportBackup}><Download /> Export JSON</button>
           <button onClick={() => fileRef.current?.click()}><Upload /> Import JSON</button>
           <input

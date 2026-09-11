@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-11T06:22:20.551Z",
+  "generatedAt": "2026-09-11T08:02:00.253Z",
   "status": "passed",
   "summary": {
     "failures": 0,
@@ -48,6 +48,7 @@
     "visualNearDuplicateDetection": true,
     "hotelSingleSource": true,
     "realHotelVoucherAudit": true,
+    "privateVoucherExclusion": true,
     "hotelExecutionAudit": true,
     "offlineShellAudit": true,
     "dayRouteAudit": true,

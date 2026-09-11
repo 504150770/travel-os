@@ -1,6 +1,7 @@
 'use client';
 
 import { Check, ChevronDown, Download, Upload } from 'lucide-react';
+import { lazy, Suspense } from 'react';
 import { guideData } from '@/lib/data';
 import type { Day, SurvivalCity } from '@/lib/types';
 import type { Entity } from '@/lib/entity-library';
@@ -14,6 +15,10 @@ import type { BackupPayload, LightboxImage, MoreTab } from '@/features/app/appMo
 import { yuan } from '@/features/app/appModel';
 import { dayRoutes, hotelForNight, realStays, routeCityForDay } from '@/features/trip/tripModel';
 import { useMoreController } from '@/features/more/useMoreController';
+import type { AppController } from '@/features/app/useAppController';
+
+const DocumentsPanel = lazy(async () => ({ default: (await import('@/components/documents/DocumentsPanel')).DocumentsPanel }));
+const PackingPanel = lazy(async () => ({ default: (await import('@/components/packing/PackingPanel')).PackingPanel }));
 
 function Stay({
   privateLinks = {},
@@ -49,6 +54,7 @@ function Stay({
 }
 
 export function MoreView({
+  controller,
   tab,
   setTab,
   selectedDay,
@@ -63,6 +69,7 @@ export function MoreView({
   privateLinks,
   open,
 }: {
+  controller: AppController;
   tab: MoreTab;
   setTab: (t: MoreTab) => void;
   selectedDay: number;
@@ -92,6 +99,8 @@ export function MoreView({
         >
           STAY
         </button>
+        <button className={tab === 'documents' ? 'active' : ''} onClick={() => setTab('documents')}>DOCUMENTS</button>
+        <button className={tab === 'packing' ? 'active' : ''} onClick={() => setTab('packing')}>PACKING</button>
         <button
           className={tab === 'map' ? 'active' : ''}
           onClick={() => setTab('map')}
@@ -118,6 +127,8 @@ export function MoreView({
         </button>
       </div>
       {tab === 'stay' && <Stay privateLinks={privateLinks} open={open} />}{' '}
+      {tab === 'documents' && <Suspense fallback={<p className="readiness-loading">Opening local vault…</p>}><DocumentsPanel bookings={controller.bookings} /></Suspense>}{' '}
+      {tab === 'packing' && <Suspense fallback={<p className="readiness-loading">Opening packing list…</p>}><PackingPanel items={controller.packingItems} setItems={controller.setPackingItems} /></Suspense>}{' '}
       {tab === 'map' && (
         <div>
           <div className="day-switcher">
@@ -190,7 +201,7 @@ export function MoreView({
             <h2>EXPORT TRAVEL DATA</h2>
             <p>
               包含Current
-              itinerary、备选池、自定义Entity、酒店、订单、任务、预算、备注和收藏。
+              itinerary、备选池、自定义Entity、酒店、订单、任务、Packing、预算、备注和收藏。Documents 只保存在此设备。
             </p>
             <button onClick={exportJson}>导出JSON</button>
           </article>

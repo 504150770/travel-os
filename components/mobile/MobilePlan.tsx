@@ -1,6 +1,7 @@
 'use client';
 
 import { CalendarCheck, Check, Circle, CreditCard, TrainFront } from 'lucide-react';
+import { lazy, Suspense } from 'react';
 import type { AppController } from '@/features/app/useAppController';
 import type { PlanTab } from '@/features/app/appModel';
 import { yuan } from '@/features/app/appModel';
@@ -11,6 +12,7 @@ import { realStays, transportSegments } from '@/features/trip/tripModel';
 import { usePlanController } from '@/features/plan/usePlanController';
 
 const tabs: Array<[PlanTab, string]> = [
+  ['readiness', 'Readiness'],
   ['bookings', 'Bookings'],
   ['deadlines', 'Deadlines'],
   ['checkin', 'Check-in'],
@@ -18,6 +20,8 @@ const tabs: Array<[PlanTab, string]> = [
   ['budget', 'Budget'],
   ['tasks', 'Tasks'],
 ];
+
+const ReadinessCenter = lazy(async () => ({ default: (await import('@/components/readiness/ReadinessCenter')).ReadinessCenter }));
 
 export function MobilePlan({ controller }: { controller: AppController }) {
   const plan = usePlanController({
@@ -44,6 +48,8 @@ export function MobilePlan({ controller }: { controller: AppController }) {
           </button>
         ))}
       </div>
+
+      {controller.planTab === 'readiness' && <Suspense fallback={<p className="readiness-loading">Checking trip readiness…</p>}><ReadinessCenter controller={controller} compact /></Suspense>}
 
       {controller.planTab === 'bookings' && (
         <div className="mobile-control-list">

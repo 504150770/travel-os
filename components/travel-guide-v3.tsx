@@ -45,6 +45,7 @@ export default function TravelGuideV3() {
           city={discoverCity} setCity={selectDiscoverCity}
         />}
         {view === 'plan' && <PlanView
+          controller={controller}
           tab={planTab} setTab={selectPlanTab} bookingStatuses={bookingStatuses}
           setBookingStatuses={setBookingStatuses} actionStatuses={actionStatuses}
           setActionStatuses={setActionStatuses} actuals={actuals} setActuals={setActuals}
@@ -53,6 +54,7 @@ export default function TravelGuideV3() {
           setPrivateLinks={setPrivateLinks}
         />}
         {view === 'more' && <MoreView
+          controller={controller}
           tab={moreTab} setTab={selectMoreTab} selectedDay={selectedDay}
           setSelectedDay={selectMoreDay} backup={backup} importBackup={importBackup}
           notes={notes} setNotes={setNotes} actions={actions} entities={entities} resolve={resolve}

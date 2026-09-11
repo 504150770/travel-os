@@ -22,6 +22,7 @@ import { mapLinks, routeCityForDay } from '@/features/trip/tripModel';
 import { selectCoverImage } from '@/lib/media';
 import type { WeatherContextState } from '@/features/weather/useWeatherContext';
 import { WeatherChip } from '@/components/weather/WeatherChip';
+import { actionForDay } from '@/features/readiness/readinessModel';
 
 export type ActionSelection = {
   item: PlanItem;
@@ -75,6 +76,7 @@ export function MobileToday({
   const hotelLink = stay
     ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(stay.execution.address)}`
     : '#';
+  const dayAction = actionForDay(controller.actionQueue, day.date);
 
   return (
     <main className="mobile-today" data-mobile-screen="today">
@@ -289,13 +291,13 @@ export function MobileToday({
       <section className="mobile-section mobile-important-action">
         <header>
           <div>
-            <span>{controller.nextAction ? 'ACTION NEEDED' : 'TOMORROW'}</span>
-            <h2>{controller.nextAction?.title ?? currentRoute.atGlance.tomorrow}</h2>
+            <span>{dayAction ? 'TODAY ACTION' : 'TOMORROW'}</span>
+            <h2>{dayAction?.title ?? currentRoute.atGlance.tomorrow}</h2>
           </div>
           <MapPin />
         </header>
-        {controller.nextAction && (
-          <button onClick={() => controller.navigateMobile('plan')}>Open in Plan</button>
+        {dayAction && (
+          <button onClick={() => { controller.navigateMobile('plan'); controller.selectMobilePlanTab(dayAction.target); }}>Open in Plan</button>
         )}
       </section>
     </main>

@@ -11,7 +11,7 @@ export function hotelToBooking(stay: HotelBooking): Booking {
     detail: `${stay.checkIn} → ${stay.checkOut} · ${stay.nights}晚 · ${stay.execution.roomType} · ${stay.execution.paymentStatus}`,
     paymentStatus: stay.execution.paymentStatus,
     supplier: stay.hotelName,
-    orderNumber: stay.bookingNumber,
+    orderNumber: stay.bookingNumber === 'LOCAL_ONLY' ? '' : stay.bookingNumber,
     cancellationDeadline: stay.execution.cancellation.freeUntil,
     address: stay.execution.address,
     serviceNumber: stay.execution.phone,
@@ -19,7 +19,7 @@ export function hotelToBooking(stay: HotelBooking): Booking {
     baggage: '',
     contact: stay.execution.phone,
     notes: stay.execution.cancellation.afterDeadline,
-    attachmentName: stay.sourceFile,
+    attachmentName: stay.sourceFile === 'LOCAL_DOCUMENT' ? '' : stay.sourceFile,
     lastVerified: stay.coordinateVerifiedAt,
   };
 }

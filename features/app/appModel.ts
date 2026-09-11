@@ -10,19 +10,20 @@ export type DiscoverTab =
   | 'picks'
   | 'photos';
 export type PlanTab =
+  | 'readiness'
   | 'bookings'
   | 'transport'
   | 'checkin'
   | 'deadlines'
   | 'tasks'
   | 'budget';
-export type MoreTab = 'stay' | 'map' | 'survival' | 'essentials' | 'backup';
+export type MoreTab = 'stay' | 'documents' | 'packing' | 'map' | 'survival' | 'essentials' | 'backup';
 export type AddMode = 'place' | 'food' | 'gym' | 'custom';
 export type LightboxImage = GalleryRequest | null;
 export type CustomEntity = Entity & { type: EntityType };
 
 export type BackupPayload = {
-  version: 3 | 4;
+  version: 3 | 4 | 5;
   exportedAt: string;
   currentItinerary: EditablePlan;
   customEntities: CustomEntity[];
@@ -33,6 +34,7 @@ export type BackupPayload = {
   notes: string;
   favorites: Record<string, boolean>;
   preferredTransport?: Record<string, string>;
+  packingItems?: import('@/features/packing/packingModel').PackingItem[];
   checkinCompleted?: Record<string, boolean>;
   deadlineStatuses?: Record<string, string>;
 };

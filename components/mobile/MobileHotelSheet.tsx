@@ -2,11 +2,13 @@
 
 import Image from 'next/image';
 import { Camera, Check, Copy, Navigation } from 'lucide-react';
-import { useState } from 'react';
+import { lazy, Suspense, useState } from 'react';
 import type { HotelBooking } from '@/lib/types';
 import type { AppController } from '@/features/app/useAppController';
 import { normalizeGalleryImage, openGalleryRequest } from '@/lib/media';
 import { MobileSheet } from '@/components/mobile/MobileSheet';
+
+const ContextualDocumentButton = lazy(async () => ({ default: (await import('@/components/documents/ContextualDocumentButton')).ContextualDocumentButton }));
 
 export function MobileHotelSheet({
   stay,
@@ -75,6 +77,7 @@ export function MobileHotelSheet({
         </button>
       </div>
       <p className="mobile-hotel-address">{stay.execution.address}</p>
+      <Suspense fallback={null}><ContextualDocumentButton bookingId={`booking-${stay.id}`} /></Suspense>
       {entrance && (
         <button
           className="mobile-entrance-row"

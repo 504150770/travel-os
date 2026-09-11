@@ -16,6 +16,7 @@ import {
 } from '@/lib/action-queue';
 import type { Booking, DeadlineItem, Task, ViewId } from '@/lib/types';
 import type { GalleryRequest } from '@/lib/media';
+import { DEFAULT_PACKING_ITEMS, PACKING_STORAGE_KEY, type PackingItem } from '@/features/packing/packingModel';
 import {
   cityNames,
   mergeBookingActionStatuses,
@@ -38,7 +39,7 @@ export function useAppController() {
   const [view, setView] = useState<ViewId>('home');
   const [mobileView, setMobileView] = useState<MobileView>('today');
   const [selectedDay, setSelectedDay] = useState(1);
-  const [planTab, setPlanTab] = useState<PlanTab>('bookings');
+  const [planTab, setPlanTab] = useState<PlanTab>('readiness');
   const [moreTab, setMoreTab] = useState<MoreTab>('stay');
   const [discoverTab, setDiscoverTab] = useState<DiscoverTab>('places');
   const [discoverCity, setDiscoverCity] = useState('罗马');
@@ -70,6 +71,7 @@ export function useAppController() {
     Record<string, string>
   >('europe-guide-private-checkin-links-v1', {});
   const [notes, setNotes] = useLocalStorage('europe-guide-notes', '');
+  const [packingItems, setPackingItems] = useLocalStorage<PackingItem[]>(PACKING_STORAGE_KEY, DEFAULT_PACKING_ITEMS);
 
   const actionStatuses = useMemo(
     () => mergeBookingActionStatuses(storedActionStatuses, bookingStatuses),
@@ -85,6 +87,7 @@ export function useAppController() {
     if (state.day >= 1 && state.day <= 18) setSelectedDay(state.day);
     if (
       [
+        'readiness',
         'bookings',
         'transport',
         'checkin',
@@ -95,7 +98,7 @@ export function useAppController() {
     )
       setPlanTab(state.tab as PlanTab);
     if (
-      ['stay', 'routes', 'map', 'survival', 'essentials', 'backup'].includes(
+      ['stay', 'documents', 'packing', 'routes', 'map', 'survival', 'essentials', 'backup'].includes(
         state.tab ?? '',
       )
     )
@@ -325,7 +328,7 @@ export function useAppController() {
   };
 
   const backup: BackupPayload = {
-    version: 4,
+    version: 5,
     exportedAt: new Date().toISOString(),
     currentItinerary: actions.plan,
     customEntities,
@@ -335,10 +338,11 @@ export function useAppController() {
     notes,
     favorites,
     preferredTransport,
+    packingItems,
   };
   const importBackup = (data: BackupPayload) => {
-    if (![3, 4].includes(data.version))
-      return window.alert('仅支持V3/V4旅行数据');
+    if (![3, 4, 5].includes(data.version))
+      return window.alert('仅支持V3/V4/V5旅行数据');
     localStorage.setItem(
       'europe-guide-current-itinerary-v1',
       JSON.stringify(data.currentItinerary),
@@ -358,6 +362,7 @@ export function useAppController() {
     setNotes(data.notes ?? '');
     setFavorites(data.favorites ?? {});
     setPreferredTransport(data.preferredTransport ?? {});
+    setPackingItems(data.packingItems ?? DEFAULT_PACKING_ITEMS);
     window.location.reload();
   };
   const daysLeft = clock
@@ -462,6 +467,7 @@ export function useAppController() {
     bookingStatuses,
     setBookingStatuses,
     actionStatuses: displayActionStatuses,
+    actionQueue,
     setActionStatuses,
     actuals,
     setActuals,
@@ -473,6 +479,9 @@ export function useAppController() {
     setPrivateLinks,
     notes,
     setNotes,
+    packingItems,
+    setPackingItems,
+    bookings,
     budgetState,
     activeEntities,
     nextAction,

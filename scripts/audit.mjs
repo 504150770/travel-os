@@ -171,7 +171,9 @@ if (realStays.length !== 6) fail('real_hotels', `expected 6 real hotel bookings,
 if (realStays.reduce((sum, stay) => sum + stay.nights, 0) !== 15) fail('real_hotels', 'real hotel nights do not sum to 15');
 for (const city of cityNames) if (realStays.filter((stay) => stay.city === city).length !== 1) fail('real_hotels', `${city} must have one real hotel booking`);
 for (const stay of realStays) {
-  if (!stay.sourceFile || !stay.sourcePath || !stay.bookingNumber) fail('real_hotels', `${stay.hotelName} missing voucher provenance`);
+  if (!stay.sourceType) fail('real_hotels', `${stay.hotelName} missing non-sensitive booking provenance`);
+  if (stay.confirmationNumber || (stay.bookingNumber && stay.bookingNumber !== 'LOCAL_ONLY') || (stay.guestName && stay.guestName !== 'LOCAL_ONLY') || (stay.sourceFile && stay.sourceFile !== 'LOCAL_DOCUMENT') || (stay.sourcePath && stay.sourcePath !== 'LOCAL_ONLY'))
+    fail('privacy', `${stay.hotelName} contains private voucher metadata that belongs in the local Document Vault`);
   if (!(stay.checkIn < stay.checkOut)) fail('real_hotels', `${stay.hotelName} has invalid stay dates`);
   if (!stay.execution.roomType || stay.execution.privateBathroom !== true) fail('real_hotels', `${stay.hotelName} missing confirmed room/private bathroom`);
 }
@@ -180,6 +182,7 @@ const committed = Number(realStays.reduce((sum, stay) => sum + stay.execution.co
 if (paidOnline !== data.hotelBookings.summary.paidOnlineCny) fail('real_hotels', 'paid hotel total differs from source summary');
 if (committed !== data.hotelBookings.summary.committedCnyApprox) fail('real_hotels', 'committed hotel total differs from source summary');
 checks.realHotelVoucherAudit = failures.filter((item) => item.dimension === 'real_hotels').length === 0;
+checks.privateVoucherExclusion = failures.filter((item) => item.dimension === 'privacy').length === 0;
 for (const stay of realStays) {
   if (!Number.isFinite(stay.coordinates?.lat) || !Number.isFinite(stay.coordinates?.lng)) fail('hotel_execution', `${stay.hotelName} missing exact geocoded coordinates`);
   for (const field of ['frontDeskType','onlineCheckIn','luggage','requests','cancellation']) if (!stay.execution[field]) fail('hotel_execution', `${stay.hotelName} missing ${field}`);

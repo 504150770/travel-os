@@ -9,7 +9,7 @@
     "audit",
     "handoff"
   ],
-  "source_commit": "c1db9c1157a3131c42231ced032586e14b99fc17",
+  "source_commit": "678450e3a742cd675b29fd3ccd9f6a4a7c2ec51d",
   "checks": {
     "schemaValidation": true,
     "editableEntityPlan": true,
@@ -24,6 +24,7 @@
     "visualNearDuplicateDetection": true,
     "hotelSingleSource": true,
     "realHotelVoucherAudit": true,
+    "privateVoucherExclusion": true,
     "hotelExecutionAudit": true,
     "offlineShellAudit": true,
     "dayRouteAudit": true,
@@ -50,5 +51,5 @@
   "final_response_allowed": true,
   "continuation_required": false,
   "next_required_action": "Handoff the runnable guide.",
-  "updated_at": "2026-09-11T06:22:20.791Z"
+  "updated_at": "2026-09-11T08:02:00.387Z"
 }

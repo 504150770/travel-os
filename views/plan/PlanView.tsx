@@ -1,6 +1,7 @@
 'use client';
 
 import { Check, ChevronDown, ExternalLink } from 'lucide-react';
+import { lazy, Suspense } from 'react';
 import { guideData } from '@/lib/data';
 import type { DeadlineItem } from '@/lib/types';
 import { taskActionId } from '@/lib/action-queue';
@@ -10,8 +11,13 @@ import type { PlanTab } from '@/features/app/appModel';
 import { yuan } from '@/features/app/appModel';
 import { realStays, transportSegments } from '@/features/trip/tripModel';
 import { usePlanController } from '@/features/plan/usePlanController';
+import type { AppController } from '@/features/app/useAppController';
+
+const ReadinessCenter = lazy(async () => ({ default: (await import('@/components/readiness/ReadinessCenter')).ReadinessCenter }));
+const ContextualDocumentButton = lazy(async () => ({ default: (await import('@/components/documents/ContextualDocumentButton')).ContextualDocumentButton }));
 
 export function PlanView({
+  controller,
   tab,
   setTab,
   bookingStatuses,
@@ -26,6 +32,7 @@ export function PlanView({
   privateLinks,
   setPrivateLinks,
 }: {
+  controller: AppController;
   tab: PlanTab;
   setTab: (t: PlanTab) => void;
   bookingStatuses: Record<string, string>;
@@ -49,6 +56,12 @@ export function PlanView({
         <p>真实酒店订单来自6份本地入住凭证；动态票价保留待核验状态。</p>
       </header>
       <div className="subnav">
+        <button
+          className={tab === 'readiness' ? 'active' : ''}
+          onClick={() => setTab('readiness')}
+        >
+          READINESS
+        </button>
         <button
           className={tab === 'bookings' ? 'active' : ''}
           onClick={() => setTab('bookings')}
@@ -86,6 +99,7 @@ export function PlanView({
           BUDGET
         </button>
       </div>
+      {tab === 'readiness' && <Suspense fallback={<p className="readiness-loading">Checking trip readiness…</p>}><ReadinessCenter controller={controller} /></Suspense>}
       {tab === 'bookings' && (
         <>
           <section className="real-hotel-summary">
@@ -151,6 +165,7 @@ export function PlanView({
                     <b>备注</b>
                     {item.notes || '—'}
                   </p>
+                  <Suspense fallback={null}><ContextualDocumentButton bookingId={item.id} /></Suspense>
                 </div>
               </details>
             ))}
