@@ -26,10 +26,17 @@ import {
   type PlanTab,
 } from '@/features/app/appModel';
 import { realStays, todayDay } from '@/features/trip/tripModel';
+import {
+  desktopViewForMobile,
+  desktopViewFromUrl,
+  mobileViewFromUrl,
+  type MobileView,
+} from '@/features/mobile/mobileModel';
 
 export function useAppController() {
   const [clock, setClock] = useState<Date | null>(null);
   const [view, setView] = useState<ViewId>('home');
+  const [mobileView, setMobileView] = useState<MobileView>('today');
   const [selectedDay, setSelectedDay] = useState(1);
   const [planTab, setPlanTab] = useState<PlanTab>('bookings');
   const [moreTab, setMoreTab] = useState<MoreTab>('stay');
@@ -71,8 +78,10 @@ export function useAppController() {
 
   const applyUrl = () => {
     const state = readUrlState();
-    if (['home', 'trip', 'discover', 'plan', 'more'].includes(state.view ?? ''))
-      setView(state.view as ViewId);
+    if (state.view) {
+      setView(desktopViewFromUrl(state.view));
+      setMobileView(mobileViewFromUrl(state.view));
+    }
     if (state.day >= 1 && state.day <= 18) setSelectedDay(state.day);
     if (
       [
@@ -259,6 +268,7 @@ export function useAppController() {
       String(window.scrollY),
     );
     setView(next);
+    setMobileView(mobileViewFromUrl(next));
     const tab =
       next === 'plan'
         ? planTab
@@ -276,6 +286,42 @@ export function useAppController() {
       city: next === 'discover' ? discoverCity : null,
     });
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const mobileTabValues = (next: MobileView) => ({
+    view: next,
+    day: selectedDay,
+    tab:
+      next === 'plan'
+        ? planTab
+        : next === 'explore'
+          ? discoverTab
+          : next === 'more'
+            ? moreTab === 'map'
+              ? 'routes'
+              : moreTab
+            : null,
+    city: next === 'explore' ? discoverCity : null,
+  });
+
+  const navigateMobile = (next: MobileView) => {
+    sessionStorage.setItem(
+      `travel-mobile-scroll:${mobileView}:d${selectedDay}`,
+      String(window.scrollY),
+    );
+    setMobileView(next);
+    setView(desktopViewForMobile(next));
+    writeUrl(mobileTabValues(next));
+    window.setTimeout(() => {
+      window.scrollTo({
+        top: Number(
+          sessionStorage.getItem(
+            `travel-mobile-scroll:${next}:d${selectedDay}`,
+          ) ?? 0,
+        ),
+        behavior: 'instant',
+      });
+    }, 0);
   };
 
   const backup: BackupPayload = {
@@ -326,6 +372,32 @@ export function useAppController() {
     setSelectedDay(day);
     writeUrl({ view: 'trip', day, tab: null, city: null });
   };
+  const selectMobileDay = (day: number) => {
+    setSelectedDay(day);
+    writeUrl({ ...mobileTabValues(mobileView), day }, 'replace');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+  const selectMobileDiscoverTab = (tab: DiscoverTab) => {
+    setDiscoverTab(tab);
+    writeUrl({ view: 'explore', day: selectedDay, tab, city: discoverCity });
+  };
+  const selectMobileDiscoverCity = (city: string) => {
+    setDiscoverCity(city);
+    writeUrl({ view: 'explore', day: selectedDay, tab: discoverTab, city });
+  };
+  const selectMobilePlanTab = (tab: PlanTab) => {
+    setPlanTab(tab);
+    writeUrl({ view: 'plan', day: selectedDay, tab, city: null });
+  };
+  const selectMobileMoreTab = (tab: MoreTab) => {
+    setMoreTab(tab);
+    writeUrl({
+      view: 'more',
+      day: selectedDay,
+      tab: tab === 'map' ? 'routes' : tab,
+      city: null,
+    });
+  };
   const selectDiscoverTab = (tab: DiscoverTab) => {
     setDiscoverTab(tab);
     writeUrl({ view: 'discover', tab, city: discoverCity, day: null });
@@ -373,6 +445,7 @@ export function useAppController() {
   return {
     clock,
     view,
+    mobileView,
     selectedDay,
     planTab,
     moreTab,
@@ -408,7 +481,13 @@ export function useAppController() {
     backup,
     importBackup,
     navigate,
+    navigateMobile,
     selectTripDay,
+    selectMobileDay,
+    selectMobileDiscoverTab,
+    selectMobileDiscoverCity,
+    selectMobilePlanTab,
+    selectMobileMoreTab,
     selectDiscoverTab,
     selectDiscoverCity,
     selectPlanTab,
