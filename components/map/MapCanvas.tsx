@@ -20,10 +20,22 @@ const escapeText = (value: string) => value
 function markerHtml(point: MapPoint, selected: boolean) {
   const label = point.kind === 'hotel' ? 'H' : point.kind === 'candidate' ? '+' : `${point.order ?? ''}`;
   const photo = point.image?.startsWith('/')
-    ? `<img src="${escapeText(point.image)}" alt="" />`
+    ? `<img src="${escapeText(point.image)}" alt="" loading="lazy" decoding="async" />`
     : '';
   return `<span class="shared-map-marker ${point.kind} ${selected ? 'selected' : ''}">${photo}<i>${escapeText(label)}</i></span>`;
 }
+
+export type MapRenderStage = 'initialized' | 'markers' | 'tiles';
+
+const markerIcon = (point: MapPoint, selected: boolean) => {
+  const size = selected ? 54 : point.kind === 'candidate' ? 38 : 46;
+  return L.divIcon({
+    className: 'shared-map-marker-wrap',
+    html: markerHtml(point, selected),
+    iconSize: [size, size],
+    iconAnchor: [size / 2, size / 2],
+  });
+};
 
 function fitMap(map: L.Map, points: MapPoint[]) {
   const anchors = points.filter((point) => point.kind === 'hotel' || point.kind === 'stop');
@@ -36,6 +48,7 @@ function fitMap(map: L.Map, points: MapPoint[]) {
 
 export default function MapCanvas({
   points,
+  routePoints = points,
   route,
   selectedPointId,
   selectedLegId = null,
@@ -46,8 +59,10 @@ export default function MapCanvas({
   className = '',
   onSelect,
   onRouteStatus,
+  onMapStage,
 }: {
   points: MapPoint[];
+  routePoints?: MapPoint[];
   route: DayRoute;
   selectedPointId?: string | null;
   selectedLegId?: string | null;
@@ -58,6 +73,7 @@ export default function MapCanvas({
   className?: string;
   onSelect: (point: MapPoint) => void;
   onRouteStatus?: (status: RouteGeometryState['status']) => void;
+  onMapStage?: (stage: MapRenderStage) => void;
 }) {
   const nodeRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<L.Map | null>(null);
@@ -66,25 +82,45 @@ export default function MapCanvas({
   const locationLayerRef = useRef<L.LayerGroup | null>(null);
   const markerRefs = useRef(new Map<string, L.Marker>());
   const selectRef = useRef(onSelect);
+  const stageRef = useRef(onMapStage);
+  const fitKeyRef = useRef<string | null>(null);
   const pointsRef = useRef(points);
   selectRef.current = onSelect;
+  stageRef.current = onMapStage;
   pointsRef.current = points;
-  const routeGeometry = useRouteGeometry(route, points);
+  const routeGeometry = useRouteGeometry(route, routePoints);
 
   useEffect(() => {
     if (!nodeRef.current) return;
+    const node = nodeRef.current;
     const map = L.map(nodeRef.current, { zoomControl: false, attributionControl: true });
     mapRef.current = map;
-    L.tileLayer(MOBILE_TILE_PROVIDER.url, {
+    const tileLayer = L.tileLayer(MOBILE_TILE_PROVIDER.url, {
       attribution: MOBILE_TILE_PROVIDER.attribution,
       maxZoom: MOBILE_TILE_PROVIDER.maxZoom,
-    }).addTo(map);
+      updateWhenIdle: true,
+      keepBuffer: 2,
+      detectRetina: false,
+    });
+    tileLayer.once('load', () => {
+      node.dataset.tilesUsableAt = String(Math.round(performance.now()));
+      stageRef.current?.('tiles');
+    });
+    tileLayer.addTo(map);
     map.attributionControl.addAttribution('Routing © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a> · <a href="https://routing.openstreetmap.de/about.html">FOSSGIS</a> · <a href="https://www.openstreetmap.org/fixthemap">Fix the map</a>');
     L.control.zoom({ position: 'topright' }).addTo(map);
     markerLayerRef.current = L.layerGroup().addTo(map);
     routeLayerRef.current = L.layerGroup().addTo(map);
     locationLayerRef.current = L.layerGroup().addTo(map);
     fitMap(map, pointsRef.current);
+    const initialAnchors = pointsRef.current
+      .filter((point) => point.kind === 'hotel' || point.kind === 'stop')
+      .map((point) => `${point.id}:${point.lat.toFixed(5)},${point.lng.toFixed(5)}`)
+      .sort()
+      .join('|');
+    fitKeyRef.current = `${String(fitToken)}:${initialAnchors}`;
+    node.dataset.mapInitializedAt = String(Math.round(performance.now()));
+    stageRef.current?.('initialized');
     const observer = new ResizeObserver(() => map.invalidateSize({ pan: false }));
     observer.observe(nodeRef.current);
     return () => {
@@ -101,18 +137,26 @@ export default function MapCanvas({
     markerLayer.clearLayers();
     markerRefs.current.clear();
     points.forEach((point) => {
-      const size = selectedPointId === point.id ? 54 : point.kind === 'candidate' ? 38 : 46;
       const marker = L.marker([point.lat, point.lng], {
-        icon: L.divIcon({
-          className: 'shared-map-marker-wrap',
-          html: markerHtml(point, selectedPointId === point.id),
-          iconSize: [size, size],
-          iconAnchor: [size / 2, size / 2],
-        }),
+        icon: markerIcon(point, selectedPointId === point.id),
         zIndexOffset: selectedPointId === point.id ? 1000 : point.kind === 'candidate' ? 100 : 400,
         title: point.name,
       }).addTo(markerLayer).on('click', () => selectRef.current(point));
       markerRefs.current.set(point.id, marker);
+    });
+    if (points.length && nodeRef.current) {
+      nodeRef.current.dataset.firstMarkerAt = String(Math.round(performance.now()));
+      stageRef.current?.('markers');
+    }
+  }, [points]);
+
+  useEffect(() => {
+    points.forEach((point) => {
+      const selected = selectedPointId === point.id;
+      const marker = markerRefs.current.get(point.id);
+      if (!marker) return;
+      marker.setIcon(markerIcon(point, selected));
+      marker.setZIndexOffset(selected ? 1000 : point.kind === 'candidate' ? 100 : 400);
     });
   }, [points, selectedPointId]);
 
@@ -150,6 +194,9 @@ export default function MapCanvas({
         }).addTo(routeLayer);
       }
     });
+    if (routeGeometry.geometries.length && nodeRef.current) {
+      nodeRef.current.dataset.routeVisibleAt = String(Math.round(performance.now()));
+    }
   }, [routeGeometry.geometries, selectedLegId, showRoute]);
 
   useEffect(() => {
@@ -175,8 +222,16 @@ export default function MapCanvas({
   useEffect(() => {
     const map = mapRef.current;
     if (!map) return;
+    const anchors = pointsRef.current
+      .filter((point) => point.kind === 'hotel' || point.kind === 'stop')
+      .map((point) => `${point.id}:${point.lat.toFixed(5)},${point.lng.toFixed(5)}`)
+      .sort()
+      .join('|');
+    const fitKey = `${String(fitToken)}:${anchors}`;
+    if (fitKeyRef.current === fitKey) return;
+    fitKeyRef.current = fitKey;
     fitMap(map, pointsRef.current);
-  }, [fitToken]);
+  }, [fitToken, points]);
 
   if (!points.length) {
     return <div className="shared-map-empty"><b>Map points unavailable</b><p>当天项目没有可核实坐标，请使用路线列表和 Google Maps 导航。</p></div>;

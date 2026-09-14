@@ -5,6 +5,7 @@ import type { DayRoute } from '@/lib/types';
 import type { MobileMapPoint } from '@/features/mobile/mobileModel';
 import type { CurrentLocation } from '@/features/map/location/locationModel';
 import type { RouteGeometryState } from '@/features/map/routing/useRouteGeometry';
+import type { MapRenderStage } from '@/components/map/MapCanvas';
 
 export default function MobileMapCanvas({
   points,
@@ -13,6 +14,7 @@ export default function MobileMapCanvas({
   currentLocation,
   locationFocusToken,
   onRouteStatus,
+  onMapStage,
 }: {
   points: MobileMapPoint[];
   route: DayRoute;
@@ -20,6 +22,7 @@ export default function MobileMapCanvas({
   currentLocation: CurrentLocation | null;
   locationFocusToken: number;
   onRouteStatus: (status: RouteGeometryState['status']) => void;
+  onMapStage: (stage: MapRenderStage) => void;
 }) {
   return <MapCanvas
     points={points}
@@ -30,5 +33,6 @@ export default function MobileMapCanvas({
     currentLocation={currentLocation}
     locationFocusToken={locationFocusToken}
     onRouteStatus={onRouteStatus}
+    onMapStage={onMapStage}
   />;
 }

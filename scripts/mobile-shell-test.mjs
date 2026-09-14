@@ -52,11 +52,18 @@ const mobileCss = fs.readFileSync(
   path.join(root, 'components/mobile/mobile.css'),
   'utf8',
 );
+const mobileSelectors = fs.readFileSync(
+  path.join(root, 'features/mobile/mobileTripSelectors.ts'),
+  'utf8',
+);
 for (const label of ['Today', 'Map', 'Explore', 'Plan', 'More']) {
   assert.match(shell, new RegExp(`label: '${label}'`));
 }
-assert.match(mapScreen, /lazy\(\(\) => import\('@\/components\/mobile\/map\/MobileMapCanvas'\)\)/);
+assert.match(mapScreen, /import MobileMapCanvas from '@\/components\/mobile\/map\/MobileMapCanvas'/);
 assert.match(tripWorkspace, /import\('@\/components\/mobile\/MobileMapScreen'\)/);
+assert.match(tripWorkspace, /mapVisited/);
+assert.doesNotMatch(mobileSelectors, /food: food|gyms:/);
+assert.match(mapScreen, /mobile-map-progress/);
 assert.match(mobileCss, /env\(safe-area-inset-top\)/);
 assert.match(mobileCss, /env\(safe-area-inset-bottom\)/);
 

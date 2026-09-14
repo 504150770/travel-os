@@ -230,8 +230,16 @@ checks.survivalAudit = failures.filter((item) => item.dimension === 'survival').
 
 if (data.transportRecommendations.segments.length !== 7) fail('transport', 'transport structure must contain 7 trip segments');
 for (const segment of data.transportRecommendations.segments) {
-  if (segment.candidates.length !== 3) fail('transport', `${segment.route} must contain 3 ranked slots`);
-  if (!segment.source.startsWith('https://')) fail('transport', `${segment.route} missing official source`);
+  const ticketed = segment.status === 'TICKETED';
+  if (ticketed) {
+    if (segment.candidates.length !== 1 || segment.candidates[0]?.status !== 'TICKETED' || !segment.candidates[0]?.flightNo) {
+      fail('transport', `${segment.route} ticketed fact must contain exactly one identified ticket`);
+    }
+    if (!segment.source) fail('transport', `${segment.route} ticketed fact missing provenance`);
+  } else {
+    if (segment.candidates.length !== 3) fail('transport', `${segment.route} must contain 3 ranked slots`);
+    if (!segment.source.startsWith('https://')) fail('transport', `${segment.route} missing official source`);
+  }
   if (!segment.doorToDoor) fail('transport', `${segment.route} missing door-to-door estimate`);
 }
 checks.transportStructureAudit = failures.filter((item) => item.dimension === 'transport').length === 0;
@@ -314,7 +322,7 @@ const report = {
   schemaVersion: 2,
   generatedAt: new Date().toISOString(),
   status: failures.length ? 'failed' : 'passed',
-  summary: { failures: failures.length, warnings: warnings.length, days: data.days.length, editablePlanItems: data.dayPlans.days.reduce((sum, day) => sum + day.activeItems.length + day.alternatives.length, 0), entities: entityIds.size, places: data.places.length, options: data.options.length, images: requestedAssets.length, gyms: data.gyms.length, verifiedGyms: data.gyms.filter((gym) => !String(gym.dayPass).includes('确认') && !String(gym.hours).includes('确认')).length, realHotelBookings: realStays.length, realHotelNights: realStays.reduce((sum, stay) => sum + stay.nights, 0), realHotelCommittedCny: committed, transportSegments: data.transportRecommendations.segments.length, transportTargetDateCaptured: data.transportRecommendations.segments.filter((segment) => segment.candidates.every((candidate) => candidate.departure && candidate.arrival && candidate.priceCny != null)).length, doorToDoorSegments: data.transportRecommendations.segments.filter((segment) => segment.doorToDoor).length, restaurants: data.restaurants.length, verifiedMenus: data.restaurants.filter((item) => item.menu?.status === 'VERIFIED OFFICIAL MENU').length, shopping: data.shopping.length, dayRouteLegs: data.dayRoutes.reduce((sum, item) => sum + item.legs.length, 0), transitExecutionCards: data.transitDayExecution.length, deadlines: data.deadlines.length, survivalCities: data.survival.length, projectedTotalCny: data.budget.planTotal, hardCapDifferenceCny: data.budget.planTotal - data.budget.hardCap, xhsTopics: data.xhs.length, bookings: data.bookings.items.length, tasks: data.tasks.items.length, confirmedHotelImages: hotelAssets.length, mediaMetadataRecords: data.mediaMetadata.length },
+  summary: { failures: failures.length, warnings: warnings.length, days: data.days.length, editablePlanItems: data.dayPlans.days.reduce((sum, day) => sum + day.activeItems.length + day.alternatives.length, 0), entities: entityIds.size, places: data.places.length, options: data.options.length, images: requestedAssets.length, gyms: data.gyms.length, verifiedGyms: data.gyms.filter((gym) => !String(gym.dayPass).includes('确认') && !String(gym.hours).includes('确认')).length, realHotelBookings: realStays.length, realHotelNights: realStays.reduce((sum, stay) => sum + stay.nights, 0), realHotelCommittedCny: committed, transportSegments: data.transportRecommendations.segments.length, transportTargetDateCaptured: data.transportRecommendations.segments.filter((segment) => segment.status === 'TICKETED' || segment.candidates.every((candidate) => candidate.departure && candidate.arrival && candidate.priceCny != null)).length, doorToDoorSegments: data.transportRecommendations.segments.filter((segment) => segment.doorToDoor).length, restaurants: data.restaurants.length, verifiedMenus: data.restaurants.filter((item) => item.menu?.status === 'VERIFIED OFFICIAL MENU').length, shopping: data.shopping.length, dayRouteLegs: data.dayRoutes.reduce((sum, item) => sum + item.legs.length, 0), transitExecutionCards: data.transitDayExecution.length, deadlines: data.deadlines.length, survivalCities: data.survival.length, projectedTotalCny: data.budget.planTotal, hardCapDifferenceCny: data.budget.planTotal - data.budget.hardCap, xhsTopics: data.xhs.length, bookings: data.bookings.items.length, tasks: data.tasks.items.length, confirmedHotelImages: hotelAssets.length, mediaMetadataRecords: data.mediaMetadata.length },
   checks, failures, warnings,
 };
 fs.mkdirSync(path.join(root, 'audit'), { recursive: true });

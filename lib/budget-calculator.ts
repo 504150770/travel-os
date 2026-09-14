@@ -43,7 +43,7 @@ export function calculateBudget({
     .filter(
       (item) =>
         !isActive(item.id) &&
-        !['Paid', 'Booked', 'Confirmed', 'Completed'].includes(item.status),
+        !['Ticketed', 'Paid', 'Booked', 'Confirmed', 'Completed'].includes(item.status),
     )
     .reduce((sum, item) => sum + item.budget, 0);
   const matchedBookingIds = new Set(
@@ -71,7 +71,7 @@ export function calculateBudget({
       .filter(
         (item) =>
           item.category !== '酒店' &&
-          ['Booked', 'Paid', 'Confirmed', 'Completed'].includes(item.status),
+          ['Ticketed', 'Booked', 'Paid', 'Confirmed', 'Completed'].includes(item.status),
       )
       .reduce((sum, item) => sum + item.budget, 0);
   const projected = Math.max(

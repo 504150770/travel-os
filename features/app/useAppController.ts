@@ -72,10 +72,15 @@ export function useAppController() {
   >('europe-guide-private-checkin-links-v1', {});
   const [notes, setNotes] = useLocalStorage('europe-guide-notes', '');
   const [packingItems, setPackingItems] = useLocalStorage<PackingItem[]>(PACKING_STORAGE_KEY, DEFAULT_PACKING_ITEMS);
+  const effectiveBookingStatuses = useMemo<Record<string, string>>(() => ({
+    ...bookingStatuses,
+    'flight-can-fco': 'Ticketed',
+    'flight-cdg-can': 'Ticketed',
+  }), [bookingStatuses]);
 
   const actionStatuses = useMemo(
-    () => mergeBookingActionStatuses(storedActionStatuses, bookingStatuses),
-    [storedActionStatuses, bookingStatuses],
+    () => mergeBookingActionStatuses(storedActionStatuses, effectiveBookingStatuses),
+    [storedActionStatuses, effectiveBookingStatuses],
   );
 
   const applyUrl = () => {
@@ -239,7 +244,7 @@ export function useAppController() {
     guideData.bookings.items as Booking[],
   ).map((item) => ({
     ...item,
-    status: bookingStatuses[item.id] ?? item.status,
+    status: effectiveBookingStatuses[item.id] ?? item.status,
   }));
   const budgetState = calculateBudget({
     budget: guideData.budget,
@@ -252,7 +257,7 @@ export function useAppController() {
     tasks: guideData.tasks.items as Task[],
     stays: realStays,
     statuses: actionStatuses,
-    bookingStatuses,
+    bookingStatuses: effectiveBookingStatuses,
   });
   const displayActionStatuses = Object.fromEntries(
     actionQueue.map((item) => [item.id, item.status]),
@@ -332,7 +337,7 @@ export function useAppController() {
     exportedAt: new Date().toISOString(),
     currentItinerary: actions.plan,
     customEntities,
-    bookingStatuses,
+    bookingStatuses: effectiveBookingStatuses,
     actionStatuses,
     actuals,
     notes,
@@ -464,7 +469,7 @@ export function useAppController() {
     resolve,
     addCustom,
     deleteCustom,
-    bookingStatuses,
+    bookingStatuses: effectiveBookingStatuses,
     setBookingStatuses,
     actionStatuses: displayActionStatuses,
     actionQueue,

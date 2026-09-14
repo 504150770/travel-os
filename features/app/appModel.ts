@@ -60,11 +60,15 @@ export function mergeBookingActionStatuses(
   };
   for (const [id, deadline] of Object.entries(ticketActions)) {
     if (
-      ['Booked', 'Paid', 'Confirmed', 'Completed'].includes(
+      ['Ticketed', 'Booked', 'Paid', 'Confirmed', 'Completed'].includes(
         bookingStatuses[id],
       )
     )
       result[`deadline:${deadline}`] = 'Done';
   }
+  if (
+    bookingStatuses['flight-can-fco'] === 'Ticketed' &&
+    bookingStatuses['flight-cdg-can'] === 'Ticketed'
+  ) result['deadline:transport-international'] = 'Done';
   return result;
 }

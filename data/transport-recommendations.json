@@ -1,22 +1,16 @@
 {
-  "policy": "直达 > 少换乘 > 省几十元。航班价格为查询时展示的含税基础票价；除非明确写已含，23kg托运行李、退改和航站楼均须在航空公司结算页复核。",
-  "verifiedAt": "2026-09-08",
+  "policy": "已出票航段以用户确认的票面事实为准；未出票航段继续遵循直达 > 少换乘 > 省几十元。公开数据不保存订单号、证件或值机令牌。",
+  "verifiedAt": "2026-09-14",
   "segments": [
     {
-      "id": "can-fco", "day": 1, "route": "CAN / HKG → FCO", "date": "2026-12-01", "mode": "flight",
-      "doorToDoor": "CAN约21.5–25小时；HKG约25.5–28小时（含佛山出发、提前3小时到机场、落地取箱与FCO到酒店）",
-      "recommendation": "当前门到门首选CAN；HKG只有在同等行李条件下便宜约¥800以上或时刻显著更好时才值得跨境出发。",
-      "source": "https://www.google.com/travel/flights?hl=en&curr=CNY&q=One%20way%20flights%20from%20CAN%20to%20FCO%20on%202026-12-01",
-      "routeSource": "https://www.csair.com/", "checkedAt": "2026-09-08", "expectedReleaseWindow": null,
-      "status": "TARGET-DATE SCHEDULE + BASE FARE CHECKED / BAGGAGE AND REFUND PENDING",
-      "airportComparison": [
-        {"airport":"CAN","ground":"佛山→CAN约1.5–2.5小时｜约¥100–250，出发点确定后复核","doorToDoorScore":88,"decision":"PREFERRED BASE"},
-        {"airport":"HKG","ground":"佛山→HKG约4–5.5小时｜约¥250–500，过关时间待复核","doorToDoorScore":65,"decision":"总价优势≥约¥800再考虑"}
-      ],
+      "id": "can-fco", "day": 1, "route": "CAN T2 → BAH → FCO T3", "date": "2026-12-01", "mode": "flight",
+      "doorToDoor": "GF123与GF027单张联程已出票；空中行程17小时55分，另计佛山到CAN、值机、FCO取箱与进城时间。",
+      "recommendation": "按已出票行程执行：12/1 GF123 CAN T2 19:00起飞，BAH 23:50抵达；12/2 GF027 BAH 01:40起飞，FCO T3 05:55抵达。",
+      "source": "用户确认的出票事实",
+      "routeSource": null, "checkedAt": "2026-09-14", "expectedReleaseWindow": null,
+      "status": "TICKETED",
       "candidates": [
-        {"rank":"BEST OVERALL","operator":"Turkish Airlines","service":"CAN–IST–FCO｜同日抵达","flightNo":null,"departure":"CAN 09:20","arrival":"FCO 18:20","arrivalDate":"2026-12-01","duration":"16小时","priceCny":3125,"fareType":"Google Flights展示Economy基础票价","baggage23kg":null,"carryOn":"待结算页确认","changes":1,"transit":"IST 1小时45分","terminalChange":"待确认","selfTransfer":false,"refundability":"待结算页确认","changeFee":"待确认","checkedAt":"2026-09-08","source":"Google Flights目标日结果；出票前转航司官网","status":"SCHEDULE + BASE FARE CHECKED / 23KG PENDING"},
-        {"rank":"BEST VALUE","operator":"Gulf Air","service":"CAN–BAH–FCO｜次日清晨抵达","flightNo":"GF123 + GF27","departure":"CAN 19:00","arrival":"FCO 05:55","arrivalDate":"2026-12-02","duration":"17小时55分","priceCny":1844,"fareType":"Google Flights展示Economy基础票价","baggage23kg":null,"carryOn":"待结算页确认","changes":1,"transit":"BAH 1小时50分","terminalChange":"未显示，待确认","selfTransfer":false,"refundability":"待结算页确认","changeFee":"待确认","checkedAt":"2026-09-08","source":"Google Flights目标日结果；出票前转航司官网","status":"SCHEDULE + BASE FARE CHECKED / 23KG PENDING"},
-        {"rank":"BEST COMFORT","operator":"Emirates","service":"CAN–DXB–FCO｜中转缓冲充足","flightNo":null,"departure":"CAN 00:15","arrival":"FCO 12:40","arrivalDate":"2026-12-01","duration":"19小时25分","priceCny":2710,"fareType":"Google Flights展示Economy基础票价","baggage23kg":null,"carryOn":"待结算页确认","changes":1,"transit":"DXB 3小时55分","terminalChange":"待确认","selfTransfer":false,"refundability":"待结算页确认","changeFee":"待确认","checkedAt":"2026-09-08","source":"Google Flights目标日结果；出票前转航司官网","status":"SCHEDULE + BASE FARE CHECKED / 23KG PENDING"}
+        {"rank":"TICKETED","operator":"Gulf Air","service":"GF123 CAN T2–BAH / GF027 BAH–FCO T3","flightNo":"GF123 + GF027","departure":"CAN T2 19:00","arrival":"FCO T3 05:55","arrivalDate":"2026-12-02","duration":"17小时55分","priceCny":null,"fareType":"已出票；实付金额未提供","baggage23kg":null,"carryOn":"票面额度待核验","changes":1,"transit":"BAH 1小时50分（23:50–01:40）","terminalChange":"待按票面复核","selfTransfer":false,"refundability":"按票面规则","changeFee":"按票面规则","checkedAt":"2026-09-14","source":"用户确认的出票事实","status":"TICKETED"}
       ]
     },
     {
@@ -75,18 +69,12 @@
       ]
     },
     {
-      "id":"paris-can","day":17,"route":"CDG → CAN / HKG","date":"2026-12-17","mode":"flight",
-      "doorToDoor":"CAN直飞约17–19小时；CAN一次中转约20–23小时；HKG约21–25小时（含Oden Ivry→CDG和落地后返佛山）",
-      "recommendation":"门到门首选11:05南航直飞CAN。Air China便宜约¥1,988但多3小时40分；HKG当前基础票无总价优势。",
-      "source":"https://www.google.com/travel/flights?hl=en&curr=CNY&q=One%20way%20flights%20from%20CDG%20to%20CAN%20on%202026-12-17","routeSource":"https://www.csair.com/h5/cn/haiwai/europe/Paris/","checkedAt":"2026-09-08","expectedReleaseWindow":null,"status":"TARGET-DATE SCHEDULE + BASE FARE CHECKED / BAGGAGE AND REFUND PENDING",
-      "airportComparison":[
-        {"airport":"CAN","ground":"CAN→佛山约1.5–2.5小时｜约¥100–250","doorToDoorScore":94,"decision":"PREFERRED"},
-        {"airport":"HKG","ground":"HKG→佛山约4–5.5小时｜约¥250–500，含过关缓冲","doorToDoorScore":58,"decision":"当前价格与时间均无优势"}
-      ],
+      "id":"paris-can","day":17,"route":"CDG T1 → CAN T2","date":"2026-12-17","mode":"flight",
+      "doorToDoor":"CZ348直飞已出票；飞行12小时，另计Oden Paris Ivry到CDG、提前到机场、入境取箱与返佛山时间。",
+      "recommendation":"按已出票行程执行：12/17 CZ348从CDG T1 11:05起飞，12/18抵达CAN T2 06:05。",
+      "source":"用户确认的出票事实","routeSource":"https://www.csair.com/","checkedAt":"2026-09-14","expectedReleaseWindow":null,"status":"TICKETED",
       "candidates":[
-        {"rank":"BEST OVERALL","operator":"China Southern","service":"CDG–CAN直飞","flightNo":null,"departure":"CDG 11:05","arrival":"CAN 06:05","arrivalDate":"2026-12-18","duration":"12小时","priceCny":5458,"fareType":"Google Flights展示Economy基础票价","baggage23kg":null,"carryOn":"待南航结算页确认","changes":0,"transit":null,"terminalChange":null,"selfTransfer":false,"refundability":"待南航结算页确认","changeFee":"待确认","checkedAt":"2026-09-08","source":"Google Flights目标日结果；出票前转南航官网","status":"SCHEDULE + BASE FARE CHECKED / 23KG PENDING"},
-        {"rank":"BEST VALUE","operator":"Air China","service":"CDG–PEK–CAN｜同票一次中转","flightNo":null,"departure":"CDG 19:40","arrival":"CAN 18:20","arrivalDate":"2026-12-18","duration":"15小时40分","priceCny":3470,"fareType":"Google Flights展示Economy基础票价","baggage23kg":null,"carryOn":"待国航结算页确认","changes":1,"transit":"PEK 2小时30分","terminalChange":"待确认","selfTransfer":false,"refundability":"待国航结算页确认","changeFee":"待确认","checkedAt":"2026-09-08","source":"Google Flights目标日结果；出票前转国航官网","status":"SCHEDULE + BASE FARE CHECKED / 23KG PENDING"},
-        {"rank":"BEST COMFORT","operator":"XiamenAir","service":"CDG–XMN–CAN｜最短中转总时长","flightNo":null,"departure":"CDG 11:30","arrival":"CAN 09:05","arrivalDate":"2026-12-18","duration":"14小时35分","priceCny":5093,"fareType":"Google Flights展示Economy基础票价","baggage23kg":null,"carryOn":"待厦航结算页确认","changes":1,"transit":"XMN 1小时30分","terminalChange":"待确认","selfTransfer":false,"refundability":"待厦航结算页确认","changeFee":"待确认","checkedAt":"2026-09-08","source":"Google Flights目标日结果；出票前转厦航官网","status":"SCHEDULE + BASE FARE CHECKED / 23KG PENDING"}
+        {"rank":"TICKETED","operator":"China Southern","service":"CZ348 · CDG T1–CAN T2直飞","flightNo":"CZ348","departure":"CDG T1 11:05","arrival":"CAN T2 06:05","arrivalDate":"2026-12-18","duration":"12小时","priceCny":null,"fareType":"已出票；实付金额未提供","baggage23kg":null,"carryOn":"票面额度待核验","changes":0,"transit":null,"terminalChange":null,"selfTransfer":false,"refundability":"按票面规则","changeFee":"按票面规则","checkedAt":"2026-09-14","source":"用户确认的出票事实","status":"TICKETED"}
       ]
     }
   ]

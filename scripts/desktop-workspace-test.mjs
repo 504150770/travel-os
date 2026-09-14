@@ -54,11 +54,20 @@ const mobileMap = read('components/mobile/map/MobileMapCanvas.tsx');
 const sharedMap = read('components/map/MapCanvas.tsx');
 const mapSelectors = read('features/map/mapSelectors.ts');
 const editablePlan = read('hooks/use-editable-plan.ts');
+const guide = read('components/travel-guide-v3.tsx');
+const mapLoader = read('features/map/mapLoader.ts');
 
-assert.match(tripView, /lazy\(\(\) => import\('@\/views\/trip\/DesktopTripWorkspace'\)\)/);
-assert.match(desktopMap, /lazy\(\(\) => import\('@\/components\/map\/MapCanvas'\)\)/);
+assert.match(tripView, /lazy\(loadDesktopTripWorkspace\)/);
+assert.match(tripView, /preloadTripWorkspace/);
+assert.match(desktopMap, /lazy\(loadMapCanvas\)/);
+assert.match(mapLoader, /travel-map-import/);
+assert.match(guide, /PersistentTripView/);
+assert.match(tripView, /active \|\| visited/);
+assert.match(tripView, /hidden=\{!active\}/);
 assert.match(mobileMap, /from '@\/components\/map\/MapCanvas'/);
 assert.match(sharedMap, /from 'leaflet'/);
+assert.match(sharedMap, /onMapStage/);
+assert.match(desktopMap, /workspace-map-progress/);
 assert.match(workspace, /travel\.desktop\.tripPanelWidth/);
 assert.match(workspace, /selectedPointId/);
 assert.match(workspace, /selectedPointId=\{selectedPointId\}/);
@@ -79,5 +88,5 @@ assert.match(mapSelectors, /planDay\.activeItems\.forEach\(\(item, index\)/);
 assert.match(mapSelectors, /order: index \+ 1/);
 
 console.log(
-  'Desktop workspace tests passed: shared selection wiring, persisted 340–560 px panel, route geometry, DnD reorder model, and nested lazy map boundary.',
+  'Desktop workspace tests passed: progressive/preloaded persistent map, shared selection wiring, persisted panel, route geometry, and DnD reorder model.',
 );

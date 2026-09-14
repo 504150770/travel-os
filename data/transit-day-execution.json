@@ -227,15 +227,15 @@
     },
     "service": {
       "operator": "China Southern",
-      "service": "CDG–CAN直飞 · 推荐11:05",
+      "service": "CZ348 · CDG T1–CAN T2直飞",
       "departure": "11:05",
-      "arrival": "次日06:05",
+      "arrival": "2026-12-18 06:05",
       "buffer": "提前3小时到CDG",
-      "baggage": "23kg待出票页确认；不可接受不含托运行李",
-      "status": "To Book"
+      "baggage": "票面行李额度待核验",
+      "status": "Ticketed"
     },
     "arrival": {
-      "from": "CAN",
+      "from": "CAN T2",
       "to": "佛山",
       "mode": "预约接机 / 城际交通",
       "duration": "按入境、取箱后实时判断",

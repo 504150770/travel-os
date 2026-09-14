@@ -5,7 +5,7 @@ import type { DayRoute } from '@/lib/types';
 import type { MapPoint } from '@/features/map/mapModel';
 import { createBrowserRouteGeometryCache, geometryCacheKey } from '@/features/map/routing/routeGeometryCache';
 import { fossgisOsrmProvider } from '@/features/map/routing/osrmProvider';
-import { resolveRouteGeometry, routableLegs, schematicGeometries, type DisplayRouteGeometry } from '@/features/map/routing/routingModel';
+import { resolveRouteGeometry, routableLegs, routeGeometryRequestKey, schematicGeometries, type DisplayRouteGeometry } from '@/features/map/routing/routingModel';
 
 const REQUEST_INTERVAL_MS = 1050;
 const REQUEST_TIMEOUT_MS = 9000;
@@ -24,11 +24,7 @@ export type RouteGeometryState = {
 };
 
 export function useRouteGeometry(route: DayRoute, points: MapPoint[]): RouteGeometryState {
-  const requestKey = JSON.stringify({
-    day: route.day,
-    legs: route.legs.map(({ id, fromId, toId, recommendedMode }) => ({ id, fromId, toId, recommendedMode })),
-    points: points.map(({ id, lat, lng }) => ({ id, lat, lng })),
-  });
+  const requestKey = routeGeometryRequestKey(route, points);
   const [state, setState] = useState<RouteGeometryState & { requestKey: string }>(() => ({
     requestKey,
     geometries: schematicGeometries(route, points),
@@ -60,8 +56,6 @@ export function useRouteGeometry(route: DayRoute, points: MapPoint[]): RouteGeom
         }
         const item = missing[index];
         const requestController = new AbortController();
-        const stopRequest = () => requestController.abort();
-        controller.signal.addEventListener('abort', stopRequest, { once: true });
         const timeout = window.setTimeout(() => requestController.abort(), REQUEST_TIMEOUT_MS);
         try {
           const geometry = await resolveRouteGeometry({
@@ -75,7 +69,6 @@ export function useRouteGeometry(route: DayRoute, points: MapPoint[]): RouteGeom
           if (geometry.source === 'routed') routed += 1;
         } finally {
           window.clearTimeout(timeout);
-          controller.signal.removeEventListener('abort', stopRequest);
         }
         if (controller.signal.aborted) return;
         setState({ requestKey, geometries: [...byLeg.values()], status: routed ? 'routed' : cached ? 'cached' : 'fallback' });

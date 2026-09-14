@@ -51,7 +51,7 @@ export const taskActionId = (taskId: string) =>
   taskAliases[taskId] ?? `task:${taskId}`;
 
 const isCompleteBooking = (value?: string) =>
-  ['Booked', 'Paid', 'Confirmed', 'Completed'].includes(value ?? '');
+  ['Ticketed', 'Booked', 'Paid', 'Confirmed', 'Completed'].includes(value ?? '');
 
 const sortableDue = (value: string) => {
   const iso = value.match(/\d{4}-\d{2}-\d{2}/)?.[0];

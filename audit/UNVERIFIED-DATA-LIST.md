@@ -1,6 +1,6 @@
 # UNVERIFIED DATA LIST
 
-Generated: 2026-09-11T08:02:00.567Z
+Generated: 2026-09-14T02:33:29.933Z
 
 > 真实性优先。以下项目没有被当作已验证事实。
 
@@ -24,13 +24,13 @@ P0 23 · P1 128 · P2 98
 - **Day 14｜Day 14 公交段** · ROUTE_TRANSIT — transitMin、transitRoute。步行和出租车路网已核，但实时公共交通班次需临近出发刷新。 下一步：Day -1及当天用地图按酒店出发时间刷新。
 - **Day 15｜Day 15 公交段** · ROUTE_TRANSIT — transitMin、transitRoute。步行和出租车路网已核，但实时公共交通班次需临近出发刷新。 下一步：Day -1及当天用地图按酒店出发时间刷新。
 - **Day 16｜Day 16 公交段** · ROUTE_TRANSIT — transitMin、transitRoute。步行和出租车路网已核，但实时公共交通班次需临近出发刷新。 下一步：Day -1及当天用地图按酒店出发时间刷新。
-- **Day 1｜CAN / HKG → FCO** · TRANSPORT_LIVE_DATA — 实时班次、总价、23kg行李、改签条件。官方路线存在，但目标日期具体产品尚未形成可出票事实。 下一步：出票窗口开启后在官方页刷新并锁定。
+- **Day 1｜CAN T2 → BAH → FCO T3** · TRANSPORT_LIVE_DATA — 票面行李额度、票面退改规则。航班已出票；仅剩票面附加规则需要在出发前复核，不是待购票事项。 下一步：在航司订单页核对行李、值机与航站楼通知。
 - **Day 5｜Roma Termini → Firenze S.M.N.** · TRANSPORT_LIVE_DATA — 实时班次、总价、23kg行李、改签条件。官方路线存在，但目标日期具体产品尚未形成可出票事实。 下一步：出票窗口开启后在官方页刷新并锁定。
 - **Day 7｜Firenze S.M.N. → Venezia Mestre** · TRANSPORT_LIVE_DATA — 实时班次、总价、23kg行李、改签条件。官方路线存在，但目标日期具体产品尚未形成可出票事实。 下一步：出票窗口开启后在官方页刷新并锁定。
 - **Day 9｜Park Hotel Ai Pini → VCE → VIE → Jimmy’s Apartments Lory** · TRANSPORT_LIVE_DATA — 实时班次、总价、23kg行李、改签条件。官方路线存在，但目标日期具体产品尚未形成可出票事实。 下一步：出票窗口开启后在官方页刷新并锁定。
 - **Day 11｜Wien Hbf → Praha hl.n.** · TRANSPORT_LIVE_DATA — 实时班次、总价、23kg行李、改签条件。官方路线存在，但目标日期具体产品尚未形成可出票事实。 下一步：出票窗口开启后在官方页刷新并锁定。
 - **Day 13｜PRG → ORY / CDG → Oden Paris Ivry** · TRANSPORT_LIVE_DATA — 实时班次、总价、23kg行李、改签条件。官方路线存在，但目标日期具体产品尚未形成可出票事实。 下一步：出票窗口开启后在官方页刷新并锁定。
-- **Day 17｜CDG → CAN / HKG** · TRANSPORT_LIVE_DATA — 实时班次、总价、23kg行李、改签条件。官方路线存在，但目标日期具体产品尚未形成可出票事实。 下一步：出票窗口开启后在官方页刷新并锁定。
+- **Day 17｜CDG T1 → CAN T2** · TRANSPORT_LIVE_DATA — 票面行李额度、票面退改规则。航班已出票；仅剩票面附加规则需要在出发前复核，不是待购票事项。 下一步：在航司订单页核对行李、值机与航站楼通知。
 
 ## P1 · 128
 

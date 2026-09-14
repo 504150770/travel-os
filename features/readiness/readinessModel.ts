@@ -90,7 +90,7 @@ export function buildReadiness({
     });
   }
 
-  const completedStatuses = new Set(['Booked', 'Paid', 'Confirmed', 'Completed']);
+  const completedStatuses = new Set(['Ticketed', 'Booked', 'Paid', 'Confirmed', 'Completed']);
   for (const booking of bookings) {
     const requiredCategory = documentCategoryFor(booking);
     if (!requiredCategory || !completedStatuses.has(booking.status)) continue;

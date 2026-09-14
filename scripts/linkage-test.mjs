@@ -12,6 +12,14 @@ const plans = read('day-plans');
 const routes = read('day-routes');
 const hotels = read('hotel-bookings').items;
 const bookingsData = read('bookings');
+const outboundFlight = bookingsData.items.find((item) => item.id === 'flight-can-fco');
+const returnFlight = bookingsData.items.find((item) => item.id === 'flight-cdg-can');
+assert.equal(outboundFlight.status, 'Ticketed');
+assert.equal(outboundFlight.serviceNumber, 'GF123 / GF027');
+assert.equal(returnFlight.status, 'Ticketed');
+assert.equal(returnFlight.serviceNumber, 'CZ348');
+assert.equal(outboundFlight.orderNumber, '');
+assert.equal(returnFlight.orderNumber, '');
 
 const entity = (id) => ({
   id, name: id, city: '罗马', type: id.startsWith('activity-') ? 'activity' : 'place',
@@ -39,6 +47,7 @@ assert.equal(canonical.find((item) => item.id === `booking-${hotels[0].id}`).bud
 
 const budget = read('budget');
 const baseBudget = calculateBudget({ budget, bookings: canonical, plan: plans, resolve });
+assert.equal(baseBudget.committed, 16286.52, 'ticketed flight allocations join committed hotel costs');
 const withoutArc = structuredClone(plans);
 const arcDay = withoutArc.days.find((day) => day.activeItems.some((item) => item.entityId === 'arc_triomphe'));
 const arc = arcDay.activeItems.find((item) => item.entityId === 'arc_triomphe');

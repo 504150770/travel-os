@@ -9,12 +9,12 @@
           "id": "plan-d1-01",
           "entityId": "activity-d1-01",
           "order": 1,
-          "time": "按票面",
-          "duration": "约18–22h门到门",
+          "time": "19:00",
+          "duration": "17h55m",
           "status": "planned",
-          "notes": "提前到机场，托运行李必须直挂FCO。",
-          "guard": "中转不足2.5小时不选。",
-          "ticket": "已预订后更新"
+          "notes": "GF123从CAN T2出发，BAH转GF027，12/2 05:55抵达FCO T3。",
+          "guard": "票面行李额度、直挂和值机要求出发前复核。",
+          "ticket": "Ticketed"
         }
       ],
       "alternatives": []
@@ -2158,20 +2158,20 @@
           "time": "起飞前",
           "duration": "75–120min",
           "status": "planned",
-          "notes": "国际航班前3.5小时到场，先确认航站楼。",
-          "guard": "只从CDG；23kg写入票面。",
-          "ticket": "已预订后更新"
+          "notes": "CZ348 11:05起飞；国际航班前3.5小时到场。",
+          "guard": "只从CDG T1；票面行李额度出发前复核。",
+          "ticket": "Ticketed"
         },
         {
           "id": "plan-d17-03",
           "entityId": "activity-d17-03",
           "order": 3,
-          "time": "夜间",
-          "duration": "跨夜",
+          "time": "11:05",
+          "duration": "12h",
           "status": "planned",
-          "notes": "优先南航直飞；撤班才选单张1转联程。",
-          "guard": "不自拼。",
-          "ticket": "待确认"
+          "notes": "12/17 11:05起飞，12/18 06:05抵达广州T2。",
+          "guard": "按票面和值机通知执行。",
+          "ticket": "Ticketed"
         }
       ],
       "alternatives": [

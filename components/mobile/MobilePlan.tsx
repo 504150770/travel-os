@@ -71,7 +71,7 @@ export function MobilePlan({ controller }: { controller: AppController }) {
                   })
                 }
               >
-                {['Pending', 'Confirmed', 'Booked', 'Paid', 'Completed'].map((status) => (
+                {['Pending', 'Ticketed', 'Confirmed', 'Booked', 'Paid', 'Completed'].map((status) => (
                   <option key={status}>{status}</option>
                 ))}
               </select>

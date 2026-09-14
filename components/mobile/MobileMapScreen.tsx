@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { Component, lazy, Suspense, useState, type ReactNode } from 'react';
+import { Component, useState, type ReactNode } from 'react';
 import { ChevronRight, LocateFixed, Navigation } from 'lucide-react';
 import type { Entity } from '@/lib/entity-library';
 import type { DayRoute } from '@/lib/types';
@@ -10,8 +10,8 @@ import { mapLinks } from '@/features/trip/tripModel';
 import type { LocationState } from '@/features/map/location/locationModel';
 import { approximateDistanceLabel } from '@/features/map/location/locationModel';
 import type { RouteGeometryState } from '@/features/map/routing/useRouteGeometry';
-
-const MobileMapCanvas = lazy(() => import('@/components/mobile/map/MobileMapCanvas'));
+import type { MapRenderStage } from '@/components/map/MapCanvas';
+import MobileMapCanvas from '@/components/mobile/map/MobileMapCanvas';
 
 class MapBoundary extends Component<{ children: ReactNode }, { failed: boolean }> {
   state = { failed: false };
@@ -57,6 +57,7 @@ export function MobileMapScreen({
   locationFocusToken: number;
 }) {
   const [routeStatus, setRouteStatus] = useState<RouteGeometryState['status']>('loading');
+  const [mapStage, setMapStage] = useState<MapRenderStage | 'shell'>('shell');
   const selectedEntity = selected?.entityId ? resolve(selected.entityId) : undefined;
   const proximity = selected && location.position
     ? approximateDistanceLabel(location.position, selected)
@@ -73,14 +74,7 @@ export function MobileMapScreen({
       </button>
       {location.status === 'error' && <p className="mobile-location-error">{location.message}</p>}
       <MapBoundary>
-        <Suspense
-          fallback={
-            <div className="mobile-map-loading">
-              <LocateFixed />
-              <span>Loading today’s map…</span>
-            </div>
-          }
-        >
+        <div className="mobile-map-stage">
           <MobileMapCanvas
             points={points}
             route={route}
@@ -88,8 +82,12 @@ export function MobileMapScreen({
             currentLocation={location.position}
             locationFocusToken={locationFocusToken}
             onRouteStatus={setRouteStatus}
+            onMapStage={setMapStage}
           />
-        </Suspense>
+          {mapStage !== 'tiles' && <output className="mobile-map-progress">
+            {mapStage === 'shell' ? 'Loading map…' : mapStage === 'initialized' ? 'Adding today’s stops…' : 'Loading map detail…'}
+          </output>}
+        </div>
       </MapBoundary>
 
       {selected && (

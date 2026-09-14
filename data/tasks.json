@@ -24,19 +24,20 @@
     },
     {
       "id": "monitor-flights",
-      "title": "监控国际机票",
+      "title": "国际机票已出票",
       "due": "09/12",
-      "note": "CAN→FCO单票1转；CDG→CAN直飞；核23kg",
+      "note": "GF123/GF027 CAN T2→BAH→FCO T3；CZ348 CDG T1→CAN T2；票面行李与值机规则后续复核",
       "group": "现在",
-      "status": "To Do",
+      "status": "Done",
       "linkedBookingId": "flight-can-fco",
       "autoCompleteWhen": [
+        "Ticketed",
         "Booked",
         "Paid",
         "Confirmed",
         "Completed"
       ],
-      "lastVerified": "2026-09-06"
+      "lastVerified": "2026-09-14"
     },
     {
       "id": "visa-appointment",

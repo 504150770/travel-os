@@ -18,6 +18,8 @@ export type DisplayRouteGeometry = {
   provider?: string;
 };
 
+const inFlightRoutes = new Map<string, Promise<{ coordinates: [number, number][]; provider: string }>>();
+
 export function straightLineKm(origin: RouteEndpoint, destination: RouteEndpoint) {
   const radians = (value: number) => value * Math.PI / 180;
   const dLat = radians(destination.lat - origin.lat);
@@ -61,6 +63,24 @@ export function schematicGeometries(route: DayRoute, points: MapPoint[]): Displa
   });
 }
 
+export function routeGeometryRequestKey(route: DayRoute, points: MapPoint[]) {
+  const byId = new Map(points
+    .filter((point) => point.kind === 'hotel' || point.kind === 'stop')
+    .map((point) => [point.id, point]));
+  return JSON.stringify(route.legs.map(({ id, fromId, toId, recommendedMode }) => {
+    const from = byId.get(fromId);
+    const to = byId.get(toId);
+    return {
+      id,
+      fromId,
+      toId,
+      recommendedMode,
+      from: from ? [from.lat, from.lng] : null,
+      to: to ? [to.lat, to.lng] : null,
+    };
+  }));
+}
+
 export async function resolveRouteGeometry({
   item,
   key,
@@ -83,7 +103,14 @@ export async function resolveRouteGeometry({
     provider: hit.provider,
   };
   try {
-    const result = await provider.route(item.origin, item.destination, item.profile, signal);
+    const inFlightKey = `${provider.id}:${key}`;
+    let pending = inFlightRoutes.get(inFlightKey);
+    if (!pending) {
+      pending = provider.route(item.origin, item.destination, item.profile, signal);
+      inFlightRoutes.set(inFlightKey, pending);
+      void pending.finally(() => inFlightRoutes.delete(inFlightKey)).catch(() => undefined);
+    }
+    const result = await pending;
     cache.set(key, { ...result, cachedAt: new Date().toISOString() });
     return {
       legId: item.leg.id,

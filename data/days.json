@@ -16,14 +16,14 @@
     "lossCut": "今天没有可删项目；延误时只保留同票联程保障。",
     "timeline": [
       {
-        "time": "按票面",
-        "title": "CAN出发",
+        "time": "19:00",
+        "title": "GF123 / GF027 · CAN→BAH→FCO",
         "placeId": null,
         "mode": "飞机",
-        "duration": "约18–22h门到门",
-        "note": "提前到机场，托运行李必须直挂FCO。",
-        "guard": "中转不足2.5小时不选。",
-        "ticket": "已预订后更新"
+        "duration": "17h55m",
+        "note": "GF123从CAN T2出发，BAH转GF027，12/2 05:55抵达FCO T3。",
+        "guard": "票面行李额度、直挂和值机要求出发前复核。",
+        "ticket": "Ticketed"
       }
     ],
     "shooting": [
@@ -1027,23 +1027,23 @@
       },
       {
         "time": "起飞前",
-        "title": "巴黎→CDG",
+        "title": "巴黎→CDG T1",
         "placeId": "cdg",
         "mode": "RER/出租",
         "duration": "75–120min",
-        "note": "国际航班前3.5小时到场，先确认航站楼。",
-        "guard": "只从CDG；23kg写入票面。",
-        "ticket": "已预订后更新"
+        "note": "CZ348 11:05起飞；国际航班前3.5小时到场。",
+        "guard": "只从CDG T1；票面行李额度出发前复核。",
+        "ticket": "Ticketed"
       },
       {
-        "time": "夜间",
-        "title": "CDG→CAN",
+        "time": "11:05",
+        "title": "CZ348 · CDG T1→CAN T2",
         "placeId": null,
         "mode": "飞机",
-        "duration": "跨夜",
-        "note": "优先南航直飞；撤班才选单张1转联程。",
-        "guard": "不自拼。",
-        "ticket": "待确认"
+        "duration": "12h",
+        "note": "12/17 11:05起飞，12/18 06:05抵达广州T2。",
+        "guard": "按票面和值机通知执行。",
+        "ticket": "Ticketed"
       }
     ],
     "shooting": [

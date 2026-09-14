@@ -98,6 +98,11 @@ export default function DesktopTripWorkspace(props: DesktopTripWorkspaceProps) {
   const food = useMemo(() => selectRelevantFood({ entities, day: trip.day, planDay: trip.planDay }), [entities, trip.day, trip.planDay]);
   const currentIds = useMemo(() => new Set(trip.planDay.activeItems.map((item) => item.entityId)), [trip.planDay.activeItems]);
   const markerCandidates = useMemo(() => candidates.filter((entity) => !currentIds.has(entity.id)), [candidates, currentIds]);
+  const routePoints = useMemo(() => selectDayMapPoints({
+    stay: trip.stay,
+    planDay: trip.planDay,
+    resolve,
+  }), [resolve, trip.planDay, trip.stay]);
   const points = useMemo(() => selectDayMapPoints({
     stay: trip.stay,
     planDay: trip.planDay,
@@ -189,7 +194,7 @@ export default function DesktopTripWorkspace(props: DesktopTripWorkspaceProps) {
       <button onClick={location.request} disabled={location.state.status === 'locating'} title={location.state.status === 'error' ? location.state.message : undefined}><LocateFixed /> {location.state.status === 'locating' ? 'Locating' : 'My Location'}</button>
     </div>
     {compact ? <div className="workspace-compact-stage">
-      <DesktopTripMap points={points} route={trip.currentRoute} selectedPointId={selectedPointId} selectedLegId={selectedLegId} showRoute={showRoute} fitToken={`${selectedDay}:${fitRequest}`} selectPoint={selectPoint} resolve={resolve} openDetails={openDetails} addCandidate={addCandidate} currentLocation={location.state.position} locationFocusToken={location.focusToken} />
+      <DesktopTripMap points={points} routePoints={routePoints} route={trip.currentRoute} selectedPointId={selectedPointId} selectedLegId={selectedLegId} showRoute={showRoute} fitToken={`${selectedDay}:${fitRequest}`} selectPoint={selectPoint} resolve={resolve} openDetails={openDetails} addCandidate={addCandidate} currentLocation={location.state.position} locationFocusToken={location.focusToken} />
       {!planCollapsed && planPane}
     </div> : <ResizablePanelGroup key={panelEpoch} id="desktop-trip-group" orientation="horizontal" className="workspace-split">
       <ResizablePanel id="plan" panelRef={panelRef} defaultSize={`${panelWidth}px`} minSize={`${MIN_PANEL}px`} maxSize={`${MAX_PANEL}px`} collapsible collapsedSize="0px" onResize={(size) => {
@@ -197,7 +202,7 @@ export default function DesktopTripWorkspace(props: DesktopTripWorkspaceProps) {
         if (size.inPixels >= MIN_PANEL) window.localStorage.setItem(PANEL_KEY, String(Math.round(size.inPixels)));
       }}>{planPane}</ResizablePanel>
       <ResizableHandle className="workspace-resize-handle" withHandle onDoubleClick={resetPanel} title="Drag to resize · double-click to reset" />
-      <ResizablePanel id="map" minSize="320px"><DesktopTripMap points={points} route={trip.currentRoute} selectedPointId={selectedPointId} selectedLegId={selectedLegId} showRoute={showRoute} fitToken={`${selectedDay}:${fitRequest}`} selectPoint={selectPoint} resolve={resolve} openDetails={openDetails} addCandidate={addCandidate} currentLocation={location.state.position} locationFocusToken={location.focusToken} /></ResizablePanel>
+      <ResizablePanel id="map" minSize="320px"><DesktopTripMap points={points} routePoints={routePoints} route={trip.currentRoute} selectedPointId={selectedPointId} selectedLegId={selectedLegId} showRoute={showRoute} fitToken={`${selectedDay}:${fitRequest}`} selectPoint={selectPoint} resolve={resolve} openDetails={openDetails} addCandidate={addCandidate} currentLocation={location.state.position} locationFocusToken={location.focusToken} /></ResizablePanel>
     </ResizablePanelGroup>}
     {planCollapsed && <button className="workspace-show-plan" onClick={togglePlan}><PanelLeftOpen /> Show Plan</button>}
     <DayDetailsDrawer open={drawer === 'details'} close={closeDrawer} day={trip.day} dayState={trip.dayState} entities={entities} resolve={resolve} actions={actions} openGallery={open} preferredTransport={preferredTransport} actionStatuses={actionStatuses} privateLinks={privateLinks} openGym={trip.setSelectedGym} />

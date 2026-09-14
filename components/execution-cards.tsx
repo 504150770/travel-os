@@ -37,7 +37,7 @@ import {
 } from '@/lib/media';
 
 const statusClass = (value: string) =>
-  value === 'Confirmed' || value === 'Not Required' || value === 'Ready'
+  value === 'Ticketed' || value === 'Confirmed' || value === 'Not Required' || value === 'Ready'
     ? 'confirmed'
     : value === 'Requested' || value === 'Required'
       ? 'requested'

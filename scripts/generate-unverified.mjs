@@ -57,6 +57,14 @@ for (const route of dayRoutes) {
   }
 }
 for (const segment of transport) {
+  if (segment.status === 'TICKETED') {
+    const ticket = segment.candidates[0];
+    const fields = [];
+    if (ticket?.baggage23kg == null) fields.push('票面行李额度');
+    if (!ticket?.refundability || ticket.refundability.includes('票面')) fields.push('票面退改规则');
+    if (fields.length) add('TRANSPORT_LIVE_DATA', segment.id, segment.route, `Day ${segment.day}`, fields, '航班已出票；仅剩票面附加规则需要在出发前复核，不是待购票事项。', '在航司订单页核对行李、值机与航站楼通知。', 'P0', { actionWindow: 'VERIFY_BEFORE_TRIP', verifyAfter: '2026-11-01', verifyBefore: days[segment.day - 1]?.date || null, freshness: 'Refresh after airline notifications' });
+    continue;
+  }
   const pending = segment.candidates.filter((candidate) => candidate.priceCny == null || candidate.departure == null || candidate.baggage23kg == null);
   if (pending.length) add('TRANSPORT_LIVE_DATA', segment.id, segment.route, `Day ${segment.day}`, ['实时班次','总价','23kg行李','改签条件'], '官方路线存在，但目标日期具体产品尚未形成可出票事实。', '出票窗口开启后在官方页刷新并锁定。', 'P0', { actionWindow: 'VERIFY_BEFORE_TRIP', verifyAfter: '2026-09-30', verifyBefore: days[segment.day - 1]?.date || null, freshness: 'Refresh after schedule or fare changes' });
 }

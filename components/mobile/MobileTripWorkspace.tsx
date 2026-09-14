@@ -1,6 +1,6 @@
 'use client';
 
-import { lazy, Suspense, useMemo, useState } from 'react';
+import { lazy, Suspense, useEffect, useMemo, useState } from 'react';
 import type { Entity } from '@/lib/entity-library';
 import type { AppController } from '@/features/app/useAppController';
 import type { MobileMapPoint } from '@/features/mobile/mobileModel';
@@ -21,10 +21,11 @@ import { approximateDistanceLabel } from '@/features/map/location/locationModel'
 import { useWeatherContext } from '@/features/weather/useWeatherContext';
 import { routeCityForDay } from '@/features/trip/tripModel';
 
-const MobileMapScreen = lazy(async () => {
+const loadMobileMapScreen = async () => {
   const loaded = await import('@/components/mobile/MobileMapScreen');
   return { default: loaded.MobileMapScreen };
-});
+};
+const MobileMapScreen = lazy(loadMobileMapScreen);
 
 export function MobileTripWorkspace({
   controller,
@@ -45,6 +46,7 @@ export function MobileTripWorkspace({
   const [hotelOpen, setHotelOpen] = useState(false);
   const [actions, setActions] = useState<ActionSelection | null>(null);
   const [mapPoint, setMapPoint] = useState<MobileMapPoint | null>(null);
+  const [mapVisited, setMapVisited] = useState(controller.mobileView === 'map');
   const location = useCurrentLocation();
   const food = useMemo(
     () =>
@@ -62,11 +64,31 @@ export function MobileTripWorkspace({
         stay: trip.stay,
         planDay: trip.planDay,
         resolve: controller.resolve,
-        food,
-        gym,
       }),
-    [controller.resolve, food, gym, trip.planDay, trip.stay],
+    [controller.resolve, trip.planDay, trip.stay],
   );
+
+  useEffect(() => {
+    if (controller.mobileView === 'map') return;
+    const preload = () => { void loadMobileMapScreen(); };
+    const idleWindow = window as unknown as {
+      requestIdleCallback?: (callback: IdleRequestCallback, options?: IdleRequestOptions) => number;
+      cancelIdleCallback?: (handle: number) => void;
+    };
+    if (idleWindow.requestIdleCallback) {
+      const request = idleWindow.requestIdleCallback(preload, { timeout: 1800 });
+      return () => idleWindow.cancelIdleCallback?.(request);
+    }
+    const timer = globalThis.setTimeout(preload, 700);
+    return () => globalThis.clearTimeout(timer);
+  }, [controller.mobileView]);
+
+  useEffect(() => {
+    if (controller.mobileView !== 'map' || mapVisited) return;
+    const timer = globalThis.setTimeout(() => setMapVisited(true), 0);
+    return () => globalThis.clearTimeout(timer);
+  }, [controller.mobileView, mapVisited]);
+
   const weather = useWeatherContext({
     city: routeCityForDay(trip.day),
     date: trip.day.date,
@@ -79,7 +101,8 @@ export function MobileTripWorkspace({
 
   return (
     <>
-      {controller.mobileView === 'map' ? (
+      {(controller.mobileView === 'map' || mapVisited) && (
+        <div hidden={controller.mobileView !== 'map'}>
         <Suspense fallback={<div className="mobile-map-loading">Preparing map…</div>}>
           <MobileMapScreen
             route={trip.currentRoute}
@@ -95,7 +118,9 @@ export function MobileTripWorkspace({
             locationFocusToken={location.focusToken}
           />
         </Suspense>
-      ) : (
+        </div>
+      )}
+      {controller.mobileView !== 'map' && (
         <MobileToday
           controller={controller}
           trip={trip}

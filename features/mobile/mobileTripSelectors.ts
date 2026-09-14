@@ -20,20 +20,14 @@ export function mobileMapPoints({
   stay,
   planDay,
   resolve,
-  food,
-  gym,
 }: {
   stay?: HotelBooking;
   planDay: PlanDay;
   resolve: (id: string) => Entity | undefined;
-  food: Entity[];
-  gym?: Entity;
 }): MobileMapPoint[] {
   return selectDayMapPoints({
     stay,
     planDay,
     resolve,
-    food: food.slice(0, 1),
-    gyms: gym ? [gym] : [],
   }) as MobileMapPoint[];
 }

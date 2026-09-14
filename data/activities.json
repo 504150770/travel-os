@@ -2,21 +2,21 @@
   {
     "id": "activity-d1-01",
     "type": "activity",
-    "name": "CAN出发",
+    "name": "GF123 / GF027 · CAN→BAH→FCO",
     "city": "罗马",
-    "address": "待确认",
+    "address": "CAN T2 → BAH → FCO T3",
     "coordinates": null,
     "images": [],
-    "description": "提前到机场，托运行李必须直挂FCO。",
+    "description": "12/1 19:00从CAN T2起飞；BAH 23:50抵达、12/2 01:40转机；FCO T3 05:55抵达。",
     "price": null,
     "openingHours": "不适用",
     "links": {},
-    "source": "现有行程PDF与Web Guide",
-    "lastVerified": "2026-09-06",
+    "source": "用户确认的出票事实",
+    "lastVerified": "2026-09-14",
     "tags": [
       "飞机"
     ],
-    "notes": "中转不足2.5小时不选。"
+    "notes": "已出票；票面行李额度、直挂和值机要求出发前复核。"
   },
   {
     "id": "activity-d2-01",
@@ -344,21 +344,21 @@
   {
     "id": "activity-d17-03",
     "type": "activity",
-    "name": "CDG→CAN",
+    "name": "CZ348 · CDG T1→CAN T2",
     "city": "广州",
-    "address": "待确认",
+    "address": "CDG T1 → CAN T2",
     "coordinates": null,
     "images": [],
-    "description": "优先南航直飞；撤班才选单张1转联程。",
+    "description": "12/17 11:05从CDG T1起飞；12/18 06:05抵达CAN T2。",
     "price": null,
     "openingHours": "不适用",
     "links": {},
-    "source": "现有行程PDF与Web Guide",
-    "lastVerified": "2026-09-06",
+    "source": "用户确认的出票事实",
+    "lastVerified": "2026-09-14",
     "tags": [
       "飞机"
     ],
-    "notes": "不自拼。"
+    "notes": "已出票；按票面和值机通知执行。"
   },
   {
     "id": "activity-d18-01",

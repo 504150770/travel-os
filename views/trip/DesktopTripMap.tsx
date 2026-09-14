@@ -10,8 +10,10 @@ import { mapLinks } from '@/features/trip/tripModel';
 import type { CurrentLocation } from '@/features/map/location/locationModel';
 import { approximateDistanceLabel } from '@/features/map/location/locationModel';
 import type { RouteGeometryState } from '@/features/map/routing/useRouteGeometry';
+import type { MapRenderStage } from '@/components/map/MapCanvas';
+import { loadMapCanvas } from '@/features/map/mapLoader';
 
-const MapCanvas = lazy(() => import('@/components/map/MapCanvas'));
+const MapCanvas = lazy(loadMapCanvas);
 
 class DesktopMapBoundary extends Component<{ children: ReactNode }, { failed: boolean }> {
   state = { failed: false };
@@ -24,6 +26,7 @@ class DesktopMapBoundary extends Component<{ children: ReactNode }, { failed: bo
 
 export function DesktopTripMap({
   points,
+  routePoints,
   route,
   selectedPointId,
   selectedLegId,
@@ -37,6 +40,7 @@ export function DesktopTripMap({
   locationFocusToken,
 }: {
   points: MapPoint[];
+  routePoints: MapPoint[];
   route: DayRoute;
   selectedPointId: string | null;
   selectedLegId: string | null;
@@ -50,6 +54,7 @@ export function DesktopTripMap({
   locationFocusToken: number;
 }) {
   const [routeStatus, setRouteStatus] = useState<RouteGeometryState['status']>('loading');
+  const [mapStage, setMapStage] = useState<MapRenderStage | 'shell'>('shell');
   const selected = points.find((point) => point.id === selectedPointId) ?? null;
   const entity = selected?.entityId ? resolve(selected.entityId) : undefined;
   const navigate = entity
@@ -60,9 +65,10 @@ export function DesktopTripMap({
   return (
     <section className="workspace-map" aria-label="Interactive trip map">
       <DesktopMapBoundary>
-        <Suspense fallback={<div className="workspace-map-loading"><Crosshair /><span>Preparing trip map…</span></div>}>
+        <Suspense fallback={<div className="workspace-map-loading"><Crosshair /><span>Loading map…</span></div>}>
           <MapCanvas
             points={points}
+            routePoints={routePoints}
             route={route}
             selectedPointId={selectedPointId}
             selectedLegId={selectedLegId}
@@ -73,9 +79,15 @@ export function DesktopTripMap({
             currentLocation={currentLocation}
             locationFocusToken={locationFocusToken}
             onRouteStatus={setRouteStatus}
+            onMapStage={setMapStage}
           />
         </Suspense>
       </DesktopMapBoundary>
+      {mapStage !== 'tiles' && (
+        <output className="workspace-map-progress">
+          {mapStage === 'shell' ? 'Loading map…' : mapStage === 'initialized' ? 'Adding today’s stops…' : 'Loading map detail…'}
+        </output>
+      )}
       <div className="workspace-map-disclaimer">
         {routeStatus === 'fallback' ? 'Dashed = route overview · detailed route unavailable' : routeStatus === 'cached' ? 'Solid = routed road · using cached route' : routeStatus === 'routed' ? 'Solid = routed road · dashed = route overview' : 'Loading detailed route…'}
       </div>

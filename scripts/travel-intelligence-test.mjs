@@ -5,7 +5,7 @@ import {
   createMemoryRouteGeometryCache,
   geometryCacheKey,
 } from '../features/map/routing/routeGeometryCache.ts';
-import { resolveRouteGeometry, routableLegs, schematicGeometries } from '../features/map/routing/routingModel.ts';
+import { resolveRouteGeometry, routableLegs, routeGeometryRequestKey, schematicGeometries } from '../features/map/routing/routingModel.ts';
 import {
   approximateDistanceLabel,
   currentLocationFromCoordinates,
@@ -33,6 +33,9 @@ assert.notEqual(key, geometryCacheKey(destination, origin, 'foot'));
 const cache = createMemoryRouteGeometryCache();
 cache.set(key, { coordinates: [[41.9, 12.47], [41.89, 12.48]], provider: 'test', cachedAt: '2026-09-11T00:00:00Z' });
 assert.equal(cache.get(key)?.provider, 'test');
+assert.deepEqual(cache.stats(), { hits: 1, misses: 0, writes: 1 });
+assert.equal(cache.get('missing'), undefined);
+assert.deepEqual(cache.stats(), { hits: 1, misses: 1, writes: 1 });
 
 const route = {
   legs: [
@@ -41,12 +44,14 @@ const route = {
   ],
 };
 const points = [
-  { id: 'hotel', lat: 41.9, lng: 12.47 },
-  { id: 'place', lat: 41.89, lng: 12.48 },
-  { id: 'station', lat: 41.91, lng: 12.5 },
+  { id: 'hotel', kind: 'hotel', lat: 41.9, lng: 12.47 },
+  { id: 'place', kind: 'stop', lat: 41.89, lng: 12.48 },
+  { id: 'station', kind: 'stop', lat: 41.91, lng: 12.5 },
 ];
 assert.deepEqual(routableLegs(route, points).map((item) => item.leg.id), ['walk']);
 assert.deepEqual(schematicGeometries(route, points).map((item) => item.source), ['schematic', 'schematic']);
+assert.equal(routeGeometryRequestKey(route, points), routeGeometryRequestKey(route, [...points, { id: 'food', kind: 'food', lat: 41.8, lng: 12.4 }]));
+assert.deepEqual(routableLegs({ legs: [{ id: 'intercity', fromId: 'hotel', toId: 'far', recommendedMode: 'Walk' }] }, [...points, { id: 'far', kind: 'stop', lat: 48.85, lng: 2.35 }]), []);
 const routable = routableLegs(route, points)[0];
 let providerCalls = 0;
 const provider = {
@@ -62,6 +67,23 @@ const reused = await resolveRouteGeometry({ item: routable, key: 'walk-key', pro
 assert.equal(loaded.source, 'routed');
 assert.equal(reused.cached, true);
 assert.equal(providerCalls, 1);
+let concurrentCalls = 0;
+const concurrentProvider = {
+  id: 'concurrent-test',
+  route: async () => {
+    concurrentCalls += 1;
+    await new Promise((resolve) => setTimeout(resolve, 5));
+    return { coordinates: [[41.9, 12.47], [41.89, 12.48]], provider: 'concurrent-test' };
+  },
+};
+const concurrentCache = createMemoryRouteGeometryCache();
+await Promise.all([
+  resolveRouteGeometry({ item: routable, key: 'same-pair', provider: concurrentProvider, cache: concurrentCache }),
+  resolveRouteGeometry({ item: routable, key: 'same-pair', provider: concurrentProvider, cache: concurrentCache }),
+]);
+assert.equal(concurrentCalls, 1, 'identical in-flight route pairs must share one provider request');
+assert.equal(concurrentCache.stats().misses, 2);
+assert.equal(concurrentCache.stats().writes, 2);
 const failed = await resolveRouteGeometry({
   item: routable,
   key: 'failed-key',
@@ -109,8 +131,11 @@ assert.match(locationHook, /getCurrentPosition/);
 assert.doesNotMatch(locationHook, /localStorage|sessionStorage|fetch\(/);
 assert.match(routeHook, /REQUEST_INTERVAL_MS = 1050/);
 assert.match(routeHook, /createBrowserRouteGeometryCache/);
+assert.match(routeHook, /routeGeometryRequestKey/);
 assert.match(mapCanvas, /source === 'routed'/);
 assert.match(mapCanvas, /dashArray: '8 10'/);
+assert.match(mapCanvas, /updateWhenIdle: true/);
+assert.match(mapCanvas, /loading="lazy" decoding="async"/);
 assert.doesNotMatch(serviceWorker, /tile\.openstreetmap\.org/);
 
-console.log('Travel Intelligence tests passed: routed/cache fallback, opt-in memory-only location, offline policy manifest + GPX, and forecast horizon/cache.');
+console.log('Travel Intelligence tests passed: route cache hit/miss + in-flight dedupe, routed/schematic separation, progressive tile policy, location, offline manifest + GPX, and weather cache.');

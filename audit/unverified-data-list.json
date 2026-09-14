@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-11T08:02:00.567Z",
+  "generatedAt": "2026-09-14T02:33:29.933Z",
   "policy": "真实性 > 完成率；未验证字段不进入事实结论。",
   "total": 249,
   "prioritySummary": {
@@ -2309,21 +2309,19 @@
     {
       "category": "TRANSPORT_LIVE_DATA",
       "id": "can-fco",
-      "name": "CAN / HKG → FCO",
+      "name": "CAN T2 → BAH → FCO T3",
       "city": "Day 1",
       "fields": [
-        "实时班次",
-        "总价",
-        "23kg行李",
-        "改签条件"
+        "票面行李额度",
+        "票面退改规则"
       ],
-      "reason": "官方路线存在，但目标日期具体产品尚未形成可出票事实。",
-      "nextAction": "出票窗口开启后在官方页刷新并锁定。",
+      "reason": "航班已出票；仅剩票面附加规则需要在出发前复核，不是待购票事项。",
+      "nextAction": "在航司订单页核对行李、值机与航站楼通知。",
       "priority": "P0",
       "actionWindow": "VERIFY_BEFORE_TRIP",
-      "verifyAfter": "2026-09-30",
+      "verifyAfter": "2026-11-01",
       "verifyBefore": "2026-12-01",
-      "freshness": "Refresh after schedule or fare changes"
+      "freshness": "Refresh after airline notifications"
     },
     {
       "category": "TRANSPORT_LIVE_DATA",
@@ -2423,21 +2421,19 @@
     {
       "category": "TRANSPORT_LIVE_DATA",
       "id": "paris-can",
-      "name": "CDG → CAN / HKG",
+      "name": "CDG T1 → CAN T2",
       "city": "Day 17",
       "fields": [
-        "实时班次",
-        "总价",
-        "23kg行李",
-        "改签条件"
+        "票面行李额度",
+        "票面退改规则"
       ],
-      "reason": "官方路线存在，但目标日期具体产品尚未形成可出票事实。",
-      "nextAction": "出票窗口开启后在官方页刷新并锁定。",
+      "reason": "航班已出票；仅剩票面附加规则需要在出发前复核，不是待购票事项。",
+      "nextAction": "在航司订单页核对行李、值机与航站楼通知。",
       "priority": "P0",
       "actionWindow": "VERIFY_BEFORE_TRIP",
-      "verifyAfter": "2026-09-30",
+      "verifyAfter": "2026-11-01",
       "verifyBefore": "2026-12-17",
-      "freshness": "Refresh after schedule or fare changes"
+      "freshness": "Refresh after airline notifications"
     },
     {
       "category": "GYM_REALITY",
