@@ -110,6 +110,7 @@ export type Booking = {
 type HotelRecord = {
   id: string;
   city: string;
+  areaLabel?: string;
   country: string;
   hotelName: string;
   address: string;

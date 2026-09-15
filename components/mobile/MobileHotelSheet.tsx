@@ -36,7 +36,7 @@ export function MobileHotelSheet({
     <MobileSheet
       open
       close={close}
-      eyebrow={`STAY · ${stay.city}`}
+      eyebrow={`STAY · ${stay.areaLabel ?? stay.city}`}
       title={stay.hotelName}
       className="mobile-entity-sheet"
     >

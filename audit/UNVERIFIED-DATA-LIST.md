@@ -1,10 +1,10 @@
 # UNVERIFIED DATA LIST
 
-Generated: 2026-09-14T02:33:29.933Z
+Generated: 2026-09-15T06:59:56.925Z
 
 > 真实性优先。以下项目没有被当作已验证事实。
 
-P0 23 · P1 128 · P2 98
+P0 23 · P1 128 · P2 93
 
 ## P0 · 23
 
@@ -163,7 +163,7 @@ P0 23 · P1 128 · P2 98
 - **巴黎｜Westfield Forum des Halles** · SHOPPING_REALITY — openingHours、image。已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。 下一步：出发前从官方页面复核，并只补可追溯现场图。
 - **巴黎｜Rue de Rivoli** · SHOPPING_REALITY — openingHours、image。已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。 下一步：出发前从官方页面复核，并只补可追溯现场图。
 
-## P2 · 98
+## P2 · 93
 
 - **罗马｜Armando al Pantheon** · FOOD_REALITY — address。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
 - **罗马｜Roscioli Salumeria con Cucina** · FOOD_REALITY — address、openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
@@ -234,12 +234,10 @@ P0 23 · P1 128 · P2 98
 - **佛罗伦萨｜Palazzo Strozzi庭院** · PLACE_IMAGES — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
 - **佛罗伦萨｜Mercato Centrale** · PLACE_IMAGES — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
 - **佛罗伦萨｜Santa Maria Novella香氛药房** · PLACE_IMAGES — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
-- **威尼斯｜里亚托桥清晨** · PLACE_IMAGES — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
 - **威尼斯｜Zattere海滨长堤** · PLACE_IMAGES — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
 - **威尼斯｜圣乔治马焦雷岛** · PLACE_IMAGES — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
 - **威尼斯｜Cannaregio住宅水巷** · PLACE_IMAGES — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
 - **维也纳｜上美景宫** · PLACE_IMAGES — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
-- **维也纳｜圣斯蒂芬大教堂 + Graben** · PLACE_IMAGES — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
 - **维也纳｜Prater摩天轮** · PLACE_IMAGES — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
 - **维也纳｜Albertina** · PLACE_IMAGES — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
 - **布拉格｜Kampa岛 + Lennon Wall** · PLACE_IMAGES — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
@@ -254,13 +252,10 @@ P0 23 · P1 128 · P2 98
 - **罗马｜Best Night Walk** · PICK_IMAGES — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
 - **罗马｜Best Shopping** · PICK_IMAGES — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
 - **佛罗伦萨｜Best Shopping** · PICK_IMAGES — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
-- **威尼斯｜Best Photo Spot** · PICK_IMAGES — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
 - **威尼斯｜Best Night Walk** · PICK_IMAGES — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
-- **维也纳｜Best Photo Spot** · PICK_IMAGES — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
 - **维也纳｜Best Meal** · PICK_IMAGES — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
 - **维也纳｜Best Coffee / Dessert** · PICK_IMAGES — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
 - **布拉格｜Best Coffee** · PICK_IMAGES — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
 - **布拉格｜Best Easy Win** · PICK_IMAGES — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
-- **巴黎｜Best Photo Spot** · PICK_IMAGES — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
 - **巴黎｜Best Meal** · PICK_IMAGES — image。Pick引用的Entity暂无图片。 下一步：只在Entity补图，不在Picks复制文件。
 

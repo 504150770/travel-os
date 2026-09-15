@@ -290,7 +290,7 @@ export function HotelExecutionCard({
     <article className="hotel-execution-card">
       <header>
         <span>
-          {stay.city} · {stay.nights} NIGHTS
+          {stay.areaLabel ?? stay.city} · {stay.nights} NIGHTS
         </span>
         <h2>{stay.hotelName}</h2>
         <b>
@@ -494,7 +494,7 @@ export function CheckinCenter({
             </button>
             <div>
               <span>
-                {stay.checkIn} · {stay.city}
+                {stay.checkIn} · {stay.areaLabel ?? stay.city}
               </span>
               <h2>{stay.hotelName}</h2>
               <p>{stay.execution.onlineCheckIn.note}</p>

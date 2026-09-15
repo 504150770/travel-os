@@ -92,8 +92,8 @@
     },
     "options": {
       "type": "array",
-      "minItems": 24,
-      "maxItems": 24,
+      "minItems": 22,
+      "maxItems": 22,
       "items": {
         "type": "object",
         "required": [

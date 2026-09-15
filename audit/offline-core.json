@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-09-14T02:33:31.289Z",
-  "version": "bf0e7368a2cf",
-  "assetCount": 193,
-  "mediaAssetCount": 186,
-  "totalBytes": 20322804,
+  "generatedAt": "2026-09-15T06:59:58.505Z",
+  "version": "4f2158f2a7ba",
+  "assetCount": 199,
+  "mediaAssetCount": 192,
+  "totalBytes": 20944222,
   "expected": {
     "dayHero": 18,
     "hotels": 6,
-    "places": 34,
+    "places": 37,
     "food": 34,
     "gym": 6
   },
   "coverage": {
     "dayHero": 18,
     "hotels": 6,
-    "places": 34,
+    "places": 37,
     "food": 34,
     "gym": 6
   },

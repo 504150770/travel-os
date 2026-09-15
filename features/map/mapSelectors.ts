@@ -79,9 +79,11 @@ export function selectDayMapPoints({
       detail: 'Tonight stay',
     });
   }
-  planDay.activeItems.forEach((item, index) => {
+  let stopOrder = 0;
+  planDay.activeItems.forEach((item) => {
     const entity = resolve(item.entityId);
     if (!entity?.coordinates || entity.type === 'activity') return;
+    stopOrder += 1;
     points.push({
       id: entity.id,
       entityId: entity.id,
@@ -94,7 +96,7 @@ export function selectDayMapPoints({
       time: item.time,
       duration: item.duration,
       ticket: item.ticket,
-      order: index + 1,
+      order: stopOrder,
     });
   });
   const append = (entities: Entity[], kind: 'food' | 'gym' | 'candidate') => {

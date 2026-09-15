@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-14T02:33:30.556Z",
+  "generatedAt": "2026-09-15T06:59:57.722Z",
   "originalMissingImages": 146,
-  "remainingMissingImages": 98,
-  "addedImages": 48,
+  "remainingMissingImages": 93,
+  "addedImages": 53,
   "publicImages": {
-    "count": 292,
-    "bytes": 31083882
+    "count": 301,
+    "bytes": 32264464
   },
   "hotel": {
     "complete": 6,
@@ -25,8 +25,8 @@
     "missingDays": []
   },
   "currentPlan": {
-    "covered": 34,
-    "total": 34,
+    "covered": 37,
+    "total": 37,
     "percentage": 100,
     "missing": []
   },
@@ -90,7 +90,7 @@
   "missingByCategory": {
     "FOOD_IMAGES": 30,
     "SHOPPING_REALITY": 31,
-    "PLACE_IMAGES": 24,
-    "PICK_IMAGES": 13
+    "PLACE_IMAGES": 22,
+    "PICK_IMAGES": 10
   }
 }

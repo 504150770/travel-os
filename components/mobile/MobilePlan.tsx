@@ -118,7 +118,7 @@ export function MobilePlan({ controller }: { controller: AppController }) {
               <article key={stay.id}>
                 {status === 'Done' ? <Check /> : <CalendarCheck />}
                 <div>
-                  <span>{stay.city} · {stay.checkIn}</span>
+                  <span>{stay.areaLabel ?? stay.city} · {stay.checkIn}</span>
                   <h2>{stay.hotelName}</h2>
                   <p>{stay.execution.onlineCheckIn.requirement}</p>
                 </div>

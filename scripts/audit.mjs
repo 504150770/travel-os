@@ -104,7 +104,7 @@ checks.tripStopImageCoverage = failures.filter((item) => item.dimension === 'tri
 
 for (const city of data.trip.cities.map((item) => item.name)) {
   const choices = data.options.filter((item) => item.city === city);
-  if (choices.length !== 4) fail('options', `${city} has ${choices.length} optional place choices`);
+  if (choices.length < 3) fail('options', `${city} has ${choices.length} optional place choices`);
 }
 for (const option of data.options) {
   if (!option.recommendedDays.every((day) => day >= 1 && day <= 18)) fail('options', `${option.id} has invalid recommended day`);

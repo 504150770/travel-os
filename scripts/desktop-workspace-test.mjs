@@ -84,8 +84,9 @@ assert.match(timeline, /SortableContext/);
 assert.match(editablePlan, /reorderWithin/);
 assert.match(editablePlan, /reorderPlanItems/);
 assert.match(editablePlan, /commit\(/);
-assert.match(mapSelectors, /planDay\.activeItems\.forEach\(\(item, index\)/);
-assert.match(mapSelectors, /order: index \+ 1/);
+assert.match(mapSelectors, /let stopOrder = 0/);
+assert.match(mapSelectors, /stopOrder \+= 1/);
+assert.match(mapSelectors, /order: stopOrder/);
 
 console.log(
   'Desktop workspace tests passed: progressive/preloaded persistent map, shared selection wiring, persisted panel, route geometry, and DnD reorder model.',

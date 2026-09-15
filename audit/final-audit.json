@@ -1,16 +1,16 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-14T02:33:29.602Z",
+  "generatedAt": "2026-09-15T06:59:56.266Z",
   "status": "passed",
   "summary": {
     "failures": 0,
     "warnings": 1,
     "days": 18,
-    "editablePlanItems": 195,
-    "entities": 189,
-    "places": 39,
-    "options": 24,
-    "images": 287,
+    "editablePlanItems": 209,
+    "entities": 202,
+    "places": 41,
+    "options": 22,
+    "images": 296,
     "gyms": 10,
     "verifiedGyms": 9,
     "realHotelBookings": 6,
@@ -22,7 +22,7 @@
     "restaurants": 64,
     "verifiedMenus": 4,
     "shopping": 31,
-    "dayRouteLegs": 48,
+    "dayRouteLegs": 51,
     "transitExecutionCards": 6,
     "deadlines": 21,
     "survivalCities": 6,
@@ -32,7 +32,7 @@
     "bookings": 18,
     "tasks": 14,
     "confirmedHotelImages": 30,
-    "mediaMetadataRecords": 286
+    "mediaMetadataRecords": 295
   },
   "checks": {
     "schemaValidation": true,

@@ -17,7 +17,9 @@ export const transitExecutions =
   guideData.transitDayExecution as TransitDayExecution[];
 
 export const hotelForCity = (city: string) =>
-  realStays.find((stay) => stay.city === normalizeRouteCity(city));
+  realStays.find(
+    (stay) => normalizeRouteCity(stay.city) === normalizeRouteCity(city),
+  );
 
 export const hotelForNight = (date: string) =>
   realStays.find((stay) => date >= stay.checkIn && date < stay.checkOut);

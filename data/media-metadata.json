@@ -230,6 +230,36 @@
     "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Clock_24_hours_Florence_Cathedral.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
   },
   {
+    "file": "/images/places/eiffel/02.webp",
+    "caption": "Eiffel Tower, full-view looking toward the Trocadero, Exposition Universal, 1900, Paris, France",
+    "source": "Wikimedia Commons · Public domain",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Eiffel_Tower,_full-view_looking_toward_the_Trocadero,_Exposition_Universal,_1900,_Paris,_France.jpg",
+    "lastVerified": "2026-09-10",
+    "role": "detail",
+    "entityId": "eiffel",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/67/Eiffel_Tower%2C_full-view_looking_toward_the_Trocadero%2C_Exposition_Universal%2C_1900%2C_Paris%2C_France.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  {
+    "file": "/images/places/eiffel/01.webp",
+    "caption": "The Eiffel tower at sunrise, taken from the Place du Trocadero. Paris , France .",
+    "source": "Wikimedia Commons · CC BY-SA 3.0",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Tour_eiffel_at_sunrise_from_the_trocadero.jpg",
+    "lastVerified": "2026-09-10",
+    "role": "overview",
+    "entityId": "eiffel",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/af/Tour_eiffel_at_sunrise_from_the_trocadero.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  {
+    "file": "/images/places/eiffel/03.webp",
+    "caption": "Lightning striking the Eiffel Tower, June 3, 1902, at 9:20 P.M. This is one of the earliest photographs of lightning in an urban setting In: \"Thunder and Lightning\", Camille Flammarion, translated by Walter Mostyn Published in 1906.",
+    "source": "Wikimedia Commons · Public domain",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Lightning_striking_the_Eiffel_Tower_-_NOAA.jpg",
+    "lastVerified": "2026-09-10",
+    "role": "photo-angle",
+    "entityId": "eiffel",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Lightning_striking_the_Eiffel_Tower_-_NOAA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  {
     "file": "/images/food/florence-cammillo/curated-01.webp",
     "caption": "Cammillo Trattoria · Steak and artichokes",
     "source": "Tuscany Now & More",
@@ -936,6 +966,66 @@
     "lastVerified": "2026-09-06",
     "role": "stop",
     "entityId": "oltrarno"
+  },
+  {
+    "file": "/images/places/opt-venice-rialto/02.webp",
+    "caption": "Two \"sandolisti\" (sandal is a typical boat in Venice) pull out with clients on board from a row of gondolas on the Grand Canal near Rialto Bridge.",
+    "source": "Wikimedia Commons · CC BY-SA 3.0",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Rialto_Gondoliers.jpg",
+    "lastVerified": "2026-09-10",
+    "role": "detail",
+    "entityId": "opt-venice-rialto",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/af/Rialto_Gondoliers.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  {
+    "file": "/images/places/opt-venice-rialto/01.webp",
+    "caption": "The Rialto Bridge over Venice's Grand Canal.",
+    "source": "Wikimedia Commons · CC BY-SA 3.0",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Rialto_Bridge_Grand_Canal.jpg",
+    "lastVerified": "2026-09-10",
+    "role": "overview",
+    "entityId": "opt-venice-rialto",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/93/Rialto_Bridge_Grand_Canal.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  {
+    "file": "/images/places/opt-venice-rialto/03.webp",
+    "caption": "The Grand Canal in Venice. View from the Rialto bridge",
+    "source": "Wikimedia Commons · CC BY-SA 3.0",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Canal_Grande_from_Rialto_Bridge_Venice.jpg",
+    "lastVerified": "2026-09-10",
+    "role": "photo-angle",
+    "entityId": "opt-venice-rialto",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Canal_Grande_from_Rialto_Bridge_Venice.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  {
+    "file": "/images/places/opt-vienna-stephansdom/02.webp",
+    "caption": "View of the spire (named \"Steffl\") of the Cathedral St. Stephen of Vienna, Austria.",
+    "source": "Wikimedia Commons · CC0",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Spire_Cathedral_St_Stephen_Vienna_Wien_Steffl_1.jpg",
+    "lastVerified": "2026-09-10",
+    "role": "detail",
+    "entityId": "opt-vienna-stephansdom",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Spire_Cathedral_St_Stephen_Vienna_Wien_Steffl_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  {
+    "file": "/images/places/opt-vienna-stephansdom/01.webp",
+    "caption": "Detail of Pulpit in St. Stephen's Cathedral, Vienna : Relief of Saint Jerome",
+    "source": "Wikimedia Commons · CC BY-SA 3.0",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:St._Stephen%27s_Cathedral-pulpit.jpg",
+    "lastVerified": "2026-09-10",
+    "role": "overview",
+    "entityId": "opt-vienna-stephansdom",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ed/St._Stephen%27s_Cathedral-pulpit.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  {
+    "file": "/images/places/opt-vienna-stephansdom/03.webp",
+    "caption": "The \"Toothache Christ\", frescoes and epitaphs, exterior wal of the St. Stephen's cathedral, Vienna, Austria.",
+    "source": "Wikimedia Commons · CC0",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Zahnwehherrgott_St_Stephen_cathedral_Vienna.jpg",
+    "lastVerified": "2026-09-10",
+    "role": "photo-angle",
+    "entityId": "opt-vienna-stephansdom",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/99/Zahnwehherrgott_St_Stephen_cathedral_Vienna.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
   },
   {
     "file": "/images/places/pantheon/02.webp",

@@ -144,23 +144,6 @@
     "verifiedAt": "2026-09-06"
   },
   {
-    "id": "opt-venice-rialto",
-    "city": "威尼斯",
-    "name": "里亚托桥清晨",
-    "kind": "经典机位",
-    "recommendedDays": [
-      8
-    ],
-    "duration": "45–60分钟",
-    "bestFor": "早晨较少人、运河纵深",
-    "swapRule": "替换上午水巷，不和学院桥同日追两次日落",
-    "booking": "现场即可",
-    "mapQuery": "Rialto Bridge Venice",
-    "source": "https://www.veneziaunica.it/en/content/what-see",
-    "status": "可选，不强制",
-    "verifiedAt": "2026-09-06"
-  },
-  {
     "id": "opt-venice-zattere",
     "city": "威尼斯",
     "name": "Zattere海滨长堤",
@@ -228,24 +211,6 @@
     "booking": "需预约；出签后再决定",
     "mapQuery": "Upper Belvedere Vienna",
     "source": "https://www.belvedere.at/en",
-    "status": "可选，不强制",
-    "verifiedAt": "2026-09-06"
-  },
-  {
-    "id": "opt-vienna-stephansdom",
-    "city": "维也纳",
-    "name": "圣斯蒂芬大教堂 + Graben",
-    "kind": "老城 / 建筑",
-    "recommendedDays": [
-      9,
-      10
-    ],
-    "duration": "60–90分钟",
-    "bestFor": "哥特细节、灯饰街景",
-    "swapRule": "替换格拉本单一短走或咖啡段",
-    "booking": "主堂现场；塔楼票待确认",
-    "mapQuery": "St Stephens Cathedral Vienna",
-    "source": "https://www.stephanskirche.at/",
     "status": "可选，不强制",
     "verifiedAt": "2026-09-06"
   },

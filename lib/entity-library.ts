@@ -114,7 +114,10 @@ const optionEntities: Entity[] = (
   city: textValue(item.city),
   address: '待确认',
   mapQuery: textValue(item.mapQuery),
-  coordinates: null,
+  coordinates:
+    typeof item.lat === 'number' && typeof item.lng === 'number'
+      ? { lat: item.lat, lng: item.lng }
+      : null,
   images: imageFor(textValue(item.id)),
   description: textValue(item.bestFor),
   priceLabel: textValue(item.booking),
@@ -281,7 +284,9 @@ const confirmedHotels = hotelBookings.items as Array<{
   execution: { address: string };
 }>;
 const hotelForEntity = (entity: Entity) =>
-  confirmedHotels.find((stay) => stay.city === normalizeRouteCity(entity.city));
+  confirmedHotels.find(
+    (stay) => normalizeRouteCity(stay.city) === normalizeRouteCity(entity.city),
+  );
 const addHotelAnchor = (entity: Entity): Entity => {
   const stay = hotelForEntity(entity);
   if (!stay) return entity;

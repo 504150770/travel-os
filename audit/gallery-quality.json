@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-14T02:33:31.553Z",
+  "generatedAt": "2026-09-15T06:59:59.356Z",
   "criteria": {
     "food": ">=4 images, >=2 dishes, environment/entrance, dish cover",
     "gym": ">=3 images with equipment",
@@ -43,17 +43,17 @@
       "unmet": []
     },
     "place": {
-      "ready": 34,
-      "total": 34,
+      "ready": 37,
+      "total": 37,
       "percentage": 100,
       "averageImages": 3,
       "unmet": []
     }
   },
   "GalleryReadyCoverage": {
-    "ready": 68,
-    "total": 80,
-    "percentage": 85
+    "ready": 71,
+    "total": 83,
+    "percentage": 86
   },
   "dishMatchCoverage": {
     "matched": 38,
@@ -61,39 +61,39 @@
     "percentage": 54
   },
   "accurateSourceCoverage": {
-    "accurate": 286,
-    "total": 286,
+    "accurate": 295,
+    "total": 295,
     "percentage": 100
   },
   "officialOrTrustedSourceCoverage": {
-    "trusted": 218,
-    "total": 286,
-    "percentage": 76
+    "trusted": 227,
+    "total": 295,
+    "percentage": 77
   },
   "galleryModalAccessible": true,
   "offlineCoreCoverage": {
-    "generatedAt": "2026-09-14T02:33:31.289Z",
-    "version": "bf0e7368a2cf",
-    "assetCount": 193,
-    "mediaAssetCount": 186,
-    "totalBytes": 20322804,
+    "generatedAt": "2026-09-15T06:59:58.505Z",
+    "version": "4f2158f2a7ba",
+    "assetCount": 199,
+    "mediaAssetCount": 192,
+    "totalBytes": 20944222,
     "expected": {
       "dayHero": 18,
       "hotels": 6,
-      "places": 34,
+      "places": 37,
       "food": 34,
       "gym": 6
     },
     "coverage": {
       "dayHero": 18,
       "hotels": 6,
-      "places": 34,
+      "places": 37,
       "food": 34,
       "gym": 6
     },
     "passed": true
   },
-  "referencedGalleryBytes": 29705966,
+  "referencedGalleryBytes": 30886548,
   "entities": {
     "food": [
       {
@@ -1226,7 +1226,7 @@
       },
       {
         "id": "forum",
-        "name": "古罗马广场",
+        "name": "古罗马广场外观短看",
         "type": "place",
         "imageCount": 3,
         "roleCoverage": [
@@ -1294,7 +1294,7 @@
       },
       {
         "id": "duomo_firenze",
-        "name": "圣母百花大教堂",
+        "name": "圣母百花大教堂外观",
         "type": "place",
         "imageCount": 3,
         "roleCoverage": [
@@ -1328,7 +1328,7 @@
       },
       {
         "id": "ponte_vecchio",
-        "name": "老桥",
+        "name": "老桥与阿诺河散步",
         "type": "place",
         "imageCount": 3,
         "roleCoverage": [
@@ -1345,7 +1345,7 @@
       },
       {
         "id": "oltrarno",
-        "name": "Oltrarno / Santo Spirito",
+        "name": "Oltrarno / Santo Spirito 午餐与小店",
         "type": "place",
         "imageCount": 3,
         "roleCoverage": [
@@ -1379,7 +1379,7 @@
       },
       {
         "id": "grand_canal",
-        "name": "大运河",
+        "name": "大运河水上巴士",
         "type": "place",
         "imageCount": 3,
         "roleCoverage": [
@@ -1392,6 +1392,23 @@
         "hasInterior": false,
         "hasSignatureDish": false,
         "coverRole": "hero",
+        "galleryReady": true
+      },
+      {
+        "id": "opt-venice-rialto",
+        "name": "里亚托桥",
+        "type": "place",
+        "imageCount": 3,
+        "roleCoverage": [
+          "overview",
+          "detail",
+          "photo-angle"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": false,
+        "hasSignatureDish": false,
+        "coverRole": "overview",
         "galleryReady": true
       },
       {
@@ -1413,7 +1430,7 @@
       },
       {
         "id": "st_mark_square",
-        "name": "圣马可广场",
+        "name": "圣马可广场＋总督府外观",
         "type": "place",
         "imageCount": 3,
         "roleCoverage": [
@@ -1477,6 +1494,23 @@
         "hasInterior": false,
         "hasSignatureDish": false,
         "coverRole": "stop",
+        "galleryReady": true
+      },
+      {
+        "id": "opt-vienna-stephansdom",
+        "name": "圣斯蒂芬大教堂外观＋Stephansplatz",
+        "type": "place",
+        "imageCount": 3,
+        "roleCoverage": [
+          "overview",
+          "detail",
+          "photo-angle"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": false,
+        "hasSignatureDish": false,
+        "coverRole": "overview",
         "galleryReady": true
       },
       {
@@ -1566,7 +1600,7 @@
       },
       {
         "id": "mala_strana",
-        "name": "小城区",
+        "name": "小城区午餐与散步",
         "type": "place",
         "imageCount": 3,
         "roleCoverage": [
@@ -1600,7 +1634,7 @@
       },
       {
         "id": "pont_saint_michel",
-        "name": "圣米歇尔桥",
+        "name": "圣米歇尔桥·塞纳河与圣母院外观",
         "type": "place",
         "imageCount": 3,
         "roleCoverage": [
@@ -1664,6 +1698,23 @@
         "hasInterior": false,
         "hasSignatureDish": false,
         "coverRole": "hero",
+        "galleryReady": true
+      },
+      {
+        "id": "eiffel",
+        "name": "埃菲尔铁塔花园 / 塔下广场",
+        "type": "place",
+        "imageCount": 3,
+        "roleCoverage": [
+          "overview",
+          "detail",
+          "photo-angle"
+        ],
+        "hasUsefulCover": true,
+        "hasEntrance": false,
+        "hasInterior": false,
+        "hasSignatureDish": false,
+        "coverRole": "overview",
         "galleryReady": true
       },
       {
@@ -1736,7 +1787,7 @@
       },
       {
         "id": "cdg",
-        "name": "巴黎戴高乐机场",
+        "name": "巴黎 → CDG T1",
         "type": "place",
         "imageCount": 3,
         "roleCoverage": [

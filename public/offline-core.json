@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-14T02:33:31.289Z",
-  "version": "bf0e7368a2cf",
-  "assetCount": 193,
-  "mediaAssetCount": 186,
-  "totalBytes": 20322804,
+  "generatedAt": "2026-09-15T06:59:58.505Z",
+  "version": "4f2158f2a7ba",
+  "assetCount": 199,
+  "mediaAssetCount": 192,
+  "totalBytes": 20944222,
   "assets": [
     "/",
     "/?view=home",
@@ -165,6 +165,8 @@
     "/images/places/charles_bridge/02.webp",
     "/images/places/colosseum/02.webp",
     "/images/places/duomo_firenze/02.webp",
+    "/images/places/eiffel/01.webp",
+    "/images/places/eiffel/02.webp",
     "/images/places/forum/02.webp",
     "/images/places/galeries_lafayette/02.webp",
     "/images/places/graben/02.webp",
@@ -175,6 +177,10 @@
     "/images/places/montmartre/02.webp",
     "/images/places/navona/02.webp",
     "/images/places/oltrarno/02.webp",
+    "/images/places/opt-venice-rialto/01.webp",
+    "/images/places/opt-venice-rialto/02.webp",
+    "/images/places/opt-vienna-stephansdom/01.webp",
+    "/images/places/opt-vienna-stephansdom/02.webp",
     "/images/places/pantheon/02.webp",
     "/images/places/piazzale_michelangelo/02.webp",
     "/images/places/ponte_vecchio/02.webp",
@@ -1119,6 +1125,18 @@
       "role": "detail"
     },
     {
+      "file": "/images/places/eiffel/01.webp",
+      "group": "placeCover",
+      "entityId": "eiffel",
+      "role": "overview"
+    },
+    {
+      "file": "/images/places/eiffel/02.webp",
+      "group": "placeAux",
+      "entityId": "eiffel",
+      "role": "detail"
+    },
+    {
       "file": "/images/places/forum/02.webp",
       "group": "placeAux",
       "entityId": "forum",
@@ -1176,6 +1194,30 @@
       "file": "/images/places/oltrarno/02.webp",
       "group": "placeAux",
       "entityId": "oltrarno",
+      "role": "detail"
+    },
+    {
+      "file": "/images/places/opt-venice-rialto/01.webp",
+      "group": "placeCover",
+      "entityId": "opt-venice-rialto",
+      "role": "overview"
+    },
+    {
+      "file": "/images/places/opt-venice-rialto/02.webp",
+      "group": "placeAux",
+      "entityId": "opt-venice-rialto",
+      "role": "detail"
+    },
+    {
+      "file": "/images/places/opt-vienna-stephansdom/01.webp",
+      "group": "placeCover",
+      "entityId": "opt-vienna-stephansdom",
+      "role": "overview"
+    },
+    {
+      "file": "/images/places/opt-vienna-stephansdom/02.webp",
+      "group": "placeAux",
+      "entityId": "opt-vienna-stephansdom",
       "role": "detail"
     },
     {

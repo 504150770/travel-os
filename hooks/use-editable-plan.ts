@@ -1,9 +1,12 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import originalPlan from '@/data/day-plans.json';
 import { useLocalStorage } from '@/hooks/use-local-storage';
-import { reorderPlanItems } from '@/features/trip/planModel';
+import {
+  migrateEditablePlan,
+  reorderPlanItems,
+} from '@/features/trip/planModel';
 
 export type PlanItem = {
   id: string;
@@ -42,7 +45,13 @@ export function useEditablePlan() {
     'europe-guide-current-itinerary-v1',
     normalize(pristine),
   );
-  const plan = normalize(stored);
+  const plan = useMemo(
+    () => normalize(migrateEditablePlan(stored, pristine)),
+    [stored],
+  );
+  useEffect(() => {
+    if (stored.originalPlanId !== plan.originalPlanId) setStored(plan);
+  }, [plan, setStored, stored.originalPlanId]);
   const [undo, setUndo] = useState<{
     plan: EditablePlan;
     label: string;

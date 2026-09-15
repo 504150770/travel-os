@@ -37,7 +37,7 @@
   },
   {
     "id": "forum",
-    "name": "古罗马广场",
+    "name": "古罗马广场外观短看",
     "city": "罗马",
     "type": "sight",
     "mapQuery": "Roman Forum Rome",
@@ -85,7 +85,7 @@
   },
   {
     "id": "duomo_firenze",
-    "name": "圣母百花大教堂",
+    "name": "圣母百花大教堂外观",
     "city": "佛罗伦萨",
     "type": "sight",
     "mapQuery": "Cathedral of Santa Maria del Fiore Florence",
@@ -109,7 +109,7 @@
   },
   {
     "id": "ponte_vecchio",
-    "name": "老桥",
+    "name": "老桥与阿诺河散步",
     "city": "佛罗伦萨",
     "type": "sight",
     "mapQuery": "Ponte Vecchio Florence",
@@ -121,7 +121,7 @@
   },
   {
     "id": "oltrarno",
-    "name": "Oltrarno / Santo Spirito",
+    "name": "Oltrarno / Santo Spirito 午餐与小店",
     "city": "佛罗伦萨",
     "type": "district",
     "mapQuery": "Santo Spirito Florence",
@@ -157,7 +157,7 @@
   },
   {
     "id": "grand_canal",
-    "name": "大运河",
+    "name": "大运河水上巴士",
     "city": "威尼斯",
     "type": "sight",
     "mapQuery": "Grand Canal Venice",
@@ -166,6 +166,18 @@
     "coordinateStatus": "已核对",
     "coordinateSource": "OpenStreetMap Nominatim",
     "verifiedAt": "2026-09-06"
+  },
+  {
+    "id": "opt-venice-rialto",
+    "name": "里亚托桥",
+    "city": "威尼斯",
+    "type": "sight",
+    "mapQuery": "Rialto Bridge Venice",
+    "lat": 45.4380688,
+    "lng": 12.3356548,
+    "coordinateStatus": "已核对",
+    "coordinateSource": "OpenStreetMap Nominatim",
+    "verifiedAt": "2026-09-15"
   },
   {
     "id": "accademia_bridge",
@@ -181,7 +193,7 @@
   },
   {
     "id": "st_mark_square",
-    "name": "圣马可广场",
+    "name": "圣马可广场＋总督府外观",
     "city": "威尼斯",
     "type": "sight",
     "mapQuery": "Piazza San Marco Venice",
@@ -226,6 +238,18 @@
     "coordinateStatus": "已核对",
     "coordinateSource": "OpenStreetMap Nominatim",
     "verifiedAt": "2026-09-06"
+  },
+  {
+    "id": "opt-vienna-stephansdom",
+    "name": "圣斯蒂芬大教堂外观＋Stephansplatz",
+    "city": "维也纳",
+    "type": "sight",
+    "mapQuery": "St Stephens Cathedral Vienna",
+    "lat": 48.2084923,
+    "lng": 16.3731269,
+    "coordinateStatus": "已核对",
+    "coordinateSource": "OpenStreetMap Nominatim",
+    "verifiedAt": "2026-09-15"
   },
   {
     "id": "schonbrunn",
@@ -301,7 +325,7 @@
   },
   {
     "id": "mala_strana",
-    "name": "小城区",
+    "name": "小城区午餐与散步",
     "city": "布拉格",
     "type": "district",
     "mapQuery": "Malá Strana Prague",
@@ -349,7 +373,7 @@
   },
   {
     "id": "pont_saint_michel",
-    "name": "圣米歇尔桥",
+    "name": "圣米歇尔桥·塞纳河与圣母院外观",
     "city": "巴黎",
     "type": "sight",
     "mapQuery": "Pont Saint-Michel Paris",
@@ -397,7 +421,7 @@
   },
   {
     "id": "eiffel",
-    "name": "埃菲尔铁塔",
+    "name": "埃菲尔铁塔花园 / 塔下广场",
     "city": "巴黎",
     "type": "sight",
     "mapQuery": "Eiffel Tower Paris",
@@ -457,7 +481,7 @@
   },
   {
     "id": "cdg",
-    "name": "巴黎戴高乐机场",
+    "name": "巴黎 → CDG T1",
     "city": "巴黎",
     "type": "transport",
     "mapQuery": "Charles de Gaulle Airport",

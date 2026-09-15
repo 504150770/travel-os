@@ -102,7 +102,7 @@
     "address": "待确认",
     "coordinates": null,
     "images": [],
-    "description": "最终住Marghera，在Mestre下车。",
+    "description": "最终住 Mestre (Venice)，在 Mestre 下车。",
     "price": null,
     "openingHours": "不适用",
     "links": {},
@@ -114,14 +114,33 @@
     "notes": "不拖箱入岛。"
   },
   {
-    "id": "activity-d8-03",
+    "id": "activity-d8-walk-stmarks",
     "type": "activity",
-    "name": "长午餐与咖啡",
+    "name": "步行前往圣马可区域",
     "city": "威尼斯",
     "address": "待确认",
     "coordinates": null,
     "images": [],
-    "description": "坐下休息，等待节日午后参观。",
+    "description": "从里亚托桥步行前往圣马可区域。",
+    "price": null,
+    "openingHours": "不适用",
+    "links": {},
+    "source": "用户确认的 Current Plan",
+    "lastVerified": "2026-09-15",
+    "tags": [
+      "步行"
+    ],
+    "notes": "按现场人流预留20分钟。"
+  },
+  {
+    "id": "activity-d8-03",
+    "type": "activity",
+    "name": "午餐",
+    "city": "威尼斯",
+    "address": "待确认",
+    "coordinates": null,
+    "images": [],
+    "description": "坐下用餐，不与咖啡和排队缓冲重复计算。",
     "price": null,
     "openingHours": "不适用",
     "links": {},
@@ -130,12 +149,52 @@
     "tags": [
       "步行"
     ],
-    "notes": "13:45回到入口。"
+    "notes": "12:45结束。"
+  },
+  {
+    "id": "activity-d8-coffee-rest",
+    "type": "activity",
+    "name": "咖啡 / 休息",
+    "city": "威尼斯",
+    "address": "待确认",
+    "coordinates": null,
+    "images": [],
+    "description": "午餐后独立休息段。",
+    "price": null,
+    "openingHours": "不适用",
+    "links": {},
+    "source": "用户确认的 Current Plan",
+    "lastVerified": "2026-09-15",
+    "tags": [
+      "休息"
+    ],
+    "notes": "13:15结束。"
+  },
+  {
+    "id": "activity-d8-basilica-buffer",
+    "type": "activity",
+    "name": "返回大教堂 / 排队 / 缓冲",
+    "city": "威尼斯",
+    "address": "待确认",
+    "coordinates": null,
+    "images": [],
+    "description": "返回圣马可大教堂入口，并为排队和节日安排留出缓冲。",
+    "price": null,
+    "openingHours": "不适用",
+    "links": {},
+    "source": "用户确认的 Current Plan",
+    "lastVerified": "2026-09-15",
+    "tags": [
+      "步行",
+      "排队",
+      "缓冲"
+    ],
+    "notes": "14:00按预约或现场安排入内。"
   },
   {
     "id": "activity-d9-01",
     "type": "activity",
-    "name": "Marghera→VCE",
+    "name": "Mestre (Venice)→VCE",
     "city": "维也纳",
     "address": "待确认",
     "coordinates": null,
@@ -171,23 +230,120 @@
     "notes": "门到门预留5–6小时。"
   },
   {
-    "id": "activity-d10-02",
+    "id": "activity-d10-transfer-stephansplatz",
     "type": "activity",
-    "name": "午餐与咖啡",
+    "name": "前往 Stephansplatz",
     "city": "维也纳",
     "address": "待确认",
     "coordinates": null,
     "images": [],
-    "description": "回城后留完整咖啡时间。",
+    "description": "从美泉宫转往 Stephansplatz。",
+    "price": null,
+    "openingHours": "不适用",
+    "links": {},
+    "source": "用户确认的 Current Plan",
+    "lastVerified": "2026-09-15",
+    "tags": [
+      "地铁"
+    ],
+    "notes": "交通时间为规划缓冲。"
+  },
+  {
+    "id": "activity-d10-02",
+    "type": "activity",
+    "name": "午餐",
+    "city": "维也纳",
+    "address": "待确认",
+    "coordinates": null,
+    "images": [],
+    "description": "Stephansplatz 周边坐下午餐。",
     "price": null,
     "openingHours": "不适用",
     "links": {},
     "source": "现有行程PDF与Web Guide",
     "lastVerified": "2026-09-06",
     "tags": [
-      "地铁"
+      "用餐"
     ],
-    "notes": "15:30前向市政厅移动。"
+    "notes": "13:35结束。"
+  },
+  {
+    "id": "activity-d10-old-town-walk",
+    "type": "activity",
+    "name": "维也纳老城散步",
+    "city": "维也纳",
+    "address": "待确认",
+    "coordinates": null,
+    "images": [],
+    "description": "连接 Stephansplatz / Graben / Kohlmarkt 区域，不拆成多个独立 stop。",
+    "price": null,
+    "openingHours": "不适用",
+    "links": {},
+    "source": "用户确认的 Current Plan",
+    "lastVerified": "2026-09-15",
+    "tags": [
+      "步行",
+      "街区"
+    ],
+    "notes": "D9 若已完成 Graben，本段不重复创建 Graben stop。"
+  },
+  {
+    "id": "activity-d10-coffee-rest",
+    "type": "activity",
+    "name": "咖啡 / 休息",
+    "city": "维也纳",
+    "address": "待确认",
+    "coordinates": null,
+    "images": [],
+    "description": "老城散步后坐下休息。",
+    "price": null,
+    "openingHours": "不适用",
+    "links": {},
+    "source": "用户确认的 Current Plan",
+    "lastVerified": "2026-09-15",
+    "tags": [
+      "休息"
+    ],
+    "notes": "15:15结束。"
+  },
+  {
+    "id": "activity-d10-buffer",
+    "type": "activity",
+    "name": "缓冲",
+    "city": "维也纳",
+    "address": "待确认",
+    "coordinates": null,
+    "images": [],
+    "description": "为结账、步行和临时延误留出缓冲。",
+    "price": null,
+    "openingHours": "不适用",
+    "links": {},
+    "source": "用户确认的 Current Plan",
+    "lastVerified": "2026-09-15",
+    "tags": [
+      "缓冲"
+    ],
+    "notes": "15:30出发。"
+  },
+  {
+    "id": "activity-d10-transfer-rathausplatz",
+    "type": "activity",
+    "name": "前往 Rathausplatz",
+    "city": "维也纳",
+    "address": "待确认",
+    "coordinates": null,
+    "images": [],
+    "description": "从老城转往 Rathausplatz 圣诞市场。",
+    "price": null,
+    "openingHours": "不适用",
+    "links": {},
+    "source": "用户确认的 Current Plan",
+    "lastVerified": "2026-09-15",
+    "tags": [
+      "步行",
+      "公共交通"
+    ],
+    "notes": "16:00抵达。"
   },
   {
     "id": "activity-d11-01",
@@ -268,7 +424,7 @@
   {
     "id": "activity-d14-02",
     "type": "activity",
-    "name": "长午餐与咖啡",
+    "name": "午餐 / 咖啡",
     "city": "巴黎",
     "address": "待确认",
     "coordinates": null,
@@ -282,7 +438,66 @@
     "tags": [
       "步行"
     ],
-    "notes": "至少保留90分钟。"
+    "notes": "保留90分钟。"
+  },
+  {
+    "id": "activity-d14-flexible-paris",
+    "type": "activity",
+    "name": "巴黎弹性散步 / 自由时间",
+    "city": "巴黎",
+    "address": "待确认",
+    "coordinates": null,
+    "images": [],
+    "description": "Depending on energy and weather: Palais Royal / Tuileries / Seine riverside / café / shopping.",
+    "price": null,
+    "openingHours": "不适用",
+    "links": {},
+    "source": "用户确认的 Current Plan",
+    "lastVerified": "2026-09-15",
+    "tags": [
+      "弹性活动",
+      "步行"
+    ],
+    "notes": "不是必须完成的新景点。"
+  },
+  {
+    "id": "activity-d15-walk-eiffel",
+    "type": "activity",
+    "name": "步行前往埃菲尔铁塔",
+    "city": "巴黎",
+    "address": "待确认",
+    "coordinates": null,
+    "images": [],
+    "description": "从特罗卡德罗步行前往铁塔花园与塔下广场。",
+    "price": null,
+    "openingHours": "不适用",
+    "links": {},
+    "source": "用户确认的 Current Plan",
+    "lastVerified": "2026-09-15",
+    "tags": [
+      "步行"
+    ],
+    "notes": "预留20分钟。"
+  },
+  {
+    "id": "activity-d15-transfer-lunch",
+    "type": "activity",
+    "name": "前往午餐区域",
+    "city": "巴黎",
+    "address": "待确认",
+    "coordinates": null,
+    "images": [],
+    "description": "从铁塔区域转往午餐地点。",
+    "price": null,
+    "openingHours": "不适用",
+    "links": {},
+    "source": "用户确认的 Current Plan",
+    "lastVerified": "2026-09-15",
+    "tags": [
+      "公共交通",
+      "步行"
+    ],
+    "notes": "交通时间为规划缓冲。"
   },
   {
     "id": "activity-d15-02",
@@ -301,7 +516,48 @@
     "tags": [
       "地铁"
     ],
-    "notes": "15:00开始向凯旋门移动。"
+    "notes": "14:30结束。"
+  },
+  {
+    "id": "activity-d15-transfer-arc",
+    "type": "activity",
+    "name": "前往凯旋门",
+    "city": "巴黎",
+    "address": "待确认",
+    "coordinates": null,
+    "images": [],
+    "description": "从午餐区域转往凯旋门。",
+    "price": null,
+    "openingHours": "不适用",
+    "links": {},
+    "source": "用户确认的 Current Plan",
+    "lastVerified": "2026-09-15",
+    "tags": [
+      "公共交通",
+      "步行"
+    ],
+    "notes": "15:00抵达。"
+  },
+  {
+    "id": "activity-d15-arc-buffer",
+    "type": "activity",
+    "name": "凯旋门外观 / 排队 / 缓冲",
+    "city": "巴黎",
+    "address": "待确认",
+    "coordinates": null,
+    "images": [],
+    "description": "先看外观，再按天气和现场队伍决定是否登顶。",
+    "price": null,
+    "openingHours": "不适用",
+    "links": {},
+    "source": "用户确认的 Current Plan",
+    "lastVerified": "2026-09-15",
+    "tags": [
+      "外观",
+      "排队",
+      "缓冲"
+    ],
+    "notes": "登顶不是必须计划。"
   },
   {
     "id": "activity-d16-03",

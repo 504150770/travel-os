@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-14T02:33:29.933Z",
+  "generatedAt": "2026-09-15T06:59:56.925Z",
   "policy": "真实性 > 完成率；未验证字段不进入事实结论。",
-  "total": 249,
+  "total": 244,
   "prioritySummary": {
     "P0": 23,
     "P1": 128,
-    "P2": 98
+    "P2": 93
   },
   "actionWindowSummary": {
     "ACTIONABLE_NOW": 0,
@@ -22,8 +22,8 @@
     "TRANSPORT_LIVE_DATA": 7,
     "GYM_REALITY": 1,
     "SHOPPING_REALITY": 31,
-    "PLACE_IMAGES": 24,
-    "PICK_IMAGES": 13
+    "PLACE_IMAGES": 22,
+    "PICK_IMAGES": 10
   },
   "items": [
     {
@@ -2948,18 +2948,6 @@
     },
     {
       "category": "PLACE_IMAGES",
-      "id": "opt-venice-rialto",
-      "name": "里亚托桥清晨",
-      "city": "威尼斯",
-      "fields": [
-        "image"
-      ],
-      "reason": "Quick Pick/候选地点缺少已核验真实图片。",
-      "nextAction": "补官方或可追溯摄影来源，并做近似图审计。",
-      "priority": "P2"
-    },
-    {
-      "category": "PLACE_IMAGES",
       "id": "opt-venice-zattere",
       "name": "Zattere海滨长堤",
       "city": "威尼斯",
@@ -2998,18 +2986,6 @@
       "category": "PLACE_IMAGES",
       "id": "opt-vienna-belvedere",
       "name": "上美景宫",
-      "city": "维也纳",
-      "fields": [
-        "image"
-      ],
-      "reason": "Quick Pick/候选地点缺少已核验真实图片。",
-      "nextAction": "补官方或可追溯摄影来源，并做近似图审计。",
-      "priority": "P2"
-    },
-    {
-      "category": "PLACE_IMAGES",
-      "id": "opt-vienna-stephansdom",
-      "name": "圣斯蒂芬大教堂 + Graben",
       "city": "维也纳",
       "fields": [
         "image"
@@ -3188,33 +3164,9 @@
     },
     {
       "category": "PICK_IMAGES",
-      "id": "威尼斯-Best Photo Spot",
-      "name": "Best Photo Spot",
-      "city": "威尼斯",
-      "fields": [
-        "image"
-      ],
-      "reason": "Pick引用的Entity暂无图片。",
-      "nextAction": "只在Entity补图，不在Picks复制文件。",
-      "priority": "P2"
-    },
-    {
-      "category": "PICK_IMAGES",
       "id": "威尼斯-Best Night Walk",
       "name": "Best Night Walk",
       "city": "威尼斯",
-      "fields": [
-        "image"
-      ],
-      "reason": "Pick引用的Entity暂无图片。",
-      "nextAction": "只在Entity补图，不在Picks复制文件。",
-      "priority": "P2"
-    },
-    {
-      "category": "PICK_IMAGES",
-      "id": "维也纳-Best Photo Spot",
-      "name": "Best Photo Spot",
-      "city": "维也纳",
       "fields": [
         "image"
       ],
@@ -3263,18 +3215,6 @@
       "id": "布拉格-Best Easy Win",
       "name": "Best Easy Win",
       "city": "布拉格",
-      "fields": [
-        "image"
-      ],
-      "reason": "Pick引用的Entity暂无图片。",
-      "nextAction": "只在Entity补图，不在Picks复制文件。",
-      "priority": "P2"
-    },
-    {
-      "category": "PICK_IMAGES",
-      "id": "巴黎-Best Photo Spot",
-      "name": "Best Photo Spot",
-      "city": "巴黎",
       "fields": [
         "image"
       ],

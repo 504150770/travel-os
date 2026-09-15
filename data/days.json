@@ -128,7 +128,7 @@
       },
       {
         "time": "11:35",
-        "title": "古罗马广场外观",
+        "title": "古罗马广场外观短看",
         "placeId": "forum",
         "mode": "步行",
         "duration": "25min",
@@ -314,7 +314,7 @@
     "timeline": [
       {
         "time": "10:00",
-        "title": "老桥与阿诺河",
+        "title": "老桥与阿诺河散步",
         "placeId": "ponte_vecchio",
         "mode": "步行",
         "duration": "120min",
@@ -324,7 +324,7 @@
       },
       {
         "time": "12:00",
-        "title": "Oltrarno午餐与小店",
+        "title": "Oltrarno / Santo Spirito 午餐与小店",
         "placeId": "oltrarno",
         "mode": "步行",
         "duration": "165min",
@@ -380,7 +380,7 @@
         "placeId": null,
         "mode": "Frecciarossa / Italo",
         "duration": "约2h15m车程",
-        "note": "最终住Marghera，在Mestre下车。",
+        "note": "最终住 Mestre (Venice)，在 Mestre 下车。",
         "guard": "不拖箱入岛。",
         "ticket": "出签后买"
       },
@@ -437,41 +437,81 @@
     "lossCut": "若潮水或人流异常：删水巷延伸，只保留圣马可广场、叹息桥与14:00教堂。",
     "timeline": [
       {
-        "time": "10:00",
-        "title": "圣马可广场",
-        "placeId": "st_mark_square",
+        "time": "09:30",
+        "title": "里亚托桥",
+        "placeId": "opt-venice-rialto",
         "mode": "公交/船",
-        "duration": "60min",
-        "note": "连看总督府外观与城市舞台。",
-        "guard": "11:00转叹息桥。",
+        "duration": "40min",
+        "note": "清晨看运河纵深与桥上城市景观。",
+        "guard": "10:10步行前往圣马可区域。",
         "ticket": "无票"
       },
       {
-        "time": "11:00",
+        "time": "10:10",
+        "title": "步行前往圣马可区域",
+        "placeId": null,
+        "mode": "步行",
+        "duration": "20min",
+        "note": "从里亚托桥步行前往圣马可区域。",
+        "guard": "10:30抵达广场。",
+        "ticket": "无票"
+      },
+      {
+        "time": "10:30",
+        "title": "圣马可广场＋总督府外观",
+        "placeId": "st_mark_square",
+        "mode": "步行",
+        "duration": "40min",
+        "note": "圣马可广场与总督府外观，不做总督府入内。",
+        "guard": "11:10转叹息桥。",
+        "ticket": "无票"
+      },
+      {
+        "time": "11:10",
         "title": "叹息桥",
         "placeId": "bridge_sighs",
         "mode": "步行",
-        "duration": "30min",
-        "note": "从稻草桥方向看，不做总督府入内。",
+        "duration": "20min",
+        "note": "从稻草桥方向看叹息桥外观。",
         "guard": "11:30去午餐。",
         "ticket": "无票"
       },
       {
         "time": "11:30",
-        "title": "长午餐与咖啡",
+        "title": "午餐",
         "placeId": null,
         "mode": "步行",
-        "duration": "150min",
-        "note": "坐下休息，等待节日午后参观。",
-        "guard": "13:45回到入口。",
+        "duration": "75min",
+        "note": "坐下用餐。",
+        "guard": "12:45结束。",
         "ticket": "现场即可"
+      },
+      {
+        "time": "12:45",
+        "title": "咖啡 / 休息",
+        "placeId": null,
+        "mode": "步行",
+        "duration": "30min",
+        "note": "午餐后独立休息段。",
+        "guard": "13:15返回大教堂。",
+        "ticket": "现场即可"
+      },
+      {
+        "time": "13:15",
+        "title": "返回大教堂 / 排队 / 缓冲",
+        "placeId": null,
+        "mode": "步行",
+        "duration": "45min",
+        "note": "返回入口，并为排队和节日安排留缓冲。",
+        "guard": "14:00按现场安排入内。",
+        "ticket": "按已购时段 / 现场安排"
       },
       {
         "time": "14:00",
         "title": "圣马可大教堂",
         "placeId": "st_mark_basilica",
         "mode": "步行",
-        "duration": "90min",
+        "duration": "75min",
         "note": "慢看金色马赛克；宗教安排前一日复核。",
         "guard": "遇临时礼仪调整按现场通知。",
         "ticket": "出签后立即买"
@@ -511,7 +551,7 @@
     "timeline": [
       {
         "time": "起飞前约3h",
-        "title": "Marghera→VCE",
+        "title": "Mestre (Venice)→VCE",
         "placeId": null,
         "mode": "预约车/出租",
         "duration": "20–30min车程",
@@ -579,12 +619,72 @@
       },
       {
         "time": "12:00",
-        "title": "午餐与咖啡",
+        "title": "前往 Stephansplatz",
         "placeId": null,
         "mode": "地铁",
-        "duration": "210min",
-        "note": "回城后留完整咖啡时间。",
-        "guard": "15:30前向市政厅移动。",
+        "duration": "35min",
+        "note": "从美泉宫转往 Stephansplatz。",
+        "guard": "12:35抵达午餐区域。",
+        "ticket": "现场即可"
+      },
+      {
+        "time": "12:35",
+        "title": "午餐",
+        "placeId": null,
+        "mode": "步行",
+        "duration": "60min",
+        "note": "Stephansplatz 周边坐下午餐。",
+        "guard": "13:35结束。",
+        "ticket": "现场即可"
+      },
+      {
+        "time": "13:35",
+        "title": "圣斯蒂芬大教堂外观＋Stephansplatz",
+        "placeId": "opt-vienna-stephansdom",
+        "mode": "步行",
+        "duration": "30min",
+        "note": "只看教堂外观与广场，不安排入内或登塔。",
+        "guard": "14:05开始老城散步。",
+        "ticket": "无票"
+      },
+      {
+        "time": "14:05",
+        "title": "维也纳老城散步",
+        "placeId": null,
+        "mode": "步行",
+        "duration": "40min",
+        "note": "连接 Stephansplatz / Graben / Kohlmarkt 区域，不拆成多个独立 stop。",
+        "guard": "14:45坐下休息。",
+        "ticket": "无票"
+      },
+      {
+        "time": "14:45",
+        "title": "咖啡 / 休息",
+        "placeId": null,
+        "mode": "步行",
+        "duration": "30min",
+        "note": "老城散步后坐下休息。",
+        "guard": "15:15进入缓冲段。",
+        "ticket": "现场即可"
+      },
+      {
+        "time": "15:15",
+        "title": "缓冲",
+        "placeId": null,
+        "mode": "步行",
+        "duration": "15min",
+        "note": "为结账、步行和临时延误留缓冲。",
+        "guard": "15:30出发。",
+        "ticket": "无票"
+      },
+      {
+        "time": "15:30",
+        "title": "前往 Rathausplatz",
+        "placeId": null,
+        "mode": "步行/公共交通",
+        "duration": "30min",
+        "note": "从老城转往 Rathausplatz 圣诞市场。",
+        "guard": "16:00抵达。",
         "ticket": "现场即可"
       },
       {
@@ -710,7 +810,7 @@
       },
       {
         "time": "12:00",
-        "title": "小城区午餐",
+        "title": "小城区午餐与散步",
         "placeId": "mala_strana",
         "mode": "步行",
         "duration": "135min",
@@ -783,7 +883,7 @@
       },
       {
         "time": "傍晚",
-        "title": "圣米歇尔桥与圣母院外观",
+        "title": "圣米歇尔桥·塞纳河与圣母院外观",
         "placeId": "pont_saint_michel",
         "mode": "地铁/步行",
         "duration": "30–60min",
@@ -824,29 +924,39 @@
         "title": "卢浮宫",
         "placeId": "louvre",
         "mode": "地铁/步行",
-        "duration": "210min",
+        "duration": "150min",
         "note": "胜利女神、意大利绘画、蒙娜丽莎、维纳斯，按当日动线。",
-        "guard": "13:00止步；周二闭馆。",
+        "guard": "12:00止步；周二闭馆。",
         "ticket": "出签后立即买"
       },
       {
-        "time": "13:00",
-        "title": "长午餐与咖啡",
+        "time": "12:00",
+        "title": "午餐 / 咖啡",
         "placeId": null,
         "mode": "步行",
-        "duration": "120min",
+        "duration": "90min",
         "note": "不接第二间博物馆。",
-        "guard": "至少保留90分钟。",
+        "guard": "13:30结束。",
         "ticket": "现场即可"
       },
       {
-        "time": "15:00",
+        "time": "13:30",
         "title": "卢浮宫金字塔",
         "placeId": "louvre_pyramid",
         "mode": "步行",
-        "duration": "90min",
-        "note": "拍建筑层次，附近街区轻逛。",
-        "guard": "16:30结束。",
+        "duration": "30min",
+        "note": "集中拍摄金字塔建筑层次。",
+        "guard": "14:00进入弹性时段。",
+        "ticket": "无票"
+      },
+      {
+        "time": "14:00",
+        "title": "巴黎弹性散步 / 自由时间",
+        "placeId": null,
+        "mode": "步行/现场决定",
+        "duration": "150min",
+        "note": "Depending on energy and weather: Palais Royal / Tuileries / Seine riverside / café / shopping.",
+        "guard": "弹性活动块，不是必须完成的新景点；16:30结束。",
         "ticket": "无票"
       }
     ],
@@ -887,20 +997,70 @@
         "title": "特罗卡德罗",
         "placeId": "trocadero",
         "mode": "地铁/步行",
-        "duration": "120min",
-        "note": "与铁塔外观组合，步行范围保持紧凑。",
-        "guard": "11:30结束。",
+        "duration": "40min",
+        "note": "Eiffel Tower panoramic views / photos。",
+        "guard": "10:10步行前往铁塔。",
         "ticket": "无票"
+      },
+      {
+        "time": "10:10",
+        "title": "步行前往埃菲尔铁塔",
+        "placeId": null,
+        "mode": "步行",
+        "duration": "20min",
+        "note": "从特罗卡德罗走到铁塔花园与塔下广场。",
+        "guard": "10:30开始近距离游览。",
+        "ticket": "无票"
+      },
+      {
+        "time": "10:30",
+        "title": "埃菲尔铁塔花园 / 塔下广场",
+        "placeId": "eiffel",
+        "mode": "步行",
+        "duration": "60min",
+        "note": "Exterior / close-up visit. No tower ascent.",
+        "guard": "11:30离开铁塔区域。",
+        "ticket": "无票"
+      },
+      {
+        "time": "11:30",
+        "title": "前往午餐区域",
+        "placeId": null,
+        "mode": "步行/公共交通",
+        "duration": "30min",
+        "note": "从铁塔区域转往午餐地点。",
+        "guard": "12:00开始午餐。",
+        "ticket": "现场即可"
       },
       {
         "time": "12:00",
         "title": "午餐、咖啡、休息",
         "placeId": null,
         "mode": "地铁",
-        "duration": "180min",
+        "duration": "150min",
         "note": "把中午完整空出来。",
-        "guard": "15:00开始向凯旋门移动。",
+        "guard": "14:30结束。",
         "ticket": "现场即可"
+      },
+      {
+        "time": "14:30",
+        "title": "前往凯旋门",
+        "placeId": null,
+        "mode": "步行/公共交通",
+        "duration": "30min",
+        "note": "从午餐区域转往凯旋门。",
+        "guard": "15:00抵达。",
+        "ticket": "现场即可"
+      },
+      {
+        "time": "15:00",
+        "title": "凯旋门外观 / 排队 / 缓冲",
+        "placeId": null,
+        "mode": "步行",
+        "duration": "30min",
+        "note": "先看外观，再按天气和现场队伍决定是否登顶。",
+        "guard": "15:30开始正式参观。",
+        "ticket": "现场决定"
       },
       {
         "time": "15:30",
@@ -908,7 +1068,7 @@
         "placeId": "arc_triomphe",
         "mode": "地铁/步行",
         "duration": "105min",
-        "note": "天气好再买登顶票；含台阶与排队。",
+        "note": "Ascent optional depending on weather；不把登顶设为必做。",
         "guard": "17:15离开。",
         "ticket": "现场/当天买"
       }
@@ -1027,7 +1187,7 @@
       },
       {
         "time": "起飞前",
-        "title": "巴黎→CDG T1",
+        "title": "巴黎 → CDG T1",
         "placeId": "cdg",
         "mode": "RER/出租",
         "duration": "75–120min",
