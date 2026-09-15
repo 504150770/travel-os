@@ -14,6 +14,9 @@ export const loadMapCanvas = () => {
       document.documentElement.dataset.mapImportMs = String(Date.now() - startedAt);
     }
     return module;
+  }).catch((error) => {
+    mapCanvasPromise = null;
+    throw error;
   });
   return mapCanvasPromise;
 };

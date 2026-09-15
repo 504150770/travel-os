@@ -1,4 +1,27 @@
-import type { EditablePlan, PlanDay, PlanItem } from '@/hooks/use-editable-plan';
+export type PlanItem = {
+  id: string;
+  entityId: string;
+  order: number;
+  time: string;
+  duration: string;
+  status: string;
+  notes: string;
+  guard: string;
+  ticket: string;
+};
+
+export type PlanDay = {
+  dayId: number;
+  activeItems: PlanItem[];
+  alternatives: PlanItem[];
+  removedItems?: PlanItem[];
+};
+
+export type EditablePlan = {
+  version: number;
+  originalPlanId: string;
+  days: PlanDay[];
+};
 
 export function reorderPlanItems<T extends { id: string; order: number }>(
   items: T[],

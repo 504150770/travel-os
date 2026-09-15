@@ -6,30 +6,11 @@ import { useLocalStorage } from '@/hooks/use-local-storage';
 import {
   migrateEditablePlan,
   reorderPlanItems,
+  type EditablePlan,
+  type PlanDay,
+  type PlanItem,
 } from '@/features/trip/planModel';
-
-export type PlanItem = {
-  id: string;
-  entityId: string;
-  order: number;
-  time: string;
-  duration: string;
-  status: string;
-  notes: string;
-  guard: string;
-  ticket: string;
-};
-export type PlanDay = {
-  dayId: number;
-  activeItems: PlanItem[];
-  alternatives: PlanItem[];
-  removedItems?: PlanItem[];
-};
-export type EditablePlan = {
-  version: number;
-  originalPlanId: string;
-  days: PlanDay[];
-};
+export type { EditablePlan, PlanDay, PlanItem } from '@/features/trip/planModel';
 
 const pristine = originalPlan as EditablePlan;
 const normalize = (plan: EditablePlan): EditablePlan => ({

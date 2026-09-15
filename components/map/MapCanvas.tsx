@@ -25,7 +25,7 @@ function markerHtml(point: MapPoint, selected: boolean) {
   return `<span class="shared-map-marker ${point.kind} ${selected ? 'selected' : ''}">${photo}<i>${escapeText(label)}</i></span>`;
 }
 
-export type MapRenderStage = 'initialized' | 'markers' | 'tiles';
+export type MapRenderStage = 'initialized' | 'markers' | 'tiles' | 'route';
 
 const markerIcon = (point: MapPoint, selected: boolean) => {
   const size = selected ? 54 : point.kind === 'candidate' ? 38 : 46;
@@ -56,10 +56,13 @@ export default function MapCanvas({
   fitToken,
   currentLocation = null,
   locationFocusToken = 0,
+  active = true,
+  interactive = true,
   className = '',
   onSelect,
   onRouteStatus,
   onMapStage,
+  onMapError,
 }: {
   points: MapPoint[];
   routePoints?: MapPoint[];
@@ -70,10 +73,13 @@ export default function MapCanvas({
   fitToken: string | number;
   currentLocation?: CurrentLocation | null;
   locationFocusToken?: number;
+  active?: boolean;
+  interactive?: boolean;
   className?: string;
   onSelect: (point: MapPoint) => void;
   onRouteStatus?: (status: RouteGeometryState['status']) => void;
   onMapStage?: (stage: MapRenderStage) => void;
+  onMapError?: (kind: 'tiles') => void;
 }) {
   const nodeRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<L.Map | null>(null);
@@ -83,12 +89,15 @@ export default function MapCanvas({
   const markerRefs = useRef(new Map<string, L.Marker>());
   const selectRef = useRef(onSelect);
   const stageRef = useRef(onMapStage);
+  const errorRef = useRef(onMapError);
   const fitKeyRef = useRef<string | null>(null);
   const pointsRef = useRef(points);
   selectRef.current = onSelect;
   stageRef.current = onMapStage;
+  errorRef.current = onMapError;
   pointsRef.current = points;
-  const routeGeometry = useRouteGeometry(route, routePoints);
+  const routeGeometry = useRouteGeometry(route, routePoints, active);
+  const hasPoints = points.length > 0;
 
   useEffect(() => {
     if (!nodeRef.current) return;
@@ -105,6 +114,11 @@ export default function MapCanvas({
     tileLayer.once('load', () => {
       node.dataset.tilesUsableAt = String(Math.round(performance.now()));
       stageRef.current?.('tiles');
+    });
+    let tileErrors = 0;
+    tileLayer.on('tileerror', () => {
+      tileErrors += 1;
+      if (tileErrors === 4) errorRef.current?.('tiles');
     });
     tileLayer.addTo(map);
     map.attributionControl.addAttribution('Routing © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a> · <a href="https://routing.openstreetmap.de/about.html">FOSSGIS</a> · <a href="https://www.openstreetmap.org/fixthemap">Fix the map</a>');
@@ -128,7 +142,21 @@ export default function MapCanvas({
       map.remove();
       mapRef.current = null;
     };
-  }, []);
+  }, [hasPoints]);
+
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map) return;
+    const handlers = [map.dragging, map.touchZoom, map.doubleClickZoom, map.scrollWheelZoom, map.boxZoom, map.keyboard];
+    handlers.forEach((handler) => interactive ? handler.enable() : handler.disable());
+    map.getContainer().style.pointerEvents = interactive ? '' : 'none';
+  }, [interactive]);
+
+  useEffect(() => {
+    if (!active || !mapRef.current) return;
+    const frame = window.requestAnimationFrame(() => mapRef.current?.invalidateSize({ pan: false }));
+    return () => window.cancelAnimationFrame(frame);
+  }, [active]);
 
   useEffect(() => {
     const map = mapRef.current;
@@ -196,6 +224,7 @@ export default function MapCanvas({
     });
     if (routeGeometry.geometries.length && nodeRef.current) {
       nodeRef.current.dataset.routeVisibleAt = String(Math.round(performance.now()));
+      stageRef.current?.('route');
     }
   }, [routeGeometry.geometries, selectedLegId, showRoute]);
 
@@ -233,7 +262,7 @@ export default function MapCanvas({
     fitMap(map, pointsRef.current);
   }, [fitToken, points]);
 
-  if (!points.length) {
+  if (!hasPoints) {
     return <div className="shared-map-empty"><b>Map points unavailable</b><p>当天项目没有可核实坐标，请使用路线列表和 Google Maps 导航。</p></div>;
   }
   return <div ref={nodeRef} className={`shared-map-canvas ${className}`} aria-label="当天路线地图" />;

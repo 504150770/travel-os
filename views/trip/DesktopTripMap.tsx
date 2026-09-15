@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { Component, lazy, Suspense, useState, type ReactNode } from 'react';
-import { Crosshair, ExternalLink, Navigation, Plus } from 'lucide-react';
+import { Crosshair, ExternalLink, Navigation, Plus, RotateCcw } from 'lucide-react';
 import type { Entity } from '@/lib/entity-library';
 import type { DayRoute } from '@/lib/types';
 import type { MapPoint } from '@/features/map/mapModel';
@@ -15,11 +15,12 @@ import { loadMapCanvas } from '@/features/map/mapLoader';
 
 const MapCanvas = lazy(loadMapCanvas);
 
-class DesktopMapBoundary extends Component<{ children: ReactNode }, { failed: boolean }> {
+class DesktopMapBoundary extends Component<{ children: ReactNode; retry: () => void }, { failed: boolean }> {
   state = { failed: false };
   static getDerivedStateFromError() { return { failed: true }; }
+  private retry = () => { this.setState({ failed: false }); this.props.retry(); };
   render() {
-    if (this.state.failed) return <div className="workspace-map-empty"><b>Map temporarily unavailable</b><p>Timeline and Google Maps navigation remain available.</p></div>;
+    if (this.state.failed) return <div className="workspace-map-empty"><b>Map temporarily unavailable</b><p>Timeline and Google Maps navigation remain available.</p><button onClick={this.retry}><RotateCcw /> Retry</button></div>;
     return this.props.children;
   }
 }
@@ -38,6 +39,9 @@ export function DesktopTripMap({
   addCandidate,
   currentLocation,
   locationFocusToken,
+  active,
+  interactive,
+  onStage,
 }: {
   points: MapPoint[];
   routePoints: MapPoint[];
@@ -52,9 +56,14 @@ export function DesktopTripMap({
   addCandidate: (entity: Entity) => void;
   currentLocation: CurrentLocation | null;
   locationFocusToken: number;
+  active: boolean;
+  interactive: boolean;
+  onStage?: (stage: MapRenderStage) => void;
 }) {
   const [routeStatus, setRouteStatus] = useState<RouteGeometryState['status']>('loading');
   const [mapStage, setMapStage] = useState<MapRenderStage | 'shell'>('shell');
+  const [retryKey, setRetryKey] = useState(0);
+  const [mapUnavailable, setMapUnavailable] = useState(false);
   const selected = points.find((point) => point.id === selectedPointId) ?? null;
   const entity = selected?.entityId ? resolve(selected.entityId) : undefined;
   const navigate = entity
@@ -64,9 +73,10 @@ export function DesktopTripMap({
       : '#';
   return (
     <section className="workspace-map" aria-label="Interactive trip map">
-      <DesktopMapBoundary>
+      <DesktopMapBoundary key={retryKey} retry={() => setRetryKey((value) => value + 1)}>
         <Suspense fallback={<div className="workspace-map-loading"><Crosshair /><span>Loading map…</span></div>}>
           <MapCanvas
+            key={retryKey}
             points={points}
             routePoints={routePoints}
             route={route}
@@ -78,12 +88,16 @@ export function DesktopTripMap({
             onSelect={(point) => selectPoint(point.id)}
             currentLocation={currentLocation}
             locationFocusToken={locationFocusToken}
+            active={active}
+            interactive={interactive}
             onRouteStatus={setRouteStatus}
-            onMapStage={setMapStage}
+            onMapStage={(stage) => { setMapStage(stage); onStage?.(stage); }}
+            onMapError={() => setMapUnavailable(true)}
           />
         </Suspense>
       </DesktopMapBoundary>
-      {mapStage !== 'tiles' && (
+      {mapUnavailable && <div className="workspace-map-unavailable"><b>Map temporarily unavailable</b><p>Timeline, Overview and Navigate remain available.</p><button onClick={() => { setMapUnavailable(false); setRetryKey((value) => value + 1); }}><RotateCcw /> Retry</button></div>}
+      {points.length > 0 && mapStage !== 'tiles' && (
         <output className="workspace-map-progress">
           {mapStage === 'shell' ? 'Loading map…' : mapStage === 'initialized' ? 'Adding today’s stops…' : 'Loading map detail…'}
         </output>

@@ -59,6 +59,7 @@ const mapLoader = read('features/map/mapLoader.ts');
 
 assert.match(tripView, /lazy\(loadDesktopTripWorkspace\)/);
 assert.match(tripView, /preloadTripWorkspace/);
+assert.doesNotMatch(tripView, /preloadMapCanvas/);
 assert.match(desktopMap, /lazy\(loadMapCanvas\)/);
 assert.match(mapLoader, /travel-map-import/);
 assert.match(guide, /PersistentTripView/);
@@ -71,7 +72,7 @@ assert.match(desktopMap, /workspace-map-progress/);
 assert.match(workspace, /travel\.desktop\.tripPanelWidth/);
 assert.match(workspace, /selectedPointId/);
 assert.match(workspace, /selectedPointId=\{selectedPointId\}/);
-assert.ok((workspace.match(/selectPoint=\{selectPoint\}/g) ?? []).length >= 3);
+assert.ok((workspace.match(/selectPoint=\{selectPoint\}/g) ?? []).length >= 2);
 assert.match(workspace, /setSelectedPointId\(null\)[\s\S]*trip\.changeDay\(day\)/);
 assert.match(workspace, /drawer === 'explore'/);
 assert.match(workspace, /drawer === 'entity'/);
@@ -89,5 +90,5 @@ assert.match(mapSelectors, /stopOrder \+= 1/);
 assert.match(mapSelectors, /order: stopOrder/);
 
 console.log(
-  'Desktop workspace tests passed: progressive/preloaded persistent map, shared selection wiring, persisted panel, route geometry, and DnD reorder model.',
+  'Desktop workspace tests passed: on-demand persistent map, shared selection wiring, persisted panel, route geometry, and DnD reorder model.',
 );

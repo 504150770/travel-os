@@ -21,6 +21,7 @@
     "test:desktop-workspace": "node --experimental-strip-types scripts/desktop-workspace-test.mjs",
     "test:travel-intelligence": "node --experimental-strip-types scripts/travel-intelligence-test.mjs",
     "test:readiness": "node --experimental-strip-types scripts/readiness-test.mjs",
+    "test:presentation": "node scripts/presentation-test.mjs",
     "audit:privacy": "node scripts/privacy-audit.mjs",
     "unverified": "node scripts/generate-unverified.mjs",
     "check": "pnpm lint && pnpm typecheck && pnpm test:linkage && pnpm build && pnpm run audit"

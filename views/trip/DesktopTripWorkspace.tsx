@@ -7,7 +7,8 @@ import {
   CircleDot,
   Dumbbell,
   Info,
-  Layers3,
+  Map as MapIcon,
+  PanelsTopLeft,
   PanelLeftClose,
   PanelLeftOpen,
   Route,
@@ -28,6 +29,7 @@ import { selectDayMapPoints, selectRelevantFood } from '@/features/map/mapSelect
 import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from '@/components/ui/resizable';
 import { DesktopTripTimeline } from '@/views/trip/DesktopTripTimeline';
 import { DesktopTripMap } from '@/views/trip/DesktopTripMap';
+import { DesktopTripOverview } from '@/views/trip/DesktopTripOverview';
 import { DayDetailsDrawer, EntityDetailDrawer, ExploreDrawer } from '@/views/trip/DesktopTripDrawers';
 import { GymDetailModal } from '@/views/trip/DayGym';
 import { QuickAdd } from '@/views/trip/QuickAdd';
@@ -83,6 +85,8 @@ export default function DesktopTripWorkspace(props: DesktopTripWorkspaceProps) {
   const [panelWidth, setPanelWidth] = useState(initialPanelWidth);
   const [panelEpoch, setPanelEpoch] = useState(0);
   const [planCollapsed, setPlanCollapsed] = useState(false);
+  const [viewMode, setViewMode] = useState<'overview' | 'map'>('overview');
+  const [mapOpened, setMapOpened] = useState(false);
   const [dayPicker, setDayPicker] = useState(false);
   const [drawer, setDrawer] = useState<'details' | 'explore' | 'entity' | null>(null);
   const [detailEntity, setDetailEntity] = useState<Entity | null>(null);
@@ -93,6 +97,7 @@ export default function DesktopTripWorkspace(props: DesktopTripWorkspaceProps) {
   const [showGym, setShowGym] = useState(false);
   const [fitRequest, setFitRequest] = useState(0);
   const [candidates, setCandidates] = useState<Entity[]>([]);
+  const mapOpenStartedAt = useRef<number | null>(null);
   const location = useCurrentLocation();
 
   const food = useMemo(() => selectRelevantFood({ entities, day: trip.day, planDay: trip.planDay }), [entities, trip.day, trip.planDay]);
@@ -135,6 +140,30 @@ export default function DesktopTripWorkspace(props: DesktopTripWorkspaceProps) {
     actions.addEntity(entity.id, selectedDay, 'activeItems');
     setSelectedPointId(entity.id);
   };
+  const showMap = () => {
+    const startedAt = performance.now();
+    document.documentElement.dataset.desktopMapOpenStartedAt = String(Math.round(startedAt));
+    if (mapOpened && document.documentElement.dataset.desktopMapFirstOpenMs) {
+      window.requestAnimationFrame(() => window.requestAnimationFrame(() => {
+        document.documentElement.dataset.desktopMapSecondOpenMs = String(Math.round(performance.now() - startedAt));
+      }));
+    } else mapOpenStartedAt.current = startedAt;
+    setMapOpened(true);
+    setViewMode('map');
+  };
+  const handleMapStage = (stage: 'initialized' | 'markers' | 'tiles' | 'route') => {
+    if (mapOpenStartedAt.current == null) return;
+    const elapsed = String(Math.round(performance.now() - mapOpenStartedAt.current));
+    if (stage === 'markers' && !document.documentElement.dataset.desktopMapFirstOpenMs) {
+      document.documentElement.dataset.desktopMapFirstOpenMs = elapsed;
+    }
+    if (stage === 'tiles' && !document.documentElement.dataset.desktopMapTilesUsableMs) {
+      document.documentElement.dataset.desktopMapTilesUsableMs = elapsed;
+    }
+    if (stage === 'route' && !document.documentElement.dataset.desktopMapRouteVisibleMs) {
+      document.documentElement.dataset.desktopMapRouteVisibleMs = elapsed;
+    }
+  };
   const resetPanel = () => {
     window.localStorage.setItem(PANEL_KEY, String(DEFAULT_PANEL));
     setPanelWidth(DEFAULT_PANEL);
@@ -165,6 +194,39 @@ export default function DesktopTripWorkspace(props: DesktopTripWorkspaceProps) {
       bookingStatuses={bookingStatuses}
     />
   </section>;
+  const contentPane = <section className="workspace-content-pane" data-workspace-view={viewMode}>
+    {viewMode === 'overview' && <DesktopTripOverview
+      day={trip.day}
+      hero={trip.hero}
+      planDay={trip.planDay}
+      dayState={trip.dayState}
+      food={food}
+      gyms={trip.optionalGyms}
+      importantAction={tomorrowAction}
+      showMap={showMap}
+      inspect={(entity) => { setDetailEntity(entity); setDrawer('entity'); }}
+    />}
+    {mapOpened && <div className="workspace-map-stage" hidden={viewMode !== 'map'}>
+      <DesktopTripMap
+        points={points}
+        routePoints={routePoints}
+        route={trip.currentRoute}
+        selectedPointId={selectedPointId}
+        selectedLegId={selectedLegId}
+        showRoute={showRoute}
+        fitToken={`${selectedDay}:${fitRequest}`}
+        selectPoint={selectPoint}
+        resolve={resolve}
+        openDetails={openDetails}
+        addCandidate={addCandidate}
+        currentLocation={location.state.position}
+        locationFocusToken={location.focusToken}
+        active={viewMode === 'map'}
+        interactive={drawer === null && !trip.quick && !trip.selectedGym}
+        onStage={handleMapStage}
+      />
+    </div>}
+  </section>;
 
   return <div className={`desktop-trip-workspace ${compact ? 'compact' : ''}`} data-desktop-workspace>
     <header className="workspace-toolbar">
@@ -180,21 +242,24 @@ export default function DesktopTripWorkspace(props: DesktopTripWorkspaceProps) {
       </div>
       <div className="workspace-tools">
         <WeatherChip weather={weather} />
-        <span className="workspace-mode"><Layers3 /> Plan + Map</span>
+        <div className="workspace-view-toggle" aria-label="Workspace view">
+          <button className={viewMode === 'overview' ? 'active' : ''} onClick={() => setViewMode('overview')}><PanelsTopLeft /> Overview</button>
+          <button className={viewMode === 'map' ? 'active' : ''} onClick={showMap}><MapIcon /> Map</button>
+        </div>
         <button onClick={() => { setDrawer('details'); setDetailEntity(null); }}><Info /> Day details</button>
         <button onClick={() => { setDrawer('explore'); setDetailEntity(null); }}><Search /> Explore</button>
         <button onClick={togglePlan}>{planCollapsed ? <PanelLeftOpen /> : <PanelLeftClose />}{planCollapsed ? 'Show Plan' : 'Collapse'}</button>
       </div>
     </header>
-    <div className="workspace-map-tools" aria-label="Map layers">
+    {viewMode === 'map' && <div className="workspace-map-tools" aria-label="Map layers">
       <button className={showRoute ? 'active' : ''} onClick={() => setShowRoute((value) => !value)}><Route /> Route</button>
       <button className={showFood ? 'active' : ''} onClick={() => setShowFood((value) => !value)}><Utensils /> Food</button>
       <button className={showGym ? 'active' : ''} onClick={() => setShowGym((value) => !value)}><Dumbbell /> Gym</button>
       <button onClick={() => setFitRequest((value) => value + 1)}><CircleDot /> Fit Day</button>
       <button onClick={location.request} disabled={location.state.status === 'locating'} title={location.state.status === 'error' ? location.state.message : undefined}><LocateFixed /> {location.state.status === 'locating' ? 'Locating' : 'My Location'}</button>
-    </div>
+    </div>}
     {compact ? <div className="workspace-compact-stage">
-      <DesktopTripMap points={points} routePoints={routePoints} route={trip.currentRoute} selectedPointId={selectedPointId} selectedLegId={selectedLegId} showRoute={showRoute} fitToken={`${selectedDay}:${fitRequest}`} selectPoint={selectPoint} resolve={resolve} openDetails={openDetails} addCandidate={addCandidate} currentLocation={location.state.position} locationFocusToken={location.focusToken} />
+      {contentPane}
       {!planCollapsed && planPane}
     </div> : <ResizablePanelGroup key={panelEpoch} id="desktop-trip-group" orientation="horizontal" className="workspace-split">
       <ResizablePanel id="plan" panelRef={panelRef} defaultSize={`${panelWidth}px`} minSize={`${MIN_PANEL}px`} maxSize={`${MAX_PANEL}px`} collapsible collapsedSize="0px" onResize={(size) => {
@@ -202,7 +267,7 @@ export default function DesktopTripWorkspace(props: DesktopTripWorkspaceProps) {
         if (size.inPixels >= MIN_PANEL) window.localStorage.setItem(PANEL_KEY, String(Math.round(size.inPixels)));
       }}>{planPane}</ResizablePanel>
       <ResizableHandle className="workspace-resize-handle" withHandle onDoubleClick={resetPanel} title="Drag to resize · double-click to reset" />
-      <ResizablePanel id="map" minSize="320px"><DesktopTripMap points={points} routePoints={routePoints} route={trip.currentRoute} selectedPointId={selectedPointId} selectedLegId={selectedLegId} showRoute={showRoute} fitToken={`${selectedDay}:${fitRequest}`} selectPoint={selectPoint} resolve={resolve} openDetails={openDetails} addCandidate={addCandidate} currentLocation={location.state.position} locationFocusToken={location.focusToken} /></ResizablePanel>
+      <ResizablePanel id="content" minSize="320px">{contentPane}</ResizablePanel>
     </ResizablePanelGroup>}
     {planCollapsed && <button className="workspace-show-plan" onClick={togglePlan}><PanelLeftOpen /> Show Plan</button>}
     <DayDetailsDrawer open={drawer === 'details'} close={closeDrawer} day={trip.day} dayState={trip.dayState} entities={entities} resolve={resolve} actions={actions} openGallery={open} preferredTransport={preferredTransport} actionStatuses={actionStatuses} privateLinks={privateLinks} openGym={trip.setSelectedGym} />

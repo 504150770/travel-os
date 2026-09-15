@@ -477,7 +477,7 @@
 
 .mobile-bottom-dock {
   position: fixed;
-  z-index: 200;
+  z-index: var(--layer-sticky);
   right: 0;
   bottom: 0;
   left: 0;
@@ -547,7 +547,7 @@
 
 .mobile-map-summary {
   position: absolute;
-  z-index: 620;
+  z-index: 20;
   top: 12px;
   left: 14px;
   display: flex;
@@ -565,7 +565,7 @@
 
 .mobile-location-button {
   position: absolute;
-  z-index: 625;
+  z-index: 25;
   top: 12px;
   right: 14px;
   display: inline-flex;
@@ -582,7 +582,7 @@
   font-weight: 700;
 }
 .mobile-location-button svg { width: 17px; color: var(--mobile-accent); }
-.mobile-location-error { position: absolute; z-index: 624; top: 64px; right: 14px; max-width: 210px; margin: 0; padding: 7px 9px; border-radius: 8px; background: rgb(255 255 255 / 94%); color: var(--mobile-muted); font-size: 11px; }
+.mobile-location-error { position: absolute; z-index: 24; top: 64px; right: 14px; max-width: 210px; margin: 0; padding: 7px 9px; border-radius: 8px; background: rgb(255 255 255 / 94%); color: var(--mobile-muted); font-size: 11px; }
 
 .mobile-map-canvas,
 .mobile-map-loading,
@@ -592,8 +592,8 @@
   min-height: 430px;
 }
 
-.mobile-map-stage { position: relative; }
-.mobile-map-progress { position: absolute; z-index: 620; top: 14px; left: 14px; padding: 7px 10px; border-radius: 10px; background: rgb(255 255 255 / 92%); color: var(--mobile-muted); font-size: 12px; box-shadow: 0 2px 8px rgb(0 0 0 / 8%); backdrop-filter: blur(10px); pointer-events: none; }
+.mobile-map-stage { position: relative; z-index: var(--layer-map); isolation: isolate; }
+.mobile-map-progress { position: absolute; z-index: 20; top: 14px; left: 14px; padding: 7px 10px; border-radius: 10px; background: rgb(255 255 255 / 92%); color: var(--mobile-muted); font-size: 12px; box-shadow: 0 2px 8px rgb(0 0 0 / 8%); backdrop-filter: blur(10px); pointer-events: none; }
 
 .mobile-screen-loading {
   display: grid;
@@ -634,7 +634,7 @@
 
 .mobile-map-preview {
   position: absolute;
-  z-index: 630;
+  z-index: 30;
   right: 12px;
   bottom: 18px;
   left: 12px;
@@ -788,7 +788,7 @@
 
 .mobile-sheet-backdrop {
   position: fixed;
-  z-index: 500;
+  z-index: var(--layer-backdrop);
   inset: 0;
   display: flex;
   align-items: flex-end;
@@ -858,8 +858,8 @@
 .mobile-sheet-actions .danger,
 .mobile-sheet-actions .danger svg { color: #b44242; }
 
-.undo-toast { z-index: 650; }
-.mobile-runtime .media-gallery { z-index: 700; }
+.undo-toast { z-index: var(--layer-toast); }
+.mobile-runtime .media-gallery { z-index: var(--layer-modal); }
 
 @keyframes mobile-fade-in {
   from { opacity: 0; }

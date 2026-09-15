@@ -2,15 +2,11 @@
 
 import { lazy, Suspense, useEffect, useState } from 'react';
 import type { DesktopTripWorkspaceProps } from '@/views/trip/DesktopTripWorkspace';
-import { preloadMapCanvas } from '@/features/map/mapLoader';
 
 const loadDesktopTripWorkspace = () => import('@/views/trip/DesktopTripWorkspace');
 const DesktopTripWorkspace = lazy(loadDesktopTripWorkspace);
 
-export const preloadTripWorkspace = () => Promise.all([
-  loadDesktopTripWorkspace(),
-  preloadMapCanvas(),
-]).then(() => undefined);
+export const preloadTripWorkspace = () => loadDesktopTripWorkspace().then(() => undefined);
 
 export function PersistentTripView({ active, ...props }: DesktopTripWorkspaceProps & { active: boolean }) {
   const [visited, setVisited] = useState(active);

@@ -23,7 +23,7 @@ export type RouteGeometryState = {
   status: 'loading' | 'routed' | 'cached' | 'fallback';
 };
 
-export function useRouteGeometry(route: DayRoute, points: MapPoint[]): RouteGeometryState {
+export function useRouteGeometry(route: DayRoute, points: MapPoint[], enabled = true): RouteGeometryState {
   const requestKey = routeGeometryRequestKey(route, points);
   const [state, setState] = useState<RouteGeometryState & { requestKey: string }>(() => ({
     requestKey,
@@ -32,6 +32,7 @@ export function useRouteGeometry(route: DayRoute, points: MapPoint[]): RouteGeom
   }));
 
   useEffect(() => {
+    if (!enabled) return;
     const controller = new AbortController();
     const run = async () => {
       const cache = createBrowserRouteGeometryCache();
@@ -78,7 +79,7 @@ export function useRouteGeometry(route: DayRoute, points: MapPoint[]): RouteGeom
     };
     void run();
     return () => controller.abort();
-  }, [points, requestKey, route]);
+  }, [enabled, points, requestKey, route]);
 
   return state.requestKey === requestKey
     ? state
