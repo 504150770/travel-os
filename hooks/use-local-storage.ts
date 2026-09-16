@@ -41,8 +41,12 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
   const setValue = useCallback(
     (next: T) => {
       try {
+        window.dispatchEvent(new CustomEvent('travel-save-state', { detail: 'saving' }));
         window.localStorage.setItem(key, JSON.stringify(next));
         window.dispatchEvent(new Event(`travel-local:${key}`));
+        window.setTimeout(() => {
+          window.dispatchEvent(new CustomEvent('travel-save-state', { detail: 'saved' }));
+        }, 120);
       } catch {
         // A private browser may block persistence; the guide remains readable.
       }

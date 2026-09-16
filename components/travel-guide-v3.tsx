@@ -16,7 +16,7 @@ export default function TravelGuideV3() {
     bookingStatuses, setBookingStatuses, actionStatuses, setActionStatuses,
     actuals, setActuals, favorites, setFavorites,
     preferredTransport, setPreferredTransport, privateLinks, setPrivateLinks,
-    notes, setNotes, budgetState, activeEntities, nextAction, actualTotal,
+    notes, setNotes, budgetState, activeEntities, nextAction, actionQueue, actualTotal,
     daysLeft, backup, importBackup, navigate, selectTripDay,
     selectDiscoverTab, selectDiscoverCity, selectPlanTab, selectMoreTab,
     selectMoreDay, openNextAction, openBudget, setLightbox,
@@ -60,7 +60,7 @@ export default function TravelGuideV3() {
           entities={entities} actions={actions} open={setLightbox} clock={clock}
           addCustom={addCustom} preferredTransport={preferredTransport}
           tomorrowAction={nextAction?.title} bookingStatuses={bookingStatuses}
-          actionStatuses={actionStatuses} privateLinks={privateLinks}
+          actionStatuses={actionStatuses} privateLinks={privateLinks} actionQueue={actionQueue}
       />
     </AppShell>
   );

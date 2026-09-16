@@ -37,6 +37,8 @@ import '@/views/trip/desktop-workspace.css';
 import { useCurrentLocation } from '@/features/map/location/useCurrentLocation';
 import { useWeatherContext } from '@/features/weather/useWeatherContext';
 import { WeatherChip } from '@/components/weather/WeatherChip';
+import type { ActionItem } from '@/lib/action-queue';
+import { actionForDay } from '@/features/readiness/readinessModel';
 
 const DEFAULT_PANEL = 420;
 const MIN_PANEL = 340;
@@ -72,12 +74,13 @@ export type DesktopTripWorkspaceProps = {
   bookingStatuses: Record<string, string>;
   actionStatuses: Record<string, string>;
   privateLinks: Record<string, string>;
+  actionQueue: ActionItem[];
 };
 
 export default function DesktopTripWorkspace(props: DesktopTripWorkspaceProps) {
   const {
     selectedDay, setSelectedDay, resolve, entities, actions, open, addCustom,
-    preferredTransport, tomorrowAction, bookingStatuses, actionStatuses, privateLinks,
+    preferredTransport, tomorrowAction, bookingStatuses, actionStatuses, privateLinks, actionQueue,
   } = props;
   const trip = useTripController({ selectedDay, setSelectedDay, resolve, entities, actions, tomorrowAction });
   const compact = useSyncExternalStore(compactSubscribe, compactSnapshot, () => false);
@@ -121,6 +124,7 @@ export default function DesktopTripWorkspace(props: DesktopTripWorkspaceProps) {
     date: trip.day.date,
     coordinates: trip.stay?.coordinates,
   });
+  const dayAction = useMemo(() => actionForDay(actionQueue, trip.day.date), [actionQueue, trip.day.date]);
 
   const changeDay = (day: number) => {
     setSelectedPointId(null);
@@ -176,10 +180,10 @@ export default function DesktopTripWorkspace(props: DesktopTripWorkspaceProps) {
     else { panelRef.current?.collapse(); setPlanCollapsed(true); }
   };
   const planPane = <section className="workspace-plan-pane">
-    <header>
-      <span>{routeCityForDay(trip.day).toUpperCase()}</span>
-      <h2>Day {trip.day.day} · {trip.day.date.slice(5).replace('-', '/')}</h2>
-      <p>{trip.planDay.activeItems.length} Stops · {trip.currentRoute.summary.walkingKm ?? '—'} km · Back {trip.currentRoute.atGlance.backHotel}</p>
+    <header className="workspace-timeline-heading">
+      <span>{new Intl.DateTimeFormat('zh-CN', { month: 'short', day: 'numeric', weekday: 'short', timeZone: 'UTC' }).format(new Date(`${trip.day.date}T00:00:00Z`))}</span>
+      <h2>Day {trip.day.day} · {routeCityForDay(trip.day)}</h2>
+      <p>{trip.planDay.activeItems.length} 项安排{trip.currentRoute.summary.walkingKm == null ? '' : ` · 已知步行 ${trip.currentRoute.summary.walkingKm} km`}</p>
     </header>
     <DesktopTripTimeline
       dayId={selectedDay}
@@ -198,12 +202,13 @@ export default function DesktopTripWorkspace(props: DesktopTripWorkspaceProps) {
     {viewMode === 'overview' && <DesktopTripOverview
       day={trip.day}
       hero={trip.hero}
-      planDay={trip.planDay}
       dayState={trip.dayState}
       food={food}
       gyms={trip.optionalGyms}
-      importantAction={tomorrowAction}
-      showMap={showMap}
+      stay={trip.stay}
+      dayAction={dayAction}
+      openGallery={(gallery) => open(gallery)}
+      openHotel={() => { setDrawer('details'); setDetailEntity(null); }}
       inspect={(entity) => { setDetailEntity(entity); setDrawer('entity'); }}
     />}
     {mapOpened && <div className="workspace-map-stage" hidden={viewMode !== 'map'}>
@@ -233,7 +238,7 @@ export default function DesktopTripWorkspace(props: DesktopTripWorkspaceProps) {
       <div className="workspace-day-nav">
         <button disabled={selectedDay === 1} onClick={() => changeDay(selectedDay - 1)} aria-label="上一天"><ChevronLeft /></button>
         <button className="workspace-day-button" onClick={() => setDayPicker((value) => !value)} aria-expanded={dayPicker}>
-          <span>Day {selectedDay} · {routeCityForDay(trip.day)}</span><b>{trip.day.theme}</b><ChevronDown />
+          <span>Day {selectedDay} · {trip.day.date.slice(5).replace('-', '/')}</span><b>{routeCityForDay(trip.day)}</b><ChevronDown />
         </button>
         <button disabled={selectedDay === 18} onClick={() => changeDay(selectedDay + 1)} aria-label="下一天"><ChevronRight /></button>
         {dayPicker && <dialog open className="workspace-day-popover" aria-label="选择旅行日">

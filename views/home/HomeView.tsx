@@ -7,14 +7,15 @@ import { guideData } from '@/lib/data';
 import type { ActionItem } from '@/lib/action-queue';
 import { yuan } from '@/features/app/appModel';
 
-const HOME_HERO = '/images/places/eiffel/01.webp';
+const HOME_HERO = '/images/home-eiffel-winter-sunset.png';
+const HOME_HERO_MOBILE = '/images/home-eiffel-winter-mobile.webp';
 const cityCovers: Record<string, string> = {
-  rome: '/images/p7_0.webp',
-  florence: '/images/p16_0.webp',
-  venice: '/images/places/grand_canal/03.webp',
-  vienna: '/images/p42_1.webp',
-  prague: '/images/places/charles_bridge/03.webp',
-  paris: HOME_HERO,
+  rome: '/images/home-city-rome.webp',
+  florence: '/images/home-city-florence.webp',
+  venice: '/images/home-city-venice.webp',
+  vienna: '/images/home-city-vienna.webp',
+  prague: '/images/home-city-prague.webp',
+  paris: '/images/home-city-paris.webp',
 };
 
 function useHomePerformanceMarks() {
@@ -42,21 +43,21 @@ export function HomeView({ daysLeft, nextAction, projectedBudget, actualTotal, u
   const homeRef = useHomePerformanceMarks();
   return <div ref={homeRef} className="v2-view home-v2" data-home-view>
     <section className="home-cover" data-home-hero>
-      <Image
-        unoptimized
-        src={HOME_HERO}
-        alt="日出时的巴黎埃菲尔铁塔"
-        fill
-        priority
-        fetchPriority="high"
-        sizes="(max-width: 767px) 100vw, (max-width: 1360px) calc(100vw - 48px), 1280px"
-        onLoad={() => { if (homeRef.current) homeRef.current.dataset.homeHeroLoadedMs = String(Math.round(performance.now())); }}
-      />
+      <picture className="home-cover-media">
+        <source media="(max-width: 767px)" srcSet={HOME_HERO_MOBILE} />
+        <img
+          src={HOME_HERO}
+          alt="冬日落日下的巴黎埃菲尔铁塔与塞纳河"
+          fetchPriority="high"
+          loading="eager"
+          onLoad={() => { if (homeRef.current) homeRef.current.dataset.homeHeroLoadedMs = String(Math.round(performance.now())); }}
+        />
+      </picture>
       <div className="cover-shade" />
       <div className="cover-copy">
         <span>EUROPE 2026</span>
-        <h1>六座城市，<br />一段冬日旅程。</h1>
-        <p className="home-route-line">罗马 · 佛罗伦萨 · 威尼斯 · 维也纳 · 布拉格 · 巴黎</p>
+        <h1>Six cities,<br />one winter journey.</h1>
+        <p className="home-route-line">Rome · Florence · Venice · Vienna · Prague · Paris</p>
         <p className="home-trip-facts">18 Days · 6 Cities</p>
         <button onClick={openTrip}>继续我的行程 <ArrowRight /></button>
       </div>
@@ -65,7 +66,7 @@ export function HomeView({ daysLeft, nextAction, projectedBudget, actualTotal, u
 
     <section className="home-route-section">
       <header className="home-section-heading">
-        <div><span>UPCOMING TRIP</span><h2>六座城市，一条冬日路线</h2></div>
+        <div><span>UPCOMING TRIP</span><h2>A Winter Journey Through Six Cities</h2></div>
         <button onClick={openTrip}>查看完整行程 <ArrowRight /></button>
       </header>
       <div className="route-ribbon">

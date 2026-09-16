@@ -17,7 +17,23 @@ import {
   useSortable,
   verticalListSortingStrategy,
 } from '@dnd-kit/sortable';
-import { ArrowDown, ArrowUp, GripVertical, Navigation, TicketCheck } from 'lucide-react';
+import {
+  ArrowDown,
+  ArrowUp,
+  BedDouble,
+  CalendarDays,
+  Clock3,
+  Coffee,
+  Compass,
+  Footprints,
+  GripVertical,
+  Navigation,
+  Plane,
+  TicketCheck,
+  TrainFront,
+  Utensils,
+  type LucideIcon,
+} from 'lucide-react';
 import type { Entity } from '@/lib/entity-library';
 import type { Booking, DayRoute } from '@/lib/types';
 import type { PlanDay, PlanItem, useEditablePlan } from '@/hooks/use-editable-plan';
@@ -27,9 +43,32 @@ import { selectCoverImage } from '@/lib/media';
 
 function connectorLabel(leg: DayRoute['legs'][number]) {
   if (leg.recommendedMode === 'Walk')
-    return leg.walkMin == null ? 'Walk · verify before leaving' : `Walk · ${leg.walkMin} min · ${leg.distanceKm} km`;
-  if (leg.recommendedMode === 'Taxi') return `Taxi · ${leg.taxiTime}`;
-  return leg.transitMin == null ? 'Transit · verify before leaving' : `Transit · ${leg.transitMin} min`;
+    return leg.walkMin == null ? '步行 · 出发前核实' : `步行 ${leg.walkMin} min · ${leg.distanceKm} km`;
+  if (leg.recommendedMode === 'Taxi') return `出租车 · ${leg.taxiTime}`;
+  return leg.transitMin == null ? '公共交通 · 出发前核实' : `公共交通 · ${leg.transitMin} min`;
+}
+
+function friendlyTicketState(value: string) {
+  if (['Ticketed', 'Booked', 'Paid', 'Confirmed', 'Completed'].includes(value)) return '已确认';
+  if (['Research', 'Waiting', 'Pending', 'Pending Data', 'Unverified'].includes(value)) return '门票待确认';
+  return value || '票务状态待确认';
+}
+
+function activityIllustration(name: string): { kind: string; label: string; Icon: LucideIcon } {
+  if (/机场|航班|飞往|起飞|落地/.test(name)) return { kind: 'flight', label: '航班', Icon: Plane };
+  if (/步行|散步/.test(name)) return { kind: 'walk', label: '步行', Icon: Footprints };
+  if (/咖啡/.test(name)) return { kind: 'coffee', label: '咖啡', Icon: Coffee };
+  if (/早餐|午餐|晚餐|用餐/.test(name)) return { kind: 'meal', label: '用餐', Icon: Utensils };
+  if (/排队|缓冲|等候|安检/.test(name)) return { kind: 'buffer', label: '缓冲', Icon: Clock3 };
+  if (/抵达|入住|退房|酒店|休息|行李/.test(name)) return { kind: 'rest', label: '休息', Icon: BedDouble };
+  if (/自由|弹性/.test(name)) return { kind: 'free', label: '自由活动', Icon: Compass };
+  if (/转场|火车|巴士|地铁|Transfer|前往|返回/.test(name)) return { kind: 'transfer', label: '转场', Icon: TrainFront };
+  return { kind: 'activity', label: '活动', Icon: CalendarDays };
+}
+
+function ActivityIllustration({ name }: { name: string }) {
+  const { kind, label, Icon } = activityIllustration(name);
+  return <span className="workspace-activity-illustration" data-kind={kind} title={`${label}通用插图`} aria-hidden="true"><Icon /><small>{label}</small></span>;
 }
 
 function SortableStop({
@@ -87,12 +126,13 @@ function SortableStop({
         <span>{item.duration}</span>
       </div>
       <button className="workspace-stop-photo" onClick={select} aria-label={`在地图中选择 ${entity.name}`}>
-        {cover ? <Image unoptimized src={cover.file} alt="" fill sizes="72px" /> : <span>{index + 1}</span>}
+        {cover && entity.type !== 'activity'
+          ? <Image unoptimized src={cover.file} alt={cover.title || entity.name} fill sizes="72px" />
+          : <ActivityIllustration name={entity.name} />}
       </button>
       <button className="workspace-stop-copy" onClick={select}>
-        <small>{entity.type}</small>
         <h3>{entity.name}</h3>
-        <p><TicketCheck /> {ticketState}</p>
+        <p><TicketCheck /> {friendlyTicketState(ticketState)}</p>
       </button>
       <button
         className="workspace-drag-handle"
@@ -104,7 +144,7 @@ function SortableStop({
         <GripVertical />
       </button>
       <div className="workspace-stop-actions">
-        <a href={mapLinks(entity).google} target="_blank" rel="noreferrer" onClick={(event) => event.stopPropagation()}><Navigation /> Navigate</a>
+        <a href={mapLinks(entity).google} target="_blank" rel="noreferrer" onClick={(event) => event.stopPropagation()}><Navigation /> 导航</a>
         <button disabled={index === 0} onClick={(event) => { event.stopPropagation(); actions.moveWithin(dayId, item.id, -1); }} aria-label={`${entity.name}上移`}><ArrowUp /></button>
         <button disabled={index === total - 1} onClick={(event) => { event.stopPropagation(); actions.moveWithin(dayId, item.id, 1); }} aria-label={`${entity.name}下移`}><ArrowDown /></button>
       </div>
