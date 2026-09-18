@@ -1,0 +1,54 @@
+.trip-status-badge {
+  display: inline-flex;
+  min-height: 21px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 7px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 720;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.trip-status-badge[data-status='fixed'] {
+  background: #5dade2;
+  color: #fff;
+}
+
+.trip-status-badge[data-status='to-book'] {
+  border-color: #9ed2f0;
+  background: #eaf5fc;
+  color: #2478ad;
+}
+
+.trip-status-badge[data-status='core'] {
+  background: #eef2f5;
+  color: #536472;
+}
+
+.trip-status-badge[data-status='flex'] {
+  border-color: #d9e0e5;
+  border-style: dashed;
+  background: #fafbfc;
+  color: #7a858d;
+}
+
+.trip-status-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  color: #6a6a6a;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.trip-status-summary span {
+  white-space: nowrap;
+}
+
+.trip-status-summary b {
+  color: #3f5666;
+  font-weight: 750;
+}

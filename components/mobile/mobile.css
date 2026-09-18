@@ -309,6 +309,12 @@
   border-bottom: 1px solid #f0f0f0;
 }
 
+.mobile-current-plan > .trip-status-summary {
+  margin: -2px 0 8px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
 .mobile-current-plan time {
   align-self: start;
   padding-top: 18px;
@@ -343,6 +349,22 @@
   font-size: 15px;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.mobile-plan-title {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 7px;
+}
+
+.mobile-plan-title b {
+  min-width: 0;
+  margin-bottom: 0;
+}
+
+.mobile-plan-title .trip-status-badge {
+  flex: 0 0 auto;
 }
 
 .mobile-more-button {

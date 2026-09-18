@@ -7,6 +7,7 @@ import type {
   TransitDayExecution,
   TransportSegment,
 } from '@/lib/types';
+export { ticketBookingByEntity } from '@/features/trip/bookingEntityMap';
 
 export const routeCityForDay = (day: Day) => normalizeRouteCity(day.city);
 export const realStays = guideData.hotelBookings.items as HotelBooking[];
@@ -29,18 +30,6 @@ export const mapLinks = (entity: Entity) => ({
   apple: `https://maps.apple.com/?q=${encodeURIComponent(entity.mapQuery || entity.name)}`,
   xhs: `https://www.xiaohongshu.com/search_result?keyword=${encodeURIComponent(`${entity.city} ${entity.name} 攻略`)}`,
 });
-
-export const ticketBookingByEntity: Record<string, string> = {
-  colosseum: 'colosseum',
-  vatican_museums: 'vatican',
-  pantheon: 'pantheon',
-  st_mark_basilica: 'stmark',
-  schonbrunn: 'schonbrunn',
-  prague_castle: 'praguecastle',
-  st_vitus: 'praguecastle',
-  louvre: 'louvre',
-  arc_triomphe: 'arc',
-};
 
 export const todayDay = (date: Date) => {
   const start = new Date(`${guideData.trip.startDate}T00:00:00`);

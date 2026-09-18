@@ -39,6 +39,12 @@ import { useWeatherContext } from '@/features/weather/useWeatherContext';
 import { WeatherChip } from '@/components/weather/WeatherChip';
 import type { ActionItem } from '@/lib/action-queue';
 import { actionForDay } from '@/features/readiness/readinessModel';
+import {
+  buildPlanPresentation,
+  buildTodaysTips,
+  countPlanStatuses,
+} from '@/features/trip/tripPresentationModel';
+import { DayStatusSummary } from '@/components/trip/TripStatusBadge';
 
 const DEFAULT_PANEL = 420;
 const MIN_PANEL = 340;
@@ -125,6 +131,15 @@ export default function DesktopTripWorkspace(props: DesktopTripWorkspaceProps) {
     coordinates: trip.stay?.coordinates,
   });
   const dayAction = useMemo(() => actionForDay(actionQueue, trip.day.date), [actionQueue, trip.day.date]);
+  const planRows = useMemo(
+    () => buildPlanPresentation(trip.planDay, resolve, bookingStatuses),
+    [bookingStatuses, resolve, trip.planDay],
+  );
+  const statusCounts = useMemo(() => countPlanStatuses(planRows), [planRows]);
+  const todaysTips = useMemo(
+    () => buildTodaysTips(planRows, trip.currentRoute),
+    [planRows, trip.currentRoute],
+  );
 
   const changeDay = (day: number) => {
     setSelectedPointId(null);
@@ -184,18 +199,17 @@ export default function DesktopTripWorkspace(props: DesktopTripWorkspaceProps) {
       <span>{new Intl.DateTimeFormat('zh-CN', { month: 'short', day: 'numeric', weekday: 'short', timeZone: 'UTC' }).format(new Date(`${trip.day.date}T00:00:00Z`))}</span>
       <h2>Day {trip.day.day} · {routeCityForDay(trip.day)}</h2>
       <p>{trip.planDay.activeItems.length} 项安排{trip.currentRoute.summary.walkingKm == null ? '' : ` · 已知步行 ${trip.currentRoute.summary.walkingKm} km`}</p>
+      <DayStatusSummary counts={statusCounts} />
     </header>
     <DesktopTripTimeline
       dayId={selectedDay}
-      planDay={trip.planDay}
+      rows={planRows}
       route={trip.currentRoute}
-      resolve={resolve}
       selectedPointId={selectedPointId}
       selectedLegId={selectedLegId}
       selectPoint={selectPoint}
       selectLeg={setSelectedLegId}
       actions={actions}
-      bookingStatuses={bookingStatuses}
     />
   </section>;
   const contentPane = <section className="workspace-content-pane" data-workspace-view={viewMode}>
@@ -207,6 +221,8 @@ export default function DesktopTripWorkspace(props: DesktopTripWorkspaceProps) {
       gyms={trip.optionalGyms}
       stay={trip.stay}
       dayAction={dayAction}
+      planRows={planRows}
+      tips={todaysTips}
       openGallery={(gallery) => open(gallery)}
       openHotel={() => { setDrawer('details'); setDetailEntity(null); }}
       inspect={(entity) => { setDetailEntity(entity); setDrawer('entity'); }}

@@ -13,6 +13,7 @@ import {
   TicketCheck,
   Utensils,
 } from 'lucide-react';
+import { useMemo } from 'react';
 import type { Entity } from '@/lib/entity-library';
 import type { PlanItem } from '@/hooks/use-editable-plan';
 import type { AppController } from '@/features/app/useAppController';
@@ -23,6 +24,9 @@ import { selectCoverImage } from '@/lib/media';
 import type { WeatherContextState } from '@/features/weather/useWeatherContext';
 import { WeatherChip } from '@/components/weather/WeatherChip';
 import { actionForDay } from '@/features/readiness/readinessModel';
+import { buildPlanPresentation, buildTodaysTips, countPlanStatuses } from '@/features/trip/tripPresentationModel';
+import { DayStatusSummary, StatusBadge } from '@/components/trip/TripStatusBadge';
+import { TodaysTipsCard } from '@/views/trip/TodaysTipsCard';
 
 export type ActionSelection = {
   item: PlanItem;
@@ -63,10 +67,12 @@ export function MobileToday({
   nextStopDistance?: string;
 }) {
   const { day, planDay, stay, dayState, currentRoute } = trip;
-  const rows = planDay.activeItems.flatMap((item) => {
-    const entity = controller.resolve(item.entityId);
-    return entity ? [{ item, entity }] : [];
-  });
+  const rows = useMemo(
+    () => buildPlanPresentation(planDay, controller.resolve, controller.bookingStatuses),
+    [controller.bookingStatuses, controller.resolve, planDay],
+  );
+  const statusCounts = useMemo(() => countPlanStatuses(rows), [rows]);
+  const tips = useMemo(() => buildTodaysTips(rows, currentRoute), [currentRoute, rows]);
   const next = rows.find(({ entity }) => !['hotel', 'activity'].includes(entity.type)) ?? rows[0];
   const firstLeg = currentRoute.legs[0];
   const nextCover = next ? selectCoverImage(next.entity.images) : undefined;
@@ -118,7 +124,7 @@ export function MobileToday({
               <h2>{next.entity.name}</h2>
               <p>{firstLeg ? legLabel(firstLeg) : next.item.duration}</p>
               {nextStopDistance && <small>{nextStopDistance} · approximate</small>}
-              <small>{next.item.ticket}</small>
+              <small>{next.supportingLabel}</small>
             </div>
           </div>
           <a className="mobile-primary-action" href={nextLink} target="_blank" rel="noreferrer">
@@ -193,8 +199,9 @@ export function MobileToday({
           </div>
           <TicketCheck />
         </header>
+        <DayStatusSummary counts={statusCounts} />
         <div>
-          {rows.map(({ item, entity }, index) => {
+          {rows.map(({ item, entity, status, supportingLabel }, index) => {
             const cover = selectCoverImage(entity.images);
             return (
               <article key={item.id}>
@@ -211,8 +218,8 @@ export function MobileToday({
                     />
                   )}
                   <span>
-                    <b>{entity.name}</b>
-                    <small>{item.duration} · {item.ticket}</small>
+                    <span className="mobile-plan-title"><b>{entity.name}</b><StatusBadge status={status} /></span>
+                    <small>{item.duration} · {supportingLabel}</small>
                   </span>
                 </button>
                 <button
@@ -287,6 +294,8 @@ export function MobileToday({
           </div>
         </section>
       )}
+
+      <TodaysTipsCard tips={tips} />
 
       <section className="mobile-section mobile-important-action">
         <header>

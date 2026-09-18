@@ -35,23 +35,18 @@ import {
   type LucideIcon,
 } from 'lucide-react';
 import type { Entity } from '@/lib/entity-library';
-import type { Booking, DayRoute } from '@/lib/types';
-import type { PlanDay, PlanItem, useEditablePlan } from '@/hooks/use-editable-plan';
-import { mapLinks, ticketBookingByEntity } from '@/features/trip/tripModel';
-import { guideData } from '@/lib/data';
+import type { DayRoute } from '@/lib/types';
+import type { PlanItem, useEditablePlan } from '@/hooks/use-editable-plan';
+import { mapLinks } from '@/features/trip/tripModel';
+import type { PlanPresentationRow } from '@/features/trip/tripPresentationModel';
 import { selectCoverImage } from '@/lib/media';
+import { StatusBadge } from '@/components/trip/TripStatusBadge';
 
 function connectorLabel(leg: DayRoute['legs'][number]) {
   if (leg.recommendedMode === 'Walk')
     return leg.walkMin == null ? '步行 · 出发前核实' : `步行 ${leg.walkMin} min · ${leg.distanceKm} km`;
   if (leg.recommendedMode === 'Taxi') return `出租车 · ${leg.taxiTime}`;
   return leg.transitMin == null ? '公共交通 · 出发前核实' : `公共交通 · ${leg.transitMin} min`;
-}
-
-function friendlyTicketState(value: string) {
-  if (['Ticketed', 'Booked', 'Paid', 'Confirmed', 'Completed'].includes(value)) return '已确认';
-  if (['Research', 'Waiting', 'Pending', 'Pending Data', 'Unverified'].includes(value)) return '门票待确认';
-  return value || '票务状态待确认';
 }
 
 function activityIllustration(name: string): { kind: string; label: string; Icon: LucideIcon } {
@@ -80,7 +75,7 @@ function SortableStop({
   selected,
   select,
   actions,
-  bookingStatuses,
+  presentation,
 }: {
   item: PlanItem;
   entity: Entity;
@@ -90,7 +85,7 @@ function SortableStop({
   selected: boolean;
   select: () => void;
   actions: ReturnType<typeof useEditablePlan>;
-  bookingStatuses: Record<string, string>;
+  presentation: PlanPresentationRow;
 }) {
   const {
     attributes,
@@ -101,11 +96,6 @@ function SortableStop({
     isDragging,
   } = useSortable({ id: item.id });
   const cover = selectCoverImage(entity.images);
-  const bookingId = ticketBookingByEntity[entity.id];
-  const booking = bookingId
-    ? (guideData.bookings.items as Booking[]).find((row) => row.id === bookingId)
-    : undefined;
-  const ticketState = booking ? (bookingStatuses[booking.id] ?? booking.status) : item.ticket;
   return (
     <article
       ref={setNodeRef}
@@ -131,8 +121,8 @@ function SortableStop({
           : <ActivityIllustration name={entity.name} />}
       </button>
       <button className="workspace-stop-copy" onClick={select}>
-        <h3>{entity.name}</h3>
-        <p><TicketCheck /> {friendlyTicketState(ticketState)}</p>
+        <div className="workspace-stop-title"><h3>{entity.name}</h3><StatusBadge status={presentation.status} /></div>
+        <p><TicketCheck /> {presentation.supportingLabel}</p>
       </button>
       <button
         className="workspace-drag-handle"
@@ -154,36 +144,28 @@ function SortableStop({
 
 export function DesktopTripTimeline({
   dayId,
-  planDay,
+  rows,
   route,
-  resolve,
   selectedPointId,
   selectedLegId,
   selectPoint,
   selectLeg,
   actions,
-  bookingStatuses,
 }: {
   dayId: number;
-  planDay: PlanDay;
+  rows: PlanPresentationRow[];
   route: DayRoute;
-  resolve: (id: string) => Entity | undefined;
   selectedPointId: string | null;
   selectedLegId: string | null;
   selectPoint: (id: string) => void;
   selectLeg: (id: string | null) => void;
   actions: ReturnType<typeof useEditablePlan>;
-  bookingStatuses: Record<string, string>;
 }) {
   const listRef = useRef<HTMLDivElement>(null);
   const sensors = useSensors(
     useSensor(PointerSensor, { activationConstraint: { distance: 7 } }),
     useSensor(KeyboardSensor, { coordinateGetter: sortableKeyboardCoordinates }),
   );
-  const rows = planDay.activeItems.flatMap((item) => {
-    const entity = resolve(item.entityId);
-    return entity ? [{ item, entity }] : [];
-  });
   useEffect(() => {
     if (!selectedPointId) return;
     listRef.current?.querySelector<HTMLElement>(`[data-entity-id="${CSS.escape(selectedPointId)}"]`)?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
@@ -212,7 +194,7 @@ export function DesktopTripTimeline({
                   selected={selectedPointId === entity.id}
                   select={() => selectPoint(entity.id)}
                   actions={actions}
-                  bookingStatuses={bookingStatuses}
+                  presentation={rows[index]}
                 />
               </div>
             );
