@@ -18,7 +18,7 @@ export function AppShell({ controller, children }: { controller: AppController; 
     {isMobile && view === 'home' ? (
       <div className="mobile-home-shell">
         <header className="mobile-home-header">
-          <button onClick={() => navigate('home')}><b>Travel OS</b><span>Europe 2026</span></button>
+          <button onClick={() => navigate('home')}><b>Jacob Travel</b><span>Europe 2026</span></button>
           <PersonalMenu online={online} openBackup={openBackup} openSettings={openSettings} />
         </header>
         <main>{children}</main>
