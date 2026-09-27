@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-15T06:59:58.505Z",
-  "version": "4f2158f2a7ba",
-  "assetCount": 199,
-  "mediaAssetCount": 192,
-  "totalBytes": 20944222,
+  "generatedAt": "2026-09-18T14:29:58.708Z",
+  "version": "4432e1e68510",
+  "assetCount": 197,
+  "mediaAssetCount": 190,
+  "totalBytes": 20717744,
   "assets": [
     "/",
     "/?view=home",
@@ -145,7 +145,6 @@
     "/images/p20_1.webp",
     "/images/p24_2.webp",
     "/images/p25_2.webp",
-    "/images/p26_0.webp",
     "/images/p27_2.webp",
     "/images/p34_0.webp",
     "/images/p36_2.webp",
@@ -158,7 +157,6 @@
     "/images/p5_0.webp",
     "/images/p7_0.webp",
     "/images/p9_0.webp",
-    "/images/places/accademia_bridge/02.webp",
     "/images/places/arc_triomphe/02.webp",
     "/images/places/bridge_sighs/02.webp",
     "/images/places/cdg/02.webp",
@@ -1005,12 +1003,6 @@
       "role": "stop"
     },
     {
-      "file": "/images/p26_0.webp",
-      "group": "placeCover",
-      "entityId": "accademia_bridge",
-      "role": "stop"
-    },
-    {
       "file": "/images/p27_2.webp",
       "group": "placeCover",
       "entityId": "grand_canal",
@@ -1081,12 +1073,6 @@
       "group": "placeCover",
       "entityId": "pantheon",
       "role": "stop"
-    },
-    {
-      "file": "/images/places/accademia_bridge/02.webp",
-      "group": "placeAux",
-      "entityId": "accademia_bridge",
-      "role": "detail"
     },
     {
       "file": "/images/places/arc_triomphe/02.webp",

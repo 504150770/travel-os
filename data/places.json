@@ -168,6 +168,18 @@
     "verifiedAt": "2026-09-06"
   },
   {
+    "id": "accademia_florence",
+    "name": "学院美术馆",
+    "city": "佛罗伦萨",
+    "type": "museum",
+    "mapQuery": "Galleria dell'Accademia Florence",
+    "lat": 43.7769174,
+    "lng": 11.2587579,
+    "coordinateStatus": "已核对",
+    "coordinateSource": "OpenStreetMap Nominatim",
+    "verifiedAt": "2026-09-18"
+  },
+  {
     "id": "opt-venice-rialto",
     "name": "里亚托桥",
     "city": "威尼斯",
@@ -193,7 +205,7 @@
   },
   {
     "id": "st_mark_square",
-    "name": "圣马可广场＋总督府外观",
+    "name": "圣马可广场",
     "city": "威尼斯",
     "type": "sight",
     "mapQuery": "Piazza San Marco Venice",
@@ -238,6 +250,18 @@
     "coordinateStatus": "已核对",
     "coordinateSource": "OpenStreetMap Nominatim",
     "verifiedAt": "2026-09-06"
+  },
+  {
+    "id": "doges_palace",
+    "name": "总督宫",
+    "city": "威尼斯",
+    "type": "museum",
+    "mapQuery": "Doge's Palace Venice",
+    "lat": 45.4342108,
+    "lng": 12.340592,
+    "coordinateStatus": "已核对",
+    "coordinateSource": "OpenStreetMap Nominatim",
+    "verifiedAt": "2026-09-18"
   },
   {
     "id": "opt-vienna-stephansdom",
@@ -478,6 +502,18 @@
     "coordinateStatus": "已核对",
     "coordinateSource": "OpenStreetMap Nominatim",
     "verifiedAt": "2026-09-06"
+  },
+  {
+    "id": "palais_garnier",
+    "name": "巴黎歌剧院",
+    "city": "巴黎",
+    "type": "museum",
+    "mapQuery": "Palais Garnier Paris",
+    "lat": 48.8714332,
+    "lng": 2.3319654,
+    "coordinateStatus": "已核对",
+    "coordinateSource": "OpenStreetMap Nominatim",
+    "verifiedAt": "2026-09-18"
   },
   {
     "id": "cdg",

@@ -22,6 +22,11 @@ assert.equal(returnFlight.status, 'Ticketed');
 assert.equal(returnFlight.serviceNumber, 'CZ348');
 assert.equal(outboundFlight.orderNumber, '');
 assert.equal(returnFlight.orderNumber, '');
+for (const id of ['accademia', 'doges-palace', 'sainte-chapelle', 'palais-garnier']) {
+  const booking = bookingsData.items.find((item) => item.id === id);
+  assert.equal(booking.status, 'To Book');
+  assert.equal(booking.paymentStatus, 'Unpaid');
+}
 
 const spatialEntity = (id, coordinates = null) => ({
   id, name: id, city: '罗马', type: id.startsWith('activity-') ? 'activity' : 'place',
@@ -30,14 +35,28 @@ const spatialEntity = (id, coordinates = null) => ({
 });
 
 const expectedCurrentPlans = {
+  5: [
+    ['10:00前后', 'activity-d5-01', '约1.5h车程'],
+    ['14:45', 'duomo_firenze', '45–60min'],
+    ['16:30前后', 'accademia_florence', '45–50min'],
+  ],
+  6: [
+    ['09:30', 'signoria', '30min'],
+    ['10:00', 'ponte_vecchio', '120min'],
+    ['12:00', 'oltrarno', '165min'],
+    ['15:15', 'piazzale_michelangelo', '90min'],
+  ],
+  7: [
+    ['10:00前后', 'activity-d7-01', '约2h15m车程'],
+    ['午后', 'grand_canal', '60–90min'],
+    ['15:00', 'opt-venice-rialto', '40min'],
+  ],
   8: [
-    ['09:30', 'opt-venice-rialto', '40min'],
-    ['10:10', 'activity-d8-walk-stmarks', '20min'],
-    ['10:30', 'st_mark_square', '40min'],
-    ['11:10', 'bridge_sighs', '20min'],
-    ['11:30', 'activity-d8-03', '75min'],
-    ['12:45', 'activity-d8-coffee-rest', '30min'],
-    ['13:15', 'activity-d8-basilica-buffer', '45min'],
+    ['09:30', 'st_mark_square', '30min'],
+    ['10:00', 'doges_palace', '110min'],
+    ['11:50', 'bridge_sighs', '10min'],
+    ['12:00', 'activity-d8-03', '90min'],
+    ['13:30', 'activity-d8-basilica-buffer', '30min'],
     ['14:00', 'st_mark_basilica', '75min'],
   ],
   10: [
@@ -53,9 +72,11 @@ const expectedCurrentPlans = {
   ],
   14: [
     ['09:30', 'louvre', '150min'],
-    ['12:00', 'activity-d14-02', '90min'],
-    ['13:30', 'louvre_pyramid', '30min'],
-    ['14:00', 'activity-d14-flexible-paris', '150min'],
+    ['12:00', 'louvre_pyramid', '30min'],
+    ['12:30', 'activity-d14-02', '90min'],
+    ['14:00', 'activity-d14-transfer-sainte', '60min'],
+    ['15:00前后', 'opt-paris-sainte', '45min'],
+    ['15:45', 'activity-d14-short-free', '45min'],
   ],
   15: [
     ['09:30', 'trocadero', '40min'],
@@ -67,6 +88,13 @@ const expectedCurrentPlans = {
     ['15:00', 'activity-d15-arc-buffer', '30min'],
     ['15:30', 'arc_triomphe', '105min'],
   ],
+  16: [
+    ['10:00', 'sacre_coeur', '45min'],
+    ['10:45', 'montmartre', '75min'],
+    ['12:00', 'activity-d16-03', '120min'],
+    ['14:00', 'palais_garnier', '90min'],
+    ['15:30', 'galeries_lafayette', '120min'],
+  ],
 };
 for (const [dayId, expected] of Object.entries(expectedCurrentPlans)) {
   const planDay = plans.days.find((day) => day.dayId === Number(dayId));
@@ -75,13 +103,21 @@ for (const [dayId, expected] of Object.entries(expectedCurrentPlans)) {
     expected,
   );
 }
-assert.equal(plans.days[7].alternatives.some((item) => item.entityId === 'opt-venice-rialto'), false);
+assert.equal(plans.days[6].alternatives.some((item) => item.entityId === 'accademia_bridge'), true);
+assert.equal(plans.days[7].activeItems.some((item) => item.entityId === 'opt-venice-rialto'), false);
+assert.equal(plans.days.some((day) => day.alternatives.some((item) => item.entityId === 'opt-paris-sainte')), false);
 assert.equal(plans.days[9].alternatives.some((item) => item.entityId === 'opt-vienna-stephansdom'), false);
+assert.equal(plans.days[9].activeItems.some((item) => item.entityId.includes('musikverein')), false);
 
 const expectedMapStops = {
-  8: [['opt-venice-rialto', 1], ['st_mark_square', 2], ['bridge_sighs', 3], ['st_mark_basilica', 4]],
+  5: [['duomo_firenze', 1], ['accademia_florence', 2]],
+  6: [['signoria', 1], ['ponte_vecchio', 2], ['oltrarno', 3], ['piazzale_michelangelo', 4]],
+  7: [['grand_canal', 1], ['opt-venice-rialto', 2]],
+  8: [['st_mark_square', 1], ['doges_palace', 2], ['bridge_sighs', 3], ['st_mark_basilica', 4]],
   10: [['schonbrunn', 1], ['opt-vienna-stephansdom', 2], ['rathausplatz', 3]],
+  14: [['louvre', 1], ['louvre_pyramid', 2], ['opt-paris-sainte', 3]],
   15: [['trocadero', 1], ['eiffel', 2], ['arc_triomphe', 3]],
+  16: [['sacre_coeur', 1], ['montmartre', 2], ['palais_garnier', 3], ['galeries_lafayette', 4]],
 };
 for (const [dayId, expected] of Object.entries(expectedMapStops)) {
   const dayNumber = Number(dayId);
@@ -111,20 +147,23 @@ for (const [dayId, expected] of Object.entries(expectedMapStops)) {
         : spatialEntity(id);
     },
   });
-  assert.equal(derived.route.legs.every((leg) => leg.status === 'ROUTED'), true);
+  assert.equal(derived.route.legs.every((leg) => ['ROUTED', 'PENDING'].includes(leg.status)), true);
 }
 
 const previousPlan = structuredClone(plans);
-previousPlan.version = 1;
-previousPlan.originalPlanId = 'winter-europe-2026-v1';
+previousPlan.version = 2;
+previousPlan.originalPlanId = 'winter-europe-2026-v2';
 previousPlan.days.find((day) => day.dayId === 8).activeItems.push({
   id: 'user-custom-d8', entityId: 'custom-stop', order: 99, time: '17:00',
   duration: '30min', status: 'planned', notes: '', guard: '', ticket: '无票',
 });
 const migratedPlan = migrateEditablePlan(previousPlan, plans);
-assert.equal(migratedPlan.originalPlanId, 'winter-europe-2026-v2');
+assert.equal(migratedPlan.originalPlanId, 'winter-europe-2026-v3');
 assert.equal(migratedPlan.days.find((day) => day.dayId === 8).activeItems.at(-1).id, 'user-custom-d8');
-assert.deepEqual(migratedPlan.days.find((day) => day.dayId === 6), previousPlan.days.find((day) => day.dayId === 6));
+assert.deepEqual(
+  migratedPlan.days.find((day) => day.dayId === 6).activeItems.map((item) => item.entityId),
+  plans.days.find((day) => day.dayId === 6).activeItems.map((item) => item.entityId),
+);
 
 const entity = (id) => ({
   id, name: id, city: '罗马', type: id.startsWith('activity-') ? 'activity' : 'place',

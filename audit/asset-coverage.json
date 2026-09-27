@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-15T06:59:57.722Z",
+  "generatedAt": "2026-09-18T14:29:58.204Z",
   "originalMissingImages": 146,
   "remainingMissingImages": 93,
   "addedImages": 53,
   "publicImages": {
-    "count": 301,
-    "bytes": 32264464
+    "count": 310,
+    "bytes": 36431397
   },
   "hotel": {
     "complete": 6,
@@ -25,10 +25,15 @@
     "missingDays": []
   },
   "currentPlan": {
-    "covered": 37,
-    "total": 37,
-    "percentage": 100,
-    "missing": []
+    "covered": 36,
+    "total": 40,
+    "percentage": 90,
+    "missing": [
+      "accademia_florence",
+      "doges_palace",
+      "opt-paris-sainte",
+      "palais_garnier"
+    ]
   },
   "topFood": {
     "covered": 34,

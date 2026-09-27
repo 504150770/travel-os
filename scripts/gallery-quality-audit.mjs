@@ -9,10 +9,11 @@ const hotels = read('data/hotel-bookings.json').items;
 const placeImages = read('data/images.json');
 const dayPlans = read('data/day-plans.json').days;
 const places = read('data/places.json');
+const options = read('data/options.json');
 const days = read('data/days.json');
 const metadata = read('data/media-metadata.json');
 
-const normalizedRole = (image) => String(image.role || '').toLowerCase();
+const normalizedRole = (image) => String(image?.role || '').toLowerCase();
 const gallery = (item, legacy = []) => item.images ?? item.imageSources ?? legacy.filter(Boolean).map((file) => ({ file }));
 const roles = (images) => [...new Set(images.map(normalizedRole).filter(Boolean))];
 const validFiles = (images) => images.filter((image) => {
@@ -62,7 +63,8 @@ for (const day of days) {
 const topGymIds = new Set(['罗马', '佛罗伦萨', '威尼斯', '维也纳', '布拉格', '巴黎'].flatMap((city) => gyms
   .filter((item) => (item.city.includes('Mestre') ? '威尼斯' : item.city) === city)
   .sort((a, b) => Number(a.hotelPriority ?? 99) - Number(b.hotelPriority ?? 99)).slice(0, 1).map((item) => item.id)));
-const placeIds = new Set(places.map((item) => item.id));
+const placeCatalog = [...places, ...options];
+const placeIds = new Set(placeCatalog.map((item) => item.id));
 const currentPlaceIds = new Set(dayPlans.flatMap((day) => day.activeItems.map((item) => item.entityId)).filter((id) => placeIds.has(id)));
 
 const food = restaurants.filter((item) => selectedFoodIds.has(item.id)).map((item) => {
@@ -87,7 +89,7 @@ for (const image of placeImages) {
   if (!id) continue;
   groupedPlaceImages.set(id, [...(groupedPlaceImages.get(id) ?? []), image]);
 }
-const place = places.filter((item) => currentPlaceIds.has(item.id)).map((item) => {
+const place = placeCatalog.filter((item) => currentPlaceIds.has(item.id)).map((item) => {
   const row = base(item.id, item.name, 'place', groupedPlaceImages.get(item.id) || []);
   return { ...row, galleryReady: row.imageCount >= 3 && row.hasUsefulCover };
 });

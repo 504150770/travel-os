@@ -1,14 +1,14 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-15T06:59:56.266Z",
+  "generatedAt": "2026-09-18T14:29:57.651Z",
   "status": "passed",
   "summary": {
     "failures": 0,
-    "warnings": 1,
+    "warnings": 5,
     "days": 18,
-    "editablePlanItems": 209,
-    "entities": 202,
-    "places": 41,
+    "editablePlanItems": 210,
+    "entities": 207,
+    "places": 44,
     "options": 22,
     "images": 296,
     "gyms": 10,
@@ -22,14 +22,14 @@
     "restaurants": 64,
     "verifiedMenus": 4,
     "shopping": 31,
-    "dayRouteLegs": 51,
+    "dayRouteLegs": 54,
     "transitExecutionCards": 6,
     "deadlines": 21,
     "survivalCities": 6,
     "projectedTotalCny": 27630,
     "hardCapDifferenceCny": 1630,
     "xhsTopics": 28,
-    "bookings": 18,
+    "bookings": 22,
     "tasks": 14,
     "confirmedHotelImages": 30,
     "mediaMetadataRecords": 295
@@ -72,6 +72,22 @@
   },
   "failures": [],
   "warnings": [
+    {
+      "dimension": "trip_media",
+      "message": "Day 5 stop accademia_florence uses the compact no-image state"
+    },
+    {
+      "dimension": "trip_media",
+      "message": "Day 8 stop doges_palace uses the compact no-image state"
+    },
+    {
+      "dimension": "trip_media",
+      "message": "Day 14 stop opt-paris-sainte uses the compact no-image state"
+    },
+    {
+      "dimension": "trip_media",
+      "message": "Day 16 stop palais_garnier uses the compact no-image state"
+    },
     {
       "dimension": "budget",
       "message": "current real commitments put plan 27630 over hard cap 26000"

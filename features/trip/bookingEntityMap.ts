@@ -16,5 +16,9 @@ export const ticketBookingByEntity: Record<string, string> = {
   prague_castle: 'praguecastle',
   st_vitus: 'praguecastle',
   louvre: 'louvre',
+  accademia_florence: 'accademia',
+  doges_palace: 'doges-palace',
+  'opt-paris-sainte': 'sainte-chapelle',
+  palais_garnier: 'palais-garnier',
   arc_triomphe: 'arc',
 };

@@ -65,7 +65,7 @@ const planDays = days.map((day) => {
 });
 
 write('activities.json', activities);
-write('day-plans.json', { version: 1, originalPlanId: 'winter-europe-2026-v1', days: planDays });
+write('day-plans.json', { version: 3, originalPlanId: 'winter-europe-2026-v3', days: planDays });
 
 const menuDefaults = restaurants.map((item) => ({
   ...item,

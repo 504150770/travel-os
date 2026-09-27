@@ -1,6 +1,6 @@
 {
-  "version": 2,
-  "originalPlanId": "winter-europe-2026-v2",
+  "version": 3,
+  "originalPlanId": "winter-europe-2026-v3",
   "days": [
     {
       "dayId": 1,
@@ -432,7 +432,7 @@
           "id": "plan-d5-02",
           "entityId": "duomo_firenze",
           "order": 2,
-          "time": "午后",
+          "time": "14:45",
           "duration": "45–60min",
           "status": "planned",
           "notes": "从街口带人物入画，不登穹顶。",
@@ -441,14 +441,14 @@
         },
         {
           "id": "plan-d5-03",
-          "entityId": "signoria",
+          "entityId": "accademia_florence",
           "order": 3,
-          "time": "15:45",
-          "duration": "60min",
+          "time": "16:30前后",
+          "duration": "45–50min",
           "status": "planned",
-          "notes": "商业街慢走，广场短停后喝咖啡。",
-          "guard": "17:00收尾。",
-          "ticket": "无票"
+          "notes": "核心看《大卫》原作及少量米开朗基罗作品；馆内按45–50分钟规划。",
+          "guard": "仅在取得合适下午票档且行李已处理时执行；否则取消，不转到D6免费日。",
+          "ticket": "Planned / not yet booked"
         }
       ],
       "alternatives": [
@@ -558,8 +558,19 @@
       "activeItems": [
         {
           "id": "plan-d6-01",
-          "entityId": "ponte_vecchio",
+          "entityId": "signoria",
           "order": 1,
+          "time": "09:30",
+          "duration": "30min",
+          "status": "planned",
+          "notes": "广场与室外雕塑短看，不安排室内参观。",
+          "guard": "10:00前往老桥与阿诺河。",
+          "ticket": "无票"
+        },
+        {
+          "id": "plan-d6-02",
+          "entityId": "ponte_vecchio",
+          "order": 2,
           "time": "10:00",
           "duration": "120min",
           "status": "planned",
@@ -568,9 +579,9 @@
           "ticket": "无票"
         },
         {
-          "id": "plan-d6-02",
+          "id": "plan-d6-03",
           "entityId": "oltrarno",
-          "order": 2,
+          "order": 3,
           "time": "12:00",
           "duration": "165min",
           "status": "planned",
@@ -579,9 +590,9 @@
           "ticket": "无票"
         },
         {
-          "id": "plan-d6-03",
+          "id": "plan-d6-04",
           "entityId": "piazzale_michelangelo",
-          "order": 3,
+          "order": 4,
           "time": "15:15",
           "duration": "90min",
           "status": "planned",
@@ -714,26 +725,37 @@
           "duration": "60–90min",
           "status": "planned",
           "notes": "沿线看宫殿，不横穿全岛赶景点。",
-          "guard": "15:45前决定是否去学院桥。",
+          "guard": "15:00前后衔接里亚托桥短看。",
           "ticket": "现场交通票"
         },
         {
           "id": "plan-d7-03",
-          "entityId": "accademia_bridge",
+          "entityId": "opt-venice-rialto",
           "order": 3,
           "time": "15:00",
-          "duration": "45–60min",
+          "duration": "40min",
           "status": "planned",
-          "notes": "只在桥两侧短走，拍运河转弯。",
-          "guard": "16:30收尾。",
+          "notes": "衔接大运河水上巴士，短看桥上与运河纵深。",
+          "guard": "不为追光线反复往返；体力不足则缩短。",
           "ticket": "无票"
         }
       ],
       "alternatives": [
         {
+          "id": "backup-d7-00",
+          "entityId": "accademia_bridge",
+          "order": 1,
+          "time": "可选",
+          "duration": "按现场决定",
+          "status": "backup",
+          "notes": "学院桥已降为备选，不与里亚托桥同时作为正式必去项目。",
+          "guard": "",
+          "ticket": "无票"
+        },
+        {
           "id": "backup-d7-01",
           "entityId": "opt-venice-zattere",
-          "order": 1,
+          "order": 2,
           "time": "可选",
           "duration": "按现场决定",
           "status": "backup",
@@ -744,7 +766,7 @@
         {
           "id": "backup-d7-02",
           "entityId": "opt-venice-cannaregio",
-          "order": 2,
+          "order": 3,
           "time": "可选",
           "duration": "按现场决定",
           "status": "backup",
@@ -755,7 +777,7 @@
         {
           "id": "backup-d7-03",
           "entityId": "venice-viterossa",
-          "order": 3,
+          "order": 4,
           "time": "可选",
           "duration": "按现场决定",
           "status": "backup",
@@ -766,7 +788,7 @@
         {
           "id": "backup-d7-04",
           "entityId": "venice-carampane",
-          "order": 4,
+          "order": 5,
           "time": "可选",
           "duration": "按现场决定",
           "status": "backup",
@@ -777,7 +799,7 @@
         {
           "id": "backup-d7-05",
           "entityId": "venice-staffa",
-          "order": 5,
+          "order": 6,
           "time": "可选",
           "duration": "按现场决定",
           "status": "backup",
@@ -788,7 +810,7 @@
         {
           "id": "backup-d7-06",
           "entityId": "venice-florian",
-          "order": 6,
+          "order": 7,
           "time": "可选",
           "duration": "按现场决定",
           "status": "backup",
@@ -799,7 +821,7 @@
         {
           "id": "backup-d7-07",
           "entityId": "gym-mestre-mcfit",
-          "order": 7,
+          "order": 8,
           "time": "可选",
           "duration": "按现场决定",
           "status": "backup",
@@ -814,90 +836,68 @@
       "activeItems": [
         {
           "id": "plan-d8-01",
-          "entityId": "opt-venice-rialto",
+          "entityId": "st_mark_square",
           "order": 1,
           "time": "09:30",
-          "duration": "40min",
+          "duration": "30min",
           "status": "planned",
-          "notes": "清晨看运河纵深与桥上城市景观。",
-          "guard": "10:10步行前往圣马可区域。",
+          "notes": "简短看广场与建筑外观。",
+          "guard": "10:00进入总督宫。",
           "ticket": "无票"
         },
         {
           "id": "plan-d8-02",
-          "entityId": "activity-d8-walk-stmarks",
+          "entityId": "doges_palace",
           "order": 2,
-          "time": "10:10",
-          "duration": "20min",
+          "time": "10:00",
+          "duration": "110min",
           "status": "planned",
-          "notes": "步行前往圣马可区域。",
-          "guard": "10:30抵达广场。",
-          "ticket": "无票"
+          "notes": "重点看主要装饰大厅、主要绘画与叹息桥内部通道；不加秘密行程导览。",
+          "guard": "按100–120分钟控制；票档未确认前不视为已预约。",
+          "ticket": "Planned / not yet booked"
         },
         {
           "id": "plan-d8-03",
-          "entityId": "st_mark_square",
+          "entityId": "bridge_sighs",
           "order": 3,
-          "time": "10:30",
-          "duration": "40min",
+          "time": "11:50",
+          "duration": "10min",
           "status": "planned",
-          "notes": "圣马可广场与总督府外观，不做总督府入内。",
-          "guard": "11:10转叹息桥。",
+          "notes": "从稻草桥方向短拍外观；内部通道已包含在总督宫参观中。",
+          "guard": "12:00去午餐。",
           "ticket": "无票"
         },
         {
           "id": "plan-d8-04",
-          "entityId": "bridge_sighs",
+          "entityId": "activity-d8-03",
           "order": 4,
-          "time": "11:10",
-          "duration": "20min",
+          "time": "12:00",
+          "duration": "90min",
           "status": "planned",
-          "notes": "从稻草桥方向看叹息桥外观。",
-          "guard": "11:30去午餐。",
-          "ticket": "无票"
+          "notes": "坐下午餐并留出休息。",
+          "guard": "13:30结束。",
+          "ticket": "现场即可"
         },
         {
           "id": "plan-d8-05",
-          "entityId": "activity-d8-03",
+          "entityId": "activity-d8-basilica-buffer",
           "order": 5,
-          "time": "11:30",
-          "duration": "75min",
-          "status": "planned",
-          "notes": "坐下用餐。",
-          "guard": "12:45结束。",
-          "ticket": "现场即可"
-        },
-        {
-          "id": "plan-d8-06",
-          "entityId": "activity-d8-coffee-rest",
-          "order": 6,
-          "time": "12:45",
+          "time": "13:30",
           "duration": "30min",
           "status": "planned",
-          "notes": "咖啡与休息。",
-          "guard": "13:15返回大教堂。",
-          "ticket": "现场即可"
-        },
-        {
-          "id": "plan-d8-07",
-          "entityId": "activity-d8-basilica-buffer",
-          "order": 7,
-          "time": "13:15",
-          "duration": "45min",
-          "status": "planned",
-          "notes": "返回入口，并为排队和节日安排留缓冲。",
-          "guard": "14:00按现场安排入内。",
+          "notes": "返回入口，并为排队、安检和节日安排留缓冲。",
+          "guard": "14:00按票面与现场安排入内。",
           "ticket": "按已购时段 / 现场安排"
         },
         {
-          "id": "plan-d8-08",
+          "id": "plan-d8-06",
           "entityId": "st_mark_basilica",
-          "order": 8,
+          "order": 6,
           "time": "14:00",
           "duration": "75min",
           "status": "planned",
           "notes": "慢看金色马赛克；宗教安排前一日复核。",
-          "guard": "遇临时礼仪调整按现场通知。",
+          "guard": "实际停留服从票种与节日礼仪安排。",
           "ticket": "出签后立即买"
         }
       ],
@@ -1664,20 +1664,9 @@
       ],
       "alternatives": [
         {
-          "id": "backup-d13-01",
-          "entityId": "opt-paris-sainte",
-          "order": 1,
-          "time": "可选",
-          "duration": "按现场决定",
-          "status": "backup",
-          "notes": "",
-          "guard": "",
-          "ticket": "待确认"
-        },
-        {
           "id": "backup-d13-02",
           "entityId": "opt-paris-marais",
-          "order": 2,
+          "order": 1,
           "time": "可选",
           "duration": "按现场决定",
           "status": "backup",
@@ -1791,54 +1780,65 @@
         },
         {
           "id": "plan-d14-02",
-          "entityId": "activity-d14-02",
+          "entityId": "louvre_pyramid",
           "order": 2,
           "time": "12:00",
-          "duration": "90min",
-          "status": "planned",
-          "notes": "不接第二间博物馆。",
-          "guard": "13:30结束。",
-          "ticket": "现场即可"
-        },
-        {
-          "id": "plan-d14-03",
-          "entityId": "louvre_pyramid",
-          "order": 3,
-          "time": "13:30",
           "duration": "30min",
           "status": "planned",
           "notes": "集中拍摄金字塔建筑层次。",
-          "guard": "14:00进入弹性时段。",
+          "guard": "12:30去午餐。",
           "ticket": "无票"
         },
         {
+          "id": "plan-d14-03",
+          "entityId": "activity-d14-02",
+          "order": 3,
+          "time": "12:30",
+          "duration": "90min",
+          "status": "planned",
+          "notes": "午餐与休息，不接第二间大型博物馆。",
+          "guard": "14:00结束。",
+          "ticket": "现场即可"
+        },
+        {
           "id": "plan-d14-04",
-          "entityId": "activity-d14-flexible-paris",
+          "entityId": "activity-d14-transfer-sainte",
           "order": 4,
           "time": "14:00",
-          "duration": "150min",
+          "duration": "60min",
           "status": "planned",
-          "notes": "Depending on energy and weather: Palais Royal / Tuileries / Seine riverside / café / shopping.",
-          "guard": "弹性活动块，不是必须完成的新景点；16:30结束。",
+          "notes": "前往圣礼拜堂，并为预约报到、安检与入口步行留时间。",
+          "guard": "按票面到场要求执行，不把整段视为馆内时间。",
+          "ticket": "现场交通"
+        },
+        {
+          "id": "plan-d14-05",
+          "entityId": "opt-paris-sainte",
+          "order": 5,
+          "time": "15:00前后",
+          "duration": "45min",
+          "status": "planned",
+          "notes": "重点看彩窗空间；馆内按30–45分钟规划。",
+          "guard": "以最终票面时段为准；未购票前不视为已预约。",
+          "ticket": "Planned / not yet booked"
+        },
+        {
+          "id": "plan-d14-06",
+          "entityId": "activity-d14-short-free",
+          "order": 6,
+          "time": "15:45",
+          "duration": "45min",
+          "status": "planned",
+          "notes": "短暂河岸步行、咖啡或直接返酒店，不安排第二个大型博物馆。",
+          "guard": "体力不足直接取消。",
           "ticket": "无票"
         }
       ],
       "alternatives": [
         {
-          "id": "backup-d14-01",
-          "entityId": "opt-paris-sainte",
-          "order": 1,
-          "time": "可选",
-          "duration": "按现场决定",
-          "status": "backup",
-          "notes": "",
-          "guard": "",
-          "ticket": "待确认"
-        },
-        {
           "id": "backup-d14-02",
           "entityId": "opt-paris-orangerie",
-          "order": 2,
+          "order": 1,
           "time": "可选",
           "duration": "按现场决定",
           "status": "backup",
@@ -2171,18 +2171,29 @@
           "entityId": "activity-d16-03",
           "order": 3,
           "time": "12:00",
-          "duration": "150min",
+          "duration": "120min",
           "status": "planned",
           "notes": "转往奥斯曼大道前坐下休息。",
-          "guard": "14:30进百货。",
+          "guard": "14:00进入歌剧院。",
           "ticket": "现场即可"
         },
         {
           "id": "plan-d16-04",
-          "entityId": "galeries_lafayette",
+          "entityId": "palais_garnier",
           "order": 4,
-          "time": "14:30",
-          "duration": "180min",
+          "time": "14:00",
+          "duration": "90min",
+          "status": "planned",
+          "notes": "重点看大楼梯、Grand Foyer与当日开放的主要空间；不保证进入观众厅或看到舞台。",
+          "guard": "以最终可售票档与现场开放范围为准。",
+          "ticket": "Planned / not yet booked"
+        },
+        {
+          "id": "plan-d16-05",
+          "entityId": "galeries_lafayette",
+          "order": 5,
+          "time": "15:30",
+          "duration": "120min",
           "status": "planned",
           "notes": "看穹顶与圣诞装置，按清单购物。",
           "guard": "17:30结束。",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-15T06:59:59.356Z",
+  "generatedAt": "2026-09-18T14:29:58.978Z",
   "criteria": {
     "food": ">=4 images, >=2 dishes, environment/entrance, dish cover",
     "gym": ">=3 images with equipment",
@@ -43,17 +43,22 @@
       "unmet": []
     },
     "place": {
-      "ready": 37,
-      "total": 37,
-      "percentage": 100,
-      "averageImages": 3,
-      "unmet": []
+      "ready": 36,
+      "total": 40,
+      "percentage": 90,
+      "averageImages": 2.7,
+      "unmet": [
+        "accademia_florence",
+        "doges_palace",
+        "palais_garnier",
+        "opt-paris-sainte"
+      ]
     }
   },
   "GalleryReadyCoverage": {
-    "ready": 71,
-    "total": 83,
-    "percentage": 86
+    "ready": 70,
+    "total": 86,
+    "percentage": 81
   },
   "dishMatchCoverage": {
     "matched": 38,
@@ -72,28 +77,28 @@
   },
   "galleryModalAccessible": true,
   "offlineCoreCoverage": {
-    "generatedAt": "2026-09-15T06:59:58.505Z",
-    "version": "4f2158f2a7ba",
-    "assetCount": 199,
-    "mediaAssetCount": 192,
-    "totalBytes": 20944222,
+    "generatedAt": "2026-09-18T14:29:58.708Z",
+    "version": "4432e1e68510",
+    "assetCount": 197,
+    "mediaAssetCount": 190,
+    "totalBytes": 20717744,
     "expected": {
       "dayHero": 18,
       "hotels": 6,
-      "places": 37,
+      "places": 40,
       "food": 34,
       "gym": 6
     },
     "coverage": {
       "dayHero": 18,
       "hotels": 6,
-      "places": 37,
+      "places": 36,
       "food": 34,
       "gym": 6
     },
-    "passed": true
+    "passed": false
   },
-  "referencedGalleryBytes": 30886548,
+  "referencedGalleryBytes": 30442062,
   "entities": {
     "food": [
       {
@@ -1395,6 +1400,19 @@
         "galleryReady": true
       },
       {
+        "id": "accademia_florence",
+        "name": "学院美术馆",
+        "type": "place",
+        "imageCount": 0,
+        "roleCoverage": [],
+        "hasUsefulCover": false,
+        "hasEntrance": false,
+        "hasInterior": false,
+        "hasSignatureDish": false,
+        "coverRole": "",
+        "galleryReady": false
+      },
+      {
         "id": "opt-venice-rialto",
         "name": "里亚托桥",
         "type": "place",
@@ -1412,25 +1430,8 @@
         "galleryReady": true
       },
       {
-        "id": "accademia_bridge",
-        "name": "学院桥",
-        "type": "place",
-        "imageCount": 3,
-        "roleCoverage": [
-          "stop",
-          "detail",
-          "photo-angle"
-        ],
-        "hasUsefulCover": true,
-        "hasEntrance": false,
-        "hasInterior": false,
-        "hasSignatureDish": false,
-        "coverRole": "stop",
-        "galleryReady": true
-      },
-      {
         "id": "st_mark_square",
-        "name": "圣马可广场＋总督府外观",
+        "name": "圣马可广场",
         "type": "place",
         "imageCount": 3,
         "roleCoverage": [
@@ -1495,6 +1496,19 @@
         "hasSignatureDish": false,
         "coverRole": "stop",
         "galleryReady": true
+      },
+      {
+        "id": "doges_palace",
+        "name": "总督宫",
+        "type": "place",
+        "imageCount": 0,
+        "roleCoverage": [],
+        "hasUsefulCover": false,
+        "hasEntrance": false,
+        "hasInterior": false,
+        "hasSignatureDish": false,
+        "coverRole": "",
+        "galleryReady": false
       },
       {
         "id": "opt-vienna-stephansdom",
@@ -1786,6 +1800,19 @@
         "galleryReady": true
       },
       {
+        "id": "palais_garnier",
+        "name": "巴黎歌剧院",
+        "type": "place",
+        "imageCount": 0,
+        "roleCoverage": [],
+        "hasUsefulCover": false,
+        "hasEntrance": false,
+        "hasInterior": false,
+        "hasSignatureDish": false,
+        "coverRole": "",
+        "galleryReady": false
+      },
+      {
         "id": "cdg",
         "name": "巴黎 → CDG T1",
         "type": "place",
@@ -1801,6 +1828,19 @@
         "hasSignatureDish": false,
         "coverRole": "hero",
         "galleryReady": true
+      },
+      {
+        "id": "opt-paris-sainte",
+        "name": "圣礼拜堂",
+        "type": "place",
+        "imageCount": 0,
+        "roleCoverage": [],
+        "hasUsefulCover": false,
+        "hasEntrance": false,
+        "hasInterior": false,
+        "hasSignatureDish": false,
+        "coverRole": "",
+        "galleryReady": false
       }
     ]
   }

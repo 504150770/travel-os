@@ -109,6 +109,8 @@
 .workspace-place-card:hover .workspace-place-image img { transform: scale(1.02); }
 .workspace-place-image > span { position: absolute; right: 10px; bottom: 10px; display: inline-flex; min-height: 30px; align-items: center; gap: 5px; padding: 0 9px; border-radius: var(--radius-pill); background: rgb(34 34 34 / .68); color: #fff; font-size: 11px; backdrop-filter: blur(8px); }
 .workspace-place-image svg { width: 13px; height: 13px; }
+.workspace-place-image.placeholder { display: grid; place-items: center; color: var(--text-secondary); background: linear-gradient(145deg, var(--soft-blue), var(--surface-strong)); }
+.workspace-place-image.placeholder > svg { width: 32px; height: 32px; }
 .workspace-place-card > div { position: relative; min-height: 86px; padding: 12px 48px 12px 14px; }
 .workspace-place-card h3 { margin-bottom: 4px; font-size: 17px; font-weight: 680; }
 .workspace-place-title { display: flex; min-width: 0; align-items: center; gap: 8px; padding-right: 32px; }

@@ -461,6 +461,46 @@
     "notes": "不是必须完成的新景点。"
   },
   {
+    "id": "activity-d14-transfer-sainte",
+    "type": "activity",
+    "name": "前往圣礼拜堂 / 入场缓冲",
+    "city": "巴黎",
+    "address": "待确认",
+    "coordinates": null,
+    "images": [],
+    "description": "从卢浮宫区域前往圣礼拜堂，并为预约报到、安检和入口步行留出时间。",
+    "price": null,
+    "openingHours": "不适用",
+    "links": {},
+    "source": "用户确认的 Current Plan",
+    "lastVerified": "2026-09-18",
+    "tags": [
+      "交通",
+      "安检缓冲"
+    ],
+    "notes": "以最终票面到场要求为准。"
+  },
+  {
+    "id": "activity-d14-short-free",
+    "type": "activity",
+    "name": "塞纳河短走 / 自由活动",
+    "city": "巴黎",
+    "address": "待确认",
+    "coordinates": null,
+    "images": [],
+    "description": "圣礼拜堂后短暂散步、咖啡或直接返酒店，不安排第二个大型博物馆。",
+    "price": null,
+    "openingHours": "不适用",
+    "links": {},
+    "source": "用户确认的 Current Plan",
+    "lastVerified": "2026-09-18",
+    "tags": [
+      "弹性活动",
+      "步行"
+    ],
+    "notes": "体力不足可直接取消。"
+  },
+  {
     "id": "activity-d15-walk-eiffel",
     "type": "activity",
     "name": "步行前往埃菲尔铁塔",

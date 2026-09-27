@@ -237,7 +237,7 @@
     "date": "2026-12-05",
     "city": "罗马 → 佛罗伦萨",
     "theme": "红顶之城，慢慢走进去",
-    "summary": "高铁转场后只逛紧凑老城。",
+    "summary": "高铁转场、处理行李后看百花大教堂外观；学院美术馆按合适下午票档执行。",
     "pace": "转场",
     "walking": "约3–4 km",
     "fatigue": 2,
@@ -248,7 +248,7 @@
     "gymIds": [
       "gym-florence-klab"
     ],
-    "lossCut": "列车晚点或入住延误：删领主广场，百花大教堂外观后直接晚餐。",
+    "lossCut": "列车晚点、行李未处理或无合适下午票档：取消学院美术馆，不转到D6免费日。",
     "timeline": [
       {
         "time": "10:00前后",
@@ -261,7 +261,7 @@
         "ticket": "出签后买"
       },
       {
-        "time": "午后",
+        "time": "14:45",
         "title": "圣母百花大教堂外观",
         "placeId": "duomo_firenze",
         "mode": "步行",
@@ -271,14 +271,14 @@
         "ticket": "无票"
       },
       {
-        "time": "15:45",
-        "title": "领主广场",
-        "placeId": "signoria",
+        "time": "16:30前后",
+        "title": "学院美术馆",
+        "placeId": "accademia_florence",
         "mode": "步行",
-        "duration": "60min",
-        "note": "商业街慢走，广场短停后喝咖啡。",
-        "guard": "17:00收尾。",
-        "ticket": "无票"
+        "duration": "45–50min",
+        "note": "核心看《大卫》原作及少量米开朗基罗作品。",
+        "guard": "仅在票档与行李处理均成立时执行。",
+        "ticket": "Planned / not yet booked"
       }
     ],
     "shooting": [
@@ -288,9 +288,9 @@
         "note": "用窄街做框，人物贴近镜头。"
       },
       {
-        "time": "蓝调",
-        "title": "领主广场雕塑层次",
-        "note": "避开雕塑正下方，以旧宫作背景。"
+        "time": "馆内",
+        "title": "《大卫》与展厅尺度",
+        "note": "遵守馆内摄影规则，不为拍照延长停留。"
       }
     ]
   },
@@ -299,7 +299,7 @@
     "date": "2026-12-06",
     "city": "佛罗伦萨",
     "theme": "一条河，一城红顶",
-    "summary": "上午河岸，下午完整休息，日落前上山。",
+    "summary": "领主广场短看后沿老桥与阿诺河进入Oltrarno，日落前上山。",
     "pace": "慢逛",
     "walking": "约3–5 km",
     "fatigue": 2,
@@ -312,6 +312,16 @@
     ],
     "lossCut": "晚于14:45：删Oltrarno小店，只保留老桥远眺与米开朗基罗广场。",
     "timeline": [
+      {
+        "time": "09:30",
+        "title": "领主广场",
+        "placeId": "signoria",
+        "mode": "步行",
+        "duration": "30min",
+        "note": "广场与室外雕塑短看，不安排室内参观。",
+        "guard": "10:00前往老桥与阿诺河。",
+        "ticket": "无票"
+      },
       {
         "time": "10:00",
         "title": "老桥与阿诺河散步",
@@ -372,7 +382,7 @@
     "gymIds": [
       "gym-mestre-mcfit"
     ],
-    "lossCut": "到岛晚于15:30：删学院桥，坐一段水上巴士看大运河后返回。",
+    "lossCut": "到岛晚于15:30：删里亚托桥，只坐一段水上巴士看大运河后返回。",
     "timeline": [
       {
         "time": "10:00前后",
@@ -391,17 +401,17 @@
         "mode": "公交/船",
         "duration": "60–90min",
         "note": "沿线看宫殿，不横穿全岛赶景点。",
-        "guard": "15:45前决定是否去学院桥。",
+        "guard": "15:00前后衔接里亚托桥短看。",
         "ticket": "现场交通票"
       },
       {
         "time": "15:00",
-        "title": "学院桥",
-        "placeId": "accademia_bridge",
+        "title": "里亚托桥",
+        "placeId": "opt-venice-rialto",
         "mode": "步行",
-        "duration": "45–60min",
-        "note": "只在桥两侧短走，拍运河转弯。",
-        "guard": "16:30收尾。",
+        "duration": "40min",
+        "note": "衔接大运河水上巴士，短看桥上与运河纵深。",
+        "guard": "不为追光线反复往返。",
         "ticket": "无票"
       }
     ],
@@ -413,8 +423,8 @@
       },
       {
         "time": "15:40",
-        "title": "学院桥运河弯",
-        "note": "人物靠栏杆侧站，留出水面纵深。"
+        "title": "里亚托桥运河纵深",
+        "note": "短拍桥上与水面层次，不与D8重复。"
       }
     ]
   },
@@ -423,7 +433,7 @@
     "date": "2026-12-08",
     "city": "威尼斯",
     "theme": "金色教堂，安静的水巷",
-    "summary": "宗教节日按午后教堂时段执行。",
+    "summary": "上午重点参观总督宫，午餐休息后按宗教节日安排进入圣马可大教堂。",
     "pace": "适中",
     "walking": "约3–5 km",
     "fatigue": 3,
@@ -434,76 +444,56 @@
     "gymIds": [
       "gym-mestre-mcfit"
     ],
-    "lossCut": "若潮水或人流异常：删水巷延伸，只保留圣马可广场、叹息桥与14:00教堂。",
+    "lossCut": "若潮水或人流异常：先删叹息桥外观短拍；保留已购票的总督宫与圣马可大教堂。",
     "timeline": [
       {
         "time": "09:30",
-        "title": "里亚托桥",
-        "placeId": "opt-venice-rialto",
-        "mode": "公交/船",
-        "duration": "40min",
-        "note": "清晨看运河纵深与桥上城市景观。",
-        "guard": "10:10步行前往圣马可区域。",
-        "ticket": "无票"
-      },
-      {
-        "time": "10:10",
-        "title": "步行前往圣马可区域",
-        "placeId": null,
-        "mode": "步行",
-        "duration": "20min",
-        "note": "从里亚托桥步行前往圣马可区域。",
-        "guard": "10:30抵达广场。",
-        "ticket": "无票"
-      },
-      {
-        "time": "10:30",
-        "title": "圣马可广场＋总督府外观",
+        "title": "圣马可广场",
         "placeId": "st_mark_square",
         "mode": "步行",
-        "duration": "40min",
-        "note": "圣马可广场与总督府外观，不做总督府入内。",
-        "guard": "11:10转叹息桥。",
+        "duration": "30min",
+        "note": "简短看广场与建筑外观。",
+        "guard": "10:00进入总督宫。",
         "ticket": "无票"
       },
       {
-        "time": "11:10",
-        "title": "叹息桥",
+        "time": "10:00",
+        "title": "总督宫",
+        "placeId": "doges_palace",
+        "mode": "步行",
+        "duration": "110min",
+        "note": "重点看主要装饰大厅、主要绘画与叹息桥内部通道。",
+        "guard": "不加秘密行程导览；票档未确认前不视为已预约。",
+        "ticket": "Planned / not yet booked"
+      },
+      {
+        "time": "11:50",
+        "title": "叹息桥外观短拍",
         "placeId": "bridge_sighs",
         "mode": "步行",
-        "duration": "20min",
-        "note": "从稻草桥方向看叹息桥外观。",
-        "guard": "11:30去午餐。",
+        "duration": "10min",
+        "note": "从稻草桥方向短拍外观；内部通道已包含在总督宫参观中。",
+        "guard": "12:00去午餐。",
         "ticket": "无票"
       },
       {
-        "time": "11:30",
-        "title": "午餐",
+        "time": "12:00",
+        "title": "午餐 / 休息",
         "placeId": null,
         "mode": "步行",
-        "duration": "75min",
-        "note": "坐下用餐。",
-        "guard": "12:45结束。",
+        "duration": "90min",
+        "note": "坐下午餐并留出休息。",
+        "guard": "13:30结束。",
         "ticket": "现场即可"
       },
       {
-        "time": "12:45",
-        "title": "咖啡 / 休息",
-        "placeId": null,
-        "mode": "步行",
-        "duration": "30min",
-        "note": "午餐后独立休息段。",
-        "guard": "13:15返回大教堂。",
-        "ticket": "现场即可"
-      },
-      {
-        "time": "13:15",
+        "time": "13:30",
         "title": "返回大教堂 / 排队 / 缓冲",
         "placeId": null,
         "mode": "步行",
-        "duration": "45min",
-        "note": "返回入口，并为排队和节日安排留缓冲。",
-        "guard": "14:00按现场安排入内。",
+        "duration": "30min",
+        "note": "返回入口，并为排队、安检和节日安排留缓冲。",
+        "guard": "14:00按票面与现场安排入内。",
         "ticket": "按已购时段 / 现场安排"
       },
       {
@@ -513,7 +503,7 @@
         "mode": "步行",
         "duration": "75min",
         "note": "慢看金色马赛克；宗教安排前一日复核。",
-        "guard": "遇临时礼仪调整按现场通知。",
+        "guard": "实际停留服从票种与节日礼仪安排。",
         "ticket": "出签后立即买"
       }
     ],
@@ -905,7 +895,7 @@
     "date": "2026-12-14",
     "city": "巴黎",
     "theme": "只为值得亲眼看的杰作",
-    "summary": "卢浮宫占完整上午，不接第二间博物馆。",
+    "summary": "卢浮宫精选后前往圣礼拜堂；不接第二间大型博物馆。",
     "pace": "适中",
     "walking": "约3–5 km",
     "fatigue": 3,
@@ -917,7 +907,7 @@
       "gym-paris-fpark",
       "gym-paris-basic"
     ],
-    "lossCut": "馆内晚于13:30：删金字塔周边轻逛，只拍10分钟后回去休息。",
+    "lossCut": "卢浮宫延误：先缩短金字塔拍照与圣礼拜堂后的自由活动，不压缩午餐。",
     "timeline": [
       {
         "time": "09:30",
@@ -931,32 +921,52 @@
       },
       {
         "time": "12:00",
-        "title": "午餐 / 咖啡",
-        "placeId": null,
-        "mode": "步行",
-        "duration": "90min",
-        "note": "不接第二间博物馆。",
-        "guard": "13:30结束。",
-        "ticket": "现场即可"
-      },
-      {
-        "time": "13:30",
         "title": "卢浮宫金字塔",
         "placeId": "louvre_pyramid",
         "mode": "步行",
         "duration": "30min",
         "note": "集中拍摄金字塔建筑层次。",
-        "guard": "14:00进入弹性时段。",
+        "guard": "12:30去午餐。",
         "ticket": "无票"
       },
       {
+        "time": "12:30",
+        "title": "午餐 / 咖啡",
+        "placeId": null,
+        "mode": "步行",
+        "duration": "90min",
+        "note": "午餐与休息，不接第二间大型博物馆。",
+        "guard": "14:00结束。",
+        "ticket": "现场即可"
+      },
+      {
         "time": "14:00",
-        "title": "巴黎弹性散步 / 自由时间",
+        "title": "前往圣礼拜堂 / 入场缓冲",
+        "placeId": null,
+        "mode": "地铁/步行",
+        "duration": "60min",
+        "note": "计入预约报到、安检与入口步行。",
+        "guard": "按票面到场要求执行。",
+        "ticket": "现场交通"
+      },
+      {
+        "time": "15:00前后",
+        "title": "圣礼拜堂",
+        "placeId": "opt-paris-sainte",
+        "mode": "步行",
+        "duration": "45min",
+        "note": "重点看彩窗空间；馆内按30–45分钟规划。",
+        "guard": "以最终票面时段为准。",
+        "ticket": "Planned / not yet booked"
+      },
+      {
+        "time": "15:45",
+        "title": "塞纳河短走 / 自由活动",
         "placeId": null,
         "mode": "步行/现场决定",
-        "duration": "150min",
-        "note": "Depending on energy and weather: Palais Royal / Tuileries / Seine riverside / café / shopping.",
-        "guard": "弹性活动块，不是必须完成的新景点；16:30结束。",
+        "duration": "45min",
+        "note": "短暂散步、咖啡或直接返酒店。",
+        "guard": "体力不足直接取消。",
         "ticket": "无票"
       }
     ],
@@ -967,9 +977,9 @@
         "note": "先看作品，再拍人和展厅比例；避开拥挤正面停留。"
       },
       {
-        "time": "16:35",
-        "title": "金字塔蓝调",
-        "note": "人物靠水池边缘，使用玻璃结构作几何背景。"
+        "time": "15:20",
+        "title": "圣礼拜堂彩窗空间",
+        "note": "尊重现场规则，以观察空间为主。"
       }
     ]
   },
@@ -1091,7 +1101,7 @@
     "date": "2026-12-16",
     "city": "巴黎",
     "theme": "山坡街巷，购物与告别晚餐",
-    "summary": "城市慢逛日，不补景点。",
+    "summary": "圣心堂与蒙马特后参观巴黎歌剧院，再到老佛爷购物。",
     "pace": "慢逛",
     "walking": "约3–4 km",
     "fatigue": 2,
@@ -1103,7 +1113,7 @@
       "gym-paris-fpark",
       "gym-paris-basic"
     ],
-    "lossCut": "上午晚了：删蒙马特支线街巷，只保留圣心堂外观；购物按清单限时。",
+    "lossCut": "上午晚了：先缩短蒙马特支线街巷与购物；若歌剧院已购票则保留票面时段。",
     "timeline": [
       {
         "time": "10:00",
@@ -1130,17 +1140,27 @@
         "title": "午餐与咖啡",
         "placeId": null,
         "mode": "地铁",
-        "duration": "150min",
+        "duration": "120min",
         "note": "转往奥斯曼大道前坐下休息。",
-        "guard": "14:30进百货。",
+        "guard": "14:00进入歌剧院。",
         "ticket": "现场即可"
       },
       {
-        "time": "14:30",
+        "time": "14:00",
+        "title": "巴黎歌剧院",
+        "placeId": "palais_garnier",
+        "mode": "地铁/步行",
+        "duration": "90min",
+        "note": "重点看大楼梯、Grand Foyer与当日开放的主要空间。",
+        "guard": "不保证进入观众厅或看到舞台；以最终票档为准。",
+        "ticket": "Planned / not yet booked"
+      },
+      {
+        "time": "15:30",
         "title": "老佛爷百货",
         "placeId": "galeries_lafayette",
         "mode": "地铁/步行",
-        "duration": "180min",
+        "duration": "120min",
         "note": "看穹顶与圣诞装置，按清单购物。",
         "guard": "17:30结束。",
         "ticket": "无票"
@@ -1153,9 +1173,9 @@
         "note": "用侧面台阶和冬季树枝做前景，避开正中人潮。"
       },
       {
-        "time": "15:30",
-        "title": "百货圣诞装置",
-        "note": "先拍穹顶环境，再用中焦拍人物与灯饰。"
+        "time": "14:20",
+        "title": "歌剧院大楼梯与Grand Foyer",
+        "note": "按当日开放空间拍摄，不把观众厅视为保证开放。"
       }
     ]
   },

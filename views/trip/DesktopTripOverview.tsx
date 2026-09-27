@@ -92,7 +92,7 @@ export function DesktopTripOverview({
   openHotel: () => void;
 }) {
   const scrollRef = useRef<HTMLDivElement>(null);
-  const places = dayState.activeEntities.filter((entity) => entity.type === 'place' && entity.images.length > 0);
+  const places = dayState.activeEntities.filter((entity) => entity.type === 'place');
   const walkingKm = dayState.route.summary.walkingKm;
   const hotelImages = useMemo(() => (stay?.images ?? [])
     .filter((image) => Boolean(image.file))
@@ -126,17 +126,17 @@ export function DesktopTripOverview({
         <header><div><span className="workspace-section-icon"><Camera /></span><h2 id="workspace-places-heading">今天的景点</h2></div><p>{places.length} 个景点{walkingKm == null ? '' : ` · 已知步行路段 ${walkingKm} km`}</p></header>
         {places.length > 0 ? <div className={`workspace-place-grid count-${Math.min(places.length, 4)}`}>
           {places.map((entity) => {
-            const cover = selectCoverImage(entity.images)!;
-            const description = usefulCopy(entity, cover.caption || '查看地点图片与详情');
+            const cover = selectCoverImage(entity.images);
+            const description = usefulCopy(entity, cover?.caption || '查看地点详情与票务状态');
             return <article className="workspace-place-card" key={entity.id}>
-              <button className="workspace-place-image" onClick={() => openGallery(openGalleryRequest(entity.id, entity.name, entity.images, cover))} aria-label={`打开 ${entity.name} 图库`}>
+              {cover ? <button className="workspace-place-image" onClick={() => openGallery(openGalleryRequest(entity.id, entity.name, entity.images, cover))} aria-label={`打开 ${entity.name} 图库`}>
                 <Image unoptimized src={cover.file} alt={cover.title || entity.name} fill sizes="(max-width: 1180px) 50vw, 520px" />
                 <span><Camera /> {entity.images.length} 张图片</span>
-              </button>
+              </button> : <button className="workspace-place-image placeholder" onClick={() => inspect(entity)} aria-label={`查看 ${entity.name} 详情`}><Camera /><span>查看详情</span></button>}
               <div><div className="workspace-place-title"><h3>{entity.name}</h3>{statusByEntity.get(entity.id) && <StatusBadge status={statusByEntity.get(entity.id)!} />}</div><p>{description}</p><button onClick={() => inspect(entity)} aria-label={`查看 ${entity.name} 详情`}><ArrowRight /></button></div>
             </article>;
           })}
-        </div> : <p className="workspace-place-empty">当天没有带图片的正式景点，完整安排请看左侧时间线。</p>}
+        </div> : <p className="workspace-place-empty">当天没有正式景点，完整安排请看左侧时间线。</p>}
       </section>
 
       <div className="workspace-practical-grid">

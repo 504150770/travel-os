@@ -37,8 +37,11 @@ export function reorderPlanItems<T extends { id: string; order: number }>(
   return next.map((item, index) => ({ ...item, order: index + 1 }));
 }
 
-const PREVIOUS_OFFICIAL_PLAN_ID = 'winter-europe-2026-v1';
-const UPDATED_OFFICIAL_DAYS = new Set([7, 8, 10, 14, 15]);
+const PREVIOUS_OFFICIAL_PLAN_IDS = new Set([
+  'winter-europe-2026-v1',
+  'winter-europe-2026-v2',
+]);
+const UPDATED_OFFICIAL_DAYS = new Set([5, 6, 7, 8, 10, 14, 15, 16]);
 const isUserItem = (item: PlanItem) => item.id.startsWith('user-');
 const reindex = (items: PlanItem[]) =>
   items.map((item, index) => ({ ...item, order: index + 1 }));
@@ -72,7 +75,7 @@ export function migrateEditablePlan(
   stored: EditablePlan,
   official: EditablePlan,
 ): EditablePlan {
-  if (stored.originalPlanId !== PREVIOUS_OFFICIAL_PLAN_ID) return stored;
+  if (!PREVIOUS_OFFICIAL_PLAN_IDS.has(stored.originalPlanId)) return stored;
   const officialByDay = new Map(official.days.map((day) => [day.dayId, day]));
   return {
     ...stored,

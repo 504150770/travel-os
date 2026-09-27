@@ -333,9 +333,11 @@
     "swapRule": "替换抵达日圣母院短走或卢浮宫后轻逛",
     "booking": "需预约；出签后再决定",
     "mapQuery": "Sainte Chapelle Paris",
+    "lat": 48.8553933,
+    "lng": 2.3449941,
     "source": "https://www.sainte-chapelle.fr/en",
-    "status": "可选，不强制",
-    "verifiedAt": "2026-09-06"
+    "status": "正式计划 · 待购票",
+    "verifiedAt": "2026-09-18"
   },
   {
     "id": "opt-paris-orangerie",
