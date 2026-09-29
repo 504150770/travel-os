@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-18T14:29:58.978Z",
+  "generatedAt": "2026-09-29T14:34:52.518Z",
   "criteria": {
     "food": ">=4 images, >=2 dishes, environment/entrance, dish cover",
     "gym": ">=3 images with equipment",
@@ -46,7 +46,7 @@
       "ready": 36,
       "total": 40,
       "percentage": 90,
-      "averageImages": 2.7,
+      "averageImages": 2.8,
       "unmet": [
         "accademia_florence",
         "doges_palace",
@@ -66,22 +66,22 @@
     "percentage": 54
   },
   "accurateSourceCoverage": {
-    "accurate": 295,
-    "total": 295,
+    "accurate": 299,
+    "total": 299,
     "percentage": 100
   },
   "officialOrTrustedSourceCoverage": {
-    "trusted": 227,
-    "total": 295,
+    "trusted": 231,
+    "total": 299,
     "percentage": 77
   },
   "galleryModalAccessible": true,
   "offlineCoreCoverage": {
-    "generatedAt": "2026-09-18T14:29:58.708Z",
-    "version": "4432e1e68510",
-    "assetCount": 197,
-    "mediaAssetCount": 190,
-    "totalBytes": 20717744,
+    "generatedAt": "2026-09-29T14:34:51.946Z",
+    "version": "33185b5813d6",
+    "assetCount": 201,
+    "mediaAssetCount": 194,
+    "totalBytes": 22581028,
     "expected": {
       "dayHero": 18,
       "hotels": 6,
@@ -92,13 +92,13 @@
     "coverage": {
       "dayHero": 18,
       "hotels": 6,
-      "places": 36,
+      "places": 40,
       "food": 34,
       "gym": 6
     },
-    "passed": false
+    "passed": true
   },
-  "referencedGalleryBytes": 30442062,
+  "referencedGalleryBytes": 32305346,
   "entities": {
     "food": [
       {
@@ -1403,13 +1403,15 @@
         "id": "accademia_florence",
         "name": "学院美术馆",
         "type": "place",
-        "imageCount": 0,
-        "roleCoverage": [],
-        "hasUsefulCover": false,
+        "imageCount": 1,
+        "roleCoverage": [
+          "gallery"
+        ],
+        "hasUsefulCover": true,
         "hasEntrance": false,
         "hasInterior": false,
         "hasSignatureDish": false,
-        "coverRole": "",
+        "coverRole": "gallery",
         "galleryReady": false
       },
       {
@@ -1501,13 +1503,15 @@
         "id": "doges_palace",
         "name": "总督宫",
         "type": "place",
-        "imageCount": 0,
-        "roleCoverage": [],
-        "hasUsefulCover": false,
+        "imageCount": 1,
+        "roleCoverage": [
+          "gallery"
+        ],
+        "hasUsefulCover": true,
         "hasEntrance": false,
         "hasInterior": false,
         "hasSignatureDish": false,
-        "coverRole": "",
+        "coverRole": "gallery",
         "galleryReady": false
       },
       {
@@ -1803,13 +1807,15 @@
         "id": "palais_garnier",
         "name": "巴黎歌剧院",
         "type": "place",
-        "imageCount": 0,
-        "roleCoverage": [],
-        "hasUsefulCover": false,
+        "imageCount": 1,
+        "roleCoverage": [
+          "gallery"
+        ],
+        "hasUsefulCover": true,
         "hasEntrance": false,
         "hasInterior": false,
         "hasSignatureDish": false,
-        "coverRole": "",
+        "coverRole": "gallery",
         "galleryReady": false
       },
       {
@@ -1833,13 +1839,15 @@
         "id": "opt-paris-sainte",
         "name": "圣礼拜堂",
         "type": "place",
-        "imageCount": 0,
-        "roleCoverage": [],
-        "hasUsefulCover": false,
+        "imageCount": 1,
+        "roleCoverage": [
+          "gallery"
+        ],
+        "hasUsefulCover": true,
         "hasEntrance": false,
         "hasInterior": false,
         "hasSignatureDish": false,
-        "coverRole": "",
+        "coverRole": "gallery",
         "galleryReady": false
       }
     ]

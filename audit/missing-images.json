@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-18T14:29:57.890Z",
-  "total": 93,
+  "generatedAt": "2026-09-29T14:34:48.504Z",
+  "total": 92,
   "items": [
     {
       "category": "FOOD_IMAGES",
@@ -974,18 +974,6 @@
       "id": "opt-prague-clementinum",
       "name": "Clementinum",
       "city": "布拉格",
-      "fields": [
-        "image"
-      ],
-      "reason": "Quick Pick/候选地点缺少已核验真实图片。",
-      "nextAction": "补官方或可追溯摄影来源，并做近似图审计。",
-      "priority": "P2"
-    },
-    {
-      "category": "PLACE_IMAGES",
-      "id": "opt-paris-sainte",
-      "name": "圣礼拜堂",
-      "city": "巴黎",
       "fields": [
         "image"
       ],

@@ -1,16 +1,16 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-18T14:29:57.651Z",
+  "generatedAt": "2026-09-29T14:34:48.145Z",
   "status": "passed",
   "summary": {
     "failures": 0,
-    "warnings": 5,
+    "warnings": 1,
     "days": 18,
     "editablePlanItems": 210,
     "entities": 207,
     "places": 44,
     "options": 22,
-    "images": 296,
+    "images": 300,
     "gyms": 10,
     "verifiedGyms": 9,
     "realHotelBookings": 6,
@@ -32,7 +32,7 @@
     "bookings": 22,
     "tasks": 14,
     "confirmedHotelImages": 30,
-    "mediaMetadataRecords": 295
+    "mediaMetadataRecords": 299
   },
   "checks": {
     "schemaValidation": true,
@@ -72,22 +72,6 @@
   },
   "failures": [],
   "warnings": [
-    {
-      "dimension": "trip_media",
-      "message": "Day 5 stop accademia_florence uses the compact no-image state"
-    },
-    {
-      "dimension": "trip_media",
-      "message": "Day 8 stop doges_palace uses the compact no-image state"
-    },
-    {
-      "dimension": "trip_media",
-      "message": "Day 14 stop opt-paris-sainte uses the compact no-image state"
-    },
-    {
-      "dimension": "trip_media",
-      "message": "Day 16 stop palais_garnier uses the compact no-image state"
-    },
     {
       "dimension": "budget",
       "message": "current real commitments put plan 27630 over hard cap 26000"

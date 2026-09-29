@@ -1,10 +1,10 @@
 # UNVERIFIED DATA LIST
 
-Generated: 2026-09-18T14:29:57.890Z
+Generated: 2026-09-29T14:34:48.504Z
 
 > 真实性优先。以下项目没有被当作已验证事实。
 
-P0 23 · P1 128 · P2 93
+P0 23 · P1 128 · P2 92
 
 ## P0 · 23
 
@@ -163,7 +163,7 @@ P0 23 · P1 128 · P2 93
 - **巴黎｜Westfield Forum des Halles** · SHOPPING_REALITY — openingHours、image。已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。 下一步：出发前从官方页面复核，并只补可追溯现场图。
 - **巴黎｜Rue de Rivoli** · SHOPPING_REALITY — openingHours、image。已建立官方来源与路线用途，12月营业时间或真实图片尚未核实。 下一步：出发前从官方页面复核，并只补可追溯现场图。
 
-## P2 · 93
+## P2 · 92
 
 - **罗马｜Armando al Pantheon** · FOOD_REALITY — address。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
 - **罗马｜Roscioli Salumeria con Cucina** · FOOD_REALITY — address、openingHours。缺少足够可靠的当前信息。 下一步：从官网与地图资料交叉核验。
@@ -244,7 +244,6 @@ P0 23 · P1 128 · P2 93
 - **布拉格｜Strahov修道院图书馆** · PLACE_IMAGES — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
 - **布拉格｜市民会馆 + 火药塔外观** · PLACE_IMAGES — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
 - **布拉格｜Clementinum** · PLACE_IMAGES — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
-- **巴黎｜圣礼拜堂** · PLACE_IMAGES — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
 - **巴黎｜橘园美术馆** · PLACE_IMAGES — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
 - **巴黎｜Palais Royal柱廊 + 花园** · PLACE_IMAGES — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。
 - **巴黎｜Le Marais + 孚日广场** · PLACE_IMAGES — image。Quick Pick/候选地点缺少已核验真实图片。 下一步：补官方或可追溯摄影来源，并做近似图审计。

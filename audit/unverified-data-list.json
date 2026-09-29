@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-18T14:29:57.890Z",
+  "generatedAt": "2026-09-29T14:34:48.504Z",
   "policy": "真实性 > 完成率；未验证字段不进入事实结论。",
-  "total": 244,
+  "total": 243,
   "prioritySummary": {
     "P0": 23,
     "P1": 128,
-    "P2": 93
+    "P2": 92
   },
   "actionWindowSummary": {
     "ACTIONABLE_NOW": 0,
@@ -22,7 +22,7 @@
     "TRANSPORT_LIVE_DATA": 7,
     "GYM_REALITY": 1,
     "SHOPPING_REALITY": 31,
-    "PLACE_IMAGES": 22,
+    "PLACE_IMAGES": 21,
     "PICK_IMAGES": 10
   },
   "items": [
@@ -3059,18 +3059,6 @@
       "id": "opt-prague-clementinum",
       "name": "Clementinum",
       "city": "布拉格",
-      "fields": [
-        "image"
-      ],
-      "reason": "Quick Pick/候选地点缺少已核验真实图片。",
-      "nextAction": "补官方或可追溯摄影来源，并做近似图审计。",
-      "priority": "P2"
-    },
-    {
-      "category": "PLACE_IMAGES",
-      "id": "opt-paris-sainte",
-      "name": "圣礼拜堂",
-      "city": "巴黎",
       "fields": [
         "image"
       ],

@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-18T14:29:58.708Z",
-  "version": "4432e1e68510",
-  "assetCount": 197,
-  "mediaAssetCount": 190,
-  "totalBytes": 20717744,
+  "generatedAt": "2026-09-29T14:34:51.946Z",
+  "version": "33185b5813d6",
+  "assetCount": 201,
+  "mediaAssetCount": 194,
+  "totalBytes": 22581028,
   "assets": [
     "/",
     "/?view=home",
@@ -157,11 +157,13 @@
     "/images/p5_0.webp",
     "/images/p7_0.webp",
     "/images/p9_0.webp",
+    "/images/places/accademia_florence/01.webp",
     "/images/places/arc_triomphe/02.webp",
     "/images/places/bridge_sighs/02.webp",
     "/images/places/cdg/02.webp",
     "/images/places/charles_bridge/02.webp",
     "/images/places/colosseum/02.webp",
+    "/images/places/doges_palace/01.webp",
     "/images/places/duomo_firenze/02.webp",
     "/images/places/eiffel/01.webp",
     "/images/places/eiffel/02.webp",
@@ -175,10 +177,12 @@
     "/images/places/montmartre/02.webp",
     "/images/places/navona/02.webp",
     "/images/places/oltrarno/02.webp",
+    "/images/places/opt-paris-sainte/01.webp",
     "/images/places/opt-venice-rialto/01.webp",
     "/images/places/opt-venice-rialto/02.webp",
     "/images/places/opt-vienna-stephansdom/01.webp",
     "/images/places/opt-vienna-stephansdom/02.webp",
+    "/images/places/palais_garnier/01.webp",
     "/images/places/pantheon/02.webp",
     "/images/places/piazzale_michelangelo/02.webp",
     "/images/places/ponte_vecchio/02.webp",
@@ -1075,6 +1079,12 @@
       "role": "stop"
     },
     {
+      "file": "/images/places/accademia_florence/01.webp",
+      "group": "placeCover",
+      "entityId": "accademia_florence",
+      "role": "gallery"
+    },
+    {
       "file": "/images/places/arc_triomphe/02.webp",
       "group": "placeAux",
       "entityId": "arc_triomphe",
@@ -1103,6 +1113,12 @@
       "group": "placeAux",
       "entityId": "colosseum",
       "role": "detail"
+    },
+    {
+      "file": "/images/places/doges_palace/01.webp",
+      "group": "placeCover",
+      "entityId": "doges_palace",
+      "role": "gallery"
     },
     {
       "file": "/images/places/duomo_firenze/02.webp",
@@ -1183,6 +1199,12 @@
       "role": "detail"
     },
     {
+      "file": "/images/places/opt-paris-sainte/01.webp",
+      "group": "placeCover",
+      "entityId": "opt-paris-sainte",
+      "role": "gallery"
+    },
+    {
       "file": "/images/places/opt-venice-rialto/01.webp",
       "group": "placeCover",
       "entityId": "opt-venice-rialto",
@@ -1205,6 +1227,12 @@
       "group": "placeAux",
       "entityId": "opt-vienna-stephansdom",
       "role": "detail"
+    },
+    {
+      "file": "/images/places/palais_garnier/01.webp",
+      "group": "placeCover",
+      "entityId": "palais_garnier",
+      "role": "gallery"
     },
     {
       "file": "/images/places/pantheon/02.webp",

@@ -29,6 +29,15 @@
     "entityId": "accademia_bridge"
   },
   {
+    "file": "/images/places/accademia_florence/01.webp",
+    "caption": "Michelangelo’s David in the Accademia Gallery",
+    "source": "Wikimedia Commons",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Michelangelo's_David,_Galleria_dell'Accademia,_Florence_(26651343286).jpg",
+    "lastVerified": "2026-09-29",
+    "role": "gallery",
+    "entityId": "accademia_florence"
+  },
+  {
     "file": "/images/places/arc_triomphe/02.webp",
     "caption": "The Arc de Triomphe (Arch of Triumph), at the center of the place Charles de Gaulle, Paris.",
     "source": "Wikimedia Commons",
@@ -199,6 +208,15 @@
     "lastVerified": "2026-09-06",
     "role": "hero",
     "entityId": "day-9"
+  },
+  {
+    "file": "/images/places/doges_palace/01.webp",
+    "caption": "Doge’s Palace · Great Council Chamber",
+    "source": "Wikimedia Commons",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Interno_della_Sala_del_Maggior_Consiglio_-_Palazzo_Ducale,_Venezia.JPG",
+    "lastVerified": "2026-09-29",
+    "role": "gallery",
+    "entityId": "doges_palace"
   },
   {
     "file": "/images/places/duomo_firenze/02.webp",
@@ -968,6 +986,15 @@
     "entityId": "oltrarno"
   },
   {
+    "file": "/images/places/opt-paris-sainte/01.webp",
+    "caption": "Sainte-Chapelle · stained-glass interior",
+    "source": "Wikimedia Commons",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:La-Sainte-Chapelle-interior.jpg",
+    "lastVerified": "2026-09-29",
+    "role": "gallery",
+    "entityId": "opt-paris-sainte"
+  },
+  {
     "file": "/images/places/opt-venice-rialto/02.webp",
     "caption": "Two \"sandolisti\" (sandal is a typical boat in Venice) pull out with clients on board from a row of gondolas on the Grand Canal near Rialto Bridge.",
     "source": "Wikimedia Commons · CC BY-SA 3.0",
@@ -1026,6 +1053,15 @@
     "role": "photo-angle",
     "entityId": "opt-vienna-stephansdom",
     "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/99/Zahnwehherrgott_St_Stephen_cathedral_Vienna.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  {
+    "file": "/images/places/palais_garnier/01.webp",
+    "caption": "Palais Garnier · Grand Foyer",
+    "source": "Wikimedia Commons",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Le_Grand_Foyer.jpg",
+    "lastVerified": "2026-09-29",
+    "role": "gallery",
+    "entityId": "palais_garnier"
   },
   {
     "file": "/images/places/pantheon/02.webp",
