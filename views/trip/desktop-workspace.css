@@ -61,10 +61,10 @@
 .workspace-activity-illustration[data-kind='flight'], .workspace-activity-illustration[data-kind='transfer'] { background: linear-gradient(145deg, #edf5ff, #d9e9fb); color: #4776a8; }
 .workspace-activity-illustration[data-kind='flight'] small, .workspace-activity-illustration[data-kind='transfer'] small { color: #4776a8; }
 .workspace-stop-copy { min-width: 0; padding: 0; border: 0; background: transparent; text-align: left; }
-.workspace-stop-title { display: flex; min-width: 0; align-items: center; gap: 7px; }
-.workspace-stop-copy h3 { overflow: hidden; margin: 1px 0 5px; font-size: 15px; font-weight: 650; line-height: 1.2; text-overflow: ellipsis; white-space: nowrap; }
+.workspace-stop-title { display: flex; min-width: 0; align-items: flex-start; gap: 7px; }
+.workspace-stop-copy h3 { display: -webkit-box; overflow: hidden; margin: 1px 0 5px; font-size: 15px; font-weight: 650; line-height: 1.2; overflow-wrap: anywhere; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
 .workspace-stop-title h3 { min-width: 0; margin-bottom: 4px; }
-.workspace-stop-title .trip-status-badge { flex: 0 0 auto; }
+.workspace-stop-title .trip-status-badge { flex: 0 0 auto; margin-top: 1px; }
 .workspace-stop-copy p { display: flex; align-items: center; gap: 5px; color: var(--ink-soft); font-size: 11px; }
 .workspace-stop-copy p svg { width: 14px; height: 14px; flex: 0 0 auto; }
 .workspace-drag-handle { display: grid; width: 30px; height: 40px; place-items: center; border: 0; border-radius: 8px; background: transparent; color: #aaa; cursor: grab; touch-action: none; opacity: .25; }
