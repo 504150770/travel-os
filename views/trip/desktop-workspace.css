@@ -7,6 +7,7 @@
 .workspace-day-nav > button:not(.workspace-day-button), .workspace-tools > button, .workspace-map-tools button, .workspace-show-plan { display: inline-flex; min-height: 42px; align-items: center; justify-content: center; gap: 7px; padding: 0 12px; border: 1px solid var(--line); border-radius: var(--radius-control); background: #fff; color: var(--ink-soft); font-size: 13px; font-weight: 600; }
 .workspace-day-nav > button:not(.workspace-day-button) { width: 42px; padding: 0; }
 .workspace-day-nav svg, .workspace-tools svg, .workspace-map-tools svg, .workspace-show-plan svg { width: 17px; height: 17px; }
+.workspace-tools > button.workspace-ghost-button { min-height: 42px; border: 0; background: transparent; box-shadow: none; }
 .workspace-day-button { display: grid; grid-template-columns: 1fr auto; min-width: min(360px, 34vw); min-height: 50px; padding: 4px 12px; border: 0; border-radius: var(--radius-control); background: transparent; text-align: left; }
 .workspace-day-button span { color: var(--accent-hover); font-size: 12px; font-weight: 700; letter-spacing: .04em; }
 .workspace-day-button b { overflow: hidden; color: var(--ink); font-size: 16px; font-weight: 600; text-overflow: ellipsis; white-space: nowrap; }
@@ -24,6 +25,7 @@
 .workspace-view-toggle button.active { background: #fff; color: var(--accent-hover); box-shadow: 0 1px 5px rgb(0 0 0 / .06); }
 .workspace-view-toggle svg { width: 16px; }
 .workspace-tools > button:hover, .workspace-day-nav > button:hover, .workspace-map-tools button:hover { border-color: #b9dff5; color: var(--ink); }
+.workspace-tools > button.workspace-ghost-button:hover { border: 0; background: var(--accent-soft); color: var(--accent-hover); }
 .workspace-split, .workspace-compact-stage { position: relative; grid-row: 2; height: 100%; min-height: 0; }
 .workspace-content-pane, .workspace-map-stage { position: relative; width: 100%; height: 100%; min-width: 0; }
 .workspace-map-stage[hidden] { display: none; }
@@ -40,7 +42,7 @@
 .workspace-stop.dragging { z-index: 5; opacity: .78; box-shadow: var(--shadow-float); }
 .workspace-stop-time { display: grid; gap: 3px; align-self: start; }
 .workspace-stop-time input { width: 62px; min-height: 36px; padding: 5px; border: 0; background: transparent; font-size: 13px; font-weight: 700; text-align: center; }
-.workspace-stop-time span { color: var(--ink-soft); font-size: 11px; text-align: center; }
+.workspace-stop-time span { color: var(--ink-soft); font-size: 12px; text-align: center; }
 .workspace-stop-photo { position: relative; width: 58px; height: 58px; overflow: hidden; padding: 0; border: 0; border-radius: 12px; background: var(--surface-strong); }
 .workspace-stop-photo img { object-fit: cover; }
 .workspace-stop-photo > span { display: grid; height: 100%; place-items: center; color: var(--accent-hover); font-weight: 700; }
@@ -65,7 +67,7 @@
 .workspace-stop-copy h3 { display: -webkit-box; overflow: hidden; margin: 1px 0 5px; font-size: 15px; font-weight: 650; line-height: 1.2; overflow-wrap: anywhere; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
 .workspace-stop-title h3 { min-width: 0; margin-bottom: 4px; }
 .workspace-stop-title .trip-status-badge { flex: 0 0 auto; margin-top: 1px; }
-.workspace-stop-copy p { display: flex; align-items: center; gap: 5px; color: var(--ink-soft); font-size: 11px; }
+.workspace-stop-copy p { display: flex; align-items: center; gap: 5px; color: var(--ink-soft); font-size: 12px; }
 .workspace-stop-copy p svg { width: 14px; height: 14px; flex: 0 0 auto; }
 .workspace-drag-handle { display: grid; width: 30px; height: 40px; place-items: center; border: 0; border-radius: 8px; background: transparent; color: #aaa; cursor: grab; touch-action: none; opacity: .25; }
 .workspace-stop:hover .workspace-drag-handle, .workspace-drag-handle:focus-visible, .workspace-stop.selected .workspace-drag-handle { opacity: 1; }
@@ -88,6 +90,11 @@
 
 .workspace-overview { width: 100%; height: 100%; min-height: 0; overflow: hidden; background: #fff; }
 .workspace-overview-scroll { box-sizing: border-box; width: 100%; height: 100%; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 0 22px 40px; scroll-behavior: smooth; scrollbar-gutter: stable; }
+.workspace-timeline, .workspace-overview-scroll { scrollbar-width: thin; scrollbar-color: #e6e6e6 transparent; }
+.workspace-timeline::-webkit-scrollbar, .workspace-overview-scroll::-webkit-scrollbar { width: 10px; height: 10px; }
+.workspace-timeline::-webkit-scrollbar-track, .workspace-overview-scroll::-webkit-scrollbar-track { background: transparent; }
+.workspace-timeline::-webkit-scrollbar-thumb, .workspace-overview-scroll::-webkit-scrollbar-thumb { border: 3px solid transparent; border-radius: var(--radius-pill); background: #e6e6e6; background-clip: padding-box; }
+.workspace-timeline:hover::-webkit-scrollbar-thumb, .workspace-overview-scroll:hover::-webkit-scrollbar-thumb { background: #cfcfcf; background-clip: padding-box; }
 .workspace-overview-hero { position: relative; min-height: clamp(210px, 27vh, 286px); overflow: hidden; padding: 34px 44px; border-radius: 0 0 16px 16px; background: #dcebf4; color: #fff; isolation: isolate; }
 .workspace-overview-hero > img { z-index: -2; object-fit: cover; }
 .workspace-overview-hero > div { position: absolute; z-index: -1; inset: 0; background: linear-gradient(90deg, rgb(0 0 0 / .64), rgb(0 0 0 / .15) 72%, transparent); }

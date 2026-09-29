@@ -1,4 +1,4 @@
-.travel-weather-chip { display: inline-flex; min-height: 40px; align-items: center; gap: 8px; padding: 5px 10px; border: 1px solid var(--line, #e5e5e5); border-radius: 10px; background: #fff; color: var(--ink-soft, #6a6a6a); }
+.travel-weather-chip { display: inline-flex; min-height: 40px; align-items: center; gap: 8px; padding: 5px 10px; border: 1px solid transparent; border-radius: 10px; background: #fff; color: var(--ink-soft, #6a6a6a); }
 .travel-weather-chip > svg { width: 18px; height: 18px; color: var(--accent, #5dade2); }
 .travel-weather-chip > span { display: grid; line-height: 1.15; }
 .travel-weather-chip small { font-size: 10px; font-weight: 650; }

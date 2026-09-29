@@ -268,8 +268,8 @@ export default function DesktopTripWorkspace(props: DesktopTripWorkspaceProps) {
           <button className={viewMode === 'map' ? 'active' : ''} onClick={showMap}><MapIcon /> Map</button>
         </div>
         <button onClick={() => { setDrawer('details'); setDetailEntity(null); }}><Info /> Day details</button>
-        <button onClick={() => { setDrawer('explore'); setDetailEntity(null); }}><Search /> Explore</button>
-        <button onClick={togglePlan}>{planCollapsed ? <PanelLeftOpen /> : <PanelLeftClose />}{planCollapsed ? 'Show Plan' : 'Collapse'}</button>
+        <button className="workspace-ghost-button" onClick={() => { setDrawer('explore'); setDetailEntity(null); }}><Search /> Explore</button>
+        <button className="workspace-ghost-button" onClick={togglePlan}>{planCollapsed ? <PanelLeftOpen /> : <PanelLeftClose />}{planCollapsed ? 'Show Plan' : 'Collapse'}</button>
       </div>
     </header>
     {viewMode === 'map' && <div className="workspace-map-tools" aria-label="Map layers">

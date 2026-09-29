@@ -124,7 +124,7 @@ textarea { width: 100%; min-height: 150px; resize: vertical; }
 
 /* Home */
 .home-v2 { padding-top: 24px; }
-.home-cover { position: relative; height: clamp(420px, 37vw, 500px); overflow: hidden; border-radius: var(--radius-hero); background: var(--surface-strong); isolation: isolate; }
+.home-cover { position: relative; height: clamp(420px, 37vw, 450px); overflow: hidden; border-radius: var(--radius-hero); background: var(--surface-strong); isolation: isolate; }
 .home-cover-media { position: absolute; inset: 0; }
 .home-cover-media img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 48%; transition: transform 450ms var(--ease); }
 .day-hero > img, .detail-hero > img { object-fit: cover; transition: transform 450ms var(--ease); }
@@ -139,7 +139,7 @@ textarea { width: 100%; min-height: 150px; resize: vertical; }
 .countdown svg { width: 17px; color: var(--accent-hover); }
 .countdown b { color: var(--accent-hover); font-size: 19px; }
 .countdown span { font-size: 13px; }
-.home-route-section { margin-top: 42px; }
+.home-route-section { margin-top: 34px; }
 .home-section-heading { display: flex; align-items: end; justify-content: space-between; gap: 20px; margin-bottom: 20px; }
 .home-section-heading h2 { font-size: clamp(25px, 3vw, 30px); font-weight: 600; letter-spacing: -0.025em; }
 .home-section-heading button { display: inline-flex; min-height: 44px; align-items: center; gap: 7px; padding: 0; border: 0; background: transparent; color: var(--ink-soft); font-size: 13px; font-weight: 650; }
