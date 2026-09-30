@@ -35,8 +35,8 @@ export function DocumentsPanel({ bookings }: { bookings: Booking[] }) {
   const groups = useMemo(() => ['Flights', 'Trains', 'Hotels', 'Tickets', 'Insurance', 'Visa', 'Other'].map((group) => ({ group, documents: vault.documents.filter((document) => labels[document.category] === group) })).filter((entry) => entry.documents.length), [vault.documents]);
   const reset = () => { setFile(undefined); setTitle(''); setCity(''); setDayId(''); setBookingId(''); setNote(''); setMessage(undefined); setAdding(false); };
   return <section className="documents-panel">
-    <header className="readiness-summary compact"><div><span>LOCAL DOCUMENT VAULT</span><h2>{vault.documents.length} Documents</h2><p><LockKeyhole /> Stored locally on this device. Never included in JSON backup.</p></div><strong>Offline ✓</strong></header>
-    <button className="readiness-primary" onClick={() => setAdding(!adding)}><Plus /> Add document</button>
+    <header className="readiness-summary compact"><div><span>随身资料</span><h2>{vault.documents.length} 份本机资料</h2><p><LockKeyhole /> 仅保存在此设备，不包含在 JSON 备份中。</p></div><strong>离线可用 ✓</strong></header>
+    <button className="readiness-primary" onClick={() => setAdding(!adding)}><Plus /> 添加资料</button>
     {adding && <form className="document-add" onSubmit={async (event) => {
       event.preventDefault(); if (!file) return;
       const issue = validateDocumentFile(file); if (issue) { setMessage(issue); return; }
@@ -52,7 +52,7 @@ export function DocumentsPanel({ bookings }: { bookings: Booking[] }) {
       {message && <p className="document-error">{message}</p>}
       <div><button type="button" onClick={reset}>Cancel</button><button type="submit">Save offline</button></div>
     </form>}
-    {vault.loading ? <p>Opening local vault…</p> : vault.error ? <p className="document-error">{vault.error}</p> : !groups.length ? <div className="document-empty"><FileText /><h3>No local documents yet</h3><p>Add the ticket or confirmation you need at the airport, station or hotel.</p></div> : groups.map(({ group, documents }) => <section className="document-group" key={group}><h3>{group}</h3>{documents.map((document) => <article key={document.id}>
+    {vault.loading ? <p>正在打开本机资料…</p> : vault.error ? <p className="document-error">{vault.error}</p> : !groups.length ? <div className="document-empty"><FileText /><h3>还没有随身资料</h3><p>添加机场、车站或酒店需要出示的票据与确认函。</p></div> : groups.map(({ group, documents }) => <section className="document-group" key={group}><h3>{group}</h3>{documents.map((document) => <article key={document.id}>
       {document.mimeType === 'application/pdf' ? <FileText /> : <ImageIcon />}
       <span><b>{document.title}</b><small>{[document.dayId && `Day ${document.dayId}`, document.city, formatDocumentSize(document.size), 'Offline ✓'].filter(Boolean).join(' · ')}</small></span>
       <button onClick={async () => { const record = await vault.read(document.id); if (record) setViewer(record); }}>Open</button>

@@ -620,28 +620,28 @@ export function SurvivalGrid({
           <article key={item.city}>
             <header>
               <span>{item.city}</span>
-              <h2>Emergency / Survival</h2>
+              <h2>当地实用信息</h2>
             </header>
-            <Fact label="Hotel">{stay?.hotelName}</Fact>
-            <Fact label="Transit">{item.nearestTransit}</Fact>
+            <Fact label="酒店">{stay?.hotelName}</Fact>
+            <Fact label="交通">{item.nearestTransit}</Fact>
             <a href={search('supermarket')} target="_blank" rel="noreferrer">
-              Nearest supermarket
+              附近超市 ↗
             </a>
             <a href={search('pharmacy')} target="_blank" rel="noreferrer">
-              Nearest pharmacy
+              附近药店 ↗
             </a>
             <a
               href={search('convenience food')}
               target="_blank"
               rel="noreferrer"
             >
-              Convenience food
+              便捷餐食 ↗
             </a>
-            <Fact label="Station">{item.mainStation}</Fact>
-            <Fact label="Airport">{item.airport}</Fact>
-            <Fact label="Emergency">{item.emergency}</Fact>
-            <Fact label="Taxi">{item.taxi}</Fact>
-            <Fact label="Hotel phone">{item.hotelPhone}</Fact>
+            <Fact label="车站">{item.mainStation}</Fact>
+            <Fact label="机场">{item.airport}</Fact>
+            <Fact label="急救">{item.emergency}</Fact>
+            <Fact label="出租车">{item.taxi}</Fact>
+            <Fact label="酒店电话">{item.hotelPhone}</Fact>
           </article>
         );
       })}

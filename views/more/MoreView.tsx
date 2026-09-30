@@ -198,16 +198,15 @@ export function MoreView({
           <OfflinePackControl />
           <article>
             <Download />
-            <h2>EXPORT TRAVEL DATA</h2>
+            <h2>导出行程备份</h2>
             <p>
-              包含Current
-              itinerary、备选池、自定义Entity、酒店、订单、任务、Packing、预算、备注和收藏。Documents 只保存在此设备。
+              包含当前行程、备选、自定义项目、酒店、订单、任务、行李清单、预算、备注和收藏。随身资料文件仅保存在此设备，不包含在备份中。
             </p>
             <button onClick={exportJson}>导出JSON</button>
           </article>
           <article>
             <Upload />
-            <h2>IMPORT TRAVEL DATA</h2>
+            <h2>恢复行程备份</h2>
             <p>导入会覆盖当前浏览器的旅行数据。</p>
             <input
               ref={fileRef}
@@ -225,7 +224,7 @@ export function MoreView({
             </button>
           </article>
           <label>
-            <span>TRIP NOTES</span>
+            <span>旅行备注</span>
             <textarea
               value={notes}
               onChange={(e) => setNotes(e.target.value)}

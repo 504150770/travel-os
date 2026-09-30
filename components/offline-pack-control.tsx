@@ -35,10 +35,10 @@ export function OfflinePackControl() {
   const ready = state.status === 'ready' && state.version === manifest?.version;
   return <article className="offline-pack-control">
     {ready ? <Check /> : state.status === 'downloading' ? <RefreshCw className="offline-spin" /> : <Download />}
-    <h2>{ready ? 'TRIP AVAILABLE OFFLINE' : 'DOWNLOAD TRIP OFFLINE'}</h2>
-    <p>{manifest ? `${manifest.assetCount} core assets · ${sizeLabel(manifest.totalBytes)}` : 'Calculating core pack…'}{state.updatedAt && ` · Updated ${new Date(state.updatedAt).toLocaleString()}`}</p>
+    <h2>{ready ? '离线行程已就绪' : '下载离线行程'}</h2>
+    <p>{manifest ? `${manifest.assetCount} 项核心资源 · ${sizeLabel(manifest.totalBytes)}` : '正在计算离线资源…'}{state.updatedAt && ` · 更新于 ${new Date(state.updatedAt).toLocaleString()}`}</p>
     {state.status === 'downloading' && <progress value={state.done} max={state.total || 1} aria-label="Offline pack download progress" />}
-    <button onClick={download} disabled={!manifest || state.status === 'downloading'}>{state.status === 'downloading' ? `${state.done} / ${state.total} assets` : ready ? 'Update Offline Pack' : 'Download Trip Offline'}</button>
-    {state.status === 'error' && <small>Download paused. Reconnect and try again.</small>}
+    <button onClick={download} disabled={!manifest || state.status === 'downloading'}>{state.status === 'downloading' ? `${state.done} / ${state.total} 项资源` : ready ? '更新离线行程' : '下载离线行程'}</button>
+    {state.status === 'error' && <small>下载已暂停，请重新连接网络后重试。</small>}
   </article>;
 }

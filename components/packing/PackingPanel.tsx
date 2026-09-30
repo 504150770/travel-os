@@ -18,10 +18,10 @@ export function PackingPanel({ items, setItems }: { items: PackingItem[]; setIte
   };
   return <section className="packing-panel">
     <header className="readiness-summary compact">
-      <div><span>EUROPE 18-DAY PACKING</span><h2>{summary.packed} / {summary.total} Packed</h2></div>
-      <strong>{summary.criticalRemaining} Critical Remaining</strong>
+      <div><span>行李清单</span><h2>{summary.packed} / {summary.total} 已收好</h2></div>
+      <strong>{summary.criticalRemaining} 项重要物品待收</strong>
     </header>
-    <button className="readiness-primary" onClick={() => setAdding(!adding)}><Plus /> Add item</button>
+    <button className="readiness-primary" onClick={() => setAdding(!adding)}><Plus /> 添加物品</button>
     {adding && <form className="packing-add" onSubmit={(event) => {
       event.preventDefault(); if (!label.trim()) return;
       setItems(addPackingItem(items, label, category, critical)); setLabel(''); setCritical(false); setAdding(false);
@@ -43,4 +43,3 @@ export function PackingPanel({ items, setItems }: { items: PackingItem[]; setIte
     })}
   </section>;
 }
-

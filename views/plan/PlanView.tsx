@@ -421,16 +421,14 @@ export function PlanView({
             </div>
           </div>
           <div className="budget-state-split">
-            <span>COMMITTED {yuan(budgetState.committed)}</span>
-            <span>PLANNED {yuan(budgetState.planned)}</span>
-            <span>OPTIONAL {yuan(budgetState.optional)}</span>
-            <span>RESERVE {yuan(budgetState.reserve)}</span>
+            <span>已承诺 {yuan(budgetState.committed)}</span>
+            <span>计划支出 {yuan(budgetState.planned)}</span>
+            <span>可选支出 {yuan(budgetState.optional)}</span>
+            <span>预留 {yuan(budgetState.reserve)}</span>
           </div>
           <p className="budget-note">
-            酒店 {yuan(guideData.budget.fixedCommitted.amount)} 为 FIXED
-            COMMITTED COST，不纳入节省项。购物最低{' '}
-            {yuan(guideData.budget.shoppingFloor)} 保留。{unknown} 个Current
-            Trip项目缺少可靠人民币价格，未计入Projected。
+            酒店 {yuan(guideData.budget.fixedCommitted.amount)} 为已承诺固定成本，不纳入节省项。购物最低{' '}
+            {yuan(guideData.budget.shoppingFloor)} 保留。{unknown} 个当前行程项目缺少可靠人民币价格，未计入预计总额。
           </p>
           <section className="recovery-plan">
             <span>预算调整建议</span>

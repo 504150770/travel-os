@@ -469,11 +469,16 @@ textarea { width: 100%; min-height: 150px; resize: vertical; }
 
 /* Secondary views */
 .essentials-v2, .survival-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 30px; }
-.essentials-v2 article, .survival-grid article { padding: 22px; border-radius: var(--radius-card); background: var(--surface); }
+.essentials-v2 article, .survival-grid article { padding: 22px 0; border-top: 1px solid var(--line); background: #fff; }
+.survival-grid header { margin-bottom: 16px; }
+.survival-grid header > span { color: var(--ink-soft); font-size: 13px; }
+.survival-grid h2 { font-size: 20px; font-weight: 600; }
+.survival-grid > article > p { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 12px; align-items: start; }
+.survival-grid > article > a { display: inline-flex; min-height: 44px; align-items: center; margin-right: 16px; color: var(--accent); font-size: 14px; }
 .essentials-v2 h2, .survival-grid h3 { font-size: 18px; }
 .essentials-v2 p, .survival-grid p { margin-top: 7px; color: var(--ink-soft); font-size: 14px; }
 .backup-v2 { display: grid; gap: 22px; margin-top: 30px; }
-.backup-v2 > section { padding: 24px 0; border-top: 1px solid var(--line); }
+.backup-v2 > section, .backup-v2 > article { padding: 24px 0; border-top: 1px solid var(--line); }
 .backup-v2 h2 { font-size: 22px; }
 .backup-v2 p { color: var(--ink-soft); font-size: 14px; }
 .backup-v2 button { min-height: 44px; margin: 12px 8px 0 0; padding: 0 14px; border: 1px solid var(--line-strong); border-radius: var(--radius-control); background: #fff; }
