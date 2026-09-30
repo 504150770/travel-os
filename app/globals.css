@@ -441,7 +441,7 @@ textarea { width: 100%; min-height: 150px; resize: vertical; }
 .confirmed-stays-summary { margin: 34px 0 30px; }
 .confirmed-stays-summary h2 { font-size: 28px; font-weight: 600; }
 .confirmed-stays-summary p { margin-top: 8px; color: var(--ink-soft); font-size: 14px; }
-.confirmed-stay-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 42px 22px; }
+.confirmed-stay-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 22px; }
 .hotel-execution-card { min-width: 0; overflow: hidden; border-radius: var(--radius-card); background: #fff; }
 .hotel-execution-card > header { margin-bottom: 14px; }
 .hotel-execution-card > header span { color: var(--ink-soft); font-size: 13px; }
