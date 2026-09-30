@@ -26,6 +26,8 @@ assert.match(executionCards, /checked \? <Check \/> : <Circle \/>/);
 assert.match(globalCss, /\.deadline-center time[^}]*gap: 4px/);
 assert.match(globalCss, /\.essentials-v2 summary::-webkit-details-marker[^}]*display: none/);
 assert.match(read('components/packing/PackingPanel.tsx'), /value=\{value\}>\{categoryLabels\[value\]\}/);
+assert.match(read('components/mobile/MobileToday.tsx'), /<b>\{rows.length\}<\/b> 项安排/);
+assert.match(read('components/mobile/MobileToday.tsx'), /tomorrow.split\('；待办：'\)\[0\]/);
 
 // home-visual
 assert.match(home, /HOME_HERO = '\/images\/home-eiffel-winter-sunset\.png'/);

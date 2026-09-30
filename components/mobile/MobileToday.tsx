@@ -37,10 +37,10 @@ export type ActionSelection = {
 
 function legLabel(leg: ReturnTypeUseTripController['currentRoute']['legs'][number]) {
   if (leg.recommendedMode === 'Walk') {
-    return leg.walkMin == null ? 'Walk · check route' : `${leg.walkMin} min walk`;
+    return leg.walkMin == null ? '步行 · 出发前核实' : `步行 ${leg.walkMin} 分钟`;
   }
-  if (leg.recommendedMode === 'Taxi') return `Taxi · ${leg.taxiTime}`;
-  return leg.transitMin == null ? 'Transit · check route' : `${leg.transitMin} min transit`;
+  if (leg.recommendedMode === 'Taxi') return `出租车 · ${leg.taxiTime}`;
+  return leg.transitMin == null ? '公共交通 · 出发前核实' : `公共交通 ${leg.transitMin} 分钟`;
 }
 
 export function MobileToday({
@@ -103,7 +103,7 @@ export function MobileToday({
       {next && (
         <section className="mobile-next-card">
           <div className="mobile-card-label">
-            <span>NEXT STOP</span>
+            <span>下一站</span>
             <Clock3 />
           </div>
           <div className="mobile-next-main">
@@ -128,23 +128,23 @@ export function MobileToday({
             </div>
           </div>
           <a className="mobile-primary-action" href={nextLink} target="_blank" rel="noreferrer">
-            <Navigation /> Navigate
+            <Navigation /> 导航
           </a>
         </section>
       )}
 
       <section className="mobile-glance" aria-label="Today at a glance">
         <span>
-          <b>Leave</b> {currentRoute.atGlance.mustLeaveHotel}
+          <b>离店</b> {currentRoute.atGlance.mustLeaveHotel}
         </span>
         <span>
-          <b>{rows.length}</b> Stops
+          <b>{rows.length}</b> 项安排
         </span>
         <span>
-          <b>{currentRoute.summary.walkingKm ?? '—'}</b> km
+          已知步行 <b>{currentRoute.summary.walkingKm ?? '—'}</b> km
         </span>
         <span>
-          <b>Back</b> {currentRoute.atGlance.backHotel.replace('预计', '')}
+          <b>返程</b> {currentRoute.atGlance.backHotel.replace('预计', '')}
         </span>
       </section>
 
@@ -300,8 +300,8 @@ export function MobileToday({
       <section className="mobile-section mobile-important-action">
         <header>
           <div>
-            <span>{dayAction ? 'TODAY ACTION' : 'TOMORROW'}</span>
-            <h2>{dayAction?.title ?? currentRoute.atGlance.tomorrow}</h2>
+            <span>{dayAction ? '当天提醒' : '明日安排'}</span>
+            <h2>{dayAction?.title ?? currentRoute.atGlance.tomorrow.split('；待办：')[0]}</h2>
           </div>
           <MapPin />
         </header>
