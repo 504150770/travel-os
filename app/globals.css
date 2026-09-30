@@ -364,9 +364,9 @@ textarea { width: 100%; min-height: 150px; resize: vertical; }
 .delete-custom { margin-top: 10px; border: 0; background: none; color: var(--error); font-size: 13px; }
 
 /* Plan, bookings, transport and budget */
-.real-hotel-summary { display: grid; grid-template-columns: 1fr auto; gap: 6px 20px; align-items: end; margin: 30px 0; padding: 28px; border-radius: var(--radius-large); background: var(--accent-soft); }
+.real-hotel-summary { display: grid; grid-template-columns: 1fr auto; gap: 6px 20px; align-items: end; margin: 24px 0; padding: 0 0 24px; border-bottom: 1px solid var(--line); }
 .real-hotel-summary span { color: var(--ink-soft); font-size: 12px; font-weight: 700; letter-spacing: 0.08em; }
-.real-hotel-summary b { grid-row: span 2; color: #2478ad; font-size: 28px; }
+.real-hotel-summary b { grid-row: span 2; color: var(--ink); font-size: 28px; }
 .real-hotel-summary p { color: var(--ink-soft); font-size: 14px; }
 .booking-v2 { display: grid; }
 .booking-v2 > details { border-top: 1px solid var(--line); }
@@ -388,6 +388,8 @@ textarea { width: 100%; min-height: 150px; resize: vertical; }
 .airport-comparison > div, .transport-candidates > div { padding: 18px; border-radius: var(--radius-card); background: var(--surface); }
 .airport-comparison span, .airport-comparison small { display: block; margin-top: 5px; font-size: 13px; }
 .transport-candidates { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.transport-candidates:has(> div:only-child) { grid-template-columns: minmax(0, 1fr); }
+.transport-candidates > div:only-child dl { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 24px; }
 .transport-candidates > div > b { color: var(--accent-hover); }
 .transport-candidates > div > span { display: block; margin: 5px 0 12px; font-size: 15px; font-weight: 600; }
 .transport-candidates dl { display: grid; gap: 8px; }
@@ -417,18 +419,18 @@ textarea { width: 100%; min-height: 150px; resize: vertical; }
 .execution-status.confirmed, .execution-status.done { background: var(--success-soft); color: var(--success); }
 .execution-status.requested, .execution-status.required { background: var(--warning-soft); color: var(--warning); }
 .execution-status.unknown { background: var(--waiting-soft); color: var(--waiting); }
-.budget-summary { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; overflow: hidden; margin-top: 30px; border-radius: var(--radius-large); background: var(--line); }
-.budget-summary > div { display: grid; gap: 8px; padding: 24px; background: var(--surface); }
+.budget-summary { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 30px; padding-bottom: 24px; border-bottom: 1px solid var(--line); }
+.budget-summary > div { display: grid; gap: 8px; padding: 0; }
 .budget-summary span { color: var(--ink-soft); font-size: 12px; font-weight: 650; }
 .budget-summary b { font-size: 22px; }
-.budget-state-split { display: flex; gap: 8px; overflow-x: auto; margin: 16px 0; }
-.budget-state-split span { flex: 1 0 auto; padding: 10px 12px; border-radius: var(--radius-pill); background: var(--accent-soft); color: #2478ad; font-size: 12px; font-weight: 600; }
+.budget-state-split { display: flex; flex-wrap: wrap; gap: 12px 24px; margin: 16px 0; }
+.budget-state-split span { color: var(--ink-soft); font-size: 13px; }
 .over-budget { color: var(--error) !important; }
-.recovery-plan { margin: 34px 0; padding: 28px; border-radius: var(--radius-large); background: var(--surface); }
+.recovery-plan { margin: 34px 0; padding: 24px 0; border-top: 1px solid var(--line); }
 .recovery-plan > span { color: var(--ink-soft); font-size: 12px; font-weight: 700; }
 .recovery-plan h2 { margin: 4px 0 18px; font-size: 24px; }
 .recovery-plan > div { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
-.recovery-plan article { padding: 16px; border-top: 2px solid var(--accent); background: #fff; }
+.recovery-plan article { padding: 16px 0; border-top: 1px solid var(--line); }
 .recovery-plan strong { display: block; color: var(--success); }
 .recovery-plan p { margin-top: 8px; color: var(--ink-soft); font-size: 13px; }
 .budget-lines { display: grid; }
@@ -638,6 +640,7 @@ textarea { width: 100%; min-height: 150px; resize: vertical; }
   .booking-v2 summary select { grid-column: 1 / -1; width: 100%; }
   .booking-detail { grid-template-columns: repeat(2, 1fr); }
   .transport-candidates { grid-template-columns: 1fr; }
+  .transport-candidates > div:only-child dl { grid-template-columns: 1fr; }
   .budget-summary { grid-template-columns: repeat(2, 1fr); }
   .recovery-plan > div { grid-template-columns: 1fr; }
   .budget-lines label { grid-template-columns: 1fr auto; }

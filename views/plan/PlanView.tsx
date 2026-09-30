@@ -103,7 +103,7 @@ export function PlanView({
       {tab === 'bookings' && (
         <>
           <section className="real-hotel-summary">
-            <span>REAL HOTEL COMMITMENT</span>
+            <span>住宿确认成本</span>
             <b>{yuan(guideData.hotelBookings.summary.committedCnyApprox)}</b>
             <p>
               已支付 {yuan(guideData.hotelBookings.summary.paidOnlineCny)} ·
@@ -396,15 +396,15 @@ export function PlanView({
         <div>
           <div className="budget-summary">
             <div>
-              <span>HARD CAP</span>
+              <span>预算上限</span>
               <b>{yuan(guideData.budget.hardCap)}</b>
             </div>
             <div>
-              <span>CURRENT COMMITTED</span>
+              <span>已承诺支出</span>
               <b>{yuan(budgetState.committed)}</b>
             </div>
             <div>
-              <span>PROJECTED</span>
+              <span>预计总额</span>
               <b
                 className={
                   projected > guideData.budget.hardCap ? 'over-budget' : ''
@@ -414,7 +414,7 @@ export function PlanView({
               </b>
             </div>
             <div>
-              <span>{overUnder < 0 ? 'OVER CAP' : 'REMAINING'}</span>
+              <span>{overUnder < 0 ? '超出上限' : '预算余量'}</span>
               <b className={overUnder < 0 ? 'over-budget' : ''}>
                 {yuan(Math.abs(overUnder))}
               </b>
@@ -433,7 +433,7 @@ export function PlanView({
             Trip项目缺少可靠人民币价格，未计入Projected。
           </p>
           <section className="recovery-plan">
-            <span>BUDGET RECOVERY PLAN</span>
+            <span>预算调整建议</span>
             <h2>目标节省 {yuan(needToSave)}</h2>
             <div>
               {guideData.budget.recoveryPlan.map((item) => (
