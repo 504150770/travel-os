@@ -69,9 +69,10 @@
 .workspace-stop-title h3 { min-width: 0; margin-bottom: 4px; }
 .workspace-stop-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 5px 7px; margin-top: 4px; }
 .workspace-stop-meta .trip-status-badge { flex: 0 0 auto; }
+.workspace-stop-meta .trip-status-badge[data-status='core'], .workspace-stop-meta .trip-status-badge[data-status='flex'] { padding: 0; border: 0; border-radius: 0; background: transparent; color: var(--ink-soft); font-weight: 500; }
 .workspace-stop-copy p { display: flex; align-items: center; gap: 5px; color: var(--ink-soft); font-size: 12px; }
 .workspace-stop-copy p svg { width: 14px; height: 14px; flex: 0 0 auto; }
-.workspace-drag-handle { display: grid; width: 30px; height: 40px; place-items: center; border: 0; border-radius: 8px; background: transparent; color: #aaa; cursor: grab; touch-action: none; opacity: .25; }
+.workspace-drag-handle { display: grid; width: 30px; height: 40px; place-items: center; border: 0; border-radius: 8px; background: transparent; color: #aaa; cursor: grab; touch-action: none; opacity: 0; }
 .workspace-stop:hover .workspace-drag-handle, .workspace-drag-handle:focus-visible, .workspace-stop.selected .workspace-drag-handle { opacity: 1; }
 .workspace-drag-handle:active { cursor: grabbing; }
 .workspace-stop-actions { grid-column: 2 / -1; display: flex; gap: 6px; max-height: 0; overflow: hidden; opacity: 0; transition: max-height 160ms ease, opacity 160ms ease; }
@@ -131,7 +132,7 @@
 .workspace-place-empty { padding: 20px; border-radius: 12px; background: var(--surface); color: var(--ink-soft); font-size: 13px; }
 .workspace-practical-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--line); }
 .workspace-practical-card { display: grid; grid-template-columns: 132px minmax(0, 1fr); gap: 16px; min-width: 0; min-height: 180px; padding: 0; border: 0; background: #fff; }
-.workspace-hotel-card { padding: 20px; border-radius: 16px; background: var(--surface); }
+.workspace-hotel-card { padding: 0; border-radius: 0; background: transparent; }
 .workspace-practical-card > header { grid-column: 1 / -1; display: flex; min-height: 24px; align-items: center; gap: 7px; }
 .workspace-practical-card > header svg { width: 17px; height: 17px; color: var(--accent-hover); }
 .workspace-practical-card > header b { font-size: 16px; font-weight: 600; }
@@ -245,7 +246,7 @@
 }
 @container trip-overview (max-width: 1100px) {
   .workspace-practical-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .workspace-hotel-card { grid-column: 1 / -1; }
+  .workspace-hotel-card { grid-column: 1 / -1; padding-top: 24px; border-top: 1px solid var(--line); }
 }
 @container trip-overview (max-width: 740px) {
   .workspace-practical-grid { grid-template-columns: minmax(0, 1fr); }
