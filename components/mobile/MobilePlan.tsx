@@ -12,13 +12,13 @@ import { realStays, transportSegments } from '@/features/trip/tripModel';
 import { usePlanController } from '@/features/plan/usePlanController';
 
 const tabs: Array<[PlanTab, string]> = [
-  ['readiness', 'Readiness'],
-  ['bookings', 'Bookings'],
-  ['deadlines', 'Deadlines'],
-  ['checkin', 'Check-in'],
-  ['transport', 'Transport'],
-  ['budget', 'Budget'],
-  ['tasks', 'Tasks'],
+  ['readiness', '出发准备'],
+  ['bookings', '订单'],
+  ['deadlines', '关键日期'],
+  ['checkin', '在线入住'],
+  ['transport', '交通'],
+  ['budget', '预算'],
+  ['tasks', '待办'],
 ];
 
 const ReadinessCenter = lazy(async () => ({ default: (await import('@/components/readiness/ReadinessCenter')).ReadinessCenter }));
@@ -34,8 +34,8 @@ export function MobilePlan({ controller }: { controller: AppController }) {
     <main className="mobile-plan" data-mobile-screen="plan">
       <header className="mobile-screen-heading">
         <span>PLAN</span>
-        <h1>旅行总控</h1>
-        <p>订单、截止时间和预算集中在这里，不打断 Today 的现场节奏。</p>
+        <h1>从容准备，安心出发。</h1>
+        <p>订单、交通和出发前待办，都在这里。</p>
       </header>
       <div className="mobile-filter-row mobile-plan-tabs">
         {tabs.map(([id, label]) => (
@@ -49,7 +49,7 @@ export function MobilePlan({ controller }: { controller: AppController }) {
         ))}
       </div>
 
-      {controller.planTab === 'readiness' && <Suspense fallback={<p className="readiness-loading">Checking trip readiness…</p>}><ReadinessCenter controller={controller} compact /></Suspense>}
+      {controller.planTab === 'readiness' && <Suspense fallback={<p className="readiness-loading">正在整理准备事项…</p>}><ReadinessCenter controller={controller} compact /></Suspense>}
 
       {controller.planTab === 'bookings' && (
         <div className="mobile-control-list">
@@ -101,7 +101,7 @@ export function MobilePlan({ controller }: { controller: AppController }) {
                     })
                   }
                 >
-                  {status === 'Done' ? 'Done' : 'Mark done'}
+                  {status === 'Done' ? '已完成' : '标记完成'}
                 </button>
               </article>
             );
@@ -130,7 +130,7 @@ export function MobilePlan({ controller }: { controller: AppController }) {
                     })
                   }
                 >
-                  {status === 'Done' ? 'Done' : 'Complete'}
+                  {status === 'Done' ? '已完成' : '标记完成'}
                 </button>
               </article>
             );
@@ -157,7 +157,7 @@ export function MobilePlan({ controller }: { controller: AppController }) {
       {controller.planTab === 'budget' && (
         <section className="mobile-budget-card">
           <CreditCard />
-          <span>PROJECTED TOTAL</span>
+          <span>预计总额</span>
           <h2>{yuan(plan.projected)}</h2>
           <p>{plan.unknown} 项仍待确认 · 距硬上限 {yuan(plan.overUnder)}</p>
           <div>
@@ -192,7 +192,7 @@ export function MobilePlan({ controller }: { controller: AppController }) {
                     })
                   }
                 >
-                  {status === 'Done' ? 'Done' : 'Mark done'}
+                  {status === 'Done' ? '已完成' : '标记完成'}
                 </button>
               </article>
             );

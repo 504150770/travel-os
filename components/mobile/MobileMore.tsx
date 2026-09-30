@@ -18,13 +18,13 @@ const DocumentsPanel = lazy(async () => ({ default: (await import('@/components/
 const PackingPanel = lazy(async () => ({ default: (await import('@/components/packing/PackingPanel')).PackingPanel }));
 
 const panels: Array<[MorePanel, string]> = [
-  ['stays', 'Hotels'],
-  ['documents', 'Documents'],
-  ['packing', 'Packing'],
-  ['essentials', 'Essentials'],
-  ['survival', 'Survival'],
-  ['offline', 'Offline'],
-  ['backup', 'Backup'],
+  ['stays', '住宿'],
+  ['documents', '旅行资料'],
+  ['packing', '行李清单'],
+  ['essentials', '实用信息'],
+  ['survival', '出行须知'],
+  ['offline', '离线'],
+  ['backup', '备份'],
 ];
 
 const mobilePanelForTab: Record<MoreTab, MorePanel> = {
@@ -72,8 +72,8 @@ export function MobileMore({ controller }: { controller: AppController }) {
     <main className="mobile-more" data-mobile-screen="more">
       <header className="mobile-screen-heading">
         <span>MORE</span>
-        <h1>旅途工具箱</h1>
-        <p>住宿、离线资料、生存信息和本地备份。</p>
+        <h1>旅途所需，随手可得。</h1>
+        <p>查看住宿、随身资料与本地备份。</p>
       </header>
       <div className="mobile-filter-row">
         {panels.map(([id, label]) => (
@@ -109,9 +109,9 @@ export function MobileMore({ controller }: { controller: AppController }) {
                   />
                 )}
                 <span>
-                  <small>{item.city} · {item.checkIn.slice(5)}–{item.checkOut.slice(5)}</small>
+                  <small>{item.areaLabel ?? item.city} · {item.checkIn.slice(5)}–{item.checkOut.slice(5)}</small>
                   <b>{item.hotelName}</b>
-                  <em><Check /> Confirmed · {item.execution.checkInTime}</em>
+                  <em><Check /> 已确认 · {item.execution.checkInTime}</em>
                 </span>
               </button>
             );

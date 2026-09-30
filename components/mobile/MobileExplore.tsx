@@ -12,10 +12,10 @@ import { selectCoverImage } from '@/lib/media';
 import { MobileEntitySheet } from '@/components/mobile/MobileEntitySheet';
 
 const categories: Array<[DiscoverTab, string, EntityType[]]> = [
-  ['places', 'Places', ['place', 'activity', 'photo_spot', 'custom']],
-  ['food', 'Food', ['restaurant', 'cafe']],
-  ['gym', 'Gym', ['gym']],
-  ['shopping', 'Shopping', ['shopping']],
+  ['places', '景点', ['place', 'activity', 'photo_spot', 'custom']],
+  ['food', '美食', ['restaurant', 'cafe']],
+  ['gym', '健身', ['gym']],
+  ['shopping', '购物', ['shopping']],
 ];
 
 export function MobileExplore({ controller }: { controller: AppController }) {
@@ -45,14 +45,15 @@ export function MobileExplore({ controller }: { controller: AppController }) {
       <header className="mobile-screen-heading">
         <span>EXPLORE</span>
         <h1>沿着行程发现</h1>
-        <p>浏览不会修改 Current Plan；只有明确点击 Add to Today 才会加入。</p>
+        <p>收藏心动的地点，准备好后再加入当天行程。</p>
       </header>
       <label className="mobile-search">
         <Search />
         <input
           value={search}
           onChange={(event) => setSearch(event.target.value)}
-          placeholder="Search places, food, gym…"
+          placeholder="搜索景点、美食、健身…"
+          aria-label="搜索推荐"
         />
       </label>
       <div className="mobile-filter-row">
@@ -83,7 +84,7 @@ export function MobileExplore({ controller }: { controller: AppController }) {
           const placed = controller.actions.placement(entity.id, controller.selectedDay);
           return (
             <article key={entity.id}>
-              <button className="mobile-explore-image" onClick={() => setDetail(entity)}>
+              <button className="mobile-explore-image" onClick={() => setDetail(entity)} aria-label={`查看 ${entity.name}`}>
                 {cover && (
                   <Image
                     unoptimized
@@ -108,7 +109,6 @@ export function MobileExplore({ controller }: { controller: AppController }) {
                 <Heart fill={favorite ? 'currentColor' : 'none'} />
               </button>
               <button className="mobile-explore-copy" onClick={() => setDetail(entity)}>
-                <span>{entity.type}</span>
                 <h2>{entity.name}</h2>
                 <p>{entity.priceLabel}</p>
               </button>
@@ -123,7 +123,7 @@ export function MobileExplore({ controller }: { controller: AppController }) {
                   )
                 }
               >
-                <Plus /> {placed ? `Day ${placed.dayId} 已加入` : 'Add to Today'}
+                <Plus /> {placed ? `Day ${placed.dayId} 已加入` : '加入当天'}
               </button>
             </article>
           );

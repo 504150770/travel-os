@@ -36,7 +36,7 @@ export function MobileHotelSheet({
     <MobileSheet
       open
       close={close}
-      eyebrow={`STAY · ${stay.areaLabel ?? stay.city}`}
+      eyebrow={`住宿 · ${stay.areaLabel ?? stay.city}`}
       title={stay.hotelName}
       className="mobile-entity-sheet"
     >
@@ -58,13 +58,13 @@ export function MobileHotelSheet({
             sizes="100vw"
           />
           <span>
-            <Camera /> {images.length} Photos
+            <Camera /> {images.length} 张照片
           </span>
         </button>
       )}
       <div className="mobile-detail-primary">
         <a href={maps} target="_blank" rel="noreferrer">
-          <Navigation /> Navigate
+          <Navigation /> 导航
         </a>
         <button
           onClick={async () => {
@@ -73,7 +73,7 @@ export function MobileHotelSheet({
             window.setTimeout(() => setCopied(false), 1400);
           }}
         >
-          {copied ? <Check /> : <Copy />} {copied ? 'Copied' : 'Copy Address'}
+          {copied ? <Check /> : <Copy />} {copied ? '已复制' : '复制地址'}
         </button>
       </div>
       <p className="mobile-hotel-address">{stay.execution.address}</p>
@@ -95,7 +95,7 @@ export function MobileHotelSheet({
             height={66}
           />
           <span>
-            <b>Entrance photo</b>
+            <b>酒店入口</b>
             到达时快速确认入口
           </span>
         </button>
