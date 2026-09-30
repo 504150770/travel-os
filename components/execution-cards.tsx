@@ -328,7 +328,7 @@ export function HotelExecutionCard({
         <span>{stay.execution.paymentStatus}</span>
       </div>
       <details className="hotel-detail-toggle">
-        <summary>View Stay</summary>
+        <summary>查看住宿详情</summary>
         <div className="hotel-execution-grid">
           <section>
             <h3>CHECK-IN</h3>
@@ -457,7 +457,7 @@ export function CheckinCenter({
   return (
     <div className="checkin-center">
       <header>
-        <span>CHECK-IN CENTER</span>
+        <span>在线入住</span>
         <h1>在线入住集中处理</h1>
         <p>只把真正影响进门的动作标为 Required。</p>
       </header>
@@ -482,6 +482,7 @@ export function CheckinCenter({
             }
           >
             <button
+              aria-label={`${stay.hotelName}：${checked ? '标记未完成' : '标记完成'}`}
               className={checked ? 'done' : ''}
               onClick={() =>
                 setStatuses({
@@ -509,10 +510,10 @@ export function CheckinCenter({
             </b>
             {validLink ? (
               <a href={validLink} target="_blank" rel="noreferrer">
-                Open link
+                打开入住链接
               </a>
             ) : (
-              <span className="email-action">Open original email</span>
+              <span className="email-action">请在原始邮件中查找链接</span>
             )}
             <label className="private-checkin-link">
               <span>PRIVATE LINK · 仅保存在本机</span>

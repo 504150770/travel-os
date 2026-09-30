@@ -30,8 +30,8 @@ function Stay({
   return (
     <div className="confirmed-stays">
       <header className="confirmed-stays-summary">
-        <span>CONFIRMED STAYS · 6 CITIES</span>
-        <h2>15晚住宿执行卡</h2>
+        <span>YOUR STAYS</span>
+        <h2>六座城市，15晚住宿</h2>
         <p>
           固定承诺 {yuan(guideData.hotelBookings.summary.committedCnyApprox)} ·
           已支付 {yuan(guideData.hotelBookings.summary.paidOnlineCny)} ·
@@ -86,44 +86,44 @@ export function MoreView({
 }) {
   const { fileRef, exportJson } = useMoreController(backup);
   return (
-    <div className="v2-view">
+    <div className="v2-view content-view more-view">
       <header className="v2-heading">
         <span>MORE</span>
-        <h1>住宿、地图与离线备份</h1>
-        <p>Current Stay、用户日程与自定义Entity都会进入同一份JSON。</p>
+        <h1>旅途所需，随手可得。</h1>
+        <p>查看住宿、整理随身资料，或备份你的行程。</p>
       </header>
       <div className="subnav">
         <button
           className={tab === 'stay' ? 'active' : ''}
           onClick={() => setTab('stay')}
         >
-          STAY
+          住宿
         </button>
-        <button className={tab === 'documents' ? 'active' : ''} onClick={() => setTab('documents')}>DOCUMENTS</button>
-        <button className={tab === 'packing' ? 'active' : ''} onClick={() => setTab('packing')}>PACKING</button>
+        <button className={tab === 'documents' ? 'active' : ''} onClick={() => setTab('documents')}>旅行资料</button>
+        <button className={tab === 'packing' ? 'active' : ''} onClick={() => setTab('packing')}>行李清单</button>
         <button
           className={tab === 'map' ? 'active' : ''}
           onClick={() => setTab('map')}
         >
-          ROUTES
+          路线
         </button>
         <button
           className={tab === 'survival' ? 'active' : ''}
           onClick={() => setTab('survival')}
         >
-          SURVIVAL
+          实用信息
         </button>
         <button
           className={tab === 'essentials' ? 'active' : ''}
           onClick={() => setTab('essentials')}
         >
-          ESSENTIALS
+          出行须知
         </button>
         <button
           className={tab === 'backup' ? 'active' : ''}
           onClick={() => setTab('backup')}
         >
-          BACKUP
+          备份
         </button>
       </div>
       {tab === 'stay' && <Stay privateLinks={privateLinks} open={open} />}{' '}

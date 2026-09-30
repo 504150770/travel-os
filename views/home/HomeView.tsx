@@ -92,7 +92,7 @@ export function HomeView({ daysLeft, nextAction, projectedBudget, actualTotal, u
       </article>
       <article className="home-compact-card">
         <div className="home-card-icon budget"><WalletCards /></div>
-        <div><span>TRIP BUDGET</span><h2>{yuan(projectedBudget)} <small>/ {yuan(actualTotal)}</small></h2><p>{unknownCosts}项费用待确认；Current Plan 变更会自动重算</p></div>
+        <div><span>TRIP BUDGET</span><h2>{yuan(projectedBudget)} <small>预计总额</small></h2><p>实际记录 {yuan(actualTotal)} · {unknownCosts}项费用待确认</p></div>
         <button onClick={openBudget}>查看明细 <ArrowRight /></button>
       </article>
       <article className="home-compact-card">

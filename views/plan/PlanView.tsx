@@ -49,54 +49,54 @@ export function PlanView({
 }) {
   const { bookings, tasks, projected, unknown, overUnder, needToSave } = usePlanController({ bookingStatuses, budgetState });
   return (
-    <div className="v2-view">
+    <div className="v2-view content-view plan-view">
       <header className="v2-heading">
-        <span>PLAN / CONTROL</span>
-        <h1>订单、交通、任务与预算</h1>
-        <p>真实酒店订单来自6份本地入住凭证；动态票价保留待核验状态。</p>
+        <span>PLAN</span>
+        <h1>从容准备，安心出发。</h1>
+        <p>订单、跨城交通与出发前待办，都在这里。</p>
       </header>
       <div className="subnav">
         <button
           className={tab === 'readiness' ? 'active' : ''}
           onClick={() => setTab('readiness')}
         >
-          READINESS
+          出发准备
         </button>
         <button
           className={tab === 'bookings' ? 'active' : ''}
           onClick={() => setTab('bookings')}
         >
-          BOOKINGS
+          订单
         </button>
         <button
           className={tab === 'transport' ? 'active' : ''}
           onClick={() => setTab('transport')}
         >
-          TRANSPORT
+          交通
         </button>
         <button
           className={tab === 'checkin' ? 'active' : ''}
           onClick={() => setTab('checkin')}
         >
-          CHECK-IN
+          在线入住
         </button>
         <button
           className={tab === 'deadlines' ? 'active' : ''}
           onClick={() => setTab('deadlines')}
         >
-          DEADLINES
+          关键日期
         </button>
         <button
           className={tab === 'tasks' ? 'active' : ''}
           onClick={() => setTab('tasks')}
         >
-          TASKS
+          待办
         </button>
         <button
           className={tab === 'budget' ? 'active' : ''}
           onClick={() => setTab('budget')}
         >
-          BUDGET
+          预算
         </button>
       </div>
       {tab === 'readiness' && <Suspense fallback={<p className="readiness-loading">Checking trip readiness…</p>}><ReadinessCenter controller={controller} /></Suspense>}

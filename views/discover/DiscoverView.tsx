@@ -183,15 +183,17 @@ function ExploreCard({
       <Favorite id={entity.id} value={favorites} setValue={setFavorites} />
       <button className="explore-open" onClick={() => inspect(entity)}>
         <small>
-          {entity.type} · {entity.priceLabel}
+          {entity.priceLabel}
         </small>
         <h2>{entity.name}</h2>
         <span>查看详情 →</span>
       </button>
       <p>{entity.description || entity.notes}</p>
+      <details className="explore-context">
+        <summary>拍摄与实用信息</summary>
       {stay && (
         <p className="hotel-fit">
-          FROM HOTEL · {stay.hotelName} · {hotelFit}
+          从 {stay.hotelName} 出发 · {hotelFit}
         </p>
       )}
       {entity.images[0] && (
@@ -229,6 +231,7 @@ function ExploreCard({
           查看菜单 <ExternalLink />
         </a>
       )}
+      </details>
       <EntityActions
         entity={entity}
         selectedDay={selectedDay}
@@ -268,21 +271,21 @@ export function DiscoverView({
 }) {
   const { detailEntity, setDetailEntity, shown, picks, photos } = useDiscoverController({ tab, city, entities });
   return (
-    <div className="v2-view">
+    <div className="v2-view content-view discover-view">
       <header className="v2-heading">
-        <span>EXPLORE / INSPIRATION</span>
-        <h1>一个内容库，随时加入行程</h1>
-        <p>拍摄提示和XHS入口附着在每个Entity；不会再复制地点资料。</p>
+        <span>DISCOVER</span>
+        <h1>找到旅途中的心动之处。</h1>
+        <p>浏览六城景点与推荐，收藏或加入你的行程。</p>
       </header>
       <div className="subnav">
         {(
           [
-            ['places', 'PLACES'],
-            ['food', 'FOOD'],
-            ['gym', 'GYM'],
-            ['shopping', 'SHOPPING'],
-            ['picks', 'QUICK PICKS'],
-            ['photos', 'PHOTO LIBRARY'],
+            ['places', '景点'],
+            ['food', '美食'],
+            ['gym', '健身'],
+            ['shopping', '购物'],
+            ['picks', '精选'],
+            ['photos', '照片'],
           ] as [DiscoverTab, string][]
         ).map(([id, label]) => (
           <button

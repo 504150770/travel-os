@@ -14,11 +14,6 @@ export function DesktopShell({ view, online, navigate, openBackup, openSettings,
       <PersonalMenu online={online} openBackup={openBackup} openSettings={openSettings} />
     </header>
     <main className="v2-main">
-      {view !== 'home' && view !== 'trip' && <header className="v2-topbar">
-        <div><span>EUROPE 2026</span><b>{NAV_ITEMS.find((item) => item.id === view)?.label}</b></div>
-        <p>18 days · 6 cities · Dec 1–18</p>
-        <span className={online ? 'connectivity online' : 'connectivity offline'}>{online ? '在线 · 本机保存' : '离线 · 已缓存内容可用'}</span>
-      </header>}
       {children}
     </main>
   </>;
