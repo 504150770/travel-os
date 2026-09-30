@@ -52,12 +52,12 @@ function connectorLabel(leg: DayRoute['legs'][number]) {
 function activityIllustration(name: string): { kind: string; label: string; Icon: LucideIcon } {
   if (/机场|航班|飞往|起飞|落地/.test(name)) return { kind: 'flight', label: '航班', Icon: Plane };
   if (/步行|散步/.test(name)) return { kind: 'walk', label: '步行', Icon: Footprints };
+  if (/排队|缓冲|等候|安检/.test(name)) return { kind: 'buffer', label: '缓冲', Icon: Clock3 };
+  if (/转场|火车|巴士|地铁|Transfer|前往|返回/.test(name)) return { kind: 'transfer', label: '转场', Icon: TrainFront };
   if (/咖啡/.test(name)) return { kind: 'coffee', label: '咖啡', Icon: Coffee };
   if (/早餐|午餐|晚餐|用餐/.test(name)) return { kind: 'meal', label: '用餐', Icon: Utensils };
-  if (/排队|缓冲|等候|安检/.test(name)) return { kind: 'buffer', label: '缓冲', Icon: Clock3 };
   if (/抵达|入住|退房|酒店|休息|行李/.test(name)) return { kind: 'rest', label: '休息', Icon: BedDouble };
   if (/自由|弹性/.test(name)) return { kind: 'free', label: '自由活动', Icon: Compass };
-  if (/转场|火车|巴士|地铁|Transfer|前往|返回/.test(name)) return { kind: 'transfer', label: '转场', Icon: TrainFront };
   return { kind: 'activity', label: '活动', Icon: CalendarDays };
 }
 
