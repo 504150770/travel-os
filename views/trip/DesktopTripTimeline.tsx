@@ -121,8 +121,8 @@ function SortableStop({
           : <ActivityIllustration name={entity.name} />}
       </button>
       <button className="workspace-stop-copy" onClick={select}>
-        <div className="workspace-stop-title"><h3>{entity.name}</h3><StatusBadge status={presentation.status} /></div>
-        <p><TicketCheck /> {presentation.supportingLabel}</p>
+        <div className="workspace-stop-title"><h3>{entity.name}</h3></div>
+        <div className="workspace-stop-meta"><StatusBadge status={presentation.status} /><p><TicketCheck /> {presentation.supportingLabel}</p></div>
       </button>
       <button
         className="workspace-drag-handle"

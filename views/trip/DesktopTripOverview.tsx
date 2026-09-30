@@ -22,8 +22,7 @@ import {
   selectCoverImage,
 } from '@/lib/media';
 import { mapLinks } from '@/features/trip/tripModel';
-import type { PlanPresentationRow, TodaysTip } from '@/features/trip/tripPresentationModel';
-import { StatusBadge } from '@/components/trip/TripStatusBadge';
+import type { TodaysTip } from '@/features/trip/tripPresentationModel';
 import { TodaysTipsCard } from '@/views/trip/TodaysTipsCard';
 
 function usefulCopy(entity: Entity | undefined, fallback: string) {
@@ -47,7 +46,7 @@ function RecommendationCard({
   const cover = entity ? selectCoverImage(entity.images) : null;
   const isFood = kind === 'food';
   return <article className="workspace-practical-card">
-    <header>{isFood ? <Utensils /> : <Dumbbell />}<b>{isFood ? '美食推荐' : '健身推荐'}</b><StatusBadge status="flex" /></header>
+    <header>{isFood ? <Utensils /> : <Dumbbell />}<b>{isFood ? '美食推荐' : '健身推荐'}</b><span>可选</span></header>
     {entity && cover ? <button
       className="workspace-practical-image"
       onClick={() => openGallery(openGalleryRequest(entity.id, entity.name, entity.images, cover))}
@@ -72,7 +71,6 @@ export function DesktopTripOverview({
   gyms,
   stay,
   dayAction,
-  planRows,
   tips,
   inspect,
   openGallery,
@@ -85,7 +83,6 @@ export function DesktopTripOverview({
   gyms: Entity[];
   stay?: HotelBooking;
   dayAction?: ActionItem;
-  planRows: PlanPresentationRow[];
   tips: TodaysTip[];
   inspect: (entity: Entity) => void;
   openGallery: (gallery: GalleryRequest) => void;
@@ -93,6 +90,8 @@ export function DesktopTripOverview({
 }) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const places = dayState.activeEntities.filter((entity) => entity.type === 'place');
+  const landmarkCover = selectCoverImage(places.find((entity) => entity.id === 'eiffel')?.images ?? []);
+  const overviewHero = landmarkCover ? { file: landmarkCover.file, caption: landmarkCover.caption } : hero;
   const walkingKm = dayState.route.summary.walkingKm;
   const hotelImages = useMemo(() => (stay?.images ?? [])
     .filter((image) => Boolean(image.file))
@@ -106,7 +105,6 @@ export function DesktopTripOverview({
     : null;
   const lastLeg = dayState.route.legs.at(-1);
   const returnPending = !lastLeg || lastLeg.status.toLowerCase().includes('pending') || lastLeg.recommended.includes('待确认');
-  const statusByEntity = useMemo(() => new Map(planRows.map((row) => [row.entity.id, row.status])), [planRows]);
 
   useEffect(() => {
     scrollRef.current?.scrollTo({ top: 0, behavior: 'instant' });
@@ -115,7 +113,7 @@ export function DesktopTripOverview({
   return <section className="workspace-overview" aria-label="Day overview" data-trip-overview>
     <div className="workspace-overview-scroll" ref={scrollRef}>
       <section className="workspace-overview-hero">
-        {hero && <Image unoptimized src={hero.file} alt={hero.caption} fill priority sizes="(max-width: 1024px) 62vw, 1040px" />}
+        {overviewHero && <Image unoptimized src={overviewHero.file} alt={overviewHero.caption} fill priority sizes="(max-width: 1024px) 62vw, 1040px" />}
         <div />
         <span>{day.city.toUpperCase()}</span>
         <h1>{day.theme}</h1>
@@ -133,7 +131,7 @@ export function DesktopTripOverview({
                 <Image unoptimized src={cover.file} alt={cover.title || entity.name} fill sizes="(max-width: 1180px) 50vw, 520px" />
                 <span><Camera /> {entity.images.length} 张图片</span>
               </button> : <button className="workspace-place-image placeholder" onClick={() => inspect(entity)} aria-label={`查看 ${entity.name} 详情`}><Camera /><span>查看详情</span></button>}
-              <div><div className="workspace-place-title"><h3>{entity.name}</h3>{statusByEntity.get(entity.id) && <StatusBadge status={statusByEntity.get(entity.id)!} />}</div><p>{description}</p><button onClick={() => inspect(entity)} aria-label={`查看 ${entity.name} 详情`}><ArrowRight /></button></div>
+              <div><div className="workspace-place-title"><h3>{entity.name}</h3></div><p>{description}</p><button onClick={() => inspect(entity)} aria-label={`查看 ${entity.name} 详情`}><ArrowRight /></button></div>
             </article>;
           })}
         </div> : <p className="workspace-place-empty">当天没有正式景点，完整安排请看左侧时间线。</p>}

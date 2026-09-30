@@ -221,7 +221,6 @@ export default function DesktopTripWorkspace(props: DesktopTripWorkspaceProps) {
       gyms={trip.optionalGyms}
       stay={trip.stay}
       dayAction={dayAction}
-      planRows={planRows}
       tips={todaysTips}
       openGallery={(gallery) => open(gallery)}
       openHotel={() => { setDrawer('details'); setDetailEntity(null); }}
@@ -267,7 +266,7 @@ export default function DesktopTripWorkspace(props: DesktopTripWorkspaceProps) {
           <button className={viewMode === 'overview' ? 'active' : ''} onClick={() => setViewMode('overview')}><PanelsTopLeft /> Overview</button>
           <button className={viewMode === 'map' ? 'active' : ''} onClick={showMap}><MapIcon /> Map</button>
         </div>
-        <button onClick={() => { setDrawer('details'); setDetailEntity(null); }}><Info /> Day details</button>
+        <button className="workspace-ghost-button" onClick={() => { setDrawer('details'); setDetailEntity(null); }}><Info /> Day details</button>
         <button className="workspace-ghost-button" onClick={() => { setDrawer('explore'); setDetailEntity(null); }}><Search /> Explore</button>
         <button className="workspace-ghost-button" onClick={togglePlan}>{planCollapsed ? <PanelLeftOpen /> : <PanelLeftClose />}{planCollapsed ? 'Show Plan' : 'Collapse'}</button>
       </div>

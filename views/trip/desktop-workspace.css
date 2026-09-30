@@ -20,7 +20,8 @@
 .workspace-day-popover button span { font-size: 13px; font-weight: 650; }
 .workspace-day-popover button small { overflow: hidden; color: var(--ink-soft); font-size: 12px; text-overflow: ellipsis; white-space: nowrap; }
 .workspace-tools { display: flex; align-items: center; gap: 7px; }
-.workspace-view-toggle { display: flex; align-items: center; padding: 3px; border: 1px solid var(--line); border-radius: 13px; background: var(--surface); }
+.workspace-tools > button { white-space: nowrap; }
+.workspace-view-toggle { display: flex; align-items: center; padding: 3px; border: 0; border-radius: 11px; background: var(--surface); }
 .workspace-view-toggle button { display: inline-flex; min-height: 36px; align-items: center; gap: 6px; padding: 0 12px; border: 0; border-radius: 9px; background: transparent; color: var(--ink-soft); font-size: 12px; font-weight: 650; }
 .workspace-view-toggle button.active { background: #fff; color: var(--accent-hover); box-shadow: 0 1px 5px rgb(0 0 0 / .06); }
 .workspace-view-toggle svg { width: 16px; }
@@ -66,7 +67,8 @@
 .workspace-stop-title { display: flex; min-width: 0; align-items: flex-start; gap: 7px; }
 .workspace-stop-copy h3 { display: -webkit-box; overflow: hidden; margin: 1px 0 5px; font-size: 15px; font-weight: 650; line-height: 1.2; overflow-wrap: anywhere; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
 .workspace-stop-title h3 { min-width: 0; margin-bottom: 4px; }
-.workspace-stop-title .trip-status-badge { flex: 0 0 auto; margin-top: 1px; }
+.workspace-stop-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 5px 7px; margin-top: 4px; }
+.workspace-stop-meta .trip-status-badge { flex: 0 0 auto; }
 .workspace-stop-copy p { display: flex; align-items: center; gap: 5px; color: var(--ink-soft); font-size: 12px; }
 .workspace-stop-copy p svg { width: 14px; height: 14px; flex: 0 0 auto; }
 .workspace-drag-handle { display: grid; width: 30px; height: 40px; place-items: center; border: 0; border-radius: 8px; background: transparent; color: #aaa; cursor: grab; touch-action: none; opacity: .25; }
@@ -79,7 +81,7 @@
 .workspace-stop-actions svg { width: 14px; height: 14px; }
 .workspace-connector { position: relative; display: grid; grid-template-columns: 64px 1fr; width: 100%; min-height: 38px; align-items: center; padding: 0 8px; border: 0; background: transparent; color: var(--ink-soft); text-align: left; }
 .workspace-connector > span { justify-self: center; width: 2px; height: 32px; background: #cce9f9; }
-.workspace-connector > b { width: max-content; padding: 4px 9px; border-radius: var(--radius-pill); background: var(--accent-soft); color: #2478ad; font-size: 10px; font-weight: 650; }
+.workspace-connector > b { width: max-content; padding: 4px 9px; border-radius: 6px; background: transparent; color: #2478ad; font-size: 12px; font-weight: 500; }
 .workspace-connector.selected > span, .workspace-connector.selected > b { background: #2478ad; color: #fff; }
 .workspace-empty { display: grid; min-height: 220px; place-content: center; gap: 5px; color: var(--ink-soft); text-align: center; }
 .workspace-empty b { color: var(--ink); }
@@ -89,59 +91,60 @@
 .workspace-resize-handle:hover > div, .workspace-resize-handle[data-resize-handle-active] > div { background: var(--accent); }
 
 .workspace-overview { width: 100%; height: 100%; min-height: 0; overflow: hidden; background: #fff; container: trip-overview / inline-size; }
-.workspace-overview-scroll { box-sizing: border-box; width: 100%; height: 100%; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 0 22px 40px; scroll-behavior: smooth; scrollbar-gutter: stable; }
+.workspace-overview-scroll { box-sizing: border-box; width: 100%; height: 100%; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 24px 28px 40px; scroll-behavior: smooth; scrollbar-gutter: stable; }
 .workspace-timeline, .workspace-overview-scroll { scrollbar-width: thin; scrollbar-color: #e6e6e6 transparent; }
 .workspace-timeline::-webkit-scrollbar, .workspace-overview-scroll::-webkit-scrollbar { width: 10px; height: 10px; }
 .workspace-timeline::-webkit-scrollbar-track, .workspace-overview-scroll::-webkit-scrollbar-track { background: transparent; }
 .workspace-timeline::-webkit-scrollbar-thumb, .workspace-overview-scroll::-webkit-scrollbar-thumb { border: 3px solid transparent; border-radius: var(--radius-pill); background: #e6e6e6; background-clip: padding-box; }
 .workspace-timeline:hover::-webkit-scrollbar-thumb, .workspace-overview-scroll:hover::-webkit-scrollbar-thumb { background: #cfcfcf; background-clip: padding-box; }
-.workspace-overview-hero { position: relative; min-height: clamp(210px, 27vh, 286px); overflow: hidden; padding: 34px 44px; border-radius: 0 0 16px 16px; background: #dcebf4; color: #fff; isolation: isolate; }
+.workspace-overview-hero { position: relative; min-height: clamp(210px, 26vh, 260px); overflow: hidden; padding: 32px; border-radius: 20px; background: #dcebf4; color: #fff; isolation: isolate; }
 .workspace-overview-hero > img { z-index: -2; object-fit: cover; }
-.workspace-overview-hero > div { position: absolute; z-index: -1; inset: 0; background: linear-gradient(90deg, rgb(0 0 0 / .64), rgb(0 0 0 / .15) 72%, transparent); }
+.workspace-overview-hero > div { position: absolute; z-index: -1; inset: 0; background: linear-gradient(90deg, rgb(0 0 0 / .62), rgb(0 0 0 / .18) 65%, transparent); }
 .workspace-overview-hero > span { font-size: 12px; font-weight: 720; letter-spacing: .08em; }
-.workspace-overview-hero h1 { max-width: 600px; margin: 26px 0 8px; font-family: var(--serif); font-size: clamp(34px, 4vw, 52px); font-weight: 500; line-height: 1.05; }
+.workspace-overview-hero h1 { max-width: 600px; margin: 20px 0 10px; font-family: var(--sans); font-size: clamp(30px, 3vw, 42px); font-weight: 600; letter-spacing: -.035em; line-height: 1.15; }
 .workspace-overview-hero p { max-width: 520px; font-size: 14px; line-height: 1.55; opacity: .94; }
-.workspace-place-section { margin-top: 18px; }
+.workspace-place-section { margin-top: 28px; }
 .workspace-place-section > header { display: flex; min-height: 38px; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 10px; }
 .workspace-place-section > header > div { display: flex; align-items: center; gap: 9px; }
-.workspace-section-icon { display: grid; width: 30px; height: 30px; place-items: center; border-radius: 9px; background: var(--accent-soft); color: var(--accent-hover); }
-.workspace-section-icon svg { width: 17px; height: 17px; }
-.workspace-place-section h2 { font-size: 18px; font-weight: 680; }
+.workspace-section-icon { display: grid; width: 22px; height: 22px; place-items: center; color: var(--accent-hover); }
+.workspace-section-icon svg { width: 22px; height: 22px; }
+.workspace-place-section h2 { font-size: 22px; font-weight: 600; }
 .workspace-place-section > header p { color: var(--ink-soft); font-size: 13px; }
-.workspace-place-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 14px; }
+.workspace-place-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 28px; }
 .workspace-place-grid.count-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.workspace-place-card { min-width: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 14px; background: #fff; }
-.workspace-place-image { position: relative; display: block; width: 100%; aspect-ratio: 16 / 7.7; overflow: hidden; padding: 0; border: 0; background: var(--surface-strong); }
+.workspace-place-card { min-width: 0; border: 0; background: transparent; }
+.workspace-place-image { position: relative; display: block; width: 100%; aspect-ratio: 16 / 10; overflow: hidden; padding: 0; border: 0; border-radius: 16px; background: var(--surface-strong); }
 .workspace-place-image img { object-fit: cover; transition: transform 220ms var(--ease); }
 .workspace-place-card:hover .workspace-place-image img { transform: scale(1.02); }
 .workspace-place-image > span { position: absolute; right: 10px; bottom: 10px; display: inline-flex; min-height: 30px; align-items: center; gap: 5px; padding: 0 9px; border-radius: var(--radius-pill); background: rgb(34 34 34 / .68); color: #fff; font-size: 11px; backdrop-filter: blur(8px); }
 .workspace-place-image svg { width: 13px; height: 13px; }
 .workspace-place-image.placeholder { display: grid; place-items: center; color: var(--text-secondary); background: linear-gradient(145deg, var(--soft-blue), var(--surface-strong)); }
 .workspace-place-image.placeholder > svg { width: 32px; height: 32px; }
-.workspace-place-card > div { position: relative; min-height: 86px; padding: 12px 48px 12px 14px; }
-.workspace-place-card h3 { margin-bottom: 4px; font-size: 17px; font-weight: 680; }
-.workspace-place-title { display: flex; min-width: 0; align-items: center; gap: 8px; padding-right: 32px; }
+.workspace-place-card > div { position: relative; min-height: 80px; padding: 14px 44px 0 0; }
+.workspace-place-card h3 { margin-bottom: 5px; font-size: 18px; font-weight: 600; }
+.workspace-place-title { display: flex; min-width: 0; align-items: center; gap: 8px; }
 .workspace-place-title h3 { display: -webkit-box; overflow: hidden; min-width: 0; line-height: 1.35; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
-.workspace-place-title .trip-status-badge { flex: 0 0 auto; }
-.workspace-place-card p { display: -webkit-box; overflow: hidden; color: var(--ink-soft); font-size: 13px; line-height: 1.45; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
-.workspace-place-card > div > button { position: absolute; top: 15px; right: 12px; display: grid; width: 34px; height: 34px; place-items: center; border: 0; border-radius: 50%; background: var(--accent-soft); color: var(--accent-hover); }
+.workspace-place-card p { display: -webkit-box; overflow: hidden; color: var(--ink-soft); font-size: 14px; line-height: 1.5; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+.workspace-place-card > div > button { position: absolute; top: 10px; right: 0; display: grid; width: 40px; height: 40px; place-items: center; border: 0; border-radius: 50%; background: transparent; color: var(--accent-hover); }
+.workspace-place-card > div > button:hover { background: var(--accent-soft); }
 .workspace-place-card > div > button svg { width: 17px; }
 .workspace-place-empty { padding: 20px; border-radius: 12px; background: var(--surface); color: var(--ink-soft); font-size: 13px; }
-.workspace-practical-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 16px; }
-.workspace-practical-card { display: grid; grid-template-columns: 132px minmax(0, 1fr); gap: 12px; min-width: 0; min-height: 180px; padding: 12px; border: 1px solid var(--line); border-radius: 14px; background: #fff; }
+.workspace-practical-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--line); }
+.workspace-practical-card { display: grid; grid-template-columns: 132px minmax(0, 1fr); gap: 16px; min-width: 0; min-height: 180px; padding: 0; border: 0; background: #fff; }
+.workspace-hotel-card { padding: 20px; border-radius: 16px; background: var(--surface); }
 .workspace-practical-card > header { grid-column: 1 / -1; display: flex; min-height: 24px; align-items: center; gap: 7px; }
 .workspace-practical-card > header svg { width: 17px; height: 17px; color: var(--accent-hover); }
-.workspace-practical-card > header b { font-size: 14px; font-weight: 680; }
-.workspace-practical-card > header span { margin-left: auto; color: var(--ink-soft); font-size: 11px; }
+.workspace-practical-card > header b { font-size: 16px; font-weight: 600; }
+.workspace-practical-card > header span { margin-left: auto; color: var(--ink-soft); font-size: 13px; }
 .workspace-practical-image { position: relative; display: grid; width: 132px; min-height: 112px; place-items: center; overflow: hidden; padding: 0; border: 0; border-radius: 11px; background: var(--surface-strong); color: var(--accent-hover); }
 .workspace-practical-image img { object-fit: cover; }
 .workspace-practical-image.placeholder svg { width: 24px; }
 .workspace-practical-copy { display: flex; flex-direction: column; min-width: 0; align-self: stretch; }
-.workspace-practical-copy h3 { display: -webkit-box; overflow: hidden; min-height: 2.6em; margin: 1px 0 5px; font-size: 15px; font-weight: 680; line-height: 1.3; overflow-wrap: anywhere; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+.workspace-practical-copy h3 { display: -webkit-box; overflow: hidden; margin: 1px 0 8px; font-size: 16px; font-weight: 600; line-height: 1.4; overflow-wrap: anywhere; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
 .workspace-practical-copy p { display: -webkit-box; overflow: hidden; color: var(--ink-soft); font-size: 13px; line-height: 1.45; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
-.workspace-practical-copy > small { display: block; margin-top: 5px; color: var(--ink-soft); font-size: 11px; }
+.workspace-practical-copy > small { display: block; margin-top: 6px; color: var(--ink-soft); font-size: 13px; line-height: 1.5; }
 .workspace-inline-actions { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding-top: 10px; }
-.workspace-inline-actions button, .workspace-inline-actions a { display: inline-flex; min-height: 34px; align-items: center; justify-content: center; gap: 5px; padding: 0 9px; border: 0; border-radius: 8px; background: var(--accent-soft); color: var(--accent-hover); font-size: 11px; font-weight: 680; }
+.workspace-inline-actions button, .workspace-inline-actions a { display: inline-flex; min-height: 38px; align-items: center; justify-content: center; gap: 6px; padding: 0 12px; border: 0; border-radius: 10px; background: var(--accent-soft); color: var(--accent-hover); font-size: 13px; font-weight: 600; }
 .workspace-inline-actions a { background: var(--surface-strong); color: var(--ink); }
 .workspace-inline-actions a.primary { background: var(--accent); color: #fff; }
 .workspace-inline-actions svg { width: 13px; height: 13px; }
@@ -151,6 +154,14 @@
 .workspace-day-action h2 { margin: 2px 0; font-size: 15px; }
 .workspace-day-action p { color: var(--ink-soft); font-size: 12px; }
 .workspace-overview-end { height: 1px; }
+.workspace-overview .workspace-tips { margin-top: 28px; padding: 24px 0 0; border: 0; border-top: 1px solid var(--line); border-radius: 0; background: transparent; }
+.workspace-overview .workspace-tips > header > span { width: 24px; height: 24px; border-radius: 0; background: transparent; color: var(--accent-hover); }
+.workspace-overview .workspace-tips > header p { display: none; }
+.workspace-overview .workspace-tips h2 { font-size: 20px; font-weight: 600; }
+.workspace-overview .workspace-tips ul { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 24px; margin-top: 16px; }
+.workspace-overview .workspace-tips li { min-height: 0; align-items: start; padding: 8px 0; border: 0; }
+.workspace-overview .workspace-tips li i { border: 0; border-radius: 0; }
+.workspace-overview .workspace-tips li span { color: var(--ink-soft); font-size: 14px; line-height: 1.5; }
 
 .workspace-map { position: relative; z-index: var(--layer-map); width: 100%; height: 100%; overflow: hidden; background: #eaf5fc; isolation: isolate; }
 .desktop-map-canvas { min-height: 100%; }
@@ -227,7 +238,7 @@
 @media (max-width: 1179px) {
   .workspace-view-toggle button { padding: 0 9px; }
   .workspace-tools > button { padding: 0 10px; }
-  .workspace-day-button { min-width: min(310px, 34vw); }
+  .workspace-day-button { min-width: min(220px, 24vw); }
   .workspace-practical-grid { grid-template-columns: 1fr; }
   .workspace-practical-card { grid-template-columns: 150px minmax(0, 1fr); }
   .workspace-practical-image { width: 150px; }
@@ -238,6 +249,7 @@
 }
 @container trip-overview (max-width: 740px) {
   .workspace-practical-grid { grid-template-columns: minmax(0, 1fr); }
+  .workspace-overview .workspace-tips ul { grid-template-columns: minmax(0, 1fr); }
 }
 @media (max-width: 899px) {
   .desktop-trip-workspace { height: calc(100dvh - 80px); min-height: 520px; }
@@ -250,7 +262,7 @@
   .workspace-map-preview > div:last-child { grid-column: 1 / -1; grid-template-columns: 1fr 1fr; }
   .workspace-map-preview > img { width: 76px; height: 68px; }
   .workspace-drawer { width: min(420px, calc(100vw - 84px)); }
-  .workspace-overview-scroll { padding: 0 14px 32px; }
+  .workspace-overview-scroll { padding: 20px 18px 32px; }
   .workspace-overview-hero { min-height: 220px; padding: 28px; }
   .workspace-place-grid, .workspace-place-grid.count-4 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); }
 }
