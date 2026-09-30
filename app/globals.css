@@ -403,7 +403,8 @@ textarea { width: 100%; min-height: 150px; resize: vertical; }
 .task-v2, .checkin-center, .deadline-center { display: grid; }
 .task-v2 article, .checkin-center article, .deadline-center article { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 16px; align-items: center; padding: 20px 0; border-top: 1px solid var(--line); }
 .task-v2 article > button, .checkin-center article > button { display: grid; place-items: center; width: 44px; height: 44px; border: 1px solid var(--line-strong); border-radius: 50%; background: #fff; }
-.task-v2 article > button:has(svg), .checkin-center article > button.done { border-color: var(--success); }
+.task-v2 article > button.done, .checkin-center article > button.done { border-color: var(--success); color: var(--success); }
+.task-v2 article > button:not(.done), .checkin-center article > button:not(.done) { color: var(--ink-soft); }
 .task-v2 span, .checkin-center small, .deadline-center span { color: var(--ink-soft); font-size: 12px; }
 .task-v2 h3, .checkin-center h3, .deadline-center h3 { margin: 3px 0; font-size: 17px; }
 .task-v2 p, .checkin-center p, .deadline-center p { color: var(--ink-soft); font-size: 14px; }
@@ -414,6 +415,8 @@ textarea { width: 100%; min-height: 150px; resize: vertical; }
 .checkin-center article h2 { font-size: 18px; font-weight: 600; }
 .checkin-center article > a, .checkin-center article > .email-action { font-size: 13px; max-width: 160px; }
 .deadline-center > section > h3 { margin: 30px 0 8px; font-size: 18px; }
+.deadline-center time { display: flex; flex-direction: column; gap: 4px; font-size: 14px; font-variant-numeric: tabular-nums; }
+.deadline-center time small { color: var(--ink-soft); font-size: 13px; }
 .private-checkin-link { grid-column: 1 / -1; display: grid; gap: 5px; margin-top: 8px; }
 .private-checkin-link span { color: var(--ink-soft); font-size: 12px; }
 .execution-status.confirmed, .execution-status.done { background: var(--success-soft); color: var(--success); }
@@ -476,6 +479,13 @@ textarea { width: 100%; min-height: 150px; resize: vertical; }
 .survival-grid > article > p { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 12px; align-items: start; }
 .survival-grid > article > a { display: inline-flex; min-height: 44px; align-items: center; margin-right: 16px; color: var(--accent); font-size: 14px; }
 .essentials-v2 h2, .survival-grid h3 { font-size: 18px; }
+.essentials-v2 > details { border-top: 1px solid var(--line); padding: 8px 0 16px; }
+.essentials-v2 summary { display: flex; align-items: center; justify-content: space-between; min-height: 44px; list-style: none; font-weight: 600; cursor: pointer; }
+.essentials-v2 summary::-webkit-details-marker { display: none; }
+.essentials-v2 summary > svg { width: 18px; height: 18px; color: var(--ink-soft); transform: rotate(-90deg); transition: transform 150ms ease; }
+.essentials-v2 details[open] summary > svg { transform: none; }
+.essentials-v2 p { display: flex; align-items: flex-start; gap: 10px; line-height: 1.6; }
+.essentials-v2 p > svg { width: 16px; height: 16px; flex-shrink: 0; margin-top: 3px; }
 .essentials-v2 p, .survival-grid p { margin-top: 7px; color: var(--ink-soft); font-size: 14px; }
 .backup-v2 { display: grid; gap: 22px; margin-top: 30px; }
 .backup-v2 > section, .backup-v2 > article { padding: 24px 0; border-top: 1px solid var(--line); }

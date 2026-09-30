@@ -9,6 +9,7 @@ import {
   BusFront,
   CarTaxiFront,
   Check,
+  Circle,
   Clock3,
   ExternalLink,
   Footprints,
@@ -491,7 +492,7 @@ export function CheckinCenter({
                 })
               }
             >
-              <Check />
+              {checked ? <Check /> : <Circle />}
             </button>
             <div>
               <span>

@@ -17,6 +17,15 @@ const mapCanvas = read('components/map/MapCanvas.tsx');
 const routeGeometry = read('features/map/routing/useRouteGeometry.ts');
 const globalCss = read('app/globals.css');
 const workspaceCss = read('views/trip/desktop-workspace.css');
+const planView = read('views/plan/PlanView.tsx');
+const executionCards = read('components/execution-cards.tsx');
+
+// Completion icons reflect state without changing action handlers or storage.
+assert.match(planView, /status === 'Done' \? <Check \/> : status === 'Waiting' \? <Clock3 \/> : <Circle \/>/);
+assert.match(executionCards, /checked \? <Check \/> : <Circle \/>/);
+assert.match(globalCss, /\.deadline-center time[^}]*gap: 4px/);
+assert.match(globalCss, /\.essentials-v2 summary::-webkit-details-marker[^}]*display: none/);
+assert.match(read('components/packing/PackingPanel.tsx'), /value=\{value\}>\{categoryLabels\[value\]\}/);
 
 // home-visual
 assert.match(home, /HOME_HERO = '\/images\/home-eiffel-winter-sunset\.png'/);

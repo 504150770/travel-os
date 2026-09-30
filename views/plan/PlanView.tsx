@@ -1,6 +1,6 @@
 'use client';
 
-import { Check, ChevronDown, ExternalLink } from 'lucide-react';
+import { Check, Circle, Clock3, ChevronDown, ExternalLink } from 'lucide-react';
 import { lazy, Suspense } from 'react';
 import { guideData } from '@/lib/data';
 import type { DeadlineItem } from '@/lib/types';
@@ -348,6 +348,8 @@ export function PlanView({
             return (
               <article key={task.id}>
                 <button
+                  className={status === 'Done' ? 'done' : ''}
+                  aria-label={`${task.title}：${status === 'Done' ? '标记未完成' : '标记完成'}`}
                   onClick={() =>
                     setActionStatuses({
                       ...actionStatuses,
@@ -355,7 +357,7 @@ export function PlanView({
                     })
                   }
                 >
-                  <Check />
+                  {status === 'Done' ? <Check /> : status === 'Waiting' ? <Clock3 /> : <Circle />}
                 </button>
                 <div>
                   <span>
