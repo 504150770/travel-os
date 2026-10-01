@@ -102,4 +102,5 @@ assert.doesNotMatch(planView, /candidate\.status\.includes\('VERIFIED'\)/);
 assert.match(planView, /candidate\.status === 'TICKETED'/);
 assert.match(planView, /segment\.routeSource &&/);
 assert.match(planView, /test\(segment\.source\)/);
+assert.match(globalCss, /\.detail-facts > p[^}]*column-gap: 10px/);
 console.log('Presentation tests passed: home visual, desktop view mode, map lazy load, overlay layering, and transport status/source semantics.');
