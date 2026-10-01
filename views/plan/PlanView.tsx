@@ -225,7 +225,9 @@ export function PlanView({
                         <dt>FARE</dt>
                         <dd>
                           {candidate.priceCny == null
-                            ? '目标日价格待确认'
+                            ? candidate.status === 'TICKETED'
+                              ? '实付金额未记录'
+                              : '目标日价格待确认'
                             : `${yuan(candidate.priceCny)} 基础含税`}{' '}
                           · {candidate.fareType}
                         </dd>
@@ -261,9 +263,8 @@ export function PlanView({
                       </div>
                     </dl>
                     <i title={candidate.status}>
-                      {candidate.status.includes('VERIFIED') ||
-                      candidate.status.includes('CAPTURED')
-                        ? '✓ 已核'
+                      {candidate.status === 'TICKETED'
+                        ? '✓ 已出票'
                         : '△ 出发前确认'}
                     </i>
                     <small>
@@ -297,19 +298,23 @@ export function PlanView({
               )}
               <footer>
                 <span title={segment.status}>
-                  △ 班次、票价和行李按出票页最终确认
+                  {segment.status === 'TICKETED'
+                    ? '✓ 航段已出票；行李及退改规则以票面为准'
+                    : '△ 班次、票价和行李按出票页最终确认'}
                 </span>
                 <div>
-                  <a href={segment.source} target="_blank" rel="noreferrer">
-                    目标日查询 <ExternalLink />
-                  </a>
-                  <a
+                  {/^https?:\/\//i.test(segment.source) ? (
+                    <a href={segment.source} target="_blank" rel="noreferrer">
+                      目标日查询 <ExternalLink />
+                    </a>
+                  ) : <span>{segment.source}</span>}
+                  {segment.routeSource && /^https?:\/\//i.test(segment.routeSource) && <a
                     href={segment.routeSource}
                     target="_blank"
                     rel="noreferrer"
                   >
                     官方线路 <ExternalLink />
-                  </a>
+                  </a>}
                 </div>
               </footer>
             </article>

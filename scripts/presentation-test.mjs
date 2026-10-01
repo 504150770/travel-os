@@ -93,4 +93,8 @@ assert.match(workspaceCss, /workspace-drawer[^{]*\{[^}]*z-index: var\(--layer-dr
 assert.match(workspace, /interactive=\{drawer === null/);
 assert.match(mapCanvas, /handler\.enable\(\) : handler\.disable\(\)/);
 
-console.log('Presentation tests passed: home visual, desktop view mode, map lazy load, and overlay layering.');
+assert.doesNotMatch(planView, /candidate\.status\.includes\('VERIFIED'\)/);
+assert.match(planView, /candidate\.status === 'TICKETED'/);
+assert.match(planView, /segment\.routeSource &&/);
+assert.match(planView, /test\(segment\.source\)/);
+console.log('Presentation tests passed: home visual, desktop view mode, map lazy load, overlay layering, and transport status/source semantics.');
