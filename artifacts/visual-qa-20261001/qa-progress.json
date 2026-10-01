@@ -35,7 +35,8 @@
     "Three isolated Trip action screenshots: existing entity Add/Undo, time edit/Undo,390px active-to-alternative/Undo; visible feedback/readability scope only",
     "Isolated390px Remove feedback and desktop existing-alternative-to-active feedback/fallback; High actually opened both images, scoped satisfaction only",
     "Desktop removed-alternative pool expanded and restored entry actual screenshots; High explicitly satisfied visible feedback/fallback scope",
-    "Ordinary deadline Waiting, task Doing and unbooked railway Research reload screenshots; High actually opened all3 and satisfied visible selector/readability scopes"
+    "Ordinary deadline Waiting, task Doing and unbooked railway Research reload screenshots; High actually opened all3 and satisfied visible selector/readability scopes",
+    "Actual existing Gym detail Move Day screenshot and target-day same-entity deduplication fix; High explicitly accepted repaired scope after UI export and exact Undo evidence"
   ],
   "lastReviewPending": null,
   "actualInteractions": [
@@ -81,13 +82,15 @@
     "Isolated3001 last alternative Trastevere removed, removed-list expanded, actual Restore returns it to alternatives not activeItems; export(17) equals baseline(16) across10 business fields. Restored final screenshot correctly frames full entry after non-mutating keyboard focus",
     "Isolated3001 ordinary visa deadline Open to Waiting and reload persists, resetOpen; ordinary visa appointment task Open to Doing and reload persists, resetOpen. Export20/21 equal materialized baseline19 across10 fields",
     "Isolated3001 unbooked Roma-Firenze selector To Book to Research persists after reload, resetTo Book. Export22 differs21 only by explicit train-rome-florence To Book override; effective status restored, not byte-exact storage restoration",
-    "Isolated attempted flight and international deadline override cannot replace canonical Ticketed/Done; this verifies existing authoritative guard, not general booking persistence"
+    "Isolated attempted flight and international deadline override cannot replace canonical Ticketed/Done; this verifies existing authoritative guard, not general booking persistence",
+    "Actual Day details specialized Gym detail moves existing D2 Golden alternative to D3; initial35ad39d screenshot and Undo24 equal23; source review found D3 existing alternative duplicate",
+    "After fix0ae93d2 rebuilt3001 actual Move Day export26 shows D2 active0/alternatives0/removed0; D3 active1/alternatives0/removed0 for gym-rome-golden. Undo export27 equals25 across10 fields, no real3000 changes"
   ],
   "testsPassed": ["typecheck", "lint", "build", "audit", "linkage", "architecture", "mobile", "desktop-workspace", "trip-presentation", "travel-intelligence", "readiness", "presentation", "gallery-offline", "gallery-copy", "privacy"],
   "auditWarning": "Existing projected budget 27630 exceeds the unchanged hard cap 26000 by 1630; not a UI failure",
   "remaining": [
     "Remaining functional details and state-changing actions; responsive Day2/8/15 desktop1440/1280/1024 and mobile375/390/430 layout scopes now covered across this and previous iterations, not a claim that every function was tested at every size",
-    "Next actual coverage includes move-to-day and custom successful-save. Ordinary task/deadline selectors and one unbooked railway selector now tested with actual reload; not every booking type. Legacy move-day controls not exposed in inspected desktop Timeline/Day details; do not confuse model coverage with UI interaction. Successful custom save must include deletion via Discover existing native-confirm UI and exact export restoration; do not leave test custom entities behind",
+    "Next actual coverage includes custom successful-save. Move Day now tested through existing Day details specialized Gym modal, including same-entity destination duplicate repair and exact Undo. Ordinary task/deadline selectors and one unbooked railway selector tested; not every booking type or every move edge. Legacy PlanStop move-day component itself unmounted; do not invent a new UI entry. Successful custom save must include deletion via Discover existing native-confirm UI and exact export restoration; do not leave test custom entities behind",
     "Backup import/restore remains untested: official updated filechooser/setFiles interface tried on isolated3001, blocked by ChatGPT extension Allow access to file URLs permission. No permission expanded or injected File/storage workaround used",
     "Comprehensive network-offline behavior still unverified; no browser network-disconnection capability exposed; current evidence is same-origin server unavailable, not full external network disconnection",
     "Collect final whole-scope High review only after all remaining functions have real evidence"
@@ -100,11 +103,11 @@
     "3000 dev server retained; isolated 3001 production test server stopped after offline verification; local backup exports remain in Downloads only"
   ],
   "latestIteration": {
-    "fixes": [],
-    "review": "High verified in continuation UI; actually opened2500e91 deadline Waiting, fbeff53 task Doing and93956e8 unbooked railway Research screenshots. Explicitly satisfied scoped state readability, no manufactured fixes. Not global completion or every booking type.",
+    "fixes": ["hooks/use-editable-plan.ts moveDay clears same entity from target active/alternative/removed zones before appending and reindexes; source-day behavior and Undo retained; small desktop-workspace source assertions added"],
+    "review": "High verified in continuation UI and actually opened both before/fixed Move Day screenshots. Agreed target-day duplicate is a real functional issue, then explicitly accepted fixed same-entity deduplication and Undo scope after actual26/27 UI export evidence. Not global completion or every move edge case.",
     "evidenceCorrection": "deadlines-mobile-390.jpg captured stale transport render and is NOT valid deadline evidence; deadlines-mobile-final-390.jpg is the correct reviewed screenshot",
-    "safeState": "UI export18 before isolated3001 tests. First status setter materializes existing default action values:19 differs18 in actionStatuses storage shape only, other9 fields equal; effective statuses restored. Subsequent deadline/task rollback exports20/21 equal19 all10 fields. Railway rollback22 differs21 only explicit train-rome-florence To Book default override. Do NOT claim byte-exact initial18 restoration. Private exports only Downloads, actual3000 untouched. No viewport override; own3001 server61409 stopped at close.",
-    "codeReview": "Read effectiveBookingStatuses forced Ticketed, mergeBookingActionStatuses Done protection, displayActionStatuses and PlanView setters. Existing setter writes displayed default statuses into stored override map; recorded this distinction instead of changing business logic. This iteration reran linkage, readiness and presentation successfully; full prior regressions not claimed rerun. Data diff empty; generated/user files preserved. GitHub4d623d3 backup verified before tests.",
+    "safeState": "Before test exports23/25; Undo24 equals23, fixed Undo27 equals25 across10 fields. Export26 only taken through UI More/Backup navigation so Undo history survived, exact destination counts verified. Previous explicit default override differences18/19 and21/22 remain documented, not erased or claimed byte-restored. Private exports stay Downloads. Real3000 untouched. Own isolated86946 stopped before rebuild and10725 stopped at close; no viewport override.",
+    "codeReview": "Read actual GymDetailModal and DesktopTripDrawers wiring; moveDay target previously retained same-entity backup. Minimal target-zone deduplication now mirrors addEntity behavior and preserves existing state/commit/Undo. Full typecheck/lint/build/audit and every existing regression plus gallery-copy rerun passed; audit unchanged27630 vs26000 warning. Added static assertions are not substituted for actual26/27 export proof. No data diff; user/generated files unstaged. GitHubfd57d33 verified before source edits; fix0ae93d2 pushed only exact files.",
     "limitations": ["Import blocked by explicit extension file-URL permission; official interface exists but permission not changed", "Full network-offline still unverified; same-origin unavailable test is narrower", "Packing screenshot shows1/48 count, not Power bank row; DOM interaction supplies persistence evidence, not image alone", "Source/model tests do not substitute for actual interactions"]
   },
   "complete": false
