@@ -525,6 +525,7 @@ textarea { width: 100%; min-height: 150px; resize: vertical; }
 .route-map-drawer > div a { display: inline-flex; min-height: 44px; align-items: center; padding: 0 13px; border: 1px solid var(--line-strong); border-radius: var(--radius-control); font-size: 13px; }
 .target-toggle { display: flex; gap: 8px; margin-bottom: 16px; }
 .custom-form { display: grid; gap: 10px; }
+.quick-form-hint { margin: 0; color: var(--ink-soft); font-size: 14px; }
 .entity-search { width: 100%; }
 .quick-results { display: grid; gap: 10px; margin-top: 14px; }
 .quick-results article { display: grid; grid-template-columns: 72px 1fr auto; gap: 12px; align-items: center; padding: 10px 0; border-top: 1px solid var(--line); }

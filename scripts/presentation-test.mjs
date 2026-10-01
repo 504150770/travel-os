@@ -69,6 +69,9 @@ assert.match(personalMenu, /travel-save-state/);
 assert.match(personalMenu, /aria-label="Jacob"/);
 
 // desktop-view-mode
+assert.match(read('views/trip/QuickAdd.tsx'), /disabled=\{!form\.name\.trim\(\)\}/);
+assert.match(read('views/trip/QuickAdd.tsx'), /id="quick-add-name-hint"/);
+assert.match(read('views/trip/QuickAdd.tsx'), /if \(!form\.name\.trim\(\)\) return/);
 assert.match(workspace, /useState<'overview' \| 'map'>\('overview'\)/);
 assert.match(workspace, /const \[mapOpened, setMapOpened\] = useState\(false\)/);
 assert.match(workspace, /aria-label="Workspace view"/);

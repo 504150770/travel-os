@@ -151,9 +151,11 @@ export function QuickAdd({
           <div className="custom-form">
             <input
               placeholder="名称*"
+              aria-describedby={!form.name.trim() ? 'quick-add-name-hint' : undefined}
               value={form.name}
               onChange={(e) => setForm({ ...form, name: e.target.value })}
             />
+            {!form.name.trim() && <p id="quick-add-name-hint" className="quick-form-hint">请填写名称</p>}
             <select
               value={form.type}
               onChange={(e) =>
@@ -204,7 +206,7 @@ export function QuickAdd({
               value={form.notes}
               onChange={(e) => setForm({ ...form, notes: e.target.value })}
             />
-            <button className="primary-action" onClick={submit}>
+            <button className="primary-action" disabled={!form.name.trim()} onClick={submit}>
               保存到 Day {dayId}
             </button>
           </div>
