@@ -76,6 +76,7 @@
   color: var(--mobile-muted);
   font-size: 14px;
 }
+.mobile-day-intro h1 { text-wrap: balance; line-height: 1.2; }
 
 .mobile-day-intro > button,
 .mobile-map-topbar > button {
@@ -571,7 +572,7 @@
 .mobile-map-screen {
   position: relative;
   min-height: calc(100dvh - 128px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
-  background: #edf2f4;
+  background: #fff;
 }
 
 .mobile-map-summary {
