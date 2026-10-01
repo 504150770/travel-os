@@ -140,8 +140,14 @@ export function useEditablePlan() {
         if (day.dayId === targetDayId)
           return {
             ...day,
+            alternatives: reindex(
+              day.alternatives.filter((row) => row.entityId !== item.entityId),
+            ),
+            removedItems: reindex(
+              (day.removedItems ?? []).filter((row) => row.entityId !== item.entityId),
+            ),
             activeItems: reindex([
-              ...day.activeItems,
+              ...day.activeItems.filter((row) => row.entityId !== item.entityId),
               {
                 ...item,
                 id: `${item.id}-d${targetDayId}-${Date.now()}`,
