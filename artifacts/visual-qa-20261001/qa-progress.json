@@ -18,7 +18,9 @@
     "Trip Day 8 desktop 1024, Day 15 desktop 1280 and Day 2 desktop 1280",
     "Restaurant and shared Gym entity detail fact-label spacing",
     "Mobile Plan check-in, transport, tasks, deadlines and booking list top/bottom",
-    "Desktop Trip Explore search hit and empty-result feedback"
+    "Desktop Trip Explore search hit and empty-result feedback",
+    "Actual keyboard Timeline DnD and Undo screenshot",
+    "Offline core readiness and repaired Trip/Home desktop/mobile shell imagery"
   ],
   "lastReviewPending": null,
   "actualInteractions": [
@@ -36,28 +38,36 @@
     "Discover food category and restaurant detail open; bottom actions reachable",
     "Mobile Plan switches check-in, transport, tasks, deadlines and bookings without changing completion/status values",
     "Mobile booking list reaches scrollY 4226.4 against max 4226, content width 375 without horizontal overflow",
-    "Trip Explore search for 歌剧 returns Palais Garnier only; nonexistent query shows empty-result feedback; ESC closes drawer"
+    "Trip Explore search for 歌剧 returns Palais Garnier only; nonexistent query shows empty-result feedback; ESC closes drawer",
+    "UI JSON export downloaded locally before mutable tests; no private export committed or sent for review",
+    "Trevi favorite persists after refresh; cancellation leaves trevi:false but same effective favorites; all other exported business fields identical",
+    "Isolated production origin localhost:3001 keyboard Space/ArrowDown/Space reorders Trevi after Navona; Timeline and Overview update; Undo restores every exported business field exactly",
+    "Isolated production offline pack download completes; stopping only its server leaves port 3001 without listener; Day 8 reopens using cached shell/imagery",
+    "After shell image fix and updated pack, server-stopped Day 8 has Jacob naturalWidth 144 and zero broken images; offline Home desktop hero 2172 and six city images 960, mobile hero 1200"
   ],
   "testsPassed": ["typecheck", "lint", "build", "audit", "linkage", "architecture", "mobile", "desktop-workspace", "trip-presentation", "travel-intelligence", "readiness", "presentation", "gallery-offline", "privacy"],
   "auditWarning": "Existing projected budget 27630 exceeds the unchanged hard cap 26000 by 1630; not a UI failure",
   "remaining": [
     "Complete remaining detail menus, Gallery and responsive Day 2/8/15 combinations; current Mobile Plan tabs visual review complete",
-    "Verify state-changing actions only after safe UI backup, then undo; never overwrite real travel state",
-    "Check actual offline and backup/restore in a safe isolated test context; model tests alone are not end-to-end evidence",
+    "Verify remaining state-changing actions only in isolated context after safe UI backup, then undo; favorite persistence and keyboard DnD/Undo already tested",
+    "Backup file import/restore still untested through browser UI; only UI exports and before/after comparisons completed",
+    "Comprehensive network-offline behavior still unverified; current evidence is same-origin server unavailable, not full external network disconnection",
     "Collect final whole-scope High review only after all remaining functions have real evidence"
   ],
   "safety": [
     "No data directory modifications; hotels, flights, Current Plan, budget and visa materials unchanged",
     "Generated audit timestamps and build caches remain unstaged; unrelated user artifacts preserved",
     "Screenshots contain only public/default app information; no private documents or tokens",
-    "Heartbeat jacob-travel continues this thread every 30 minutes; no automatic production deployment"
+    "Heartbeat jacob-travel continues this thread every 30 minutes; no automatic production deployment",
+    "3000 dev server retained; isolated 3001 production test server stopped after offline verification; local backup exports remain in Downloads only"
   ],
   "latestIteration": {
-    "fixes": ["Mobile check-in requirement display localized", "Exact ticketed transport hides unnecessary choice hint", "Deadline priority display localized without changing raw values", "Explore empty search uses one muted semantic output message"],
-    "review": "High explicitly satisfied these screenshot scopes; not a whole-system acceptance",
+    "fixes": ["Existing Jacob avatar, Home desktop/mobile hero and six city cards added to offline generator and coverage tests; nine images, about 4 MB; core assets 201 to 210"],
+    "review": "High explicitly satisfied keyboard DnD/Undo, offline readiness and repaired offline shell image screenshot scopes; not a whole-system acceptance",
     "evidenceCorrection": "deadlines-mobile-390.jpg captured stale transport render and is NOT valid deadline evidence; deadlines-mobile-final-390.jpg is the correct reviewed screenshot",
-    "safeState": "No state-changing booking/completion/favorites/Current Plan actions were exercised; these remain unverified end-to-end",
-    "codeReview": "Only display mappings and conditional empty feedback; handlers, filtering, storage and data unchanged. Lint caught prefer-tag-over-role and was fixed to native output; lint/typecheck/presentation subsequently passed."
+    "safeState": "No real-origin Current Plan, booking/completion or budget edits; favorite toggled and canceled after UI backup; isolated Timeline reorder undone with exact business-field equality",
+    "codeReview": "Generator only adds existing local shell image paths; asset dedupe/size/hash remain unchanged, no tile or external media downloads; all existing regression scripts and typecheck/lint/build/audit passed",
+    "limitations": ["Dev deliberately unregisters service worker; dev offline button cannot validate production offline behavior", "Second same-directory dev instance rejected, so used existing built production runtime on isolated port 3001", "No file import/restore or full external network disconnection claimed"]
   },
   "complete": false
 }
