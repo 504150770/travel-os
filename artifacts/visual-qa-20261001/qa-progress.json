@@ -30,7 +30,8 @@
     "Mobile remaining Day 2 at 390/430, Day 8 at 375/430 and Day 15 at 375/390: actual top and End screenshots",
     "Desktop1280 Map Day details Drawer layering and Map second open",
     "Isolated packing screenshot visible1/48 count and current list presentation; not import acceptance",
-    "Desktop personal menu actual expanded screenshot and Escape/Backup/Settings entry behavior"
+    "Desktop personal menu actual expanded screenshot and Escape/Backup/Settings entry behavior",
+    "QuickAdd required-name feedback fix; actual High image read, not successful-save acceptance"
   ],
   "lastReviewPending": null,
   "actualInteractions": [
@@ -65,7 +66,9 @@
     "Mobile D2/390 End2238.4/max2238; D2/430 2074.4/max2074; D8/375 2772.8/max2773; D8/430 2569.6/max2570; D15/375 2729.6/max2730; D15/390 2697.6/max2698, width equals content viewport",
     "Desktop confirmed1280x800 Map opens only on click; Day details backdrop z700 drawer710; background hit-test returns backdrop; drag/zoom classes absent while open and restored after Escape",
     "Desktop Map to Overview retains hidden mapCount1 tiles12, second Map shows same counts; this is DOM lifecycle evidence, not exact network-request or timing measurement",
-    "Desktop Jacob menu Escape closes; Settings opens existing More essentials; Backup opens existing backup; navigation closes menu. No data mutation or export/import on real origin this iteration"
+    "Desktop Jacob menu Escape closes; Settings opens existing More essentials; Backup opens existing backup; navigation closes menu. No data mutation or export/import on real origin this iteration",
+    "Isolated3001 QuickAdd empty submit creates no item; Escape retains Explore and returns focus. Before/after UI exports identical across10 business fields",
+    "Fixed3000 QuickAdd empty/whitespace name shows hint and disabled Save; nonempty enables Save and hides hint; Escape cancels without saving"
   ],
   "testsPassed": ["typecheck", "lint", "build", "audit", "linkage", "architecture", "mobile", "desktop-workspace", "trip-presentation", "travel-intelligence", "readiness", "presentation", "gallery-offline", "gallery-copy", "privacy"],
   "auditWarning": "Existing projected budget 27630 exceeds the unchanged hard cap 26000 by 1630; not a UI failure",
@@ -84,11 +87,11 @@
     "3000 dev server retained; isolated 3001 production test server stopped after offline verification; local backup exports remain in Downloads only"
   ],
   "latestIteration": {
-    "fixes": [],
-    "review": "High actually opened8af7da3 desktop personal menu expanded screenshot and explicitly satisfied visible menu and tested entry behavior. Chrome skill official existing connection reused. No source changes or manufactured design issues.",
+    "fixes": ["QuickAdd empty/whitespace name disabled Save plus14px associated hint; original submit guard and persistence handler unchanged"],
+    "review": "High read8b1fcb2 before images, identified one required empty-submit-feedback issue; actually openedb82b015 fixed image and explicitly satisfied only required-name feedback scope. Layout not redesigned.",
     "evidenceCorrection": "deadlines-mobile-390.jpg captured stale transport render and is NOT valid deadline evidence; deadlines-mobile-final-390.jpg is the correct reviewed screenshot",
-    "safeState": "Real3000 state untouched. Isolated3001 UI export before temporary note and packing tests; note cleared, Power bank checked then confirmed persisted after reload and unchecked. Final export equals initial across all10 business fields excluding exportedAt. Private exports stay in Downloads only. Own3001 server stopped;3000 retained.",
-    "codeReview": "Read PersonalMenu and AppShell handlers to confirm Settings routes existing essentials rather than invented functionality. Reran pnpm test:presentation successfully. Other prior regression results retained, not falsely called rerun. Data diff empty. Local3000 was not listening; restarted with pnpm dev, session90724. First navigate timeout recovered by actual snapshot, not alternative browser.",
+    "safeState": "Isolated3001 UI backup(7) before empty submit/cancel test, after export(8) all10 business fields identical excluding exportedAt. Fixed3000 form only typed then canceled, never Save. Private JSON not committed/reviewed. Own3001 server21858 stopped before build;3000 retained.",
+    "codeReview": "Reviewed7-line presentation-only change plus one removed line; no submit handler changes. Added source assertions for disabled trim, hint and retained guard. Reran typecheck/lint/build/audit, linkage/mobile/desktop-workspace/presentation/architecture/trip-presentation/travel-intelligence/readiness/gallery-offline/gallery-copy/privacy successfully. Audit0failures1existing budget warning; data diff empty. Generated audits/build files unstaged.",
     "limitations": ["Import blocked by explicit extension file-URL permission; official interface exists but permission not changed", "Full network-offline still unverified; same-origin unavailable test is narrower", "Packing screenshot shows1/48 count, not Power bank row; DOM interaction supplies persistence evidence, not image alone", "Source/model tests do not substitute for actual interactions"]
   },
   "complete": false
