@@ -100,6 +100,7 @@ export function ExploreDrawer({
   return <DesktopDrawer open={open} close={() => { onCandidates([]); close(); }} eyebrow="EXPLORE" title={`Add to Day ${dayId}`} className="explore-drawer">
     <label className="workspace-search"><Search /><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search places, food, gym…" /></label>
     <div className="workspace-explore-tabs">{exploreTabs.map(([id, label]) => <button key={id} className={tab === id ? 'active' : ''} onClick={() => setTab(id)}>{label}</button>)}</div>
+    {shown.length === 0 && <p className="workspace-search-empty" role="status">未找到匹配结果</p>}
     <div className="workspace-explore-list">{shown.map((entity) => {
       const cover = selectCoverImage(entity.images);
       const placement = actions.placement(entity.id, dayId);

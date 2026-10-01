@@ -213,6 +213,7 @@
 .workspace-explore-tabs button { flex: 0 0 auto; min-height: 38px; padding: 0 11px; border: 1px solid var(--line); border-radius: var(--radius-pill); background: #fff; color: var(--ink-soft); font-size: 12px; }
 .workspace-explore-tabs button.active { border-color: var(--accent); background: var(--accent-soft); color: #2478ad; }
 .workspace-explore-list { display: grid; }
+.workspace-search-empty { margin: 0 0 16px; color: var(--ink-soft); font-size: 14px; }
 .workspace-explore-list article { display: grid; grid-template-columns: 1fr auto; gap: 10px; align-items: center; padding: 10px 0; border-top: 1px solid var(--line); }
 .workspace-explore-main { display: grid; grid-template-columns: 66px 1fr; gap: 10px; min-width: 0; align-items: center; padding: 0; border: 0; background: #fff; text-align: left; }
 .workspace-explore-main > span { position: relative; display: grid; width: 66px; height: 58px; place-items: center; overflow: hidden; border-radius: 10px; background: var(--surface); color: var(--accent-hover); font-weight: 700; }
