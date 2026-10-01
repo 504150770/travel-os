@@ -1,0 +1,52 @@
+{
+  "updatedOn": "2026-10-01",
+  "scope": "Travel OS only; existing presentation and functional regression; no production deployment",
+  "branch": "codex/visual-qa-20260929",
+  "reviewConversation": "https://chatgpt.com/g/g-p-6a805767bdd88191abdb60cf292d08e9-travel/c/6abdd47e-7d30-83e8-a535-f4e19fa74f85",
+  "originalReviewConversation": "https://chatgpt.com/g/g-p-6a805767bdd88191abdb60cf292d08e9-travel/c/6a9f6322-2fe8-83e8-966c-46da74ba76a0",
+  "continuationReason": "Original conversation reached maximum length; its Start new chat action opened this High review continuation",
+  "reviewMode": "High, verified in the conversation UI",
+  "reviewedSatisfiedToday": [
+    "Desktop budget, documents, packing, backup and survival",
+    "Desktop check-in, deadlines, tasks and essentials",
+    "Mobile Today including its actual top title and bottom",
+    "Mobile Map",
+    "Desktop transport status and source rendering",
+    "Home desktop 1440 and mobile 375",
+    "Mobile backup and survival",
+    "Mobile budget active-tab fix, documents and packing",
+    "Trip Day 8 desktop 1024, Day 15 desktop 1280 and Day 2 desktop 1280",
+    "Restaurant and shared Gym entity detail fact-label spacing"
+  ],
+  "lastReviewPending": null,
+  "actualInteractions": [
+    "Home budget opens Plan budget",
+    "Home Paris city card opens its Trip day",
+    "Continue trip opens Mobile Today",
+    "Personal menu opens existing mobile backup",
+    "Mobile accordion sections open and close",
+    "Mobile Today reaches document bottom",
+    "Mobile hotel sheet opens from Today",
+    "Desktop Day 8 right panel reaches scrollTop 1254.4 against max 1255",
+    "Desktop Day 15 right panel reaches scrollTop 1167.2 against max 1167",
+    "Day 8 to Day 15 resets right-panel scroll to zero",
+    "Day 2 displays two formal place cards without a third slot",
+    "Discover food category and restaurant detail open; bottom actions reachable"
+  ],
+  "testsPassed": ["typecheck", "lint", "build", "audit", "linkage", "architecture", "mobile", "desktop-workspace", "trip-presentation", "travel-intelligence", "readiness", "presentation", "gallery-offline", "privacy"],
+  "auditWarning": "Existing projected budget 27630 exceeds the unchanged hard cap 26000 by 1630; not a UI failure",
+  "remaining": [
+    "Complete remaining Mobile Plan sub-tab actual screenshots and reviews",
+    "Complete remaining search, detail menus and gallery real interactions",
+    "Verify state-changing actions only after safe UI backup, then undo; never overwrite real travel state",
+    "Check actual offline and backup/restore in a safe isolated test context; model tests alone are not end-to-end evidence",
+    "Collect final whole-scope High review only after all remaining functions have real evidence"
+  ],
+  "safety": [
+    "No data directory modifications; hotels, flights, Current Plan, budget and visa materials unchanged",
+    "Generated audit timestamps and build caches remain unstaged; unrelated user artifacts preserved",
+    "Screenshots contain only public/default app information; no private documents or tokens",
+    "Heartbeat jacob-travel continues this thread every 30 minutes; no automatic production deployment"
+  ],
+  "complete": false
+}
