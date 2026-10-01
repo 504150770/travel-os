@@ -48,6 +48,8 @@ assert.match(home, /实际记录 \{yuan\(actualTotal\)\}/);
 assert.match(read('views/discover/DiscoverView.tsx'), /<details className="explore-context">/);
 assert.match(read('components/mobile/MobilePlan.tsx'), /从容准备，安心出发/);
 assert.match(read('components/mobile/MobilePlan.tsx'), /Math\.abs\(plan\.overUnder\)/);
+assert.match(read('components/mobile/MobilePlan.tsx'), /row\.scrollLeft \+=/);
+assert.match(read('components/mobile/MobilePlan.tsx'), /\[controller\.planTab\]/);
 assert.match(read('components/mobile/MobileMore.tsx'), /mobile-disclosure-chevron/);
 assert.match(read('components/mobile/MobileExplore.tsx'), /aria-label=\{`查看 \$\{entity.name\}`\}/);
 assert.doesNotMatch(read('components/mobile/MobileExplore.tsx'), /<span>\{entity.type\}<\/span>/);

@@ -1,7 +1,7 @@
 'use client';
 
 import { CalendarCheck, Check, Circle, CreditCard, TrainFront } from 'lucide-react';
-import { lazy, Suspense } from 'react';
+import { lazy, Suspense, useEffect, useRef } from 'react';
 import type { AppController } from '@/features/app/useAppController';
 import type { PlanTab } from '@/features/app/appModel';
 import { yuan } from '@/features/app/appModel';
@@ -24,6 +24,19 @@ const tabs: Array<[PlanTab, string]> = [
 const ReadinessCenter = lazy(async () => ({ default: (await import('@/components/readiness/ReadinessCenter')).ReadinessCenter }));
 
 export function MobilePlan({ controller }: { controller: AppController }) {
+  const tabRow = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const row = tabRow.current;
+    const active = row?.querySelector<HTMLButtonElement>('button.active');
+    if (!row || !active) return;
+    const rowBounds = row.getBoundingClientRect();
+    const activeBounds = active.getBoundingClientRect();
+    if (activeBounds.left < rowBounds.left) {
+      row.scrollLeft += activeBounds.left - rowBounds.left - 12;
+    } else if (activeBounds.right > rowBounds.right) {
+      row.scrollLeft += activeBounds.right - rowBounds.right + 12;
+    }
+  }, [controller.planTab]);
   const plan = usePlanController({
     bookingStatuses: controller.bookingStatuses,
     budgetState: controller.budgetState,
@@ -37,7 +50,7 @@ export function MobilePlan({ controller }: { controller: AppController }) {
         <h1>从容准备，安心出发。</h1>
         <p>订单、交通和出发前待办，都在这里。</p>
       </header>
-      <div className="mobile-filter-row mobile-plan-tabs">
+      <div ref={tabRow} className="mobile-filter-row mobile-plan-tabs">
         {tabs.map(([id, label]) => (
           <button
             key={id}
