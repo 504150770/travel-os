@@ -13,6 +13,12 @@ assert.match(source, /ArrowLeft/); assert.match(source, /ArrowRight/); assert.ma
 const manifest = JSON.parse(readFileSync(join(root, 'public/offline-core.json'), 'utf8'));
 assert.ok(manifest.assetCount < 292, 'Offline core must not cache the entire media library');
 assert.equal(manifest.assets.length, manifest.assetCount);
+for (const file of [
+  '/images/jacob-personal-mark.webp',
+  '/images/home-eiffel-winter-sunset.png',
+  '/images/home-eiffel-winter-mobile.webp',
+  ...['rome', 'florence', 'venice', 'vienna', 'prague', 'paris'].map((city) => `/images/home-city-${city}.webp`),
+]) assert.ok(manifest.assets.includes(file), `Missing offline shell image ${file}`);
 for (const asset of manifest.assets.filter((item) => item.startsWith('/images/'))) assert.ok(existsSync(join(root, 'public', asset.slice(1))), `Missing offline asset ${asset}`);
 const report = JSON.parse(readFileSync(join(root, 'audit/offline-core.json'), 'utf8'));
 assert.equal(report.passed, true, 'Offline core entity coverage must pass');

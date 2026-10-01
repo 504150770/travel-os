@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-29T14:34:51.946Z",
-  "version": "33185b5813d6",
-  "assetCount": 201,
-  "mediaAssetCount": 194,
-  "totalBytes": 22581028,
+  "generatedAt": "2026-10-01T07:59:55.455Z",
+  "version": "983291a40f54",
+  "assetCount": 210,
+  "mediaAssetCount": 203,
+  "totalBytes": 26747961,
   "assets": [
     "/",
     "/?view=home",
@@ -114,6 +114,14 @@
     "/images/gym_rome_dabliu.webp",
     "/images/gym_vienna_jh.webp",
     "/images/gym/gym-paris-fpark/curated-2.webp",
+    "/images/home-city-florence.webp",
+    "/images/home-city-paris.webp",
+    "/images/home-city-prague.webp",
+    "/images/home-city-rome.webp",
+    "/images/home-city-venice.webp",
+    "/images/home-city-vienna.webp",
+    "/images/home-eiffel-winter-mobile.webp",
+    "/images/home-eiffel-winter-sunset.png",
     "/images/hotels/stay-florence-fonderia/bathroom.webp",
     "/images/hotels/stay-florence-fonderia/entrance.webp",
     "/images/hotels/stay-florence-fonderia/room.webp",
@@ -132,6 +140,7 @@
     "/images/hotels/stay-vienna-jimmys/bathroom.webp",
     "/images/hotels/stay-vienna-jimmys/entrance.webp",
     "/images/hotels/stay-vienna-jimmys/room.webp",
+    "/images/jacob-personal-mark.webp",
     "/images/lafayette_xmas.webp",
     "/images/latin_night.webp",
     "/images/louvre2.webp",
@@ -821,6 +830,54 @@
       "role": "equipment"
     },
     {
+      "file": "/images/home-city-florence.webp",
+      "group": "appShell",
+      "entityId": "app-shell",
+      "role": "shell"
+    },
+    {
+      "file": "/images/home-city-paris.webp",
+      "group": "appShell",
+      "entityId": "app-shell",
+      "role": "shell"
+    },
+    {
+      "file": "/images/home-city-prague.webp",
+      "group": "appShell",
+      "entityId": "app-shell",
+      "role": "shell"
+    },
+    {
+      "file": "/images/home-city-rome.webp",
+      "group": "appShell",
+      "entityId": "app-shell",
+      "role": "shell"
+    },
+    {
+      "file": "/images/home-city-venice.webp",
+      "group": "appShell",
+      "entityId": "app-shell",
+      "role": "shell"
+    },
+    {
+      "file": "/images/home-city-vienna.webp",
+      "group": "appShell",
+      "entityId": "app-shell",
+      "role": "shell"
+    },
+    {
+      "file": "/images/home-eiffel-winter-mobile.webp",
+      "group": "appShell",
+      "entityId": "app-shell",
+      "role": "shell"
+    },
+    {
+      "file": "/images/home-eiffel-winter-sunset.png",
+      "group": "appShell",
+      "entityId": "app-shell",
+      "role": "shell"
+    },
+    {
       "file": "/images/hotels/stay-florence-fonderia/bathroom.webp",
       "group": "hotelbathroom",
       "entityId": "stay-florence-fonderia",
@@ -927,6 +984,12 @@
       "group": "hotelroom",
       "entityId": "stay-vienna-jimmys",
       "role": "room"
+    },
+    {
+      "file": "/images/jacob-personal-mark.webp",
+      "group": "appShell",
+      "entityId": "app-shell",
+      "role": "shell"
     },
     {
       "file": "/images/lafayette_xmas.webp",

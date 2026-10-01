@@ -15,6 +15,15 @@ const choose = (rows, test, excluded = new Set()) => rows.find((image) => valid(
 const selected = [];
 const add = (image, group, entityId) => { if (valid(image)) selected.push({ file: image.file, group, entityId, role: role(image) }); };
 
+// App-specific imagery is outside the travel entity media library but must
+// remain available when the shell is opened without its origin server.
+for (const file of [
+  '/images/jacob-personal-mark.webp',
+  '/images/home-eiffel-winter-sunset.png',
+  '/images/home-eiffel-winter-mobile.webp',
+  ...['rome', 'florence', 'venice', 'vienna', 'prague', 'paris'].map((city) => `/images/home-city-${city}.webp`),
+]) add({ file, role: 'shell' }, 'appShell', 'app-shell');
+
 for (let day = 1; day <= 18; day += 1) add(images.find((image) => image.dayId === day && role(image) === 'hero'), 'dayHero', `day-${day}`);
 for (const stay of hotels) {
   const rows = stay.images || [];
