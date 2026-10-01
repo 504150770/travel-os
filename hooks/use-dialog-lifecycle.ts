@@ -21,6 +21,11 @@ export function useDialogLifecycle<T extends HTMLElement = HTMLDialogElement>(
     );
     focusable?.[0]?.focus();
     const keydown = (event: KeyboardEvent) => {
+      // A native top-layer Gallery owns its keyboard events, not this drawer.
+      const topDialog = event.target instanceof Element
+        ? event.target.closest('dialog[open]')
+        : null;
+      if (topDialog && topDialog !== dialog) return;
       if (event.key === 'Escape') closeRef.current();
       if (event.key !== 'Tab' || !focusable?.length) return;
       const first = focusable[0];

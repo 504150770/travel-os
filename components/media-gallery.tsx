@@ -87,6 +87,8 @@ export function MediaGallery({
         close();
       }}
       onKeyDown={(event) => {
+        // The native dialog handles Escape; do not close its underlying drawer.
+        if (event.key === 'Escape') event.stopPropagation();
         if (event.key === 'ArrowLeft' && count > 1) move(-1);
         if (event.key === 'ArrowRight' && count > 1) move(1);
       }}
