@@ -54,7 +54,7 @@ assert.match(read('components/mobile/MobilePlan.tsx'), /Unknown: '状态未确�
 assert.match(read('components/mobile/MobilePlan.tsx'), /segment\.status !== 'TICKETED'/);
 assert.doesNotMatch(read('components/mobile/MobilePlan.tsx'), /Choose in desktop Plan/);
 assert.match(read('components/mobile/MobilePlan.tsx'), /Critical: '关键'/);
-assert.match(read('views/trip/DesktopTripDrawers.tsx'), /shown\.length === 0 && <p className="workspace-search-empty" role="status">未找到匹配结果/);
+assert.match(read('views/trip/DesktopTripDrawers.tsx'), /shown\.length === 0 && <output className="workspace-search-empty">未找到匹配结果/);
 assert.match(read('components/mobile/MobileMore.tsx'), /mobile-disclosure-chevron/);
 assert.match(read('components/mobile/MobileExplore.tsx'), /aria-label=\{`查看 \$\{entity.name\}`\}/);
 assert.doesNotMatch(read('components/mobile/MobileExplore.tsx'), /<span>\{entity.type\}<\/span>/);

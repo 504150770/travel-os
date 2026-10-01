@@ -16,7 +16,9 @@
     "Mobile backup and survival",
     "Mobile budget active-tab fix, documents and packing",
     "Trip Day 8 desktop 1024, Day 15 desktop 1280 and Day 2 desktop 1280",
-    "Restaurant and shared Gym entity detail fact-label spacing"
+    "Restaurant and shared Gym entity detail fact-label spacing",
+    "Mobile Plan check-in, transport, tasks, deadlines and booking list top/bottom",
+    "Desktop Trip Explore search hit and empty-result feedback"
   ],
   "lastReviewPending": null,
   "actualInteractions": [
@@ -31,13 +33,15 @@
     "Desktop Day 15 right panel reaches scrollTop 1167.2 against max 1167",
     "Day 8 to Day 15 resets right-panel scroll to zero",
     "Day 2 displays two formal place cards without a third slot",
-    "Discover food category and restaurant detail open; bottom actions reachable"
+    "Discover food category and restaurant detail open; bottom actions reachable",
+    "Mobile Plan switches check-in, transport, tasks, deadlines and bookings without changing completion/status values",
+    "Mobile booking list reaches scrollY 4226.4 against max 4226, content width 375 without horizontal overflow",
+    "Trip Explore search for 歌剧 returns Palais Garnier only; nonexistent query shows empty-result feedback; ESC closes drawer"
   ],
   "testsPassed": ["typecheck", "lint", "build", "audit", "linkage", "architecture", "mobile", "desktop-workspace", "trip-presentation", "travel-intelligence", "readiness", "presentation", "gallery-offline", "privacy"],
   "auditWarning": "Existing projected budget 27630 exceeds the unchanged hard cap 26000 by 1630; not a UI failure",
   "remaining": [
-    "Complete remaining Mobile Plan sub-tab actual screenshots and reviews",
-    "Complete remaining search, detail menus and gallery real interactions",
+    "Complete remaining detail menus, Gallery and responsive Day 2/8/15 combinations; current Mobile Plan tabs visual review complete",
     "Verify state-changing actions only after safe UI backup, then undo; never overwrite real travel state",
     "Check actual offline and backup/restore in a safe isolated test context; model tests alone are not end-to-end evidence",
     "Collect final whole-scope High review only after all remaining functions have real evidence"
@@ -48,5 +52,12 @@
     "Screenshots contain only public/default app information; no private documents or tokens",
     "Heartbeat jacob-travel continues this thread every 30 minutes; no automatic production deployment"
   ],
+  "latestIteration": {
+    "fixes": ["Mobile check-in requirement display localized", "Exact ticketed transport hides unnecessary choice hint", "Deadline priority display localized without changing raw values", "Explore empty search uses one muted semantic output message"],
+    "review": "High explicitly satisfied these screenshot scopes; not a whole-system acceptance",
+    "evidenceCorrection": "deadlines-mobile-390.jpg captured stale transport render and is NOT valid deadline evidence; deadlines-mobile-final-390.jpg is the correct reviewed screenshot",
+    "safeState": "No state-changing booking/completion/favorites/Current Plan actions were exercised; these remain unverified end-to-end",
+    "codeReview": "Only display mappings and conditional empty feedback; handlers, filtering, storage and data unchanged. Lint caught prefer-tag-over-role and was fixed to native output; lint/typecheck/presentation subsequently passed."
+  },
   "complete": false
 }
