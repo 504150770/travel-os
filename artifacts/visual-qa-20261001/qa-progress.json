@@ -27,9 +27,11 @@
     "Desktop Day 2 at 1440, Day 8 at 1280 and Day 15 at 1024: actual top and End screenshots",
     "Mobile Day 2 at 375, Day 8 at 390 and Day 15 at 430: actual top and End screenshots",
     "Desktop remaining Day 2 at 1024, Day 8 at 1440 and Day 15 at 1440: actual top and End screenshots",
-    "Mobile remaining Day 2 at 390/430, Day 8 at 375/430 and Day 15 at 375/390: actual top and End screenshots"
+    "Mobile remaining Day 2 at 390/430, Day 8 at 375/430 and Day 15 at 375/390: actual top and End screenshots",
+    "Desktop1280 Map Day details Drawer layering and Map second open",
+    "Isolated packing screenshot visible1/48 count and current list presentation; not import acceptance"
   ],
-  "lastReviewPending": "Desktop Map Day details layering and second open, two images in bc4404d sent to High. Browser plugin updated from26.928.21956 to26.928.31416 during reply read; first CDP timeout, retry lost bindings. Next run bootstrap new official runtime, read existing reply before sending anything again.",
+  "lastReviewPending": null,
   "actualInteractions": [
     "Home budget opens Plan budget",
     "Home Paris city card opens its Trip day",
@@ -68,7 +70,7 @@
   "remaining": [
     "Remaining functional details and state-changing actions; responsive Day2/8/15 desktop1440/1280/1024 and mobile375/390/430 layout scopes now covered across this and previous iterations, not a claim that every function was tested at every size",
     "Verify remaining state-changing actions only in isolated context after safe UI backup, then undo; favorite persistence and keyboard DnD/Undo already tested",
-    "Backup file import/restore still untested through browser UI; current Chrome capability inventory only exposes viewport, no supported file-picker test used; preserve actual user state, do not bypass via injected File or storage writes",
+    "Backup import/restore remains untested: official updated filechooser/setFiles interface tried on isolated3001, blocked by ChatGPT extension Allow access to file URLs permission. No permission expanded or injected File/storage workaround used",
     "Comprehensive network-offline behavior still unverified; no browser network-disconnection capability exposed; current evidence is same-origin server unavailable, not full external network disconnection",
     "Collect final whole-scope High review only after all remaining functions have real evidence"
   ],
@@ -81,11 +83,11 @@
   ],
   "latestIteration": {
     "fixes": [],
-    "review": "High satisfied18 new responsive screenshots in three groups. A helper accidentally resent desktop group; actual sent prompt was checked and correct mobile group explicitly resent and reviewed. Map two-image review pending browser runtime update; do not resend before reading latest reply. No source changes.",
+    "review": "Recovered High explicitly satisfied actual1280x800 Map/Drawer and second-open scope. High actually opened66c9a0b packing screenshot and satisfied visible count/list scope, explicitly not import or whole-system completion. No source changes or manufactured design issues.",
     "evidenceCorrection": "deadlines-mobile-390.jpg captured stale transport render and is NOT valid deadline evidence; deadlines-mobile-final-390.jpg is the correct reviewed screenshot",
-    "safeState": "No real-origin Current Plan, booking/completion or budget edits; favorite toggled and canceled after UI backup; isolated Timeline reorder undone with exact business-field equality",
+    "safeState": "Real3000 state untouched. Isolated3001 UI export before temporary note and packing tests; note cleared, Power bank checked then confirmed persisted after reload and unchecked. Final export equals initial across all10 business fields excluding exportedAt. Private exports stay in Downloads only. Own3001 server stopped;3000 retained.",
     "codeReview": "No source changes this iteration; existing completed typecheck/lint/build/audit and all regression results retained, not falsely described as rerun for screenshot-only additions. Data diff remains empty.",
-    "limitations": ["File import and full browser-network offline still untested through supported interface", "Viewport capability applies selected Chrome tab; first attempted map test was actually mobile and excluded from desktop evidence. Fresh tab actual1280x800 confirmed before final desktop test", "Source/model tests do not substitute for state-changing actual interactions"]
+    "limitations": ["Import blocked by explicit extension file-URL permission; official interface exists but permission not changed", "Full network-offline still unverified; same-origin unavailable test is narrower", "Packing screenshot shows1/48 count, not Power bank row; DOM interaction supplies persistence evidence, not image alone", "Source/model tests do not substitute for actual interactions"]
   },
   "complete": false
 }
