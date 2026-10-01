@@ -28,6 +28,11 @@ const checkinRequirementLabels: Record<string, string> = {
   Recommended: '建议在线入住',
 };
 
+const deadlinePriorityLabels: Record<string, string> = {
+  Critical: '关键',
+  Nice: '可选',
+};
+
 const ReadinessCenter = lazy(async () => ({ default: (await import('@/components/readiness/ReadinessCenter')).ReadinessCenter }));
 
 export function MobilePlan({ controller }: { controller: AppController }) {
@@ -109,7 +114,7 @@ export function MobilePlan({ controller }: { controller: AppController }) {
               <article key={item.id}>
                 {status === 'Done' ? <Check /> : <Circle />}
                 <div>
-                  <span>{item.date} · {item.priority}</span>
+                  <span>{item.date} · {deadlinePriorityLabels[item.priority] ?? item.priority}</span>
                   <h2>{item.title}</h2>
                   <p>{item.action}</p>
                 </div>
