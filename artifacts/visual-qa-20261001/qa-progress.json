@@ -23,7 +23,9 @@
     "Offline core readiness and repaired Trip/Home desktop/mobile shell imagery",
     "Mobile 375 Gallery source-annotation display fix and place detail",
     "Gallery Escape closes only top layer and preserves underlying detail",
-    "Mobile Timeline more-actions menu readability, touch spacing and disabled first-item earlier action"
+    "Mobile Timeline more-actions menu readability, touch spacing and disabled first-item earlier action",
+    "Desktop Day 2 at 1440, Day 8 at 1280 and Day 15 at 1024: actual top and End screenshots",
+    "Mobile Day 2 at 375, Day 8 at 390 and Day 15 at 430: actual top and End screenshots"
   ],
   "lastReviewPending": null,
   "actualInteractions": [
@@ -50,15 +52,18 @@
     "Mobile Day 8 place detail opens Gallery; View photo 2 updates position 2/3 and image; source QS annotations no longer appear in display copy",
     "After fixing native-dialog keyboard ownership, Gallery Escape leaves place detail open and returns focus to its Gallery trigger; no itinerary changes",
     "Mobile Day 8 more-actions sheet opens with first-item Move earlier correctly disabled; mutation buttons not clicked on real origin",
-    "Gallery ArrowRight switches 1/3 to 2/3 and ArrowLeft returns to 1/3; Close gallery button closes Gallery normally"
+    "Gallery ArrowRight switches 1/3 to 2/3 and ArrowLeft returns to 1/3; Close gallery button closes Gallery normally",
+    "Desktop Overview End access D2 1440 scrollTop 644/max644; D8 1280 1324.8/max1324; D15 1024 1684/max1684, no horizontal overflow or Leaflet container",
+    "Mobile Today End access D2 viewport375 content360 scrollY2281.6/max2282; D8 viewport390 content375 2740.8/max2741; D15 viewport430 content415 2544.8/max2545; no horizontal overflow; scrollbar occupies15px",
+    "Temporary Chrome viewport override reset after responsive tests"
   ],
   "testsPassed": ["typecheck", "lint", "build", "audit", "linkage", "architecture", "mobile", "desktop-workspace", "trip-presentation", "travel-intelligence", "readiness", "presentation", "gallery-offline", "gallery-copy", "privacy"],
   "auditWarning": "Existing projected budget 27630 exceeds the unchanged hard cap 26000 by 1630; not a UI failure",
   "remaining": [
-    "Complete remaining detail menus, Gallery and responsive Day 2/8/15 combinations; current Mobile Plan tabs visual review complete",
+    "Complete remaining responsive Cartesian Day 2/8/15 combinations and details; only explicitly listed pairs have actual evidence, not all 18 combinations",
     "Verify remaining state-changing actions only in isolated context after safe UI backup, then undo; favorite persistence and keyboard DnD/Undo already tested",
-    "Backup file import/restore still untested through browser UI; only UI exports and before/after comparisons completed",
-    "Comprehensive network-offline behavior still unverified; current evidence is same-origin server unavailable, not full external network disconnection",
+    "Backup file import/restore still untested through browser UI; current Chrome capability inventory only exposes viewport, no supported file-picker test used; preserve actual user state, do not bypass via injected File or storage writes",
+    "Comprehensive network-offline behavior still unverified; no browser network-disconnection capability exposed; current evidence is same-origin server unavailable, not full external network disconnection",
     "Collect final whole-scope High review only after all remaining functions have real evidence"
   ],
   "safety": [
@@ -69,12 +74,12 @@
     "3000 dev server retained; isolated 3001 production test server stopped after offline verification; local backup exports remain in Downloads only"
   ],
   "latestIteration": {
-    "fixes": ["Gallery UI strips source QS annotations and omits identical caption without modifying metadata", "Underlying drawer keyboard lifecycle defers to open native Gallery, so Escape preserves detail and returns focus"],
-    "review": "High explicitly satisfied 375px Gallery/point detail visual scope and Escape layer scope; not a whole-system acceptance",
+    "fixes": [],
+    "review": "High actually opened 12 new screenshots and explicitly satisfied three Desktop Overview and three Mobile Today top/End pairs; no must-fix issue, no artificial design changes. Not whole-system acceptance.",
     "evidenceCorrection": "deadlines-mobile-390.jpg captured stale transport render and is NOT valid deadline evidence; deadlines-mobile-final-390.jpg is the correct reviewed screenshot",
     "safeState": "No real-origin Current Plan, booking/completion or budget edits; favorite toggled and canceled after UI backup; isolated Timeline reorder undone with exact business-field equality",
-    "codeReview": "Display helper only cleans UI strings; source metadata, image order, gallery selection and business data unchanged. Keyboard guard also prevents underlying focus trap handling events owned by native Gallery. All existing regression scripts and typecheck/lint/build/audit passed after changes.",
-    "limitations": ["Dev deliberately unregisters service worker; dev offline button cannot validate production offline behavior", "Second same-directory dev instance rejected, so used existing built production runtime on isolated port 3001", "No file import/restore or full external network disconnection claimed"]
+    "codeReview": "No source changes this iteration; existing completed typecheck/lint/build/audit and all regression results retained, not falsely described as rerun for screenshot-only additions. Data diff remains empty.",
+    "limitations": ["File import and full browser-network offline still untested through supported interface", "Responsive screenshots only establish specified pairs, not Cartesian coverage", "Source/model tests do not substitute for state-changing actual interactions"]
   },
   "complete": false
 }
