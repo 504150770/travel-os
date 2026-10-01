@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { Check, Download, HeartPulse, Upload, WifiOff } from 'lucide-react';
+import { Check, ChevronDown, Download, HeartPulse, Upload, WifiOff } from 'lucide-react';
 import { lazy, Suspense, useEffect, useRef, useState } from 'react';
 import type { AppController } from '@/features/app/useAppController';
 import type { MoreTab } from '@/features/app/appModel';
@@ -21,8 +21,8 @@ const panels: Array<[MorePanel, string]> = [
   ['stays', '住宿'],
   ['documents', '旅行资料'],
   ['packing', '行李清单'],
-  ['essentials', '实用信息'],
-  ['survival', '出行须知'],
+  ['essentials', '出行须知'],
+  ['survival', '实用信息'],
   ['offline', '离线'],
   ['backup', '备份'],
 ];
@@ -126,7 +126,7 @@ export function MobileMore({ controller }: { controller: AppController }) {
         <div className="mobile-accordion-list">
           {guideData.essentials.groups.map((group) => (
             <details key={group.id}>
-              <summary>{group.title}</summary>
+              <summary>{group.title}<ChevronDown className="mobile-disclosure-chevron" /></summary>
               {group.items.map((item) => <p key={item}><Check /> {item}</p>)}
             </details>
           ))}
@@ -137,12 +137,12 @@ export function MobileMore({ controller }: { controller: AppController }) {
         <div className="mobile-survival-list">
           {(guideData.survival as SurvivalCity[]).map((item) => (
             <details key={item.city}>
-              <summary><HeartPulse /> {item.city}</summary>
-              <p><b>Transit</b>{item.nearestTransit}</p>
-              <p><b>Pharmacy</b>{item.pharmacy}</p>
-              <p><b>Supermarket</b>{item.supermarket}</p>
-              <p><b>Emergency</b>{item.emergency}</p>
-              <p><b>Taxi</b>{item.taxi}</p>
+              <summary><HeartPulse /> {item.city}<ChevronDown className="mobile-disclosure-chevron" /></summary>
+              <p><b>交通</b>{item.nearestTransit}</p>
+              <p><b>药店</b>{item.pharmacy}</p>
+              <p><b>超市</b>{item.supermarket}</p>
+              <p><b>急救</b>{item.emergency}</p>
+              <p><b>出租车</b>{item.taxi}</p>
             </details>
           ))}
         </div>
@@ -151,7 +151,7 @@ export function MobileMore({ controller }: { controller: AppController }) {
       {panel === 'offline' && (
         <section className="mobile-offline-panel">
           <WifiOff />
-          <h2>Offline trip pack</h2>
+          <h2>离线行程包</h2>
           <p>下载当前核心行程、路线和精选媒体。地图瓦片不包含在离线包内。</p>
           <OfflinePackControl />
           <OfflineMapFallback
@@ -165,10 +165,10 @@ export function MobileMore({ controller }: { controller: AppController }) {
 
       {panel === 'backup' && (
         <section className="mobile-backup-panel">
-          <h2>Backup / Restore</h2>
-          <p>包含 Current Plan、自定义项目、状态、收藏、Packing、预算实际支出和偏好交通。Documents 只保存在此设备。</p>
-          <button onClick={exportBackup}><Download /> Export JSON</button>
-          <button onClick={() => fileRef.current?.click()}><Upload /> Import JSON</button>
+          <h2>备份与恢复</h2>
+          <p>包含当前行程、自定义项目、状态、收藏、行李清单、预算实际支出和偏好交通。随身资料文件只保存在此设备。</p>
+          <button onClick={exportBackup}><Download /> 导出 JSON 备份</button>
+          <button onClick={() => fileRef.current?.click()}><Upload /> 导入 JSON 备份</button>
           <input
             ref={fileRef}
             hidden
@@ -185,7 +185,7 @@ export function MobileMore({ controller }: { controller: AppController }) {
             }}
           />
           <label>
-            Travel notes
+            旅行备注
             <textarea value={controller.notes} onChange={(event) => controller.setNotes(event.target.value)} />
           </label>
         </section>

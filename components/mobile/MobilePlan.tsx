@@ -159,7 +159,7 @@ export function MobilePlan({ controller }: { controller: AppController }) {
           <CreditCard />
           <span>预计总额</span>
           <h2>{yuan(plan.projected)}</h2>
-          <p>{plan.unknown} 项仍待确认 · 距硬上限 {yuan(plan.overUnder)}</p>
+          <p>{plan.unknown} 项仍待确认 · {plan.overUnder < 0 ? '超出上限' : '剩余额度'} {yuan(Math.abs(plan.overUnder))}</p>
           <div>
             {guideData.budget.categories.map((category) => (
               <p key={category.id}>

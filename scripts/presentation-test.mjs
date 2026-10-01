@@ -47,6 +47,8 @@ assert.match(home, /预计总额/);
 assert.match(home, /实际记录 \{yuan\(actualTotal\)\}/);
 assert.match(read('views/discover/DiscoverView.tsx'), /<details className="explore-context">/);
 assert.match(read('components/mobile/MobilePlan.tsx'), /从容准备，安心出发/);
+assert.match(read('components/mobile/MobilePlan.tsx'), /Math\.abs\(plan\.overUnder\)/);
+assert.match(read('components/mobile/MobileMore.tsx'), /mobile-disclosure-chevron/);
 assert.match(read('components/mobile/MobileExplore.tsx'), /aria-label=\{`查看 \$\{entity.name\}`\}/);
 assert.doesNotMatch(read('components/mobile/MobileExplore.tsx'), /<span>\{entity.type\}<\/span>/);
 assert.match(read('components/mobile/mobile.css'), /\.mobile-stay-list b[^}]*overflow-wrap: anywhere/);
@@ -57,6 +59,7 @@ assert.match(personalMenu, /jacob-personal-mark\.webp/);
 assert.match(personalMenu, /Backup \/ Export/);
 assert.match(personalMenu, /Saved \/ Local status/);
 assert.match(personalMenu, /travel-save-state/);
+assert.match(personalMenu, /aria-label="Jacob"/);
 
 // desktop-view-mode
 assert.match(workspace, /useState<'overview' \| 'map'>\('overview'\)/);

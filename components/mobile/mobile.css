@@ -831,6 +831,12 @@
 .mobile-accordion-list p svg { flex: 0 0 auto; width: 16px; color: #3b9a5e; }
 .mobile-survival-list p { flex-direction: column; gap: 2px; }
 .mobile-survival-list p b { color: var(--mobile-text); }
+.mobile-accordion-list summary,
+.mobile-survival-list summary { list-style: none; }
+.mobile-accordion-list summary::-webkit-details-marker,
+.mobile-survival-list summary::-webkit-details-marker { display: none; }
+.mobile-disclosure-chevron { width: 18px; height: 18px; margin-left: auto; color: var(--mobile-muted); transition: transform 160ms ease; }
+details[open] > summary > .mobile-disclosure-chevron { transform: rotate(180deg); }
 
 .mobile-offline-panel,
 .mobile-backup-panel { padding: 20px; border-radius: 18px; background: #f7f7f7; }

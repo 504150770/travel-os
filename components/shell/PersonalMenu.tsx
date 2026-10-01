@@ -63,6 +63,7 @@ export function PersonalMenu({
     <button
       className="personal-trigger"
       type="button"
+      aria-label="Jacob"
       aria-haspopup="menu"
       aria-expanded={open}
       onClick={() => setOpen((value) => !value)}
