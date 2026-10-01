@@ -21,6 +21,13 @@ const tabs: Array<[PlanTab, string]> = [
   ['tasks', '待办'],
 ];
 
+const checkinRequirementLabels: Record<string, string> = {
+  Unknown: '状态未确认',
+  Required: '需要在线入住',
+  'Not Required': '无需在线入住',
+  Recommended: '建议在线入住',
+};
+
 const ReadinessCenter = lazy(async () => ({ default: (await import('@/components/readiness/ReadinessCenter')).ReadinessCenter }));
 
 export function MobilePlan({ controller }: { controller: AppController }) {
@@ -133,7 +140,7 @@ export function MobilePlan({ controller }: { controller: AppController }) {
                 <div>
                   <span>{stay.areaLabel ?? stay.city} · {stay.checkIn}</span>
                   <h2>{stay.hotelName}</h2>
-                  <p>{stay.execution.onlineCheckIn.requirement}</p>
+                  <p>{checkinRequirementLabels[stay.execution.onlineCheckIn.requirement] ?? stay.execution.onlineCheckIn.requirement}</p>
                 </div>
                 <button
                   onClick={() =>
@@ -161,7 +168,9 @@ export function MobilePlan({ controller }: { controller: AppController }) {
                 <h2>{segment.route}</h2>
                 <p>{segment.doorToDoor}</p>
               </div>
-              <small>{controller.preferredTransport[segment.id] ?? 'Choose in desktop Plan'}</small>
+              {segment.status !== 'TICKETED' && (
+                <small>{controller.preferredTransport[segment.id] ?? '在桌面端 Plan 选择'}</small>
+              )}
             </article>
           ))}
         </div>
