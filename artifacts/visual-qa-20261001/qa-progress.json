@@ -31,7 +31,8 @@
     "Desktop1280 Map Day details Drawer layering and Map second open",
     "Isolated packing screenshot visible1/48 count and current list presentation; not import acceptance",
     "Desktop personal menu actual expanded screenshot and Escape/Backup/Settings entry behavior",
-    "QuickAdd required-name feedback fix; actual High image read, not successful-save acceptance"
+    "QuickAdd required-name feedback fix; actual High image read, not successful-save acceptance",
+    "Three isolated Trip action screenshots: existing entity Add/Undo, time edit/Undo,390px active-to-alternative/Undo; visible feedback/readability scope only"
   ],
   "lastReviewPending": null,
   "actualInteractions": [
@@ -68,13 +69,16 @@
     "Desktop Map to Overview retains hidden mapCount1 tiles12, second Map shows same counts; this is DOM lifecycle evidence, not exact network-request or timing measurement",
     "Desktop Jacob menu Escape closes; Settings opens existing More essentials; Backup opens existing backup; navigation closes menu. No data mutation or export/import on real origin this iteration",
     "Isolated3001 QuickAdd empty submit creates no item; Escape retains Explore and returns focus. Before/after UI exports identical across10 business fields",
-    "Fixed3000 QuickAdd empty/whitespace name shows hint and disabled Save; nonempty enables Save and hides hint; Escape cancels without saving"
+    "Fixed3000 QuickAdd empty/whitespace name shows hint and disabled Save; nonempty enables Save and hides hint; Escape cancels without saving",
+    "Isolated3001 Explore Add Colosseum to Day2 updates Timeline4 items, Overview3 places and To Book; Undo restores initial10 business fields exactly",
+    "Isolated3001 Trevi time edited13:15 then Undo returns午后; export10 fields equal initial",
+    "Isolated3001 mobile390 Trevi transferred to alternatives; next stop Navona,2 arrangements and route update; Undo restores initial10 fields exactly; temporary viewport reset"
   ],
   "testsPassed": ["typecheck", "lint", "build", "audit", "linkage", "architecture", "mobile", "desktop-workspace", "trip-presentation", "travel-intelligence", "readiness", "presentation", "gallery-offline", "gallery-copy", "privacy"],
   "auditWarning": "Existing projected budget 27630 exceeds the unchanged hard cap 26000 by 1630; not a UI failure",
   "remaining": [
     "Remaining functional details and state-changing actions; responsive Day2/8/15 desktop1440/1280/1024 and mobile375/390/430 layout scopes now covered across this and previous iterations, not a claim that every function was tested at every size",
-    "Verify remaining state-changing actions only in isolated context after safe UI backup, then undo; next concrete coverage includes QuickAdd cancel/validation, Alternative add/remove, move-to-day and undo, task/booking selectors. Favorite persistence, keyboard DnD/Undo and packing toggle persistence already tested",
+    "Verify remaining state-changing actions in isolated context after UI backup then undo; next concrete coverage includes restore-from-alternative/remove, move-to-day, custom successful-save and task/booking selectors. QuickAdd cancel/validation, existing entity add/Undo, time-edit/Undo, active-to-alternative/Undo, favorites, DnD/Undo and packing toggle already tested",
     "Backup import/restore remains untested: official updated filechooser/setFiles interface tried on isolated3001, blocked by ChatGPT extension Allow access to file URLs permission. No permission expanded or injected File/storage workaround used",
     "Comprehensive network-offline behavior still unverified; no browser network-disconnection capability exposed; current evidence is same-origin server unavailable, not full external network disconnection",
     "Collect final whole-scope High review only after all remaining functions have real evidence"
@@ -87,11 +91,11 @@
     "3000 dev server retained; isolated 3001 production test server stopped after offline verification; local backup exports remain in Downloads only"
   ],
   "latestIteration": {
-    "fixes": ["QuickAdd empty/whitespace name disabled Save plus14px associated hint; original submit guard and persistence handler unchanged"],
-    "review": "High read8b1fcb2 before images, identified one required empty-submit-feedback issue; actually openedb82b015 fixed image and explicitly satisfied only required-name feedback scope. Layout not redesigned.",
+    "fixes": [],
+    "review": "Verified High actually opened all3 dfe7ed4 reversible-action screenshots and explicitly satisfied visible feedback/readability/occlusion scope; not final itinerary or all Trip operations. No source edits this iteration.",
     "evidenceCorrection": "deadlines-mobile-390.jpg captured stale transport render and is NOT valid deadline evidence; deadlines-mobile-final-390.jpg is the correct reviewed screenshot",
-    "safeState": "Isolated3001 UI backup(7) before empty submit/cancel test, after export(8) all10 business fields identical excluding exportedAt. Fixed3000 form only typed then canceled, never Save. Private JSON not committed/reviewed. Own3001 server21858 stopped before build;3000 retained.",
-    "codeReview": "Reviewed7-line presentation-only change plus one removed line; no submit handler changes. Added source assertions for disabled trim, hint and retained guard. Reran typecheck/lint/build/audit, linkage/mobile/desktop-workspace/presentation/architecture/trip-presentation/travel-intelligence/readiness/gallery-offline/gallery-copy/privacy successfully. Audit0failures1existing budget warning; data diff empty. Generated audits/build files unstaged.",
+    "safeState": "UI export(9) before isolated3001 tests; exports(10),(11),(12) after respective Add/Undo, time-edit/Undo, transfer/Undo equal initial all10 fields excluding exportedAt. Real3000 untouched. Private exports remain Downloads, not GitHub/ChatGPT. Own3001 server90458 stopped, viewport reset.",
+    "codeReview": "Read useEditablePlan commit/transfer/add/update/undo mechanics and DesktopTripTimeline time handler. Actual UI tests match these paths. No source edits; all prior full regression results retained, not falsely claimed rerun. Data diff empty; generated/user files unstaged.",
     "limitations": ["Import blocked by explicit extension file-URL permission; official interface exists but permission not changed", "Full network-offline still unverified; same-origin unavailable test is narrower", "Packing screenshot shows1/48 count, not Power bank row; DOM interaction supplies persistence evidence, not image alone", "Source/model tests do not substitute for actual interactions"]
   },
   "complete": false
