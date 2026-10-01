@@ -22,6 +22,11 @@ export type GalleryRequest = {
   index: number;
 };
 
+// Keep source metadata intact; only remove machine annotations from UI copy.
+export function galleryDisplayText(value: string, fallback: string) {
+  return value.split(/\s+(?:title|label)\s+QS:|\s+QS:P\d+/i)[0].trim() || fallback;
+}
+
 const roleOrder: Record<string, number> = {
   cover: 0,
   dish: 1,

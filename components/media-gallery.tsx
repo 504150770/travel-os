@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
-import type { GalleryRequest } from '@/lib/media';
+import { galleryDisplayText, type GalleryRequest } from '@/lib/media';
 
 export function MediaGallery({
   gallery,
@@ -70,6 +70,8 @@ export function MediaGallery({
 
   if (!gallery || !count) return null;
   const image = gallery.images[index];
+  const title = galleryDisplayText(image.title, gallery.name);
+  const caption = galleryDisplayText(image.caption, gallery.name);
   const move = (delta: number) =>
     setIndex((current) => (current + delta + count) % count);
 
@@ -111,7 +113,7 @@ export function MediaGallery({
           unoptimized
           key={image.file}
           src={image.file}
-          alt={image.title || image.caption}
+          alt={title}
           fill
           sizes="100vw"
           priority
@@ -126,8 +128,8 @@ export function MediaGallery({
       <footer>
         <div>
           <span>{image.role.replace('-', ' ')}</span>
-          <h2>{image.title}</h2>
-          <p>{image.caption}</p>
+          <h2>{title}</h2>
+          {caption !== title && <p>{caption}</p>}
         </div>
         <div className="media-gallery-dots" aria-label="Photo position">
           {gallery.images.map((item, itemIndex) => (
