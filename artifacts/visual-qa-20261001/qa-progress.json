@@ -33,7 +33,8 @@
     "Desktop personal menu actual expanded screenshot and Escape/Backup/Settings entry behavior",
     "QuickAdd required-name feedback fix; actual High image read, not successful-save acceptance",
     "Three isolated Trip action screenshots: existing entity Add/Undo, time edit/Undo,390px active-to-alternative/Undo; visible feedback/readability scope only",
-    "Isolated390px Remove feedback and desktop existing-alternative-to-active feedback/fallback; High actually opened both images, scoped satisfaction only"
+    "Isolated390px Remove feedback and desktop existing-alternative-to-active feedback/fallback; High actually opened both images, scoped satisfaction only",
+    "Desktop removed-alternative pool expanded and restored entry actual screenshots; High explicitly satisfied visible feedback/fallback scope"
   ],
   "lastReviewPending": null,
   "actualInteractions": [
@@ -75,13 +76,14 @@
     "Isolated3001 Trevi time edited13:15 then Undo returns午后; export10 fields equal initial",
     "Isolated3001 mobile390 Trevi transferred to alternatives; next stop Navona,2 arrangements and route update; Undo restores initial10 fields exactly; temporary viewport reset",
     "Isolated3001 mobile390 Trevi Remove updates next stop Navona,2 arrangements/2Core and route; Undo export(14) equals baseline(13) across10 fields",
-    "Isolated3001 desktop Day details existing Castel Sant Angelo alternative Join today produces4 arrangements/3places and Undo feedback; Undo export(15) equals baseline(13) across10 fields. No map initialization or real3000 state changes"
+    "Isolated3001 desktop Day details existing Castel Sant Angelo alternative Join today produces4 arrangements/3places and Undo feedback; Undo export(15) equals baseline(13) across10 fields. No map initialization or real3000 state changes",
+    "Isolated3001 last alternative Trastevere removed, removed-list expanded, actual Restore returns it to alternatives not activeItems; export(17) equals baseline(16) across10 business fields. Restored final screenshot correctly frames full entry after non-mutating keyboard focus"
   ],
   "testsPassed": ["typecheck", "lint", "build", "audit", "linkage", "architecture", "mobile", "desktop-workspace", "trip-presentation", "travel-intelligence", "readiness", "presentation", "gallery-offline", "gallery-copy", "privacy"],
   "auditWarning": "Existing projected budget 27630 exceeds the unchanged hard cap 26000 by 1630; not a UI failure",
   "remaining": [
     "Remaining functional details and state-changing actions; responsive Day2/8/15 desktop1440/1280/1024 and mobile375/390/430 layout scopes now covered across this and previous iterations, not a claim that every function was tested at every size",
-    "Verify remaining state-changing actions in isolated context after UI backup then undo; next coverage includes removed-pool restore, move-to-day, custom successful-save and task/booking selectors. Remove/Undo and existing-alternative-to-active/Undo now actually tested. Legacy move-day controls not exposed in inspected desktop Timeline/Day details; do not confuse model coverage with UI interaction",
+    "Verify remaining state-changing actions in isolated context after UI backup then undo; next coverage includes move-to-day, custom successful-save and task/booking selectors. Removed-pool Restore, Remove/Undo and existing-alternative-to-active/Undo now actually tested. Legacy move-day controls not exposed in inspected desktop Timeline/Day details; do not confuse model coverage with UI interaction. Successful custom save must include deletion via Discover existing native-confirm UI and exact export restoration; do not leave test custom entities behind",
     "Backup import/restore remains untested: official updated filechooser/setFiles interface tried on isolated3001, blocked by ChatGPT extension Allow access to file URLs permission. No permission expanded or injected File/storage workaround used",
     "Comprehensive network-offline behavior still unverified; no browser network-disconnection capability exposed; current evidence is same-origin server unavailable, not full external network disconnection",
     "Collect final whole-scope High review only after all remaining functions have real evidence"
@@ -95,10 +97,10 @@
   ],
   "latestIteration": {
     "fixes": [],
-    "review": "Verified High actually opened2815878 mobile Remove screenshot and c2400c2 desktop alternative restoration screenshot; explicitly satisfied visible feedback/readability/occlusion and missing-real-photo fallback. No manufactured fixes or source edits; not all Trip operations or global completion.",
+    "review": "High verified in continuation UI; actually opened7fb9536 removed-list expanded and1b472e0 correctly framed recovered entry. Explicitly satisfied scoped feedback/fallback. No manufactured fixes or source edits; not all Trip operations or global completion.",
     "evidenceCorrection": "deadlines-mobile-390.jpg captured stale transport render and is NOT valid deadline evidence; deadlines-mobile-final-390.jpg is the correct reviewed screenshot",
-    "safeState": "UI export(13) before isolated3001 tests; exports(14),(15) after Remove/Undo and existing-alternative-to-active/Undo equal initial all10 fields excluding exportedAt. Real3000 untouched. Private exports remain Downloads, not GitHub/ChatGPT. Temporary viewport reset; own3001 server43187 stopped at close.",
-    "codeReview": "Read useEditablePlan transfer normalization/reindex and AlternativePool Join today wiring. Actual UI paths match source and preserve exact exported business state after Undo. No source edits; prior regressions retained, not claimed rerun. Data diff empty; generated/user files unstaged. GitHub HEAD088cc02 confirmed before work; only two actual screenshots and this progress record committed.",
+    "safeState": "UI export(16) before isolated3001 tests; export(17) after last-alternative Remove then explicit Restore equals initial all10 fields excluding exportedAt. Real3000 untouched. Private exports remain Downloads, not GitHub/ChatGPT. No viewport override this iteration; own3001 server64959 stopped at close.",
+    "codeReview": "Verified existing AlternativePool removed-list Restore uses removedItems to alternatives transfer. Read QuickAdd save and Discover native-confirm custom deletion paths for next coverage, not claiming successful-save test. This iteration reran linkage, desktop-workspace and mobile tests successfully; full prior regressions not claimed rerun. Data diff empty; generated/user files preserved. GitHub69c8f1a backup confirmed before QA.",
     "limitations": ["Import blocked by explicit extension file-URL permission; official interface exists but permission not changed", "Full network-offline still unverified; same-origin unavailable test is narrower", "Packing screenshot shows1/48 count, not Power bank row; DOM interaction supplies persistence evidence, not image alone", "Source/model tests do not substitute for actual interactions"]
   },
   "complete": false
