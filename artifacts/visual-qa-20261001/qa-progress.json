@@ -20,7 +20,9 @@
     "Mobile Plan check-in, transport, tasks, deadlines and booking list top/bottom",
     "Desktop Trip Explore search hit and empty-result feedback",
     "Actual keyboard Timeline DnD and Undo screenshot",
-    "Offline core readiness and repaired Trip/Home desktop/mobile shell imagery"
+    "Offline core readiness and repaired Trip/Home desktop/mobile shell imagery",
+    "Mobile 375 Gallery source-annotation display fix and place detail",
+    "Gallery Escape closes only top layer and preserves underlying detail"
   ],
   "lastReviewPending": null,
   "actualInteractions": [
@@ -43,9 +45,12 @@
     "Trevi favorite persists after refresh; cancellation leaves trevi:false but same effective favorites; all other exported business fields identical",
     "Isolated production origin localhost:3001 keyboard Space/ArrowDown/Space reorders Trevi after Navona; Timeline and Overview update; Undo restores every exported business field exactly",
     "Isolated production offline pack download completes; stopping only its server leaves port 3001 without listener; Day 8 reopens using cached shell/imagery",
-    "After shell image fix and updated pack, server-stopped Day 8 has Jacob naturalWidth 144 and zero broken images; offline Home desktop hero 2172 and six city images 960, mobile hero 1200"
+    "After shell image fix and updated pack, server-stopped Day 8 has Jacob naturalWidth 144 and zero broken images; offline Home desktop hero 2172 and six city images 960, mobile hero 1200",
+    "Mobile Day 8 place detail opens Gallery; View photo 2 updates position 2/3 and image; source QS annotations no longer appear in display copy",
+    "After fixing native-dialog keyboard ownership, Gallery Escape leaves place detail open and returns focus to its Gallery trigger; no itinerary changes",
+    "Mobile Day 8 more-actions sheet opens with first-item Move earlier correctly disabled; mutation buttons not clicked on real origin"
   ],
-  "testsPassed": ["typecheck", "lint", "build", "audit", "linkage", "architecture", "mobile", "desktop-workspace", "trip-presentation", "travel-intelligence", "readiness", "presentation", "gallery-offline", "privacy"],
+  "testsPassed": ["typecheck", "lint", "build", "audit", "linkage", "architecture", "mobile", "desktop-workspace", "trip-presentation", "travel-intelligence", "readiness", "presentation", "gallery-offline", "gallery-copy", "privacy"],
   "auditWarning": "Existing projected budget 27630 exceeds the unchanged hard cap 26000 by 1630; not a UI failure",
   "remaining": [
     "Complete remaining detail menus, Gallery and responsive Day 2/8/15 combinations; current Mobile Plan tabs visual review complete",
@@ -62,11 +67,11 @@
     "3000 dev server retained; isolated 3001 production test server stopped after offline verification; local backup exports remain in Downloads only"
   ],
   "latestIteration": {
-    "fixes": ["Existing Jacob avatar, Home desktop/mobile hero and six city cards added to offline generator and coverage tests; nine images, about 4 MB; core assets 201 to 210"],
-    "review": "High explicitly satisfied keyboard DnD/Undo, offline readiness and repaired offline shell image screenshot scopes; not a whole-system acceptance",
+    "fixes": ["Gallery UI strips source QS annotations and omits identical caption without modifying metadata", "Underlying drawer keyboard lifecycle defers to open native Gallery, so Escape preserves detail and returns focus"],
+    "review": "High explicitly satisfied 375px Gallery/point detail visual scope and Escape layer scope; not a whole-system acceptance",
     "evidenceCorrection": "deadlines-mobile-390.jpg captured stale transport render and is NOT valid deadline evidence; deadlines-mobile-final-390.jpg is the correct reviewed screenshot",
     "safeState": "No real-origin Current Plan, booking/completion or budget edits; favorite toggled and canceled after UI backup; isolated Timeline reorder undone with exact business-field equality",
-    "codeReview": "Generator only adds existing local shell image paths; asset dedupe/size/hash remain unchanged, no tile or external media downloads; all existing regression scripts and typecheck/lint/build/audit passed",
+    "codeReview": "Display helper only cleans UI strings; source metadata, image order, gallery selection and business data unchanged. Keyboard guard also prevents underlying focus trap handling events owned by native Gallery. All existing regression scripts and typecheck/lint/build/audit passed after changes.",
     "limitations": ["Dev deliberately unregisters service worker; dev offline button cannot validate production offline behavior", "Second same-directory dev instance rejected, so used existing built production runtime on isolated port 3001", "No file import/restore or full external network disconnection claimed"]
   },
   "complete": false
