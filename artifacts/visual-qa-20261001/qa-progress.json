@@ -25,9 +25,11 @@
     "Gallery Escape closes only top layer and preserves underlying detail",
     "Mobile Timeline more-actions menu readability, touch spacing and disabled first-item earlier action",
     "Desktop Day 2 at 1440, Day 8 at 1280 and Day 15 at 1024: actual top and End screenshots",
-    "Mobile Day 2 at 375, Day 8 at 390 and Day 15 at 430: actual top and End screenshots"
+    "Mobile Day 2 at 375, Day 8 at 390 and Day 15 at 430: actual top and End screenshots",
+    "Desktop remaining Day 2 at 1024, Day 8 at 1440 and Day 15 at 1440: actual top and End screenshots",
+    "Mobile remaining Day 2 at 390/430, Day 8 at 375/430 and Day 15 at 375/390: actual top and End screenshots"
   ],
-  "lastReviewPending": null,
+  "lastReviewPending": "Desktop Map Day details layering and second open, two images in bc4404d sent to High. Browser plugin updated from26.928.21956 to26.928.31416 during reply read; first CDP timeout, retry lost bindings. Next run bootstrap new official runtime, read existing reply before sending anything again.",
   "actualInteractions": [
     "Home budget opens Plan budget",
     "Home Paris city card opens its Trip day",
@@ -55,12 +57,16 @@
     "Gallery ArrowRight switches 1/3 to 2/3 and ArrowLeft returns to 1/3; Close gallery button closes Gallery normally",
     "Desktop Overview End access D2 1440 scrollTop 644/max644; D8 1280 1324.8/max1324; D15 1024 1684/max1684, no horizontal overflow or Leaflet container",
     "Mobile Today End access D2 viewport375 content360 scrollY2281.6/max2282; D8 viewport390 content375 2740.8/max2741; D15 viewport430 content415 2544.8/max2545; no horizontal overflow; scrollbar occupies15px",
-    "Temporary Chrome viewport override reset after responsive tests"
+    "Temporary Chrome viewport override reset after responsive tests",
+    "Desktop D2/1024 End1375.2/max1375, D8/1440 End1044.8/max1044, D15/1440 End953.6/max953; width exact, no Leaflet before Map",
+    "Mobile D2/390 End2238.4/max2238; D2/430 2074.4/max2074; D8/375 2772.8/max2773; D8/430 2569.6/max2570; D15/375 2729.6/max2730; D15/390 2697.6/max2698, width equals content viewport",
+    "Desktop confirmed1280x800 Map opens only on click; Day details backdrop z700 drawer710; background hit-test returns backdrop; drag/zoom classes absent while open and restored after Escape",
+    "Desktop Map to Overview retains hidden mapCount1 tiles12, second Map shows same counts; this is DOM lifecycle evidence, not exact network-request or timing measurement"
   ],
   "testsPassed": ["typecheck", "lint", "build", "audit", "linkage", "architecture", "mobile", "desktop-workspace", "trip-presentation", "travel-intelligence", "readiness", "presentation", "gallery-offline", "gallery-copy", "privacy"],
   "auditWarning": "Existing projected budget 27630 exceeds the unchanged hard cap 26000 by 1630; not a UI failure",
   "remaining": [
-    "Complete remaining responsive Cartesian Day 2/8/15 combinations and details; only explicitly listed pairs have actual evidence, not all 18 combinations",
+    "Remaining functional details and state-changing actions; responsive Day2/8/15 desktop1440/1280/1024 and mobile375/390/430 layout scopes now covered across this and previous iterations, not a claim that every function was tested at every size",
     "Verify remaining state-changing actions only in isolated context after safe UI backup, then undo; favorite persistence and keyboard DnD/Undo already tested",
     "Backup file import/restore still untested through browser UI; current Chrome capability inventory only exposes viewport, no supported file-picker test used; preserve actual user state, do not bypass via injected File or storage writes",
     "Comprehensive network-offline behavior still unverified; no browser network-disconnection capability exposed; current evidence is same-origin server unavailable, not full external network disconnection",
@@ -75,11 +81,11 @@
   ],
   "latestIteration": {
     "fixes": [],
-    "review": "High actually opened 12 new screenshots and explicitly satisfied three Desktop Overview and three Mobile Today top/End pairs; no must-fix issue, no artificial design changes. Not whole-system acceptance.",
+    "review": "High satisfied18 new responsive screenshots in three groups. A helper accidentally resent desktop group; actual sent prompt was checked and correct mobile group explicitly resent and reviewed. Map two-image review pending browser runtime update; do not resend before reading latest reply. No source changes.",
     "evidenceCorrection": "deadlines-mobile-390.jpg captured stale transport render and is NOT valid deadline evidence; deadlines-mobile-final-390.jpg is the correct reviewed screenshot",
     "safeState": "No real-origin Current Plan, booking/completion or budget edits; favorite toggled and canceled after UI backup; isolated Timeline reorder undone with exact business-field equality",
     "codeReview": "No source changes this iteration; existing completed typecheck/lint/build/audit and all regression results retained, not falsely described as rerun for screenshot-only additions. Data diff remains empty.",
-    "limitations": ["File import and full browser-network offline still untested through supported interface", "Responsive screenshots only establish specified pairs, not Cartesian coverage", "Source/model tests do not substitute for state-changing actual interactions"]
+    "limitations": ["File import and full browser-network offline still untested through supported interface", "Viewport capability applies selected Chrome tab; first attempted map test was actually mobile and excluded from desktop evidence. Fresh tab actual1280x800 confirmed before final desktop test", "Source/model tests do not substitute for state-changing actual interactions"]
   },
   "complete": false
 }
