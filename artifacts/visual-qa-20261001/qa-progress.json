@@ -110,5 +110,16 @@
     "codeReview": "Read actual GymDetailModal and DesktopTripDrawers wiring; moveDay target previously retained same-entity backup. Minimal target-zone deduplication now mirrors addEntity behavior and preserves existing state/commit/Undo. Full typecheck/lint/build/audit and every existing regression plus gallery-copy rerun passed; audit unchanged27630 vs26000 warning. Added static assertions are not substituted for actual26/27 export proof. No data diff; user/generated files unstaged. GitHubfd57d33 verified before source edits; fix0ae93d2 pushed only exact files.",
     "limitations": ["Import blocked by explicit extension file-URL permission; official interface exists but permission not changed", "Full network-offline still unverified; same-origin unavailable test is narrower", "Packing screenshot shows1/48 count, not Power bank row; DOM interaction supplies persistence evidence, not image alone", "Source/model tests do not substitute for actual interactions"]
   },
+  "transportReadOnlyVerification": {
+    "date": "2026-10-02",
+    "scope": "Real localhost3000 Mobile Plan transport tab at390x844, top and End; no state-changing interactions",
+    "evidenceCommit": "c00a6e8f0a4474b05707c9048b7147bea763aaf3",
+    "evidence": ["transport-mobile-final-top-390.jpg", "transport-mobile-final-bottom-390.jpg"],
+    "actual": "7 transport articles, contentWidth375 equals scrollWidth375, zero broken images; End scrollY760.8/max761. Return Day17 readable above bottom dock. Existing desktop-selection instruction is static small text, not a nonfunctional mobile button.",
+    "review": "Authorized continuation retains High. ChatGPT explicitly actually opened both images and accepted current Mobile Plan transport top/End readability, final-leg reachability and overlay scope. No must-fix or redesign requested. Not global completion.",
+    "regression": ["test:mobile", "test:linkage"],
+    "safety": "No source/data edits or private exports; GitHub HEAD matched6db1a52 before evidence capture. Screenshot-only exact-path commit. Temporary viewport reset; no deployment.",
+    "next": "Successful custom save still needs supported native-confirm cleanup before mutation; do not save temporary custom entities without a safe removal path. Import permission and full external-network-offline limitations unchanged. Do not retest unchanged permission failures."
+  },
   "complete": false
 }
