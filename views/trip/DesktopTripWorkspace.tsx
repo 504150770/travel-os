@@ -16,7 +16,7 @@ import {
   Utensils,
   LocateFixed,
 } from 'lucide-react';
-import { useCallback, useMemo, useRef, useState, useSyncExternalStore } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState, useSyncExternalStore } from 'react';
 import type { PanelImperativeHandle } from 'react-resizable-panels';
 import type { Entity } from '@/lib/entity-library';
 import type { CustomEntity, LightboxImage } from '@/features/app/appModel';
@@ -97,6 +97,8 @@ export default function DesktopTripWorkspace(props: DesktopTripWorkspaceProps) {
   const [viewMode, setViewMode] = useState<'overview' | 'map'>('overview');
   const [mapOpened, setMapOpened] = useState(false);
   const [dayPicker, setDayPicker] = useState(false);
+  const dayNavRef = useRef<HTMLDivElement>(null);
+  const dayButtonRef = useRef<HTMLButtonElement>(null);
   const [drawer, setDrawer] = useState<'details' | 'explore' | 'entity' | null>(null);
   const [detailEntity, setDetailEntity] = useState<Entity | null>(null);
   const [selectedPointId, setSelectedPointId] = useState<string | null>(null);
@@ -108,6 +110,28 @@ export default function DesktopTripWorkspace(props: DesktopTripWorkspaceProps) {
   const [candidates, setCandidates] = useState<Entity[]>([]);
   const mapOpenStartedAt = useRef<number | null>(null);
   const location = useCurrentLocation();
+
+  useEffect(() => {
+    if (!dayPicker) return;
+    const dismissOutside = (event: PointerEvent) => {
+      if (event.target instanceof Node && !dayNavRef.current?.contains(event.target)) setDayPicker(false);
+    };
+    const dismissEscape = (event: KeyboardEvent) => {
+      if (event.key !== 'Escape') return;
+      const targetDialog = event.target instanceof Element ? event.target.closest('dialog[open]') : null;
+      if (targetDialog && !dayNavRef.current?.contains(targetDialog)) return;
+      event.preventDefault();
+      event.stopPropagation();
+      setDayPicker(false);
+      dayButtonRef.current?.focus();
+    };
+    document.addEventListener('pointerdown', dismissOutside);
+    document.addEventListener('keydown', dismissEscape);
+    return () => {
+      document.removeEventListener('pointerdown', dismissOutside);
+      document.removeEventListener('keydown', dismissEscape);
+    };
+  }, [dayPicker]);
 
   const food = useMemo(() => selectRelevantFood({ entities, day: trip.day, planDay: trip.planDay }), [entities, trip.day, trip.planDay]);
   const currentIds = useMemo(() => new Set(trip.planDay.activeItems.map((item) => item.entityId)), [trip.planDay.activeItems]);
@@ -142,6 +166,7 @@ export default function DesktopTripWorkspace(props: DesktopTripWorkspaceProps) {
   );
 
   const changeDay = (day: number) => {
+    setDayPicker(false);
     setSelectedPointId(null);
     setSelectedLegId(null);
     setCandidates([]);
@@ -250,9 +275,9 @@ export default function DesktopTripWorkspace(props: DesktopTripWorkspaceProps) {
 
   return <div className={`desktop-trip-workspace ${compact ? 'compact' : ''}`} data-desktop-workspace>
     <header className="workspace-toolbar">
-      <div className="workspace-day-nav">
+      <div className="workspace-day-nav" ref={dayNavRef}>
         <button disabled={selectedDay === 1} onClick={() => changeDay(selectedDay - 1)} aria-label="上一天"><ChevronLeft /></button>
-        <button className="workspace-day-button" onClick={() => setDayPicker((value) => !value)} aria-expanded={dayPicker}>
+        <button ref={dayButtonRef} className="workspace-day-button" onClick={() => setDayPicker((value) => !value)} aria-expanded={dayPicker} aria-haspopup="dialog">
           <span>Day {selectedDay} · {trip.day.date.slice(5).replace('-', '/')}</span><b>{routeCityForDay(trip.day)}</b><ChevronDown />
         </button>
         <button disabled={selectedDay === 18} onClick={() => changeDay(selectedDay + 1)} aria-label="下一天"><ChevronRight /></button>
