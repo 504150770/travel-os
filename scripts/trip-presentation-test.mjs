@@ -5,6 +5,14 @@ import {
   isSightseeingEntity,
 } from '../features/trip/planStatusModel.ts';
 import { ticketBookingByEntity } from '../features/trip/bookingEntityMap.ts';
+import { placeOverviewCopy } from '../features/trip/overviewCopy.ts';
+
+// Presentation-only copy: live plan notes win; no cover attribution fallback.
+assert.equal(placeOverviewCopy({ description: '', notes: '' }, 'Exterior / close-up visit. No tower ascent.'), 'Exterior / close-up visit. No tower ascent.');
+assert.equal(placeOverviewCopy({ description: '地点说明', notes: '实体备注' }, ' 当天用户备注 '), '当天用户备注');
+assert.equal(placeOverviewCopy({ description: '地点说明', notes: '实体备注' }, '   '), '地点说明');
+assert.equal(placeOverviewCopy({ description: '', notes: '实体备注' }), '实体备注');
+assert.equal(placeOverviewCopy({ description: '', notes: '' }), '查看地点详情与票务信息');
 
 const status = (overrides = {}) => derivePlanDisplayStatusFromInput({
   ticketState: '',

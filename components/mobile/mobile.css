@@ -95,6 +95,7 @@
 .mobile-day-intro > button svg {
   width: 16px;
 }
+.mobile-day-intro > button { font-weight: 600; }
 
 .mobile-next-card {
   padding: 16px;
@@ -103,7 +104,7 @@
   background: #fff;
 }
 .mobile-next-card .mobile-card-label span { font-weight: 500; letter-spacing: .03em; }
-.mobile-next-card .mobile-primary-action { font-weight: 600; }
+.mobile-next-card .mobile-primary-action { background: #2478ad; font-weight: 600; }
 
 .mobile-card-label,
 .mobile-section > header,
@@ -146,13 +147,13 @@
 
 .mobile-next-main span {
   font-size: 14px;
-  font-weight: 750;
+  font-weight: 500;
 }
 
 .mobile-next-main h2 {
   margin: 3px 0 6px;
   font-size: 21px;
-  line-height: 1.15;
+  line-height: 1.35;
 }
 
 .mobile-next-main p,

@@ -244,6 +244,7 @@ export default function DesktopTripWorkspace(props: DesktopTripWorkspaceProps) {
       day={trip.day}
       hero={trip.hero}
       dayState={trip.dayState}
+      rows={planRows}
       food={food}
       gyms={trip.optionalGyms}
       stay={trip.stay}

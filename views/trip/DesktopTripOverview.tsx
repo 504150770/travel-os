@@ -22,7 +22,8 @@ import {
   selectCoverImage,
 } from '@/lib/media';
 import { mapLinks } from '@/features/trip/tripModel';
-import type { TodaysTip } from '@/features/trip/tripPresentationModel';
+import type { PlanPresentationRow, TodaysTip } from '@/features/trip/tripPresentationModel';
+import { placeOverviewCopy } from '@/features/trip/overviewCopy';
 import { isSightseeingEntity } from '@/features/trip/planStatusModel';
 import { TodaysTipsCard } from '@/views/trip/TodaysTipsCard';
 
@@ -68,6 +69,7 @@ export function DesktopTripOverview({
   day,
   hero,
   dayState,
+  rows,
   food,
   gyms,
   stay,
@@ -80,6 +82,7 @@ export function DesktopTripOverview({
   day: Day;
   hero?: { file: string; caption: string };
   dayState: DerivedDayState;
+  rows: PlanPresentationRow[];
   food: Entity[];
   gyms: Entity[];
   stay?: HotelBooking;
@@ -129,7 +132,7 @@ export function DesktopTripOverview({
         {places.length > 0 ? <div className={`workspace-place-grid count-${Math.min(places.length, 4)}`}>
           {places.map((entity) => {
             const cover = selectCoverImage(entity.images);
-            const description = usefulCopy(entity, cover?.caption || '查看地点详情与票务状态');
+            const description = placeOverviewCopy(entity, rows.find((row) => row.entity.id === entity.id)?.item.notes);
             return <article className="workspace-place-card" key={entity.id}>
               {cover ? <button className="workspace-place-image" onClick={() => openGallery(openGalleryRequest(entity.id, entity.name, entity.images, cover))} aria-label={`打开 ${entity.name} 图库`}>
                 <Image unoptimized src={cover.file} alt={cover.title || entity.name} fill sizes="(max-width: 1180px) 50vw, 520px" />
