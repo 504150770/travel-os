@@ -152,5 +152,15 @@
     "safety": "GitHub HEAD8c29308 matched before edits. Exact own source/test/images committed and pushed; data and user artifacts untouched, no private uploads or production deploy.",
     "remaining": "Successful custom save needs supported native-confirm cleanup. Backup import permission and full external-network offline evidence still blocked/unverified; do not repeat unchanged failures. User final aesthetic approval and global High acceptance remain pending."
   },
+  "dayPickerKeyboardFollowup": {
+    "date": "2026-10-02",
+    "commit": "b1e3680",
+    "actualIssue": "Keyboard Enter on Day details while the Day8 picker was open bypassed pointerdown dismissal and left both dialogs open. Confirmed in real Chrome before changing source.",
+    "fix": "Reuse outside-dismiss handler for focusin and remove listener on cleanup. No focus stealing, business edits or redesign.",
+    "actualAfter": "Enter on Day details now leaves only its Drawer open. Drawer Escape works; option Escape closes picker and returns focus to Day8 trigger; selection of Day15 updates URL/Timeline, picker0, Leaflet0. Screenshots day-picker-keyboard-before.jpg and day-picker-keyboard-fixed.jpg are the same Day8 comparison.",
+    "review": "Authorized High continuation explicitly actually compared both real screenshots and accepted this keyboard dismissal scope; no global completion claim.",
+    "verification": "typecheck/lint/build/audit and all existing regressions plus gallery-copy passed using fail-stop test loops. Budget warning unchanged, data diff empty. Exact own files backed up to GitHub; no production deploy.",
+    "environment": "Browser plugin updated to26.928.40906 and persistent bindings were absent. Re-established official Jacob Chrome ID3 connection, fully read new documentation and named session. localhost3000 connection refused; restarted only project dev server, session38555. New documented getJsDialog confirm handling is available; custom successful-save/cleanup remains unexecuted, not retroactively passed. Import permission and external-network offline evidence remain pending."
+  },
   "complete": false
 }
