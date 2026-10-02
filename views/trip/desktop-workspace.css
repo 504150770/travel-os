@@ -21,10 +21,12 @@
 .workspace-day-popover button span { font-size: 13px; font-weight: 650; }
 .workspace-day-popover button small { overflow: hidden; color: var(--ink-soft); font-size: 12px; text-overflow: ellipsis; white-space: nowrap; }
 .workspace-tools { display: flex; align-items: center; gap: 7px; }
-.workspace-tools > button { white-space: nowrap; }
+.workspace-tools > button { white-space: nowrap; font-weight: 500; }
+.workspace-tools .travel-weather-chip small { color: #707070; font-size: 11px; font-weight: 400; }
+.workspace-tools .travel-weather-chip b { font-weight: 500; }
 .workspace-view-toggle { display: flex; align-items: center; padding: 3px; border: 0; border-radius: 11px; background: var(--surface); }
 .workspace-view-toggle button { display: inline-flex; min-height: 36px; align-items: center; gap: 6px; padding: 0 12px; border: 0; border-radius: 9px; background: transparent; color: var(--ink-soft); font-size: 13px; font-weight: 500; }
-.workspace-view-toggle button.active { background: #fff; color: var(--accent-hover); box-shadow: 0 1px 5px rgb(0 0 0 / .06); }
+.workspace-view-toggle button.active { background: #fff; color: var(--accent-hover); font-weight: 600; box-shadow: 0 1px 5px rgb(0 0 0 / .06); }
 .workspace-view-toggle svg { width: 16px; }
 .workspace-tools > button:hover, .workspace-day-nav > button:hover, .workspace-map-tools button:hover { border-color: #b9dff5; color: var(--ink); }
 .workspace-tools > button.workspace-ghost-button:hover { border: 0; background: var(--accent-soft); color: var(--accent-hover); }
@@ -36,8 +38,7 @@
 .workspace-timeline-heading > span { color: var(--ink-soft); font-size: 13px; }
 .workspace-timeline-heading h2 { margin: 6px 0; font-size: 20px; font-weight: 600; line-height: 1.4; letter-spacing: -.015em; }
 .workspace-timeline-heading p { color: var(--ink-soft); font-size: 13px; line-height: 1.6; }
-.workspace-timeline-heading .trip-status-summary { margin-top: 8px; }
-.workspace-timeline-heading .trip-status-summary { font-size: 12px; gap: 6px 12px; }
+.workspace-timeline-heading .trip-status-summary { margin-top: 8px; font-size: 12px; gap: 6px 12px; }
 .workspace-timeline-heading .trip-status-summary b { font-weight: 600; }
 .workspace-timeline { min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 8px 14px 88px; scroll-behavior: smooth; scrollbar-gutter: stable; }
 .workspace-stop { position: relative; display: grid; grid-template-columns: 64px 58px minmax(0, 1fr) 30px; gap: 10px; align-items: center; min-height: 100px; padding: 12px 8px; border: 1px solid transparent; border-radius: var(--radius-card); background: #fff; transition: border-color 160ms ease, background 160ms ease, box-shadow 160ms ease, opacity 160ms ease; }
@@ -45,7 +46,7 @@
 .workspace-stop.selected { border-color: #a9d8f2; background: var(--accent-soft); }
 .workspace-stop.dragging { z-index: 5; opacity: .78; box-shadow: var(--shadow-float); }
 .workspace-stop-time { display: grid; gap: 3px; align-self: start; }
-.workspace-stop-time input { width: 62px; min-height: 36px; padding: 5px; border: 0; background: transparent; font-size: 14px; font-weight: 600; font-variant-numeric: tabular-nums; text-align: center; }
+.workspace-stop-time input { width: 62px; min-height: 36px; padding: 5px; border: 0; background: transparent; font-size: 13px; font-weight: 600; font-variant-numeric: tabular-nums; text-align: center; }
 .workspace-stop-time span { color: var(--ink-soft); font-size: 12px; line-height: 1.6; font-variant-numeric: tabular-nums; text-align: center; }
 .workspace-stop-photo { position: relative; width: 58px; height: 58px; overflow: hidden; padding: 0; border: 0; border-radius: 12px; background: var(--surface-strong); }
 .workspace-stop-photo img { object-fit: cover; }
@@ -72,9 +73,9 @@
 .workspace-stop-title h3 { min-width: 0; margin-bottom: 4px; }
 .workspace-stop-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 5px 7px; margin-top: 4px; }
 .workspace-stop-meta .trip-status-badge { flex: 0 0 auto; }
-.workspace-stop-meta .trip-status-badge[data-status='core'], .workspace-stop-meta .trip-status-badge[data-status='flex'] { padding: 0; border: 0; border-radius: 0; background: transparent; color: var(--ink-soft); font-weight: 500; }
-.workspace-stop-copy p { display: flex; align-items: center; gap: 5px; color: var(--ink-soft); font-size: 13px; line-height: 1.5; }
-.workspace-stop-meta .trip-status-badge { font-size: 11px; font-weight: 500; }
+.workspace-stop-meta .trip-status-badge[data-status='core'], .workspace-stop-meta .trip-status-badge[data-status='flex'] { padding: 0; border: 0; border-radius: 0; background: transparent; color: #707070; font-weight: 400; }
+.workspace-stop-copy p { display: flex; align-items: center; gap: 5px; color: #707070; font-size: 12px; font-weight: 400; line-height: 1.5; }
+.workspace-stop-meta .trip-status-badge { font-size: 11px; font-weight: 400; }
 .workspace-stop-copy p svg { width: 14px; height: 14px; flex: 0 0 auto; }
 .workspace-drag-handle { display: grid; width: 30px; height: 40px; place-items: center; border: 0; border-radius: 8px; background: transparent; color: #aaa; cursor: grab; touch-action: none; opacity: 0; }
 .workspace-stop:hover .workspace-drag-handle, .workspace-drag-handle:focus-visible, .workspace-stop.selected .workspace-drag-handle { opacity: 1; }
@@ -126,7 +127,7 @@
 .workspace-place-image.placeholder { display: grid; place-items: center; color: var(--text-secondary); background: linear-gradient(145deg, var(--soft-blue), var(--surface-strong)); }
 .workspace-place-image.placeholder > svg { width: 32px; height: 32px; }
 .workspace-place-card > div { position: relative; min-height: 80px; padding: 14px 44px 0 0; }
-.workspace-place-card h3 { margin-bottom: 6px; font-size: 18px; font-weight: 500; letter-spacing: -.01em; }
+.workspace-place-card h3 { margin-bottom: 6px; font-size: 17px; font-weight: 600; letter-spacing: -.01em; }
 .workspace-place-title { display: flex; min-width: 0; align-items: center; gap: 8px; }
 .workspace-place-title h3 { display: -webkit-box; overflow: hidden; min-width: 0; line-height: 1.5; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
 .workspace-place-card p { display: -webkit-box; overflow: hidden; color: var(--ink-soft); font-size: 14px; line-height: 1.65; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
@@ -140,12 +141,12 @@
 .workspace-practical-card > header { grid-column: 1 / -1; display: flex; min-height: 24px; align-items: center; gap: 7px; }
 .workspace-practical-card > header svg { width: 17px; height: 17px; color: var(--accent-hover); }
 .workspace-practical-card > header b { font-size: 15px; font-weight: 600; line-height: 1.5; }
-.workspace-practical-card > header span { margin-left: auto; color: var(--ink-soft); font-size: 13px; }
+.workspace-practical-card > header span { margin-left: auto; color: #707070; font-size: 12px; font-weight: 400; }
 .workspace-practical-image { position: relative; display: grid; width: 132px; min-height: 112px; place-items: center; overflow: hidden; padding: 0; border: 0; border-radius: 11px; background: var(--surface-strong); color: var(--accent-hover); }
 .workspace-practical-image img { object-fit: cover; }
 .workspace-practical-image.placeholder svg { width: 24px; }
 .workspace-practical-copy { display: flex; flex-direction: column; min-width: 0; align-self: stretch; }
-.workspace-practical-copy h3 { display: -webkit-box; overflow: hidden; margin: 1px 0 8px; font-size: 16px; font-weight: 500; line-height: 1.5; overflow-wrap: anywhere; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+.workspace-practical-copy h3 { display: -webkit-box; overflow: hidden; margin: 1px 0 8px; font-size: 16px; font-weight: 600; line-height: 1.5; overflow-wrap: anywhere; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
 .workspace-practical-copy p { display: -webkit-box; overflow: hidden; color: var(--ink-soft); font-size: 14px; line-height: 1.65; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
 .workspace-practical-copy > small { display: block; margin-top: 6px; color: var(--ink-soft); font-size: 13px; line-height: 1.5; }
 .workspace-inline-actions { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding-top: 10px; }
