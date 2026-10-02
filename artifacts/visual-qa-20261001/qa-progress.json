@@ -121,5 +121,15 @@
     "safety": "No source/data edits or private exports; GitHub HEAD matched6db1a52 before evidence capture. Screenshot-only exact-path commit. Temporary viewport reset; no deployment.",
     "next": "Successful custom save still needs supported native-confirm cleanup before mutation; do not save temporary custom entities without a safe removal path. Import permission and full external-network-offline limitations unchanged. Do not retest unchanged permission failures."
   },
+  "tripTypographyUserFeedback": {
+    "date": "2026-10-02",
+    "trigger": "User explicitly rejected current font/layout aesthetics; prior functional readability approvals do not establish Apple/Meta visual acceptance.",
+    "changes": "Trip-only desktop-workspace.css typography, no functional changes: system UI stack, lighter Hero500 with1.3 line-height, Timeline16/600/1.5, time13/600 tabular, metadata12/400, true Overview names17/600 or16/600, body14/1.65, secondary tools500 and active600. No Home/Mobile redesign or travel-data edit.",
+    "commits": ["c85c953", "9360a6d"],
+    "review": "Two actual High visual reviews. First review requested three specific hierarchy refinements rather than repeating readability approval. After those changes, High actually viewed D15 top/lower1280 and D8/1024 screenshots and explicitly accepted stopping Trip typography scope. User final visual approval still pending; not a claim of world-class design or system completion.",
+    "actual": "Confirmed D15 innerWidth1280,height800 and D8 innerWidth1024,height768, no horizontal overflow, Overview Leaflet0. D15 earlier lower screenshot scrollTop1009.6/max1010. One intermediate attempted1024 viewport applied to active reviewer tab instead, measured test page1536 and discarded as1024 evidence; final1024 screenshot from fresh active test tab verified.",
+    "tests": ["typecheck", "lint", "build", "test:desktop-workspace", "test:presentation", "test:mobile", "test:linkage"],
+    "safety": "GitHub20a34c4 matched HEAD before edits, then atomic exact-file backup commits; no production deploy, private data upload, business state mutations or data-directory changes. Generated/user files remain untouched. Day17 transfer-as-sight and Day18 generic sightseeing-tip presentation findings recorded but NOT modified while responding to user's typography request."
+  },
   "complete": false
 }
