@@ -141,5 +141,16 @@
     "verification": "Full typecheck/lint/build/audit and every existing regression plus gallery-copy rerun passed. Architecture163modules/68entry/0cycles; offline210assets. Existing budget27630/cap26000 warning unchanged. Predicate unit assertions cover transport/museum/sight/defaultplace/activity; actual UI checks separately recorded.",
     "safety": "GitHub9a70bba matched HEAD before source edits. Atomic exact-file commits; generated audits/caches and unrelated artifacts unstaged; data diff empty, no private uploads, no production deploy. No runtime business mutations."
   },
+  "dayPickerDismissFix": {
+    "date": "2026-10-02",
+    "commit": "4c1173a",
+    "issue": "Real Chrome date picker stayed open after Escape and after clicking Day details, leaving two open dialogs.",
+    "fix": "Trip-only dismiss lifecycle: owned Escape closes picker and returns focus to its trigger; outside pointer closes without stealing destination focus; listeners cleaned up; changing day closes picker. Escape originating inside another dialog is ignored. Existing selection and map behavior retained.",
+    "actual": "Real localhost3000 Escape from trigger and Day15 option both yielded picker0 and trigger focus. Clicking Day details left only Day details dialog. Drawer Escape worked. Selecting Day15 updated URL and toolbar/Timeline, picker0 and Leaflet0. No business-state mutation.",
+    "review": "Authorized continuation High explicitly actually opened all three Chrome screenshots, accepted date picker layout and no residual picker over Drawer, and scoped satisfaction to this dismissal repair. Keyboard behavior evidence is actual interaction record, not screenshot proof. No global completion claim.",
+    "tests": "typecheck/lint/build/audit and all existing regression scripts plus gallery-copy passed. Added desktop-workspace source wiring guards are explicitly not behavioral tests. Budget hard-cap warning unchanged.",
+    "safety": "GitHub HEAD8c29308 matched before edits. Exact own source/test/images committed and pushed; data and user artifacts untouched, no private uploads or production deploy.",
+    "remaining": "Successful custom save needs supported native-confirm cleanup. Backup import permission and full external-network offline evidence still blocked/unverified; do not repeat unchanged failures. User final aesthetic approval and global High acceptance remain pending."
+  },
   "complete": false
 }
