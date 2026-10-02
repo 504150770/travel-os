@@ -131,5 +131,15 @@
     "tests": ["typecheck", "lint", "build", "test:desktop-workspace", "test:presentation", "test:mobile", "test:linkage"],
     "safety": "GitHub20a34c4 matched HEAD before edits, then atomic exact-file backup commits; no production deploy, private data upload, business state mutations or data-directory changes. Generated/user files remain untouched. Day17 transfer-as-sight and Day18 generic sightseeing-tip presentation findings recorded but NOT modified while responding to user's typography request."
   },
+  "boundaryDayOverviewFix": {
+    "date": "2026-10-02",
+    "commit": "0d584ba",
+    "issue": "Actual D17 displayed CDG airport transfer as1 sightseeing card with duplicate hero image because normalized entity.type=place retained raw.type=transport. D18 zero-sight day also showed generic sightseeing-between tip.",
+    "fix": "Overview gallery-only isSightseeingEntity predicate excludes raw transport; keeps original Entity, Current Plan, Timeline, route, map and booking statuses. Generic buffer copy now says arrangements rather than sights. No data edits or business-logic changes.",
+    "actual": "Real3000 D17 retains3 Timeline items/2Fixed1Core and11:05 CZ348; sightseeing cards0/Leaflet0. D18 retains2 Core arrangements,0sights, next-day disabled. D2 remains3Timeline/2sight cards/Leaflet0. D18 new buffer text verified by DOM, not by first-screen screenshot, which only partially shows Tips heading.",
+    "review": "High confirmed in authorized continuation. Actually compared before/fixed D17 and D18 screenshots and explicitly accepted this transport-not-sight grouping repair. Preserved narrow evidence boundary for D18 tip text; not all-entity or global completion.",
+    "verification": "Full typecheck/lint/build/audit and every existing regression plus gallery-copy rerun passed. Architecture163modules/68entry/0cycles; offline210assets. Existing budget27630/cap26000 warning unchanged. Predicate unit assertions cover transport/museum/sight/defaultplace/activity; actual UI checks separately recorded.",
+    "safety": "GitHub9a70bba matched HEAD before source edits. Atomic exact-file commits; generated audits/caches and unrelated artifacts unstaged; data diff empty, no private uploads, no production deploy. No runtime business mutations."
+  },
   "complete": false
 }
