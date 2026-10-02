@@ -162,5 +162,34 @@
     "verification": "typecheck/lint/build/audit and all existing regressions plus gallery-copy passed using fail-stop test loops. Budget warning unchanged, data diff empty. Exact own files backed up to GitHub; no production deploy.",
     "environment": "Browser plugin updated to26.928.40906 and persistent bindings were absent. Re-established official Jacob Chrome ID3 connection, fully read new documentation and named session. localhost3000 connection refused; restarted only project dev server, session38555. New documented getJsDialog confirm handling is available; custom successful-save/cleanup remains unexecuted, not retroactively passed. Import permission and external-network offline evidence remain pending."
   },
+  "currentOptimization20261002": {
+    "scope": "User requested execution of priority improvements with independent High review, not just a proposed plan. Production publishing remains unauthorized pending final user visual approval.",
+    "backup": {
+      "commits": ["bb489a8", "03c114c"],
+      "changes": "Shared desktop/mobile V3/V4/V5 validation before confirmation, historical version-required fields, known entity references, full serialization before write, read-back and rollback verification, explicit severe rollback failure, preservation of missing legacy fields and private data; controller reload only after all writes succeed.",
+      "review": "Three High follow-ups including direct source and actual desktop/mobile screenshot review. High found missing version presence constraints, then read03c114c and explicitly accepted backup source safety with no new Must-fix. Restore actual E2E is still NOT passed.",
+      "evidence": ["backup-safety-desktop.jpg", "backup-safety-mobile-390.jpg"],
+      "limitation": "No repeated attempt to bypass extension Allow access to file URLs permission. Legacy fixtures reflect verified historical export contracts, not private historical browser imports."
+    },
+    "tripVisual": {
+      "commit": "2182ea5",
+      "changes": "D15 reuses the user's existing panoramic image for the wide banner rather than repeating its portrait sight cover; top positioning retains the tower tip. Hero234→216 at1440x900, sight image16:10→16:9, grid minimum260. Mobile Today title26/600 and white next-stop surface with blue navigation CTA. No Home or travel fact changes.",
+      "evidence": ["trip-space-before-day15-1440.jpg", "trip-space-final-day15-1440.jpg", "trip-space-final-day15-lower-1440.jpg", "trip-space-final-day8-1280.jpg", "trip-space-final-day2-1024.jpg", "today-space-after-day15-390.jpg"],
+      "actual": "D15 verified1440x900 with preserved560px user timeline width; D8 verified1280x800; D2 final verified1024x768 after discarding a wrong-viewport intermediate. No horizontal overflow or Overview Leaflet. D15 End scroll897.6/max897, lower content accessible. Mobile Today390x844 verified no overflow/Leaflet.",
+      "review": "High explicitly viewed all six actual images and accepted desktop Hero/image/space scope, requesting only mobile chip rail ending-space refinement. Source already has gap8 and horizontal padding18; actual rail-end check is pending, not blindly treating an initially partial scroll chip as a bug. High's comment that1024D2 is single-column is inconsistent with measured two388px cards; do not use that interpretation as evidence.",
+      "pending": "Actual375/430 regression after new mobile styles, rail-end inspection, and current Gallery/Map/Drawer rerun. User final aesthetic approval and cross-page visual completion remain pending."
+    },
+    "customSave": {
+      "actual": "Isolated localhost3001 existing Quick Add saved QA 临时保存验收 as a Day1 alternative. Closed and reopened Day details, then intentionally reloaded; visible alternative persisted. UI-exported baseline has0 custom/0 Day1 alternatives, saved export has1 custom/1 alternative. Real3000 untouched.",
+      "evidence": "custom-save-alternative-actual.jpg is local-only and not yet High-reviewed; private exports remain in Downloads and are not committed/uploaded.",
+      "cleanup": "Existing Discover Delete Custom Item was clicked on the sole temporary custom entity; documented getJsDialog confirmed native confirm. accept call timed out and reset connection, so deletion outcome is UNKNOWN and cannot be claimed restored. No subsequent cleanup export obtained. Baseline europe-travel-os-2026-10-02.json and saved(1).json retained for comparison. Do not delete any other entity or inject storage to clean up.",
+      "sourceFinding": "Controller permanently deletes custom entity from library, but old actions.deleteEntity committed plan-only Undo that could resurrect orphan references. Minimal repair d3844df clears Undo on permanent delete and uses tested removeEntityFromPlan across active/alternative/removed zones, preserving unaffected days and reindexing affected lists. This repair is source/model verified, NOT browser/High accepted yet.",
+      "server": "Own isolated3001 session4715 stopped before final build. Restart isolated3001 for cleanup verification once official Chrome control resumes; origin state remains, do not touch real3000."
+    },
+    "browserBlocker": "Official native-dialog handling timed out; subsequent session/tab command also timed out. Chrome running, extension enabled and native manifest valid through packaged diagnostics. No raw CDP, computer-use fallback, permission expansion, kill/restart or browser-state injection used. Needs the existing native dialog dismissed/extension connection restored before further actual screenshot/High cycles.",
+    "verification": "Backup-test lint assertion fixed in0975d52. After permanent-delete repair d3844df, typecheck/lint, final build/audit and all existing regression scripts including backup, linkage, architecture, mobile, desktop-workspace, trip-presentation, travel-intelligence, readiness, presentation, gallery-offline, privacy and gallery-copy rerun passed. Audit0failures/1unchangedbudgetwarning27630vs26000. These are NOT substitutes for pending actual browser/High verification.",
+    "safety": "GitHub2182ea5 verified before latest repair; only own exact source/test/progress files to be backed up. No data-directory changes, private export uploads or production deployment. Unrelated/generated dirty files protected.",
+    "remaining": ["Restore E2E permission", "Native confirm cleanup and permanent-delete actual review", "Mobile chip ending and375/430 regression", "Cross-page typography/photo hierarchy finishing", "Full external-network offline and measured performance", "Final overall High acceptance only after actual coverage"]
+  },
   "complete": false
 }
