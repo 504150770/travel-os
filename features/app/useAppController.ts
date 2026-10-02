@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useEditablePlan } from '@/hooks/use-editable-plan';
 import { useLocalStorage } from '@/hooks/use-local-storage';
+import { validateBackup, writeBackupStorage } from '@/features/app/backupModel';
 import { readUrlState, useUrlState } from '@/hooks/use-url-state';
 import { guideData } from '@/lib/data';
 import { entityLibrary, entityMap, type Entity } from '@/lib/entity-library';
@@ -345,15 +346,8 @@ export function useAppController() {
     preferredTransport,
     packingItems,
   };
-  const importBackup = (data: BackupPayload) => {
-    if (![3, 4, 5].includes(data.version))
-      return window.alert('仅支持V3/V4/V5旅行数据');
-    localStorage.setItem(
-      'europe-guide-current-itinerary-v1',
-      JSON.stringify(data.currentItinerary),
-    );
-    setCustomEntities(data.customEntities ?? []);
-    setBookingStatuses(data.bookingStatuses ?? {});
+  const importBackup = (input: BackupPayload) => {
+    const data = validateBackup(input, new Set(entityLibrary.map((entity) => entity.id)));
     const importedActions =
       data.actionStatuses ??
       Object.fromEntries(
@@ -362,12 +356,18 @@ export function useAppController() {
           status,
         ]),
       );
-    setActionStatuses(importedActions);
-    setActuals(data.actuals ?? {});
-    setNotes(data.notes ?? '');
-    setFavorites(data.favorites ?? {});
-    setPreferredTransport(data.preferredTransport ?? {});
-    setPackingItems(data.packingItems ?? DEFAULT_PACKING_ITEMS);
+    writeBackupStorage(localStorage, {
+      'europe-guide-current-itinerary-v1': data.currentItinerary,
+      'europe-guide-custom-entities-v1': data.customEntities,
+      'europe-guide-booking-statuses': data.bookingStatuses,
+      'europe-guide-action-statuses-v4': importedActions,
+      'europe-guide-budget-actuals': data.actuals,
+      'europe-guide-notes': data.notes,
+      'europe-guide-favorites': data.favorites,
+      // V3/V4 predate packing; absence is not an instruction to erase it.
+      ...(data.preferredTransport === undefined ? {} : { 'europe-guide-preferred-transport-v1': data.preferredTransport }),
+      ...(data.packingItems === undefined ? {} : { [PACKING_STORAGE_KEY]: data.packingItems }),
+    });
     window.location.reload();
   };
   const daysLeft = clock

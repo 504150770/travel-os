@@ -11,6 +11,7 @@ import { realStays } from '@/features/trip/tripModel';
 import { OfflinePackControl } from '@/components/offline-pack-control';
 import { OfflineMapFallback } from '@/components/offline-map-fallback';
 import { MobileHotelSheet } from '@/components/mobile/MobileHotelSheet';
+import { useBackupImport } from '@/hooks/use-backup-import';
 
 type MorePanel = 'stays' | 'documents' | 'packing' | 'essentials' | 'survival' | 'offline' | 'backup';
 
@@ -47,6 +48,7 @@ const moreTabForPanel: Partial<Record<MorePanel, MoreTab>> = {
 };
 
 export function MobileMore({ controller }: { controller: AppController }) {
+  const { importError, importFile } = useBackupImport(controller.importBackup);
   const [panel, setPanel] = useState<MorePanel>(() => mobilePanelForTab[controller.moreTab]);
   const [stay, setStay] = useState<HotelBooking | null>(null);
   useEffect(() => {
@@ -175,15 +177,14 @@ export function MobileMore({ controller }: { controller: AppController }) {
             type="file"
             accept="application/json"
             onChange={async (event) => {
-              const file = event.target.files?.[0];
+              const input = event.currentTarget;
+              const file = input.files?.[0];
               if (!file) return;
-              try {
-                controller.importBackup(JSON.parse(await file.text()));
-              } catch {
-                window.alert('无法读取这个备份文件');
-              }
+              await importFile(file);
+              input.value = '';
             }}
           />
+          {importError && <p role="alert">{importError}</p>}
           <label>
             旅行备注
             <textarea value={controller.notes} onChange={(event) => controller.setNotes(event.target.value)} />

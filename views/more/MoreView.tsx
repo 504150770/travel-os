@@ -15,6 +15,7 @@ import type { BackupPayload, LightboxImage, MoreTab } from '@/features/app/appMo
 import { yuan } from '@/features/app/appModel';
 import { dayRoutes, hotelForNight, realStays, routeCityForDay } from '@/features/trip/tripModel';
 import { useMoreController } from '@/features/more/useMoreController';
+import { useBackupImport } from '@/hooks/use-backup-import';
 import type { AppController } from '@/features/app/useAppController';
 
 const DocumentsPanel = lazy(async () => ({ default: (await import('@/components/documents/DocumentsPanel')).DocumentsPanel }));
@@ -85,6 +86,7 @@ export function MoreView({
   open: (image: LightboxImage) => void;
 }) {
   const { fileRef, exportJson } = useMoreController(backup);
+  const { importError, importFile } = useBackupImport(importBackup);
   return (
     <div className="v2-view content-view more-view">
       <header className="v2-heading">
@@ -214,14 +216,16 @@ export function MoreView({
               type="file"
               accept="application/json"
               onChange={async (e) => {
-                const file = e.target.files?.[0];
-                if (file)
-                  importBackup(JSON.parse(await file.text()) as BackupPayload);
+                const input = e.currentTarget;
+                const file = input.files?.[0];
+                if (file) await importFile(file);
+                input.value = '';
               }}
             />
             <button onClick={() => fileRef.current?.click()}>
               选择备份文件
             </button>
+            {importError && <p role="alert">{importError}</p>}
           </article>
           <label>
             <span>旅行备注</span>
