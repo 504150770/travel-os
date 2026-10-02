@@ -33,7 +33,7 @@ for (const fixture of [legacyV3, legacyV4, backup]) assert.equal(validateBackup(
 for (const [fixture, required] of [[legacyV3, 'taskStatuses'], [legacyV4, 'actionStatuses'], [legacyV4, 'preferredTransport'], [backup, 'actionStatuses'], [backup, 'preferredTransport'], [backup, 'packingItems']]) {
   const incomplete = structuredClone(fixture);
   delete incomplete[required];
-  assert.throws(() => validateBackup(incomplete), `V${fixture.version} must reject missing ${required}`);
+  assert.throws(() => validateBackup(incomplete), 'Missing version-required fields must be rejected');
 }
 assert.throws(() => parseBackup('{broken'), /JSON/);
 assert.throws(() => validateBackup({ ...backup, version: 6 }));
