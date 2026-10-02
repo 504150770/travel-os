@@ -151,7 +151,7 @@
 .workspace-practical-copy p { display: -webkit-box; overflow: hidden; color: var(--ink-soft); font-size: 14px; line-height: 1.65; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
 .workspace-practical-copy > small { display: block; margin-top: 6px; color: var(--ink-soft); font-size: 13px; line-height: 1.5; }
 .workspace-inline-actions { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding-top: 10px; }
-.workspace-inline-actions button, .workspace-inline-actions a { display: inline-flex; min-height: 38px; align-items: center; justify-content: center; gap: 6px; padding: 0 12px; border: 0; border-radius: 10px; background: var(--accent-soft); color: #2478ad; font-size: 13px; font-weight: 500; }
+.workspace-inline-actions button, .workspace-inline-actions a { display: inline-flex; min-height: 38px; align-items: center; justify-content: center; gap: 6px; padding: 0 12px; border: 0; border-radius: 10px; background: var(--accent-soft); color: #2373a6; font-size: 13px; font-weight: 500; }
 .workspace-inline-actions a { background: var(--surface-strong); color: var(--ink); }
 .workspace-inline-actions a.primary { background: #2478ad; color: #fff; }
 .workspace-inline-actions svg { width: 13px; height: 13px; }
