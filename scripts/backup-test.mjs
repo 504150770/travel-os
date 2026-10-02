@@ -29,11 +29,11 @@ const known = new Set(plan.days.flatMap(day => [...day.activeItems, ...day.alter
 assert.deepEqual(parseBackup(before), backup);
 assert.equal(validateBackup(backup, known), backup);
 assert.equal(JSON.stringify(backup), before, 'validation must not change the plan');
-for (const version of [3, 4, 5]) {
-  const legacy = { ...backup, version, taskStatuses: { sample: 'Done' } };
-  delete legacy.actionStatuses;
-  delete legacy.packingItems;
-  assert.equal(validateBackup(legacy).version, version);
+for (const fixture of [legacyV3, legacyV4, backup]) assert.equal(validateBackup(fixture).version, fixture.version);
+for (const [fixture, required] of [[legacyV3, 'taskStatuses'], [legacyV4, 'actionStatuses'], [legacyV4, 'preferredTransport'], [backup, 'actionStatuses'], [backup, 'preferredTransport'], [backup, 'packingItems']]) {
+  const incomplete = structuredClone(fixture);
+  delete incomplete[required];
+  assert.throws(() => validateBackup(incomplete), `V${fixture.version} must reject missing ${required}`);
 }
 assert.throws(() => parseBackup('{broken'), /JSON/);
 assert.throws(() => validateBackup({ ...backup, version: 6 }));

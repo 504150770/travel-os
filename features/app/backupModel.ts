@@ -18,6 +18,11 @@ export function validateBackup(value: unknown, knownEntityIds?: ReadonlySet<stri
     throw new Error('仅支持有效的 V3 / V4 / V5 行程备份，未覆盖当前数据。');
   if (!safeKeys(value)) invalid('字段');
   if (!text(value.exportedAt) || !Number.isFinite(Date.parse(value.exportedAt))) invalid('导出日期');
+  // Required fields follow the real historical export contracts. Only fields
+  // introduced after the file's version may be absent without losing data.
+  if (value.version === 3 && value.taskStatuses === undefined) invalid('任务状态');
+  if (value.version >= 4 && (value.actionStatuses === undefined || value.preferredTransport === undefined)) invalid('行动状态或交通偏好');
+  if (value.version === 5 && value.packingItems === undefined) invalid('行李清单');
   for (const field of ['bookingStatuses', 'actionStatuses', 'taskStatuses', 'preferredTransport', 'deadlineStatuses']) {
     if (value[field] === undefined && !['bookingStatuses'].includes(field)) continue;
     if (!mapOf(value[field], text)) invalid('状态');
