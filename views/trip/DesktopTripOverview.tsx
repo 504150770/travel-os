@@ -91,8 +91,11 @@ export function DesktopTripOverview({
 }) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const places = dayState.activeEntities.filter(isSightseeingEntity);
-  const landmarkCover = selectCoverImage(places.find((entity) => entity.id === 'eiffel')?.images ?? []);
-  const overviewHero = landmarkCover ? { file: landmarkCover.file, caption: landmarkCover.caption } : hero;
+  // Reuse the user's existing panorama for the wide context banner, rather
+  // than cropping the same portrait landmark used again in the sight cards.
+  const overviewHero = places.some((entity) => entity.id === 'eiffel')
+    ? { file: '/images/home-eiffel-winter-sunset.png', caption: '冬日落日下的巴黎埃菲尔铁塔与塞纳河' }
+    : hero;
   const walkingKm = dayState.route.summary.walkingKm;
   const hotelImages = useMemo(() => (stay?.images ?? [])
     .filter((image) => Boolean(image.file))
@@ -113,7 +116,7 @@ export function DesktopTripOverview({
 
   return <section className="workspace-overview" aria-label="Day overview" data-trip-overview>
     <div className="workspace-overview-scroll" ref={scrollRef}>
-      <section className="workspace-overview-hero">
+      <section className={`workspace-overview-hero${places.some((entity) => entity.id === 'eiffel') ? ' is-panorama' : ''}`}>
         {overviewHero && <Image unoptimized src={overviewHero.file} alt={overviewHero.caption} fill priority sizes="(max-width: 1024px) 62vw, 1040px" />}
         <div />
         <span>{day.city.toUpperCase()}</span>

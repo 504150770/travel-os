@@ -76,7 +76,8 @@
   color: var(--mobile-muted);
   font-size: 14px;
 }
-.mobile-day-intro h1 { text-wrap: balance; line-height: 1.2; }
+.mobile-day-intro h1 { font: 600 26px/1.3 var(--sans); letter-spacing: -.025em; text-wrap: balance; }
+.mobile-day-intro > div > span { font-weight: 500; letter-spacing: .06em; }
 
 .mobile-day-intro > button,
 .mobile-map-topbar > button {
@@ -98,8 +99,11 @@
 .mobile-next-card {
   padding: 16px;
   border-radius: 20px;
-  background: var(--mobile-accent-soft);
+  border: 1px solid var(--mobile-line);
+  background: #fff;
 }
+.mobile-next-card .mobile-card-label span { font-weight: 500; letter-spacing: .03em; }
+.mobile-next-card .mobile-primary-action { font-weight: 600; }
 
 .mobile-card-label,
 .mobile-section > header,
