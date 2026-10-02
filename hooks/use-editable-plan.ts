@@ -5,6 +5,7 @@ import originalPlan from '@/data/day-plans.json';
 import { useLocalStorage } from '@/hooks/use-local-storage';
 import {
   migrateEditablePlan,
+  removeEntityFromPlan,
   reorderPlanItems,
   type EditablePlan,
   type PlanDay,
@@ -225,25 +226,12 @@ export function useEditablePlan() {
       `重置 Day ${dayId}`,
     );
   const resetTrip = () => commit(normalize(pristine), '恢复原始计划');
-  const deleteEntity = (entityId: string) =>
-    commit(
-      {
-        ...plan,
-        days: plan.days.map((day) => ({
-          ...day,
-          activeItems: day.activeItems.filter(
-            (item) => item.entityId !== entityId,
-          ),
-          alternatives: day.alternatives.filter(
-            (item) => item.entityId !== entityId,
-          ),
-          removedItems: (day.removedItems ?? []).filter(
-            (item) => item.entityId !== entityId,
-          ),
-        })),
-      },
-      '删除自定义项目',
-    );
+  const deleteEntity = (entityId: string) => {
+    // The entity library is permanently deleted by the caller. A plan-only
+    // Undo would resurrect unresolved references to that deleted entity.
+    setUndo(null);
+    setStored(normalize(removeEntityFromPlan(plan, entityId)));
+  };
   const undoLast = () => {
     if (!undo) return;
     setStored(undo.plan);

@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import { legCoordinatePair, routeCoordinateOrder } from '../features/map/mapModel.ts';
-import { reorderPlanItems } from '../features/trip/planModel.ts';
+import { removeEntityFromPlan, reorderPlanItems } from '../features/trip/planModel.ts';
 
 const route = {
   legs: [
@@ -46,6 +46,21 @@ assert.deepEqual(reordered.map(({ id, order }) => ({ id, order })), [
 
 const root = process.cwd();
 const read = (file) => fs.readFileSync(path.join(root, file), 'utf8');
+const deletionPlan = JSON.parse(read('data/day-plans.json'));
+const originalDeletionPlan = JSON.stringify(deletionPlan);
+const temporaryItem = { ...deletionPlan.days[0].activeItems[0], id: 'qa-custom', entityId: 'qa-custom', order: 1 };
+for (const [index, zone] of [[0, 'activeItems'], [1, 'alternatives'], [2, 'removedItems']]) {
+  deletionPlan.days[index][zone] = [temporaryItem, ...(deletionPlan.days[index][zone] ?? [])];
+}
+const beforeDeletion = JSON.stringify(deletionPlan);
+const cleaned = removeEntityFromPlan(deletionPlan, 'qa-custom');
+assert.equal(JSON.stringify(deletionPlan), beforeDeletion, 'deletion must not mutate the source plan');
+assert.equal(cleaned.days.flatMap(day => [...day.activeItems, ...day.alternatives, ...(day.removedItems ?? [])]).some(item => item.entityId === 'qa-custom'), false);
+for (const [index, zone] of [[0, 'activeItems'], [1, 'alternatives'], [2, 'removedItems']]) {
+  assert.deepEqual(cleaned.days[index][zone].map(item => item.order), cleaned.days[index][zone].map((_, position) => position + 1));
+}
+assert.equal(cleaned.days[3], deletionPlan.days[3], 'unaffected days retain their original fields and order');
+assert.deepEqual(removeEntityFromPlan(JSON.parse(originalDeletionPlan), 'absent'), JSON.parse(originalDeletionPlan));
 const tripView = read('views/trip/TripView.tsx');
 const workspace = read('views/trip/DesktopTripWorkspace.tsx');
 const timeline = read('views/trip/DesktopTripTimeline.tsx');
@@ -93,6 +108,11 @@ assert.match(timeline, /SortableContext/);
 assert.match(editablePlan, /reorderWithin/);
 assert.match(editablePlan, /reorderPlanItems/);
 assert.match(editablePlan, /commit\(/);
+// Permanent custom deletion must not expose a plan-only Undo that restores orphan references.
+const deleteEntitySource = editablePlan.slice(editablePlan.indexOf('const deleteEntity ='), editablePlan.indexOf('const undoLast ='));
+assert.match(deleteEntitySource, /setUndo\(null\)/);
+assert.match(deleteEntitySource, /removeEntityFromPlan\(plan, entityId\)/);
+assert.doesNotMatch(deleteEntitySource, /commit\(/);
 const moveDaySource = editablePlan.slice(editablePlan.indexOf('const moveDay ='), editablePlan.indexOf('const addEntity ='));
 assert.match(moveDaySource, /day\.activeItems\.filter\(\(row\) => row\.entityId !== item\.entityId\)/);
 assert.match(moveDaySource, /day\.alternatives\.filter\(\(row\) => row\.entityId !== item\.entityId\)/);

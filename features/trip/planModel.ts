@@ -46,6 +46,22 @@ const isUserItem = (item: PlanItem) => item.id.startsWith('user-');
 const reindex = (items: PlanItem[]) =>
   items.map((item, index) => ({ ...item, order: index + 1 }));
 
+export function removeEntityFromPlan(plan: EditablePlan, entityId: string): EditablePlan {
+  const remove = (items: PlanItem[]) => items.some((item) => item.entityId === entityId)
+    ? reindex(items.filter((item) => item.entityId !== entityId))
+    : items;
+  return {
+    ...plan,
+    days: plan.days.map((day) => {
+      const activeItems = remove(day.activeItems);
+      const alternatives = remove(day.alternatives);
+      const removedItems = day.removedItems === undefined ? undefined : remove(day.removedItems);
+      if (activeItems === day.activeItems && alternatives === day.alternatives && removedItems === day.removedItems) return day;
+      return { ...day, activeItems, alternatives, ...(removedItems === undefined ? {} : { removedItems }) };
+    }),
+  };
+}
+
 function mergeUserItems(
   official: PlanItem[],
   stored: PlanItem[] = [],
