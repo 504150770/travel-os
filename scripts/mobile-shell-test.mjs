@@ -6,7 +6,15 @@ import {
   desktopViewFromUrl,
   mobileViewFromUrl,
 } from '../features/mobile/mobileModel.ts';
-import { routeCoordinateOrder } from '../features/map/mapModel.ts';
+import { advanceMapStage, routeCoordinateOrder } from '../features/map/mapModel.ts';
+
+// These are readiness-model checks, not a substitute for actual tile loading.
+assert.equal(advanceMapStage('tiles', 'route'), 'tiles');
+assert.equal(advanceMapStage('tiles', 'markers'), 'tiles');
+assert.equal(advanceMapStage('route', 'tiles'), 'tiles');
+assert.equal(advanceMapStage('markers', 'route'), 'route');
+assert.equal(advanceMapStage('route', 'markers'), 'route');
+assert.equal(advanceMapStage('tiles', 'initialized'), 'initialized');
 
 assert.equal(mobileViewFromUrl('trip'), 'today');
 assert.equal(mobileViewFromUrl('home'), 'today');
@@ -62,6 +70,12 @@ for (const label of ['Today', 'Map', 'Explore', 'Plan', 'More']) {
 assert.match(mapScreen, /import MobileMapCanvas from '@\/components\/mobile\/map\/MobileMapCanvas'/);
 assert.match(tripWorkspace, /import\('@\/components\/mobile\/MobileMapScreen'\)/);
 assert.match(tripWorkspace, /mapVisited/);
+assert.match(tripWorkspace, /selected=\{mapPoints\.find\(\(point\) => point\.id === mapPoint\?\.id\) \?\? null\}/);
+assert.doesNotMatch(tripWorkspace, /requestIdleCallback|setTimeout\(preload/);
+assert.match(tripWorkspace, /active=\{controller\.mobileView === 'map'\}/);
+assert.match(tripWorkspace, /interactive=\{controller\.mobileView === 'map' && !entity/);
+assert.match(mapScreen, /advanceMapStage\(current, stage\)/);
+assert.match(mapScreen, /selectedPointId=\{selected\?\.id \?\? null\}/);
 assert.doesNotMatch(mobileSelectors, /food: food|gyms:/);
 assert.match(mapScreen, /mobile-map-progress/);
 assert.match(mobileCss, /env\(safe-area-inset-top\)/);

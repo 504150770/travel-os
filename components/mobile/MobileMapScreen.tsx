@@ -11,6 +11,7 @@ import type { LocationState } from '@/features/map/location/locationModel';
 import { approximateDistanceLabel } from '@/features/map/location/locationModel';
 import type { RouteGeometryState } from '@/features/map/routing/useRouteGeometry';
 import type { MapRenderStage } from '@/components/map/MapCanvas';
+import { advanceMapStage } from '@/features/map/mapModel';
 import MobileMapCanvas from '@/components/mobile/map/MobileMapCanvas';
 
 class MapBoundary extends Component<{ children: ReactNode }, { failed: boolean }> {
@@ -43,6 +44,8 @@ export function MobileMapScreen({
   location,
   requestLocation,
   locationFocusToken,
+  active,
+  interactive,
 }: {
   route: DayRoute;
   points: MobileMapPoint[];
@@ -55,6 +58,8 @@ export function MobileMapScreen({
   location: LocationState;
   requestLocation: () => void;
   locationFocusToken: number;
+  active: boolean;
+  interactive: boolean;
 }) {
   const [routeStatus, setRouteStatus] = useState<RouteGeometryState['status']>('loading');
   const [mapStage, setMapStage] = useState<MapRenderStage | 'shell'>('shell');
@@ -78,11 +83,14 @@ export function MobileMapScreen({
           <MobileMapCanvas
             points={points}
             route={route}
+            selectedPointId={selected?.id ?? null}
+            active={active}
+            interactive={interactive}
             onSelect={select}
             currentLocation={location.position}
             locationFocusToken={locationFocusToken}
             onRouteStatus={setRouteStatus}
-            onMapStage={setMapStage}
+            onMapStage={(stage) => setMapStage((current) => advanceMapStage(current, stage))}
           />
           {mapStage !== 'tiles' && <output className="mobile-map-progress">
             {mapStage === 'shell' ? 'Loading map…' : mapStage === 'initialized' ? 'Adding today’s stops…' : 'Loading map detail…'}

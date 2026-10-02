@@ -5,7 +5,7 @@ import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import '@/components/map/map.css';
 import type { DayRoute } from '@/lib/types';
-import { type MapPoint } from '@/features/map/mapModel';
+import { type MapPoint, type MapRenderStage } from '@/features/map/mapModel';
 import { MOBILE_TILE_PROVIDER } from '@/components/mobile/map/mapProvider';
 import { useRouteGeometry, type RouteGeometryState } from '@/features/map/routing/useRouteGeometry';
 import type { CurrentLocation } from '@/features/map/location/locationModel';
@@ -25,7 +25,7 @@ function markerHtml(point: MapPoint, selected: boolean) {
   return `<span class="shared-map-marker ${point.kind} ${selected ? 'selected' : ''}">${photo}<i>${escapeText(label)}</i></span>`;
 }
 
-export type MapRenderStage = 'initialized' | 'markers' | 'tiles' | 'route';
+export type { MapRenderStage } from '@/features/map/mapModel';
 
 const markerIcon = (point: MapPoint, selected: boolean) => {
   const size = selected ? 54 : point.kind === 'candidate' ? 38 : 46;
@@ -102,6 +102,7 @@ export default function MapCanvas({
   useEffect(() => {
     if (!nodeRef.current) return;
     const node = nodeRef.current;
+    let live = true;
     const map = L.map(nodeRef.current, { zoomControl: false, attributionControl: true });
     mapRef.current = map;
     const tileLayer = L.tileLayer(MOBILE_TILE_PROVIDER.url, {
@@ -112,11 +113,13 @@ export default function MapCanvas({
       detectRetina: false,
     });
     tileLayer.once('load', () => {
+      if (!live) return;
       node.dataset.tilesUsableAt = String(Math.round(performance.now()));
       stageRef.current?.('tiles');
     });
     let tileErrors = 0;
     tileLayer.on('tileerror', () => {
+      if (!live) return;
       tileErrors += 1;
       if (tileErrors === 4) errorRef.current?.('tiles');
     });
@@ -138,6 +141,7 @@ export default function MapCanvas({
     const observer = new ResizeObserver(() => map.invalidateSize({ pan: false }));
     observer.observe(nodeRef.current);
     return () => {
+      live = false;
       observer.disconnect();
       map.remove();
       mapRef.current = null;
@@ -150,6 +154,8 @@ export default function MapCanvas({
     const handlers = [map.dragging, map.touchZoom, map.doubleClickZoom, map.scrollWheelZoom, map.boxZoom, map.keyboard];
     handlers.forEach((handler) => interactive ? handler.enable() : handler.disable());
     map.getContainer().style.pointerEvents = interactive ? '' : 'none';
+    map.getContainer().dataset.mapInteractionEnabled = String(handlers.every((handler) => handler.enabled()));
+    map.getContainer().dataset.mapHandlersEnabled = handlers.map((handler) => Number(handler.enabled())).join(',');
   }, [interactive]);
 
   useEffect(() => {

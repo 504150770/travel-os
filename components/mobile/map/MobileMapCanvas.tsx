@@ -15,6 +15,9 @@ export default function MobileMapCanvas({
   locationFocusToken,
   onRouteStatus,
   onMapStage,
+  selectedPointId,
+  active,
+  interactive,
 }: {
   points: MobileMapPoint[];
   route: DayRoute;
@@ -23,11 +26,17 @@ export default function MobileMapCanvas({
   locationFocusToken: number;
   onRouteStatus: (status: RouteGeometryState['status']) => void;
   onMapStage: (stage: MapRenderStage) => void;
+  selectedPointId: string | null;
+  active: boolean;
+  interactive: boolean;
 }) {
   return <MapCanvas
     points={points}
     route={route}
     fitToken={route.day}
+    selectedPointId={selectedPointId}
+    active={active}
+    interactive={interactive}
     className="mobile-map-canvas"
     onSelect={onSelect}
     currentLocation={currentLocation}

@@ -30,9 +30,11 @@ const MobileMapScreen = lazy(loadMobileMapScreen);
 export function MobileTripWorkspace({
   controller,
   openDayPicker,
+  dayPickerOpen,
 }: {
   controller: AppController;
   openDayPicker: () => void;
+  dayPickerOpen: boolean;
 }) {
   const trip = useTripController({
     selectedDay: controller.selectedDay,
@@ -69,21 +71,6 @@ export function MobileTripWorkspace({
   );
 
   useEffect(() => {
-    if (controller.mobileView === 'map') return;
-    const preload = () => { void loadMobileMapScreen(); };
-    const idleWindow = window as unknown as {
-      requestIdleCallback?: (callback: IdleRequestCallback, options?: IdleRequestOptions) => number;
-      cancelIdleCallback?: (handle: number) => void;
-    };
-    if (idleWindow.requestIdleCallback) {
-      const request = idleWindow.requestIdleCallback(preload, { timeout: 1800 });
-      return () => idleWindow.cancelIdleCallback?.(request);
-    }
-    const timer = globalThis.setTimeout(preload, 700);
-    return () => globalThis.clearTimeout(timer);
-  }, [controller.mobileView]);
-
-  useEffect(() => {
     if (controller.mobileView !== 'map' || mapVisited) return;
     const timer = globalThis.setTimeout(() => setMapVisited(true), 0);
     return () => globalThis.clearTimeout(timer);
@@ -109,13 +96,15 @@ export function MobileTripWorkspace({
             points={mapPoints}
             food={food}
             gym={gym}
-            selected={mapPoint}
+            selected={mapPoints.find((point) => point.id === mapPoint?.id) ?? null}
             select={setMapPoint}
             openEntity={setEntity}
             resolve={controller.resolve}
             location={location.state}
             requestLocation={location.request}
             locationFocusToken={location.focusToken}
+            active={controller.mobileView === 'map'}
+            interactive={controller.mobileView === 'map' && !entity && !hotelOpen && !actions && !controller.lightbox && !dayPickerOpen}
           />
         </Suspense>
         </div>

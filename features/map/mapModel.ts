@@ -1,5 +1,15 @@
 import type { DayRoute } from '@/lib/types';
 
+export type MapRenderStage = 'initialized' | 'markers' | 'tiles' | 'route';
+
+// Route/marker updates must not make an already usable tile layer look loading.
+// A newly initialized instance (including Retry) starts its own readiness cycle.
+export function advanceMapStage(current: MapRenderStage | 'shell', next: MapRenderStage): MapRenderStage {
+  if (next === 'initialized') return next;
+  const rank = { shell: 0, initialized: 1, markers: 2, route: 3, tiles: 4 };
+  return rank[current] > rank[next] ? current as MapRenderStage : next;
+}
+
 export type MapPointKind = 'hotel' | 'stop' | 'food' | 'gym' | 'candidate';
 
 export type MapPoint = {

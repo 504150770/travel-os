@@ -64,6 +64,7 @@ export function MobileShell({ controller }: { controller: AppController }) {
           <MobileTripWorkspace
             controller={controller}
             openDayPicker={() => setDayPicker(true)}
+            dayPickerOpen={dayPicker}
           />
         ) : controller.mobileView === 'explore' ? (
           <MobileExplore controller={controller} />

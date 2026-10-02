@@ -5,7 +5,7 @@ import { Component, lazy, Suspense, useState, type ReactNode } from 'react';
 import { Crosshair, ExternalLink, Navigation, Plus, RotateCcw } from 'lucide-react';
 import type { Entity } from '@/lib/entity-library';
 import type { DayRoute } from '@/lib/types';
-import type { MapPoint } from '@/features/map/mapModel';
+import { advanceMapStage, type MapPoint } from '@/features/map/mapModel';
 import { mapLinks } from '@/features/trip/tripModel';
 import type { CurrentLocation } from '@/features/map/location/locationModel';
 import { approximateDistanceLabel } from '@/features/map/location/locationModel';
@@ -91,7 +91,7 @@ export function DesktopTripMap({
             active={active}
             interactive={interactive}
             onRouteStatus={setRouteStatus}
-            onMapStage={(stage) => { setMapStage(stage); onStage?.(stage); }}
+            onMapStage={(stage) => { setMapStage((current) => advanceMapStage(current, stage)); onStage?.(stage); }}
             onMapError={() => setMapUnavailable(true)}
           />
         </Suspense>
