@@ -143,7 +143,7 @@ export function buildTodaysTips(rows: PlanPresentationRow[], route: DayRoute): T
   if (tips.length < 3) tips.push({
     id: 'buffer',
     kind: 'arrival',
-    text: '景点之间保留机动时间，避免连续赶场',
+    text: '安排之间保留机动时间，避免连续赶场',
   });
   return tips.slice(0, 5);
 }

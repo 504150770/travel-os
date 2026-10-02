@@ -23,6 +23,7 @@ import {
 } from '@/lib/media';
 import { mapLinks } from '@/features/trip/tripModel';
 import type { TodaysTip } from '@/features/trip/tripPresentationModel';
+import { isSightseeingEntity } from '@/features/trip/planStatusModel';
 import { TodaysTipsCard } from '@/views/trip/TodaysTipsCard';
 
 function usefulCopy(entity: Entity | undefined, fallback: string) {
@@ -89,7 +90,7 @@ export function DesktopTripOverview({
   openHotel: () => void;
 }) {
   const scrollRef = useRef<HTMLDivElement>(null);
-  const places = dayState.activeEntities.filter((entity) => entity.type === 'place');
+  const places = dayState.activeEntities.filter(isSightseeingEntity);
   const landmarkCover = selectCoverImage(places.find((entity) => entity.id === 'eiffel')?.images ?? []);
   const overviewHero = landmarkCover ? { file: landmarkCover.file, caption: landmarkCover.caption } : hero;
   const walkingKm = dayState.route.summary.walkingKm;

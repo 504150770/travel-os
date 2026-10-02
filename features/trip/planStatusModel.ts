@@ -50,3 +50,7 @@ export function supportingPlanLabel(
 }
 
 export const isMealName = (name: string) => mealPattern.test(name);
+
+// Gallery grouping only: keep transport entities in the plan, not in sightseeing cards.
+export const isSightseeingEntity = (entity: { type: string; raw: Record<string, unknown> }) =>
+  entity.type === 'place' && entity.raw.type !== 'transport';
