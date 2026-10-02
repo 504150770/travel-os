@@ -73,6 +73,8 @@ assert.match(workspace, /travel\.desktop\.tripPanelWidth/);
 // Source wiring guards; actual Escape/outside-click behavior is checked in Chrome.
 assert.match(workspace, /document\.addEventListener\('pointerdown', dismissOutside\)/);
 assert.match(workspace, /document\.removeEventListener\('pointerdown', dismissOutside\)/);
+assert.match(workspace, /document\.addEventListener\('focusin', dismissOutside\)/);
+assert.match(workspace, /document\.removeEventListener\('focusin', dismissOutside\)/);
 assert.match(workspace, /document\.removeEventListener\('keydown', dismissEscape\)/);
 assert.match(workspace, /targetDialog && !dayNavRef\.current\?\.contains\(targetDialog\)/);
 assert.match(workspace, /dayButtonRef\.current\?\.focus\(\)/);

@@ -113,7 +113,7 @@ export default function DesktopTripWorkspace(props: DesktopTripWorkspaceProps) {
 
   useEffect(() => {
     if (!dayPicker) return;
-    const dismissOutside = (event: PointerEvent) => {
+    const dismissOutside = (event: Event) => {
       if (event.target instanceof Node && !dayNavRef.current?.contains(event.target)) setDayPicker(false);
     };
     const dismissEscape = (event: KeyboardEvent) => {
@@ -126,9 +126,11 @@ export default function DesktopTripWorkspace(props: DesktopTripWorkspaceProps) {
       dayButtonRef.current?.focus();
     };
     document.addEventListener('pointerdown', dismissOutside);
+    document.addEventListener('focusin', dismissOutside);
     document.addEventListener('keydown', dismissEscape);
     return () => {
       document.removeEventListener('pointerdown', dismissOutside);
+      document.removeEventListener('focusin', dismissOutside);
       document.removeEventListener('keydown', dismissEscape);
     };
   }, [dayPicker]);
