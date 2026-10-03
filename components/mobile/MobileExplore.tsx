@@ -81,8 +81,8 @@ export function MobileExplore({ controller }: { controller: AppController }) {
         {shown.length === 0 && (
           <output className="mobile-explore-empty">
             <Search aria-hidden="true" />
-            <h2>{search.trim() ? '没有找到匹配的推荐' : '暂无此类推荐'}</h2>
-            <p>{search.trim() ? '试试其他关键词，或切换城市与分类。' : '可以切换城市或分类继续查看。'}</p>
+            <span className="mobile-explore-empty-title">{search.trim() ? '没有找到匹配的推荐' : '暂无此类推荐'}</span>
+            <span className="mobile-explore-empty-description">{search.trim() ? '试试其他关键词，或切换城市与分类。' : '可以切换城市或分类继续查看。'}</span>
           </output>
         )}
         {shown.map((entity) => {

@@ -84,6 +84,7 @@ assert.match(mobileCss, /env\(safe-area-inset-bottom\)/);
 const explore = fs.readFileSync(path.join(root, 'components/mobile/MobileExplore.tsx'), 'utf8');
 assert.match(explore, /shown\.length === 0/);
 assert.match(explore, /<output className="mobile-explore-empty"/);
+assert.doesNotMatch(explore.split('<output className="mobile-explore-empty">')[1]?.split('</output>')[0] ?? '', /<(?:h2|p)[\s>]/);
 assert.match(mobileCss, /\.mobile-explore-empty[^}]*grid-column: 1 \/ -1/);
 
 const nonMapMobileFiles = fs
