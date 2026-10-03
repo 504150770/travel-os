@@ -83,6 +83,7 @@ export function MobileToday({
     ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(stay.execution.address)}`
     : '#';
   const dayAction = actionForDay(controller.actionQueue, day.date);
+  const hasNextPlanDay = Boolean(controller.actions.plan.days[day.day]);
 
   return (
     <main className="mobile-today" data-mobile-screen="today">
@@ -297,18 +298,20 @@ export function MobileToday({
 
       <TodaysTipsCard tips={tips} />
 
-      <section className="mobile-section mobile-important-action">
-        <header>
-          <div>
-            <span>{dayAction ? '当天提醒' : '明日安排'}</span>
-            <h2>{dayAction?.title ?? currentRoute.atGlance.tomorrow.split('；待办：')[0]}</h2>
-          </div>
-          <MapPin />
-        </header>
-        {dayAction && (
-          <button onClick={() => { controller.navigateMobile('plan'); controller.selectMobilePlanTab(dayAction.target); }}>Open in Plan</button>
-        )}
-      </section>
+      {(dayAction || hasNextPlanDay) && (
+        <section className="mobile-section mobile-important-action">
+          <header>
+            <div>
+              <span>{dayAction ? '当天提醒' : '明日安排'}</span>
+              <h2>{dayAction?.title ?? currentRoute.atGlance.tomorrow.split('；待办：')[0]}</h2>
+            </div>
+            <MapPin />
+          </header>
+          {dayAction && (
+            <button onClick={() => { controller.navigateMobile('plan'); controller.selectMobilePlanTab(dayAction.target); }}>Open in Plan</button>
+          )}
+        </section>
+      )}
     </main>
   );
 }
