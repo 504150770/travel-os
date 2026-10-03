@@ -1,5 +1,7 @@
 # Home 预算入口审核包
 
+> 更新（本轮用户新授权）：已改用云端真实浏览器，原对话审核改由父任务 dot 直接审核。最新实测见 [browser/Travel-Budget-Browser-Evidence.md](browser/Travel-Budget-Browser-Evidence.md)。下文是此前渠道受阻时的历史审核包，保留其证据边界。
+
 状态：源码修复已测试并备份；真实浏览器刷新、截图和指定对话 High 审核未完成。未合并、未部署。
 
 - 仓库：`504150770/travel-os`
