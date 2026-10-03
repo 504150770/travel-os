@@ -93,3 +93,5 @@ node scripts/gallery-copy-test.mjs
 先确认 Git 状态与文档交接，继续能安全验证的未完成项。每轮更新 QA 实际字段与准确限制。只有全部功能有真实证据、ChatGPT High 明确整体满意（并尊重用户视觉批准/发布权限）才能结束；局部满意、全部 build/test 通过、工具暂时受阻均不是整体完成。
 
 此旧线程完成交接后不再同时开发；`jacob-travel` 原 30 分钟 heartbeat 应通过产品正式接口转到新线程，保留“未变化安静、有实质改善/完成/需介入才通知”的偏好，不创建重复自动任务。
+
+迁移收据（2026-10-03）：新 Codex 对话 `01a101af-e06a-74c3-bfe9-b9d057d5e994`，标题“Jacob Travel · 视觉与功能验收接续”，已开始读取交接继续验收。正式 automation_update 已将原 `jacob-travel` 的 target_thread_id 改到此新对话，ACTIVE 与原 30 分钟频率保持，已读取配置确认。旧对话仅保留历史，不再开发；无需复制旧长对话。首批交接文档备份 `f038012`，本迁移收据提交号以 Git log 为准。
