@@ -230,5 +230,15 @@
     "verification": "typecheck/lint/build/project audit/all existing regressions plus gallery-copy passed. Architecture166modules/74entrylines/0cycles; audit0failures/1existingbudgetwarning. Source guards not substituted for actual UI tests. Data diff empty.",
     "safety": "GitHub HEAD1a7f705 matched before edits. Exact own files backed up; generated/user files protected. No private export uploads, browser state mutation or production deployment. Production remains previous reviewed city-entry release."
   },
+  "denseMapPointer20261003": {
+    "commits": ["feadd12", "fe584b1"],
+    "issue": "Real Day8 Fit Day at1280x800 stacked all four46px sightseeing markers; elementFromPoint at every center hit Bridge of Sighs. High identified direct-pointer selection as a Must-fix, not a visual-only concern.",
+    "fix": "Direct marker click computes nearest current-point projected distance and minimum integer Web-Mercator zoom for56px separation, capped at provider19. First overlapping click only zooms, without onSelect; subsequent separated click selects normally. No coordinate, marker size, route, data or Timeline changes.",
+    "actual": "Final Desktop measured1536, not1280: first pointer click separated four centers and left no preview; actual pointer clicks on palace/sigh/square/basilica each yielded the correct preview. Details opened; Overview/Map reused initializedAt389178. Mobile measured390x844: Today had0Leaflet; explicit Map opened it, first dense click left no preview, second palace pointer selected correctly. Mobile Details disabled all six map handlers; closing restored all six. Other mobile markers can leave viewport after zoom and need normal pan; no all-visible claim.",
+    "evidence": ["map-day8-density-fixed-desktop.jpg", "map-day8-density-fixed-mobile.jpg", "map-day8-density-mobile-selected.jpg"],
+    "review": "Authorized continuation remained High. Actually read source/helper and all three real screenshots; explicitly accepted Day8 first-click separation and subsequent accurate selection with no new Must-fix. Same-coordinate points at maxZoom remain a separate boundary, not solved or claimed. Not global acceptance.",
+    "verification": "typecheck/lint/build/project audit and all11 existing regression scripts passed. Six new zoom helper assertions are model tests, not substitutes for actual pointer tests. Data/lib diff empty; audit0failures and existing budget warning unchanged.",
+    "safety": "Pre-edit GitHub backup verified; exact own source/test/screenshots committed and pushed. Generated audits/caches and unrelated user files retained. No private uploads, user business-state writes or production deployment. Restore permission, isolated native cleanup, full-network offline and overall acceptance remain pending."
+  },
   "complete": false
 }
