@@ -312,5 +312,15 @@
     "safety": "GitHub6f3ac8e matched at start, exact own screenshots/progress staged. No actual business-state mutation, private uploads or deploy; viewport reset. Unrelated/generated files protected; unchanged Restore/native-confirm limitations not retried.",
     "remaining": "Final overall actual acceptance, isolated native-confirm cleanup, Restore file permission, comprehensive external-network offline and measured performance remain pending."
   },
+  "mobileMoreActiveTab20261003": {
+    "commits": ["4b21ebd", "626b75b"],
+    "issue": "Actual375 direct More backup URL showed correct backup body but active tab x563.6/right625.2 outside content360, rail scrollLeft0. No active selection visible in the tab row. Earlier page visual approval had not covered this deep-link context.",
+    "fix": "Reuse existing MobilePlan active-tab visibility logic in MobileMore: row ref plus panel-dependent effect adjusts only horizontal row.scrollLeft when active bounds exceed row, with12px inset. Panel arrays/URL/import/export/notes/controller/data unchanged; no CSS or design-system change. Three static guards added, not behavior tests.",
+    "actual": "375 backup active now x286/right347.6, rail277.6 within content360; pageY0. Clicking practical-information panel and returning to stays kept active visible and pageY0.430 backup active341.2–402.8 within content415; no horizontal page overflow. No import/export/notes write performed.",
+    "evidence": ["mobile-more-backup-tab-before-375.jpg", "mobile-more-backup-tab-fixed-375.jpg"],
+    "review": "Authorized High actually read Before/More source/Plan precedent and agreed minimal repair; then actually viewed After and final source and explicitly accepted current-panel tab visibility with no Must-fix. Not Restore/import/export/notes or whole More/system acceptance.",
+    "verification": "typecheck/lint/build/project audit and all existing regression scripts plus gallery-copy passed. Audit0failures and unchanged27630vs26000warning, data/lib diff empty. Own source review confirmed effect only changes row scroll and is panel-based, including existing local offline panel.",
+    "safety": "GitHub5ed6322 and4b21ebd verified before repair. Exact own source/test/images/progress backed up, generated/user files preserved. Viewport reset; no private uploads/business-state mutation/deployment. Existing Restore/native-confirm/full-network-offline/performance and final overall acceptance remain pending."
+  },
   "complete": false
 }
