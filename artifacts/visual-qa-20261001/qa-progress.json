@@ -252,5 +252,16 @@
     "nextFinding": "Explore 景点 category currently includes activity/custom and normalized transport, so the Rome list includes flight/rest/lunch entries with empty image areas. High agreed this needs separate category-semantic review; not modified because current filter may represent broader activity browsing and recommendation logic must remain unchanged.",
     "safety": "GitHub5bed86d matched before edits. Exact own source/test/images pushed, generated/user files retained, data/lib diff empty, browser viewport reset. No private uploads, user business-state writes or production deployment. Existing Restore/native-confirm/full-network-offline limitations remain; no unchanged blocker retried."
   },
+  "discoverCategoryPresentation20261003": {
+    "commits": ["0fe3cd0", "31ea334"],
+    "issue": "Explore's existing broad places collection includes activity/custom/photo_spot and normalized transport, but was labelled 景点. Mobile missing covers rendered completely blank gray areas. No filter/recommendation fault was inferred.",
+    "fix": "Desktop/Mobile visible category now 地点与活动; consistent placeholder and desktop introduction. Mobile no-cover fallback uses existing Navigation for raw transport, CalendarDays for activity and Camera for other missing imagery with concise labels. Existing real cover, category arrays/filter/sort/controller/URL and actions unchanged.",
+    "actual": "Real390 GF123 query retained one activity card with 行程活动 fallback; rest query retained one activity card; Trevi retained original p4_0.webp naturalWidth1000/fallback0 and existing detail opened/closed. Desktop1280/content1265 category/header verified. No favorite/add/state mutation. GF123 is actually activity, not raw transport; corrected earlier assumption. Other fallback branches are source-reviewed, not claimed actual-tested here.",
+    "evidence": ["explore-category-final-390-actual.jpg", "explore-rest-final-390-actual.jpg", "explore-cover-final-390-actual.jpg", "discover-category-label-final-1280.jpg"],
+    "evidenceCorrection": "Early uncommitted explore-transport-category-fixed-390.jpg and explore-activity-fallback-390.jpg were375x188 scaled artifacts from nonforeground capture; discarded as visual evidence. Final mobile images recaptured on a fresh active tab and visually inspected.",
+    "review": "Authorized High reviewed actual before screenshot/source and supported label/fallback without reducing existing capabilities. Then actually viewed all four final images and final Mobile/Discover source, explicitly accepted this narrow scope with no Must-fix. Existing priceLabel 不适用 retained; no broader data quality or global completion claim.",
+    "verification": "typecheck/lint/build/project audit and all existing regressions plus gallery-copy passed. Added static guards are not behavior tests. Audit budget warning unchanged, data/lib diff empty.",
+    "safety": "GitHubc8f2774 verified before work; exact source/test/screenshots backed up. Unrelated/generated files preserved, viewport reset, no private uploads or production deployment. Restore permission/native cleanup/full-network offline/global acceptance remain pending."
+  },
   "complete": false
 }
