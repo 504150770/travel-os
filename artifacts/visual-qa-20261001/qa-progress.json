@@ -1,6 +1,6 @@
 {
-  "updatedOn": "2026-10-02",
-  "scope": "Travel OS only; existing presentation and functional regression; no production deployment",
+  "updatedOn": "2026-10-03",
+  "scope": "Travel OS only; existing presentation and functional regression. One earlier user-authorized city-entry production release is recorded; subsequent QA repairs remain branch-only, no automatic deployment.",
   "branch": "codex/visual-qa-20260929",
   "reviewConversation": "https://chatgpt.com/g/g-p-6a805767bdd88191abdb60cf292d08e9-travel/c/6abdd47e-7d30-83e8-a535-f4e19fa74f85",
   "originalReviewConversation": "https://chatgpt.com/g/g-p-6a805767bdd88191abdb60cf292d08e9-travel/c/6a9f6322-2fe8-83e8-966c-46da74ba76a0",
@@ -89,11 +89,12 @@
   "testsPassed": ["typecheck", "lint", "build", "audit", "linkage", "architecture", "mobile", "desktop-workspace", "trip-presentation", "travel-intelligence", "readiness", "presentation", "gallery-offline", "gallery-copy", "privacy"],
   "auditWarning": "Existing projected budget 27630 exceeds the unchanged hard cap 26000 by 1630; not a UI failure",
   "remaining": [
-    "Remaining functional details and state-changing actions; responsive Day2/8/15 desktop1440/1280/1024 and mobile375/390/430 layout scopes now covered across this and previous iterations, not a claim that every function was tested at every size",
-    "Next actual coverage includes custom successful-save. Move Day now tested through existing Day details specialized Gym modal, including same-entity destination duplicate repair and exact Undo. Ordinary task/deadline selectors and one unbooked railway selector tested; not every booking type or every move edge. Legacy PlanStop move-day component itself unmounted; do not invent a new UI entry. Successful custom save must include deletion via Discover existing native-confirm UI and exact export restoration; do not leave test custom entities behind",
+    "Only genuinely uncovered functional boundaries and final whole-scope visual review remain; responsive Day2/8/15 desktop1440/1280/1024 and mobile375/390/430 layout scopes are already covered, not every function at every size. Preserve later scoped acceptances and evidenceCorrection fields; read HANDOFF.md first",
+    "Custom successful-save/reload was actually tested on isolated3001. Native-confirm deletion result remains UNKNOWN; first read-only inspect whether sole QA 临时保存验收 persists. Permanent-delete repair d3844df needs actual cleanup/export business-field comparison against local baseline and High review. Do not delete other entities, claim permanent deletion Undo, touch real3000 or retry unchanged native failures",
     "Backup import/restore remains untested: official updated filechooser/setFiles interface tried on isolated3001, blocked by ChatGPT extension Allow access to file URLs permission. No permission expanded or injected File/storage workaround used",
     "Comprehensive network-offline behavior still unverified; no browser network-disconnection capability exposed; current evidence is same-origin server unavailable, not full external network disconnection",
-    "Collect final whole-scope High review only after all remaining functions have real evidence"
+    "Measured runtime performance and dependency advisory triage remain separate open scopes; build/DOM/server logs are not network/LCP evidence. No automatic dependency upgrades or production release",
+    "Collect final whole-scope High review only after all remaining functions have real evidence; local acceptance is not global completion"
   ],
   "safety": [
     "No data directory modifications; hotels, flights, Current Plan, budget and visa materials unchanged",

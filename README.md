@@ -1,13 +1,25 @@
-# 欧洲18天 · Personal Travel Guide
+# Jacob Travel · 欧洲18天 Personal Travel Guide
 
 面向旅途中单手使用的个人旅行系统。路线固定为罗马 → 佛罗伦萨 → 威尼斯 → 维也纳 → 布拉格 → 巴黎，日期为 2026-12-01 至 2026-12-18。
+
+## 接续开发与验收
+
+新对话先读 [HANDOFF.md](HANDOFF.md)，再读 [QA 进度与证据](artifacts/visual-qa-20261001/qa-progress.json)，不要从零重做已获认可的页面。
+
+- 唯一工作目录：`C:/Users/50415/OneDrive/文档/ChatGPT/Travel/travel-os-ui-redesign`；不要操作父目录下的其他项目。
+- GitHub：`504150770/travel-os`；接续分支：`codex/visual-qa-20260929`。
+- 当前重点是已有功能的真实交互与视觉验收；整体 QA **尚未完成**。构建/结构审计通过不等于全部功能或用户视觉验收通过。
+- 最新手机离线页修复已备份并获 ChatGPT High 局部认可；尚未部署。线上保留此前用户授权的城市入口版本，不能把分支 HEAD 当线上版本。
+- 保持旅行事实、Current Plan、酒店、国际航班、住宿日期、预算、签证及推荐算法不变。发布需新一轮明确授权。
 
 ## 本地运行
 
 ```bash
 pnpm install
-pnpm dev
+pnpm dev --port 3000
 ```
+
+若 `localhost:3000` 已有本项目服务，直接复用；先确认进程和目录，不抢占或终止未知服务。状态修改类 QA 使用独立测试 origin，并先通过界面导出、确认可撤销；私人导出不上传 GitHub 或 ChatGPT。
 
 生产检查：
 
@@ -42,7 +54,7 @@ pnpm check
 - `data/essentials.json`：途中速查
 - `data/conflicts.json`：两份 PDF 与最新指令的冲突记录
 
-修改价格、班次、票券或健身房只需更新 JSON；UI 自动读取。真实酒店变更只更新 `hotel-bookings.json`。所有浏览器状态使用命名空间化 LocalStorage 保存。
+UI 从上述数据层读取；价格、班次、票券、酒店等事实只有在用户授权并核实时才能更新。正式计划引用与基础 Entity 分离，浏览器也可能有现有本地覆盖，不能只看默认 JSON 就推断用户当前状态。普通状态使用命名空间化 LocalStorage，部分离线资料使用 IndexedDB。
 
 ## 构建链
 
@@ -53,3 +65,5 @@ pnpm check
 `schemas/guide.schema.json` 定义结构；`scripts/audit.mjs` 检查缺失字段、交叉引用、全部行程点配图、图片内容与感知哈希去重、18天连续日期、15晚/5次换酒店、酒店噪音维度与房型图证据、餐饮来源、Booking/Task联动、预算和外链。结果写入 `audit/final-audit.json`，并更新 `.travel-build-state.json`。只有审计通过时 `handoff_allowed` 才为 `true`。
 
 浏览器中的订单、任务、实际支出、收藏、在线入住、截止节点、备注和订单补充信息可在 `MORE → BACKUP` 导出为 JSON，并在另一台设备中恢复。
+
+恢复代码/模型检查已通过，但实际浏览器 Restore E2E 仍受文件访问权限阻断，尚不能宣称真实恢复已验收。完整回归、浏览器限制、截图与审核范围见 [交接文档](HANDOFF.md)。
