@@ -220,5 +220,15 @@
     "deployment": "User explicitly requested optimize then deploy. Vercel prebuilt production dpl_GtPDHjQ8P8zSC1iJDMgutGqSjFqK READY, aliased travel.jacob.xin. Domain HTTP200 and four initial CSS assets HTTP200. Real production390x844 Home Rome click openedD2 Today, no overflow/Leaflet; production desktop1280x800 D15 checked and screenshot saved. No private exports or user-state mutations.",
     "remaining": "Restore E2E permission, isolated native cleanup, complete network offline, dependency advisory triage and overall acceptance remain pending; this release does not declare all functions complete."
   },
+  "personalMenuKeyboard20261003": {
+    "commits": ["a2da47e", "5a2f65b"],
+    "issue": "Real Chrome Escape from focused Backup menuitem closed the menu but left activeElement=body.",
+    "fix": "Only bind dismiss listeners while open. Escape owned by menu subtree closes and returns focus to Jacob. Outside focusin dismisses without stealing new focus. All listeners cleaned up; visual styles/business callbacks unchanged.",
+    "actual": "Desktop Escape menu0/focusJacob; Home.pressTab moved focus toTrip with menu0; Backup click opened existing more/backup URL and menu0 without export/import mutation. Mobile390x844 Escape fromSettings menu0/focusJacob/no overflow. Final open mobile menu measured286px wide, left77.2/right363.2 within390viewport.",
+    "evidence": "personal-menu-keyboard-final.jpg and personal-menu-keyboard-mobile.jpg show closed states due immediate render timing; High explicitly reviewed them as closed-state/no-regression evidence, not open-menu proof. personal-menu-keyboard-desktop-stable.jpg shows stable open Desktop. personal-menu-keyboard-mobile-stable.jpg measured1536 and is NOT valid Mobile evidence. personal-menu-open-390-actual.jpg is the correct stable open390 image.",
+    "review": "Authorized High continuation actually read source and two closed-state screenshots; explicitly accepted Escape/focus/outside-dismiss scope with no Must-fix. Complete ARIA arrow roving model is not implemented or claimed. Not Restore/cleanup/full-offline/global completion.",
+    "verification": "typecheck/lint/build/project audit/all existing regressions plus gallery-copy passed. Architecture166modules/74entrylines/0cycles; audit0failures/1existingbudgetwarning. Source guards not substituted for actual UI tests. Data diff empty.",
+    "safety": "GitHub HEAD1a7f705 matched before edits. Exact own files backed up; generated/user files protected. No private export uploads, browser state mutation or production deployment. Production remains previous reviewed city-entry release."
+  },
   "complete": false
 }
