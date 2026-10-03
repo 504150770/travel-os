@@ -1,0 +1,313 @@
+{
+  "date": "2026-10-03",
+  "repository": "504150770/travel-os",
+  "sourceBranch": "codex/visual-qa-20260929",
+  "sourceSHA": "395cb61c36be1ddb77b8693981d8b8dd3b95fd81",
+  "workBranch": "codex/cloud-necessary-fixes-20261003",
+  "environment": "cloud Linux; separate worktree /workspace/travel-os-cloud; original /workspace/travel-os work branch preserved",
+  "instructionsRead": [
+    "HANDOFF.md at sourceSHA",
+    "README.md at sourceSHA",
+    "complete artifacts/visual-qa-20261001/qa-progress.json at sourceSHA"
+  ],
+  "checkoutInstructionAvailability": "/workspace/.agents and /workspace/.codex are empty; no applicable AGENTS.md, checkout instructions or .agents/skills found in the Travel repository; executor skills list returned empty. Followed explicit delegation and source HANDOFF; no prohibited sessions paths read.",
+  "finding": "Existing Home budget detail action sets rendered Plan tab to budget, while navigate('plan') writes the previously selected tab. Six non-budget tabs therefore produce a URL inconsistent with the rendered panel. applyUrl reads that old tab on reopening. This round did not perform a real browser reload.",
+  "change": {
+    "files": [
+      "features/app/useAppController.ts"
+    ],
+    "linesAdded": 4,
+    "behavior": "Replace the just-pushed Plan URL with view=plan&tab=budget, clearing day/city as existing Plan routing does, while retaining hash and one navigation history entry. Same pattern as existing openNextAction."
+  },
+  "reproduction": {
+    "kind": "Real useAppController and useUrlState code bundled with esbuild; React state/effect hooks and window/history/sessionStorage replaced by in-memory test doubles. No browser process, storage injection or real business-state reads/writes.",
+    "beforeExit": 1,
+    "afterExit": 0,
+    "beforeCases": [
+      {
+        "previousTab": "readiness",
+        "view": "plan",
+        "renderedTab": "budget",
+        "urlView": "plan",
+        "urlTab": "readiness",
+        "hash": "#home-budget",
+        "writes": [
+          {
+            "method": "pushState",
+            "url": "/?view=plan&tab=readiness#home-budget"
+          }
+        ]
+      },
+      {
+        "previousTab": "bookings",
+        "view": "plan",
+        "renderedTab": "budget",
+        "urlView": "plan",
+        "urlTab": "bookings",
+        "hash": "#home-budget",
+        "writes": [
+          {
+            "method": "pushState",
+            "url": "/?view=plan&tab=bookings#home-budget"
+          }
+        ]
+      },
+      {
+        "previousTab": "transport",
+        "view": "plan",
+        "renderedTab": "budget",
+        "urlView": "plan",
+        "urlTab": "transport",
+        "hash": "#home-budget",
+        "writes": [
+          {
+            "method": "pushState",
+            "url": "/?view=plan&tab=transport#home-budget"
+          }
+        ]
+      },
+      {
+        "previousTab": "checkin",
+        "view": "plan",
+        "renderedTab": "budget",
+        "urlView": "plan",
+        "urlTab": "checkin",
+        "hash": "#home-budget",
+        "writes": [
+          {
+            "method": "pushState",
+            "url": "/?view=plan&tab=checkin#home-budget"
+          }
+        ]
+      },
+      {
+        "previousTab": "deadlines",
+        "view": "plan",
+        "renderedTab": "budget",
+        "urlView": "plan",
+        "urlTab": "deadlines",
+        "hash": "#home-budget",
+        "writes": [
+          {
+            "method": "pushState",
+            "url": "/?view=plan&tab=deadlines#home-budget"
+          }
+        ]
+      },
+      {
+        "previousTab": "tasks",
+        "view": "plan",
+        "renderedTab": "budget",
+        "urlView": "plan",
+        "urlTab": "tasks",
+        "hash": "#home-budget",
+        "writes": [
+          {
+            "method": "pushState",
+            "url": "/?view=plan&tab=tasks#home-budget"
+          }
+        ]
+      },
+      {
+        "previousTab": "budget",
+        "view": "plan",
+        "renderedTab": "budget",
+        "urlView": "plan",
+        "urlTab": "budget",
+        "hash": "#home-budget",
+        "writes": [
+          {
+            "method": "pushState",
+            "url": "/?view=plan&tab=budget#home-budget"
+          }
+        ]
+      }
+    ],
+    "afterCases": [
+      {
+        "previousTab": "readiness",
+        "view": "plan",
+        "renderedTab": "budget",
+        "urlView": "plan",
+        "urlTab": "budget",
+        "hash": "#home-budget",
+        "writes": [
+          {
+            "method": "pushState",
+            "url": "/?view=plan&tab=readiness#home-budget"
+          },
+          {
+            "method": "replaceState",
+            "url": "/?view=plan&tab=budget#home-budget"
+          }
+        ]
+      },
+      {
+        "previousTab": "bookings",
+        "view": "plan",
+        "renderedTab": "budget",
+        "urlView": "plan",
+        "urlTab": "budget",
+        "hash": "#home-budget",
+        "writes": [
+          {
+            "method": "pushState",
+            "url": "/?view=plan&tab=bookings#home-budget"
+          },
+          {
+            "method": "replaceState",
+            "url": "/?view=plan&tab=budget#home-budget"
+          }
+        ]
+      },
+      {
+        "previousTab": "transport",
+        "view": "plan",
+        "renderedTab": "budget",
+        "urlView": "plan",
+        "urlTab": "budget",
+        "hash": "#home-budget",
+        "writes": [
+          {
+            "method": "pushState",
+            "url": "/?view=plan&tab=transport#home-budget"
+          },
+          {
+            "method": "replaceState",
+            "url": "/?view=plan&tab=budget#home-budget"
+          }
+        ]
+      },
+      {
+        "previousTab": "checkin",
+        "view": "plan",
+        "renderedTab": "budget",
+        "urlView": "plan",
+        "urlTab": "budget",
+        "hash": "#home-budget",
+        "writes": [
+          {
+            "method": "pushState",
+            "url": "/?view=plan&tab=checkin#home-budget"
+          },
+          {
+            "method": "replaceState",
+            "url": "/?view=plan&tab=budget#home-budget"
+          }
+        ]
+      },
+      {
+        "previousTab": "deadlines",
+        "view": "plan",
+        "renderedTab": "budget",
+        "urlView": "plan",
+        "urlTab": "budget",
+        "hash": "#home-budget",
+        "writes": [
+          {
+            "method": "pushState",
+            "url": "/?view=plan&tab=deadlines#home-budget"
+          },
+          {
+            "method": "replaceState",
+            "url": "/?view=plan&tab=budget#home-budget"
+          }
+        ]
+      },
+      {
+        "previousTab": "tasks",
+        "view": "plan",
+        "renderedTab": "budget",
+        "urlView": "plan",
+        "urlTab": "budget",
+        "hash": "#home-budget",
+        "writes": [
+          {
+            "method": "pushState",
+            "url": "/?view=plan&tab=tasks#home-budget"
+          },
+          {
+            "method": "replaceState",
+            "url": "/?view=plan&tab=budget#home-budget"
+          }
+        ]
+      },
+      {
+        "previousTab": "budget",
+        "view": "plan",
+        "renderedTab": "budget",
+        "urlView": "plan",
+        "urlTab": "budget",
+        "hash": "#home-budget",
+        "writes": [
+          {
+            "method": "pushState",
+            "url": "/?view=plan&tab=budget#home-budget"
+          },
+          {
+            "method": "replaceState",
+            "url": "/?view=plan&tab=budget#home-budget"
+          }
+        ]
+      }
+    ],
+    "checks": "Rendered view/tab and URL agree; original hash retained; exactly one pushState per action; all backup business fields unchanged excluding exportedAt.",
+    "harnessPath": "/tmp/travel-cloud-evidence/budget-navigation-check.mjs",
+    "harnessSHA256": "5a60da3093804cb74c2e210f807ba07aaa9e15c121d6ad5db6291325fc9aeca5"
+  },
+  "baseline": {
+    "typecheck": "passed, exit 0",
+    "lint": "passed, exit 0",
+    "build": "passed, exit 0",
+    "audit": "passed, exit 0",
+    "test:linkage": "passed, exit 0",
+    "test:architecture": "passed, exit 0",
+    "test:mobile": "passed, exit 0",
+    "test:desktop-workspace": "passed, exit 0",
+    "test:trip-presentation": "passed, exit 0",
+    "test:travel-intelligence": "passed, exit 0",
+    "test:readiness": "passed, exit 0",
+    "test:backup": "passed, exit 0",
+    "test:presentation": "passed, exit 0",
+    "test:gallery-offline": "passed, exit 0",
+    "gallery-copy": "passed, exit 0"
+  },
+  "afterFix": {
+    "typecheck": "passed, exit 0",
+    "lint": "passed, exit 0",
+    "build": "passed, exit 0",
+    "audit": "passed, exit 0",
+    "test:linkage": "passed, exit 0",
+    "test:architecture": "passed, exit 0",
+    "test:mobile": "passed, exit 0",
+    "test:desktop-workspace": "passed, exit 0",
+    "test:trip-presentation": "passed, exit 0",
+    "test:travel-intelligence": "passed, exit 0",
+    "test:readiness": "passed, exit 0",
+    "test:backup": "passed, exit 0",
+    "test:presentation": "passed, exit 0",
+    "test:gallery-offline": "passed, exit 0",
+    "gallery-copy": "passed, exit 0"
+  },
+  "projectAudit": {
+    "failures": 0,
+    "warnings": 1,
+    "unchangedBudgetWarning": "27630 projected versus 26000 hard cap; 1630 excess. No budget edits."
+  },
+  "testLogs": "/tmp/travel-cloud-evidence/ (baseline), /tmp/travel-cloud-evidence/post/ (after fix)",
+  "reviewChannel": {
+    "url": "https://chatgpt.com/g/g-p-6a805767bdd88191abdb60cf292d08e9-travel/c/6abdd47e-7d30-83e8-a535-f4e19fa74f85",
+    "capabilityCheck": "No browser/computer tool in active tool catalog. Executor skills list empty; no official Chrome runtime/skill available in this cloud environment.",
+    "readOnlyProbe": "web open redirected to https://chatgpt.com/auth/login/?next=/g/g-p-6a805767bdd88191abdb60cf292d08e9-travel/project; only Log in or sign up content, no conversation access.",
+    "newReviewSent": false,
+    "newHighAcceptance": false,
+    "internalReviewUsedAsSubstitute": false
+  },
+  "newScreenshots": [],
+  "screenshotStatus": "BLOCKED: no permitted official Jacob Chrome control. No independent Playwright, raw CDP, browser profile/storage injection, OS-input fallback, or reused historical image passed off as new evidence.",
+  "remaining": [
+    "Parent must perform real Home budget click from a non-budget Plan tab, confirm URL, refresh/reopen and verify Budget retained; capture fresh foreground screenshots and submit this round to the exact authorized conversation in High mode.",
+    "No whole-system or visual acceptance. Existing cleanup, Restore permissions, complete network-offline and runtime performance remain unverified."
+  ],
+  "safety": "No data/lib/package/lockfile diff; no real bookings, trips, browser state, private exports, Meta services or production deployment touched. Generated audit/build changes remain unstaged. Upload only independent work branch; no QA source branch merge or main change."
+}
