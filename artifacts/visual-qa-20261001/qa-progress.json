@@ -203,5 +203,22 @@
     "remaining": ["Native confirm cleanup and permanent-delete actual High review", "Restore file-URL permission and actual E2E", "Cross-page photo/typography finishing only where substantively needed", "Map marker overlap/pointer-selection precision needs further actual checking; do not call the attempted Enter locator activation real keyboard acceptance", "Full external-network offline and measured performance", "Dependency advisory triage is separate from UI scope", "Final overall High acceptance and user visual approval"],
     "safety": "GitHub2340a6b then ef259fc matched before source changes; only exact own8 source/test files and14 actual screenshots backed up. No data-directory diff, private export upload, production deploy or destructive cleanup. Generated/user dirty files retained. viewport reset before native cleanup. No overall completion claim."
   },
+  "tripCopyContrastIteration20261003": {
+    "commits": ["83f2be0", "6972bac"],
+    "fixes": "Overview uses existing plan notes instead of photographic attribution; exact entity-id plus original-note mappings translate only three default D15 notes, never changed user notes. Darker primary/secondary Trip buttons and lighter Mobile Today typography; no travel-data changes.",
+    "review": "High actually inspected six original screenshots and source, requested stronger secondary contrast and exact default translations, then read final source and two final screenshots and explicitly accepted this scope with no Must-fix. Not whole-system acceptance.",
+    "verification": "typecheck/lint/build/project audit and all existing regression scripts plus gallery-copy passed. Real D2/1024 two equal388px cards; D8/1440 and D15/1280 no overflow or initialized Overview map. D15 lower scroll1109.6/max1110. Gallery page2/3 and Escape tested; no exact focus-restoration claim for that interaction.",
+    "evidence": ["trip-copy-day15-1280-final.jpg", "trip-copy-day15-1280-lower-final.jpg", "trip-copy-day8-1440.jpg", "trip-copy-day2-1024.jpg", "today-copy-day15-390.jpg"]
+  },
+  "homeEntryRelease20261003": {
+    "commits": ["636793a", "cb9ed65"],
+    "fix": "Reuse existing confirmed hotel checkIn dates and days.date to open each Home city at its arrival day. Optional navigate tripDay updates View/selectedDay/URL together; normal Continue Trip retains selected day. No layout, city/hotel/date/flight/budget/Current Plan edits.",
+    "actual": "Before fix Rome card fromD15 led toD15. After fix all six real Chrome clicks matched URL and DayHeader D2/5/7/9/11/13. Continue Trip fromD7 remainedD7. Desktop Map instance1028468 survived Overview/Map; six handlers1→0 under details with pointer:none→1 after close, same instance. Role=dialog selector returned0 for this drawer; do not assert dialog z-index from it.",
+    "evidenceCorrection": "home-city-entry-final.jpg is stale D13 during Home transition, NOT valid Home screenshot. Valid stable screenshots home-city-entry-home-actual.jpg and home-city-entry-venice-actual.jpg were reviewed.",
+    "review": "Authorized ChatGPT continuation visible High. Actually read three source files and current hotel/day mappings and compared two actual images; explicitly accepted this Home city-entry scope with no Must-fix. Prior Trip copy/contrast acceptance retained.",
+    "verification": "typecheck/lint/build, project audit and all existing regressions plus gallery-copy passed. Architecture166modules/74entrylines/0cycles; unchanged budget warning27630/cap26000. Vercel production prebuild succeeded. Generated audit/build files remain unstaged; data-directory diff empty.",
+    "deployment": "User explicitly requested optimize then deploy. Vercel prebuilt production dpl_GtPDHjQ8P8zSC1iJDMgutGqSjFqK READY, aliased travel.jacob.xin. Domain HTTP200 and four initial CSS assets HTTP200. Real production390x844 Home Rome click openedD2 Today, no overflow/Leaflet; production desktop1280x800 D15 checked and screenshot saved. No private exports or user-state mutations.",
+    "remaining": "Restore E2E permission, isolated native cleanup, complete network offline, dependency advisory triage and overall acceptance remain pending; this release does not declare all functions complete."
+  },
   "complete": false
 }
