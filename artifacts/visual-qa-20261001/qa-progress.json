@@ -291,5 +291,16 @@
     "safety": "GitHub594048e verified before work. Own two screenshots and progress only committed; generated/user files preserved, viewport reset. No deployment/private uploads, user-state mutation or repeated blocked Restore/native-confirm actions.",
     "remaining": "Overall actual acceptance, isolated native-confirm cleanup, Restore file permission, full external-network offline and measured performance remain pending."
   },
+  "mobileBookingStatusDisplay20261003": {
+    "commits": ["2455480", "0cce659"],
+    "issue": "Actual375 Mobile Plan bookings displayed Pending for existing To Book/Research entries: hardcoded six-option select excluded canonical values. Source usePlanController still held correct real status; not a business-state corruption. Earlier booking list top/bottom visual approval had not caught selector-value mismatch.",
+    "fix": "Only MobilePlan option list now deduplicates canonical guideData.bookings.statuses plus existing Pending and current booking.status. Keeps legacy current values visible; onChange/controller/canonicalBookings/data untouched. One static mobile source guard added, not a behavior test.",
+    "actual": "Read-only375 actual railway selectors now To Book; museum entries Accademia/Doge/Sainte-Chapelle/Garnier To Book, Arc and Pantheon Research. International flight Ticketed and hotels Paid unchanged. Same28 selects and no horizontal overflow. Fresh390 reload retained representative values and unique options; no status selection/write performed.",
+    "evidence": ["mobile-booking-status-mismatch-before-375.jpg", "mobile-booking-status-fixed-375.jpg", "mobile-museum-status-fixed-375.jpg"],
+    "evidenceCorrection": "Earlier uncommitted mobile-booking-status-before-375.jpg frames hotel top, not mismatch; not used as defect evidence. Actual railway framing used click then Escape without choosing a status.",
+    "review": "Authorized High actually read Before/source/canonical status list, agreed minimal option repair. Then actually viewed both After images and repaired source; explicitly accepted this narrow visible-status mismatch fix without new Must-fix. Does not prove status writes/persistence, Restore or entire system.",
+    "verification": "typecheck/lint/build/project audit and all existing mobile/linkage/architecture/desktop-workspace/trip-presentation/travel-intelligence/readiness/backup/presentation/gallery-offline regressions plus gallery-copy passed. Audit0failures/1unchanged27630vs26000budgetwarning. Data/lib diff empty; existing generated changes remain unstaged.",
+    "safety": "GitHub74ba899 and2455480 checked before repair; only own source/test/valid screenshots/progress staged. No actual travel/booking data mutation, private upload or production deployment. Viewport reset. Restore permission/native cleanup/full external-network offline/performance and overall actual acceptance remain pending."
+  },
   "complete": false
 }
