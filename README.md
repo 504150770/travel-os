@@ -9,7 +9,7 @@
 - 唯一工作目录：`C:/Users/50415/OneDrive/文档/ChatGPT/Travel/travel-os-ui-redesign`；不要操作父目录下的其他项目。
 - GitHub：`504150770/travel-os`；接续分支：`codex/visual-qa-20260929`。
 - 当前重点是已有功能的真实交互与视觉验收；整体 QA **尚未完成**。构建/结构审计通过不等于全部功能或用户视觉验收通过。
-- 最新手机离线页修复已备份并获 ChatGPT High 局部认可；尚未部署。线上保留此前用户授权的城市入口版本，不能把分支 HEAD 当线上版本。
+- 用户于 2026-10-03 明确授权部署：QA 源版本 `395cb61` 已发布至 `travel.jacob.xin`，Vercel `dpl_HzdcSGEyFEbvo2ErzexMaL5uyCBA` 为 READY。后续发布记录提交与线上源版本区分；完整 QA 仍未完成。
 - 保持旅行事实、Current Plan、酒店、国际航班、住宿日期、预算、签证及推荐算法不变。发布需新一轮明确授权。
 
 ## 本地运行

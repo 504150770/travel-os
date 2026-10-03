@@ -1,0 +1,41 @@
+{
+  "authorization": "User explicitly requested 部署 on2026-10-03",
+  "sourceCommit": "395cb61c36be1ddb77b8693981d8b8dd3b95fd81",
+  "branch": "codex/visual-qa-20260929",
+  "provider": "Vercel",
+  "projectId": "prj_To0mtZFtjdiypjocirK6SNipFaBi",
+  "deploymentId": "dpl_HzdcSGEyFEbvo2ErzexMaL5uyCBA",
+  "deploymentUrl": "https://europe18day-guide-c70qfwtsi-arrow13.vercel.app",
+  "domain": "https://travel.jacob.xin",
+  "createdAtShanghai": "2026-10-03T23:27:27+08:00",
+  "status": "READY",
+  "rollbackDeploymentId": "dpl_GtPDHjQ8P8zSC1iJDMgutGqSjFqK",
+  "commands": ["pnpm check", "nine remaining existing regressions and gallery-copy", "vercel build --prod --yes", "vercel deploy --prebuilt --prod --yes", "vercel inspect travel.jacob.xin"],
+  "checks": {
+    "typecheck": "passed",
+    "lint": "passed",
+    "build": "passed",
+    "projectAudit": "passed:0failures/1unchanged budget warning",
+    "allExistingRegressions": "passed:linkage/architecture/mobile/desktop-workspace/trip-presentation/travel-intelligence/readiness/backup/presentation/gallery-offline",
+    "galleryCopy": "passed",
+    "privacy": "passed",
+    "vercelProductionBuild": "passed",
+    "aliasInspect": "matched deploymentId",
+    "rootHttp": 200,
+    "initialCssHttp": [200, 200, 200, 200],
+    "avatarHttp": 200,
+    "ordinaryChromeProductionNavigation": "passed:Home/Rome-to-Day2/picker-to-Day18"
+  },
+  "sourceOrDependencyChange": false,
+  "originalGeneratedDirtyFilesRestored": 10,
+  "originalDirtyFileHashesMatch": true,
+  "privateFilesUploaded": false,
+  "screenshots": [
+    {"file": "home-live-full-1520x1297.jpg", "jpegPixels": [1520,1297], "cssViewport": [1536,770], "cssContentWidth": 1521, "cssDocumentHeight": 1298, "scope": "Full Home, complete images and local visual inspection"},
+    {"file": "day2-live-360x779.jpg", "jpegPixels": [360,779], "cssViewport": [375,812], "scope": "Actual Day2 visible top, native screenshot output scale recorded"},
+    {"file": "day18-live-top-360x779.jpg", "jpegPixels": [360,779], "cssViewport": [375,812], "scope": "Actual Day18 visible top; reminder absence separately DOM-verified"}
+  ],
+  "evidenceCorrection": "No375pixel image claim. Local day18 scroll-transition screenshot is not End evidence; initial desktop viewport shot is not full-page evidence. Neither is uploaded/committed. No new High review/whole-system acceptance claim.",
+  "overallQaComplete": false,
+  "remaining": ["Isolated permanent-delete native result and post-export comparison", "Restore file permission and actual E2E", "Full external-network offline", "Measured performance", "Separate dependency remediation", "Overall High acceptance and final user visual approval"]
+}

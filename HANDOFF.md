@@ -17,10 +17,11 @@
 | --- | --- |
 | 交接前 GitHub QA 备份 | `10592cfe7e69089dee808198fa0dd7faafb37150`，远端已核对；文档后续提交以 Git log 为准 |
 | 最近功能/视觉修复 | `1dcb014` 手机离线操作层级；`626b75b` More 当前 tab 可见；`0cce659` Booking 状态选项；地图修复等详见 QA 日志 |
-| 已记录的生产发布 | 用户此前授权的 Home 城市入口版本，Vercel `dpl_GtPDHjQ8P8zSC1iJDMgutGqSjFqK`，域名 `travel.jacob.xin` |
-| 当前 QA 分支状态 | 后续多轮修复仅 GitHub 备份，未自动上线；新线程不要自动部署 |
+| 最新生产发布 | 用户于 2026-10-03 明确要求“部署”；QA 源版本 `395cb61c36be1ddb77b8693981d8b8dd3b95fd81`，Vercel `dpl_HzdcSGEyFEbvo2ErzexMaL5uyCBA`，已 READY 并指向 `travel.jacob.xin` |
+| 前一生产发布 / 回退基线 | Home 城市入口版本 `dpl_GtPDHjQ8P8zSC1iJDMgutGqSjFqK`，此次发布前已实际 inspect 确认 READY |
+| 当前 QA 分支状态 | 本轮已授权发布现有修复，随后只有发布记录与截图提交；记录 HEAD 与线上源版本分别核对。后续不要自动部署 |
 
-不要说“从未部署”，也不要说“最新分支已经全部上线”。本次交接没有重新验证生产发布状态；以上生产信息来自已有实际发布记录。`.travel-build-state.json` 的 `handoff_allowed/source_commit` 是生成的结构审计，不是最新 HEAD、真实用户状态或全系统验收结论。`qa-progress.complete` 仍为 `false`。
+不要说“从未部署”，也不要把发布后的记录提交当作线上源版本。最新发布实际通过完整源码检查、项目审计与全部现有回归；正式域名和四个初始 CSS/头像 HTTP200，真实 Chrome Home、手机 Day2/Day18 有只读冒烟证据。发布不是全系统验收，原生确认清理、Restore、完整外部断网、实测性能等仍未完成，详见 QA 的 `productionRelease20261003Latest` 与 `artifacts/production-release-20261003/release.json`。`.travel-build-state.json` 的 `handoff_allowed/source_commit` 是生成的结构审计，不是最新 HEAD、真实用户状态或全系统验收结论。`qa-progress.complete` 仍为 `false`。
 
 ## 3. 已验收，不重复重设计
 
