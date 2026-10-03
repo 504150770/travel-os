@@ -302,5 +302,15 @@
     "verification": "typecheck/lint/build/project audit and all existing mobile/linkage/architecture/desktop-workspace/trip-presentation/travel-intelligence/readiness/backup/presentation/gallery-offline regressions plus gallery-copy passed. Audit0failures/1unchanged27630vs26000budgetwarning. Data/lib diff empty; existing generated changes remain unstaged.",
     "safety": "GitHub74ba899 and2455480 checked before repair; only own source/test/valid screenshots/progress staged. No actual travel/booking data mutation, private upload or production deployment. Viewport reset. Restore permission/native cleanup/full external-network offline/performance and overall actual acceptance remain pending."
   },
+  "mobileMapCrossCityCoverage20261003": {
+    "commits": ["7458dd1", "6c91f74"],
+    "actual": "390x844 D8 Map two pointer clicks on dense2 selected palace; day picker disabled six handlers. Actual D15 choice changed header/markers/food/gym, removed old palace preview, restored all six handlers. Single container initialized-at4541 stayed unchanged across cross-city day change. D15 dense3 first click separated then second selected Arc with current15:30/105min and correct navigation.",
+    "evidence": ["mobile-map-day-switch-390-actual.jpg", "mobile-map-day15-preview-390-actual.jpg"],
+    "evidenceCorrection": "mobile-map-day-switch-selected-390-actual.jpg committed earlier captured zoom before preview paint, so it does NOT prove selected-preview visibility. Final preview image is from a separate fresh D15 tab, after DOM rect y612.8/h150 and completed render; does not prove original instance reuse. Original actual click/snapshot/attributes record establishes transition, not screenshot alone.",
+    "review": "Authorized High actually viewed both valid final images and explicitly accepted narrow D8-to-D15 stale-preview clearing and new Arc preview visibility above dock, no Must-fix. Did not infer network requests or full Map/global acceptance from lifecycle evidence.",
+    "verification": "No source change. Reviewed MobileTripWorkspace current-point resolution and dayPicker interaction guard. mobile-shell/travel-intelligence/desktop-workspace tests passed; data/lib diff empty. No new full-build claim.",
+    "safety": "GitHub6f3ac8e matched at start, exact own screenshots/progress staged. No actual business-state mutation, private uploads or deploy; viewport reset. Unrelated/generated files protected; unchanged Restore/native-confirm limitations not retried.",
+    "remaining": "Final overall actual acceptance, isolated native-confirm cleanup, Restore file permission, comprehensive external-network offline and measured performance remain pending."
+  },
   "complete": false
 }
