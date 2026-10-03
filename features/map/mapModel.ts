@@ -2,6 +2,13 @@ import type { DayRoute } from '@/lib/types';
 
 export type MapRenderStage = 'initialized' | 'markers' | 'tiles' | 'route';
 
+// Web-Mercator projected distances double with each zoom step. Keep the
+// existing marker hit areas and never zoom beyond the tile provider limit.
+export function markerSeparationZoom(current: number, maximum: number, nearestPixels: number) {
+  if (current >= maximum || nearestPixels >= 56 || !Number.isFinite(nearestPixels)) return current;
+  return Math.min(maximum, current + Math.ceil(Math.log2(56 / Math.max(nearestPixels, 0.001))));
+}
+
 // Route/marker updates must not make an already usable tile layer look loading.
 // A newly initialized instance (including Retry) starts its own readiness cycle.
 export function advanceMapStage(current: MapRenderStage | 'shell', next: MapRenderStage): MapRenderStage {

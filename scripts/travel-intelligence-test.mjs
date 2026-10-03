@@ -1,6 +1,14 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
+import { markerSeparationZoom } from '../features/map/mapModel.ts';
+
+assert.equal(markerSeparationZoom(12, 19, 2), 17);
+assert.equal(markerSeparationZoom(16, 19, 10), 19);
+assert.equal(markerSeparationZoom(18, 19, 80), 18);
+assert.equal(markerSeparationZoom(19, 19, 0), 19);
+assert.equal(markerSeparationZoom(12, 19, Infinity), 12);
+assert.equal(markerSeparationZoom(12, 19, 0), 19);
 import {
   createMemoryRouteGeometryCache,
   geometryCacheKey,

@@ -5,7 +5,7 @@ import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import '@/components/map/map.css';
 import type { DayRoute } from '@/lib/types';
-import { type MapPoint, type MapRenderStage } from '@/features/map/mapModel';
+import { markerSeparationZoom, type MapPoint, type MapRenderStage } from '@/features/map/mapModel';
 import { MOBILE_TILE_PROVIDER } from '@/components/mobile/map/mapProvider';
 import { useRouteGeometry, type RouteGeometryState } from '@/features/map/routing/useRouteGeometry';
 import type { CurrentLocation } from '@/features/map/location/locationModel';
@@ -175,7 +175,20 @@ export default function MapCanvas({
         icon: markerIcon(point, selectedPointId === point.id),
         zIndexOffset: selectedPointId === point.id ? 1000 : point.kind === 'candidate' ? 100 : 400,
         title: point.name,
-      }).addTo(markerLayer).on('click', () => selectRef.current(point));
+      }).addTo(markerLayer).on('click', () => {
+        const zoom = map.getZoom();
+        const origin = map.project([point.lat, point.lng], zoom);
+        const nearest = Math.min(...pointsRef.current
+          .filter((other) => other.id !== point.id)
+          .map((other) => origin.distanceTo(map.project([other.lat, other.lng], zoom))));
+        const separatedZoom = markerSeparationZoom(zoom, MOBILE_TILE_PROVIDER.maxZoom, nearest);
+        if (separatedZoom > zoom) {
+          // A stacked hit identifies an area, not a reliably chosen entity.
+          map.setView([point.lat, point.lng], separatedZoom, { animate: false });
+          return;
+        }
+        selectRef.current(point);
+      });
       markerRefs.current.set(point.id, marker);
     });
     if (points.length && nodeRef.current) {
