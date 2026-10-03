@@ -281,5 +281,15 @@
     "safety": "GitHub95128e7 verified at start. Only own valid screenshot and progress staged; generated/user files preserved. Viewport reset, no deploy/private upload/unchanged native-dialog or Restore retry. Ordinary empty-category-without-query has no natural empty category in current six-city dataset, so not manufactured by data injection.",
     "remaining": "Actual overall acceptance, Restore permission, isolated native-confirm cleanup, full external-network offline and performance remain incomplete."
   },
+  "museumSingleGalleryCoverage20261003": {
+    "commit": "645efcd",
+    "actual": "Mobile390x844 Day5 existing route button opened Accademia details; current timeline retains45–50min/ToBook. Existing Gallery opened sole real image with1/1 and one photo-position button, no artificial Next/Previous. First Escape closed Gallery only, left one detail dialog and focused its Gallery trigger; second Escape closed detail. No user-state writes.",
+    "evidence": ["accademia-detail-mobile-390-actual.jpg", "accademia-single-gallery-390-actual.jpg"],
+    "layout": "Actual detail clientHeight/scrollHeight741, Gallery844/844; viewport390 and no horizontal overflow, no Leaflet container. Both foreground screenshots visually inspected before review. Unknown ticket/address/opening data not invented; Day5已加入 is itinerary membership, not Booking confirmation.",
+    "review": "Authorized High actually viewed both new images and explicitly accepted D5 museum-detail and single-image Gallery visible boundary with no Must-fix. Existing1 Photos/PLACE was not judged a Must-fix. No claim of ticket correctness, all Gallery boundaries or global acceptance.",
+    "verification": "No source change needed. Reviewed existing MobileEntitySheet/media-gallery count>1 navigation and native Escape ownership. gallery-offline and gallery-copy tests passed; data/lib diff empty. Full source regression results unchanged, not falsely claimed rerun.",
+    "safety": "GitHub594048e verified before work. Own two screenshots and progress only committed; generated/user files preserved, viewport reset. No deployment/private uploads, user-state mutation or repeated blocked Restore/native-confirm actions.",
+    "remaining": "Overall actual acceptance, isolated native-confirm cleanup, Restore file permission, full external-network offline and measured performance remain pending."
+  },
   "complete": false
 }
