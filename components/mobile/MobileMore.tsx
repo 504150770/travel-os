@@ -51,6 +51,19 @@ export function MobileMore({ controller }: { controller: AppController }) {
   const { importError, importFile } = useBackupImport(controller.importBackup);
   const [panel, setPanel] = useState<MorePanel>(() => mobilePanelForTab[controller.moreTab]);
   const [stay, setStay] = useState<HotelBooking | null>(null);
+  const tabRow = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const row = tabRow.current;
+    const active = row?.querySelector<HTMLButtonElement>('button.active');
+    if (!row || !active) return;
+    const rowBounds = row.getBoundingClientRect();
+    const activeBounds = active.getBoundingClientRect();
+    if (activeBounds.left < rowBounds.left) {
+      row.scrollLeft += activeBounds.left - rowBounds.left - 12;
+    } else if (activeBounds.right > rowBounds.right) {
+      row.scrollLeft += activeBounds.right - rowBounds.right + 12;
+    }
+  }, [panel]);
   useEffect(() => {
     const next = mobilePanelForTab[controller.moreTab];
     if (!next) return;
@@ -77,7 +90,7 @@ export function MobileMore({ controller }: { controller: AppController }) {
         <h1>旅途所需，随手可得。</h1>
         <p>查看住宿、随身资料与本地备份。</p>
       </header>
-      <div className="mobile-filter-row">
+      <div ref={tabRow} className="mobile-filter-row">
         {panels.map(([id, label]) => (
           <button
             key={id}
