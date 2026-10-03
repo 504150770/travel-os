@@ -1,0 +1,1247 @@
+{
+  "sourceSHA": "395cb61c36be1ddb77b8693981d8b8dd3b95fd81",
+  "targetSHA": "a44eb943a4f37f3d1bd14b21e20563a86ce90267",
+  "cases": [
+    {
+      "width": 1440,
+      "height": 1000,
+      "previousTab": "bookings",
+      "base": "http://localhost:3104",
+      "expectedFixed": false,
+      "stages": [
+        {
+          "action": "select non-budget tab through real UI",
+          "url": "http://localhost:3104/?view=plan&tab=bookings#budget-nav-check"
+        },
+        {
+          "action": "visible Home nav button",
+          "url": "http://localhost:3104/?view=home#budget-nav-check"
+        }
+      ],
+      "returnHome": "visible Home nav button",
+      "budgetURL": "http://localhost:3104/?view=plan&tab=bookings#budget-nav-check",
+      "historyDelta": 1,
+      "reloadedTab": "订单",
+      "status": "baseline defect reproduced"
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "previousTab": "readiness",
+      "base": "http://localhost:3103",
+      "expectedFixed": true,
+      "stages": [
+        {
+          "action": "select non-budget tab through real UI",
+          "url": "http://localhost:3103/?view=plan&tab=readiness#budget-nav-check"
+        },
+        {
+          "action": "visible Home nav button",
+          "url": "http://localhost:3103/?view=home#budget-nav-check"
+        },
+        {
+          "action": "real browser reload retains Budget",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "Back returns directly to Home",
+          "url": "http://localhost:3103/?view=home#budget-nav-check"
+        },
+        {
+          "action": "Forward returns directly to Budget",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "new page reopened URL retains Budget",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "repeat budget click 1",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "repeat budget click 2",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "repeat budget click 3",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        }
+      ],
+      "returnHome": "visible Home nav button",
+      "budgetURL": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check",
+      "historyDelta": 1,
+      "status": "passed"
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "previousTab": "bookings",
+      "base": "http://localhost:3103",
+      "expectedFixed": true,
+      "stages": [
+        {
+          "action": "select non-budget tab through real UI",
+          "url": "http://localhost:3103/?view=plan&tab=bookings#budget-nav-check"
+        },
+        {
+          "action": "visible Home nav button",
+          "url": "http://localhost:3103/?view=home#budget-nav-check"
+        },
+        {
+          "action": "real browser reload retains Budget",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "Back returns directly to Home",
+          "url": "http://localhost:3103/?view=home#budget-nav-check"
+        },
+        {
+          "action": "Forward returns directly to Budget",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "new page reopened URL retains Budget",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "repeat budget click 1",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "repeat budget click 2",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "repeat budget click 3",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        }
+      ],
+      "returnHome": "visible Home nav button",
+      "budgetURL": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check",
+      "historyDelta": 1,
+      "status": "passed"
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "previousTab": "transport",
+      "base": "http://localhost:3103",
+      "expectedFixed": true,
+      "stages": [
+        {
+          "action": "select non-budget tab through real UI",
+          "url": "http://localhost:3103/?view=plan&tab=transport#budget-nav-check"
+        },
+        {
+          "action": "visible Home nav button",
+          "url": "http://localhost:3103/?view=home#budget-nav-check"
+        },
+        {
+          "action": "real browser reload retains Budget",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "Back returns directly to Home",
+          "url": "http://localhost:3103/?view=home#budget-nav-check"
+        },
+        {
+          "action": "Forward returns directly to Budget",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "new page reopened URL retains Budget",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "repeat budget click 1",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "repeat budget click 2",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "repeat budget click 3",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        }
+      ],
+      "returnHome": "visible Home nav button",
+      "budgetURL": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check",
+      "historyDelta": 1,
+      "status": "passed"
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "previousTab": "checkin",
+      "base": "http://localhost:3103",
+      "expectedFixed": true,
+      "stages": [
+        {
+          "action": "select non-budget tab through real UI",
+          "url": "http://localhost:3103/?view=plan&tab=checkin#budget-nav-check"
+        },
+        {
+          "action": "visible Home nav button",
+          "url": "http://localhost:3103/?view=home#budget-nav-check"
+        },
+        {
+          "action": "real browser reload retains Budget",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "Back returns directly to Home",
+          "url": "http://localhost:3103/?view=home#budget-nav-check"
+        },
+        {
+          "action": "Forward returns directly to Budget",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "new page reopened URL retains Budget",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "repeat budget click 1",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "repeat budget click 2",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "repeat budget click 3",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        }
+      ],
+      "returnHome": "visible Home nav button",
+      "budgetURL": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check",
+      "historyDelta": 1,
+      "status": "passed"
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "previousTab": "deadlines",
+      "base": "http://localhost:3103",
+      "expectedFixed": true,
+      "stages": [
+        {
+          "action": "select non-budget tab through real UI",
+          "url": "http://localhost:3103/?view=plan&tab=deadlines#budget-nav-check"
+        },
+        {
+          "action": "visible Home nav button",
+          "url": "http://localhost:3103/?view=home#budget-nav-check"
+        },
+        {
+          "action": "real browser reload retains Budget",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "Back returns directly to Home",
+          "url": "http://localhost:3103/?view=home#budget-nav-check"
+        },
+        {
+          "action": "Forward returns directly to Budget",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "new page reopened URL retains Budget",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "repeat budget click 1",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "repeat budget click 2",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "repeat budget click 3",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        }
+      ],
+      "returnHome": "visible Home nav button",
+      "budgetURL": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check",
+      "historyDelta": 1,
+      "status": "passed"
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "previousTab": "tasks",
+      "base": "http://localhost:3103",
+      "expectedFixed": true,
+      "stages": [
+        {
+          "action": "select non-budget tab through real UI",
+          "url": "http://localhost:3103/?view=plan&tab=tasks#budget-nav-check"
+        },
+        {
+          "action": "visible Home nav button",
+          "url": "http://localhost:3103/?view=home#budget-nav-check"
+        },
+        {
+          "action": "real browser reload retains Budget",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "Back returns directly to Home",
+          "url": "http://localhost:3103/?view=home#budget-nav-check"
+        },
+        {
+          "action": "Forward returns directly to Budget",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "new page reopened URL retains Budget",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "repeat budget click 1",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "repeat budget click 2",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "repeat budget click 3",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        }
+      ],
+      "returnHome": "visible Home nav button",
+      "budgetURL": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check",
+      "historyDelta": 1,
+      "status": "passed"
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "previousTab": "readiness",
+      "base": "http://localhost:3103",
+      "expectedFixed": true,
+      "stages": [
+        {
+          "action": "select non-budget tab through real UI",
+          "url": "http://localhost:3103/?view=plan&tab=readiness&day=1#budget-nav-check"
+        },
+        {
+          "action": "browser history.go(-2), mobile Plan has no Home nav button",
+          "url": "http://localhost:3103/?view=home&tab=readiness#budget-nav-check"
+        },
+        {
+          "action": "real browser reload retains Budget",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "Back returns directly to Home",
+          "url": "http://localhost:3103/?view=home&tab=readiness#budget-nav-check"
+        },
+        {
+          "action": "Forward returns directly to Budget",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "new page reopened URL retains Budget",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "repeat budget click 1",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "repeat budget click 2",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "repeat budget click 3",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        }
+      ],
+      "returnHome": "browser history.go(-2), mobile Plan has no Home nav button",
+      "budgetURL": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check",
+      "historyDelta": -1,
+      "status": "passed"
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "previousTab": "bookings",
+      "base": "http://localhost:3103",
+      "expectedFixed": true,
+      "stages": [
+        {
+          "action": "select non-budget tab through real UI",
+          "url": "http://localhost:3103/?view=plan&tab=bookings&day=1#budget-nav-check"
+        },
+        {
+          "action": "browser history.go(-2), mobile Plan has no Home nav button",
+          "url": "http://localhost:3103/?view=home&tab=bookings#budget-nav-check"
+        },
+        {
+          "action": "real browser reload retains Budget",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "Back returns directly to Home",
+          "url": "http://localhost:3103/?view=home&tab=bookings#budget-nav-check"
+        },
+        {
+          "action": "Forward returns directly to Budget",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "new page reopened URL retains Budget",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "repeat budget click 1",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "repeat budget click 2",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "repeat budget click 3",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        }
+      ],
+      "returnHome": "browser history.go(-2), mobile Plan has no Home nav button",
+      "budgetURL": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check",
+      "historyDelta": -1,
+      "status": "passed"
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "previousTab": "transport",
+      "base": "http://localhost:3103",
+      "expectedFixed": true,
+      "stages": [
+        {
+          "action": "select non-budget tab through real UI",
+          "url": "http://localhost:3103/?view=plan&tab=transport&day=1#budget-nav-check"
+        },
+        {
+          "action": "browser history.go(-2), mobile Plan has no Home nav button",
+          "url": "http://localhost:3103/?view=home&tab=transport#budget-nav-check"
+        },
+        {
+          "action": "real browser reload retains Budget",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "Back returns directly to Home",
+          "url": "http://localhost:3103/?view=home&tab=transport#budget-nav-check"
+        },
+        {
+          "action": "Forward returns directly to Budget",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "new page reopened URL retains Budget",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "repeat budget click 1",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "repeat budget click 2",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "repeat budget click 3",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        }
+      ],
+      "returnHome": "browser history.go(-2), mobile Plan has no Home nav button",
+      "budgetURL": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check",
+      "historyDelta": -1,
+      "status": "passed"
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "previousTab": "checkin",
+      "base": "http://localhost:3103",
+      "expectedFixed": true,
+      "stages": [
+        {
+          "action": "select non-budget tab through real UI",
+          "url": "http://localhost:3103/?view=plan&tab=checkin&day=1#budget-nav-check"
+        },
+        {
+          "action": "browser history.go(-2), mobile Plan has no Home nav button",
+          "url": "http://localhost:3103/?view=home&tab=checkin#budget-nav-check"
+        },
+        {
+          "action": "real browser reload retains Budget",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "Back returns directly to Home",
+          "url": "http://localhost:3103/?view=home&tab=checkin#budget-nav-check"
+        },
+        {
+          "action": "Forward returns directly to Budget",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "new page reopened URL retains Budget",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "repeat budget click 1",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "repeat budget click 2",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "repeat budget click 3",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        }
+      ],
+      "returnHome": "browser history.go(-2), mobile Plan has no Home nav button",
+      "budgetURL": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check",
+      "historyDelta": -1,
+      "status": "passed"
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "previousTab": "deadlines",
+      "base": "http://localhost:3103",
+      "expectedFixed": true,
+      "stages": [
+        {
+          "action": "select non-budget tab through real UI",
+          "url": "http://localhost:3103/?view=plan&tab=deadlines&day=1#budget-nav-check"
+        },
+        {
+          "action": "browser history.go(-2), mobile Plan has no Home nav button",
+          "url": "http://localhost:3103/?view=home&tab=deadlines#budget-nav-check"
+        },
+        {
+          "action": "real browser reload retains Budget",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "Back returns directly to Home",
+          "url": "http://localhost:3103/?view=home&tab=deadlines#budget-nav-check"
+        },
+        {
+          "action": "Forward returns directly to Budget",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "new page reopened URL retains Budget",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "repeat budget click 1",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "repeat budget click 2",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "repeat budget click 3",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        }
+      ],
+      "returnHome": "browser history.go(-2), mobile Plan has no Home nav button",
+      "budgetURL": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check",
+      "historyDelta": -1,
+      "status": "passed"
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "previousTab": "tasks",
+      "base": "http://localhost:3103",
+      "expectedFixed": true,
+      "stages": [
+        {
+          "action": "select non-budget tab through real UI",
+          "url": "http://localhost:3103/?view=plan&tab=tasks&day=1#budget-nav-check"
+        },
+        {
+          "action": "browser history.go(-2), mobile Plan has no Home nav button",
+          "url": "http://localhost:3103/?view=home&tab=tasks#budget-nav-check"
+        },
+        {
+          "action": "real browser reload retains Budget",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "Back returns directly to Home",
+          "url": "http://localhost:3103/?view=home&tab=tasks#budget-nav-check"
+        },
+        {
+          "action": "Forward returns directly to Budget",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "new page reopened URL retains Budget",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "repeat budget click 1",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "repeat budget click 2",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "repeat budget click 3",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        }
+      ],
+      "returnHome": "browser history.go(-2), mobile Plan has no Home nav button",
+      "budgetURL": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check",
+      "historyDelta": -1,
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "previousTab": "readiness",
+      "base": "http://localhost:3103",
+      "expectedFixed": true,
+      "stages": [
+        {
+          "action": "select non-budget tab through real UI",
+          "url": "http://localhost:3103/?view=plan&tab=readiness&day=1#budget-nav-check"
+        },
+        {
+          "action": "browser history.go(-2), mobile Plan has no Home nav button",
+          "url": "http://localhost:3103/?view=home&tab=readiness#budget-nav-check"
+        },
+        {
+          "action": "real browser reload retains Budget",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "Back returns directly to Home",
+          "url": "http://localhost:3103/?view=home&tab=readiness#budget-nav-check"
+        },
+        {
+          "action": "Forward returns directly to Budget",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "new page reopened URL retains Budget",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "repeat budget click 1",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "repeat budget click 2",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "repeat budget click 3",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        }
+      ],
+      "returnHome": "browser history.go(-2), mobile Plan has no Home nav button",
+      "budgetURL": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check",
+      "historyDelta": -1,
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "previousTab": "bookings",
+      "base": "http://localhost:3103",
+      "expectedFixed": true,
+      "stages": [
+        {
+          "action": "select non-budget tab through real UI",
+          "url": "http://localhost:3103/?view=plan&tab=bookings&day=1#budget-nav-check"
+        },
+        {
+          "action": "browser history.go(-2), mobile Plan has no Home nav button",
+          "url": "http://localhost:3103/?view=home&tab=bookings#budget-nav-check"
+        },
+        {
+          "action": "real browser reload retains Budget",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "Back returns directly to Home",
+          "url": "http://localhost:3103/?view=home&tab=bookings#budget-nav-check"
+        },
+        {
+          "action": "Forward returns directly to Budget",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "new page reopened URL retains Budget",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "repeat budget click 1",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "repeat budget click 2",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "repeat budget click 3",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        }
+      ],
+      "returnHome": "browser history.go(-2), mobile Plan has no Home nav button",
+      "budgetURL": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check",
+      "historyDelta": -1,
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "previousTab": "transport",
+      "base": "http://localhost:3103",
+      "expectedFixed": true,
+      "stages": [
+        {
+          "action": "select non-budget tab through real UI",
+          "url": "http://localhost:3103/?view=plan&tab=transport&day=1#budget-nav-check"
+        },
+        {
+          "action": "browser history.go(-2), mobile Plan has no Home nav button",
+          "url": "http://localhost:3103/?view=home&tab=transport#budget-nav-check"
+        },
+        {
+          "action": "real browser reload retains Budget",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "Back returns directly to Home",
+          "url": "http://localhost:3103/?view=home&tab=transport#budget-nav-check"
+        },
+        {
+          "action": "Forward returns directly to Budget",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "new page reopened URL retains Budget",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "repeat budget click 1",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "repeat budget click 2",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "repeat budget click 3",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        }
+      ],
+      "returnHome": "browser history.go(-2), mobile Plan has no Home nav button",
+      "budgetURL": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check",
+      "historyDelta": -1,
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "previousTab": "checkin",
+      "base": "http://localhost:3103",
+      "expectedFixed": true,
+      "stages": [
+        {
+          "action": "select non-budget tab through real UI",
+          "url": "http://localhost:3103/?view=plan&tab=checkin&day=1#budget-nav-check"
+        },
+        {
+          "action": "browser history.go(-2), mobile Plan has no Home nav button",
+          "url": "http://localhost:3103/?view=home&tab=checkin#budget-nav-check"
+        },
+        {
+          "action": "real browser reload retains Budget",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "Back returns directly to Home",
+          "url": "http://localhost:3103/?view=home&tab=checkin#budget-nav-check"
+        },
+        {
+          "action": "Forward returns directly to Budget",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "new page reopened URL retains Budget",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "repeat budget click 1",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "repeat budget click 2",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "repeat budget click 3",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        }
+      ],
+      "returnHome": "browser history.go(-2), mobile Plan has no Home nav button",
+      "budgetURL": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check",
+      "historyDelta": -1,
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "previousTab": "deadlines",
+      "base": "http://localhost:3103",
+      "expectedFixed": true,
+      "stages": [
+        {
+          "action": "select non-budget tab through real UI",
+          "url": "http://localhost:3103/?view=plan&tab=deadlines&day=1#budget-nav-check"
+        },
+        {
+          "action": "browser history.go(-2), mobile Plan has no Home nav button",
+          "url": "http://localhost:3103/?view=home&tab=deadlines#budget-nav-check"
+        },
+        {
+          "action": "real browser reload retains Budget",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "Back returns directly to Home",
+          "url": "http://localhost:3103/?view=home&tab=deadlines#budget-nav-check"
+        },
+        {
+          "action": "Forward returns directly to Budget",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "new page reopened URL retains Budget",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "repeat budget click 1",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "repeat budget click 2",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "repeat budget click 3",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        }
+      ],
+      "returnHome": "browser history.go(-2), mobile Plan has no Home nav button",
+      "budgetURL": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check",
+      "historyDelta": -1,
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "previousTab": "tasks",
+      "base": "http://localhost:3103",
+      "expectedFixed": true,
+      "stages": [
+        {
+          "action": "select non-budget tab through real UI",
+          "url": "http://localhost:3103/?view=plan&tab=tasks&day=1#budget-nav-check"
+        },
+        {
+          "action": "browser history.go(-2), mobile Plan has no Home nav button",
+          "url": "http://localhost:3103/?view=home&tab=tasks#budget-nav-check"
+        },
+        {
+          "action": "real browser reload retains Budget",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "Back returns directly to Home",
+          "url": "http://localhost:3103/?view=home&tab=tasks#budget-nav-check"
+        },
+        {
+          "action": "Forward returns directly to Budget",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "new page reopened URL retains Budget",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "repeat budget click 1",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "repeat budget click 2",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        },
+        {
+          "action": "repeat budget click 3",
+          "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check"
+        }
+      ],
+      "returnHome": "browser history.go(-2), mobile Plan has no Home nav button",
+      "budgetURL": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check",
+      "historyDelta": -1,
+      "status": "passed"
+    }
+  ],
+  "screenshots": [
+    {
+      "name": "baseline-budget-url-mismatch-1440.png",
+      "width": 1440,
+      "height": 1000,
+      "documentWidth": 1440,
+      "scrollY": 0,
+      "activeTab": "预算",
+      "url": "http://localhost:3104/?view=plan&tab=bookings#budget-nav-check",
+      "visibleBrokenImages": [],
+      "pixelWidth": 1440,
+      "pixelHeight": 1000,
+      "sha256": "c7b51cc887811c1e98149f4f2c0082f2f0e9bff0fc8773c8e5f706df3c27f9ec",
+      "pixelInspection": "Individually opened with view_image and inspected; no annotation/resizing/compositing."
+    },
+    {
+      "name": "baseline-reload-old-tab-1440.png",
+      "width": 1440,
+      "height": 1000,
+      "documentWidth": 1440,
+      "scrollY": 0,
+      "activeTab": "订单",
+      "url": "http://localhost:3104/?view=plan&tab=bookings#budget-nav-check",
+      "visibleBrokenImages": [],
+      "pixelWidth": 1440,
+      "pixelHeight": 1000,
+      "sha256": "6942eb99610e297b01fcf60979118be3d6c31faacd7f1b9525a13ffb06e53392",
+      "pixelInspection": "Individually opened with view_image and inspected; no annotation/resizing/compositing."
+    },
+    {
+      "name": "home-before-budget-1440.png",
+      "width": 1440,
+      "height": 1000,
+      "documentWidth": 1440,
+      "scrollY": 22,
+      "activeTab": null,
+      "url": "http://localhost:3103/?view=home#budget-nav-check",
+      "visibleBrokenImages": [],
+      "pixelWidth": 1440,
+      "pixelHeight": 1000,
+      "sha256": "bd818c746602b269833e78032b901c81a9717933387021f401dc90c06dccd268",
+      "pixelInspection": "Individually opened with view_image and inspected; no annotation/resizing/compositing."
+    },
+    {
+      "name": "budget-after-click-1440.png",
+      "width": 1440,
+      "height": 1000,
+      "documentWidth": 1440,
+      "scrollY": 0,
+      "activeTab": "预算",
+      "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check",
+      "visibleBrokenImages": [],
+      "pixelWidth": 1440,
+      "pixelHeight": 1000,
+      "sha256": "c7b51cc887811c1e98149f4f2c0082f2f0e9bff0fc8773c8e5f706df3c27f9ec",
+      "pixelInspection": "Individually opened with view_image and inspected; no annotation/resizing/compositing."
+    },
+    {
+      "name": "budget-after-refresh-1440.png",
+      "width": 1440,
+      "height": 1000,
+      "documentWidth": 1440,
+      "scrollY": 0,
+      "activeTab": "预算",
+      "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check",
+      "visibleBrokenImages": [],
+      "pixelWidth": 1440,
+      "pixelHeight": 1000,
+      "sha256": "c7b51cc887811c1e98149f4f2c0082f2f0e9bff0fc8773c8e5f706df3c27f9ec",
+      "pixelInspection": "Individually opened with view_image and inspected; no annotation/resizing/compositing."
+    },
+    {
+      "name": "home-after-back-1440.png",
+      "width": 1440,
+      "height": 1000,
+      "documentWidth": 1440,
+      "scrollY": 0,
+      "activeTab": null,
+      "url": "http://localhost:3103/?view=home#budget-nav-check",
+      "visibleBrokenImages": [],
+      "pixelWidth": 1440,
+      "pixelHeight": 1000,
+      "sha256": "ee345fb3a12a7f21414b5be3d73da927509ff5f3357f5869bb6792573a93bca8",
+      "pixelInspection": "Individually opened with view_image and inspected; no annotation/resizing/compositing."
+    },
+    {
+      "name": "budget-reopened-1440.png",
+      "width": 1440,
+      "height": 1000,
+      "documentWidth": 1440,
+      "scrollY": 0,
+      "activeTab": "预算",
+      "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check",
+      "visibleBrokenImages": [],
+      "pixelWidth": 1440,
+      "pixelHeight": 1000,
+      "sha256": "6ef843d9b1b1cfa4f7728c6b646667609dfe279cf47b3f56c4071070c7b0f9bb",
+      "pixelInspection": "Individually opened with view_image and inspected; no annotation/resizing/compositing."
+    },
+    {
+      "name": "home-before-budget-375.png",
+      "width": 375,
+      "height": 812,
+      "documentWidth": 375,
+      "scrollY": 709,
+      "activeTab": null,
+      "url": "http://localhost:3103/?view=home&tab=bookings#budget-nav-check",
+      "visibleBrokenImages": [],
+      "pixelWidth": 375,
+      "pixelHeight": 812,
+      "sha256": "0dd08af64f6734cbf95b988d421b76723e0a6ce7f16b8444c110da5515b2cda3",
+      "pixelInspection": "Individually opened with view_image and inspected; no annotation/resizing/compositing."
+    },
+    {
+      "name": "budget-after-click-375.png",
+      "width": 375,
+      "height": 812,
+      "documentWidth": 375,
+      "scrollY": 0,
+      "activeTab": "预算",
+      "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check",
+      "visibleBrokenImages": [],
+      "pixelWidth": 375,
+      "pixelHeight": 812,
+      "sha256": "a198feefc322fc6a2333127d62f13cf54facefd8a6e17d01b7fa9bf24fed1d94",
+      "pixelInspection": "Individually opened with view_image and inspected; no annotation/resizing/compositing."
+    },
+    {
+      "name": "budget-after-refresh-375.png",
+      "width": 375,
+      "height": 812,
+      "documentWidth": 375,
+      "scrollY": 0,
+      "activeTab": "预算",
+      "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check",
+      "visibleBrokenImages": [],
+      "pixelWidth": 375,
+      "pixelHeight": 812,
+      "sha256": "a198feefc322fc6a2333127d62f13cf54facefd8a6e17d01b7fa9bf24fed1d94",
+      "pixelInspection": "Individually opened with view_image and inspected; no annotation/resizing/compositing."
+    },
+    {
+      "name": "home-after-back-375.png",
+      "width": 375,
+      "height": 812,
+      "documentWidth": 375,
+      "scrollY": 0,
+      "activeTab": null,
+      "url": "http://localhost:3103/?view=home&tab=bookings#budget-nav-check",
+      "visibleBrokenImages": [],
+      "pixelWidth": 375,
+      "pixelHeight": 812,
+      "sha256": "08299b0d16d6e9b1e38513fa2e6fe201243e44525949a560ff273dcf1d98d4ec",
+      "pixelInspection": "Individually opened with view_image and inspected; no annotation/resizing/compositing."
+    },
+    {
+      "name": "budget-reopened-375.png",
+      "width": 375,
+      "height": 812,
+      "documentWidth": 375,
+      "scrollY": 0,
+      "activeTab": "预算",
+      "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check",
+      "visibleBrokenImages": [],
+      "pixelWidth": 375,
+      "pixelHeight": 812,
+      "sha256": "a198feefc322fc6a2333127d62f13cf54facefd8a6e17d01b7fa9bf24fed1d94",
+      "pixelInspection": "Individually opened with view_image and inspected; no annotation/resizing/compositing."
+    },
+    {
+      "name": "home-before-budget-390.png",
+      "width": 390,
+      "height": 844,
+      "documentWidth": 390,
+      "scrollY": 864,
+      "activeTab": null,
+      "url": "http://localhost:3103/?view=home&tab=bookings#budget-nav-check",
+      "visibleBrokenImages": [],
+      "pixelWidth": 390,
+      "pixelHeight": 844,
+      "sha256": "2f876333c17b3efba6e4be2384c21b49ad7a6050db08ad486a89e7adad932ec6",
+      "pixelInspection": "Individually opened with view_image and inspected; no annotation/resizing/compositing."
+    },
+    {
+      "name": "budget-after-click-390.png",
+      "width": 390,
+      "height": 844,
+      "documentWidth": 390,
+      "scrollY": 0,
+      "activeTab": "预算",
+      "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check",
+      "visibleBrokenImages": [],
+      "pixelWidth": 390,
+      "pixelHeight": 844,
+      "sha256": "eb0a0e7cf161c98356dd8452744c2782c5dd6e96711a19418e3b2be3debffbb4",
+      "pixelInspection": "Individually opened with view_image and inspected; no annotation/resizing/compositing."
+    },
+    {
+      "name": "budget-after-refresh-390.png",
+      "width": 390,
+      "height": 844,
+      "documentWidth": 390,
+      "scrollY": 0,
+      "activeTab": "预算",
+      "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check",
+      "visibleBrokenImages": [],
+      "pixelWidth": 390,
+      "pixelHeight": 844,
+      "sha256": "eb0a0e7cf161c98356dd8452744c2782c5dd6e96711a19418e3b2be3debffbb4",
+      "pixelInspection": "Individually opened with view_image and inspected; no annotation/resizing/compositing."
+    },
+    {
+      "name": "home-after-back-390.png",
+      "width": 390,
+      "height": 844,
+      "documentWidth": 390,
+      "scrollY": 0,
+      "activeTab": null,
+      "url": "http://localhost:3103/?view=home&tab=bookings#budget-nav-check",
+      "visibleBrokenImages": [],
+      "pixelWidth": 390,
+      "pixelHeight": 844,
+      "sha256": "2d768fa5dcd47873c5b9d2fd8527c168e66e4f9405e16f0cb1103e02d39caf48",
+      "pixelInspection": "Individually opened with view_image and inspected; no annotation/resizing/compositing."
+    },
+    {
+      "name": "budget-reopened-390.png",
+      "width": 390,
+      "height": 844,
+      "documentWidth": 390,
+      "scrollY": 0,
+      "activeTab": "预算",
+      "url": "http://localhost:3103/?view=plan&tab=budget#budget-nav-check",
+      "visibleBrokenImages": [],
+      "pixelWidth": 390,
+      "pixelHeight": 844,
+      "sha256": "eb0a0e7cf161c98356dd8452744c2782c5dd6e96711a19418e3b2be3debffbb4",
+      "pixelInspection": "Individually opened with view_image and inspected; no annotation/resizing/compositing."
+    }
+  ],
+  "pageErrors": [],
+  "externalRequestsBlocked": [],
+  "scope": "Fresh isolated browser contexts; local app only; UI and browser-history navigation; no real profiles/accounts/business edits.",
+  "browserVersion": "151.0.7922.173",
+  "evidenceCorrections": [
+    "First mobile Home screenshot guard incorrectly treated offscreen horizontal carousel lazy images as visible because it only checked y bounds. No invalid mobile screenshot was saved. Corrected guard checks both x and y visibility, then waits for actual visible images to finish loading. Completed browser cases retained; incomplete cases rerun.",
+    "Initial rapid-click probe passed Desktop but its first 375 mobile probe timed out without recording final state. Separate 375 diagnostic showed Budget URL/panel, then six mobile probes after explicit font/layout stabilization passed. Initial timeout is retained as a harness result, not erased or treated as a confirmed product defect."
+  ],
+  "status": "passed",
+  "completedAtUTC": "2026-10-03T23:30:45Z",
+  "authorization": {
+    "browser": "User explicitly approved changing this round from local Jacob Chrome to cloud browser (同意), superseding earlier HANDOFF browser-only constraint.",
+    "review": "Parent states independent dot review replaces original ChatGPT conversation for this round; parent review of new browser evidence pending."
+  },
+  "rapidClickChecks": [
+    {
+      "width": 1440,
+      "height": 1000,
+      "action": "native Playwright dblclick on hydrated Home budget CTA",
+      "historyDelta": 1,
+      "back": "Home",
+      "forward": "Budget",
+      "status": "passed"
+    },
+    {
+      "width": 375,
+      "repetition": 1,
+      "action": "native dblclick after explicit font/layout stabilization",
+      "historyDelta": 1,
+      "back": "Home",
+      "forward": "Budget",
+      "status": "passed"
+    },
+    {
+      "width": 375,
+      "repetition": 2,
+      "action": "native dblclick after explicit font/layout stabilization",
+      "historyDelta": 1,
+      "back": "Home",
+      "forward": "Budget",
+      "status": "passed"
+    },
+    {
+      "width": 375,
+      "repetition": 3,
+      "action": "native dblclick after explicit font/layout stabilization",
+      "historyDelta": 1,
+      "back": "Home",
+      "forward": "Budget",
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "repetition": 1,
+      "action": "native dblclick after explicit font/layout stabilization",
+      "historyDelta": 1,
+      "back": "Home",
+      "forward": "Budget",
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "repetition": 2,
+      "action": "native dblclick after explicit font/layout stabilization",
+      "historyDelta": 1,
+      "back": "Home",
+      "forward": "Budget",
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "repetition": 3,
+      "action": "native dblclick after explicit font/layout stabilization",
+      "historyDelta": 1,
+      "back": "Home",
+      "forward": "Budget",
+      "status": "passed"
+    }
+  ],
+  "mergeRelationship": {
+    "latestQA": "fedbd10387abe313cc3ee2b894259a359f9d2ead",
+    "main": "e96fc8561b09b89fef08324bb45828d84c2bebfc",
+    "commonBaseWithQA": "395cb61c36be1ddb77b8693981d8b8dd3b95fd81",
+    "qaDryMergeExit": 0,
+    "qaDryMergeTree": "e9233711edf73a145dc349adf0eae1dfe81a1329",
+    "qaHandoffAndAcceptanceJSON": "Dry-merge blob IDs exactly equal latest QA; recent production/hotel/cleanup acceptance records preserved.",
+    "mainDryMergeExit": 0,
+    "recommendation": "Combine with latest QA first, preserving its documentary acceptance records; parent then decides main merge/release. Direct work-branch-to-main merge alone omits concurrent QA records. No actual merge performed."
+  },
+  "publicationReadiness": {
+    "budgetScope": "Actual isolated browser navigation checks passed; source fix and prior full checks unchanged.",
+    "parentReview": "pending",
+    "productionDeployment": "not performed",
+    "scopeLimits": "No hotel re-review, booking/current itinerary/budget/state edits, account/profile reuse, storage injection, private exports or full-system claim. Local dev runtime only, no production smoke for the new fix."
+  },
+  "runtime": "Preinstalled Playwright and /usr/bin/chromium; headless actual browser. Fresh contexts; localhost:3103 fixed dev app and localhost:3104 detached source-baseline dev app. Navigation through visible UI and real browser history only.",
+  "browserRoutePolicy": "Only localhost/127.0.0.1 and data/blob allowed; other page requests would be aborted. Observed blockedExternal list empty; no Meta or production/account page visited."
+}

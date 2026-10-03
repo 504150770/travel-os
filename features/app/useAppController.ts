@@ -451,6 +451,10 @@ export function useAppController() {
   const openBudget = () => {
     navigate('plan');
     setPlanTab('budget');
+    writeUrl(
+      { view: 'plan', tab: 'budget', day: null, city: null },
+      'replace',
+    );
   };
 
   return {
