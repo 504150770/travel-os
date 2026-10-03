@@ -84,6 +84,9 @@ assert.match(mobileCss, /env\(safe-area-inset-bottom\)/);
 const explore = fs.readFileSync(path.join(root, 'components/mobile/MobileExplore.tsx'), 'utf8');
 assert.match(explore, /shown\.length === 0/);
 assert.match(explore, /<output className="mobile-explore-empty"/);
+assert.match(explore, /\['places', '地点与活动', \['place', 'activity', 'photo_spot', 'custom'\]\]/);
+assert.match(explore, /className="mobile-explore-placeholder"/);
+assert.match(explore, /entity\.raw\.type === 'transport'/);
 assert.doesNotMatch(explore.split('<output className="mobile-explore-empty">')[1]?.split('</output>')[0] ?? '', /<(?:h2|p)[\s>]/);
 assert.match(mobileCss, /\.mobile-explore-empty[^}]*grid-column: 1 \/ -1/);
 

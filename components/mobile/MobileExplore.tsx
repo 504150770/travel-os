@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { Heart, Plus, Search } from 'lucide-react';
+import { CalendarDays, Camera, Heart, Navigation, Plus, Search } from 'lucide-react';
 import { useMemo, useState } from 'react';
 import type { Entity, EntityType } from '@/lib/entity-library';
 import { normalizeRouteCity } from '@/lib/entity-library';
@@ -12,7 +12,7 @@ import { selectCoverImage } from '@/lib/media';
 import { MobileEntitySheet } from '@/components/mobile/MobileEntitySheet';
 
 const categories: Array<[DiscoverTab, string, EntityType[]]> = [
-  ['places', '景点', ['place', 'activity', 'photo_spot', 'custom']],
+  ['places', '地点与活动', ['place', 'activity', 'photo_spot', 'custom']],
   ['food', '美食', ['restaurant', 'cafe']],
   ['gym', '健身', ['gym']],
   ['shopping', '购物', ['shopping']],
@@ -52,7 +52,7 @@ export function MobileExplore({ controller }: { controller: AppController }) {
         <input
           value={search}
           onChange={(event) => setSearch(event.target.value)}
-          placeholder="搜索景点、美食、健身…"
+          placeholder="搜索地点、活动、美食、健身…"
           aria-label="搜索推荐"
         />
       </label>
@@ -92,7 +92,7 @@ export function MobileExplore({ controller }: { controller: AppController }) {
           return (
             <article key={entity.id}>
               <button className="mobile-explore-image" onClick={() => setDetail(entity)} aria-label={`查看 ${entity.name}`}>
-                {cover && (
+                {cover ? (
                   <Image
                     unoptimized
                     src={cover.file}
@@ -101,6 +101,11 @@ export function MobileExplore({ controller }: { controller: AppController }) {
                     loading="lazy"
                     sizes="(max-width:430px) 50vw, 210px"
                   />
+                ) : (
+                  <span className="mobile-explore-placeholder" aria-hidden="true">
+                    {entity.raw.type === 'transport' ? <Navigation /> : entity.type === 'activity' ? <CalendarDays /> : <Camera />}
+                    <span>{entity.raw.type === 'transport' ? '交通安排' : entity.type === 'activity' ? '行程活动' : '暂无图片'}</span>
+                  </span>
                 )}
               </button>
               <button

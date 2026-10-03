@@ -790,6 +790,8 @@
 .mobile-explore-empty-title { display: block; margin: 0; color: var(--mobile-text); font-size: 17px; font-weight: 600; line-height: 1.5; }
 .mobile-explore-empty-description { display: block; margin: 8px 0 0; font-size: 14px; line-height: 1.65; }
 .mobile-explore-image { position: relative; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; border: 0; border-radius: 14px; background: #f1f1f1; }
+.mobile-explore-placeholder { display: flex; height: 100%; align-items: center; justify-content: center; flex-direction: column; gap: 8px; color: var(--mobile-muted); font-size: 12px; font-weight: 400; }
+.mobile-explore-placeholder > svg { width: 26px; height: 26px; }
 .mobile-favorite { position: absolute; top: 5px; right: 5px; display: grid; place-items: center; min-width: 44px; padding: 0; border: 0; color: var(--mobile-text); background: transparent; }
 .mobile-favorite::before { position: absolute; width: 34px; height: 34px; border-radius: 50%; background: rgb(255 255 255 / 92%); box-shadow: 0 1px 5px rgb(0 0 0 / 8%); backdrop-filter: blur(6px); content: ''; }
 .mobile-favorite svg { position: relative; width: 21px; }

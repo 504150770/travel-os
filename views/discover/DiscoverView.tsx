@@ -275,12 +275,12 @@ export function DiscoverView({
       <header className="v2-heading">
         <span>DISCOVER</span>
         <h1>找到旅途中的心动之处。</h1>
-        <p>浏览六城景点与推荐，收藏或加入你的行程。</p>
+        <p>浏览六城地点与推荐，收藏或加入你的行程。</p>
       </header>
       <div className="subnav">
         {(
           [
-            ['places', '景点'],
+            ['places', '地点与活动'],
             ['food', '美食'],
             ['gym', '健身'],
             ['shopping', '购物'],
