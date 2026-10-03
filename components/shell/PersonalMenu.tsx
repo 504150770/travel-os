@@ -18,22 +18,30 @@ export function PersonalMenu({
   const [open, setOpen] = useState(false);
   const [saveState, setSaveState] = useState<SaveState>(null);
   const rootRef = useRef<HTMLDivElement>(null);
+  const triggerRef = useRef<HTMLButtonElement>(null);
   const hideTimer = useRef<number | null>(null);
 
   useEffect(() => {
-    const closeOnOutsideClick = (event: MouseEvent) => {
+    if (!open) return;
+    const closeOnOutsideClick = (event: Event) => {
       if (!rootRef.current?.contains(event.target as Node)) setOpen(false);
     };
     const closeOnEscape = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') setOpen(false);
+      if (event.key !== 'Escape' || !rootRef.current?.contains(event.target as Node)) return;
+      event.preventDefault();
+      event.stopPropagation();
+      setOpen(false);
+      triggerRef.current?.focus();
     };
     window.addEventListener('mousedown', closeOnOutsideClick);
+    window.addEventListener('focusin', closeOnOutsideClick);
     window.addEventListener('keydown', closeOnEscape);
     return () => {
       window.removeEventListener('mousedown', closeOnOutsideClick);
+      window.removeEventListener('focusin', closeOnOutsideClick);
       window.removeEventListener('keydown', closeOnEscape);
     };
-  }, []);
+  }, [open]);
 
   useEffect(() => {
     const updateSaveState = (event: Event) => {
@@ -61,6 +69,7 @@ export function PersonalMenu({
       {saveState === 'saving' ? 'Saving…' : saveState === 'saved' ? <><Check /> Saved</> : ''}
     </span>
     <button
+      ref={triggerRef}
       className="personal-trigger"
       type="button"
       aria-label="Jacob"

@@ -71,6 +71,10 @@ assert.match(personalMenu, /Backup \/ Export/);
 assert.match(personalMenu, /Saved \/ Local status/);
 assert.match(personalMenu, /travel-save-state/);
 assert.match(personalMenu, /aria-label="Jacob"/);
+// Wiring guards only; actual Escape/focus dismissal is tested separately in Chrome.
+assert.match(personalMenu, /triggerRef.current\?\.focus\(\)/);
+assert.match(personalMenu, /addEventListener\('focusin', closeOnOutsideClick\)/);
+assert.match(personalMenu, /removeEventListener\('focusin', closeOnOutsideClick\)/);
 
 // desktop-view-mode
 assert.match(read('views/trip/QuickAdd.tsx'), /disabled=\{!form\.name\.trim\(\)\}/);
