@@ -1,0 +1,476 @@
+{
+  "generatedAtUtc": "2026-10-03T13:47:29.1264051Z",
+  "baselineCommit": "fd7bf1be548adc5dd177031a4a169ced66726ddf",
+  "scope": "Read-only dependency advisory triage; not pnpm run audit, browser QA, exploit validation, package upgrade or deployment.",
+  "command": "pnpm audit --json",
+  "auditExitCode": 1,
+  "advisoryCount": 38,
+  "affectedPackageCount": 11,
+  "severityCounts": {
+    "info": 0,
+    "low": 6,
+    "moderate": 16,
+    "high": 16,
+    "critical": 0
+  },
+  "previousRecordedCount": 37,
+  "comparisonLimit": "Previous raw advisory snapshot is not available in the QA record; count change does not establish which advisory was newly added or any package change.",
+  "packageJsonSha256": "E38FF6845874FFB2B619620E992B7FD85D497F620DF9BBAB7A0FDF314BDB87B7",
+  "lockfileSha256": "8BD5B3C8AAE5DFF6F7DEEED229D57975863D055503CFBCA4A5F89745FBF2E0F9",
+  "priorities": [
+    {
+      "area": "RSC server dependency",
+      "observation": "react-server-dom-webpack19.2.6 is a direct dependency and appears through vinext/plugin-rsc. vite.config.ts configures RSC child environments. App-only use-server search found no matches; this does not establish framework endpoint non-reachability.",
+      "primarySource": "https://github.com/react/react/security/advisories/GHSA-wx67-qw84-cm4g",
+      "affectedInstalledVersion": "19.2.6",
+      "maintainerPatchedVersion": "19.2.8",
+      "next": "Separate security maintenance: confirm deployed resolved versions and framework endpoint exposure, prepare compatible framework/React dependency repair and regression plan. No exploit requests or upgrade authorized in this UI iteration."
+    },
+    {
+      "area": "Windows development server",
+      "observation": "vite8.0.13 affected by Windows fs.deny advisory; maintainer impact requires network-exposed Vite dev server and other filesystem conditions. No active3000 listener now; previous observed server used loopback. No explicit host config found in vite.config.ts. Not a general production Vite vulnerability claim.",
+      "primarySource": "https://github.com/vitejs/vite/security/advisories/GHSA-fx2h-pf6j-xcff",
+      "next": "Confirm actual future startup binding and address Vite in separate dependency work."
+    },
+    {
+      "area": "Tool and image-processing transitive dependencies",
+      "observation": "undici/ws/sharp paths root at Cloudflare plugin or wrangler; image-size roots at vinext; brace-expansion/ip-address at shadcn; braces and fast-uri have multiple roots. Audit dev flags and package.json dependency category do not prove runtime reachability or safety.",
+      "next": "Triage actual image/input and tool routes separately; no bulk overrides, lockfile edits or upgrades in UI QA."
+    }
+  ],
+  "packages": [
+    {
+      "package": "brace-expansion",
+      "advisoryCount": 3,
+      "severities": [
+        "high",
+        "moderate"
+      ],
+      "installedVersions": [
+        "5.0.9"
+      ],
+      "roots": [
+        "shadcn"
+      ],
+      "includesNonDevFinding": true,
+      "advisories": [
+        {
+          "id": "GHSA-q2hr-2g5m-vwhr",
+          "severity": "moderate",
+          "patchedRange": ">=5.0.12",
+          "url": "https://github.com/advisories/GHSA-q2hr-2g5m-vwhr"
+        },
+        {
+          "id": "GHSA-qhr7-859c-m2p7",
+          "severity": "high",
+          "patchedRange": ">=5.0.11",
+          "url": "https://github.com/advisories/GHSA-qhr7-859c-m2p7"
+        },
+        {
+          "id": "GHSA-6j4f-fj2g-mc7p",
+          "severity": "high",
+          "patchedRange": ">=5.0.10",
+          "url": "https://github.com/advisories/GHSA-6j4f-fj2g-mc7p"
+        }
+      ]
+    },
+    {
+      "package": "braces",
+      "advisoryCount": 1,
+      "severities": [
+        "high"
+      ],
+      "installedVersions": [
+        "3.0.3"
+      ],
+      "roots": [
+        "shadcn",
+        "vinext"
+      ],
+      "includesNonDevFinding": true,
+      "advisories": [
+        {
+          "id": "GHSA-vfj7-8cjw-p6xm",
+          "severity": "high",
+          "patchedRange": ">=3.0.4",
+          "url": "https://github.com/advisories/GHSA-vfj7-8cjw-p6xm"
+        }
+      ]
+    },
+    {
+      "package": "esbuild",
+      "advisoryCount": 1,
+      "severities": [
+        "low"
+      ],
+      "installedVersions": [
+        "0.27.3"
+      ],
+      "roots": [
+        "@cloudflare/vite-plugin",
+        "@openai/sites-vite-plugin",
+        "@vitejs/plugin-react",
+        "@vitejs/plugin-rsc",
+        "react-server-dom-webpack",
+        "vinext",
+        "vite",
+        "wrangler"
+      ],
+      "includesNonDevFinding": true,
+      "advisories": [
+        {
+          "id": "GHSA-g7r4-m6w7-qqqr",
+          "severity": "low",
+          "patchedRange": ">=0.28.1",
+          "url": "https://github.com/advisories/GHSA-g7r4-m6w7-qqqr"
+        }
+      ]
+    },
+    {
+      "package": "fast-uri",
+      "advisoryCount": 1,
+      "severities": [
+        "moderate"
+      ],
+      "installedVersions": [
+        "3.1.7"
+      ],
+      "roots": [
+        "@vitejs/plugin-rsc",
+        "react-server-dom-webpack",
+        "shadcn",
+        "vinext"
+      ],
+      "includesNonDevFinding": true,
+      "advisories": [
+        {
+          "id": "GHSA-hrr3-gc8f-f4qj",
+          "severity": "moderate",
+          "patchedRange": ">=3.1.8",
+          "url": "https://github.com/advisories/GHSA-hrr3-gc8f-f4qj"
+        }
+      ]
+    },
+    {
+      "package": "image-size",
+      "advisoryCount": 2,
+      "severities": [
+        "high"
+      ],
+      "installedVersions": [
+        "2.0.2"
+      ],
+      "roots": [
+        "vinext"
+      ],
+      "includesNonDevFinding": true,
+      "advisories": [
+        {
+          "id": "GHSA-5p2g-fcmc-qvqq",
+          "severity": "high",
+          "patchedRange": ">=2.0.3",
+          "url": "https://github.com/advisories/GHSA-5p2g-fcmc-qvqq"
+        },
+        {
+          "id": "GHSA-w3rx-r6r6-pgpr",
+          "severity": "high",
+          "patchedRange": ">=2.0.3",
+          "url": "https://github.com/advisories/GHSA-w3rx-r6r6-pgpr"
+        }
+      ]
+    },
+    {
+      "package": "ip-address",
+      "advisoryCount": 2,
+      "severities": [
+        "moderate"
+      ],
+      "installedVersions": [
+        "10.7.0"
+      ],
+      "roots": [
+        "shadcn"
+      ],
+      "includesNonDevFinding": true,
+      "advisories": [
+        {
+          "id": "GHSA-j6r3-76f7-8jcv",
+          "severity": "moderate",
+          "patchedRange": ">=10.7.1",
+          "url": "https://github.com/advisories/GHSA-j6r3-76f7-8jcv"
+        },
+        {
+          "id": "GHSA-h3mg-xc3c-68pw",
+          "severity": "moderate",
+          "patchedRange": ">=10.7.1",
+          "url": "https://github.com/advisories/GHSA-h3mg-xc3c-68pw"
+        }
+      ]
+    },
+    {
+      "package": "react-server-dom-webpack",
+      "advisoryCount": 1,
+      "severities": [
+        "high"
+      ],
+      "installedVersions": [
+        "19.2.6"
+      ],
+      "roots": [
+        "@vitejs/plugin-rsc",
+        "react-server-dom-webpack",
+        "vinext"
+      ],
+      "includesNonDevFinding": true,
+      "advisories": [
+        {
+          "id": "GHSA-wx67-qw84-cm4g",
+          "severity": "high",
+          "patchedRange": ">=19.2.8",
+          "url": "https://github.com/advisories/GHSA-wx67-qw84-cm4g"
+        }
+      ]
+    },
+    {
+      "package": "sharp",
+      "advisoryCount": 2,
+      "severities": [
+        "high"
+      ],
+      "installedVersions": [
+        "0.34.5"
+      ],
+      "roots": [
+        "@cloudflare/vite-plugin",
+        "wrangler"
+      ],
+      "includesNonDevFinding": false,
+      "advisories": [
+        {
+          "id": "GHSA-f88m-g3jw-g9cj",
+          "severity": "high",
+          "patchedRange": ">=0.35.0",
+          "url": "https://github.com/advisories/GHSA-f88m-g3jw-g9cj"
+        },
+        {
+          "id": "GHSA-rgj7-g3m4-5g8c",
+          "severity": "high",
+          "patchedRange": ">=0.35.4",
+          "url": "https://github.com/advisories/GHSA-rgj7-g3m4-5g8c"
+        }
+      ]
+    },
+    {
+      "package": "undici",
+      "advisoryCount": 21,
+      "severities": [
+        "high",
+        "low",
+        "moderate"
+      ],
+      "installedVersions": [
+        "7.24.8"
+      ],
+      "roots": [
+        "@cloudflare/vite-plugin",
+        "wrangler"
+      ],
+      "includesNonDevFinding": false,
+      "advisories": [
+        {
+          "id": "GHSA-vmh5-mc38-953g",
+          "severity": "high",
+          "patchedRange": ">=7.28.0",
+          "url": "https://github.com/advisories/GHSA-vmh5-mc38-953g"
+        },
+        {
+          "id": "GHSA-p88m-4jfj-68fv",
+          "severity": "moderate",
+          "patchedRange": ">=7.28.0",
+          "url": "https://github.com/advisories/GHSA-p88m-4jfj-68fv"
+        },
+        {
+          "id": "GHSA-vxpw-j846-p89q",
+          "severity": "high",
+          "patchedRange": ">=7.28.0",
+          "url": "https://github.com/advisories/GHSA-vxpw-j846-p89q"
+        },
+        {
+          "id": "GHSA-hm92-r4w5-c3mj",
+          "severity": "high",
+          "patchedRange": ">=7.28.0",
+          "url": "https://github.com/advisories/GHSA-hm92-r4w5-c3mj"
+        },
+        {
+          "id": "GHSA-g8m3-5g58-fq7m",
+          "severity": "low",
+          "patchedRange": ">=7.28.0",
+          "url": "https://github.com/advisories/GHSA-g8m3-5g58-fq7m"
+        },
+        {
+          "id": "GHSA-pr7r-676h-xcf6",
+          "severity": "moderate",
+          "patchedRange": ">=7.28.0",
+          "url": "https://github.com/advisories/GHSA-pr7r-676h-xcf6"
+        },
+        {
+          "id": "GHSA-8xcm-r25x-g524",
+          "severity": "moderate",
+          "patchedRange": ">=7.29.0",
+          "url": "https://github.com/advisories/GHSA-8xcm-r25x-g524"
+        },
+        {
+          "id": "GHSA-4cwx-7wf7-3272",
+          "severity": "high",
+          "patchedRange": ">=7.29.0",
+          "url": "https://github.com/advisories/GHSA-4cwx-7wf7-3272"
+        },
+        {
+          "id": "GHSA-m8rv-5g2x-5cg5",
+          "severity": "moderate",
+          "patchedRange": ">=7.29.0",
+          "url": "https://github.com/advisories/GHSA-m8rv-5g2x-5cg5"
+        },
+        {
+          "id": "GHSA-jr45-8vmc-qm54",
+          "severity": "moderate",
+          "patchedRange": ">=7.29.0",
+          "url": "https://github.com/advisories/GHSA-jr45-8vmc-qm54"
+        },
+        {
+          "id": "GHSA-v3r7-h72x-cjcm",
+          "severity": "moderate",
+          "patchedRange": ">=7.29.0",
+          "url": "https://github.com/advisories/GHSA-v3r7-h72x-cjcm"
+        },
+        {
+          "id": "GHSA-35p6-xmwp-9g52",
+          "severity": "low",
+          "patchedRange": ">=7.28.0",
+          "url": "https://github.com/advisories/GHSA-35p6-xmwp-9g52"
+        },
+        {
+          "id": "GHSA-pmjh-fq2x-6v4x",
+          "severity": "moderate",
+          "patchedRange": ">=7.29.1",
+          "url": "https://github.com/advisories/GHSA-pmjh-fq2x-6v4x"
+        },
+        {
+          "id": "GHSA-r53p-7pc4-xj5r",
+          "severity": "low",
+          "patchedRange": ">=7.29.1",
+          "url": "https://github.com/advisories/GHSA-r53p-7pc4-xj5r"
+        },
+        {
+          "id": "GHSA-rfgv-xxqx-mfg5",
+          "severity": "high",
+          "patchedRange": ">=7.29.1",
+          "url": "https://github.com/advisories/GHSA-rfgv-xxqx-mfg5"
+        },
+        {
+          "id": "GHSA-3xpg-4rpp-hhhm",
+          "severity": "moderate",
+          "patchedRange": ">=7.29.1",
+          "url": "https://github.com/advisories/GHSA-3xpg-4rpp-hhhm"
+        },
+        {
+          "id": "GHSA-2jfj-6hjv-fm6j",
+          "severity": "moderate",
+          "patchedRange": ">=7.29.1",
+          "url": "https://github.com/advisories/GHSA-2jfj-6hjv-fm6j"
+        },
+        {
+          "id": "GHSA-2gqq-gqf2-x968",
+          "severity": "low",
+          "patchedRange": ">=7.29.1",
+          "url": "https://github.com/advisories/GHSA-2gqq-gqf2-x968"
+        },
+        {
+          "id": "GHSA-w293-vg96-wgc3",
+          "severity": "high",
+          "patchedRange": ">=7.29.1",
+          "url": "https://github.com/advisories/GHSA-w293-vg96-wgc3"
+        },
+        {
+          "id": "GHSA-8436-99hf-9mmv",
+          "severity": "low",
+          "patchedRange": ">=7.29.1",
+          "url": "https://github.com/advisories/GHSA-8436-99hf-9mmv"
+        },
+        {
+          "id": "GHSA-rx4f-c7p8-82vq",
+          "severity": "moderate",
+          "patchedRange": ">=7.29.1",
+          "url": "https://github.com/advisories/GHSA-rx4f-c7p8-82vq"
+        }
+      ]
+    },
+    {
+      "package": "vite",
+      "advisoryCount": 2,
+      "severities": [
+        "high",
+        "moderate"
+      ],
+      "installedVersions": [
+        "8.0.13"
+      ],
+      "roots": [
+        "@cloudflare/vite-plugin",
+        "@openai/sites-vite-plugin",
+        "@vitejs/plugin-react",
+        "@vitejs/plugin-rsc",
+        "vinext",
+        "vite"
+      ],
+      "includesNonDevFinding": true,
+      "advisories": [
+        {
+          "id": "GHSA-v6wh-96g9-6wx3",
+          "severity": "moderate",
+          "patchedRange": ">=8.0.16",
+          "url": "https://github.com/advisories/GHSA-v6wh-96g9-6wx3"
+        },
+        {
+          "id": "GHSA-fx2h-pf6j-xcff",
+          "severity": "high",
+          "patchedRange": ">=8.0.16",
+          "url": "https://github.com/advisories/GHSA-fx2h-pf6j-xcff"
+        }
+      ]
+    },
+    {
+      "package": "ws",
+      "advisoryCount": 2,
+      "severities": [
+        "high",
+        "moderate"
+      ],
+      "installedVersions": [
+        "8.18.0"
+      ],
+      "roots": [
+        "@cloudflare/vite-plugin",
+        "wrangler"
+      ],
+      "includesNonDevFinding": false,
+      "advisories": [
+        {
+          "id": "GHSA-58qx-3vcg-4xpx",
+          "severity": "moderate",
+          "patchedRange": ">=8.20.1",
+          "url": "https://github.com/advisories/GHSA-58qx-3vcg-4xpx"
+        },
+        {
+          "id": "GHSA-96hv-2xvq-fx4p",
+          "severity": "high",
+          "patchedRange": ">=8.21.0",
+          "url": "https://github.com/advisories/GHSA-96hv-2xvq-fx4p"
+        }
+      ]
+    }
+  ],
+  "resolved": false,
+  "productionExploitabilityVerified": false,
+  "uiQaComplete": false
+}
