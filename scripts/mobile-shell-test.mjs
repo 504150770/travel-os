@@ -88,6 +88,10 @@ const mobileMore = fs.readFileSync(path.join(root, 'components/mobile/MobileMore
 assert.match(mobileMore, /ref=\{tabRow\} className="mobile-filter-row"/);
 assert.match(mobileMore, /row\.scrollLeft \+= activeBounds\.right - rowBounds\.right \+ 12/);
 assert.match(mobileMore, /\}, \[panel\]\)/);
+// CSS source guards; actual panel layout and GPX download are checked separately.
+assert.match(mobileCss, /\.mobile-offline-panel \.offline-pack-control \{[^}]*padding: 16px;[^}]*border-radius: 12px/);
+assert.match(mobileCss, /\.mobile-offline-panel \.offline-pack-control > button \{[^}]*min-height: 44px;[^}]*background: #2478ad/);
+assert.match(mobileCss, /\.mobile-offline-panel \.offline-map-actions > button \{[^}]*background: #2478ad/);
 assert.match(explore, /shown\.length === 0/);
 assert.match(explore, /<output className="mobile-explore-empty"/);
 assert.match(explore, /\['places', '地点与活动', \['place', 'activity', 'photo_spot', 'custom'\]\]/);

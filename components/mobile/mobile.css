@@ -856,7 +856,13 @@ details[open] > summary > .mobile-disclosure-chevron { transform: rotate(180deg)
 .mobile-backup-panel h2 { margin: 10px 0 4px; font-size: 20px; }
 .mobile-offline-panel > p,
 .mobile-backup-panel > p { color: var(--mobile-muted); font-size: 13px; }
-.mobile-offline-panel .offline-pack-control { box-shadow: none; border: 0; background: #fff; }
+.mobile-offline-panel .offline-pack-control { display: grid; gap: 8px; padding: 16px; border-radius: 12px; box-shadow: none; border: 0; background: #fff; }
+.mobile-offline-panel .offline-pack-control > svg { width: 22px; color: var(--mobile-accent); }
+.mobile-offline-panel .offline-pack-control > h2 { margin: 0; font-size: 18px; }
+.mobile-offline-panel .offline-pack-control > p { margin: 0; color: var(--mobile-muted); font-size: 13px; line-height: 1.5; }
+.mobile-offline-panel .offline-pack-control > button { width: 100%; min-height: 44px; padding: 8px 12px; border: 0; border-radius: 10px; background: #2478ad; color: #fff; font-weight: 600; }
+.mobile-offline-panel .offline-pack-control > button:disabled { opacity: .5; }
+.mobile-offline-panel .offline-map-actions > button { border-color: #2478ad; background: #2478ad; }
 .mobile-backup-panel > button { display: flex; align-items: center; justify-content: center; gap: 7px; width: 100%; margin-top: 8px; border: 1px solid var(--mobile-line); border-radius: 10px; background: #fff; font-weight: 700; }
 .mobile-backup-panel > button svg { width: 18px; }
 .mobile-backup-panel label { display: grid; gap: 6px; margin-top: 16px; font-size: 13px; font-weight: 700; }
