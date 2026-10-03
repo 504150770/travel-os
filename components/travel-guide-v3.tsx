@@ -7,6 +7,7 @@ import { PersistentTripView } from '@/views/trip/TripView';
 import { DiscoverView } from '@/views/discover/DiscoverView';
 import { PlanView } from '@/views/plan/PlanView';
 import { MoreView } from '@/views/more/MoreView';
+import { guideData } from '@/lib/data';
 
 export default function TravelGuideV3() {
   const controller = useAppController();
@@ -30,6 +31,11 @@ export default function TravelGuideV3() {
           projectedBudget={budgetState.projected} actualTotal={actualTotal}
           unknownCosts={budgetState.unknown} activeEntityCount={activeEntities.length}
           openTrip={() => navigate('trip')} openNextAction={openNextAction} openBudget={openBudget}
+          openCityTrip={(city) => {
+            const stay = guideData.hotelBookings.items.find((item) => item.city === city);
+            const day = guideData.days.find((item) => item.date === stay?.checkIn);
+            if (day) navigate('trip', day.day);
+          }}
         />}
         {view === 'discover' && <DiscoverView
           selectedDay={selectedDay} entities={entities} resolve={resolve} actions={actions}

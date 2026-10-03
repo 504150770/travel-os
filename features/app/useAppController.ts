@@ -271,13 +271,14 @@ export function useAppController() {
     0,
   );
 
-  const navigate = (next: ViewId) => {
+  const navigate = (next: ViewId, tripDay = selectedDay) => {
     sessionStorage.setItem(
       `travel-scroll:${location.pathname}${location.search}`,
       String(window.scrollY),
     );
     setView(next);
     setMobileView(mobileViewFromUrl(next));
+    if (next === 'trip') setSelectedDay(tripDay);
     const tab =
       next === 'plan'
         ? planTab
@@ -290,7 +291,7 @@ export function useAppController() {
             : null;
     writeUrl({
       view: next,
-      day: next === 'trip' || next === 'more' ? selectedDay : null,
+      day: next === 'trip' ? tripDay : next === 'more' ? selectedDay : null,
       tab,
       city: next === 'discover' ? discoverCity : null,
     });

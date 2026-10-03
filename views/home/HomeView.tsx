@@ -36,9 +36,9 @@ function useHomePerformanceMarks() {
   return homeRef;
 }
 
-export function HomeView({ daysLeft, nextAction, projectedBudget, actualTotal, unknownCosts, activeEntityCount, openTrip, openNextAction, openBudget }: {
+export function HomeView({ daysLeft, nextAction, projectedBudget, actualTotal, unknownCosts, activeEntityCount, openTrip, openCityTrip, openNextAction, openBudget }: {
   daysLeft: number | null; nextAction?: ActionItem; projectedBudget: number; actualTotal: number;
-  unknownCosts: number; activeEntityCount: number; openTrip: () => void; openNextAction: () => void; openBudget: () => void;
+  unknownCosts: number; activeEntityCount: number; openTrip: () => void; openCityTrip: (city: string) => void; openNextAction: () => void; openBudget: () => void;
 }) {
   const homeRef = useHomePerformanceMarks();
   return <div ref={homeRef} className="v2-view home-v2" data-home-view>
@@ -70,7 +70,7 @@ export function HomeView({ daysLeft, nextAction, projectedBudget, actualTotal, u
         <button onClick={openTrip}>查看完整行程 <ArrowRight /></button>
       </header>
       <div className="route-ribbon">
-        {guideData.trip.cities.map((city) => <button key={city.id} onClick={openTrip} aria-label={`打开${city.name}行程`}>
+        {guideData.trip.cities.map((city) => <button key={city.id} onClick={() => openCityTrip(city.name)} aria-label={`打开${city.name}行程`}>
           <Image unoptimized src={cityCovers[city.id] ?? guideData.trip.coverImage} alt={`${city.name}代表景观`} fill sizes="(max-width: 480px) 76vw, (max-width: 1100px) 31vw, 200px" />
           <span className="route-card-shade" />
           <span className="route-card-copy"><b>{city.name}</b><small>{city.country} · {city.nights}晚</small></span>

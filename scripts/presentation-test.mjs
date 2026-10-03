@@ -5,6 +5,10 @@ import path from 'node:path';
 const root = process.cwd();
 const read = (file) => fs.readFileSync(path.join(root, file), 'utf8');
 const home = read('views/home/HomeView.tsx');
+// Source wiring checks; the actual six city clicks are verified separately in Chrome.
+assert.match(home, /onClick=\{\(\) => openCityTrip\(city.name\)\}/);
+assert.match(read('components/travel-guide-v3.tsx'), /item.date === stay\?\.checkIn/);
+assert.match(read('features/app/useAppController.ts'), /next === 'trip' \? tripDay :/);
 const shell = read('components/shell/DesktopShell.tsx');
 const appShell = read('components/shell/AppShell.tsx');
 const personalMenu = read('components/shell/PersonalMenu.tsx');
