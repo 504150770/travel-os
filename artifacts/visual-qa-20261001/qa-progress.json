@@ -272,5 +272,14 @@
     "safety": "GitHubcfd9557 verified at start. Only own screenshot and this progress record staged; generated/user files preserved. Viewport reset. No deployment, private upload or unchanged permission/native-dialog blocker retry.",
     "remaining": "Overall actual acceptance, Restore file permission, isolated native-confirm cleanup and full external-network offline/performance remain incomplete. No redesign added to an accepted scope."
   },
+  "exploreRawTransportCoverage20261003": {
+    "commit": "c431f1d",
+    "actual": "Existing Venezia Santa Lucia rawtransport from places.json has no cover. Actual390x844 city select via keyboard to Venice, search Santa Lucia yielded one card, Navigation/交通安排 confirmed. width390/content375/scroll375. Existing View opened station detail with correct Google Maps query and Add entry; Close dismissed it. No add/favorite/business-state mutation.",
+    "evidence": "explore-raw-transport-390-actual.jpg recaptured on a fresh foreground tab and visually inspected. Earlier explore-raw-transport-final-390.jpg is an invalid scaled screenshot, not submitted or used as evidence. Snapshot and separate click/close record, not image alone, prove interaction.",
+    "review": "Authorized continuation High actually viewed new screenshot and explicitly accepted rawtransport fallback visible scope with no Must-fix. Does not imply all transport semantics, all Explore or whole-system completion.",
+    "verification": "No source repair needed. Reviewed MobileEntitySheet existing detail/actions without changing it. mobile-shell and presentation regressions passed; data/lib diff empty. No redundant full build claimed.",
+    "safety": "GitHub95128e7 verified at start. Only own valid screenshot and progress staged; generated/user files preserved. Viewport reset, no deploy/private upload/unchanged native-dialog or Restore retry. Ordinary empty-category-without-query has no natural empty category in current six-city dataset, so not manufactured by data injection.",
+    "remaining": "Actual overall acceptance, Restore permission, isolated native-confirm cleanup, full external-network offline and performance remain incomplete."
+  },
   "complete": false
 }
