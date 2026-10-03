@@ -30,3 +30,7 @@ Prior typecheck/lint/build/project audit/ten regressions/gallery-copy and indepe
 Parent can now review these screenshots and operation records, then choose merge/release. Production deployment and smoke testing of the final merged candidate remain pending. This is budget-navigation acceptance only, not whole-system completion.
 
 Detailed cases, exact URLs, dimensions and SHA256: `browser-results.json`. Screenshots show only existing default app content; no private credentials or document exports.
+
+## Library delivery blocker
+
+Library attachments were attempted, but the upload storage connection returned HTTP 403 even after network permission retries. No finalized Library items are confirmed. The 17 original PNGs and complete operation records are safely archived in GitHub. See `library-delivery.json`; parent may complete Library saves from a working network. This delivery blocker does not reverse the completed browser checks.
