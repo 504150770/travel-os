@@ -82,6 +82,8 @@ assert.match(mobileCss, /env\(safe-area-inset-top\)/);
 assert.match(mobileCss, /env\(safe-area-inset-bottom\)/);
 // Source guards only; real search hit/empty interaction is recorded separately.
 const explore = fs.readFileSync(path.join(root, 'components/mobile/MobileExplore.tsx'), 'utf8');
+const mobilePlan = fs.readFileSync(path.join(root, 'components/mobile/MobilePlan.tsx'), 'utf8');
+assert.match(mobilePlan, /new Set\(\[\.\.\.guideData\.bookings\.statuses, 'Pending', booking\.status\]\)/);
 assert.match(explore, /shown\.length === 0/);
 assert.match(explore, /<output className="mobile-explore-empty"/);
 assert.match(explore, /\['places', '地点与活动', \['place', 'activity', 'photo_spot', 'custom'\]\]/);

@@ -96,7 +96,7 @@ export function MobilePlan({ controller }: { controller: AppController }) {
                   })
                 }
               >
-                {['Pending', 'Ticketed', 'Confirmed', 'Booked', 'Paid', 'Completed'].map((status) => (
+                {Array.from(new Set([...guideData.bookings.statuses, 'Pending', booking.status])).map((status) => (
                   <option key={status}>{status}</option>
                 ))}
               </select>
