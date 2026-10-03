@@ -78,6 +78,13 @@ export function MobileExplore({ controller }: { controller: AppController }) {
         ))}
       </select>
       <div className="mobile-explore-grid">
+        {shown.length === 0 && (
+          <output className="mobile-explore-empty">
+            <Search aria-hidden="true" />
+            <h2>{search.trim() ? '没有找到匹配的推荐' : '暂无此类推荐'}</h2>
+            <p>{search.trim() ? '试试其他关键词，或切换城市与分类。' : '可以切换城市或分类继续查看。'}</p>
+          </output>
+        )}
         {shown.map((entity) => {
           const cover = selectCoverImage(entity.images);
           const favorite = Boolean(controller.favorites[entity.id]);

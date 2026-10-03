@@ -80,6 +80,11 @@ assert.doesNotMatch(mobileSelectors, /food: food|gyms:/);
 assert.match(mapScreen, /mobile-map-progress/);
 assert.match(mobileCss, /env\(safe-area-inset-top\)/);
 assert.match(mobileCss, /env\(safe-area-inset-bottom\)/);
+// Source guards only; real search hit/empty interaction is recorded separately.
+const explore = fs.readFileSync(path.join(root, 'components/mobile/MobileExplore.tsx'), 'utf8');
+assert.match(explore, /shown\.length === 0/);
+assert.match(explore, /<output className="mobile-explore-empty"/);
+assert.match(mobileCss, /\.mobile-explore-empty[^}]*grid-column: 1 \/ -1/);
 
 const nonMapMobileFiles = fs
   .readdirSync(path.join(root, 'components/mobile'), { recursive: true })
