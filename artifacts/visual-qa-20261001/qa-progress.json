@@ -322,5 +322,16 @@
     "verification": "typecheck/lint/build/project audit and all existing regression scripts plus gallery-copy passed. Audit0failures and unchanged27630vs26000warning, data/lib diff empty. Own source review confirmed effect only changes row scroll and is panel-based, including existing local offline panel.",
     "safety": "GitHub5ed6322 and4b21ebd verified before repair. Exact own source/test/images/progress backed up, generated/user files preserved. Viewport reset; no private uploads/business-state mutation/deployment. Existing Restore/native-confirm/full-network-offline/performance and final overall acceptance remain pending."
   },
+  "mobileOfflineActions20261003": {
+    "commits": ["d6f9dc0", "1dcb014"],
+    "issue": "Actual375 Mobile More Offline pack control had no padding or component spacing; download button rendered transparent with0padding, visually ordinary text despite44px height. Existing GPX CTA had light-blue white-text contrast. Prior approvals did not cover this offline panel.",
+    "fix": "Only mobile-offline-panel scoped CSS: grid8gap/16padding/12radius,18px title/13px metadata,44px full-width download CTA using existing safe#2478ad with white text. Same panel GPX CTA deepened to match; disabled opacity specified. Downloader, service worker, manifest, GPX coordinates, desktop CSS and travel data untouched. Three CSS static guards, not behavioral tests.",
+    "actual": "375 content360=scroll360; download width252 and GPX284, both44px and rgb36,120,173/white; Leaflet0.430 content415=scroll415, download307.2x44, Leaflet0. Bottom actions reachable above fixed dock. Actual Day15 GPX clicks downloaded660byte files; XML parsed five routepoints with valid coordinate ranges. Exports remain local, not uploaded/deleted. No offline pack download/cache/user-state mutation performed.",
+    "evidence": ["mobile-offline-panel-top-375-actual.jpg", "mobile-offline-panel-bottom-375-actual.jpg", "mobile-offline-panel-fixed-top-375.jpg", "mobile-offline-panel-fixed-bottom-375.jpg", "mobile-offline-panel-fixed-430.jpg"],
+    "review": "Authorized High actually viewed Before/source, identified missing control styling and requested safe deep-blue CTA. After actual375top/bottom+430top and finalCSS, explicitly accepted this narrow control hierarchy/download+GPX CTA presentation with no Must-fix. Disabled style source reviewed but disabled actual visual not exercised. No offline download/full external-network offline/Restore/global acceptance claim.",
+    "verification": "typecheck/lint/build/project audit and all existing linkage/architecture/mobile/desktop-workspace/trip-presentation/travel-intelligence/readiness/backup/presentation/gallery-offline regressions plus gallery-copy passed. Audit0failures/1unchangedbudgetwarning. Source review confirmed CSS scope only; data/lib diff empty.",
+    "safety": "GitHubaaa08b4 verified at start andd6f9dc0 Before backed up before CSS edit; exact own source/test/screenshots only staged. Generated/user files preserved. No private uploads, deployment or unchanged Restore/native-confirm retry. Viewport reset.",
+    "remaining": "Overall actual acceptance, isolated native-confirm cleanup, Restore file permission, full external-network offline and measured performance remain incomplete. Accepted pages not redundantly redesigned."
+  },
   "complete": false
 }
