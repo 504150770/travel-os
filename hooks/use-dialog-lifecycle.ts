@@ -16,10 +16,17 @@ export function useDialogLifecycle<T extends HTMLElement = HTMLDialogElement>(
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
     const dialog = ref.current;
-    const focusable = dialog?.querySelectorAll<HTMLElement>(
-      'button, a[href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
+    const getFocusable = () => Array.from(
+      dialog?.querySelectorAll<HTMLElement>(
+        'button, a[href], input, select, textarea, [tabindex]',
+      ) ?? [],
+    ).filter((element) =>
+      !element.matches(':disabled') &&
+      element.tabIndex >= 0 &&
+      element.getClientRects().length > 0 &&
+      getComputedStyle(element).visibility !== 'hidden',
     );
-    focusable?.[0]?.focus();
+    getFocusable()[0]?.focus();
     const keydown = (event: KeyboardEvent) => {
       // A native top-layer Gallery owns its keyboard events, not this drawer.
       const topDialog = event.target instanceof Element
@@ -27,7 +34,9 @@ export function useDialogLifecycle<T extends HTMLElement = HTMLDialogElement>(
         : null;
       if (topDialog && topDialog !== dialog) return;
       if (event.key === 'Escape') closeRef.current();
-      if (event.key !== 'Tab' || !focusable?.length) return;
+      if (event.key !== 'Tab') return;
+      const focusable = getFocusable();
+      if (!focusable.length) return;
       const first = focusable[0];
       const last = focusable[focusable.length - 1];
       if (event.shiftKey && document.activeElement === first) {
