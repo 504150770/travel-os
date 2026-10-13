@@ -72,7 +72,7 @@ export function MobileEntitySheet({
               )
             }
           >
-            <Plus /> Add to Today
+            <Plus /> 加入 D{controller.selectedDay}
           </button>
         )}
         {placement && <span>Day {placement.dayId} 已加入 ✓</span>}

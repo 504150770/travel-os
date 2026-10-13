@@ -129,7 +129,7 @@ export function MoreView({
         </button>
       </div>
       {tab === 'stay' && <Stay privateLinks={privateLinks} open={open} />}{' '}
-      {tab === 'documents' && <Suspense fallback={<p className="readiness-loading">Opening local vault…</p>}><DocumentsPanel bookings={controller.bookings} /></Suspense>}{' '}
+      {tab === 'documents' && <Suspense fallback={<p className="readiness-loading">Opening local vault…</p>}><DocumentsPanel bookings={controller.bookings} request={controller.documentRequest} onRequestHandled={controller.clearDocumentRequest} /></Suspense>}{' '}
       {tab === 'packing' && <Suspense fallback={<p className="readiness-loading">Opening packing list…</p>}><PackingPanel items={controller.packingItems} setItems={controller.setPackingItems} /></Suspense>}{' '}
       {tab === 'map' && (
         <div>

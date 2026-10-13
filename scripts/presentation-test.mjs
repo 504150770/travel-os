@@ -55,7 +55,13 @@ assert.match(read('components/mobile/MobilePlan.tsx'), /Math\.abs\(plan\.overUnd
 assert.match(read('components/mobile/MobilePlan.tsx'), /row\.scrollLeft \+=/);
 assert.match(read('components/mobile/MobilePlan.tsx'), /\[controller\.planTab\]/);
 assert.match(read('components/mobile/MobilePlan.tsx'), /Unknown: '状态未确认'/);
-assert.match(read('components/mobile/MobilePlan.tsx'), /segment\.status !== 'TICKETED'/);
+// The mobile transport panel owns preference controls after extraction from Plan.
+// Both its visibility and mutation handler protect ticketed segments/candidates.
+const mobileTransport = read('components/mobile/MobileTransportPanel.tsx');
+assert.match(read('components/mobile/MobilePlan.tsx'), /<MobileTransportPanel controller=\{controller\}/);
+assert.match(mobileTransport, /canSelect=\{transportPreferenceAllowed\(segment\.status, candidate\.status\)\}/);
+assert.match(mobileTransport, /if \(!transportPreferenceAllowed\(segment\.status, candidate\.status\)\) return/);
+assert.match(mobileTransport, /\{canSelect && <button className="mobile-transport-prefer"/);
 assert.doesNotMatch(read('components/mobile/MobilePlan.tsx'), /Choose in desktop Plan/);
 assert.match(read('components/mobile/MobilePlan.tsx'), /Critical: '关键'/);
 assert.match(read('views/trip/DesktopTripDrawers.tsx'), /shown\.length === 0 && <output className="workspace-search-empty">未找到匹配结果/);

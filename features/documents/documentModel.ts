@@ -1,9 +1,22 @@
+import type { Booking } from '@/lib/types';
+
 export const DOCUMENT_CATEGORIES = [
   'Flight ticket', 'Train ticket', 'Hotel confirmation', 'Attraction ticket',
   'Insurance', 'Visa-related document', 'Reservation', 'eSIM / receipt', 'Other',
 ] as const;
 
 export type DocumentCategory = (typeof DOCUMENT_CATEGORIES)[number];
+export type DocumentOpenRequest = { bookingId: string; token: number };
+
+export function documentDraftForBooking(booking: Pick<Booking, 'id' | 'title' | 'category'>) {
+  const category: DocumentCategory = booking.id.startsWith('booking-stay-') || /酒店/.test(booking.category)
+    ? 'Hotel confirmation'
+    : /铁路/.test(booking.category) ? 'Train ticket'
+      : /机票|航班/.test(booking.category) ? 'Flight ticket'
+        : /景点票/.test(booking.category) ? 'Attraction ticket'
+          : /保险/.test(booking.category) ? 'Insurance' : 'Other';
+  return { bookingId: booking.id, title: booking.title, category };
+}
 export type DocumentMetadata = {
   id: string;
   title: string;

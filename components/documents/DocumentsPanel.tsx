@@ -4,7 +4,7 @@ import { FileText, Image as ImageIcon, LockKeyhole, Plus, Trash2, X } from 'luci
 import { useEffect, useMemo, useState } from 'react';
 import type { Booking } from '@/lib/types';
 import { cityNames } from '@/features/app/appModel';
-import { DOCUMENT_CATEGORIES, formatDocumentSize, validateDocumentFile, type DocumentCategory, type StoredDocument } from '@/features/documents/documentModel';
+import { DOCUMENT_CATEGORIES, documentDraftForBooking, formatDocumentSize, validateDocumentFile, type DocumentCategory, type DocumentOpenRequest, type StoredDocument } from '@/features/documents/documentModel';
 import { useDocumentVault } from '@/features/documents/useDocumentVault';
 import '@/components/readiness/readiness.css';
 
@@ -14,7 +14,11 @@ const labels: Record<DocumentCategory, string> = {
   Reservation: 'Other', 'eSIM / receipt': 'Other', Other: 'Other',
 };
 
-export function DocumentsPanel({ bookings }: { bookings: Booking[] }) {
+export function DocumentsPanel({ bookings, request, onRequestHandled }: {
+  bookings: Booking[];
+  request?: DocumentOpenRequest | null;
+  onRequestHandled?: (token: number) => void;
+}) {
   const vault = useDocumentVault();
   const [adding, setAdding] = useState(false);
   const [file, setFile] = useState<File>();
@@ -27,6 +31,21 @@ export function DocumentsPanel({ bookings }: { bookings: Booking[] }) {
   const [message, setMessage] = useState<string>();
   const [viewer, setViewer] = useState<StoredDocument>();
   const [viewerUrl, setViewerUrl] = useState<string>();
+  const [formKey, setFormKey] = useState(0);
+  useEffect(() => {
+    if (!request) return;
+    const booking = bookings.find((item) => item.id === request.bookingId);
+    const timer = window.setTimeout(() => {
+      if (booking) {
+        const draft = documentDraftForBooking(booking);
+        setFile(undefined); setTitle(draft.title); setCategory(draft.category);
+        setBookingId(draft.bookingId); setCity(''); setDayId(''); setNote('');
+        setMessage(undefined); setFormKey(request.token); setAdding(true);
+      }
+      onRequestHandled?.(request.token);
+    }, 0);
+    return () => window.clearTimeout(timer);
+  }, [bookings, request, onRequestHandled]);
   useEffect(() => {
     if (!viewer) { setViewerUrl(undefined); return; }
     const url = URL.createObjectURL(viewer.blob); setViewerUrl(url);
@@ -37,7 +56,7 @@ export function DocumentsPanel({ bookings }: { bookings: Booking[] }) {
   return <section className="documents-panel">
     <header className="readiness-summary compact"><div><span>随身资料</span><h2>{vault.documents.length} 份本机资料</h2><p><LockKeyhole /> 仅保存在此设备，不包含在 JSON 备份中。</p></div><strong>离线可用 ✓</strong></header>
     <button className="readiness-primary" onClick={() => setAdding(!adding)}><Plus /> 添加资料</button>
-    {adding && <form className="document-add" onSubmit={async (event) => {
+    {adding && <form key={formKey} className="document-add" onSubmit={async (event) => {
       event.preventDefault(); if (!file) return;
       const issue = validateDocumentFile(file); if (issue) { setMessage(issue); return; }
       const record: StoredDocument = { id: globalThis.crypto?.randomUUID?.() ?? `doc-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`, title: title.trim() || file.name.replace(/\.[^.]+$/, ''), category, city: city || undefined, dayId: dayId ? Number(dayId) : undefined, bookingId: bookingId || undefined, fileName: file.name, mimeType: file.type, size: file.size, addedAt: new Date().toISOString(), note: note.trim() || undefined, blob: file };

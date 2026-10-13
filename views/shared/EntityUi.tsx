@@ -100,6 +100,7 @@ export function EntityActions({
   const [day, setDay] = useState(selectedDay);
   const [added, setAdded] = useState(false);
   const placed = placement(entity.id, day);
+  const targetLabel = `Day ${day} · ${routeCityForDay(guideData.days[day - 1] as Day)}`;
   const links = mapLinks(entity);
   const add = (target: 'activeItems' | 'alternatives') => {
     addEntity(entity.id, day, target);
@@ -130,14 +131,14 @@ export function EntityActions({
             <button
               onClick={() => addEntity(entity.id, placed.dayId, 'activeItems')}
             >
-              加入今天
+              加入 Day {placed.dayId}
             </button>
           )}
         </>
       ) : (
         <>
           <button onClick={() => add('activeItems')}>
-            {added ? 'Added ✓' : '+ 加入今天'}
+            {added ? '已加入 ✓' : `加入 ${targetLabel}`}
           </button>
           <button onClick={() => add('alternatives')}>加入备选</button>
         </>

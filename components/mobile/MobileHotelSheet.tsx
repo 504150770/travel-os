@@ -7,8 +7,12 @@ import type { HotelBooking } from '@/lib/types';
 import type { AppController } from '@/features/app/useAppController';
 import { normalizeGalleryImage, openGalleryRequest } from '@/lib/media';
 import { MobileSheet } from '@/components/mobile/MobileSheet';
+import { checkinActionId } from '@/lib/action-queue';
 
-const ContextualDocumentButton = lazy(async () => ({ default: (await import('@/components/documents/ContextualDocumentButton')).ContextualDocumentButton }));
+const ContextualDocumentButton = lazy(async () => ({
+  default: (await import('@/components/documents/ContextualDocumentButton'))
+    .ContextualDocumentButton,
+}));
 
 export function MobileHotelSheet({
   stay,
@@ -24,10 +28,13 @@ export function MobileHotelSheet({
   const images = stay.images
     .filter((image) => image.file)
     .map((image) =>
-      normalizeGalleryImage({ ...image, file: image.file! }, {
-        entityId: stay.id,
-        title: stay.hotelName,
-      }),
+      normalizeGalleryImage(
+        { ...image, file: image.file! },
+        {
+          entityId: stay.id,
+          title: stay.hotelName,
+        },
+      ),
     );
   const cover = images.find((image) => image.isCover) ?? images[0];
   const entrance = images.find((image) => image.role === 'entrance');
@@ -77,7 +84,12 @@ export function MobileHotelSheet({
         </button>
       </div>
       <p className="mobile-hotel-address">{stay.execution.address}</p>
-      <Suspense fallback={null}><ContextualDocumentButton bookingId={`booking-${stay.id}`} /></Suspense>
+      <Suspense fallback={null}>
+        <ContextualDocumentButton
+          bookingId={`booking-${stay.id}`}
+          onAdd={controller.openDocumentForBooking}
+        />
+      </Suspense>
       {entrance && (
         <button
           className="mobile-entrance-row"
@@ -115,7 +127,10 @@ export function MobileHotelSheet({
         </div>
         <div>
           <dt>在线入住</dt>
-          <dd>{stay.execution.onlineCheckIn.status}</dd>
+          <dd>
+            {controller.actionStatuses[checkinActionId(stay.id)] ??
+              stay.execution.onlineCheckIn.status}
+          </dd>
         </div>
       </dl>
     </MobileSheet>

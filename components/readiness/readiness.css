@@ -142,7 +142,7 @@
 .readiness-item small svg {
   width: 14px;
 }
-.readiness-item > button,
+.readiness-item-actions > button,
 .readiness-primary,
 .document-add button,
 .packing-add button,
@@ -159,7 +159,7 @@
   color: #222;
   font-weight: 700;
 }
-.readiness-item > button svg,
+.readiness-item-actions > button svg,
 .readiness-primary svg,
 .context-document-button svg {
   width: 17px;
@@ -169,6 +169,36 @@
   border-color: #5dade2;
   background: #5dade2;
   color: #fff;
+}
+.readiness-item-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+  max-width: 280px;
+}
+.readiness-item-actions .readiness-open {
+  border-color: #2478ad;
+  color: #2478ad;
+}
+.readiness-item-actions .readiness-complete {
+  border-color: transparent;
+  background: transparent;
+  color: #6a6a6a;
+  font-weight: 500;
+}
+.readiness-item-actions .context-document-button {
+  margin-top: 0;
+}
+[data-action-id],
+[data-packing-id] {
+  scroll-margin-block: 96px;
+}
+[data-action-id]:focus,
+[data-packing-id]:focus {
+  outline: 2px solid #2478ad;
+  outline-offset: 4px;
 }
 .readiness-empty {
   display: flex;
@@ -437,9 +467,9 @@
   .readiness-item {
     grid-template-columns: 36px minmax(0, 1fr);
   }
-  .readiness-item > button {
+  .readiness-item-actions {
     grid-column: 2;
-    width: max-content;
+    justify-content: flex-start;
   }
   .readiness-section > header p {
     display: none;

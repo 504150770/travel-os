@@ -134,7 +134,7 @@ export function MobileMore({ controller }: { controller: AppController }) {
         </div>
       )}
 
-      {panel === 'documents' && <Suspense fallback={<p className="readiness-loading">Opening local vault…</p>}><DocumentsPanel bookings={controller.bookings} /></Suspense>}
+      {panel === 'documents' && <Suspense fallback={<p className="readiness-loading">Opening local vault…</p>}><DocumentsPanel bookings={controller.bookings} request={controller.documentRequest} onRequestHandled={controller.clearDocumentRequest} /></Suspense>}
       {panel === 'packing' && <Suspense fallback={<p className="readiness-loading">Opening packing list…</p>}><PackingPanel items={controller.packingItems} setItems={controller.setPackingItems} /></Suspense>}
 
       {panel === 'essentials' && (

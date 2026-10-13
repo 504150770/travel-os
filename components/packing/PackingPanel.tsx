@@ -39,7 +39,7 @@ export function PackingPanel({ items, setItems }: { items: PackingItem[]; setIte
     {PACKING_CATEGORIES.map((group) => {
       const groupItems = items.filter((item) => item.category === group);
       if (!groupItems.length) return null;
-      return <section className="packing-group" key={group}><h3>{categoryLabels[group]}</h3>{groupItems.map((item) => <article key={item.id} className={item.packed ? 'packed' : ''}>
+      return <section className="packing-group" key={group}><h3>{categoryLabels[group]}</h3>{groupItems.map((item) => <article key={item.id} data-packing-id={item.id} tabIndex={-1} className={item.packed ? 'packed' : ''}>
         <button className="packing-check" aria-label={`${item.packed ? 'Uncheck' : 'Check'} ${item.label}`} onClick={() => setItems(updatePackingItem(items, item.id, { packed: !item.packed }))}>{item.packed ? <Check /> : <Circle />}</button>
         <span><b>{item.label}</b>{item.critical && <small>Critical</small>}</span>
         <button aria-label={`Edit ${item.label}`} onClick={() => edit(item)}><Pencil /></button>

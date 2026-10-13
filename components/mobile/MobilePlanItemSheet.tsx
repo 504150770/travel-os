@@ -1,6 +1,12 @@
 'use client';
 
-import { ArrowDown, ArrowUp, Navigation, RefreshCcw, Trash2 } from 'lucide-react';
+import {
+  ArrowDown,
+  ArrowUp,
+  Navigation,
+  RefreshCcw,
+  Trash2,
+} from 'lucide-react';
 import type { Entity } from '@/lib/entity-library';
 import type { PlanItem } from '@/hooks/use-editable-plan';
 import type { AppController } from '@/features/app/useAppController';
@@ -29,26 +35,39 @@ export function MobilePlanItemSheet({
     close();
   };
   return (
-    <MobileSheet open close={close} eyebrow="CURRENT PLAN" title={entity.name}>
+    <MobileSheet
+      open
+      close={close}
+      eyebrow={`D${controller.selectedDay} · 当天安排`}
+      title={entity.name}
+    >
       <div className="mobile-sheet-actions">
         <a href={links.google} target="_blank" rel="noreferrer">
-          <Navigation /> Navigate
+          <Navigation /> 导航
         </a>
         <button
           disabled={index === 0}
           onClick={() =>
-            run(() => controller.actions.moveWithin(controller.selectedDay, item.id, -1))
+            run(() =>
+              controller.actions.moveWithin(
+                controller.selectedDay,
+                item.id,
+                -1,
+              ),
+            )
           }
         >
-          <ArrowUp /> Move earlier
+          <ArrowUp /> 提前一项
         </button>
         <button
           disabled={index === total - 1}
           onClick={() =>
-            run(() => controller.actions.moveWithin(controller.selectedDay, item.id, 1))
+            run(() =>
+              controller.actions.moveWithin(controller.selectedDay, item.id, 1),
+            )
           }
         >
-          <ArrowDown /> Move later
+          <ArrowDown /> 推后一项
         </button>
         <button
           onClick={() =>
@@ -62,7 +81,7 @@ export function MobilePlanItemSheet({
             )
           }
         >
-          <RefreshCcw /> Replace / move to alternatives
+          <RefreshCcw /> 移至当天备选
         </button>
         <button
           className="danger"
@@ -77,7 +96,7 @@ export function MobilePlanItemSheet({
             )
           }
         >
-          <Trash2 /> Remove
+          <Trash2 /> 移除安排
         </button>
       </div>
     </MobileSheet>

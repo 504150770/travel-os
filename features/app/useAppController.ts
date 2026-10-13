@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useEditablePlan } from '@/hooks/use-editable-plan';
 import { useLocalStorage } from '@/hooks/use-local-storage';
 import { validateBackup, writeBackupStorage } from '@/features/app/backupModel';
@@ -14,7 +14,9 @@ import {
   checkinActionId,
   deadlineActionId,
   taskActionId,
+  type ActionItem,
 } from '@/lib/action-queue';
+import type { DocumentOpenRequest } from '@/features/documents/documentModel';
 import type { Booking, DeadlineItem, Task, ViewId } from '@/lib/types';
 import type { GalleryRequest } from '@/lib/media';
 import { DEFAULT_PACKING_ITEMS, PACKING_STORAGE_KEY, type PackingItem } from '@/features/packing/packingModel';
@@ -46,6 +48,9 @@ export function useAppController() {
   const [discoverCity, setDiscoverCity] = useState('罗马');
   const [online, setOnline] = useState(true);
   const [lightbox, setLightbox] = useState<GalleryRequest | null>(null);
+  const [focusRequest, setFocusRequest] = useState<{ attribute: 'data-action-id' | 'data-packing-id'; id: string } | null>(null);
+  const [documentRequest, setDocumentRequest] = useState<DocumentOpenRequest | null>(null);
+  const documentRequestToken = useRef(0);
   const actions = useEditablePlan();
   const [customEntities, setCustomEntities] = useLocalStorage<CustomEntity[]>(
     'europe-guide-custom-entities-v1',
@@ -85,6 +90,8 @@ export function useAppController() {
   );
 
   const applyUrl = () => {
+    setFocusRequest(null);
+    setDocumentRequest(null);
     const state = readUrlState();
     if (state.view) {
       setView(desktopViewFromUrl(state.view));
@@ -130,6 +137,36 @@ export function useAppController() {
     );
   };
   const writeUrl = useUrlState(applyUrl);
+
+  useEffect(() => {
+    if (!focusRequest) return;
+    let settled = false;
+    const stop = () => {
+      observer.disconnect();
+      window.clearTimeout(timer);
+    };
+    const focus = () => {
+      if (settled) return;
+      const target = Array.from(document.querySelectorAll<HTMLElement>(`[${focusRequest.attribute}]`))
+        .find((node) => node.getAttribute(focusRequest.attribute) === focusRequest.id);
+      if (!target) return;
+      settled = true;
+      stop();
+      let ancestor = target.parentElement;
+      while (ancestor) {
+        if (ancestor instanceof HTMLDetailsElement) ancestor.open = true;
+        ancestor = ancestor.parentElement;
+      }
+      target.focus({ preventScroll: true });
+      target.scrollIntoView({ block: 'center', behavior: 'instant' });
+    };
+    // More panels are lazy loaded; wait only until the requested row is mounted.
+    const observer = new MutationObserver(focus);
+    const timer = window.setTimeout(stop, 5000);
+    observer.observe(document.body, { childList: true, subtree: true });
+    focus();
+    return stop;
+  }, [focusRequest, view, planTab, moreTab]);
 
   useEffect(() => {
     const timer = window.setTimeout(() => {
@@ -272,6 +309,8 @@ export function useAppController() {
   );
 
   const navigate = (next: ViewId, tripDay = selectedDay) => {
+    setFocusRequest(null);
+    setDocumentRequest(null);
     sessionStorage.setItem(
       `travel-scroll:${location.pathname}${location.search}`,
       String(window.scrollY),
@@ -315,6 +354,8 @@ export function useAppController() {
   });
 
   const navigateMobile = (next: MobileView) => {
+    setFocusRequest(null);
+    setDocumentRequest(null);
     sessionStorage.setItem(
       `travel-mobile-scroll:${mobileView}:d${selectedDay}`,
       String(window.scrollY),
@@ -397,10 +438,13 @@ export function useAppController() {
     writeUrl({ view: 'explore', day: selectedDay, tab: discoverTab, city });
   };
   const selectMobilePlanTab = (tab: PlanTab) => {
+    setFocusRequest(null);
     setPlanTab(tab);
     writeUrl({ view: 'plan', day: selectedDay, tab, city: null });
   };
   const selectMobileMoreTab = (tab: MoreTab) => {
+    setFocusRequest(null);
+    setDocumentRequest(null);
     setMoreTab(tab);
     writeUrl({
       view: 'more',
@@ -418,10 +462,13 @@ export function useAppController() {
     writeUrl({ view: 'discover', tab: discoverTab, city, day: null });
   };
   const selectPlanTab = (tab: PlanTab) => {
+    setFocusRequest(null);
     setPlanTab(tab);
     writeUrl({ view: 'plan', tab, day: null, city: null });
   };
   const selectMoreTab = (tab: MoreTab) => {
+    setFocusRequest(null);
+    setDocumentRequest(null);
     setMoreTab(tab);
     writeUrl({
       view: 'more',
@@ -439,15 +486,34 @@ export function useAppController() {
       city: null,
     });
   };
-  const openNextAction = () => {
+  const openAction = (action: ActionItem) => {
     navigate('plan');
-    const target = nextAction?.target ?? 'tasks';
+    const target = action.target;
     setPlanTab(target);
+    setFocusRequest({ attribute: 'data-action-id', id: action.id });
     writeUrl(
-      { view: 'plan', tab: target, day: null, city: null },
+      { view: 'plan', tab: target, day: selectedDay, city: null },
       'replace',
     );
   };
+  const openNextAction = () => {
+    if (nextAction) openAction(nextAction);
+    else { navigate('plan'); selectPlanTab('readiness'); }
+  };
+  const openPackingItem = (id: string) => {
+    navigate('more');
+    selectMoreTab('packing');
+    setFocusRequest({ attribute: 'data-packing-id', id });
+  };
+  const openDocumentForBooking = (bookingId: string) => {
+    if (!bookings.some((booking) => booking.id === bookingId)) return;
+    navigate('more');
+    selectMoreTab('documents');
+    setDocumentRequest({ bookingId, token: ++documentRequestToken.current });
+  };
+  const clearDocumentRequest = useCallback((token: number) => {
+    setDocumentRequest((request) => request?.token === token ? null : request);
+  }, []);
   const openBudget = () => {
     navigate('plan');
     setPlanTab('budget');
@@ -512,6 +578,11 @@ export function useAppController() {
     selectPlanTab,
     selectMoreTab,
     selectMoreDay,
+    openAction,
+    openPackingItem,
+    openDocumentForBooking,
+    documentRequest,
+    clearDocumentRequest,
     openNextAction,
     openBudget,
   };

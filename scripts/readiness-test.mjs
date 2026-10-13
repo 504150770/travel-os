@@ -6,6 +6,7 @@ import { IDBFactory } from 'fake-indexeddb';
 import { saveDocument, readDocument, listDocuments, deleteDocument } from '../features/documents/documentStore.ts';
 import { DEFAULT_PACKING_ITEMS, packingSummary, updatePackingItem } from '../features/packing/packingModel.ts';
 import { buildReadiness } from '../features/readiness/readinessModel.ts';
+import { documentDraftForBooking } from '../features/documents/documentModel.ts';
 import { runPrivacyAudit } from './privacy-audit.mjs';
 
 const root = join(fileURLToPath(new URL('.', import.meta.url)), '..');
@@ -44,6 +45,17 @@ assert.equal(near.sections.action.filter((item) => item.source === 'packing').le
 const bookedTrain = { id: 'train-1', category: '铁路', title: 'Rome to Florence', date: '2026-12-05', budget: 1, status: 'Booked', detail: '', paymentStatus: 'Paid', supplier: '', orderNumber: '', cancellationDeadline: '', address: '', serviceNumber: '', stationAirport: '', baggage: '', contact: '', notes: '', attachmentName: '', lastVerified: '' };
 const missing = buildReadiness({ now: new Date('2026-11-20T12:00:00'), tripStart: '2026-12-01', actions: [], bookings: [bookedTrain], packing: [], documents: [], privateLinks: {} });
 assert.equal(missing.sections.action[0]?.source, 'document');
+const trainDraft = documentDraftForBooking(bookedTrain);
+assert.deepEqual(trainDraft, { bookingId: 'train-1', title: 'Rome to Florence', category: 'Train ticket' }, 'opening a booking document must retain the exact booking context');
+await saveDocument({ id: 'linked-train-document', ...trainDraft, fileName: 'train.pdf', mimeType: pdf.type, size: pdf.size, addedAt: '2026-11-20T12:00:00.000Z', blob: pdf }, factory);
+const linkedDocuments = await listDocuments(factory);
+const linkedReadiness = buildReadiness({ now: new Date('2026-11-20T12:00:00'), tripStart: '2026-12-01', actions: [], bookings: [bookedTrain], packing: [], documents: linkedDocuments, privateLinks: {} });
+assert.equal(linkedReadiness.sections.action.length, 0, 'saving the preselected booking document must resolve that booking requirement');
+assert.equal(linkedReadiness.sections.ready[0]?.bookingId, bookedTrain.id);
+assert.equal((await readDocument('linked-train-document', factory))?.blob.size, pdf.size);
+await deleteDocument('linked-train-document', factory);
+assert.equal(documentDraftForBooking({ id: 'booking-stay-rome', title: 'Hotel', category: '酒店' }).category, 'Hotel confirmation');
+assert.equal(documentDraftForBooking({ id: 'unclassified', title: 'Other booking', category: '未分类' }).category, 'Other', 'unknown categories must not be silently presented as flight tickets');
 const saved = buildReadiness({ now: new Date('2026-11-20T12:00:00'), tripStart: '2026-12-01', actions: [], bookings: [bookedTrain], packing: [], documents: [{ id: 'd', title: 'Ticket', category: 'Train ticket', bookingId: 'train-1', fileName: 't.pdf', mimeType: 'application/pdf', size: 2, addedAt: '' }], privateLinks: {} });
 assert.equal(saved.sections.ready[0]?.source, 'document');
 

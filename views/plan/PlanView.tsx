@@ -165,7 +165,7 @@ export function PlanView({
                     <b>备注</b>
                     {item.notes || '—'}
                   </p>
-                  <Suspense fallback={null}><ContextualDocumentButton bookingId={item.id} /></Suspense>
+                  <Suspense fallback={null}><ContextualDocumentButton bookingId={item.id} onAdd={controller.openDocumentForBooking} /></Suspense>
                 </div>
               </details>
             ))}
@@ -351,7 +351,7 @@ export function PlanView({
               ? 'Done'
               : (actionStatuses[actionId] ?? task.status);
             return (
-              <article key={task.id}>
+              <article key={task.id} data-action-id={actionId} tabIndex={-1}>
                 <button
                   className={status === 'Done' ? 'done' : ''}
                   aria-label={`${task.title}：${status === 'Done' ? '标记未完成' : '标记完成'}`}

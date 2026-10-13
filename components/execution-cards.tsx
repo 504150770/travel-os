@@ -476,6 +476,8 @@ export function CheckinCenter({
         return (
           <article
             key={stay.id}
+            data-action-id={actionId}
+            tabIndex={-1}
             className={
               stay.execution.onlineCheckIn.requirement === 'Required'
                 ? 'critical'
@@ -565,7 +567,7 @@ export function DeadlineCenter({
               const actionId = deadlineActionId(item);
               const unifiedStatus = statuses[actionId] ?? item.status;
               return (
-                <article key={item.id}>
+                <article key={item.id} data-action-id={actionId} tabIndex={-1}>
                   <time>
                     {item.date}
                     <small>{item.time}</small>
