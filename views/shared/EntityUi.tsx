@@ -83,6 +83,7 @@ export function EntityActions({
   entity,
   selectedDay,
   addEntity,
+  transfer,
   placement,
 }: {
   entity: Entity;
@@ -92,10 +93,16 @@ export function EntityActions({
     day: number,
     target: 'activeItems' | 'alternatives',
   ) => void;
+  transfer: (
+    dayId: number,
+    itemId: string,
+    from: 'activeItems' | 'alternatives' | 'removedItems',
+    to: 'activeItems' | 'alternatives' | 'removedItems',
+  ) => void;
   placement: (
     id: string,
     preferredDayId?: number,
-  ) => { dayId: number; zone: 'trip' | 'backup' } | null;
+  ) => { dayId: number; itemId: string; zone: 'trip' | 'backup' } | null;
 }) {
   const [day, setDay] = useState(selectedDay);
   const [added, setAdded] = useState(false);
@@ -129,7 +136,7 @@ export function EntityActions({
           </span>
           {placed.zone === 'backup' && (
             <button
-              onClick={() => addEntity(entity.id, placed.dayId, 'activeItems')}
+              onClick={() => transfer(placed.dayId, placed.itemId, 'alternatives', 'activeItems')}
             >
               加入 Day {placed.dayId}
             </button>

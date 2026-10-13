@@ -131,7 +131,7 @@ export function EntityDetailDrawer({
       <Media images={entity.images} entityId={entity.id} name={entity.name} open={openGallery} hero />
       <p className="workspace-entity-description">{entity.description || entity.notes || '现场信息以官方页面为准。'}</p>
       <dl className="workspace-entity-facts"><div><dt>Price / ticket</dt><dd>{entity.priceLabel}</dd></div><div><dt>Opening</dt><dd>{entity.openingHours}</dd></div><div><dt>Address</dt><dd>{entity.address}</dd></div><div><dt>Checked</dt><dd>{entity.lastVerified}</dd></div></dl>
-      <EntityActions entity={entity} selectedDay={dayId} addEntity={actions.addEntity} placement={actions.placement} />
+      <EntityActions entity={entity} selectedDay={dayId} addEntity={actions.addEntity} transfer={actions.transfer} placement={actions.placement} />
     </>}
   </DesktopDrawer>;
 }

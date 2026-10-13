@@ -131,6 +131,7 @@ export function DayFood({
           entity={entity}
           selectedDay={dayId}
           addEntity={actions.addEntity}
+          transfer={actions.transfer}
           placement={actions.placement}
         />
       </div>

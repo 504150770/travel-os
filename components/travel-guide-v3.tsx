@@ -20,17 +20,17 @@ export default function TravelGuideV3() {
     notes, setNotes, budgetState, activeEntities, nextAction, actionQueue, actualTotal,
     daysLeft, backup, importBackup, navigate, selectTripDay,
     selectDiscoverTab, selectDiscoverCity, selectPlanTab, selectMoreTab,
-    selectMoreDay, openNextAction, openBudget, setLightbox,
+    selectMoreDay, openReadiness, openNextAction, openBudget, setLightbox,
   } = controller;
 
   return (
     <AppShell controller={controller}>
       {view !== 'trip' && <div key={view} className="view-transition">
         {view === 'home' && <HomeView
-          daysLeft={daysLeft} nextAction={nextAction}
+          daysLeft={daysLeft} selectedDay={selectedDay} nextAction={nextAction}
           projectedBudget={budgetState.projected} actualTotal={actualTotal}
           unknownCosts={budgetState.unknown} activeEntityCount={activeEntities.length}
-          openTrip={() => navigate('trip')} openNextAction={openNextAction} openBudget={openBudget}
+          openTrip={() => navigate('trip')} openReadiness={openReadiness} openNextAction={openNextAction} openBudget={openBudget}
           openCityTrip={(city) => {
             const stay = guideData.hotelBookings.items.find((item) => item.city === city);
             const day = guideData.days.find((item) => item.date === stay?.checkIn);

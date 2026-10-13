@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { CalendarDays, Camera, Heart, Navigation, Plus, Search } from 'lucide-react';
+import { CalendarDays, Camera, Check, Heart, Navigation, Plus, Search, X } from 'lucide-react';
 import { useMemo, useState } from 'react';
 import type { Entity, EntityType } from '@/lib/entity-library';
 import { normalizeRouteCity } from '@/lib/entity-library';
@@ -10,6 +10,7 @@ import type { DiscoverTab } from '@/features/app/appModel';
 import { cityNames } from '@/features/app/appModel';
 import { selectCoverImage } from '@/lib/media';
 import { MobileEntitySheet } from '@/components/mobile/MobileEntitySheet';
+import { MobilePlanTarget } from '@/components/mobile/MobilePlanTarget';
 
 const categories: Array<[DiscoverTab, string, EntityType[]]> = [
   ['places', '地点与活动', ['place', 'activity', 'photo_spot', 'custom']],
@@ -45,17 +46,18 @@ export function MobileExplore({ controller }: { controller: AppController }) {
       <header className="mobile-screen-heading">
         <span>EXPLORE</span>
         <h1>沿着行程发现</h1>
-        <p>收藏心动的地点，准备好后再加入当天行程。</p>
+        <p>收藏心动的地点，选择旅行日后加入行程。</p>
       </header>
-      <label className="mobile-search">
+      <div className="mobile-search">
         <Search />
         <input
           value={search}
           onChange={(event) => setSearch(event.target.value)}
-          placeholder="搜索地点、活动、美食、健身…"
-          aria-label="搜索推荐"
+          placeholder={`搜索${controller.discoverCity} · ${activeCategory[1]}`}
+          aria-label={`搜索${controller.discoverCity}的${activeCategory[1]}`}
         />
-      </label>
+        {search && <button className="mobile-search-clear" onClick={() => setSearch('')} aria-label="清除搜索关键词"><X /></button>}
+      </div>
       <div className="mobile-filter-row">
         {categories.map(([id, label]) => (
           <button
@@ -77,6 +79,7 @@ export function MobileExplore({ controller }: { controller: AppController }) {
           <option key={city}>{city}</option>
         ))}
       </select>
+      <MobilePlanTarget selectedDay={controller.selectedDay} selectDay={controller.selectMobileDay} />
       <div className="mobile-explore-grid">
         {shown.length === 0 && (
           <output className="mobile-explore-empty">
@@ -124,18 +127,20 @@ export function MobileExplore({ controller }: { controller: AppController }) {
                 <h2>{entity.name}</h2>
                 <p>{entity.priceLabel}</p>
               </button>
+              {placed?.zone === 'backup' && <span className="mobile-placement-note">Day {placed.dayId} 备选</span>}
               <button
                 className="mobile-add-today"
-                disabled={Boolean(placed)}
-                onClick={() =>
-                  controller.actions.addEntity(
-                    entity.id,
-                    controller.selectedDay,
-                    'activeItems',
-                  )
-                }
+                disabled={placed?.zone === 'trip'}
+                onClick={() => {
+                  if (placed?.zone === 'backup') {
+                    controller.actions.transfer(placed.dayId, placed.itemId, 'alternatives', 'activeItems');
+                  } else if (!placed) {
+                    controller.actions.addEntity(entity.id, controller.selectedDay, 'activeItems');
+                  }
+                }}
               >
-                <Plus /> {placed ? `Day ${placed.dayId} 已加入` : '加入当天'}
+                {placed?.zone === 'trip' ? <Check /> : <Plus />}
+                {placed?.zone === 'trip' ? `Day ${placed.dayId} 已加入` : `加入 Day ${controller.selectedDay}`}
               </button>
             </article>
           );

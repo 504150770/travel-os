@@ -12,6 +12,8 @@
 - 用户于 2026-10-03 明确授权部署：QA 源版本 `395cb61` 已发布至 `travel.jacob.xin`，Vercel `dpl_HzdcSGEyFEbvo2ErzexMaL5uyCBA` 为 READY。后续发布记录提交与线上源版本区分；完整 QA 仍未完成。
 - 保持旅行事实、Current Plan、酒店、国际航班、住宿日期、预算、签证及推荐算法不变。发布需新一轮明确授权。
 
+2026-10-13 人工授权的实用性改进已分两批记录：[手机 Today / 交通与准备](artifacts/frontend-practicality-20261013/REVIEW.md)、[首页与探索](artifacts/frontend-practicality-20261013/REVIEW-BATCH2.md)。用户取消自动任务后，改为当前人工任务；本轮明确要求自主验收，不再发送外部 High 复核。[Muse / Dot 接入评估](artifacts/frontend-practicality-20261013/AGENT-INTEGRATION.md) 仅为方案，尚未接入账号或同步数据。
+
 ## 本地运行
 
 ```bash

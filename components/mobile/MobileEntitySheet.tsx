@@ -7,6 +7,7 @@ import type { AppController } from '@/features/app/useAppController';
 import { mapLinks } from '@/features/trip/tripModel';
 import { openGalleryRequest, selectCoverImage } from '@/lib/media';
 import { MobileSheet } from '@/components/mobile/MobileSheet';
+import { MobilePlanTarget } from '@/components/mobile/MobilePlanTarget';
 
 export function MobileEntitySheet({
   entity,
@@ -58,24 +59,26 @@ export function MobileEntitySheet({
           </span>
         </button>
       )}
+      <MobilePlanTarget selectedDay={controller.selectedDay} selectDay={controller.selectMobileDay} />
+      {placement?.zone === 'backup' && <p className="mobile-placement-note">Day {placement.dayId} 备选 · 尚未加入正式安排</p>}
       <div className="mobile-detail-primary">
         <a href={links.google} target="_blank" rel="noreferrer">
           <Navigation /> Navigate
         </a>
-        {!placement && (
+        {placement?.zone !== 'trip' && (
           <button
-            onClick={() =>
-              controller.actions.addEntity(
-                entity.id,
-                controller.selectedDay,
-                'activeItems',
-              )
-            }
+            onClick={() => {
+              if (placement?.zone === 'backup') {
+                controller.actions.transfer(placement.dayId, placement.itemId, 'alternatives', 'activeItems');
+              } else {
+                controller.actions.addEntity(entity.id, controller.selectedDay, 'activeItems');
+              }
+            }}
           >
-            <Plus /> 加入 D{controller.selectedDay}
+            <Plus /> 加入 Day {controller.selectedDay}
           </button>
         )}
-        {placement && <span>Day {placement.dayId} 已加入 ✓</span>}
+        {placement?.zone === 'trip' && <span>Day {placement.dayId} 已加入 ✓</span>}
       </div>
       <p className="mobile-detail-copy">
         {entity.description || entity.notes || '现场信息以官方页面为准。'}

@@ -1,0 +1,7 @@
+.mobile-search input { min-width: 0; }
+.mobile-search > svg { flex: 0 0 19px; }
+.mobile-search-clear { display: grid; flex: 0 0 44px; place-items: center; min-width: 44px; min-height: 44px; margin: -8px -8px -8px 0; padding: 0; border: 0; border-radius: 8px; color: var(--mobile-muted); background: transparent; }
+.mobile-search-clear svg { width: 18px; height: 18px; }
+.mobile-plan-target { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: 12px; margin: 8px 0 18px; color: var(--mobile-muted); font-size: 13px; }
+.mobile-plan-target > select { width: 100%; min-width: 0; min-height: 44px; padding: 8px 10px; border: 1px solid var(--mobile-line); border-radius: 10px; color: var(--mobile-text); background: #fff; font: inherit; }
+.mobile-placement-note { display: block; margin: 6px 0; color: var(--mobile-muted); font-size: 12px; line-height: 1.5; }

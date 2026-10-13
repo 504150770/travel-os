@@ -146,6 +146,7 @@ function EntityDetailModal({
             entity={entity}
             selectedDay={selectedDay}
             addEntity={actions.addEntity}
+            transfer={actions.transfer}
             placement={actions.placement}
           />
         </div>
@@ -236,6 +237,7 @@ function ExploreCard({
         entity={entity}
         selectedDay={selectedDay}
         addEntity={actions.addEntity}
+        transfer={actions.transfer}
         placement={actions.placement}
       />
     </article>
@@ -327,6 +329,7 @@ export function DiscoverView({
                     entity={entity}
                     selectedDay={selectedDay}
                     addEntity={actions.addEntity}
+                    transfer={actions.transfer}
                     placement={actions.placement}
                   />
                 </article>

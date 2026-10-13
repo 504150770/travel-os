@@ -585,6 +585,8 @@ textarea { width: 100%; min-height: 150px; resize: vertical; }
   .side-nav > nav button { min-width: auto; padding: 0 12px; }
   .side-nav > nav button svg { display: none; }
   .route-ribbon { grid-template-columns: repeat(3, 1fr); }
+  .home-next-action { grid-template-columns: 48px minmax(0, 1fr); }
+  .home-paper-art { display: none; }
   .trip-layout { grid-template-columns: minmax(0, 1fr) 250px; gap: 32px; }
   .explore-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .visual-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }

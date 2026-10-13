@@ -241,10 +241,10 @@ export function useEditablePlan() {
     const matches = plan.days.flatMap((day) => [
       ...day.activeItems
         .filter((item) => item.entityId === entityId)
-        .map(() => ({ dayId: day.dayId, zone: 'trip' as const })),
+        .map((item) => ({ dayId: day.dayId, itemId: item.id, zone: 'trip' as const })),
       ...day.alternatives
         .filter((item) => item.entityId === entityId)
-        .map(() => ({ dayId: day.dayId, zone: 'backup' as const })),
+        .map((item) => ({ dayId: day.dayId, itemId: item.id, zone: 'backup' as const })),
     ]);
     if (preferredDayId !== undefined)
       return matches.find((item) => item.dayId === preferredDayId) ?? null;

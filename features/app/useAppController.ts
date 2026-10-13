@@ -330,7 +330,7 @@ export function useAppController() {
             : null;
     writeUrl({
       view: next,
-      day: next === 'trip' ? tripDay : next === 'more' ? selectedDay : null,
+      day: next === 'trip' ? tripDay : next === 'more' || next === 'home' ? selectedDay : null,
       tab,
       city: next === 'discover' ? discoverCity : null,
     });
@@ -496,9 +496,17 @@ export function useAppController() {
       'replace',
     );
   };
+  const openReadiness = () => {
+    navigate('plan');
+    setPlanTab('readiness');
+    writeUrl(
+      { view: 'plan', tab: 'readiness', day: selectedDay, city: null },
+      'replace',
+    );
+  };
   const openNextAction = () => {
     if (nextAction) openAction(nextAction);
-    else { navigate('plan'); selectPlanTab('readiness'); }
+    else openReadiness();
   };
   const openPackingItem = (id: string) => {
     navigate('more');
@@ -583,6 +591,7 @@ export function useAppController() {
     openDocumentForBooking,
     documentRequest,
     clearDocumentRequest,
+    openReadiness,
     openNextAction,
     openBudget,
   };
