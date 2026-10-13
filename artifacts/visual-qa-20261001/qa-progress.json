@@ -526,5 +526,28 @@
     "finalHumanAestheticApproval": false,
     "complete": false
   },
+  "productionRelease20261013": {
+    "report": "artifacts/production-release-20261013/release.json",
+    "authorization": "User explicitly requested 给我上线",
+    "sourceCommit": "7ad8383f4250ada4788e9ce196275ae463d35769",
+    "deploymentId": "dpl_CjCbQRJb5NwURzS6oDChVzXx3Rd4",
+    "domain": "https://travel.jacob.xin",
+    "status": "READY",
+    "rollbackDeploymentId": "dpl_C6KAGDcfYPz5n5huWK3Kut6A5yEK",
+    "domainInspectMatched": true,
+    "httpNewWorkbench": true,
+    "assetCount": 36,
+    "assetFailures": 0,
+    "chromeActual": "Hydrated HomeDay2/original photos; budget load/reload/Home retainsDay2; mobileExplore exact current-day notes/original photos/no overflow",
+    "evidence": [
+      "artifacts/production-release-20261013/home-live-1521x818.jpg",
+      "artifacts/production-release-20261013/explore-live-360x779.jpg"
+    ],
+    "evidenceCorrection": "Archive Git metadata audit failure corrected; LF/CRLF raw-hash distinction replaced by canonicalGit blobs; READY required explicit promote; Vercel login was not app failure and no protection bypass used; IAB attach failed, actual connectedChrome used; initialSSR before hydration excluded; native360x779 is not CSS375 image evidence. Full details preserved in release.json.",
+    "originalDirtySha256Equal": true,
+    "privateFilesUploaded": false,
+    "productionBusinessStateMutated": false,
+    "overallQaComplete": false
+  },
   "complete": false
 }

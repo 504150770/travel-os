@@ -2,6 +2,8 @@
 
 更新：2026-10-13。目的：保留进度与证据；不是新一轮全程旅行规划。
 
+**最新人工发布（2026-10-13）**：用户明确“给我上线”，已将改版源码 7ad8383f4250ada4788e9ce196275ae463d35769 发布并 promote 到 travel.jacob.xin。新部署 dpl_CjCbQRJb5NwURzS6oDChVzXx3Rd4 已 READY，正式域名 inspect/HTTP/真实Chrome首页与手机探索复核通过；回退基线是发布前实际核对的10月4日 dpl_C6KAGDcfYPz5n5huWK3Kut6A5yEK，不以旧10月3日记录推断其源码。见 [发布记录](artifacts/production-release-20261013/release.json)。发布只用提交导出的干净副本；原工作区十个脏文件字节保持，私人资料不上传。后续记录提交不等于另一次发布，自动任务仍取消，整体QA complete=false。
+
 **最新前端改版交付**：见 [经理验收报告](artifacts/ui-redesign-20261013/REVIEW.md)、分工报告与 acceptance.json。首页、手机当天/探索、桌面工作区及主题/导航已统一改版；真实日期刷新丢失和无地点事项导航修复。23组回归、完整项目检查和最终CSS构建/审计通过，隔离UI结束导出九组字段与基线严格相等；同断点地图复用及Drawer已实测，跨断点复用不作通过声明。仍仅QA分支，不部署、不恢复自动任务，完整外部断网与最终人工审美认可保持开放。
 
 **最新人工 UI 大改授权（2026-10-13）**：用户在并行优化 `1a91cb4` 后明确要求“继续安排其他 Codex 并行优化，重点把前端做得更实用，而且这个ui不好看，你参考同类软件，允许你大改，发现问题直接修，你统一验收和提交”。本轮可以重做已有页面的视觉、信息结构和入口，覆盖下面“不重复重设计”的旧限制。旅行事实、现有 Current Plan、私人资料、日期/酒店/航班、预算/签证/推荐算法仍受保护；不恢复定时任务或外部 High，不自动部署。分工为首页、手机当天/探索、桌面工作区；主线程独占主题/shell、浏览器、构建审计、基线恢复和提交。
@@ -29,9 +31,9 @@
 | --- | --- |
 | 交接前 GitHub QA 备份 | `10592cfe7e69089dee808198fa0dd7faafb37150`，远端已核对；文档后续提交以 Git log 为准 |
 | 最近功能/视觉修复 | `1dcb014` 手机离线操作层级；`626b75b` More 当前 tab 可见；`0cce659` Booking 状态选项；地图修复等详见 QA 日志 |
-| 最新生产发布 | 用户于 2026-10-03 明确要求“部署”；QA 源版本 `395cb61c36be1ddb77b8693981d8b8dd3b95fd81`，Vercel `dpl_HzdcSGEyFEbvo2ErzexMaL5uyCBA`，已 READY 并指向 `travel.jacob.xin` |
-| 前一生产发布 / 回退基线 | Home 城市入口版本 `dpl_GtPDHjQ8P8zSC1iJDMgutGqSjFqK`，此次发布前已实际 inspect 确认 READY |
-| 当前 QA 分支状态 | 2026-10-13 人工授权的前端、恢复/离线/性能和并行实用性修复已持续备份；最新 HEAD 以 Git log/远端为准，与线上源 `395cb61` 分开核对。后续不要自动部署 |
+| 最新生产发布 | 2026-10-13 用户明确“给我上线”；改版源 `7ad8383f4250ada4788e9ce196275ae463d35769`，Vercel `dpl_CjCbQRJb5NwURzS6oDChVzXx3Rd4`，READY并promote至 `travel.jacob.xin`，域名inspect/HTTP/Chrome复核通过 |
+| 前一生产发布 / 回退基线 | 实际发布前核对的2026-10-04 `dpl_C6KAGDcfYPz5n5huWK3Kut6A5yEK`；其源码不从旧记录推断，旧10月3日发布记录继续作为历史 |
+| 当前 QA 分支状态 | 已持续备份人工授权的改版及修复；最新HEAD以Git log/远端为准，后续记录提交与线上源 `7ad8383` 分开核对。后续不要自动部署 |
 
 不要说“从未部署”，也不要把发布后的记录提交当作线上源版本。最新发布实际通过完整源码检查、项目审计与全部现有回归；正式域名和四个初始 CSS/头像 HTTP200，真实 Chrome Home、手机 Day2/Day18 有只读冒烟证据。发布不是全系统验收，原生确认清理、Restore、完整外部断网、实测性能等仍未完成，详见 QA 的 `productionRelease20261003Latest` 与 `artifacts/production-release-20261003/release.json`。`.travel-build-state.json` 的 `handoff_allowed/source_commit` 是生成的结构审计，不是最新 HEAD、真实用户状态或全系统验收结论。`qa-progress.complete` 仍为 `false`。
 

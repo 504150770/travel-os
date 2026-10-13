@@ -1,0 +1,80 @@
+{
+  "authorization": "Human explicitly requested 给我上线 on 2026-10-13; publishes reviewed UI source7ad8383, not a new automation or broad QA completion.",
+  "sourceCommit": "7ad8383f4250ada4788e9ce196275ae463d35769",
+  "branch": "codex/visual-qa-20260929",
+  "provider": "Vercel",
+  "projectId": "prj_To0mtZFtjdiypjocirK6SNipFaBi",
+  "deploymentId": "dpl_CjCbQRJb5NwURzS6oDChVzXx3Rd4",
+  "deploymentUrl": "https://europe18day-guide-dcmkurb05-arrow13.vercel.app",
+  "domain": "https://travel.jacob.xin",
+  "createdAtShanghai": "2026-10-13T20:51:55+08:00",
+  "status": "READY",
+  "rollbackDeploymentId": "dpl_C6KAGDcfYPz5n5huWK3Kut6A5yEK",
+  "rollbackDeploymentUrl": "https://europe18day-guide-aewh5slf2-arrow13.vercel.app",
+  "rollbackSourceCommit": "Not inferred from stale Oct3 record; actual production baseline inspected as Oct4 deployment.",
+  "releaseIsolation": "Git archive exact source commit to own temporary release copy; independent Git metadata reads original object store without changing original HEAD/index. Frozen lock install. Only prebuilt .vercel/output deployed;931 packaged files checked, no .env/artifacts/research/.git/Downloads paths.",
+  "checks": {
+    "lint": "passed in clean release",
+    "typecheck": "passed in clean release",
+    "linkage": "passed in clean release",
+    "appBuild": "passed in clean release",
+    "projectAudit": "rerun after archive Git metadata fix;0 failures/1 unchanged budget warning",
+    "prior23Regressions": "passed for unchanged reviewed source before release; not newly rerun all23 during deployment",
+    "vercelProductionBuild": "passed",
+    "canonicalPackageAndLock": "Git blobs exactly match source7ad8383, no dependency upgrade",
+    "promote": "explicit vercel promote succeeded; deploy READY alone did not move traffic",
+    "domainInspect": "matched new deploymentId after promotion",
+    "http": {
+      "root": 200,
+      "newWorkbench": true,
+      "newHeading": true,
+      "oldHero": false,
+      "initialAssets": 36,
+      "assetFailures": 0,
+      "avatar": 200
+    },
+    "browser": "Official connected Chrome: hydrated Home/day2, complete original avatar/hero/six-city images, no Home overflow/Leaflet0; budget load+reload+Home retainedDay2; mobile375x812 Explore current-day notes/core photos and no horizontal overflow. Navigation only, no business-state writes."
+  },
+  "screenshots": [
+    {
+      "file": "home-live-1521x818.jpg",
+      "pixels": [
+        1521,
+        818
+      ],
+      "scope": "Native desktop viewport, hydratedDay2, completed images, not full-page"
+    },
+    {
+      "file": "explore-live-360x779.jpg",
+      "pixels": [
+        360,
+        779
+      ],
+      "cssViewport": [
+        375,
+        812
+      ],
+      "scope": "Native mobile Explore first screen, currentDay2 notes, original photos"
+    }
+  ],
+  "evidenceCorrection": [
+    "First archive pnpm check completed lint/typecheck/linkage/build but audit failed without .git; exact commit metadata restored in temporary copy and audit rerun passed. No app source patch or original-workspace build.",
+    "Initial raw SHA comparison of package file differed by archive LF versus workspace CRLF; canonical Git blob comparisons of package/lock passed.",
+    "Deploy target production/READY did not assign current traffic; initial formal-domain HTTP and inspect still showed oldOct4 UI. Explicit promote then domain inspect and freshHTTP confirmed new deployment and36 assets.",
+    "Direct deployment URL was Vercel login/protection, not app failure; no protection bypass/token trick used. Promotion followed by public-domain smoke.",
+    "IAB create timed out and open-in-Codex queued; available official Chrome extension used for actual evidence. InitialSSRDay1/null phase was not final evidence; waited for hydratedDay2.",
+    "JPEG native dimensions independently read and locally visually inspected; mobileCSS375 screenshot360x779. No resizing/stitching or whole-system acceptance inferred."
+  ],
+  "originalDirtyFilesProtected": 10,
+  "originalDirtySha256Equal": true,
+  "unrelatedUntrackedPreserved": true,
+  "privateFilesUploaded": false,
+  "productionBusinessStateMutated": false,
+  "automationRecreated": false,
+  "overallQaComplete": false,
+  "remaining": [
+    "Full external-network offline needs control condition",
+    "Production field p75/INP/CLS and complete cross-view boundary acceptance remain separate",
+    "Final user aesthetic approval and historical remaining scopes not inferred from deployment"
+  ]
+}

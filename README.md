@@ -11,7 +11,7 @@
 - 唯一工作目录：`C:/Users/50415/OneDrive/文档/ChatGPT/Travel/travel-os-ui-redesign`；不要操作父目录下的其他项目。
 - GitHub：`504150770/travel-os`；接续分支：`codex/visual-qa-20260929`。
 - 当前重点是已有功能的真实交互与视觉验收；整体 QA **尚未完成**。构建/结构审计通过不等于全部功能或用户视觉验收通过。
-- 用户于 2026-10-03 明确授权部署：QA 源版本 `395cb61` 已发布至 `travel.jacob.xin`，Vercel `dpl_HzdcSGEyFEbvo2ErzexMaL5uyCBA` 为 READY。后续发布记录提交与线上源版本区分；完整 QA 仍未完成。
+- 用户于 2026-10-13 明确授权上线：改版源版本 `7ad8383` 已发布并切换至 [travel.jacob.xin](https://travel.jacob.xin)，Vercel `dpl_CjCbQRJb5NwURzS6oDChVzXx3Rd4` 为 READY。正式域名和Chrome桌面/手机复核通过，旧部署保留回退；见 [发布记录](artifacts/production-release-20261013/release.json)。后续记录提交与线上源码区分，完整QA仍未完成。
 - 保持旅行事实、Current Plan、酒店、国际航班、住宿日期、预算、签证及推荐算法不变。发布需新一轮明确授权。
 
 2026-10-13 人工授权的实用性改进已分两批记录：[手机 Today / 交通与准备](artifacts/frontend-practicality-20261013/REVIEW.md)、[首页与探索](artifacts/frontend-practicality-20261013/REVIEW-BATCH2.md)。用户取消自动任务后，改为当前人工任务；本轮明确要求自主验收，不再发送外部 High 复核。[Muse / Dot 接入评估](artifacts/frontend-practicality-20261013/AGENT-INTEGRATION.md) 仅为方案，尚未接入账号或同步数据。
