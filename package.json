@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "vinext dev",
-    "build": "vinext build",
+    "build": "vinext build && node scripts/generate-offline-app.mjs",
     "start": "wrangler dev --config dist/server/wrangler.json",
     "lint": "oxlint app/page.tsx app/layout.tsx components/travel-guide-v3.tsx components/mini-route.tsx components/shell components/mobile features hooks/use-local-storage.ts lib scripts views",
     "typecheck": "tsc --noEmit",

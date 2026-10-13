@@ -8,6 +8,8 @@
 
 ## 1. 先读与范围
 
+**2026-10-13 恢复/离线/性能人工任务**：见 [本轮报告](artifacts/restore-offline-performance-20261013/REVIEW.md) 与 `acceptance.json`。正式 IAB 文件选择器真实通过 V3/V4/V5 恢复、取消与坏 JSON；UI 导出比对和原始基线恢复完成。新增全构建懒代码离线清单，并修复旧 HTML 引用与新脚本失配；停服后未访问 Day15/Day8 导航、刷新、Explore/Plan/More、核心照片通过。最终本地生产构建冷 LCP 桌面1084ms/手机1180ms，暖472–884ms/468–596ms；旧慢样本保留，无损图片编码保留原像素。完整外部断网仍受正式接口缺 Network Offline/Chrome 断开限制，已向用户发必要重连请求；不能把停服当完整断网。生产 field p75/INP/CLS 未评估。10 个原始脏文件逐字节恢复；未部署、无依赖升级、无真实3000业务写入。前段“Restore/实测性能未完成”只适用于此前历史，当前边界以本轮记录为准；全局 complete=false。
+
 1. 进入唯一项目 `C:/Users/50415/OneDrive/文档/ChatGPT/Travel/travel-os-ui-redesign`。
 2. 读本文件、`README.md`、`artifacts/visual-qa-20261001/qa-progress.json`；后者按迭代保留实际操作、截图修正与审核范围。
 3. 运行 `git status --short`、`git branch --show-current`、`git log -8 --oneline`，再确认远端备份。不要对父目录 Travel 仓库执行开发或提交。

@@ -91,10 +91,9 @@
   "remaining": [
     "Only genuinely uncovered functional boundaries and final whole-scope visual review remain; responsive Day2/8/15 desktop1440/1280/1024 and mobile375/390/430 layout scopes are already covered, not every function at every size. Preserve later scoped acceptances and evidenceCorrection fields; read HANDOFF.md first",
     "2026-10-04 read-only UI and fresh export confirmed isolated3001 STILL has exactly one QA 临时保存验收/custom-1790929585850 as Day1 alternative. See isolatedCleanupReadOnly20261004; prior native-confirm call outcome remains historically unknown, but current state is now confirmed not cleaned. Permanent-delete repair d3844df still needs actual post-cleanup UI export/business-field comparison and new High review. Await substantive dialog-control change or pending human reply; do not delete other entities, claim permanent deletion Undo, touch real3000 or repeat unchanged native failures/read-only polling",
-    "Backup import/restore remains untested: official updated filechooser/setFiles interface tried on isolated3001, blocked by ChatGPT extension Allow access to file URLs permission. No permission expanded or injected File/storage workaround used",
     "Comprehensive network-offline behavior still unverified; no browser network-disconnection capability exposed; current evidence is same-origin server unavailable, not full external network disconnection",
-    "Measured runtime performance and dependency remediation remain separate open scopes. Initial read-only dependency triage on2026-10-03 found38 advisories across11 packages, including a direct RSC server dependency; see dependencyReadOnlyTriage20261003. Build/DOM/server logs are not network/LCP evidence. No automatic dependency upgrades or production release",
-    "Collect final whole-scope High review only after all remaining functions have real evidence; local acceptance is not global completion"
+    "2026-10-13 actual local cold/warm performance measured and scoped pass; see restoreOfflinePerformance20261013. Production field p75/INP/CLS not assessed. Prior slow samples retained; dependency remediation remains separate, no automatic upgrades.",
+    "Current human instruction cancels external High review; autonomous self QA applies. Global acceptance remains incomplete; do not revive automation or claim whole-system satisfaction."
   ],
   "safety": [
     "No data directory modifications; hotels, flights, Current Plan, budget and visa materials unchanged",
@@ -471,6 +470,20 @@
     "integration": "Official Muse connector and Dot plugin/local-computer feasibility researched and documented. Current browser-local state has no authenticated agent business API; recommended user-previewed allowlisted readonly summary plus authenticated API/MCP, excluding private documents/notes/links and service-worker caching. No actual connector, plugin installation, cloud sync or background monitoring created.",
     "review": "Authorized High URL in in-app Browser showed login page; no files/messages sent. Human then canceled external review for this batch and requested self acceptance, so page closed. No new High or whole-system satisfaction claimed. Viewport reset and3000 preview retained.",
     "remaining": "Whole-system prior Restore file-URL/native cleanup/full-network offline/measured-performance conditions remain open and unchanged. This batch actual promotion is mobile detail; desktop shared callback and arbitrary custom field edits remain source/model-covered rather than actual clicked. Earlier first-batch and historical High evidence scopes preserved, no broad completion inferred."
+  },
+  "restoreOfflinePerformance20261013": {
+    "report": "artifacts/restore-offline-performance-20261013/REVIEW.md",
+    "evidence": "artifacts/restore-offline-performance-20261013/acceptance.json",
+    "restoreActualAccepted": true,
+    "offlineOwnServerUnavailableAccepted": true,
+    "fullExternalNetworkOfflineAccepted": false,
+    "localColdWarmPerformanceAccepted": true,
+    "productionFieldPerformanceAccepted": false,
+    "remainingControl": "Chrome reconnect/per-tab DevTools Offline; no available formal IAB network capability",
+    "externalHigh": "Canceled by current human instruction",
+    "protectedDirtyFileCount": 10,
+    "baselineCommit": "78aaf4ace5c600a64fbdef929af4507d29200c23",
+    "complete": false
   },
   "complete": false
 }

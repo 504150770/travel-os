@@ -1,0 +1,232 @@
+{
+  "date": "2026-10-13",
+  "baselineCommit": "78aaf4ace5c600a64fbdef929af4507d29200c23",
+  "review": "Autonomous self QA; external High canceled by human",
+  "restore": {
+    "v3ActionMigration": true,
+    "v3ActionKeys": [
+      "task:qa-restore-legacy",
+      "deadline:transport-international"
+    ],
+    "v3OptionalFieldsRetained": true,
+    "v4PackingRetained": true,
+    "finalBaselineFieldsEqual": [
+      "currentItinerary",
+      "customEntities",
+      "bookingStatuses",
+      "actionStatuses",
+      "actuals",
+      "notes",
+      "favorites",
+      "preferredTransport",
+      "packingItems"
+    ],
+    "v5NineFieldsEqual": true,
+    "invalidJsonRejectedWithoutOverwrite": true,
+    "cancelNineFieldsEqual": true,
+    "offlineExportNineFieldsEqual": true,
+    "origins": [
+      "127.0.0.1:3002",
+      "127.0.0.1:3005"
+    ],
+    "real3000BusinessWrites": false,
+    "privateExports": "Local only; deliberately excluded from repository"
+  },
+  "offline": {
+    "initialUnvisitedLazyModuleFailure": "MobileMore-jobEu6wG.js",
+    "oldShellScript": "index-BX3jiFXX.js",
+    "finalUnvisitedDay15DirectNavigation": true,
+    "finalDay15Reload": true,
+    "finalDay8DirectNavigation": true,
+    "firstExplorePlanMoreLoads": true,
+    "corePhotosComplete": true,
+    "offlinePackCountDisplayed": 274,
+    "offlinePackMegabytesDisplayed": 28.7,
+    "serverStopped": true,
+    "externalNetworkDisconnected": false,
+    "fullExternalOfflineStatus": "blocked: official IAB has no per-tab network capability; Chrome disconnected; human reconnect request pending",
+    "mapCodeLoadAndDrawer": true,
+    "mapTiles": "External internet remained available; not evidence of offline tiles"
+  },
+  "performance": {
+    "scope": "Local production build, visible IAB, no CPU/network throttling, raw LCP observer samples, not production field p75/INP/CLS",
+    "previousSamplesRetained": [
+      {
+        "phase": "old PNG origin3003",
+        "lcpMs": 1620
+      },
+      {
+        "phase": "old PNG origin3004 cold",
+        "lcpMs": 4212
+      },
+      {
+        "phase": "old PNG warm",
+        "lcpMs": 556
+      },
+      {
+        "phase": "lossless WebP before diagnostic rebuild cold",
+        "lcpMs": 3800
+      },
+      {
+        "phase": "lossless WebP before diagnostic rebuild warm",
+        "lcpMs": 4440
+      },
+      {
+        "phase": "diagnostic rebuild existing-origin first tab",
+        "lcpMs": 1628,
+        "ttfbMs": 482,
+        "jsResponseEndMs": 1580,
+        "mountedMs": 1442
+      }
+    ],
+    "samples": [
+      {
+        "homeHeroLoadedMs": "894",
+        "homeJsReadyMs": "261",
+        "homeJsTransferBytes": "0",
+        "homeLcpMs": "960",
+        "homeMountedAt": "249",
+        "homeTtfbMs": "66",
+        "homeView": "true"
+      },
+      {
+        "label": "final-desktop-1",
+        "homeHeroLoadedMs": "797",
+        "homeJsReadyMs": "786",
+        "homeJsTransferBytes": "0",
+        "homeLcpMs": "884",
+        "homeMountedAt": "643",
+        "homeTtfbMs": "263",
+        "homeView": "true"
+      },
+      {
+        "label": "final-desktop-2",
+        "homeHeroLoadedMs": "355",
+        "homeJsReadyMs": "241",
+        "homeJsTransferBytes": "0",
+        "homeLcpMs": "472",
+        "homeMountedAt": "222",
+        "homeTtfbMs": "74",
+        "homeView": "true"
+      },
+      {
+        "label": "final-mobile-1",
+        "homeHeroLoadedMs": "529",
+        "homeJsReadyMs": "241",
+        "homeJsTransferBytes": "0",
+        "homeLcpMs": "596",
+        "homeMountedAt": "224",
+        "homeTtfbMs": "100",
+        "homeView": "true"
+      },
+      {
+        "label": "final-mobile-2",
+        "homeHeroLoadedMs": "408",
+        "homeJsReadyMs": "239",
+        "homeJsTransferBytes": "0",
+        "homeLcpMs": "468",
+        "homeMountedAt": "220",
+        "homeTtfbMs": "39",
+        "homeView": "true"
+      },
+      {
+        "label": "final-cold-desktop-new-origin",
+        "homeHeroLoadedMs": "975",
+        "homeJsReadyMs": "1030",
+        "homeJsTransferBytes": "340012",
+        "homeLcpMs": "1084",
+        "homeMountedAt": "914",
+        "homeTtfbMs": "280",
+        "homeView": "true"
+      },
+      {
+        "label": "final-cold-mobile-new-origin",
+        "homeHeroLoadedMs": "855",
+        "homeJsReadyMs": "951",
+        "homeJsTransferBytes": "340012",
+        "homeLcpMs": "1180",
+        "homeMountedAt": "843",
+        "homeTtfbMs": "173",
+        "homeView": "true"
+      }
+    ],
+    "hero": {
+      "originalBytes": 2585363,
+      "losslessWebpBytes": 1560190,
+      "decodedPixelsIdentical": true
+    },
+    "homepageMapCount": 0,
+    "finalLocalColdAndWarmAssessment": "passed within this measured local scope",
+    "productionFieldPerformance": "not assessed",
+    "jsReadyAttributeMeaning": "homeJsReadyMs is latest observed JS resource responseEnd, not execution-ready time",
+    "transferBytesMeaning": "Zero can reflect browser/service-worker caches; do not interpret as zero JS payload"
+  },
+  "checks": {
+    "projectCheck": "passed",
+    "regressionCount": 14,
+    "finalRebuild": "passed",
+    "addedWorkerNavigationRegression": "passed after final source review",
+    "projectAuditFailures": 0,
+    "projectAuditWarnings": 1,
+    "unchangedBudgetWarning": "27630 vs 26000",
+    "dependencyUpgrades": false
+  },
+  "evidenceCorrection": {
+    "screenshots": [
+      {
+        "file": "restore-proof-598x746.jpg",
+        "format": "jpeg",
+        "width": 598,
+        "height": 746
+      },
+      {
+        "file": "offline-before-375x811.jpg",
+        "format": "jpeg",
+        "width": 375,
+        "height": 811
+      },
+      {
+        "file": "offline-old-shell-before-375x811.jpg",
+        "format": "jpeg",
+        "width": 375,
+        "height": 811
+      },
+      {
+        "file": "offline-day15-final-375x811.jpg",
+        "format": "jpeg",
+        "width": 375,
+        "height": 811
+      },
+      {
+        "file": "offline-mobile-ready-final-375x811.jpg",
+        "format": "jpeg",
+        "width": 375,
+        "height": 811
+      },
+      {
+        "file": "offline-map-drawer-final-390x843.jpg",
+        "format": "jpeg",
+        "width": 390,
+        "height": 843
+      },
+      {
+        "file": "home-desktop-cold-final-1265x712.jpg",
+        "format": "jpeg",
+        "width": 1265,
+        "height": 712
+      },
+      {
+        "file": "home-mobile-final-375x811.jpg",
+        "format": "jpeg",
+        "width": 375,
+        "height": 811
+      }
+    ],
+    "cssPhoneViewport": "390x844; most raw capture pixels375x811; drawer390x843",
+    "desktopColdViewport": "1280x720 CSS, raw1265x712",
+    "restoreProof": "Raw598x746; do not relabel as390/mobile small width",
+    "fullPage": "Viewport frames only, original bytes and format retained; no stitched/unpainted full-page evidence",
+    "historicalCorrectionsPreserved": true
+  },
+  "complete": false
+}

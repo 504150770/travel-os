@@ -12,7 +12,18 @@ export function OfflinePackControl() {
   const [manifest, setManifest] = useState<PackManifest | null>(null);
   const [state, setState] = useState<PackState>({ status: 'idle', done: 0, total: 0 });
   useEffect(() => {
-    fetch('/offline-core.json', { cache: 'no-store' }).then((response) => response.json() as Promise<PackManifest>).then(setManifest).catch(() => undefined);
+    const load = async (url: string): Promise<PackManifest> => {
+      const response = await fetch(url, { cache: 'no-store' });
+      if (!response.ok) throw new Error('Offline manifest unavailable');
+      return response.json();
+    };
+    Promise.all([load('/offline-core.json'), load('/_next/static/offline-app.json')])
+      .then(([media, app]) => setManifest({
+        version: `${media.version}-${app.version}`,
+        assetCount: media.assetCount + app.assetCount,
+        totalBytes: media.totalBytes + app.totalBytes,
+      }))
+      .catch(() => setState((current) => ({ ...current, status: 'error' })));
     try { const saved = localStorage.getItem(STORAGE_KEY); if (saved) setState(JSON.parse(saved) as PackState); } catch { /* unavailable */ }
   }, []);
   useEffect(() => { if (state.status === 'ready') localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); }, [state]);

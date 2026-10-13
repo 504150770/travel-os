@@ -11,6 +11,7 @@ import type { Day } from '@/lib/types';
 
 const HOME_HERO = '/images/home-eiffel-winter-sunset.png';
 const HOME_HERO_MOBILE = '/images/home-eiffel-winter-mobile.webp';
+const HOME_HERO_WEBP = '/images/home-eiffel-winter-sunset-lossless.webp';
 const cityCovers: Record<string, string> = {
   rome: '/images/home-city-rome.webp',
   florence: '/images/home-city-florence.webp',
@@ -26,10 +27,20 @@ function useHomePerformanceMarks() {
     const node = homeRef.current;
     if (!node) return;
     node.dataset.homeMountedAt = String(Math.round(performance.now()));
+    const updateLoadMarks = () => {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming | undefined;
+      if (navigation) node.dataset.homeTtfbMs = String(Math.round(navigation.responseStart));
+      const scripts = (performance.getEntriesByType('resource') as PerformanceResourceTiming[])
+        .filter((entry) => /\.js(?:\?|$)/.test(entry.name));
+      node.dataset.homeJsReadyMs = String(Math.round(Math.max(0, ...scripts.map((entry) => entry.responseEnd))));
+      node.dataset.homeJsTransferBytes = String(scripts.reduce((sum, entry) => sum + entry.transferSize, 0));
+    };
+    updateLoadMarks();
     if (!('PerformanceObserver' in window)) return;
     const observer = new PerformanceObserver((list) => {
       const entry = list.getEntries().at(-1);
       if (entry) node.dataset.homeLcpMs = String(Math.round(entry.startTime));
+      updateLoadMarks();
     });
     try { observer.observe({ type: 'largest-contentful-paint', buffered: true }); }
     catch { return; }
@@ -51,6 +62,7 @@ export function HomeView({ daysLeft, selectedDay, nextAction, projectedBudget, a
     <section className="home-cover" data-home-hero>
       <picture className="home-cover-media">
         <source media="(max-width: 767px)" srcSet={HOME_HERO_MOBILE} />
+        <source type="image/webp" srcSet={HOME_HERO_WEBP} />
         <img
           src={HOME_HERO}
           alt="冬日落日下的巴黎埃菲尔铁塔与塞纳河"

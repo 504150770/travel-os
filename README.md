@@ -16,6 +16,8 @@
 
 ## 本地运行
 
+2026-10-13 [恢复、离线与性能验收](artifacts/restore-offline-performance-20261013/REVIEW.md)：真实 V3/V4/V5 恢复和 UI 导出比对完成；修复离线懒模块缺失及旧 HTML/新脚本失配，停服后未访问日期与移动页面复测通过。本地生产构建冷/暖首屏已测量；完整外部断网仍待浏览器控制条件，不代表全局 QA 完成。构建自动生成 `/_next/static/offline-app.json`，离线包包含与当前代码匹配的入口。
+
 ```bash
 pnpm install
 pnpm dev --port 3000
