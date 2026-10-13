@@ -10,7 +10,7 @@ import {
 import type { Entity } from '@/lib/entity-library';
 import type { PlanItem } from '@/hooks/use-editable-plan';
 import type { AppController } from '@/features/app/useAppController';
-import { mapLinks } from '@/features/trip/tripModel';
+import { navigationForEntity } from '@/features/trip/entityNavigation';
 import { MobileSheet } from '@/components/mobile/MobileSheet';
 
 export function MobilePlanItemSheet({
@@ -29,7 +29,7 @@ export function MobilePlanItemSheet({
   controller: AppController;
 }) {
   if (!item || !entity) return null;
-  const links = mapLinks(entity);
+  const navigation = navigationForEntity(entity);
   const run = (action: () => void) => {
     action();
     close();
@@ -42,9 +42,9 @@ export function MobilePlanItemSheet({
       title={entity.name}
     >
       <div className="mobile-sheet-actions">
-        <a href={links.google} target="_blank" rel="noreferrer">
+        {navigation.google && <a href={navigation.google} target="_blank" rel="noreferrer">
           <Navigation /> 导航
-        </a>
+        </a>}
         <button
           disabled={index === 0}
           onClick={() =>

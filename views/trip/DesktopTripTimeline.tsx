@@ -37,7 +37,7 @@ import {
 import type { Entity } from '@/lib/entity-library';
 import type { DayRoute } from '@/lib/types';
 import type { PlanItem, useEditablePlan } from '@/hooks/use-editable-plan';
-import { mapLinks } from '@/features/trip/tripModel';
+import { navigationForEntity } from '@/features/trip/entityNavigation';
 import type { PlanPresentationRow } from '@/features/trip/tripPresentationModel';
 import { selectCoverImage } from '@/lib/media';
 import { StatusBadge } from '@/components/trip/TripStatusBadge';
@@ -96,6 +96,7 @@ function SortableStop({
     isDragging,
   } = useSortable({ id: item.id });
   const cover = selectCoverImage(entity.images);
+  const navigation = navigationForEntity(entity);
   return (
     <article
       ref={setNodeRef}
@@ -115,12 +116,12 @@ function SortableStop({
         />
         <span>{item.duration}</span>
       </div>
-      <button className="workspace-stop-photo" onClick={select} aria-label={`在地图中选择 ${entity.name}`}>
+      <button className="workspace-stop-photo" onClick={select} aria-pressed={selected} aria-label={`选择 ${entity.name}`}>
         {cover && entity.type !== 'activity'
           ? <Image unoptimized src={cover.file} alt={cover.title || entity.name} fill sizes="72px" />
           : <ActivityIllustration name={entity.name} />}
       </button>
-      <button className="workspace-stop-copy" onClick={select}>
+      <button className="workspace-stop-copy" onClick={select} aria-pressed={selected}>
         <div className="workspace-stop-title"><h3>{entity.name}</h3></div>
         <div className="workspace-stop-meta"><StatusBadge status={presentation.status} /><p><TicketCheck /> {presentation.supportingLabel}</p></div>
       </button>
@@ -134,7 +135,7 @@ function SortableStop({
         <GripVertical />
       </button>
       <div className="workspace-stop-actions">
-        <a href={mapLinks(entity).google} target="_blank" rel="noreferrer" onClick={(event) => event.stopPropagation()}><Navigation /> 导航</a>
+        {navigation.google && <a href={navigation.google} target="_blank" rel="noreferrer" onClick={(event) => event.stopPropagation()}><Navigation /> 导航</a>}
         <button disabled={index === 0} onClick={(event) => { event.stopPropagation(); actions.moveWithin(dayId, item.id, -1); }} aria-label={`${entity.name}上移`}><ArrowUp /></button>
         <button disabled={index === total - 1} onClick={(event) => { event.stopPropagation(); actions.moveWithin(dayId, item.id, 1); }} aria-label={`${entity.name}下移`}><ArrowDown /></button>
       </div>
@@ -167,6 +168,9 @@ export function DesktopTripTimeline({
     useSensor(KeyboardSensor, { coordinateGetter: sortableKeyboardCoordinates }),
   );
   useEffect(() => {
+    listRef.current?.scrollTo({ top: 0, behavior: 'instant' });
+  }, [dayId]);
+  useEffect(() => {
     if (!selectedPointId) return;
     listRef.current?.querySelector<HTMLElement>(`[data-entity-id="${CSS.escape(selectedPointId)}"]`)?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   }, [selectedPointId]);
@@ -184,7 +188,7 @@ export function DesktopTripTimeline({
             );
             return (
               <div key={item.id}>
-                {leg && <button className={`workspace-connector ${selectedLegId === leg.id ? 'selected' : ''}`} onClick={() => selectLeg(selectedLegId === leg.id ? null : leg.id)}><span /><b>{connectorLabel(leg)}</b></button>}
+                {leg && <button className={`workspace-connector ${selectedLegId === leg.id ? 'selected' : ''}`} aria-pressed={selectedLegId === leg.id} aria-label={`前往 ${entity.name}：${connectorLabel(leg)}`} onClick={() => selectLeg(selectedLegId === leg.id ? null : leg.id)}><span /><b>{connectorLabel(leg)}</b></button>}
                 <SortableStop
                   item={item}
                   entity={entity}
@@ -201,7 +205,7 @@ export function DesktopTripTimeline({
           })}
         </SortableContext>
       </DndContext>
-      {!rows.length && <div className="workspace-empty"><b>No stops yet</b><p>Open Explore to add a place to this day.</p></div>}
+      {!rows.length && <div className="workspace-empty"><b>当天暂无安排</b><p>通过“查找地点”添加当天安排。</p></div>}
     </div>
   );
 }

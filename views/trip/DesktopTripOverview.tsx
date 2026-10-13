@@ -8,6 +8,7 @@ import {
   Dumbbell,
   Info,
   Navigation,
+  Route,
   Utensils,
 } from 'lucide-react';
 import { useEffect, useMemo, useRef } from 'react';
@@ -100,6 +101,7 @@ export function DesktopTripOverview({
     ? { file: '/images/home-eiffel-winter-sunset.png', caption: '冬日落日下的巴黎埃菲尔铁塔与塞纳河' }
     : hero;
   const walkingKm = dayState.route.summary.walkingKm;
+  const firstRow = rows[0];
   const hotelImages = useMemo(() => (stay?.images ?? [])
     .filter((image) => Boolean(image.file))
     .map((image) => normalizeGalleryImage({ ...image, file: image.file! }, {
@@ -117,14 +119,25 @@ export function DesktopTripOverview({
     scrollRef.current?.scrollTo({ top: 0, behavior: 'instant' });
   }, [day.day]);
 
-  return <section className="workspace-overview" aria-label="Day overview" data-trip-overview>
+  return <section className="workspace-overview" aria-label="当天概览" data-trip-overview>
     <div className="workspace-overview-scroll" ref={scrollRef}>
       <section className={`workspace-overview-hero${places.some((entity) => entity.id === 'eiffel') ? ' is-panorama' : ''}`}>
-        {overviewHero && <Image unoptimized src={overviewHero.file} alt={overviewHero.caption} fill priority sizes="(max-width: 1024px) 62vw, 1040px" />}
-        <div />
-        <span>{day.city.toUpperCase()}</span>
-        <h1>{day.theme}</h1>
-        <p>{day.summary}</p>
+        <div className="workspace-overview-cover">{overviewHero && <Image unoptimized src={overviewHero.file} alt={overviewHero.caption} fill priority sizes="(max-width: 899px) 36vw, 360px" />}</div>
+        <div className="workspace-overview-context"><span>第 {day.day} 天 · {day.city}</span><h1>{day.theme}</h1><p>{day.summary}</p></div>
+      </section>
+
+      <section className="workspace-day-essentials" aria-label="首项安排与住宿">
+        {firstRow && <article className="workspace-start-card">
+          <header><Route /><b>首项安排</b><span>{firstRow.item.time}</span></header>
+          <h2>{firstRow.entity.name}</h2>
+          <p>{firstRow.item.duration ? `${firstRow.item.duration} · ` : ''}{firstRow.supportingLabel}</p>
+          <div className="workspace-inline-actions"><button onClick={() => inspect(firstRow.entity)}>查看详情 <ArrowRight /></button>{firstRow.entity.type !== 'activity' && <a href={mapLinks(firstRow.entity).google} target="_blank" rel="noreferrer"><Navigation /> 导航</a>}</div>
+        </article>}
+        {stay && <article className="workspace-practical-card workspace-hotel-card">
+          <header><BedDouble /><b>今日住宿</b><span>{returnPending ? '返程待确认' : '返回酒店'}</span></header>
+          {hotelCover ? <button className="workspace-practical-image" onClick={() => openGallery(openGalleryRequest(stay.id, stay.hotelName, hotelImages, hotelCover))} aria-label={`打开 ${stay.hotelName} 图片`}><Image unoptimized src={hotelCover.file} alt={hotelCover.title || stay.hotelName} fill sizes="88px" /></button> : <div className="workspace-practical-image placeholder"><BedDouble /></div>}
+          <div className="workspace-practical-copy"><h3>{stay.hotelName}</h3><p>{stay.areaLabel ?? stay.city} · {stay.execution.address}</p><small>{returnPending ? '返程时间待确认' : lastLeg.recommended}</small><div className="workspace-inline-actions"><button onClick={openHotel}>查看住宿 <ArrowRight /></button>{hotelMaps && <a className="primary" href={hotelMaps} target="_blank" rel="noreferrer"><Navigation /> 酒店导航</a>}</div></div>
+        </article>}
       </section>
 
       <section className="workspace-place-section" aria-labelledby="workspace-places-heading">
@@ -141,17 +154,12 @@ export function DesktopTripOverview({
               <div><div className="workspace-place-title"><h3>{entity.name}</h3></div><p>{description}</p><button onClick={() => inspect(entity)} aria-label={`查看 ${entity.name} 详情`}><ArrowRight /></button></div>
             </article>;
           })}
-        </div> : <p className="workspace-place-empty">当天没有正式景点，完整安排请看左侧时间线。</p>}
+        </div> : <p className="workspace-place-empty">当天没有正式景点，可通过“行程”查看完整安排。</p>}
       </section>
 
       <div className="workspace-practical-grid">
         <RecommendationCard kind="food" entity={food[0]} fallback={dayState.route.atGlance.meal} inspect={inspect} openGallery={openGallery} />
-        <RecommendationCard kind="gym" entity={gyms[0]} fallback="Gym 保持为可选推荐。" inspect={inspect} openGallery={openGallery} />
-        {stay && <article className="workspace-practical-card workspace-hotel-card">
-          <header><BedDouble /><b>返回酒店</b><span>{returnPending ? '时间待确认' : '今日住宿'}</span></header>
-          {hotelCover ? <button className="workspace-practical-image" onClick={() => openGallery(openGalleryRequest(stay.id, stay.hotelName, hotelImages, hotelCover))} aria-label={`打开 ${stay.hotelName} 图片`}><Image unoptimized src={hotelCover.file} alt={hotelCover.title || stay.hotelName} fill sizes="150px" /></button> : <div className="workspace-practical-image placeholder"><BedDouble /></div>}
-          <div className="workspace-practical-copy"><h3>{stay.hotelName}</h3><p>{stay.areaLabel ?? stay.city} · {stay.execution.address}</p><small>{returnPending ? '返程时间待确认' : lastLeg.recommended}</small><div className="workspace-inline-actions">{hotelMaps && <a className="primary" href={hotelMaps} target="_blank" rel="noreferrer"><Navigation /> 导航</a>}<button onClick={openHotel}>查看住宿 <ArrowRight /></button></div></div>
-        </article>}
+        <RecommendationCard kind="gym" entity={gyms[0]} fallback="健身保持为可选推荐。" inspect={inspect} openGallery={openGallery} />
       </div>
 
       {dayAction && <section className="workspace-day-action"><Info /><div><span>当天提醒</span><h2>{dayAction.title}</h2><p>{dayAction.detail}</p></div></section>}

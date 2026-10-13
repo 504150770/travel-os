@@ -8,6 +8,7 @@ import type { Entity, EntityImage } from '@/lib/entity-library';
 import { openGalleryRequest, selectCoverImage } from '@/lib/media';
 import type { LightboxImage } from '@/features/app/appModel';
 import { mapLinks, routeCityForDay } from '@/features/trip/tripModel';
+import { navigationForEntity } from '@/features/trip/entityNavigation';
 import type { Day } from '@/lib/types';
 
 export function Media({
@@ -109,6 +110,7 @@ export function EntityActions({
   const placed = placement(entity.id, day);
   const targetLabel = `Day ${day} · ${routeCityForDay(guideData.days[day - 1] as Day)}`;
   const links = mapLinks(entity);
+  const navigation = navigationForEntity(entity);
   const add = (target: 'activeItems' | 'alternatives') => {
     addEntity(entity.id, day, target);
     setAdded(true);
@@ -150,13 +152,13 @@ export function EntityActions({
           <button onClick={() => add('alternatives')}>加入备选</button>
         </>
       )}
-      <a href={links.google} target="_blank" rel="noreferrer">
+      {navigation.google && <a href={navigation.google} target="_blank" rel="noreferrer">
         导航
-      </a>
-      {entity.hotelAnchor && (
+      </a>}
+      {navigation.fromHotel && (
         <a
           className="from-hotel-link"
-          href={entity.hotelAnchor.directionsUrl}
+          href={navigation.fromHotel}
           target="_blank"
           rel="noreferrer"
         >
@@ -166,9 +168,9 @@ export function EntityActions({
       <details>
         <summary>•••</summary>
         <div>
-          <a href={links.apple} target="_blank" rel="noreferrer">
+          {navigation.apple && <a href={navigation.apple} target="_blank" rel="noreferrer">
             Apple Maps
-          </a>
+          </a>}
           <a href={links.xhs} target="_blank" rel="noreferrer">
             小红书攻略
           </a>

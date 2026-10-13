@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import {
   BedDouble,
+  CalendarDays,
   ChevronRight,
   Clock3,
   Dumbbell,
@@ -118,17 +119,16 @@ export function MobileToday({
   return (
     <main className="mobile-today" data-mobile-screen="today">
       <section className="mobile-day-intro">
-        <div>
-          <span>{city.toUpperCase()}</span>
-          <h1>{day.theme}</h1>
-          <p>
-            Day {day.day} · {day.date.slice(5).replace('-', '/')}
-          </p>
+        <div className="mobile-day-context">
+          <button onClick={openDayPicker} aria-label="选择旅行日">
+            <CalendarDays />
+            <span>Day {day.day} · {day.date.slice(5).replace('-', '/')}</span>
+            <ChevronRight />
+          </button>
           <WeatherChip weather={weather} compact />
         </div>
-        <button onClick={openDayPicker} aria-label="选择旅行日">
-          D{day.day} <ChevronRight />
-        </button>
+        <h1>{day.theme}</h1>
+        <p className="mobile-day-city"><MapPin />{city}</p>
       </section>
 
       <nav className="mobile-day-shortcuts" aria-label="当天常用入口">
@@ -167,12 +167,8 @@ export function MobileToday({
       {next && (
         <section className="mobile-next-card">
           <div className="mobile-card-label">
-            <span>
-              {['hotel', 'activity'].includes(next.entity.type)
-                ? '行程起点'
-                : '今日首站'}
-            </span>
-            <Clock3 />
+            <span>{['hotel', 'activity'].includes(next.entity.type) ? '行程起点' : '今日首站'}</span>
+            <time>{next.item.time}</time>
           </div>
           <div className="mobile-next-main">
             {nextCover && (
@@ -191,46 +187,52 @@ export function MobileToday({
               </button>
             )}
             <div>
-              <span>{next.item.time}</span>
-              <h2>{next.entity.name}</h2>
+              <button className="mobile-next-title" onClick={() => openEntity(next.entity)}>
+                <h2>{next.entity.name}</h2>
+              </button>
               <p>{firstLeg ? legLabel(firstLeg) : next.item.duration}</p>
               {nextStopDistance && <small>{nextStopDistance} · 估算距离</small>}
-              <small>{next.supportingLabel}</small>
             </div>
           </div>
-          <a
-            className="mobile-primary-action"
-            href={nextLink}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Navigation /> 导航
-          </a>
+          <div className="mobile-next-footer">
+            <small>{next.entity.type === 'activity' ? '当天安排' : next.supportingLabel}</small>
+          {next.entity.type === 'activity' ? <button className="mobile-primary-action" onClick={() => openEntity(next.entity)}><Clock3 /> 查看安排</button> : <a
+              className="mobile-primary-action"
+              href={nextLink}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Navigation /> 导航
+          </a>}
+          </div>
         </section>
       )}
 
-      <section className="mobile-glance" aria-label="Today at a glance">
+      <section className="mobile-glance" aria-label="当天概览">
         <span>
-          <b>离店</b> {currentRoute.atGlance.mustLeaveHotel}
+          <small>离店时间</small>
+          <b>{currentRoute.atGlance.mustLeaveHotel}</b>
         </span>
         <span>
-          <b>{rows.length}</b> 项安排
+          <small>当天安排</small>
+          <span><b>{rows.length}</b> 项安排</span>
         </span>
         <span>
-          已知步行 <b>{currentRoute.summary.walkingKm ?? '—'}</b> km
+          <small>已知步行</small>
+          <span><b>{currentRoute.summary.walkingKm ?? '—'}</b> km</span>
         </span>
         <span>
-          <b>返程</b> {currentRoute.atGlance.backHotel.replace('预计', '')}
+          <small>返程参考</small>
+          <b>{currentRoute.atGlance.backHotel.replace('预计', '')}</b>
         </span>
       </section>
 
       <section className="mobile-section mobile-current-plan">
         <header>
           <div>
-            <span>当天行程</span>
-            <h2>按这个顺序走</h2>
+            <h2>当天行程</h2>
           </div>
-          <TicketCheck />
+          <span>按行程顺序</span>
         </header>
         <DayStatusSummary counts={statusCounts} language="zh" />
         <div className="mobile-day-timeline">
@@ -276,8 +278,9 @@ export function MobileToday({
                         <StatusBadge status={status} language="zh" />
                       </span>
                       <small>
-                        {item.duration} · {supportingLabel}
+                        {item.duration}
                       </small>
+                      <small className="mobile-plan-support">{supportingLabel}</small>
                     </span>
                   </button>
                   <button
@@ -293,25 +296,25 @@ export function MobileToday({
               </div>
             );
           })}
+          {returnLeg && stay && (
+            <>
+              <MobileRouteReference leg={returnLeg} />
+              <button className="mobile-timeline-hotel" onClick={openHotel}>
+                <BedDouble />
+                <span>
+                  <small>返回酒店</small>
+                  <b>{stay.hotelName}</b>
+                </span>
+                <ChevronRight />
+              </button>
+            </>
+          )}
+          {rows.length === 0 && (
+            <p className="mobile-day-empty">
+              当天没有正式安排，可以查看下方备选或切换日期。
+            </p>
+          )}
         </div>
-        {returnLeg && stay && (
-          <>
-            <MobileRouteReference leg={returnLeg} />
-            <button className="mobile-timeline-hotel" onClick={openHotel}>
-              <BedDouble />
-              <span>
-                <small>返回酒店</small>
-                <b>{stay.hotelName}</b>
-              </span>
-              <ChevronRight />
-            </button>
-          </>
-        )}
-        {rows.length === 0 && (
-          <p className="mobile-day-empty">
-            当天没有正式安排，可以查看下方备选或切换日期。
-          </p>
-        )}
       </section>
 
       <section
@@ -396,13 +399,6 @@ export function MobileToday({
             今天吃什么
             <ChevronRight />
           </summary>
-          <header>
-            <div>
-              <span>沿途餐饮</span>
-              <h2>今天吃什么</h2>
-            </div>
-            <Utensils />
-          </header>
           <MobilePickCard
             entity={food[0]}
             label="当天推荐"
@@ -429,13 +425,7 @@ export function MobileToday({
             可选健身
             <ChevronRight />
           </summary>
-          <header>
-            <div>
-              <span>当天健身</span>
-              <h2>{gym.name}</h2>
-            </div>
-            <Dumbbell />
-          </header>
+          <h3>{gym.name}</h3>
           <p className={`mobile-fit ${gymFit.level}`}>{gymFit.label}</p>
           <p>{String(gym.raw.distance)}</p>
           <small>

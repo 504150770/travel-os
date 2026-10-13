@@ -330,7 +330,7 @@ export function useAppController() {
             : null;
     writeUrl({
       view: next,
-      day: next === 'trip' ? tripDay : next === 'more' || next === 'home' ? selectedDay : null,
+      day: next === 'trip' ? tripDay : selectedDay,
       tab,
       city: next === 'discover' ? discoverCity : null,
     });
@@ -455,16 +455,16 @@ export function useAppController() {
   };
   const selectDiscoverTab = (tab: DiscoverTab) => {
     setDiscoverTab(tab);
-    writeUrl({ view: 'discover', tab, city: discoverCity, day: null });
+    writeUrl({ view: 'discover', tab, city: discoverCity, day: selectedDay });
   };
   const selectDiscoverCity = (city: string) => {
     setDiscoverCity(city);
-    writeUrl({ view: 'discover', tab: discoverTab, city, day: null });
+    writeUrl({ view: 'discover', tab: discoverTab, city, day: selectedDay });
   };
   const selectPlanTab = (tab: PlanTab) => {
     setFocusRequest(null);
     setPlanTab(tab);
-    writeUrl({ view: 'plan', tab, day: null, city: null });
+    writeUrl({ view: 'plan', tab, day: selectedDay, city: null });
   };
   const selectMoreTab = (tab: MoreTab) => {
     setFocusRequest(null);
@@ -526,7 +526,7 @@ export function useAppController() {
     navigate('plan');
     setPlanTab('budget');
     writeUrl(
-      { view: 'plan', tab: 'budget', day: null, city: null },
+      { view: 'plan', tab: 'budget', day: selectedDay, city: null },
       'replace',
     );
   };

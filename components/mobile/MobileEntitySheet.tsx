@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { Camera, Navigation, Plus } from 'lucide-react';
 import type { Entity } from '@/lib/entity-library';
 import type { AppController } from '@/features/app/useAppController';
-import { mapLinks } from '@/features/trip/tripModel';
+import { navigationForEntity } from '@/features/trip/entityNavigation';
 import { openGalleryRequest, selectCoverImage } from '@/lib/media';
 import { MobileSheet } from '@/components/mobile/MobileSheet';
 import { MobilePlanTarget } from '@/components/mobile/MobilePlanTarget';
@@ -20,7 +20,7 @@ export function MobileEntitySheet({
 }) {
   if (!entity) return null;
   const cover = selectCoverImage(entity.images);
-  const links = mapLinks(entity);
+  const navigation = navigationForEntity(entity);
   const placement = controller.actions.placement(entity.id, controller.selectedDay);
   const dishes =
     typeof entity.raw.dishes === 'string'
@@ -62,9 +62,9 @@ export function MobileEntitySheet({
       <MobilePlanTarget selectedDay={controller.selectedDay} selectDay={controller.selectMobileDay} />
       {placement?.zone === 'backup' && <p className="mobile-placement-note">Day {placement.dayId} 备选 · 尚未加入正式安排</p>}
       <div className="mobile-detail-primary">
-        <a href={links.google} target="_blank" rel="noreferrer">
-          <Navigation /> Navigate
-        </a>
+        {navigation.google && <a href={navigation.google} target="_blank" rel="noreferrer">
+          <Navigation /> 导航
+        </a>}
         {placement?.zone !== 'trip' && (
           <button
             onClick={() => {

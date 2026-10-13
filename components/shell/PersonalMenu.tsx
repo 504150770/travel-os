@@ -66,7 +66,7 @@ export function PersonalMenu({
 
   return <div ref={rootRef} className="personal-entry">
     <span className={`nav-save-state ${saveState ? 'visible' : ''}`} aria-live="polite">
-      {saveState === 'saving' ? 'Saving…' : saveState === 'saved' ? <><Check /> Saved</> : ''}
+      {saveState === 'saving' ? '保存中…' : saveState === 'saved' ? <><Check /> 已保存</> : ''}
     </span>
     <button
       ref={triggerRef}
@@ -84,11 +84,11 @@ export function PersonalMenu({
     {open && <div className="personal-menu" role="menu">
       <div className="personal-menu-status">
         <HardDrive />
-        <span><b>Saved / Local status</b><small>{online ? 'Saved locally on this device' : 'Offline · local copy available'}</small></span>
+        <span><b>本机行程</b><small>{online ? '当前在线，行程保存在此设备' : '当前离线，请使用已保存的内容'}</small></span>
         <i className={online ? 'online' : 'offline'} />
       </div>
-      <button type="button" role="menuitem" onClick={() => openAndClose(openBackup)}><Download /><span><b>Backup / Export</b><small>Open existing travel backup</small></span></button>
-      <button type="button" role="menuitem" onClick={() => openAndClose(openSettings)}><Settings /><span><b>Settings</b><small>Open existing essentials</small></span></button>
+      <button type="button" role="menuitem" onClick={() => openAndClose(openBackup)}><Download /><span><b>备份与恢复</b><small>导出或导入行程数据</small></span></button>
+      <button type="button" role="menuitem" onClick={() => openAndClose(openSettings)}><Settings /><span><b>出行须知</b><small>查看交通、通信与出行提示</small></span></button>
     </div>}
   </div>;
 }

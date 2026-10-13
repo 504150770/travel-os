@@ -9,6 +9,7 @@ import type { Day } from '@/lib/types';
 import { routeCityForDay } from '@/features/trip/tripModel';
 import { MobileTripWorkspace } from '@/components/mobile/MobileTripWorkspace';
 import { MobileDayPicker } from '@/components/mobile/MobileDayPicker';
+import { PersonalMenu } from '@/components/shell/PersonalMenu';
 import '@/components/mobile/mobile.css';
 
 const MobileExplore = lazy(async () => {
@@ -29,11 +30,11 @@ const mobileNav: Array<{
   label: string;
   icon: typeof CalendarDays;
 }> = [
-  { id: 'today', label: 'Today', icon: CalendarDays },
-  { id: 'map', label: 'Map', icon: Map },
-  { id: 'explore', label: 'Explore', icon: Compass },
-  { id: 'plan', label: 'Plan', icon: ClipboardList },
-  { id: 'more', label: 'More', icon: Menu },
+  { id: 'today', label: '当天', icon: CalendarDays },
+  { id: 'map', label: '地图', icon: Map },
+  { id: 'explore', label: '探索', icon: Compass },
+  { id: 'plan', label: '准备', icon: ClipboardList },
+  { id: 'more', label: '资料', icon: Menu },
 ];
 
 export function MobileShell({ controller }: { controller: AppController }) {
@@ -48,6 +49,12 @@ export function MobileShell({ controller }: { controller: AppController }) {
           <WifiOff /> Offline · saved trip available
         </div>
       )}
+      {controller.mobileView !== 'map' && <header className="mobile-workbench-header">
+        <button onClick={() => controller.navigate('home')} aria-label="返回旅行概览"><span aria-hidden="true">J</span><b>Jacob Travel</b></button>
+        <PersonalMenu online={controller.online}
+          openBackup={() => { controller.navigateMobile('more'); controller.selectMobileMoreTab('backup'); }}
+          openSettings={() => { controller.navigateMobile('more'); controller.selectMobileMoreTab('essentials'); }} />
+      </header>}
       {controller.mobileView === 'map' && (
         <header className="mobile-map-topbar">
           <div>

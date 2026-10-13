@@ -1,0 +1,111 @@
+/* Shared product vocabulary. Page-specific layouts live with their views. */
+:root {
+  --accent: #1f4b63;
+  --accent-hover: #163b50;
+  --accent-soft: #edf4f7;
+  --canvas: #f6f7f9;
+  --surface: #ffffff;
+  --surface-strong: #edf0f3;
+  --ink: #1c2933;
+  --ink-soft: #61717c;
+  --line: #e4e8eb;
+  --line-strong: #cbd3d9;
+  --radius-control: 12px;
+  --radius-card: 18px;
+  --radius-large: 22px;
+  --radius-hero: 22px;
+  --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --shadow-float: 0 4px 24px rgb(28 41 51 / 0.08);
+}
+
+body { background: var(--canvas); }
+:focus-visible { outline-color: #1f4b63; outline-offset: 3px; }
+.guide-v2 { background: var(--canvas); }
+.side-nav { height: 72px; grid-template-columns: minmax(150px, 1fr) auto minmax(110px, 1fr); }
+.side-nav .v2-brand { align-items: center; gap: 10px; }
+.side-nav .v2-brand .brand-mark { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 11px; background: var(--ink); color: #fff; font-size: 23px; font-weight: 500; letter-spacing: -.07em; }
+.side-nav .v2-brand > div { display: grid; gap: 1px; }
+.side-nav .v2-brand b { color: var(--ink); font-size: 17px; font-weight: 650; letter-spacing: -.03em; }
+.side-nav .v2-brand small { color: var(--ink-soft); font-size: 10px; font-weight: 500; letter-spacing: .05em; }
+.side-nav > nav { align-items: center; gap: 4px; }
+.side-nav > nav button { min-width: 0; min-height: 42px; padding: 0 15px; border-radius: 12px; color: var(--ink-soft); font-size: 14px; }
+.side-nav > nav button.active { background: var(--accent-soft); color: var(--accent); }
+.side-nav > nav button.active::after { display: none; }
+.side-nav > nav button:hover { background: var(--surface-strong); }
+.personal-trigger { font-size: 13px; }
+.personal-trigger img { width: 34px; height: 34px; }
+.personal-trigger:hover, .personal-trigger[aria-expanded='true'], .personal-menu > button:hover { background: var(--accent-soft); }
+.personal-menu svg { color: var(--accent); }
+.guide-v2 .v2-heading h1 { font-family: var(--sans); font-size: clamp(26px, 3.2vw, 34px); font-weight: 650; line-height: 1.2; letter-spacing: -.035em; }
+.guide-v2 .v2-heading > span { color: var(--ink-soft); font-size: 11px; font-weight: 600; letter-spacing: .08em; }
+.guide-v2 .subnav { gap: 2px; width: max-content; max-width: 100%; padding: 4px; border: 1px solid var(--line); border-radius: 14px; background: #fff; }
+.guide-v2 .subnav button { min-height: 40px; padding: 0 15px; border-radius: 10px; font-weight: 500; }
+.guide-v2 .subnav button.active { background: var(--accent-soft); color: var(--accent); font-weight: 600; }
+.guide-v2 .subnav button.active::after { display: none; }
+.guide-v2 .city-row button { border-color: var(--line); }
+.guide-v2 .city-row button.active { color: var(--accent); border-color: var(--accent); }
+.guide-v2 .execution-status { border-radius: 7px; }
+.guide-v2 .content-view { padding-top: 28px; }
+.guide-v2 .booking-v2 > details, .guide-v2 .transport-v2 > article, .guide-v2 .task-v2 > article, .guide-v2 .deadline-center article { background: #fff; }
+
+.mobile-runtime .mobile-execution-shell {
+  --mobile-accent: var(--accent);
+  --mobile-accent-soft: var(--accent-soft);
+  --mobile-text: var(--ink);
+  --mobile-muted: var(--ink-soft);
+  --mobile-line: var(--line);
+  background: var(--canvas);
+}
+.mobile-runtime .mobile-bottom-dock { border-top-color: var(--line); background: rgb(255 255 255 / .96); }
+.mobile-runtime .mobile-bottom-dock button { color: var(--ink-soft); font-weight: 500; }
+.mobile-runtime .mobile-bottom-dock button.active { color: var(--accent); }
+.mobile-runtime .mobile-bottom-dock button.active svg { stroke-width: 2.1; }
+.mobile-runtime .mobile-screen-heading h1 { font: 650 25px/1.22 var(--sans); letter-spacing: -.03em; }
+.mobile-runtime .mobile-screen-heading > span { font-size: 10px; font-weight: 600; color: var(--ink-soft); }
+.mobile-runtime .mobile-home-header { height: 60px; }
+.mobile-runtime .mobile-home-header > button b { color: var(--ink); font-size: 17px; font-weight: 650; }
+.mobile-runtime .mobile-home-shell { background: var(--canvas); }
+.mobile-runtime .mobile-plan-tabs button, .mobile-runtime .mobile-more-tabs button { background: #fff; border-color: var(--line); font-weight: 500; }
+.mobile-runtime .mobile-plan-tabs button.active, .mobile-runtime .mobile-more-tabs button.active { color: var(--accent); background: var(--accent-soft); border-color: #c4d7e1; }
+.mobile-runtime .mobile-plan-tabs { gap: 2px; padding: 4px; border: 1px solid var(--line); border-radius: 14px; background: #fff; }
+.mobile-runtime .mobile-plan-tabs button { min-height: 40px; padding: 0 12px; border: 0; border-radius: 10px; }
+.mobile-runtime .mobile-plan-tabs button.active::after { display: none; }
+.mobile-runtime .mobile-more .mobile-filter-row button { border-color: var(--line); background: #fff; }
+.mobile-runtime .mobile-more .mobile-filter-row button.active { border-color: #c4d7e1; color: var(--accent); background: var(--accent-soft); }
+.guide-v2.mobile-runtime .mobile-primary-action { background: var(--accent); color: #fff; }
+.mobile-runtime .mobile-day-shortcuts button { border-color: var(--line); color: var(--ink); background: #fff; }
+.mobile-runtime .mobile-more .offline-pack-control, .mobile-runtime .mobile-plan article, .mobile-runtime .mobile-more article { background: #fff; }
+.guide-v2.mobile-runtime .mobile-more .offline-pack-control > button { background: var(--accent); }
+.guide-v2.mobile-runtime .mobile-detail-primary > :is(a, button):first-child { background: var(--accent); border-color: var(--accent); color: #fff; }
+.guide-v2.mobile-runtime .mobile-detail-primary > span { background: var(--success-soft); border-color: var(--success-soft); color: #276545; }
+.guide-v2.mobile-runtime .mobile-offline-panel .offline-map-actions > button { background: var(--accent); border-color: var(--accent); }
+.mobile-runtime .mobile-filter-row button.active, .mobile-runtime .mobile-sheet-actions svg, .mobile-runtime .mobile-day-list > button > svg { color: var(--accent); }
+.mobile-runtime .mobile-workbench-header { position: sticky; top: 0; z-index: var(--layer-sticky); display: flex; align-items: center; justify-content: space-between; height: 54px; padding: 0 18px; border-bottom: 1px solid var(--line); background: rgb(255 255 255 / .96); backdrop-filter: blur(16px); }
+.mobile-runtime .mobile-workbench-header > button { display: flex; align-items: center; gap: 8px; min-height: 44px; padding: 0; border: 0; background: none; }
+.mobile-runtime .mobile-workbench-header > button > span { display: grid; place-items: center; width: 27px; height: 27px; border-radius: 9px; background: var(--ink); color: #fff; font-size: 18px; font-weight: 500; }
+.mobile-runtime .mobile-workbench-header b { font-size: 15px; font-weight: 600; letter-spacing: -.02em; }
+.mobile-runtime .mobile-workbench-header .personal-trigger { gap: 3px; padding: 4px; }
+.mobile-runtime .mobile-workbench-header .personal-trigger > span { display: none; }
+.mobile-runtime .mobile-workbench-header .nav-save-state { display: none; }
+.mobile-runtime .mobile-workbench-header .personal-menu { position: absolute; right: 0; top: calc(100% + 4px); width: min(286px, calc(100vw - 36px)); }
+
+@media (max-width: 1100px) {
+  .side-nav { padding: 0 20px; }
+  .side-nav > nav button { padding: 0 11px; }
+}
+@media (max-width: 899px) {
+  .side-nav { grid-template-columns: auto 1fr auto; gap: 12px; padding: 0 16px; }
+  .side-nav .v2-brand .brand-mark { display: none; }
+  .side-nav .v2-brand small { display: none; }
+  .side-nav > nav { justify-content: center; }
+  .side-nav > nav button { padding: 0 9px; font-size: 13px; }
+  .personal-trigger { padding: 4px; gap: 4px; }
+  .personal-trigger > span { display: none; }
+}
+@media (max-width: 767px) {
+  body { padding-bottom: 0; }
+  .mobile-runtime .mobile-home-shell { margin-bottom: 0; padding-bottom: 28px; }
+  .guide-v2 .v2-heading h1 { font-size: 26px; }
+  .guide-v2 .subnav { border-radius: 12px; }
+  .guide-v2 .subnav button { padding: 0 12px; }
+}

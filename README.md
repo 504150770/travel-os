@@ -4,6 +4,8 @@
 
 ## 接续开发与验收
 
+2026-10-13 最新人工授权允许大改已有UI。三个Codex并行完成首页、手机当天/探索和桌面工作区，由经理统一主题、真实交互与恢复、检查及提交；见 [前端改版验收](artifacts/ui-redesign-20261013/REVIEW.md)。此次授权覆盖此前已认可页面“不重做”的限制，事实数据和私人资料仍受保护，整体QA尚未完成。
+
 新对话先读 [HANDOFF.md](HANDOFF.md)，再读 [QA 进度与证据](artifacts/visual-qa-20261001/qa-progress.json)，不要从零重做已获认可的页面。
 
 - 唯一工作目录：`C:/Users/50415/OneDrive/文档/ChatGPT/Travel/travel-os-ui-redesign`；不要操作父目录下的其他项目。

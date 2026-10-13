@@ -1,0 +1,97 @@
+{
+  "regressions": [
+    {
+      "exit": 0,
+      "name": "linkage-test"
+    },
+    {
+      "exit": 0,
+      "name": "gallery-offline-test"
+    },
+    {
+      "exit": 0,
+      "name": "architecture-audit"
+    },
+    {
+      "exit": 0,
+      "name": "mobile-shell-test"
+    },
+    {
+      "exit": 0,
+      "name": "desktop-workspace-test"
+    },
+    {
+      "exit": 0,
+      "name": "trip-presentation-test"
+    },
+    {
+      "exit": 0,
+      "name": "travel-intelligence-test"
+    },
+    {
+      "exit": 0,
+      "name": "readiness-test"
+    },
+    {
+      "exit": 0,
+      "name": "backup-test"
+    },
+    {
+      "exit": 0,
+      "name": "presentation-test"
+    },
+    {
+      "exit": 0,
+      "name": "gallery-copy-test"
+    },
+    {
+      "exit": 0,
+      "name": "mobile-plan-test"
+    },
+    {
+      "exit": 0,
+      "name": "explore-promotion-test"
+    },
+    {
+      "exit": 0,
+      "name": "offline-app-test"
+    },
+    {
+      "exit": 0,
+      "name": "mobile-practical-boundary-test"
+    },
+    {
+      "exit": 0,
+      "name": "desktop-practical-boundary-test"
+    },
+    {
+      "exit": 0,
+      "name": "document-interaction-test"
+    },
+    {
+      "exit": 0,
+      "name": "offline-update-boundary-test"
+    },
+    {
+      "exit": 0,
+      "name": "home-workbench-test"
+    },
+    {
+      "exit": 0,
+      "name": "mobile-workbench-test"
+    },
+    {
+      "exit": 0,
+      "name": "desktop-workbench-test"
+    },
+    {
+      "exit": 0,
+      "name": "navigation-context-test"
+    },
+    {
+      "exit": 0,
+      "name": "entity-navigation-test"
+    }
+  ],
+  "check": "passed"
+}

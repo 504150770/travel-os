@@ -8,6 +8,7 @@ import type { Entity } from '@/lib/entity-library';
 import { useEditablePlan, type PlanItem } from '@/hooks/use-editable-plan';
 import type { LightboxImage } from '@/features/app/appModel';
 import { mapLinks, ticketBookingByEntity } from '@/features/trip/tripModel';
+import { navigationForEntity } from '@/features/trip/entityNavigation';
 import { Media } from '@/views/shared/EntityUi';
 
 export function PlanStop({
@@ -31,6 +32,7 @@ export function PlanStop({
 }) {
   const [more, setMore] = useState(false);
   const links = mapLinks(entity);
+  const navigation = navigationForEntity(entity);
   const bookingId = ticketBookingByEntity[entity.id];
   const booking = bookingId
     ? (guideData.bookings.items as Booking[]).find(
@@ -87,10 +89,10 @@ export function PlanStop({
           >
             加入备选
           </button>
-          <a href={links.google} target="_blank" rel="noreferrer">
+          {navigation.google && <a href={navigation.google} target="_blank" rel="noreferrer">
             <Navigation />
             导航
-          </a>
+          </a>}
           <button onClick={() => setMore(!more)}>•••</button>
         </div>
         {more && (

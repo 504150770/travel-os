@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-13",
+  "baselineCommit": "1a91cb4f6451280752f08d079d1fedc7713428b1",
+  "branch": "codex/visual-qa-20260929",
+  "authorization": "Human explicitly requested parallel Codex tasks, major UI changes referencing comparable products, autonomous fixes, manager acceptance and commit. Automatic development remains canceled; no production deployment or external High review.",
+  "managerTasks": [
+    {
+      "area": "Home",
+      "threadId": "01a133d5-6536-7602-8fbe-5105779a32f1"
+    },
+    {
+      "area": "Mobile Today / Explore",
+      "threadId": "01a133d5-7c16-7623-9aac-001bdce18f49"
+    },
+    {
+      "area": "Desktop workspace",
+      "threadId": "01a133d5-9a34-75e2-9c8a-7125e90e268c"
+    }
+  ],
+  "references": [
+    "https://wanderlog.com/",
+    "https://www.tripit.com/web/free",
+    "https://www.airbnb.com/help/article/4192"
+  ],
+  "actualAcceptance": {
+    "home": "Compact original photo hero; default photos/avatar complete; selected Day2/15, six city callbacks to original Day2/5/7/9/11/13 and readiness/budget navigation exercised.",
+    "responsive": "CSS375/390/430/768/820/1024/1440 contexts checked across selected views; no horizontal document overflow in measured layouts. 768/820 overview default, full-width separate itinerary pane; 1024/1440 wide workspace. This is not every view at every dimension.",
+    "navigation": "Latest build Day2 and Day15 budget loaded then reload->Home retained exact day; desktop food+Paris route reload retained Day15; mobile city/target day reload retained.",
+    "explore": "Default Rome Day2 Trevi/Navona showed exact current-day existing notes, price/state unchanged; target15 did not reuse Day2 notes. Favorite persisted after reload; detail independent and Escape returned focus; original Pincio backup promotion/Undo exercised.",
+    "businessProtection": "Private UI baseline(20), promotion(21), Undo(22), full UI Restore(23), read-only export(24), and latest final-source export(25). All nine business fields of final25 deep-equal baseline20. Promotion changes status backup->planned and reindexes order as expected; identity/content fields and other days retained, Undo restored exact plan.",
+    "today": "All four glance values visible in two-column grid; selectedDay15 photos complete and actual End last action bottom816.25 before dock864; Day18 no tomorrow button, no hotel action, activity main opens original detail and Escape focuses 查看安排.",
+    "map": "No Leaflet before map entry. Same820-breakpoint map->plan->map->overview->map initializedAt130541 unchanged; Drawer interactivefalse/handlers000000 then Escape restores111111/focus. Cross820->1024 existing parent branch remounted at191030, explicitly not counted as cross-breakpoint instance reuse.",
+    "activityNavigation": "Latest navigation build Day18 detail and more sheet have no map action, existing chosen day/status/edit controls retained, Escape returns 查看安排. Ordinary Trevi mobile detail keeps exact Google link/gallery. Desktop Day2 timeline only navigates Trevi/Navona; desktop GF flight/rest cards show neither Google/Apple/hotel route nor hidden-route advertising, ordinary Trevi retains all original links. No external navigation clicked. Valid-address/coordinate activity and legacy CurrentPlan links are actual-JSX/model-covered, not separately browser-clicked."
+  },
+  "performance": {
+    "scope": "Local unthrottled IAB raw DOM performance snapshots, first design build cold and later layout-identical context/notes build warm. Not field p75, INP/CLS, global performance acceptance or final-source comparable benchmark.",
+    "cold": {
+      "lcpMs": 1972,
+      "ttfbMs": 368,
+      "jsReadyMs": 1764,
+      "mountedMs": 1963,
+      "jsTransferBytes": 292476
+    },
+    "warm": {
+      "lcpMs": 472,
+      "ttfbMs": 26,
+      "jsReadyMs": 196,
+      "mountedMs": 175,
+      "heroLoadedMs": 323,
+      "jsTransferBytes": 0
+    }
+  },
+  "verification": {
+    "projectCheck": "pnpm check passed after all JavaScript/TypeScript navigation fixes; final CSS-only selector correction followed by fresh build/project audit and actual render verification.",
+    "regressionCount": 23,
+    "auditFailures": 0,
+    "auditWarnings": 1,
+    "budgetWarning": "Existing projected27630 vs cap26000; no budget changes",
+    "dependencyMaintenance": "No upgrade or pnpm dependency-audit claim",
+    "finalThemeBuildAndAudit": "passed after CSS-only selector correction; final passive status screenshot inspected"
+  },
+  "evidenceCorrection": [
+    "Native JPEG dimensions are read independently via sharp and used in filenames, distinct from CSS viewport and DOM client sizes; no resized/stitched/manufactured evidence.",
+    "Home CSS1440 produced1413x891 JPEG and DOMclient1425; CSS375 produced360x779 JPEG; CSS390 produced375x811; CSS430 produced415x899. Filtered promotion native390x843. Workspace768/820/1024 frame matches actual width.",
+    "Initial Day15 resize transition showed stale Rome hero/placeholder; excluded image stays outside repo. Subsequent completed photos and native wide Day15 image used.",
+    "First End key observation was intermediate scrolling; only completed End DOM1818.4/max1818 and matching screenshot prove lower controls.",
+    "Initial newest fullcheck caught missing Clock3 import; fixed and targeted actual JSX test/lint passed, followed by complete fresh final check.",
+    "Initial strict promoted-item equality rejected expected status/order changes. Correct business field comparison explicitly allows only those transitions, then exact Undo/Restore/final comparisons succeeded.",
+    "One Home screenshot had last city unpainted despite complete/naturalWidth; replaced after finished rendering and visually re-inspected. No incomplete frame retained as final.",
+    "Screenshot establishes visible layout; actual UI callbacks/DOM/download comparisons separately establish behavior. Source/VM fixture results not described as browser E2E.",
+    "Actual activity detail exposed static 已加入 styled like primary CTA when it became first child; theme selector narrowed to a/button and fresh build screenshot verifies passive success styling."
+  ],
+  "safety": {
+    "protectedDirtyFiles": 10,
+    "originalDirtySha256Equal": true,
+    "unrelatedUntrackedPreserved": true,
+    "privateFilesUploaded": false,
+    "real3000BusinessStateMutated": false,
+    "sourceDataAndDependenciesUnchanged": true,
+    "automationCreated": false,
+    "productionDeployed": false
+  },
+  "remaining": [
+    "Full external-network offline lacks formal network switch; prior own-server-unavailable offline and UI Restore acceptance remain recorded separately.",
+    "Production field performance, arbitrary custom edits/reorder, every page/dialog at every breakpoint, and final human aesthetic approval are not claimed.",
+    "Latest production source395cb61 remains separate from this QA source. This task does not complete historical whole-system acceptance."
+  ],
+  "complete": false,
+  "sourceWritersStopped": true
+}

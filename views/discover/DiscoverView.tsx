@@ -9,6 +9,7 @@ import { openGalleryRequest, selectCoverImage } from '@/lib/media';
 import type { DiscoverTab, LightboxImage } from '@/features/app/appModel';
 import { cityNames } from '@/features/app/appModel';
 import { hotelForCity, mapLinks } from '@/features/trip/tripModel';
+import { navigationForEntity } from '@/features/trip/entityNavigation';
 import { EntityActions, Favorite, Media } from '@/views/shared/EntityUi';
 import { useDiscoverController } from '@/features/discover/useDiscoverController';
 
@@ -27,6 +28,7 @@ function EntityDetailModal({
 }) {
   const dialogRef = useDialogLifecycle(close);
   const links = mapLinks(entity);
+  const navigation = navigationForEntity(entity);
   const cover = selectCoverImage(entity.images);
   const dishLabel = typeof entity.raw.dishes === 'string' ? entity.raw.dishes : '';
   const orders = ['restaurant', 'cafe'].includes(entity.type)
@@ -121,12 +123,12 @@ function EntityDetailModal({
             </p>
           </div>
           <div className="detail-actions">
-            <a href={links.google} target="_blank" rel="noreferrer">
+            {navigation.google && <a href={navigation.google} target="_blank" rel="noreferrer">
               Google Maps <ExternalLink />
-            </a>
-            {entity.hotelAnchor && (
+            </a>}
+            {navigation.fromHotel && (
               <a
-                href={entity.hotelAnchor.directionsUrl}
+                href={navigation.fromHotel}
                 target="_blank"
                 rel="noreferrer"
               >
@@ -174,6 +176,7 @@ function ExploreCard({
 }) {
   const menu = entity.raw.menu as Record<string, unknown> | undefined;
   const stay = hotelForCity(entity.city);
+  const navigation = navigationForEntity(entity);
   const hotelFit =
     typeof entity.raw.distance === 'string'
       ? entity.raw.distance
@@ -192,7 +195,7 @@ function ExploreCard({
       <p>{entity.description || entity.notes}</p>
       <details className="explore-context">
         <summary>拍摄与实用信息</summary>
-      {stay && (
+      {stay && navigation.fromHotel && (
         <p className="hotel-fit">
           从 {stay.hotelName} 出发 · {hotelFit}
         </p>

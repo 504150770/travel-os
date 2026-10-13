@@ -37,7 +37,10 @@ assert.match(read('components/mobile/MobileToday.tsx'), /tomorrow.split\('；待
 assert.match(home, /HOME_HERO = '\/images\/home-eiffel-winter-sunset\.png'/);
 assert.match(home, /HOME_HERO_MOBILE = '\/images\/home-eiffel-winter-mobile\.webp'/);
 assert.match(home, /<source media="\(max-width: 767px\)" srcSet=\{HOME_HERO_MOBILE\}/);
-assert.match(home, /A Winter Journey Through Six Cities/);
+// The authorized workbench replaces the marketing headline; city facts and
+// the selected-day callbacks below remain protected independently.
+assert.match(home, /欧洲冬日旅程/);
+assert.match(home, /aria-label="所选日期行程入口"/);
 for (const city of ['rome', 'florence', 'venice', 'vienna', 'prague', 'paris']) {
   assert.match(home, new RegExp(`home-city-${city}\\.webp`));
 }
@@ -73,8 +76,10 @@ assert.match(appShell, /isMobile && view === 'home'/);
 assert.doesNotMatch(shell, /side-meta|当前旅行日|当前查看日/);
 assert.match(shell, /PersonalMenu/);
 assert.match(personalMenu, /jacob-personal-mark\.webp/);
-assert.match(personalMenu, /Backup \/ Export/);
-assert.match(personalMenu, /Saved \/ Local status/);
+assert.match(personalMenu, /备份与恢复/);
+assert.match(personalMenu, /本机行程/);
+assert.match(personalMenu, /openAndClose\(openBackup\)/);
+assert.match(personalMenu, /openAndClose\(openSettings\)/);
 assert.match(personalMenu, /travel-save-state/);
 assert.match(personalMenu, /aria-label="Jacob"/);
 // Wiring guards only; actual Escape/focus dismissal is tested separately in Chrome.
@@ -88,7 +93,7 @@ assert.match(read('views/trip/QuickAdd.tsx'), /id="quick-add-name-hint"/);
 assert.match(read('views/trip/QuickAdd.tsx'), /if \(!form\.name\.trim\(\)\) return/);
 assert.match(workspace, /useState<'overview' \| 'map'>\('overview'\)/);
 assert.match(workspace, /const \[mapOpened, setMapOpened\] = useState\(false\)/);
-assert.match(workspace, /aria-label="Workspace view"/);
+assert.match(workspace, /aria-label="行程视图"/);
 assert.match(workspace, /mapOpened && <div className="workspace-map-stage"/);
 assert.match(workspace, /hidden=\{viewMode !== 'map'\}/);
 assert.match(overview, /data-trip-overview/);

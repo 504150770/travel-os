@@ -64,9 +64,12 @@ const mobileSelectors = fs.readFileSync(
   path.join(root, 'features/mobile/mobileTripSelectors.ts'),
   'utf8',
 );
-for (const label of ['Today', 'Map', 'Explore', 'Plan', 'More']) {
-  assert.match(shell, new RegExp(`label: '${label}'`));
+for (const [id, label] of [['today', '当天'], ['map', '地图'], ['explore', '探索'], ['plan', '准备'], ['more', '资料']]) {
+  assert.match(shell, new RegExp(`id: '${id}', label: '${label}'`));
 }
+assert.match(shell, /aria-current=\{controller\.mobileView === id \? 'page' : undefined\}/);
+assert.match(shell, /aria-label="返回旅行概览"/);
+assert.match(shell, /controller\.navigate\('home'\)/);
 assert.match(mapScreen, /import MobileMapCanvas from '@\/components\/mobile\/map\/MobileMapCanvas'/);
 assert.match(tripWorkspace, /import\('@\/components\/mobile\/MobileMapScreen'\)/);
 assert.match(tripWorkspace, /mapVisited/);

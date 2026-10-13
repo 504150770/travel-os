@@ -503,5 +503,28 @@
     "fullExternalNetworkOfflineAccepted": false,
     "complete": false
   },
+  "uiRedesign20261013": {
+    "report": "artifacts/ui-redesign-20261013/REVIEW.md",
+    "evidence": "artifacts/ui-redesign-20261013/acceptance.json",
+    "baselineCommit": "1a91cb4f6451280752f08d079d1fedc7713428b1",
+    "authorization": "Human explicitly allowed major frontend redesign, comparable-product references, parallel Codex work, autonomous fixes, manager acceptance and commit; overrides historic no-redesign restriction. Automation and external High remain canceled, no deployment.",
+    "managerDelegatedTasks": 3,
+    "regressionCount": 23,
+    "sourceWritersStopped": true,
+    "change": "Shared restrained sans/photo/product theme and Chinese navigation; compact Home task/budget/preparation/day context; complete mobile glance/timeline/Explore wide cards; compact desktop separate itinerary pane and clearer first plan/hotel actions. Existing callbacks/data unchanged. Real defects fixed: non-Trip URL writes dropped day; empty Explore copy now exact current-day notes only; activity UI only navigates actual coordinates/address, not task names or multi-leg flight routes; passive joined span is not a primary button.",
+    "actual": "Formal CUA true pages across selected CSS375/390/430/768/820/1024/1440 contexts. Home six-city/day/readiness/budget routes, Day2/15 budget loaded reload return retains date; desktop food/Paris reload retains Day15; current-day Explore notes do not leak into target15. Favorite reload and Pincio original backup promotion/Undo, Day18 no hotel/tomorrow + activity detail/more focus, ordinary Trevi navigation/gallery, compact overview/full pane and wide overview, same820-breakpoint map reuse/Drawer interactive gate passed within stated scope.",
+    "stateProtection": "Isolated3010 only writes after UI export; expected backup->planned and order reindex explicitly distinguished from identity/content. UI Undo then Restore20 and latest final-source export25 allnine fields deep-equal20. Private files only local, no3000 business mutation or old3001 cleanup.",
+    "verification": "All JS/TS changes pnpm check and23 regression scopes passed; final CSS-only primary selector followed by fresh build/project audit and actual green passive status screenshot. Audit0failures1unchanged budget warning; no dependency upgrades or pnpm audit claim. Independent source review+manager patch review; facts/data/lib/hooks/map/dependencies diff empty.",
+    "evidenceCorrection": "18 native JPEGs independently measured/named, not CSS dimensions. HomeCSS1440 actual1413x891; CSS375360x779;CSS390375x811;CSS430415x899;Sheet430x931. Incomplete Day15 resize, intermediate End, mixed-before Today excluded; Home last unpainted city frame replaced after actual rendering. MissingClock3 detected by fullcheck and corrected. Promotion equality comparison explicitly permits expected status/order, strict Restore/final9-field result retained. Map820->1024 pre-existing parent remount not called cross-breakpoint reuse. Full correction list retained in acceptance.json.",
+    "performance": "Unthrottled local rawDOM first design coldLCP1972/TTFB368/JSready1764/mounted1963/JS292476; later same-layout warmLCP472/TTFB26/JSready196/mounted175/hero323/JS0. Not final patch comparable benchmark or production p75/INP/CLS.",
+    "protectedDirtyFileCount": 10,
+    "originalDirtySha256Equal": true,
+    "privateFilesUploaded": false,
+    "real3000BusinessStateMutated": false,
+    "productionDeployed": false,
+    "fullExternalNetworkOfflineAccepted": false,
+    "finalHumanAestheticApproval": false,
+    "complete": false
+  },
   "complete": false
 }

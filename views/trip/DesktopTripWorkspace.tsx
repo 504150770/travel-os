@@ -94,6 +94,7 @@ export default function DesktopTripWorkspace(props: DesktopTripWorkspaceProps) {
   const [panelWidth, setPanelWidth] = useState(initialPanelWidth);
   const [panelEpoch, setPanelEpoch] = useState(0);
   const [planCollapsed, setPlanCollapsed] = useState(false);
+  const [compactPlanOpen, setCompactPlanOpen] = useState(false);
   const [viewMode, setViewMode] = useState<'overview' | 'map'>('overview');
   const [mapOpened, setMapOpened] = useState(false);
   const [dayPicker, setDayPicker] = useState(false);
@@ -168,11 +169,13 @@ export default function DesktopTripWorkspace(props: DesktopTripWorkspaceProps) {
   );
 
   const changeDay = (day: number) => {
+    if (!guideData.days.some((item) => item.day === day)) return;
     setDayPicker(false);
     setSelectedPointId(null);
     setSelectedLegId(null);
     setCandidates([]);
     trip.changeDay(day);
+    if (dayPicker) dayButtonRef.current?.focus();
   };
 
   const setExploreCandidates = useCallback((items: Entity[]) => setCandidates(items), []);
@@ -196,6 +199,11 @@ export default function DesktopTripWorkspace(props: DesktopTripWorkspaceProps) {
     } else mapOpenStartedAt.current = startedAt;
     setMapOpened(true);
     setViewMode('map');
+    setCompactPlanOpen(false);
+  };
+  const showOverview = () => {
+    setViewMode('overview');
+    setCompactPlanOpen(false);
   };
   const handleMapStage = (stage: 'initialized' | 'markers' | 'tiles' | 'route') => {
     if (mapOpenStartedAt.current == null) return;
@@ -217,14 +225,17 @@ export default function DesktopTripWorkspace(props: DesktopTripWorkspaceProps) {
     setPlanCollapsed(false);
   };
   const togglePlan = () => {
-    if (compact) setPlanCollapsed((value) => !value);
+    if (compact) setCompactPlanOpen((value) => !value);
     else if (panelRef.current?.isCollapsed()) { panelRef.current.expand(); setPlanCollapsed(false); }
     else { panelRef.current?.collapse(); setPlanCollapsed(true); }
   };
-  const planPane = <section className="workspace-plan-pane">
+  const planVisible = compact ? compactPlanOpen : !planCollapsed;
+  const firstDay = guideData.days[0]?.day ?? 1;
+  const lastDay = guideData.days.at(-1)?.day ?? firstDay;
+  const planPane = <section className="workspace-plan-pane" id="desktop-trip-plan" aria-label="当天行程">
     <header className="workspace-timeline-heading">
-      <span>{new Intl.DateTimeFormat('zh-CN', { month: 'short', day: 'numeric', weekday: 'short', timeZone: 'UTC' }).format(new Date(`${trip.day.date}T00:00:00Z`))}</span>
-      <h2>Day {trip.day.day} · {routeCityForDay(trip.day)}</h2>
+      <div className="workspace-timeline-context"><span>{new Intl.DateTimeFormat('zh-CN', { month: 'short', day: 'numeric', weekday: 'short', timeZone: 'UTC' }).format(new Date(`${trip.day.date}T00:00:00Z`))}</span>{compact && <button onClick={() => setCompactPlanOpen(false)}><ChevronLeft />{viewMode === 'map' ? '返回地图' : '返回概览'}</button>}</div>
+      <h2>第 {trip.day.day} 天 · {routeCityForDay(trip.day)}</h2>
       <p>{trip.planDay.activeItems.length} 项安排{trip.currentRoute.summary.walkingKm == null ? '' : ` · 已知步行 ${trip.currentRoute.summary.walkingKm} km`}</p>
       <DayStatusSummary counts={statusCounts} />
     </header>
@@ -239,7 +250,7 @@ export default function DesktopTripWorkspace(props: DesktopTripWorkspaceProps) {
       actions={actions}
     />
   </section>;
-  const contentPane = <section className="workspace-content-pane" data-workspace-view={viewMode}>
+  const contentPane = <section className="workspace-content-pane" data-workspace-view={viewMode} hidden={compact && compactPlanOpen}>
     {viewMode === 'overview' && <DesktopTripOverview
       day={trip.day}
       hero={trip.hero}
@@ -273,51 +284,50 @@ export default function DesktopTripWorkspace(props: DesktopTripWorkspaceProps) {
         interactive={drawer === null && !trip.quick && !trip.selectedGym}
         onStage={handleMapStage}
       />
+      {viewMode === 'map' && <div className="workspace-map-tools" aria-label="地图图层">
+        <button className={showRoute ? 'active' : ''} aria-pressed={showRoute} onClick={() => setShowRoute((value) => !value)}><Route /> 路线</button>
+        <button className={showFood ? 'active' : ''} aria-pressed={showFood} onClick={() => setShowFood((value) => !value)}><Utensils /> 美食</button>
+        <button className={showGym ? 'active' : ''} aria-pressed={showGym} onClick={() => setShowGym((value) => !value)}><Dumbbell /> 健身</button>
+        <button onClick={() => setFitRequest((value) => value + 1)}><CircleDot /> 全部地点</button>
+        <button onClick={location.request} disabled={location.state.status === 'locating'} title={location.state.status === 'error' ? location.state.message : undefined}><LocateFixed /> {location.state.status === 'locating' ? '定位中' : '我的位置'}</button>
+      </div>}
     </div>}
   </section>;
 
   return <div className={`desktop-trip-workspace ${compact ? 'compact' : ''}`} data-desktop-workspace>
     <header className="workspace-toolbar">
       <div className="workspace-day-nav" ref={dayNavRef}>
-        <button disabled={selectedDay === 1} onClick={() => changeDay(selectedDay - 1)} aria-label="上一天"><ChevronLeft /></button>
+        <button disabled={selectedDay <= firstDay} onClick={() => changeDay(selectedDay - 1)} aria-label="上一天"><ChevronLeft /></button>
         <button ref={dayButtonRef} className="workspace-day-button" onClick={() => setDayPicker((value) => !value)} aria-expanded={dayPicker} aria-haspopup="dialog">
-          <span>Day {selectedDay} · {trip.day.date.slice(5).replace('-', '/')}</span><b>{routeCityForDay(trip.day)}</b><ChevronDown />
+          <span>第 {selectedDay} 天 · {trip.day.date.slice(5).replace('-', '/')}</span><b>{routeCityForDay(trip.day)}</b><ChevronDown />
         </button>
-        <button disabled={selectedDay === 18} onClick={() => changeDay(selectedDay + 1)} aria-label="下一天"><ChevronRight /></button>
+        <button disabled={selectedDay >= lastDay} onClick={() => changeDay(selectedDay + 1)} aria-label="下一天"><ChevronRight /></button>
         {dayPicker && <dialog open className="workspace-day-popover" aria-label="选择旅行日">
-          {guideData.days.map((item) => <button key={item.day} className={item.day === selectedDay ? 'active' : ''} onClick={() => { changeDay(item.day); setDayPicker(false); }}><b>D{item.day}</b><span>{item.date.slice(5)} · {routeCityForDay(item as Day)}</span><small>{item.theme}</small></button>)}
+          {guideData.days.map((item) => <button key={item.day} className={item.day === selectedDay ? 'active' : ''} aria-current={item.day === selectedDay ? 'date' : undefined} onClick={() => changeDay(item.day)}><b>{item.day}</b><span>{item.date.slice(5)} · {routeCityForDay(item as Day)}</span><small>{item.theme}</small></button>)}
         </dialog>}
       </div>
       <div className="workspace-tools">
         <WeatherChip weather={weather} />
-        <div className="workspace-view-toggle" aria-label="Workspace view">
-          <button className={viewMode === 'overview' ? 'active' : ''} onClick={() => setViewMode('overview')}><PanelsTopLeft /> Overview</button>
-          <button className={viewMode === 'map' ? 'active' : ''} onClick={showMap}><MapIcon /> Map</button>
+        <div className="workspace-view-toggle" aria-label="行程视图">
+          <button className={viewMode === 'overview' ? 'active' : ''} aria-pressed={viewMode === 'overview'} onClick={showOverview}><PanelsTopLeft /> 概览</button>
+          <button className={viewMode === 'map' ? 'active' : ''} aria-pressed={viewMode === 'map'} onClick={showMap}><MapIcon /> 地图</button>
         </div>
-        <button className="workspace-ghost-button" onClick={() => { setDrawer('details'); setDetailEntity(null); }}><Info /> Day details</button>
-        <button className="workspace-ghost-button" onClick={() => { setDrawer('explore'); setDetailEntity(null); }}><Search /> Explore</button>
-        <button className="workspace-ghost-button" onClick={togglePlan}>{planCollapsed ? <PanelLeftOpen /> : <PanelLeftClose />}{planCollapsed ? 'Show Plan' : 'Collapse'}</button>
+        <button className="workspace-ghost-button" onClick={() => { setDrawer('details'); setDetailEntity(null); }}><Info /> 当天详情</button>
+        <button className="workspace-ghost-button" onClick={() => { setDrawer('explore'); setDetailEntity(null); }}><Search /> 查找地点</button>
+        <button className="workspace-ghost-button" aria-expanded={planVisible} aria-controls="desktop-trip-plan" onClick={togglePlan}>{planVisible ? <PanelLeftClose /> : <PanelLeftOpen />}{planVisible ? '收起行程' : '行程'}</button>
       </div>
     </header>
-    {viewMode === 'map' && <div className="workspace-map-tools" aria-label="Map layers">
-      <button className={showRoute ? 'active' : ''} onClick={() => setShowRoute((value) => !value)}><Route /> Route</button>
-      <button className={showFood ? 'active' : ''} onClick={() => setShowFood((value) => !value)}><Utensils /> Food</button>
-      <button className={showGym ? 'active' : ''} onClick={() => setShowGym((value) => !value)}><Dumbbell /> Gym</button>
-      <button onClick={() => setFitRequest((value) => value + 1)}><CircleDot /> Fit Day</button>
-      <button onClick={location.request} disabled={location.state.status === 'locating'} title={location.state.status === 'error' ? location.state.message : undefined}><LocateFixed /> {location.state.status === 'locating' ? 'Locating' : 'My Location'}</button>
-    </div>}
     {compact ? <div className="workspace-compact-stage">
       {contentPane}
-      {!planCollapsed && planPane}
+      {compactPlanOpen && planPane}
     </div> : <ResizablePanelGroup key={panelEpoch} id="desktop-trip-group" orientation="horizontal" className="workspace-split">
       <ResizablePanel id="plan" panelRef={panelRef} defaultSize={`${panelWidth}px`} minSize={`${MIN_PANEL}px`} maxSize={`${MAX_PANEL}px`} collapsible collapsedSize="0px" onResize={(size) => {
         setPlanCollapsed(size.inPixels < 20);
         if (size.inPixels >= MIN_PANEL) window.localStorage.setItem(PANEL_KEY, String(Math.round(size.inPixels)));
       }}>{planPane}</ResizablePanel>
-      <ResizableHandle className="workspace-resize-handle" withHandle onDoubleClick={resetPanel} title="Drag to resize · double-click to reset" />
+      <ResizableHandle className="workspace-resize-handle" withHandle onDoubleClick={resetPanel} title="拖动调整宽度，双击重置" />
       <ResizablePanel id="content" minSize="320px">{contentPane}</ResizablePanel>
     </ResizablePanelGroup>}
-    {planCollapsed && <button className="workspace-show-plan" onClick={togglePlan}><PanelLeftOpen /> Show Plan</button>}
     <DayDetailsDrawer open={drawer === 'details'} close={closeDrawer} day={trip.day} dayState={trip.dayState} entities={entities} resolve={resolve} actions={actions} openGallery={open} preferredTransport={preferredTransport} actionStatuses={actionStatuses} privateLinks={privateLinks} openGym={trip.setSelectedGym} />
     <ExploreDrawer open={drawer === 'explore'} close={closeDrawer} city={routeCityForDay(trip.day)} entities={entities} dayId={selectedDay} actions={actions} inspect={(entity) => { setDetailEntity(entity); setDrawer('entity'); }} onAdd={addCandidate} onCandidates={setExploreCandidates} openCustom={() => trip.openQuick('custom')} />
     <EntityDetailDrawer entity={drawer === 'entity' ? detailEntity : null} close={closeDrawer} dayId={selectedDay} actions={actions} openGallery={open} />
