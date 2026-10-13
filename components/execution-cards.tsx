@@ -543,10 +543,12 @@ export function DeadlineCenter({
   items,
   statuses,
   setStatuses,
+  bookingSyncedIds = new Set<string>(),
 }: {
   items: DeadlineItem[];
   statuses: Record<string, string>;
   setStatuses: (value: Record<string, string>) => void;
+  bookingSyncedIds?: ReadonlySet<string>;
 }) {
   const groups = [
     { key: 'Critical', title: 'CRITICAL TO CONFIRM' },
@@ -566,6 +568,7 @@ export function DeadlineCenter({
             .map((item) => {
               const actionId = deadlineActionId(item);
               const unifiedStatus = statuses[actionId] ?? item.status;
+              const synced = bookingSyncedIds.has(actionId);
               return (
                 <article key={item.id} data-action-id={actionId} tabIndex={-1}>
                   <time>
@@ -576,15 +579,18 @@ export function DeadlineCenter({
                     <span>{item.category}</span>
                     <h3>{item.title}</h3>
                     <p>{item.action}</p>
+                    {synced && <small>由订单状态自动完成</small>}
                   </div>
                   <select
+                    disabled={synced}
                     value={unifiedStatus}
-                    onChange={(event) =>
+                    onChange={(event) => {
+                      if (synced) return;
                       setStatuses({
                         ...statuses,
                         [actionId]: event.target.value,
-                      })
-                    }
+                      });
+                    }}
                   >
                     <option>Open</option>
                     <option>Ready</option>

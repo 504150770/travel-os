@@ -394,6 +394,10 @@
   background: rgb(0 0 0/45%);
 }
 .document-viewer {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border: 0;
   display: grid;
   grid-template-rows: auto minmax(0, 1fr) auto;
   width: min(860px, 100%);

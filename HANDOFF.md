@@ -8,6 +8,8 @@
 
 ## 1. 先读与范围
 
+**2026-10-13 经理分工授权**：用户明确允许开其他 Codex 任务同步优化，代码任务为手机/桌面操作边界 `01a1338e-e608-7450-ab17-0b0af88b141b` 和离线可靠性 `01a1338f-058b-7323-b1eb-6831e0ac59d2`。主线程统一浏览器、构建、审计、数据恢复和Git提交；不能让多个任务同时操纵页面或生成文件。见 [并行优化报告](artifacts/parallel-optimization-20261013/REVIEW.md)、两个分工报告和 `acceptance.json`。保持取消定时任务/外部High、仅QA分支、不部署的人工指令；已测恢复/本地性能及本轮实际范围覆盖旧未完成说明，完整外部断网仍待条件，不重复请求未变化的权限。
+
 **2026-10-13 恢复/离线/性能人工任务**：见 [本轮报告](artifacts/restore-offline-performance-20261013/REVIEW.md) 与 `acceptance.json`。正式 IAB 文件选择器真实通过 V3/V4/V5 恢复、取消与坏 JSON；UI 导出比对和原始基线恢复完成。新增全构建懒代码离线清单，并修复旧 HTML 引用与新脚本失配；停服后未访问 Day15/Day8 导航、刷新、Explore/Plan/More、核心照片通过。最终本地生产构建冷 LCP 桌面1084ms/手机1180ms，暖472–884ms/468–596ms；旧慢样本保留，无损图片编码保留原像素。完整外部断网仍受正式接口缺 Network Offline/Chrome 断开限制，已向用户发必要重连请求；不能把停服当完整断网。生产 field p75/INP/CLS 未评估。10 个原始脏文件逐字节恢复；未部署、无依赖升级、无真实3000业务写入。前段“Restore/实测性能未完成”只适用于此前历史，当前边界以本轮记录为准；全局 complete=false。
 
 1. 进入唯一项目 `C:/Users/50415/OneDrive/文档/ChatGPT/Travel/travel-os-ui-redesign`。
@@ -25,7 +27,7 @@
 | 最近功能/视觉修复 | `1dcb014` 手机离线操作层级；`626b75b` More 当前 tab 可见；`0cce659` Booking 状态选项；地图修复等详见 QA 日志 |
 | 最新生产发布 | 用户于 2026-10-03 明确要求“部署”；QA 源版本 `395cb61c36be1ddb77b8693981d8b8dd3b95fd81`，Vercel `dpl_HzdcSGEyFEbvo2ErzexMaL5uyCBA`，已 READY 并指向 `travel.jacob.xin` |
 | 前一生产发布 / 回退基线 | Home 城市入口版本 `dpl_GtPDHjQ8P8zSC1iJDMgutGqSjFqK`，此次发布前已实际 inspect 确认 READY |
-| 当前 QA 分支状态 | 本轮已授权发布现有修复，随后只有发布记录与截图提交；记录 HEAD 与线上源版本分别核对。后续不要自动部署 |
+| 当前 QA 分支状态 | 2026-10-13 人工授权的前端、恢复/离线/性能和并行实用性修复已持续备份；最新 HEAD 以 Git log/远端为准，与线上源 `395cb61` 分开核对。后续不要自动部署 |
 
 不要说“从未部署”，也不要把发布后的记录提交当作线上源版本。最新发布实际通过完整源码检查、项目审计与全部现有回归；正式域名和四个初始 CSS/头像 HTTP200，真实 Chrome Home、手机 Day2/Day18 有只读冒烟证据。发布不是全系统验收，原生确认清理、Restore、完整外部断网、实测性能等仍未完成，详见 QA 的 `productionRelease20261003Latest` 与 `artifacts/production-release-20261003/release.json`。`.travel-build-state.json` 的 `handoff_allowed/source_commit` 是生成的结构审计，不是最新 HEAD、真实用户状态或全系统验收结论。`qa-progress.complete` 仍为 `false`。
 

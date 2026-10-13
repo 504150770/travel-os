@@ -1,5 +1,5 @@
 import { createHash } from 'node:crypto';
-import { readdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join, resolve, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -34,8 +34,16 @@ export function generateOfflineAppManifest(clientRoot, shellAssets = []) {
     hash.update(url).update(bytes);
     totalBytes += bytes.length;
   }
+  const entryFile = join(clientRoot, 'vinext-client-entry-manifest.json');
+  let entry;
+  if (existsSync(entryFile)) {
+    const bytes = readFileSync(entryFile);
+    entry = `/${JSON.parse(bytes).appBrowserEntry}`;
+    if (!assets.includes(entry)) throw new Error('Built application entry is missing from offline assets');
+    hash.update('vinext-client-entry-manifest.json').update(bytes);
+  }
   assets.unshift('/', '/_next/static/offline-app.json');
-  const manifest = { version: hash.digest('hex').slice(0, 12), assetCount: assets.length, totalBytes, assets };
+  const manifest = { version: hash.digest('hex').slice(0, 12), assetCount: assets.length, totalBytes, assets, ...(entry ? { entry } : {}) };
   writeFileSync(join(staticRoot, 'offline-app.json'), `${JSON.stringify(manifest, null, 2)}\n`);
   return manifest;
 }

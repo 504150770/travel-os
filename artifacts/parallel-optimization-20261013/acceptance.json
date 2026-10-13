@@ -1,0 +1,162 @@
+{
+  "date": "2026-10-13",
+  "baselineCommit": "30ac563794392d4427b8737efe06b969337c1fc1",
+  "delegation": {
+    "mobileThread": "01a1338e-e608-7450-ab17-0b0af88b141b",
+    "offlineThread": "01a1338f-058b-7323-b1eb-6831e0ac59d2",
+    "sourceWritersStopped": true,
+    "managerOwnsBrowserChecksBuildCommit": true
+  },
+  "checks": {
+    "projectCheck": "passed",
+    "regressionCount": 18,
+    "documentAndWorkerSupplementaryLint": "passed",
+    "executionCardsSupplementaryLint": "existing TodayAtGlance unused day parameter; unchanged and outside delegated DeadlineCenter edits",
+    "auditFailures": 0,
+    "auditWarnings": 1,
+    "dependencyUpgrades": false,
+    "finalCheckAfterShellMigration": "passed: pnpm check and all 18 regressions after v12 metadata fix",
+    "independentSourceReview": "Original P2 resolved; no remaining blocking issue found"
+  },
+  "actual": {
+    "origins": [
+      "localhost:3008",
+      "127.0.0.1:3009"
+    ],
+    "real3000BusinessWrites": false,
+    "document": {
+      "publicPngFixture": true,
+      "initialDocumentCount": 0,
+      "savedDocumentCount": 1,
+      "persistedAfterReload": true,
+      "preview": "native dialog",
+      "firstFocus": "Close document",
+      "shiftTabTarget": "Open full screen",
+      "tabLoopTarget": "Close document",
+      "escapeReturnsFocusTo": "Open",
+      "bodyScrollRestored": true,
+      "pdfInteriorKeyboard": "not tested",
+      "disposableFixture": "Retained only on isolated localhost3008; no permanent deletion performed; backups exclude documents"
+    },
+    "booking": {
+      "lockedDesktopFlightsHaveSelects": 0,
+      "lockedMobileFlightHasSelects": 0,
+      "bookedColosseumDeadlineReadonly": true,
+      "bookedColosseumTaskReadonly": true,
+      "restoringResearchRestoresManualControl": true,
+      "desktopTicketedTransportPreferenceButtons": 0,
+      "unticketedTransportPreferenceButtonsRemain": true,
+      "exactBaselineRestoredViaUiBackup": true,
+      "nineExportFieldsEqual": true,
+      "note": "Returning to displayed Research added an explicit override key; restored original UI backup afterward for exact nine-field equality"
+    },
+    "offline": {
+      "leftPageAtProgress": "9 / 273",
+      "returnedToCompletedState": true,
+      "displayedUniqueResources": 273,
+      "displayedMegabytes": 28.7,
+      "firstUpdateAttempt": "Completed before server stop; not failure evidence",
+      "serverStopped": true,
+      "subsequentUpdate": "Failed fetching manifest while server stopped, old ready pack remained acknowledged",
+      "errorCopy": "更新未完成，之前的离线行程仍可用。请重新连接网络后重试。",
+      "unvisitedDay18Opened": true,
+      "unvisitedDay15OpenedAndReloaded": true,
+      "unvisitedExploreLoaded": true,
+      "corePhotosComplete": true,
+      "externalInternetStillAvailable": true,
+      "crossVersionFailure": "Model only, not browser E2E",
+      "fullExternalCutoff": "Not tested; human selected completing automatic checks first",
+      "shellMigration": {
+        "stableMetadataCache": "europe-travel-os-pack-metadata-v1",
+        "exactV11V12V13Migration": "actual worker source VM model; not browser runtime inspection",
+        "migrationQuotaFailureAndRetry": "model passed",
+        "unrecordedPendingExcluded": "model passed",
+        "migrationAndNewDownloadSerialized": "model passed",
+        "serverServedV12": true,
+        "browserRequestedSwAfterRebuild": true,
+        "oldPackStillReadyAfterReload": true,
+        "oldUpdatedAtDisplay": "2026/10/13 13:07:26",
+        "readyUniqueResourceCount": 273,
+        "newerBuiltServerStoppedBeforeRetry": true,
+        "failedUpdateRetainedOldPack": true,
+        "day8OpenedAndReloadedWhileServerStopped": true,
+        "day8CoreImagesComplete": 5,
+        "day8MapCount": 0,
+        "day8ScrollWidthEqualsClientWidth": 375,
+        "businessFieldsUnchanged": 9,
+        "scope": "Official IAB status and navigation after rebuilt worker served. Active worker version not read from runtime. Exact shell migration and cross-version failure remain source/model evidence; full external network cutoff not performed."
+      }
+    },
+    "home": {
+      "mapCountBeforeMap": 0,
+      "coldLcpMs": 2848,
+      "coldTtfbMs": 255,
+      "coldJsTransferBytes": 340831,
+      "warmLcpMs": 692,
+      "warmTtfbMs": 182,
+      "scope": "Visible local IAB production build, unthrottled, raw LCP observer. Retain slow cold result; do not claim field/p75 or universal performance pass."
+    }
+  },
+  "evidenceCorrection": {
+    "files": [
+      {
+        "file": "document-preview-mobile-final-390x843.jpg",
+        "format": "jpeg",
+        "width": 390,
+        "height": 843
+      },
+      {
+        "file": "mobile-booking-final-375x811.jpg",
+        "format": "jpeg",
+        "width": 375,
+        "height": 811
+      },
+      {
+        "file": "offline-update-failed-confirmed-375x811.jpg",
+        "format": "jpeg",
+        "width": 375,
+        "height": 811
+      },
+      {
+        "file": "offline-after-failure-day15-375x811.jpg",
+        "format": "jpeg",
+        "width": 375,
+        "height": 811
+      },
+      {
+        "file": "offline-reentered-ready-375x811.jpg",
+        "format": "jpeg",
+        "width": 375,
+        "height": 811
+      },
+      {
+        "file": "offline-upgrade-old-pack-ready-375x811.jpg",
+        "format": "jpeg",
+        "width": 375,
+        "height": 811
+      },
+      {
+        "file": "offline-upgrade-failed-retained-375x811.jpg",
+        "format": "jpeg",
+        "width": 375,
+        "height": 811
+      },
+      {
+        "file": "offline-upgrade-day8-reloaded-375x811.jpg",
+        "format": "jpeg",
+        "width": 375,
+        "height": 811
+      }
+    ],
+    "phoneCssViewport": "390x844; standard raw frames375x811; native dialog390x843",
+    "oldSectionPreview": "Earlier document-preview-mobile.jpg was before native-dialog refactor; excluded from final evidence",
+    "failedUpdateCorrection": "offline-update-failed.jpg lacked failure message because update had already completed; excluded, only confirmed frame included",
+    "historicalCorrectionsPreserved": true,
+    "upgradeFailureViewport": "Failure message scrolled the page slightly; frame proves the full offline card, not page top. Native frames 375x811."
+  },
+  "protectedOriginalDirtyFiles": 10,
+  "privateExportsCommitted": false,
+  "productionDeployment": false,
+  "automationRestored": false,
+  "complete": false
+}

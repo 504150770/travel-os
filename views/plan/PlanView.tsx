@@ -11,6 +11,7 @@ import type { PlanTab } from '@/features/app/appModel';
 import { yuan } from '@/features/app/appModel';
 import { realStays, transportSegments } from '@/features/trip/tripModel';
 import { usePlanController } from '@/features/plan/usePlanController';
+import { bookingStatusEditable, bookingSyncedActionIds, transportPreferenceAllowed } from '@/features/plan/interactionModel';
 import type { AppController } from '@/features/app/useAppController';
 
 const ReadinessCenter = lazy(async () => ({ default: (await import('@/components/readiness/ReadinessCenter')).ReadinessCenter }));
@@ -48,6 +49,7 @@ export function PlanView({
   setPrivateLinks: (v: Record<string, string>) => void;
 }) {
   const { bookings, tasks, projected, unknown, overUnder, needToSave } = usePlanController({ bookingStatuses, budgetState });
+  const bookingSyncedIds = bookingSyncedActionIds(tasks, bookingStatuses);
   return (
     <div className="v2-view content-view plan-view">
       <header className="v2-heading">
@@ -124,20 +126,21 @@ export function PlanView({
                     <p>{item.detail}</p>
                   </div>
                   <b>{yuan(item.budget)}</b>
-                  <select
+                  {bookingStatusEditable(item.id, transportSegments) ? <select
                     value={bookingStatuses[item.id] ?? item.status}
                     onClick={(e) => e.stopPropagation()}
-                    onChange={(e) =>
+                    onChange={(e) => {
+                      if (!bookingStatusEditable(item.id, transportSegments)) return;
                       setBookingStatuses({
                         ...bookingStatuses,
                         [item.id]: e.target.value,
-                      })
-                    }
+                      });
+                    }}
                   >
                     {guideData.bookings.statuses.map((status) => (
                       <option key={status}>{status}</option>
                     ))}
-                  </select>
+                  </select> : <span className="execution-status confirmed">{bookingStatuses[item.id] ?? item.status}</span>}
                   <ChevronDown />
                 </summary>
                 <div className="booking-detail">
@@ -271,23 +274,24 @@ export function PlanView({
                       班次号 {candidate.flightNo ?? '待确认'} · checked{' '}
                       {candidate.checkedAt}
                     </small>
-                    <button
+                    {transportPreferenceAllowed(segment.status, candidate.status) && <button
                       className={
                         preferredTransport[segment.id] === candidate.rank
                           ? 'preferred'
                           : ''
                       }
-                      onClick={() =>
+                      onClick={() => {
+                        if (!transportPreferenceAllowed(segment.status, candidate.status)) return;
                         setPreferredTransport({
                           ...preferredTransport,
                           [segment.id]: candidate.rank,
-                        })
-                      }
+                        });
+                      }}
                     >
                       {preferredTransport[segment.id] === candidate.rank
                         ? 'PREFERRED'
                         : 'Select as Preferred'}
-                    </button>
+                    </button>}
                   </div>
                 ))}
               </div>
@@ -335,18 +339,14 @@ export function PlanView({
           items={guideData.deadlines as DeadlineItem[]}
           statuses={actionStatuses}
           setStatuses={setActionStatuses}
+          bookingSyncedIds={bookingSyncedIds}
         />
       )}
       {tab === 'tasks' && (
         <div className="task-v2">
           {tasks.map((task) => {
-            const linked = task.linkedBookingId
-              ? bookingStatuses[task.linkedBookingId]
-              : undefined;
-            const synced = Boolean(
-              linked && task.autoCompleteWhen.includes(linked),
-            );
             const actionId = taskActionId(task.id);
+            const synced = bookingSyncedIds.has(actionId);
             const status = synced
               ? 'Done'
               : (actionStatuses[actionId] ?? task.status);
@@ -354,13 +354,15 @@ export function PlanView({
               <article key={task.id} data-action-id={actionId} tabIndex={-1}>
                 <button
                   className={status === 'Done' ? 'done' : ''}
-                  aria-label={`${task.title}：${status === 'Done' ? '标记未完成' : '标记完成'}`}
-                  onClick={() =>
+                  disabled={synced}
+                  aria-label={`${task.title}：${synced ? '由订单状态自动完成' : status === 'Done' ? '标记未完成' : '标记完成'}`}
+                  onClick={() => {
+                    if (synced) return;
                     setActionStatuses({
                       ...actionStatuses,
                       [actionId]: status === 'Done' ? 'Open' : 'Done',
-                    })
-                  }
+                    });
+                  }}
                 >
                   {status === 'Done' ? <Check /> : status === 'Waiting' ? <Clock3 /> : <Circle />}
                 </button>
@@ -370,17 +372,18 @@ export function PlanView({
                   </span>
                   <h3>{task.title}</h3>
                   <p>{task.note}</p>
-                  {synced && <small>由Booking自动完成</small>}
+                  {synced && <small>由订单状态自动完成</small>}
                 </div>
                 <select
                   disabled={synced}
                   value={status}
-                  onChange={(e) =>
+                  onChange={(e) => {
+                    if (synced) return;
                     setActionStatuses({
                       ...actionStatuses,
                       [actionId]: e.target.value,
-                    })
-                  }
+                    });
+                  }}
                 >
                   {[
                     'Open',

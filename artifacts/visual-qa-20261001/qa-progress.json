@@ -485,5 +485,23 @@
     "baselineCommit": "78aaf4ace5c600a64fbdef929af4507d29200c23",
     "complete": false
   },
+  "parallelOptimization20261013": {
+    "report": "artifacts/parallel-optimization-20261013/REVIEW.md",
+    "evidence": "artifacts/parallel-optimization-20261013/acceptance.json",
+    "baselineCommit": "30ac563794392d4427b8737efe06b969337c1fc1",
+    "managerDelegatedTasks": 2,
+    "sourceWritersStopped": true,
+    "actualBookingTransitionsAccepted": true,
+    "actualDocumentImagePreviewAccepted": true,
+    "actualSameBuildFailedOfflineUpdateAccepted": true,
+    "crossVersionFailedOfflineUpdate": "model evidence only",
+    "shellMigrationFix": "Stable metadata pointer; v11/v12/v13 and quota/concurrency models passed; final rebuilt browser retained previous ready pack, failed update and Day8 reload",
+    "finalProjectCheckAfterMigration": "passed",
+    "independentSourceReview": "P2 resolved; no remaining blocking issue found",
+    "regressionCount": 18,
+    "strictBaselineRestored": true,
+    "fullExternalNetworkOfflineAccepted": false,
+    "complete": false
+  },
   "complete": false
 }

@@ -12,6 +12,7 @@ import { realStays, transportSegments } from '@/features/trip/tripModel';
 import { usePlanController } from '@/features/plan/usePlanController';
 import { MobileTransportPanel } from '@/components/mobile/MobileTransportPanel';
 import { bookingsForDate } from '@/components/mobile/mobileTransportModel';
+import { bookingStatusEditable, bookingSyncedActionIds } from '@/features/plan/interactionModel';
 import '@/components/mobile/mobile-plan.css';
 
 const tabs: Array<[PlanTab, string]> = [
@@ -59,6 +60,7 @@ export function MobilePlan({ controller }: { controller: AppController }) {
   });
   const deadlines = guideData.deadlines as DeadlineItem[];
   const tasks = guideData.tasks.items as Task[];
+  const bookingSyncedIds = bookingSyncedActionIds(tasks, controller.bookingStatuses);
   const selectedDate = guideData.days[controller.selectedDay - 1]?.date ?? '';
   const dayBookings = bookingsForDate(plan.bookings, selectedDate, realStays, transportSegments);
   const bookingGroups = [
@@ -120,23 +122,24 @@ export function MobilePlan({ controller }: { controller: AppController }) {
                     {booking.notes && <div><dt>备注</dt><dd>{booking.notes}</dd></div>}
                   </dl>
                 </details>
-                <details className="mobile-booking-status">
+                {bookingStatusEditable(booking.id, transportSegments) && <details className="mobile-booking-status">
                   <summary>修改状态 <ChevronDown /></summary>
                   <select
                     aria-label={`${booking.title}状态`}
                     value={booking.status}
-                    onChange={(event) =>
+                    onChange={(event) => {
+                      if (!bookingStatusEditable(booking.id, transportSegments)) return;
                       controller.setBookingStatuses({
                         ...controller.bookingStatuses,
                         [booking.id]: event.target.value,
-                      })
-                    }
+                      });
+                    }}
                   >
                     {Array.from(new Set([...guideData.bookings.statuses, 'Pending', booking.status])).map((status) => (
                       <option key={status}>{status}</option>
                     ))}
                   </select>
-                </details>
+                </details>}
               </div>
             </article>
           ))}
@@ -150,6 +153,7 @@ export function MobilePlan({ controller }: { controller: AppController }) {
           {deadlines.map((item) => {
             const id = deadlineActionId(item);
             const status = controller.actionStatuses[id] ?? item.status;
+            const synced = bookingSyncedIds.has(id);
             return (
               <article key={item.id} data-action-id={id} tabIndex={-1}>
                 {status === 'Done' ? <Check /> : <Circle />}
@@ -157,8 +161,9 @@ export function MobilePlan({ controller }: { controller: AppController }) {
                   <span>{item.date} · {deadlinePriorityLabels[item.priority] ?? item.priority}</span>
                   <h2>{item.title}</h2>
                   <p>{item.action}</p>
+                  {synced && <small className="mobile-action-status-note">由订单状态自动完成</small>}
                 </div>
-                <button
+                {!synced && <button
                   onClick={() =>
                     controller.setActionStatuses({
                       ...controller.actionStatuses,
@@ -167,7 +172,7 @@ export function MobilePlan({ controller }: { controller: AppController }) {
                   }
                 >
                   {status === 'Done' ? '已完成' : '标记完成'}
-                </button>
+                </button>}
               </article>
             );
           })}
@@ -227,6 +232,7 @@ export function MobilePlan({ controller }: { controller: AppController }) {
           {tasks.map((task) => {
             const id = taskActionId(task.id);
             const status = controller.actionStatuses[id] ?? task.status;
+            const synced = bookingSyncedIds.has(id);
             return (
               <article key={task.id} data-action-id={id} tabIndex={-1}>
                 {status === 'Done' ? <Check /> : <Circle />}
@@ -234,8 +240,9 @@ export function MobilePlan({ controller }: { controller: AppController }) {
                   <span>{task.group} · {task.due}</span>
                   <h2>{task.title}</h2>
                   <p>{task.note}</p>
+                  {synced && <small className="mobile-action-status-note">由订单状态自动完成</small>}
                 </div>
-                <button
+                {!synced && <button
                   onClick={() =>
                     controller.setActionStatuses({
                       ...controller.actionStatuses,
@@ -244,7 +251,7 @@ export function MobilePlan({ controller }: { controller: AppController }) {
                   }
                 >
                   {status === 'Done' ? '已完成' : '标记完成'}
-                </button>
+                </button>}
               </article>
             );
           })}

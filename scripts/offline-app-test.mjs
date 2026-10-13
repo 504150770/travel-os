@@ -27,6 +27,14 @@ try {
   assert.deepEqual(generateOfflineAppManifest(root), first, 'Generated manifest must not hash itself.');
   writeFileSync(join(chunks, 'unvisited-mobile.js'), 'changed lazy UI');
   assert.notEqual(generateOfflineAppManifest(root).version, first.version, 'Lazy code changes invalidate the pack.');
+  writeFileSync(join(root, 'vinext-client-entry-manifest.json'), JSON.stringify({ appBrowserEntry: '_next/static/chunks/entry.js' }));
+  const entryManifest = generateOfflineAppManifest(root);
+  assert.equal(entryManifest.entry, '/_next/static/chunks/entry.js');
+  writeFileSync(join(root, 'vinext-client-entry-manifest.json'), JSON.stringify({ appBrowserEntry: '_next/static/chunks/unvisited-mobile.js' }));
+  assert.notEqual(generateOfflineAppManifest(root).version, entryManifest.version, 'Changing the bootstrap selection invalidates the pack even if static file bytes are unchanged.');
+  writeFileSync(join(root, 'vinext-client-entry-manifest.json'), JSON.stringify({ appBrowserEntry: '_next/static/chunks/missing.js' }));
+  assert.throws(() => generateOfflineAppManifest(root), /entry is missing/);
+  writeFileSync(join(root, 'vinext-client-entry-manifest.json'), JSON.stringify({ appBrowserEntry: '_next/static/chunks/entry.js' }));
   mkdirSync(join(root, 'images'));
   writeFileSync(join(root, 'images', 'shell.webp'), 'shell');
   assert.ok(generateOfflineAppManifest(root, ['/images/shell.webp']).assets.includes('/images/shell.webp'));
@@ -44,15 +52,16 @@ const listeners = new Map();
 const stores = new Map([['europe-travel-os-offline-old', new Map([['/old.js', new Response('old')]])]]);
 let failLazy = false;
 let networkDown = false;
-const media = { version: 'media', assets: ['/image.webp'] };
-const app = { version: 'app', assets: ['/_next/static/chunks/unvisited-mobile.js', '/'] };
+const media = { version: 'media', assets: ['/image.webp', '/offline-core.json'] };
+const app = { version: 'app', assets: ['/_next/static/chunks/unvisited-mobile.js', '/', '/_next/static/offline-app.json'] };
+const freshHtml = '<html><script type="module" src="/_next/static/chunks/unvisited-mobile.js"></script></html>';
 const fetch = async (input) => {
   if (networkDown) throw new Error('Offline');
   const url = typeof input === 'string' ? input : new URL(input.url).pathname;
   if (url.startsWith('/offline-core.json')) return Response.json(media);
   if (url === '/_next/static/offline-app.json') return Response.json(app);
   if (failLazy && url === app.assets[0]) throw new Error('Offline');
-  if (url === '/') return new Response('fresh bootstrap HTML', { headers: { 'content-type': 'text/html' } });
+  if (url === '/') return new Response(freshHtml, { headers: { 'content-type': 'text/html' } });
   return new Response('asset');
 };
 const caches = {
@@ -66,7 +75,7 @@ const caches = {
 };
 vm.runInNewContext(readFileSync('public/sw.js', 'utf8'), {
   self: { location: { origin: 'https://qa.example' }, addEventListener: (type, callback) => listeners.set(type, callback) },
-  caches, fetch, Response, URL, Date, Set,
+  caches, fetch, Response, Headers, URL, Date, Set, AbortController, setTimeout, clearTimeout,
 });
 const download = async () => {
   const messages = [];
@@ -84,10 +93,10 @@ failLazy = false;
 const complete = (await download()).at(-1);
 assert.equal(complete.type, 'complete');
 assert.equal(complete.version, 'media-app');
-assert.ok(stores.get('europe-travel-os-offline-media-app').has(app.assets[0]));
+const pack = await stores.get('europe-travel-os-pack-metadata-v1').get('/__offline-pack-ready__').clone().json();
+assert.ok(stores.get(pack.cacheName).has(app.assets[0]));
 assert.ok(!stores.has('europe-travel-os-offline-old'));
-assert.ok(!stores.get('europe-travel-os-shell-v11').has('/?view=today'));
-assert.equal(await stores.get('europe-travel-os-shell-v11').get('/').clone().text(), 'fresh bootstrap HTML');
+assert.equal(await stores.get(pack.cacheName).get('/').clone().text(), freshHtml);
 networkDown = true;
 let navigationResponse = Promise.resolve(Response.error());
 listeners.get('fetch')({
@@ -95,5 +104,5 @@ listeners.get('fetch')({
   respondWith: (response) => { navigationResponse = response; },
   waitUntil: () => {},
 });
-assert.equal(await (await navigationResponse).text(), 'fresh bootstrap HTML', 'Unvisited dates must use the current bootstrap shell.');
+assert.equal(await (await navigationResponse).text(), freshHtml, 'Unvisited dates must use the committed bootstrap shell.');
 console.log('Offline app tests passed: unvisited lazy code and navigation, content-version changes, worker download and failed-update retention.');

@@ -15,6 +15,12 @@ export function transportPreferenceAllowed(segmentStatus: string, candidateStatu
   return segmentStatus !== 'TICKETED' && candidateStatus !== 'TICKETED';
 }
 
+export function mobileBookingStatusEditable(bookingId: string, segments: TransportSegment[]) {
+  return !segments.some((segment) =>
+    segment.status === 'TICKETED' && mobileTransportBookingIds[segment.id] === bookingId,
+  );
+}
+
 export function transportSegmentsForDay(
   segments: TransportSegment[],
   day: number,
