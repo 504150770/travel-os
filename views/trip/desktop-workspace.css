@@ -80,6 +80,8 @@
 .workspace-connector > span { justify-self: center; width: 1px; height: 28px; background: var(--line-strong); }
 .workspace-connector > b { justify-self: start; max-width: 100%; padding: 4px 8px; border-radius: 8px; background: transparent; color: var(--accent); font-size: 12px; font-weight: 500; overflow-wrap: anywhere; }
 .workspace-connector.selected > span, .workspace-connector.selected > b { background: var(--accent); color: #fff; }
+.workspace-connector-origin { margin-right: 5px; color: var(--ink-soft); font-size: 12px; font-weight: 400; }
+.workspace-connector.selected .workspace-connector-origin { color: inherit; }
 .workspace-empty { display: grid; min-height: 220px; place-content: center; gap: 5px; color: var(--ink-soft); text-align: center; }
 .workspace-empty b { color: var(--ink); }
 .workspace-resize-handle { z-index: 20; width: 10px !important; border: 0; background: var(--canvas); }

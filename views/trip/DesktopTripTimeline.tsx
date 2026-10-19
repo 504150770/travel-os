@@ -49,6 +49,51 @@ function connectorLabel(leg: DayRoute['legs'][number]) {
   return leg.transitMin == null ? '公共交通 · 出发前核实' : `公共交通 · ${leg.transitMin} min`;
 }
 
+type RouteLeg = DayRoute['legs'][number];
+type Connector = { leg: RouteLeg; showOrigin: boolean };
+
+// Match existing route legs to stops in Current Plan order. Activity/hotel rows are not
+// route nodes, so they neither receive a connector nor advance the node cursor.
+function assignConnectors(rows: PlanPresentationRow[], route: Pick<DayRoute, 'legs'> & { hotelId?: string | null }) {
+  const hotelId = route.hotelId ?? null;
+  const used = new Set<string>();
+  const unused = (leg: RouteLeg) => !used.has(leg.id);
+  let lastNodeId = hotelId;
+  const connectors = rows.map(({ entity }, index): Connector | null => {
+    if (['hotel', 'activity'].includes(entity.type)) return null;
+    const leg = route.legs.find((candidate) => unused(candidate) && candidate.toId === entity.id && candidate.fromId === lastNodeId)
+      ?? route.legs.find((candidate) => unused(candidate) && candidate.toId === entity.id && candidate.toId !== hotelId);
+    lastNodeId = entity.id;
+    if (!leg) return null;
+    used.add(leg.id);
+    return { leg, showOrigin: leg.fromId !== rows[index - 1]?.entity.id };
+  });
+  const returnLeg = hotelId
+    ? route.legs.find((candidate) => unused(candidate) && candidate.toId === hotelId && candidate.fromId === lastNodeId)
+      ?? route.legs.findLast((candidate) => unused(candidate) && candidate.toId === hotelId)
+    : undefined;
+  const returnConnector: Connector | null = returnLeg
+    ? { leg: returnLeg, showOrigin: returnLeg.fromId !== rows.at(-1)?.entity.id }
+    : null;
+  return { connectors, returnConnector };
+}
+
+function RouteConnector({ connector, returning, selectedLegId, selectLeg }: {
+  connector: Connector;
+  returning?: boolean;
+  selectedLegId: string | null;
+  selectLeg: (id: string | null) => void;
+}) {
+  const { leg, showOrigin } = connector;
+  const selected = selectedLegId === leg.id;
+  return <button
+    className={`workspace-connector ${returning ? 'return' : ''} ${selected ? 'selected' : ''}`}
+    aria-pressed={selected}
+    aria-label={`${leg.from} ${returning ? '返回' : '前往'} ${leg.to}：${connectorLabel(leg)}`}
+    onClick={() => selectLeg(selected ? null : leg.id)}
+  ><span /><b>{showOrigin && <small className="workspace-connector-origin">{leg.from} →</small>}{returning && <small className="workspace-connector-origin">返回 {leg.to} ·</small>}{connectorLabel(leg)}</b></button>;
+}
+
 function activityIllustration(name: string): { kind: string; label: string; Icon: LucideIcon } {
   if (/机场|航班|飞往|起飞|落地/.test(name)) return { kind: 'flight', label: '航班', Icon: Plane };
   if (/步行|散步/.test(name)) return { kind: 'walk', label: '步行', Icon: Footprints };
@@ -177,18 +222,16 @@ export function DesktopTripTimeline({
   const onDragEnd = ({ active, over }: DragEndEvent) => {
     if (over && active.id !== over.id) actions.reorderWithin(dayId, String(active.id), String(over.id));
   };
+  const { connectors, returnConnector } = assignConnectors(rows, route);
   return (
     <div className="workspace-timeline" ref={listRef}>
       <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={onDragEnd}>
         <SortableContext items={rows.map(({ item }) => item.id)} strategy={verticalListSortingStrategy}>
           {rows.map(({ item, entity }, index) => {
-            const previous = rows[index - 1]?.entity;
-            const leg = route.legs.find((candidate) =>
-              candidate.toId === entity.id && (index === 0 || candidate.fromId === previous?.id),
-            );
+            const connector = connectors[index];
             return (
               <div key={item.id}>
-                {leg && <button className={`workspace-connector ${selectedLegId === leg.id ? 'selected' : ''}`} aria-pressed={selectedLegId === leg.id} aria-label={`前往 ${entity.name}：${connectorLabel(leg)}`} onClick={() => selectLeg(selectedLegId === leg.id ? null : leg.id)}><span /><b>{connectorLabel(leg)}</b></button>}
+                {connector && <RouteConnector connector={connector} selectedLegId={selectedLegId} selectLeg={selectLeg} />}
                 <SortableStop
                   item={item}
                   entity={entity}
@@ -205,6 +248,7 @@ export function DesktopTripTimeline({
           })}
         </SortableContext>
       </DndContext>
+      {returnConnector && <RouteConnector connector={returnConnector} returning selectedLegId={selectedLegId} selectLeg={selectLeg} />}
       {!rows.length && <div className="workspace-empty"><b>当天暂无安排</b><p>通过“查找地点”添加当天安排。</p></div>}
     </div>
   );

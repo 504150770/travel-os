@@ -238,6 +238,57 @@ assert.equal(calls.update.at(-1)[1], planItem.id);
 assert.equal(calls.update.at(-1)[2].time, '10:35');
 assert.deepEqual(calls.move.at(-1), [15, planItem.id, 1]);
 assert.deepEqual(calls.reorder.at(-1), [15, planItem.id, 'target-item-id']);
+
+// Desktop connectors: an activity row between two stops must not hide the real A→B leg,
+// and the hotel start/return legs come from route.legs only, outside the sortable items.
+const routeRow = (id, value) => ({ item: freeze({ id: `${id}-item`, entityId: value.id, time: '09:00', duration: '1h', order: 1, notes: '', ticket: 'Core' }), entity: value, status: 'core', supportingLabel: 'Fixture support' });
+const stopA = entity({ id: 'stop-a', type: 'place', name: 'Stop A' });
+const stopB = entity({ id: 'stop-b', type: 'place', name: 'Stop B' });
+const lunch = entity({ id: 'lunch', type: 'activity', name: 'Lunch and coffee' });
+const routeRows = freeze([routeRow('a', stopA), routeRow('lunch', lunch), routeRow('b', stopB)]);
+const walkLeg = (id, fromId, from, toId, to, walkMin, distanceKm) => ({ id, fromId, from, toId, to, walkMin, distanceKm, transitMin: null, taxiTime: '约10 min', recommendedMode: 'Walk', recommended: '建议步行', status: 'ROUTED' });
+const fixtureRoute = freeze({ hotelId: 'hotel', legs: [
+  walkLeg('leg-1', 'hotel', 'Fixture Hotel', 'stop-a', 'Stop A', 23, 1.8),
+  walkLeg('leg-2', 'stop-a', 'Stop A', 'stop-b', 'Stop B', 22, 1.7),
+  { id: 'leg-3', fromId: 'stop-b', from: 'Stop B', toId: 'hotel', to: 'Fixture Hotel', distanceKm: null, walkMin: null, transitMin: null, taxiTime: '待地图计算', recommendedMode: 'Transit', recommended: '路线待计算', status: 'PENDING' },
+] });
+const routeBefore = JSON.stringify(fixtureRoute);
+const selectedLegs = [];
+const renderRoute = (route, selectedLegId = null, rows = routeRows) => timeline.DesktopTripTimeline({ dayId: 3, rows, route, selectedPointId: null, selectedLegId,
+  selectPoint: () => undefined, selectLeg: (id) => selectedLegs.push(id), actions });
+const connectorsOf = (tree) => nodes(tree).filter((node) => typeof node.type === 'function' && node.type.name === 'RouteConnector');
+const renderConnector = (node) => node.type(node.props);
+let routeTree = renderRoute(fixtureRoute);
+const sortableContext = nodes(routeTree).find((node) => node.props.strategy !== undefined && Array.isArray(node.props.items));
+assert.deepEqual(sortableContext.props.items, ['a-item', 'lunch-item', 'b-item'], 'Sortable items stay exactly the plan rows.');
+const sortableConnectors = connectorsOf(sortableContext);
+const allConnectors = connectorsOf(routeTree);
+assert.equal(sortableConnectors.length, 2, 'Stops A and B get connectors; the activity row gets none.');
+assert.equal(allConnectors.length, 3, 'Hotel return is rendered once, outside the sortable items.');
+assert.deepEqual(allConnectors.map((node) => node.props.connector.leg.id), ['leg-1', 'leg-2', 'leg-3'], 'Each existing leg renders once, none fabricated.');
+const [startButton, middleButton, returnButton] = allConnectors.map(renderConnector);
+assert.equal(allConnectors[2].props.returning, true);
+assert.ok(!sortableConnectors.includes(allConnectors[2]));
+assert.equal(textOf(startButton), 'Fixture Hotel →步行 23 min · 1.8 km', 'First leg names its hotel origin.');
+assert.equal(textOf(middleButton), 'Stop A →步行 22 min · 1.7 km', 'Leg after an activity names its real origin.');
+assert.equal(textOf(returnButton), '返回 Fixture Hotel ·公共交通 · 出发前核实', 'Return keeps existing PENDING copy without a redundant origin.');
+assert.equal(middleButton.props['aria-label'], 'Stop A 前往 Stop B：步行 22 min · 1.7 km');
+assert.equal(returnButton.props['aria-label'], 'Stop B 返回 Fixture Hotel：公共交通 · 出发前核实');
+assert.equal(middleButton.props['aria-pressed'], false);
+middleButton.props.onClick();
+returnButton.props.onClick();
+routeTree = renderRoute(fixtureRoute, 'leg-2');
+const pressedMiddle = renderConnector(connectorsOf(routeTree)[1]);
+assert.equal(pressedMiddle.props['aria-pressed'], true);
+assert.match(pressedMiddle.props.className, /selected/);
+pressedMiddle.props.onClick();
+assert.deepEqual(selectedLegs, ['leg-2', 'leg-3', null], 'Connectors keep selectLeg toggle behaviour.');
+const adjacentTree = renderRoute({ legs: [fixtureRoute.legs[1]] }, null, [routeRow('a', stopA), routeRow('b', stopB)]);
+const adjacent = connectorsOf(adjacentTree);
+assert.equal(adjacent.length, 1, 'Without a hotel there is no start/return connector.');
+assert.equal(textOf(renderConnector(adjacent[0])), '步行 22 min · 1.7 km', 'Adjacent stops do not repeat the origin.');
+assert.equal(connectorsOf(renderRoute({ legs: [] })).length, 0);
+assert.equal(JSON.stringify(fixtureRoute), routeBefore, 'Connector rendering does not mutate route legs.');
 planState.reset(true);
 let planTree = currentPlan.PlanStop(stopProps(pictured));
 nodes(planTree).find((node) => node.type === 'input').props.onChange({ target: { value: '11:00' } });
