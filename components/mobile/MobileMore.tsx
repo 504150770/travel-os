@@ -12,6 +12,7 @@ import { OfflinePackControl } from '@/components/offline-pack-control';
 import { OfflineMapFallback } from '@/components/offline-map-fallback';
 import { MobileHotelSheet } from '@/components/mobile/MobileHotelSheet';
 import { useBackupImport } from '@/hooks/use-backup-import';
+import { BackupRestorePreview } from '@/components/backup/BackupRestorePreview';
 
 type MorePanel = 'stays' | 'documents' | 'packing' | 'essentials' | 'survival' | 'offline' | 'backup';
 
@@ -48,7 +49,8 @@ const moreTabForPanel: Partial<Record<MorePanel, MoreTab>> = {
 };
 
 export function MobileMore({ controller }: { controller: AppController }) {
-  const { importError, importFile } = useBackupImport(controller.importBackup);
+  const { importError, importFile, pendingBackup, isReading, isRestoring, cancelImport, confirmImport } = useBackupImport(controller.importBackup);
+  const importButton = useRef<HTMLButtonElement>(null);
   const [panel, setPanel] = useState<MorePanel>(() => mobilePanelForTab[controller.moreTab]);
   const [stay, setStay] = useState<HotelBooking | null>(null);
   const tabRow = useRef<HTMLDivElement>(null);
@@ -183,7 +185,7 @@ export function MobileMore({ controller }: { controller: AppController }) {
           <h2>备份与恢复</h2>
           <p>包含当前行程、自定义项目、状态、收藏、行李清单、预算实际支出和偏好交通。随身资料文件只保存在此设备。</p>
           <button onClick={exportBackup}><Download /> 导出 JSON 备份</button>
-          <button onClick={() => fileRef.current?.click()}><Upload /> 导入 JSON 备份</button>
+          <button ref={importButton} disabled={isRestoring} onClick={() => fileRef.current?.click()}><Upload /> 导入 JSON 备份</button>
           <input
             ref={fileRef}
             hidden
@@ -197,6 +199,8 @@ export function MobileMore({ controller }: { controller: AppController }) {
               input.value = '';
             }}
           />
+          {isReading && <output>正在读取备份，尚未修改数据…</output>}
+          {pendingBackup && <BackupRestorePreview data={pendingBackup} busy={isRestoring} onExport={exportBackup} onConfirm={confirmImport} onCancel={() => { cancelImport(); importButton.current?.focus(); }} />}
           {importError && <p role="alert">{importError}</p>}
           <label>
             旅行备注

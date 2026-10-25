@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { parseBackup, validateBackup, writeBackupStorage } from '../features/app/backupModel.ts';
+import { summarizeBackup } from '../features/app/backupSummary.ts';
 
 const plan = JSON.parse(readFileSync(new URL('../data/day-plans.json', import.meta.url), 'utf8'));
 const backup = {
@@ -25,6 +26,15 @@ assert.deepEqual(parseBackup(JSON.stringify(legacyV3)), legacyV3);
 assert.deepEqual(parseBackup(JSON.stringify(legacyV4)), legacyV4);
 assert.equal(validateBackup(legacyV3).packingItems, undefined);
 assert.equal(validateBackup(legacyV4).packingItems, undefined);
+// The preview must reflect actual restore behavior, including explicit empties.
+const summaryRow = (input, label) => summarizeBackup(input).rows.find(row => row.label === label);
+assert.deepEqual(summaryRow(legacyV3, '交通偏好'), { label: '交通偏好', count: null, mode: 'keep' });
+assert.deepEqual(summaryRow(legacyV4, '交通偏好'), { label: '交通偏好', count: 0, mode: 'replace' });
+assert.deepEqual(summaryRow(legacyV4, '出行清单'), { label: '出行清单', count: null, mode: 'keep' });
+assert.deepEqual(summaryRow(backup, '出行清单'), { label: '出行清单', count: 0, mode: 'replace' });
+assert.equal(summaryRow(backup, '旅行日').count, 18);
+assert.equal(JSON.stringify(summarizeBackup({ ...backup, notes: 'PRIVATE NOTE', actuals: { secret: 987.65 } })).includes('PRIVATE'), false);
+assert.equal(JSON.stringify(summarizeBackup({ ...backup, actuals: { secret: 987.65 } })).includes('987.65'), false);
 const known = new Set(plan.days.flatMap(day => [...day.activeItems, ...day.alternatives, ...(day.removedItems ?? [])].map(item => item.entityId)));
 assert.deepEqual(parseBackup(before), backup);
 assert.equal(validateBackup(backup, known), backup);
@@ -48,6 +58,10 @@ for (const change of [
   b => { b.favorites.sample = 'true'; },
   b => { b.customEntities.push({ id: 'broken', name: 'Incomplete' }); },
   b => { b.packingItems.push({ id: 'p', label: 'Test', category: 'unknown', packed: false, critical: false }); },
+  b => { b.packingItems.push({ id: 'p', label: 'Test', category: ['Clothing'], packed: false, critical: false }); },
+  b => { b.packingItems.push({ id: 'p', label: 'Test', category: { toString: () => 'Clothing' }, packed: false, critical: false }); },
+  b => { b.packingItems.push({ id: 'p', label: '   ', category: 'Clothing', packed: false, critical: false }); },
+  b => { b.packingItems.push({ id: '  ', label: 'Test', category: 'Clothing', packed: false, critical: false }); },
   b => { b.notes = null; },
 ]) {
   const invalid = structuredClone(backup);

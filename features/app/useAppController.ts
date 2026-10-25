@@ -4,6 +4,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useEditablePlan } from '@/hooks/use-editable-plan';
 import { useLocalStorage } from '@/hooks/use-local-storage';
 import { validateBackup, writeBackupStorage } from '@/features/app/backupModel';
+import { migrateLegacyActionStatuses } from '@/features/app/legacyActionModel';
 import { readUrlState, useUrlState } from '@/hooks/use-url-state';
 import { guideData } from '@/lib/data';
 import { entityLibrary, entityMap, type Entity } from '@/lib/entity-library';
@@ -11,9 +12,6 @@ import { calculateBudget } from '@/lib/budget-calculator';
 import { canonicalBookings } from '@/lib/hotel-execution';
 import {
   buildActionQueue,
-  checkinActionId,
-  deadlineActionId,
-  taskActionId,
   type ActionItem,
 } from '@/lib/action-queue';
 import type { DocumentOpenRequest } from '@/features/documents/documentModel';
@@ -186,6 +184,8 @@ export function useAppController() {
 
   useEffect(() => {
     try {
+      // An existing modern key, even {}, must not revive older device state.
+      if (localStorage.getItem('europe-guide-action-statuses-v4') !== null) return;
       const legacyTasks = JSON.parse(
         localStorage.getItem('europe-guide-task-statuses') ?? '{}',
       ) as Record<string, string>;
@@ -195,23 +195,12 @@ export function useAppController() {
       const legacyCheckins = JSON.parse(
         localStorage.getItem('travel-checkin-completed-v1') ?? '{}',
       ) as Record<string, boolean>;
-      if (
-        !Object.keys(storedActionStatuses).length &&
-        (Object.keys(legacyTasks).length ||
-          Object.keys(legacyDeadlines).length ||
-          Object.keys(legacyCheckins).length)
-      ) {
-        const migrated: Record<string, string> = {};
-        Object.entries(legacyTasks).forEach(([id, status]) => {
-          migrated[taskActionId(id)] = status;
-        });
-        (guideData.deadlines as DeadlineItem[]).forEach((item) => {
-          if (legacyDeadlines[item.id])
-            migrated[deadlineActionId(item)] = legacyDeadlines[item.id];
-        });
-        Object.entries(legacyCheckins).forEach(([id, done]) => {
-          migrated[checkinActionId(id)] = done ? 'Done' : 'Waiting';
-        });
+      const migrated = migrateLegacyActionStatuses({
+        taskStatuses: legacyTasks,
+        deadlineStatuses: legacyDeadlines,
+        checkinCompleted: legacyCheckins,
+      }, guideData.deadlines as DeadlineItem[]);
+      if (Object.keys(migrated).length) {
         setActionStatuses(migrated);
       }
     } catch {
@@ -391,14 +380,7 @@ export function useAppController() {
   };
   const importBackup = (input: BackupPayload) => {
     const data = validateBackup(input, new Set(entityLibrary.map((entity) => entity.id)));
-    const importedActions =
-      data.actionStatuses ??
-      Object.fromEntries(
-        Object.entries(data.taskStatuses ?? {}).map(([id, status]) => [
-          taskActionId(id),
-          status,
-        ]),
-      );
+    const importedActions = migrateLegacyActionStatuses(data, guideData.deadlines as DeadlineItem[]);
     writeBackupStorage(localStorage, {
       'europe-guide-current-itinerary-v1': data.currentItinerary,
       'europe-guide-custom-entities-v1': data.customEntities,

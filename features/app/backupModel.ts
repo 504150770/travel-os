@@ -63,7 +63,7 @@ export function validateBackup(value: unknown, knownEntityIds?: ReadonlySet<stri
   }
   if (value.packingItems !== undefined) {
     const categories = ['Documents', 'Money', 'Electronics', 'Clothing', 'Winter', 'Toiletries', 'Medicine / Emergency', 'Gym', 'Flight', 'Daily Bag', 'Safety', 'Luggage', 'Preparation', 'Tickets'];
-    if (!Array.isArray(value.packingItems) || !value.packingItems.every((item) => record(item) && text(item.id) && !!item.id && text(item.label) && categories.includes(String(item.category)) && typeof item.packed === 'boolean' && typeof item.critical === 'boolean' && (item.custom === undefined || typeof item.custom === 'boolean')) || !uniqueIds(value.packingItems)) invalid('行李清单');
+    if (!Array.isArray(value.packingItems) || !value.packingItems.every((item) => record(item) && text(item.id) && !!item.id.trim() && text(item.label) && !!item.label.trim() && text(item.category) && categories.includes(item.category) && typeof item.packed === 'boolean' && typeof item.critical === 'boolean' && (item.custom === undefined || typeof item.custom === 'boolean')) || !uniqueIds(value.packingItems)) invalid('出行清单');
     for (const item of value.packingItems) {
       if (item.preparationStatus !== undefined && (!text(item.preparationStatus) || !['unreviewed', 'owned', 'to-buy', 'optional'].includes(item.preparationStatus))) invalid('清单分类');
       if (item.templateVersion !== undefined && item.templateVersion !== 2) invalid('清单版本');
