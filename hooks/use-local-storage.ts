@@ -47,8 +47,10 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
         window.setTimeout(() => {
           window.dispatchEvent(new CustomEvent('travel-save-state', { detail: 'saved' }));
         }, 120);
+        return true;
       } catch {
         // A private browser may block persistence; the guide remains readable.
+        return false;
       }
     },
     [key],

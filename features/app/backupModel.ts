@@ -62,8 +62,14 @@ export function validateBackup(value: unknown, knownEntityIds?: ReadonlySet<stri
     if (!uniqueIds(items)) invalid('当天安排编号');
   }
   if (value.packingItems !== undefined) {
-    const categories = ['Documents', 'Money', 'Electronics', 'Clothing', 'Winter', 'Toiletries', 'Medicine / Emergency', 'Gym', 'Flight', 'Daily Bag'];
+    const categories = ['Documents', 'Money', 'Electronics', 'Clothing', 'Winter', 'Toiletries', 'Medicine / Emergency', 'Gym', 'Flight', 'Daily Bag', 'Safety', 'Luggage', 'Preparation', 'Tickets'];
     if (!Array.isArray(value.packingItems) || !value.packingItems.every((item) => record(item) && text(item.id) && !!item.id && text(item.label) && categories.includes(String(item.category)) && typeof item.packed === 'boolean' && typeof item.critical === 'boolean' && (item.custom === undefined || typeof item.custom === 'boolean')) || !uniqueIds(value.packingItems)) invalid('行李清单');
+    for (const item of value.packingItems) {
+      if (item.preparationStatus !== undefined && (!text(item.preparationStatus) || !['unreviewed', 'owned', 'to-buy', 'optional'].includes(item.preparationStatus))) invalid('清单分类');
+      if (item.templateVersion !== undefined && item.templateVersion !== 2) invalid('清单版本');
+      if (item.priority !== undefined && (!text(item.priority) || !['must', 'recommended', 'optional'].includes(item.priority))) invalid('清单优先级');
+      if (item.quantity !== undefined && (!text(item.quantity) || item.quantity.length > 80)) invalid('清单数量');
+    }
   }
   return value as unknown as BackupPayload;
 }

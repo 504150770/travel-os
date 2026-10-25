@@ -1,0 +1,513 @@
+{
+  "version": 2,
+  "updatedAt": "2026-10-25",
+  "title": "欧洲 18 天出行清单",
+  "dates": "2026.12.01 — 12.18",
+  "route": "罗马 → 佛罗伦萨 → 威尼斯 → 维也纳 → 布拉格 → 巴黎",
+  "items": [
+    {
+      "id": "pack-24",
+      "category": "Clothing",
+      "legacyLabel": "Winter jacket",
+      "label": "保暖防风雨方案",
+      "quantity": "1 套",
+      "note": "可以用已有保暖服配挡雨外层，分层穿衣；先确认现有装备够用，不默认再买两件。",
+      "priority": "must",
+      "critical": true
+    },
+    {
+      "id": "prep-midlayer",
+      "category": "Clothing",
+      "label": "抓绒 / 薄毛衣",
+      "quantity": "2 件",
+      "note": "作为中层轮换，室内可脱减；先用现有衣物搭配。",
+      "priority": "recommended",
+      "critical": false
+    },
+    {
+      "id": "pack-20",
+      "category": "Clothing",
+      "legacyLabel": "Everyday tops",
+      "label": "长袖打底",
+      "quantity": "3 件",
+      "note": "薄款易洗，数量含身上穿的；结合途中洗衣轮换。",
+      "priority": "recommended",
+      "critical": false
+    },
+    {
+      "id": "prep-tshirts",
+      "category": "Clothing",
+      "label": "速干短袖",
+      "quantity": "2 件",
+      "note": "建议兼作睡衣或健身上衣，已有合适的即可。",
+      "priority": "recommended",
+      "critical": false
+    },
+    {
+      "id": "pack-25",
+      "category": "Clothing",
+      "legacyLabel": "Thermal layers",
+      "label": "保暖打底裤",
+      "quantity": "1 条，怕冷再加",
+      "note": "先按1条安排，怕冷再增加；室内可脱减，数量含身上穿的。",
+      "priority": "recommended",
+      "critical": false
+    },
+    {
+      "id": "pack-19",
+      "category": "Clothing",
+      "legacyLabel": "Walking trousers",
+      "label": "日常长裤",
+      "quantity": "2 条（一穿一备）",
+      "note": "选走路舒服、能与多件上衣搭配的现有裤子。",
+      "priority": "recommended",
+      "critical": false
+    },
+    {
+      "id": "pack-18",
+      "category": "Clothing",
+      "legacyLabel": "Underwear and socks",
+      "label": "内裤",
+      "quantity": "7 条（含身穿及1份应急）",
+      "note": "结合途中两次洗衣；随身包的一套换洗从这些数量中分出，不额外加购。",
+      "priority": "recommended",
+      "critical": false
+    },
+    {
+      "id": "prep-socks",
+      "category": "Clothing",
+      "label": "步行袜",
+      "quantity": "7 双（含身穿及1份应急）",
+      "note": "选适合长走的袜子，可含暖袜。随身换洗从现有数量中分出。",
+      "priority": "recommended",
+      "critical": false
+    },
+    {
+      "id": "pack-26",
+      "category": "Clothing",
+      "legacyLabel": "Gloves",
+      "label": "帽子、围巾、手套",
+      "quantity": "各 1",
+      "note": "先盘点已有，户外步行时按体感增减。",
+      "priority": "recommended",
+      "critical": false
+    },
+    {
+      "id": "pack-22",
+      "category": "Clothing",
+      "legacyLabel": "Walking shoes",
+      "label": "已磨合的防滑步行鞋",
+      "quantity": "1 双",
+      "note": "优先长走不磨脚的已有鞋，不用硬买雪地靴。",
+      "priority": "must",
+      "critical": true
+    },
+    {
+      "id": "pack-39",
+      "category": "Clothing",
+      "legacyLabel": "Gym clothes",
+      "label": "健身短裤",
+      "quantity": "1 条",
+      "note": "有明确训练计划再带，可与速干上衣搭配。",
+      "priority": "optional",
+      "critical": false
+    },
+    {
+      "id": "pack-28",
+      "category": "Clothing",
+      "legacyLabel": "Compact umbrella",
+      "label": "折叠雨伞",
+      "quantity": "1 把",
+      "note": "建议带已有的轻便折伞；天气在临行前再核对。",
+      "priority": "recommended",
+      "critical": false
+    },
+    {
+      "id": "prep-suitcase",
+      "category": "Luggage",
+      "label": "现有行李箱 68.5 × 43 × 26 cm",
+      "status": "owned",
+      "quantity": "1 个，继续使用",
+      "note": "已知已有此箱，不默认再买。尺寸合计 137.5 cm；是否含轮与把手、票面尺寸和重量额度仍须核对，不能仅据尺寸保证所有航司/车次适用。",
+      "priority": "recommended",
+      "critical": false
+    },
+    {
+      "id": "prep-crossbody",
+      "category": "Safety",
+      "label": "贴身拉链小包",
+      "quantity": "1 个",
+      "note": "护照、手机、钱包随身，离座时带走。随身行李留1套换洗，从原数量中分出；已有合适包即可。",
+      "priority": "must",
+      "critical": true
+    },
+    {
+      "id": "prep-lock",
+      "category": "Safety",
+      "label": "小行李锁",
+      "quantity": "1 把按需",
+      "note": "只锁箱体，优先用箱子自带锁；已有锁就不买，不增钢缆或防盗网。仅增加开箱难度、降低部分顺手取物风险，不能防整箱拿走、不能保证防盗。行李放置不堵通道、不妨碍乘客。",
+      "priority": "recommended",
+      "critical": false
+    },
+    {
+      "id": "prep-luggage-tag",
+      "category": "Luggage",
+      "label": "遮盖式行李牌",
+      "quantity": "1–2 个",
+      "note": "留电话或邮箱便于联系，不露家庭住址；这里只记准备状态。",
+      "priority": "recommended",
+      "critical": false
+    },
+    {
+      "id": "prep-tracker",
+      "category": "Safety",
+      "label": "行李定位器",
+      "note": "先确认兼容手机；位置可能延迟，定位器不是防盗保证。",
+      "quantity": "1 个",
+      "priority": "optional",
+      "critical": false
+    },
+    {
+      "id": "pack-14",
+      "category": "Electronics",
+      "legacyLabel": "EU adapter",
+      "label": "转换插头",
+      "quantity": "1 套",
+      "note": "核对适配意大利、奥地利、捷克、法国，特别留意意大利 L 型；先查已有转换头。转换头不变压。",
+      "priority": "must",
+      "critical": true
+    },
+    {
+      "id": "prep-charger",
+      "category": "Electronics",
+      "label": "充电头",
+      "quantity": "1 个",
+      "note": "核对100–240V输入标识及设备需要；现有够用即可，不强制多口。转换插头不变压。",
+      "priority": "must",
+      "critical": true
+    },
+    {
+      "id": "pack-13",
+      "category": "Electronics",
+      "legacyLabel": "USB-C cable",
+      "label": "充电线",
+      "quantity": "2 根",
+      "note": "核对各设备接口，主用与备用各一根，先试用已有线材。",
+      "priority": "must",
+      "critical": true
+    },
+    {
+      "id": "pack-12",
+      "category": "Electronics",
+      "legacyLabel": "Power bank",
+      "label": "充电宝",
+      "quantity": "1 个",
+      "note": "建议选择容量标识清楚、≤100Wh 的产品，随身带、不托运；出发前另核实际承运航司要求。",
+      "priority": "recommended",
+      "critical": false
+    },
+    {
+      "id": "prep-esim",
+      "category": "Preparation",
+      "label": "手机上网方案确认",
+      "note": "核对覆盖意奥捷法及18天有效期，先确认手机eSIM支持；测试现有漫游或所选方案，确认可用不等于必须新买。",
+      "quantity": "1 份",
+      "priority": "must",
+      "critical": true
+    },
+    {
+      "id": "pack-29",
+      "category": "Toiletries",
+      "legacyLabel": "Toothbrush and toothpaste",
+      "label": "洗漱小套装",
+      "note": "牙刷、牙膏、剃须等按习惯带，先看住宿配套与已有用品。",
+      "quantity": "1 套",
+      "priority": "recommended",
+      "critical": false
+    },
+    {
+      "id": "pack-30",
+      "category": "Toiletries",
+      "legacyLabel": "Skincare basics",
+      "label": "保湿、润唇、防晒",
+      "note": "建议用熟悉的产品，少量分装，不必买整套新品。",
+      "quantity": "各小支",
+      "priority": "recommended",
+      "critical": false
+    },
+    {
+      "id": "pack-32",
+      "category": "Toiletries",
+      "legacyLabel": "Travel-size liquids bag",
+      "label": "透明液体袋",
+      "note": "仅随身携带液体时需要。按1L透明袋、每瓶≤100ml准备，并在出发前核对实际机场和航司要求。",
+      "quantity": "1 L 袋 × 1",
+      "priority": "recommended",
+      "critical": false
+    },
+    {
+      "id": "pack-23",
+      "category": "Toiletries",
+      "legacyLabel": "Laundry bag",
+      "label": "轻量洗衣包",
+      "quantity": "1 套",
+      "note": "用已有脏衣袋＋少量洗衣剂即可；先看衣物洗标和洗烘条件，不假定冬天隔夜就晾干。",
+      "priority": "recommended",
+      "critical": false
+    },
+    {
+      "id": "pack-33",
+      "category": "Medicine / Emergency",
+      "legacyLabel": "Essential medication",
+      "label": "个人小药包",
+      "critical": false,
+      "note": "仅携带本人需要的药品，保留原包装；不因清单新增用药，相关携带要求另核。",
+      "quantity": "按本人需要",
+      "priority": "recommended"
+    },
+    {
+      "id": "pack-01",
+      "category": "Preparation",
+      "legacyLabel": "Passport",
+      "label": "护照与签证核验",
+      "critical": true,
+      "note": "核对有效期、姓名、入境次数和停留天数；原件贴身保管。这里只勾选，不填写护照号。",
+      "priority": "must"
+    },
+    {
+      "id": "pack-06",
+      "category": "Preparation",
+      "legacyLabel": "Train tickets",
+      "label": "票据、酒店与离线地图",
+      "note": "在自己设备中核对能否离线查看票据、酒店资料与地图；此清单不存票券二维码。具体出票快照见票务分组。",
+      "critical": true,
+      "priority": "must"
+    },
+    {
+      "id": "pack-03",
+      "category": "Preparation",
+      "legacyLabel": "Travel insurance",
+      "label": "旅行保险与求助信息核验",
+      "critical": true,
+      "note": "核对已有保险覆盖与援助联系方式；未核实前不标已具备。",
+      "priority": "must"
+    },
+    {
+      "id": "pack-08",
+      "category": "Preparation",
+      "legacyLabel": "Two payment cards",
+      "label": "主卡与备用卡分开放",
+      "note": "建议检查现有支付工具并分开放；不填写卡号、密码或验证码，不要求另办卡。",
+      "priority": "must",
+      "critical": true
+    },
+    {
+      "id": "prep-laundry",
+      "category": "Preparation",
+      "label": "途中洗衣与烘干安排",
+      "quantity": "建议2次",
+      "note": "按实际住宿或洗衣店安排两次，先确认烘干可用及衣物洗标；不假定冬天隔夜晾干，条件不足再调整换洗余量。",
+      "priority": "must",
+      "critical": true
+    },
+    {
+      "id": "prep-weather",
+      "category": "Preparation",
+      "label": "天气、潮汐与冬季开放复核",
+      "quantity": "出发前3–5天再查",
+      "note": "复核六城天气，进威尼斯前查潮汐；景点官网确认冬季开放和预约要求，不套用攻略中的无需预约结论。",
+      "priority": "must",
+      "critical": true
+    },
+    {
+      "id": "pack-04",
+      "category": "Preparation",
+      "legacyLabel": "Flight information",
+      "label": "逐航段行李额度、称重与试提",
+      "note": "按实际票面核对尺寸、重量、托运是否包含；装好后称重并试提。现有箱尺寸须含轮把手，铁路可携带不等于航空托运已含。",
+      "priority": "must",
+      "critical": true
+    },
+    {
+      "id": "ticket-rome-florence",
+      "category": "Tickets",
+      "label": "12月5日 罗马 → 佛罗伦萨",
+      "ticketStatus": "issued",
+      "note": "已有携程票。出发前核对票面车次、站名与乘车要求，并自行保存离线票。",
+      "evidence": "2026-10-25 任务交接：已有携程票",
+      "priority": "must",
+      "critical": true
+    },
+    {
+      "id": "ticket-florence-mestre",
+      "category": "Tickets",
+      "label": "12月7日 佛罗伦萨 → Venezia Mestre",
+      "ticketStatus": "issued",
+      "note": "已有 Klook 票；核对目的地为 Mestre。",
+      "evidence": "2026-10-25 购票线程：订单页已核实出票",
+      "priority": "must",
+      "critical": true
+    },
+    {
+      "id": "ticket-mestre-vienna",
+      "category": "Tickets",
+      "label": "12月9日 Venezia Mestre → 维也纳 · RJ134",
+      "ticketStatus": "buy",
+      "note": "旧单已过期，当前缺票、尚未补买。购票前重新核对实时班次、余票和价格；不要把旧订单当有效车票。",
+      "evidence": "2026-10-25 购票线程：最新订单页实读",
+      "priority": "must",
+      "critical": true
+    },
+    {
+      "id": "ticket-vienna-prague",
+      "category": "Tickets",
+      "label": "12月11日 维也纳 → 布拉格",
+      "ticketStatus": "issued",
+      "note": "已有 Klook 票。出发前按票面核对站名、班次与座位。",
+      "evidence": "2026-10-25 购票线程：订单页已核实出票",
+      "priority": "must",
+      "critical": true
+    },
+    {
+      "id": "ticket-vatican",
+      "category": "Tickets",
+      "label": "12月4日 10:00 梵蒂冈",
+      "ticketStatus": "issued",
+      "note": "官方已出票；本次邮件核验未查到后续取消。按票面核对入口及到场安排。",
+      "evidence": "2026-10-25 父线程官方出票邮件核验",
+      "priority": "recommended",
+      "critical": false
+    },
+    {
+      "id": "ticket-st-marks",
+      "category": "Tickets",
+      "label": "12月8日 14:00–14:30 圣马可",
+      "ticketStatus": "issued",
+      "note": "官方已出票；本次邮件核验未查到后续取消。",
+      "evidence": "2026-10-25 父线程官方出票邮件核验",
+      "priority": "recommended",
+      "critical": false
+    },
+    {
+      "id": "ticket-louvre",
+      "category": "Tickets",
+      "label": "12月14日 卢浮宫",
+      "ticketStatus": "issued",
+      "note": "官方已出票；09:30 来自既有票面记录，本次未重读附件，出发前复核。未查到后续取消。",
+      "evidence": "2026-10-25 官方出票邮件核验；时间沿用既有票面记录",
+      "priority": "recommended",
+      "critical": false
+    },
+    {
+      "id": "ticket-accademia",
+      "category": "Tickets",
+      "label": "学院美术馆 · 计划12月5日 16:30",
+      "ticketStatus": "verify",
+      "note": "待核实出票。曾出现 Nexi 支付失败；重买前先核对银行已入账/待入账及出票情况，避免重复支付。不要填写银行卡资料。",
+      "evidence": "2026-10-25 邮件核验未确认出票；不能据此判断未买",
+      "priority": "must",
+      "critical": true
+    },
+    {
+      "id": "ticket-doge",
+      "category": "Tickets",
+      "label": "总督府 · 计划12月8日 10:30",
+      "ticketStatus": "verify",
+      "note": "待核实出票。先查票面与订单，再决定是否需要购买。",
+      "evidence": "2026-10-25 父线程：出票待核实",
+      "priority": "recommended",
+      "critical": false
+    },
+    {
+      "id": "ticket-schonbrunn",
+      "category": "Tickets",
+      "label": "美泉宫 · 计划12月10日 09:00",
+      "ticketStatus": "verify",
+      "note": "待核实出票。计划时间不是已确认入场时段。",
+      "evidence": "2026-10-25 父线程：出票待核实",
+      "priority": "recommended",
+      "critical": false
+    },
+    {
+      "id": "ticket-sainte-chapelle",
+      "category": "Tickets",
+      "label": "圣礼拜堂",
+      "ticketStatus": "verify",
+      "note": "待核实出票；没有查到邮件不等于没买。",
+      "evidence": "2026-10-25 父线程：出票待核实",
+      "priority": "recommended",
+      "critical": false
+    },
+    {
+      "id": "ticket-opera",
+      "category": "Tickets",
+      "label": "巴黎歌剧院",
+      "ticketStatus": "verify",
+      "note": "待核实出票；日期与参观安排以之后确认结果为准。",
+      "evidence": "2026-10-25 父线程：出票待核实",
+      "priority": "recommended",
+      "critical": false
+    },
+    {
+      "id": "ticket-colosseum",
+      "category": "Tickets",
+      "label": "斗兽场",
+      "ticketStatus": "verify",
+      "note": "待核实出票；是否入内仍按最终行程决定，不默认新增购买。",
+      "evidence": "2026-10-25 父线程：出票待核实",
+      "priority": "recommended",
+      "critical": false
+    }
+  ],
+  "sources": [
+    {
+      "label": "Italo · 行李要求",
+      "url": "https://www.italotreno.com/en/the-train/luggage"
+    },
+    {
+      "label": "České dráhy · 行李携带",
+      "url": "https://www.cd.cz/en/dalsi-sluzby/psi-kola-a-jina-zavazadla/-27975/"
+    },
+    {
+      "label": "Italia.it · 实用信息",
+      "url": "https://www.italia.it/en/italy/practical-information"
+    },
+    {
+      "label": "France.fr · 供电信息",
+      "url": "https://www.france.fr/en/article/what-are-electricity-requirements-france/"
+    },
+    {
+      "label": "IATA · 电池携带",
+      "url": "https://www.iata.org/en/youandiata/travelers/batteries"
+    },
+    {
+      "label": "Your Europe · 行李限制",
+      "url": "https://europa.eu/youreurope/citizens/travel/carry/luggage-restrictions/"
+    },
+    {
+      "label": "Rick Steves · 轻装清单",
+      "url": "https://www.ricksteves.com/travel-tips/packing-light/ricks-packing-list"
+    },
+    {
+      "label": "Rick Steves · 冬季欧洲",
+      "url": "https://www.ricksteves.com/travel-tips/trip-planning/winter-travel-europe"
+    },
+    {
+      "label": "Contiki · 冬季行李经验",
+      "url": "https://www.contiki.com/six-two/article/europe-winter-packing-list/"
+    },
+    {
+      "label": "Two Wandering Soles · 冬季经验（含推广，仅参考经验）",
+      "url": "https://www.twowanderingsoles.com/blog/europe-winter-packing-list"
+    },
+    {
+      "label": "REI · 轻装旅行",
+      "url": "https://www.rei.com/learn/expert-advice/traveling-light.html"
+    },
+    {
+      "label": "威尼斯市政府 · 潮汐",
+      "url": "https://www.comune.venezia.it/en/node/17774"
+    }
+  ]
+}

@@ -19,11 +19,11 @@ assert.equal((await readDocument('doc-test', factory))?.bookingId, 'booking-stay
 await deleteDocument('doc-test', factory);
 assert.equal((await listDocuments(factory)).length, 0);
 
-assert.equal(DEFAULT_PACKING_ITEMS.length, 48);
-assert.equal(packingSummary(DEFAULT_PACKING_ITEMS).criticalRemaining, 5);
+assert.equal(DEFAULT_PACKING_ITEMS.length, 47);
+assert.equal(packingSummary(DEFAULT_PACKING_ITEMS).criticalRemaining, 19);
 const packedPassport = updatePackingItem(DEFAULT_PACKING_ITEMS, 'pack-01', { packed: true });
 assert.equal(packingSummary(packedPassport).packed, 1);
-assert.equal(packingSummary(packedPassport).criticalRemaining, 4);
+assert.equal(packingSummary(packedPassport).criticalRemaining, 18);
 
 const actions = [
   { id: 'deadline:visa', source: 'deadline', sourceId: 'visa', title: 'Visa', detail: 'Submit', due: '2026-09-12 23:59', priority: 'Critical', status: 'Open', target: 'deadlines' },
@@ -40,7 +40,10 @@ assert.equal(far.items.some((item) => item.source === 'packing'), false, 'packin
 const linkAvailable = buildReadiness({ now: new Date('2026-09-11T12:00:00'), tripStart: '2026-12-01', actions, bookings: [], packing: DEFAULT_PACKING_ITEMS, documents: [], privateLinks: { hotel: 'https://example.invalid/private' } });
 assert.equal(linkAvailable.sections.before.some((item) => item.id.includes('checkin')), true, 'private link availability must update readiness automatically');
 const near = buildReadiness({ now: new Date('2026-11-20T12:00:00'), tripStart: '2026-12-01', actions: [], bookings: [], packing: DEFAULT_PACKING_ITEMS, documents: [], privateLinks: {} });
-assert.equal(near.sections.action.filter((item) => item.source === 'packing').length, 5);
+assert.equal(near.sections.action.filter((item) => item.source === 'packing').length, 19);
+const optionalPassport = updatePackingItem(DEFAULT_PACKING_ITEMS, 'pack-01', { priority: 'optional' });
+const optionalReadiness = buildReadiness({ now: new Date('2026-11-20T12:00:00'), tripStart: '2026-12-01', actions: [], bookings: [], packing: optionalPassport, documents: [], privateLinks: {} });
+assert.equal(optionalReadiness.items.some(item => item.packingId === 'pack-01'), false, 'Optional items must not become urgent packing reminders');
 
 const bookedTrain = { id: 'train-1', category: '铁路', title: 'Rome to Florence', date: '2026-12-05', budget: 1, status: 'Booked', detail: '', paymentStatus: 'Paid', supplier: '', orderNumber: '', cancellationDeadline: '', address: '', serviceNumber: '', stationAirport: '', baggage: '', contact: '', notes: '', attachmentName: '', lastVerified: '' };
 const missing = buildReadiness({ now: new Date('2026-11-20T12:00:00'), tripStart: '2026-12-01', actions: [], bookings: [bookedTrain], packing: [], documents: [], privateLinks: {} });

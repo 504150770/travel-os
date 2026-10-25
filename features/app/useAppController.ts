@@ -19,7 +19,7 @@ import {
 import type { DocumentOpenRequest } from '@/features/documents/documentModel';
 import type { Booking, DeadlineItem, Task, ViewId } from '@/lib/types';
 import type { GalleryRequest } from '@/lib/media';
-import { DEFAULT_PACKING_ITEMS, PACKING_STORAGE_KEY, type PackingItem } from '@/features/packing/packingModel';
+import { DEFAULT_PACKING_ITEMS, PACKING_STORAGE_KEY, migratePackingItems, type PackingItem } from '@/features/packing/packingModel';
 import {
   cityNames,
   mergeBookingActionStatuses,
@@ -77,7 +77,8 @@ export function useAppController() {
     Record<string, string>
   >('europe-guide-private-checkin-links-v1', {});
   const [notes, setNotes] = useLocalStorage('europe-guide-notes', '');
-  const [packingItems, setPackingItems] = useLocalStorage<PackingItem[]>(PACKING_STORAGE_KEY, DEFAULT_PACKING_ITEMS);
+  const [storedPackingItems, setPackingItems] = useLocalStorage<PackingItem[]>(PACKING_STORAGE_KEY, DEFAULT_PACKING_ITEMS);
+  const packingItems = useMemo(() => migratePackingItems(storedPackingItems), [storedPackingItems]);
   const effectiveBookingStatuses = useMemo<Record<string, string>>(() => ({
     ...bookingStatuses,
     'flight-can-fco': 'Ticketed',

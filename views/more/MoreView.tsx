@@ -102,7 +102,7 @@ export function MoreView({
           住宿
         </button>
         <button className={tab === 'documents' ? 'active' : ''} onClick={() => setTab('documents')}>旅行资料</button>
-        <button className={tab === 'packing' ? 'active' : ''} onClick={() => setTab('packing')}>行李清单</button>
+        <button className={tab === 'packing' ? 'active' : ''} onClick={() => setTab('packing')}>出行清单</button>
         <button
           className={tab === 'map' ? 'active' : ''}
           onClick={() => setTab('map')}

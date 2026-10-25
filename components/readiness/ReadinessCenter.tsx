@@ -6,6 +6,7 @@ import { buildReadiness, type ReadinessItem, type ReadinessSection } from '@/fea
 import { useDocumentVault } from '@/features/documents/useDocumentVault';
 import { updatePackingItem } from '@/features/packing/packingModel';
 import '@/components/readiness/readiness.css';
+import '@/components/packing/packing.css';
 import { guideData } from '@/lib/data';
 import { ContextualDocumentButton } from '@/components/documents/ContextualDocumentButton';
 
@@ -36,13 +37,14 @@ export function ReadinessCenter({ controller, compact = false }: { controller: A
     <div className="readiness-item-actions">
       {item.bookingId && <ContextualDocumentButton bookingId={item.bookingId} onAdd={controller.openDocumentForBooking} />}
       {action && <button className="readiness-open" onClick={() => controller.openAction(action)}>{action.target === 'checkin' ? '查看入住' : action.target === 'deadlines' ? '查看关键日期' : '查看待办'}<ArrowRight /></button>}
-      {item.packingId && <button className="readiness-open" onClick={() => controller.openPackingItem(item.packingId!)}>查看行李清单<ArrowRight /></button>}
+      {item.packingId && <button className="readiness-open" onClick={() => controller.openPackingItem(item.packingId!)}>查看出行清单<ArrowRight /></button>}
       {canComplete && <button className="readiness-complete" onClick={() => complete(item)}><Check />标记完成</button>}
     </div>
   </article>;
   };
   return <section className={`readiness-center ${compact ? 'compact' : ''}`}>
     <header className="readiness-summary"><div><h2>出发准备</h2><p>先处理重要事项，其余按计划慢慢完成。</p></div><div className="readiness-counts"><strong>{readiness.counts.action}<small>优先处理</small></strong><strong>{readiness.counts.before}<small>出发前完成</small></strong><strong>{readiness.counts.waiting}<small>等待更新</small></strong></div></header>
+    <button className="readiness-packing-entry" onClick={() => controller.openPackingItem('prep-suitcase')}><span><b>欧洲出行清单</b><small>衣物、防盗小物、行李与票务 · 盘点已有，按需补缺</small></span><ArrowRight aria-hidden="true" /></button>
     {sections.map(([id, label, note]) => <section className={`readiness-section ${id}`} key={id}><header><div><span>{label}</span><p>{note}</p></div><b>{readiness.sections[id].length}</b></header>{readiness.sections[id].length ? readiness.sections[id].map(renderItem) : <p className="readiness-empty"><Check /> 暂无事项。</p>}</section>)}
     <details className="readiness-ready"><summary><span><Check /> 已准备好 · {readiness.counts.ready}</span><ChevronDown /></summary><div>{readiness.sections.ready.map(renderItem)}</div></details>
     <p className="readiness-local-note"><ShieldAlert /> 资料仅保存在本机，不包含在准备清单导出或 JSON 备份中。</p>

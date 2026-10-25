@@ -106,12 +106,12 @@ export function buildReadiness({
   }
 
   if (daysToTrip <= PACKING_REMINDER_DAYS) {
-    for (const item of packing.filter((entry) => entry.critical)) {
+    for (const item of packing.filter((entry) => (entry.priority ? entry.priority === 'must' : entry.critical) && entry.preparationStatus !== 'optional')) {
       items.push({
         id: `packing:${item.id}`,
-        title: item.packed ? `${item.label} packed` : `Pack ${item.label}`,
-        detail: 'Critical item for the Europe 18-day trip.',
-        when: 'Before departure',
+        title: `${item.label} · ${item.packed ? '已完成' : '待准备'}`,
+        detail: '欧洲18天出行清单中的重要事项。',
+        when: '出发前',
         section: item.packed ? 'ready' : 'action',
         priority: 'P0', source: 'packing', packingId: item.id,
       });

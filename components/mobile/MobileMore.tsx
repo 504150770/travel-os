@@ -21,7 +21,7 @@ const PackingPanel = lazy(async () => ({ default: (await import('@/components/pa
 const panels: Array<[MorePanel, string]> = [
   ['stays', '住宿'],
   ['documents', '旅行资料'],
-  ['packing', '行李清单'],
+  ['packing', '出行清单'],
   ['essentials', '出行须知'],
   ['survival', '实用信息'],
   ['offline', '离线'],
