@@ -103,7 +103,7 @@ export function PackingPanel({ items, setItems }: {
       <div><b>18 天，分层轮换</b><p>数量含身上穿的。先确认两次洗烘安排与洗标，条件不足再调整余量，不带 18 套。</p></div>
       <div><b>小锁只锁箱体</b><p>已有锁就不买。不能保证防盗；贵重物品贴身，行李不堵通道、不妨碍乘客。</p></div>
     </div></details>
-    <p className="preparation-local"><ShieldCheck aria-hidden="true" /> 进度仅保存在当前浏览器，不会跨设备自动同步。可在「更多 → 备份」导出 / 恢复。</p>
+    <p className="preparation-local"><ShieldCheck aria-hidden="true" /> 进度仅保存在当前浏览器，不会跨设备自动同步。可在电脑端「旅行资料 → 备份」或手机端「资料 → 备份」导出 / 恢复。</p>
     {saveError && <p className="preparation-error" role="alert">本次修改未保存：浏览器存储不可用或已满。请先保留现有备份，再重试。</p>}
     <output className="preparation-sr" aria-live="polite">{announcement}</output>
     {removed && <output className="preparation-undo"><span>已移除「{removed.item.label}」{removals.length > 1 && <small>可依次撤销 {removals.length} 次删除</small>}</span><button ref={undoButton} onClick={() => {

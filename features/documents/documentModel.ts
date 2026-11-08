@@ -39,9 +39,9 @@ export const MAX_DOCUMENT_BYTES = 25 * 1024 * 1024;
 
 export function validateDocumentFile(file: Pick<File, 'type' | 'size'>) {
   if (!ACCEPTED_DOCUMENT_TYPES.includes(file.type as (typeof ACCEPTED_DOCUMENT_TYPES)[number]))
-    return 'Only PDF, JPG, PNG and WEBP files are supported.';
-  if (file.size > MAX_DOCUMENT_BYTES) return 'Keep each document under 25 MB.';
-  if (file.size === 0) return 'This file is empty.';
+    return '仅支持 PDF、JPG、PNG 和 WEBP 文件。';
+  if (file.size > MAX_DOCUMENT_BYTES) return '每份资料不能超过 25 MB。';
+  if (file.size === 0) return '文件为空，请选择其他文件。';
   return null;
 }
 

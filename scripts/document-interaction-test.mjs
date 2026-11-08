@@ -35,8 +35,10 @@ const imports = {
 };
 const source = fs.readFileSync(new URL('../components/documents/DocumentsPanel.tsx', import.meta.url), 'utf8');
 const compiled = ts.transpileModule(source, { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022, jsx: ts.JsxEmit.ReactJSX } }).outputText;
+let confirmResult = false;
+let confirmMessage;
 const exports = {};
-vm.runInNewContext(compiled, { exports, navigator: { storage: { persist: async () => false } }, require: (name) => {
+vm.runInNewContext(compiled, { exports, window: { confirm: (message) => { confirmMessage = message; return confirmResult; } }, navigator: { storage: { persist: async () => false } }, require: (name) => {
   assert.ok(Object.hasOwn(imports, name), `Unexpected dependency: ${name}`);
   return imports[name];
 } });
@@ -60,13 +62,13 @@ const first = submit(event);
 await submit(event);
 assert.equal(writes, 1, 'Repeated submission during one pending write must save exactly once.');
 tree = render();
-assert.equal(button(tree, 'Saving…').props.disabled, true);
-assert.equal(button(tree, 'Cancel').props.disabled, true);
+assert.equal(button(tree, '正在保存…').props.disabled, true);
+assert.equal(button(tree, '取消').props.disabled, true);
 assert.ok(nodes(tree).filter((node) => ['input', 'select', 'textarea'].includes(node.type)).every((node) => node.props.disabled), 'Pending save keeps its draft stable.');
 reject(new Error('quota'));
 await first;
 tree = render();
-assert.equal(button(tree, 'Save offline').props.disabled, false);
+assert.equal(button(tree, '保存到当前浏览器').props.disabled, false);
 assert.ok(find(tree, (node) => node.props.role === 'alert' && node.props.children.includes('未能保存')));
 const retry = find(tree, (node) => node.type === 'form').props.onSubmit(event);
 assert.equal(writes, 2, 'Failed write unlocks retry and retains selected file.');
@@ -75,13 +77,30 @@ assert.equal(find(render(), (node) => node.type === 'form'), undefined);
 
 vault.documents = [{ id: 'qa', title: 'QA fixture', category: 'Other', size: 10, mimeType: 'image/png' }];
 vault.read = async () => { throw new Error('read failure'); };
-tree = render(); await button(tree, 'Open').props.onClick();
+tree = render(); await button(tree, '打开').props.onClick();
 assert.ok(find(render(), (node) => node.props.role === 'alert' && node.props.children.includes('无法打开')));
 vault.read = async () => undefined;
-await button(render(), 'Open').props.onClick();
+await button(render(), '打开').props.onClick();
 assert.ok(find(render(), (node) => node.props.role === 'alert' && node.props.children.includes('暂时无法读取')));
 vault.loading = true;
 assert.ok(find(render(), (node) => node.type === 'strong' && node.props.children === '正在读取…'));
 vault.loading = false; vault.error = 'unavailable';
-assert.ok(find(render(), (node) => node.type === 'strong' && node.props.children === '本机存储不可用'));
+assert.ok(find(render(), (node) => node.type === 'strong' && node.props.children === '当前浏览器存储不可用'));
 console.log('Document interaction tests passed: single pending save, failure retry, read errors and honest storage status.');
+
+// Synthetic file limits include the accepted boundary, unsupported format and empty file.
+assert.equal(documentModel.validateDocumentFile({ type: 'image/png', size: 0 }), '文件为空，请选择其他文件。');
+assert.equal(documentModel.validateDocumentFile({ type: 'text/plain', size: 1 }), '仅支持 PDF、JPG、PNG 和 WEBP 文件。');
+assert.equal(documentModel.validateDocumentFile({ type: 'application/pdf', size: documentModel.MAX_DOCUMENT_BYTES }), null);
+assert.equal(documentModel.validateDocumentFile({ type: 'application/pdf', size: documentModel.MAX_DOCUMENT_BYTES + 1 }), '每份资料不能超过 25 MB。');
+vault.error = undefined;
+const removals = [];
+vault.remove = async (id) => { removals.push(id); };
+const deleteButton = () => find(render(), (node) => node.props.className === 'document-delete');
+deleteButton().props.onClick();
+assert.equal(confirmMessage, '删除当前浏览器中的资料「QA fixture」？');
+assert.deepEqual(removals, [], 'Cancel leaves the synthetic vault unchanged.');
+confirmResult = true;
+deleteButton().props.onClick();
+assert.deepEqual(removals, ['qa'], 'Confirmation removes only the selected synthetic record.');
+console.log('Chinese file validation and cancel/confirm deletion tests passed.');

@@ -60,7 +60,7 @@ export function DocumentsPanel({ bookings, request, onRequestHandled }: {
   const groups = useMemo(() => ['Flights', 'Trains', 'Hotels', 'Tickets', 'Insurance', 'Visa', 'Other'].map((group) => ({ group, documents: vault.documents.filter((document) => labels[document.category] === group) })).filter((entry) => entry.documents.length), [vault.documents]);
   const reset = () => { setFile(undefined); setTitle(''); setCity(''); setDayId(''); setBookingId(''); setNote(''); setMessage(undefined); setAdding(false); };
   return <section className="documents-panel">
-    <header className="readiness-summary compact"><div><span>随身资料</span><h2>{vault.documents.length} 份本机资料</h2><p><LockKeyhole /> 仅保存在此设备，不包含在 JSON 备份中。</p></div><strong>{vault.loading ? '正在读取…' : vault.error ? '本机存储不可用' : '离线可用 ✓'}</strong></header>
+    <header className="readiness-summary compact"><div><span>随身资料</span><h2>{vault.documents.length} 份浏览器资料</h2><p><LockKeyhole /> 仅保存在当前浏览器，不包含在 JSON 备份中。</p></div><strong>{vault.loading ? '正在读取…' : vault.error ? '当前浏览器存储不可用' : '离线可用 ✓'}</strong></header>
     <button className="readiness-primary" disabled={saving} onClick={() => setAdding(!adding)}><Plus /> 添加资料</button>
     {operationError && <p className="document-error" role="alert">{operationError}</p>}
     {adding && <form key={formKey} className="document-add" onSubmit={async (event) => {
@@ -69,7 +69,7 @@ export function DocumentsPanel({ bookings, request, onRequestHandled }: {
       savingRef.current = true; setSaving(true); setMessage(undefined);
       const record: StoredDocument = { id: globalThis.crypto?.randomUUID?.() ?? `doc-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`, title: title.trim() || file.name.replace(/\.[^.]+$/, ''), category, city: city || undefined, dayId: dayId ? Number(dayId) : undefined, bookingId: bookingId || undefined, fileName: file.name, mimeType: file.type, size: file.size, addedAt: new Date().toISOString(), note: note.trim() || undefined, blob: file };
       try { await vault.save(record); void navigator.storage?.persist?.()?.catch(() => undefined); reset(); }
-      catch { setMessage('未能保存到本机，请保留原文件后重试。'); }
+      catch { setMessage('未能保存到当前浏览器，请保留原文件后重试。'); }
       finally { savingRef.current = false; setSaving(false); }
     }}>
       <label>File<input disabled={saving} type="file" accept="application/pdf,image/jpeg,image/png,image/webp" required onChange={(event) => { const next = event.target.files?.[0]; setFile(next); if (next && !title) setTitle(next.name.replace(/\.[^.]+$/, '')); }} /></label>
@@ -79,14 +79,14 @@ export function DocumentsPanel({ bookings, request, onRequestHandled }: {
       <label>Booking<select disabled={saving} value={bookingId} onChange={(event) => setBookingId(event.target.value)}><option value="">Not linked</option>{bookings.map((booking) => <option key={booking.id} value={booking.id}>{booking.title}</option>)}</select></label>
       <label>Note<textarea disabled={saving} value={note} onChange={(event) => setNote(event.target.value)} /></label>
       {message && <p className="document-error" role="alert">{message}</p>}
-      <div><button type="button" disabled={saving} onClick={reset}>Cancel</button><button type="submit" disabled={saving}>{saving ? 'Saving…' : 'Save offline'}</button></div>
+      <div><button type="button" disabled={saving} onClick={reset}>取消</button><button type="submit" disabled={saving}>{saving ? '正在保存…' : '保存到当前浏览器'}</button></div>
     </form>}
-    {vault.loading ? <p>正在打开本机资料…</p> : vault.error ? <p className="document-error">{vault.error}</p> : !groups.length ? <div className="document-empty"><FileText /><h3>还没有随身资料</h3><p>添加机场、车站或酒店需要出示的票据与确认函。</p></div> : groups.map(({ group, documents }) => <section className="document-group" key={group}><h3>{group}</h3>{documents.map((document) => <article key={document.id}>
+    {vault.loading ? <p>正在打开当前浏览器中的资料…</p> : vault.error ? <p className="document-error">{vault.error}</p> : !groups.length ? <div className="document-empty"><FileText /><h3>还没有随身资料</h3><p>添加机场、车站或酒店需要出示的票据与确认函。</p></div> : groups.map(({ group, documents }) => <section className="document-group" key={group}><h3>{group}</h3>{documents.map((document) => <article key={document.id}>
       {document.mimeType === 'application/pdf' ? <FileText /> : <ImageIcon />}
-      <span><b>{document.title}</b><small>{[document.dayId && `Day ${document.dayId}`, document.city, formatDocumentSize(document.size), 'Offline ✓'].filter(Boolean).join(' · ')}</small></span>
-      <button onClick={async () => { setOperationError(undefined); try { const record = await vault.read(document.id); if (record) { setViewer(record); setViewerUrl(URL.createObjectURL(record.blob)); } else setOperationError('这份资料暂时无法读取，请保留原文件并重新添加。'); } catch { setOperationError('无法打开本机资料，请稍后重试。'); } }}>Open</button>
-      <button className="document-delete" aria-label={`Delete ${document.title}`} onClick={() => { if (window.confirm(`Delete “${document.title}” from this device?`)) { setOperationError(undefined); void vault.remove(document.id).catch(() => setOperationError('未能删除本机资料，请稍后重试。')); } }}><Trash2 /></button>
+      <span><b>{document.title}</b><small>{[document.dayId && `Day ${document.dayId}`, document.city, formatDocumentSize(document.size), '离线可用 ✓'].filter(Boolean).join(' · ')}</small></span>
+      <button onClick={async () => { setOperationError(undefined); try { const record = await vault.read(document.id); if (record) { setViewer(record); setViewerUrl(URL.createObjectURL(record.blob)); } else setOperationError('这份资料暂时无法读取，请保留原文件并重新添加。'); } catch { setOperationError('无法打开当前浏览器中的资料，请稍后重试。'); } }}>打开</button>
+      <button className="document-delete" aria-label={`删除当前浏览器中的资料「${document.title}」`} onClick={() => { if (window.confirm(`删除当前浏览器中的资料「${document.title}」？`)) { setOperationError(undefined); void vault.remove(document.id).catch(() => setOperationError('未能删除当前浏览器中的资料，请稍后重试。')); } }}><Trash2 /></button>
     </article>)}</section>)}
-    {viewer && viewerUrl && <div className="document-viewer-backdrop" role="presentation" onMouseDown={(event) => event.target === event.currentTarget && closeViewer()}><dialog ref={viewerRef} open className="document-viewer" aria-modal="true" aria-label={viewer.title}><header><div><span>OFFLINE DOCUMENT</span><h2>{viewer.title}</h2></div><button aria-label="Close document" onClick={closeViewer}><X /></button></header>{viewer.mimeType === 'application/pdf' ? <iframe title={viewer.title} src={viewerUrl} /> : <img src={viewerUrl} alt={viewer.title} />}<footer><a href={viewerUrl} target="_blank" rel="noreferrer">Open full screen</a></footer></dialog></div>}
+    {viewer && viewerUrl && <div className="document-viewer-backdrop" role="presentation" onMouseDown={(event) => event.target === event.currentTarget && closeViewer()}><dialog ref={viewerRef} open className="document-viewer" aria-modal="true" aria-label={viewer.title}><header><div><span>OFFLINE DOCUMENT</span><h2>{viewer.title}</h2></div><button aria-label="关闭资料" onClick={closeViewer}><X /></button></header>{viewer.mimeType === 'application/pdf' ? <iframe title={viewer.title} src={viewerUrl} /> : <img src={viewerUrl} alt={viewer.title} />}<footer><a href={viewerUrl} target="_blank" rel="noreferrer">全屏打开</a></footer></dialog></div>}
   </section>;
 }
